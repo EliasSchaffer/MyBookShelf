@@ -1,0 +1,9 @@
+<resources>
+    <!-- Custom theme with no action bar -->
+    <style name="NoActionBarTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize other properties of your app's theme here -->
+        <item name="android:windowNoTitle">true</item> <!-- No title bar -->
+        <item name="android:windowActionBar">false</item> <!-- Disable action bar -->
+        <item name="android:windowFullscreen">true</item> <!-- Optional, makes the app fullscreen -->
+    </style>
+</resources>

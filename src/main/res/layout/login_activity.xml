@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/beige"
+    android:padding="16dp">
+
+    <!-- App Title -->
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Book Tracker"
+        android:textSize="36sp"
+        android:textColor="@android:color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"/>
+
+    <!-- Username Field -->
+    <EditText
+        android:id="@+id/txfUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Username"
+        android:textSize="18sp"
+        android:layout_below="@id/app_name"
+        android:layout_marginTop="50dp"
+        android:padding="10dp"/>
+
+    <!-- Password Field -->
+    <EditText
+        android:id="@+id/txfPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:textSize="18sp"
+        android:layout_below="@id/txfUser"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:inputType="textPassword"/>
+
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="18sp"
+        android:layout_below="@id/txfPassword"
+        android:layout_marginTop="20dp"
+        android:background="@color/beige"
+        android:textColor="@android:color/white"/>
+</RelativeLayout>

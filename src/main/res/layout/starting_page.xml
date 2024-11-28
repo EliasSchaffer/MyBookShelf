@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/beige">
+
+    <!-- White Box -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="16dp">
+
+        <!-- Text "My Bookshelf" -->
+        <TextView
+            android:id="@+id/tv_my_bookshelf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="30sp"
+            android:textColor="@android:color/black"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="8dp" />
+
+        <!-- Icon -->
+        <ImageView
+            android:id="@+id/icon_my_bookshelf"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_toEndOf="@id/tv_my_bookshelf"
+            android:layout_centerVertical="true"
+            android:src="@drawable/book_icon" />
+    </RelativeLayout>
+
+</RelativeLayout>
