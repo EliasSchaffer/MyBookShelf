@@ -5,19 +5,19 @@ import java.util.List;
 
 public class Authenticator {
 
-    List<Login> safedLogins = new ArrayList<>();
+    List<User> safedUsers = new ArrayList<>();
 
     public Authenticator() {
-        safedLogins.add(new Login("Test","123"));
-        safedLogins.add(new Login("Test1","Hallo"));
-        safedLogins.add(new Login("Test2","nnnn"));
-        safedLogins.add(new Login("Test3","Buh!"));
+        safedUsers.add(new User("Test","123"));
+        safedUsers.add(new User("Test1","Hallo"));
+        safedUsers.add(new User("Test2","nnnn"));
+        safedUsers.add(new User("Test3","Buh!"));
 
     }
 
-    public boolean checkLogin(Login attempt){
-        for (Login login : safedLogins){
-            if (login.getPassword().equals(attempt.getPassword()) && login.getUser().equals(attempt.getUser())) return true;
+    public boolean checkLogin(User attempt){
+        for (User user : safedUsers){
+            if (user.getPassword().equals(attempt.getPassword()) && user.getUser().equals(attempt.getUser())) return true;
         }
         return false;
     }

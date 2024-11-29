@@ -1,0 +1,50 @@
+package com.example.mybookshelf;
+
+import java.util.Date;
+
+public class Book {
+    private String name;
+    private String author;
+    private int pages;
+    private int release_date;
+    private String image_url;
+
+    public Book(String name, int release_date, int pages, String author) {
+        this.name = name;
+        this.release_date = release_date;
+        this.pages = pages;
+        this.author = author;
+    }
+
+    public Book(String name, int release_date, int pages, String author, String image_url) {
+        this.name = name;
+        this.release_date = release_date;
+        this.pages = pages;
+        this.author = author;
+        this.image_url = image_url;
+    }
+
+    public Book(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getRelease_date() {
+        return release_date;
+    }
+
+    public int getPages() {
+        return pages;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public String getImageUrl() {
+        return image_url;
+    }
+}

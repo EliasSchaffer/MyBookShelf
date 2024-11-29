@@ -7,10 +7,12 @@
 
     <!-- White Box -->
     <RelativeLayout
+        android:id="@+id/white_box"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/white"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:layout_alignParentTop="true">
 
         <!-- Text "My Bookshelf" -->
         <TextView
@@ -34,4 +36,14 @@
             android:src="@drawable/book_icon" />
     </RelativeLayout>
 
+    <!-- Container for Book Boxes -->
+    <LinearLayout
+        android:id="@+id/bookContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/white_box"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:scrollbars="vertical" />
 </RelativeLayout>
