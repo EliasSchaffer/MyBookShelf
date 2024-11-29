@@ -16,6 +16,9 @@ public class User {
         bookList.add(new Book("Harry Potter und die Kammer des Schreckens"));
         bookList.add(new Book("To Kill a Mockingbird"));
         bookList.add(new Book("1984"));
+        bookList.add(new Book("blue box 1"));
+        bookList.add(new Book("kimitte watashi no koto suki nandesho 1"));
+        bookList.add(new Book("Niggers in Paris"));
 
     }
 

@@ -23,8 +23,10 @@ public class MainActivity extends AppCompatActivity {
     private EditText usernameEditText;
     private EditText passwordEditText;
     private Button loginButton;
+    private TextView timeSpentReadingTextView;
     private Authenticator auth;
     private ApiRequest api;
+    private int timeSpentReading = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +71,8 @@ public class MainActivity extends AppCompatActivity {
     private void navigateToStartingPage(User user) {
         setContentView(R.layout.starting_page);
         LinearLayout bookContainer = findViewById(R.id.bookContainer);
+        timeSpentReadingTextView = findViewById(R.id.etfTimeSpentReading);
+
         List<Book> userBooks = user.getBookList();
 
         if (userBooks != null && !userBooks.isEmpty()) {
@@ -80,8 +84,7 @@ public class MainActivity extends AppCompatActivity {
                             if (book != null) {
                                 createBookBox(bookContainer, book);
                             } else {
-                                Log.w("MainActivity", "Failed to fetch book data for: " + book.getName());
-                                // Optionally handle UI error here (e.g., show a placeholder or error message)
+                                createBookBox(bookContainer, new Book("An Error occurred please try again", 0, 0, "NA"));
                             }
                         }
                     });
@@ -98,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
+        // Create a container for the book box
         RelativeLayout bookBox = new RelativeLayout(this);
         bookBox.setBackgroundColor(Color.WHITE);
         bookBox.setPadding(16, 16, 16, 16);
@@ -111,50 +115,61 @@ public class MainActivity extends AppCompatActivity {
 
         // Create an ImageView for the book cover
         ImageView bookImage = new ImageView(this);
+        bookImage.setId(View.generateViewId()); // Set a unique ID for the ImageView
         String imageUrl = book.getImageUrl();
-        if (!imageUrl.isEmpty()) {
-            // Load the image asynchronously (you can use Glide or Picasso for better performance)
+        if (!TextUtils.isEmpty(imageUrl)) {
             Glide.with(this)
                     .load(imageUrl)
                     .into(bookImage);
         } else {
-            // Fallback to a default image if no image URL is available
             Log.w("createBookBox", "No image URL available for book: " + book.getName());
         }
 
-        // Set up the layout for the image (aligned to the left of the book details)
+        // Set up layout for the ImageView
         RelativeLayout.LayoutParams imageParams = new RelativeLayout.LayoutParams(
-                150, 200); // Set your image dimensions here
+                150, 200 // Adjust dimensions as needed
+        );
         imageParams.addRule(RelativeLayout.ALIGN_PARENT_START);
         bookImage.setLayoutParams(imageParams);
 
-        // Create TextView for book details
+        // Create a TextView for the book details
         TextView bookDetails = new TextView(this);
         StringBuilder details = new StringBuilder();
         details.append("Name: ").append(TextUtils.isEmpty(book.getName()) ? "Unknown" : book.getName()).append("\n");
         details.append("Author: ").append(TextUtils.isEmpty(book.getAuthor()) ? "Unknown" : book.getAuthor()).append("\n");
-        details.append("Pages: ").append(book.getPages() != -1 ? book.getPages() : "Unknown").append("\n");
-        details.append("Release Date: ").append(book.getRelease_date() != -1 ? book.getRelease_date() : "Unknown");
+        details.append("Pages: ").append(book.getPages() > 0 ? book.getPages() : "Unknown").append("\n");
+        details.append("Release Date: ").append(book.getRelease_date() > 0 ? book.getRelease_date() : "Unknown");
+
+        // Update the time spent reading
+        timeSpentReading += book.getPages();
+        if (timeSpentReadingTextView != null) {
+            // Update the UI dynamically
+            timeSpentReadingTextView.setText("Time Spent Reading: " + timeSpentReading / 60 + "h " + timeSpentReading % 60 + "min");
+        }
 
         bookDetails.setText(details.toString());
         bookDetails.setTextColor(Color.BLACK);
         bookDetails.setTextSize(16);
 
-        // Set up layout for the book details (aligned to the right of the image)
+        // Set up layout for the TextView
         RelativeLayout.LayoutParams textParams = new RelativeLayout.LayoutParams(
                 RelativeLayout.LayoutParams.WRAP_CONTENT,
                 RelativeLayout.LayoutParams.WRAP_CONTENT
         );
         textParams.addRule(RelativeLayout.RIGHT_OF, bookImage.getId());
+        textParams.addRule(RelativeLayout.CENTER_VERTICAL);
+        textParams.setMargins(16, 0, 0, 0); // Add spacing between the image and text
         bookDetails.setLayoutParams(textParams);
 
-        // Add ImageView and TextView to the RelativeLayout
+        // Add the ImageView and TextView to the RelativeLayout
         bookBox.addView(bookImage);
         bookBox.addView(bookDetails);
 
-        // Add book box to the container
+        // Add the book box to the container
         container.addView(bookBox);
     }
+
+
 
 
 }
