@@ -37,43 +37,35 @@
             android:src="@drawable/book_icon" />
     </RelativeLayout>
 
-    <!-- Scrollable Container for Book Boxes -->
+    <!-- Search View directly below the white box -->
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_below="@id/white_box"
+        android:layout_marginTop="8dp"
+        android:padding="8dp" />
+
+    <!-- ScrollView to contain the book container -->
     <ScrollView
-        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/white_box"
-        android:layout_marginTop="55dp"
-        android:fillViewport="true">
+        android:layout_below="@id/searchView"
+        android:layout_marginTop="8dp">
 
         <LinearLayout
-            android:id="@+id/bookContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="16dp" >
+            android:padding="16dp">
 
-
+            <!-- Book Container that will scroll -->
+            <LinearLayout
+                android:id="@+id/bookContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
         </LinearLayout>
     </ScrollView>
 
-    <Button
-        android:id="@+id/addBook"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Add"
-        android:layout_alignParentBottom="true" />
-
-
-    <EditText
-        android:id="@+id/etfTimeSpentReading"
-        android:editable="false"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/white_box"
-        android:layout_marginTop="-6dp"
-        android:orientation="vertical"
-        android:padding="16dp"
-        android:text="Time Spent Reading: "
-        tools:ignore="Deprecated" />
 </RelativeLayout>

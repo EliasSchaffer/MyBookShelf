@@ -19,6 +19,9 @@ public class User {
         bookList.add(new Book("blue box 1"));
         bookList.add(new Book("kimitte watashi no koto suki nandesho 1"));
         bookList.add(new Book("Niggers in Paris"));
+        bookList.add(new Book("Mein Kampf"));
+        bookList.add(new Book("Felix der Neger"));
+        bookList.add(new Book("Schwänze für Blondine"));
 
     }
 
