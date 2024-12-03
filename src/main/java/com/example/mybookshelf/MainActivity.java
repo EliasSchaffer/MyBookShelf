@@ -26,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     private Search search;
     private SearchView searchView;
     private TextView timeSpentReadingTextView;
+    private Button goToStarting;
+    private User logedindUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.search_activity);
         LinearLayout bookContainer = findViewById(R.id.bookContainer);
         searchView = findViewById(R.id.searchView);
+        goToStarting = findViewById(R.id.btnGoBack);
+        goToStarting.setOnClickListener(v -> navigateToStartingPage(this.logedindUser));
 
         // Set up SearchView listener
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -100,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void navigateToStartingPage(User user) {
+        logedindUser = user;
         setContentView(R.layout.starting_page);
         LinearLayout bookContainer = findViewById(R.id.bookContainer);
         List<Book> userBooks = user.getBookList();
@@ -125,7 +130,6 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                     });
-
                 }
             }
         } else {

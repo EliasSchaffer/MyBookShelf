@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -35,6 +34,15 @@
             android:layout_toEndOf="@id/tv_my_bookshelf"
             android:layout_centerVertical="true"
             android:src="@drawable/book_icon" />
+
+        <!-- Button -->
+        <Button
+            android:id="@+id/btnGoBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="-188dp"
+            android:layout_toStartOf="@id/icon_my_bookshelf"
+            android:text="Back" />
     </RelativeLayout>
 
     <!-- Search View directly below the white box -->
