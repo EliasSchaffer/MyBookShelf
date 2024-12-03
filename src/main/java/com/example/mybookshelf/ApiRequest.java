@@ -38,7 +38,7 @@ public class ApiRequest {
                 // If the list is empty, create a fallback book
                 if (books.isEmpty()) {
                     books = new ArrayList<>();
-                    books.add(new Book("An Error occurred, please try again", 0, 0, "NA", ""));
+                    books.add(new Book("An Error occurred, please try again", "0", 0, "NA", ""));
                 }
                 List<Book> finalBooks = books;
                 mainHandler.post(() -> callback.onBookFetched(finalBooks)); // Pass as a list
@@ -46,7 +46,7 @@ public class ApiRequest {
                 Log.e("ApiRequest", "Error fetching single book", e);
                 mainHandler.post(() -> {
                     List<Book> fallback = new ArrayList<>();
-                    fallback.add(new Book("An Error occurred, please try again", 0, 0, "NA", ""));
+                    fallback.add(new Book("An Error occurred, please try again", "0", 0, "NA", ""));
                     callback.onBookFetched(fallback);
                 }); // Handle errors with a fallback list
             }
@@ -86,8 +86,13 @@ public class ApiRequest {
                         String title = bookJson.optString("title", "No Title Available");
                         String authors = bookJson.optJSONArray("authors") != null ?
                                 bookJson.getJSONArray("authors").join(", ") : "No Authors Available";
-                        int pageCount = bookJson.optInt("pageCount", -1);
-                        int year = parseYear(bookJson.optString("publishedDate", "Unknown"));
+                        int pageCount;
+                        try {
+                             pageCount = bookJson.optInt("pageCount", -1);
+                        } catch (NullPointerException npe){
+                             pageCount = 0;
+                        }
+                        String year = (bookJson.optString("publishedDate", "Unknown"));
 
                         // Get the image URL
                         String imageUrl = bookJson.optJSONObject("imageLinks") != null ?
@@ -104,12 +109,5 @@ public class ApiRequest {
     }
 
     // Helper method to parse the year from the published date
-    private int parseYear(String publishedDate) {
-        try {
-            return Integer.parseInt(publishedDate.substring(0, 4));
-        } catch (Exception e) {
-            Log.e("ApiRequest", "Error parsing year from date: " + publishedDate, e);
-        }
-        return -1; // Return -1 if parsing fails
-    }
+
 }

@@ -26,11 +26,13 @@ public class Search extends AppCompatActivity {
                 // Check if books is not null and contains at least one item
                 if (books != null && !books.isEmpty()) {
                     // Use the first book from the list
-                    Book firstBook = books.get(0);  // Get the first book
-                    uiMaster.createBookBox(bookContainer, firstBook);
+                    for (Book book: books) {
+                        uiMaster.createBookBox(bookContainer, book);
+                    }
+
                 } else {
                     // If no books found, create a fallback Book
-                    uiMaster.createBookBox(bookContainer, new Book("An Error occurred please try again", 0, 0, "NA"));
+                    uiMaster.createBookBox(bookContainer, new Book("An Error occurred please try again", "0", 0, "NA"));
                 }
             }
         });

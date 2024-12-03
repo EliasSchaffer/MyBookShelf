@@ -18,16 +18,9 @@ public class UIMaster extends AppCompatActivity {
 
     MainActivity mainActivity;
     private int timeSpentReading = 0;
-    private TextView timeSpentReadingTextView;
 
     public void setMain(MainActivity main) {
         this.mainActivity = main;
-
-        if (mainActivity != null && mainActivity.findViewById(R.id.etfTimeSpentReading) != null) {
-            timeSpentReadingTextView = mainActivity.findViewById(R.id.etfTimeSpentReading);
-        } else {
-            Log.e("UIMaster", "MainActivity or required TextView is not properly initialized.");
-        }
     }
 
     public void createBookBox(LinearLayout container, Book book) {
@@ -79,14 +72,7 @@ public class UIMaster extends AppCompatActivity {
         details.append("Name: ").append(TextUtils.isEmpty(book.getName()) ? "Unknown" : book.getName()).append("\n");
         details.append("Author: ").append(TextUtils.isEmpty(book.getAuthor()) ? "Unknown" : book.getAuthor()).append("\n");
         details.append("Pages: ").append(book.getPages() > 0 ? book.getPages() : "Unknown").append("\n");
-        details.append("Release Date: ").append(book.getRelease_date() > 0 ? book.getRelease_date() : "Unknown");
-
-        // Update the time spent reading
-        timeSpentReading += book.getPages();
-        if (timeSpentReadingTextView != null) {
-            // Update the UI dynamically
-            timeSpentReadingTextView.setText("Time Spent Reading: " + timeSpentReading / 60 + "h " + timeSpentReading % 60 + "min");
-        }
+        details.append("Release Date: ").append(book.getRelease_date() != null ? book.getRelease_date() : "Unknown");
 
         bookDetails.setText(details.toString());
         bookDetails.setTextColor(Color.BLACK);
@@ -112,6 +98,15 @@ public class UIMaster extends AppCompatActivity {
 
     public void clearUI(LinearLayout container){
         container.removeAllViews();
+    }
+
+    public void updateReadingTime(int pages, TextView timeSpentReadingTextView){
+        timeSpentReading +=pages;
+        if (timeSpentReadingTextView != null) {
+            runOnUiThread(() ->
+                    timeSpentReadingTextView.setText("Time Spent Reading: " + timeSpentReading / 60 + "h " + timeSpentReading % 60 + "min")
+            );
+        }
     }
 
 }

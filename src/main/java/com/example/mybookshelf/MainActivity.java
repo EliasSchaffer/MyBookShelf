@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.SearchView;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private UIMaster uiMaster;
     private Search search;
     private SearchView searchView;
+    private TextView timeSpentReadingTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,9 +117,11 @@ public class MainActivity extends AppCompatActivity {
                             // Ensure the list is not empty and fetch the first book
                             if (books != null && !books.isEmpty()) {
                                 uiMaster.createBookBox(bookContainer, books.get(0)); // Pass the first book
+                                timeSpentReadingTextView = findViewById(R.id.etfTimeSpentReading);
+                                uiMaster.updateReadingTime(books.get(0).getPages(), timeSpentReadingTextView);
                             } else {
                                 // Handle error or empty list
-                                uiMaster.createBookBox(bookContainer, new Book("An Error occurred, please try again", 0, 0, "NA"));
+                                uiMaster.createBookBox(bookContainer, new Book("An Error occurred, please try again", "0", 0, "NA"));
                             }
                         }
                     });
