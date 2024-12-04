@@ -1,7 +1,11 @@
 package com.example.mybookshelf;
 
+import android.content.Context;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.List;
+import android.widget.Toast;
 
 public class User {
     String user;
@@ -35,6 +39,17 @@ public class User {
 
     public List<Book> getBookList() {
         return bookList;
+    }
+
+    public void addBook(Book book, Context main){
+        for (Book listBook:bookList) {
+            if (listBook.getName().equals(book.getName())){
+                Toast.makeText(main, "Book is already in your List", Toast.LENGTH_SHORT).show();
+                return;
+            }
+        }
+        bookList.add(book);
+
     }
 }
 

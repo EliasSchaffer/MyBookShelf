@@ -1,5 +1,6 @@
 package com.example.mybookshelf;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -121,12 +122,12 @@ public class MainActivity extends AppCompatActivity {
                         public void onBookFetched(List<Book> books) {
                             // Ensure the list is not empty and fetch the first book
                             if (books != null && !books.isEmpty()) {
-                                uiMaster.createBookBox(bookContainer, books.get(0)); // Pass the first book
+                                uiMaster.createBookBox(bookContainer, books.get(0), false); // Pass the first book
                                 timeSpentReadingTextView = findViewById(R.id.etfTimeSpentReading);
                                 uiMaster.updateReadingTime(books.get(0).getPages(), timeSpentReadingTextView);
                             } else {
                                 // Handle error or empty list
-                                uiMaster.createBookBox(bookContainer, new Book("An Error occurred, please try again", "0", 0, "NA"));
+                                uiMaster.createBookBox(bookContainer, new Book("An Error occurred, please try again", "0", 0, "NA"), false);
                             }
                         }
                     });
@@ -137,7 +138,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    public void saveBookName(String bookName){
+        Context context = getBaseContext();
+        logedindUser.addBook(new Book(bookName), context);
 
+    }
 
 
 

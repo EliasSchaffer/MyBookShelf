@@ -27,12 +27,12 @@ public class Search extends AppCompatActivity {
                 if (books != null && !books.isEmpty()) {
                     // Use the first book from the list
                     for (Book book: books) {
-                        uiMaster.createBookBox(bookContainer, book);
+                        uiMaster.createBookBox(bookContainer, book, true);
                     }
 
                 } else {
                     // If no books found, create a fallback Book
-                    uiMaster.createBookBox(bookContainer, new Book("An Error occurred please try again", "0", 0, "NA"));
+                    uiMaster.createBookBox(bookContainer, new Book("An Error occurred please try again", "0", 0, "NA"), false);
                 }
             }
         });

@@ -4,12 +4,15 @@ import android.graphics.Color;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
@@ -23,7 +26,7 @@ public class UIMaster extends AppCompatActivity {
         this.mainActivity = main;
     }
 
-    public void createBookBox(LinearLayout container, Book book) {
+    public void createBookBox(LinearLayout container, Book book, boolean isSearch) {
         // Ensure that mainActivity is properly initialized
         if (mainActivity == null) {
             Log.e("UIMaster", "MainActivity is null. Cannot create book box.");
@@ -68,11 +71,19 @@ public class UIMaster extends AppCompatActivity {
 
         // Create a TextView for the book details
         TextView bookDetails = new TextView(mainActivity);
-        StringBuilder details = new StringBuilder();
+        StringBuilder details;
+        details = new StringBuilder();
         details.append("Name: ").append(TextUtils.isEmpty(book.getName()) ? "Unknown" : book.getName()).append("\n");
         details.append("Author: ").append(TextUtils.isEmpty(book.getAuthor()) ? "Unknown" : book.getAuthor()).append("\n");
         details.append("Pages: ").append(book.getPages() > 0 ? book.getPages() : "Unknown").append("\n");
         details.append("Release Date: ").append(book.getRelease_date() != null ? book.getRelease_date() : "Unknown");
+
+
+        if (isSearch)  {
+            Button btnAdd = getBtnAdd(book);
+            bookBox.addView(btnAdd);
+        }
+
 
         bookDetails.setText(details.toString());
         bookDetails.setTextColor(Color.BLACK);
@@ -94,6 +105,22 @@ public class UIMaster extends AppCompatActivity {
 
         // Add the book box to the container
         container.addView(bookBox);
+    }
+
+    @NonNull
+    private Button getBtnAdd(Book book) {
+        Button btnAdd = new Button(mainActivity);
+        btnAdd.setOnClickListener(v -> mainActivity.saveBookName(book.getName()));
+        btnAdd.setText("Add Book"); // Use string resource for text
+
+        // Set layout parameters for the button
+        RelativeLayout.LayoutParams btnParams = new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.WRAP_CONTENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT
+        );
+        btnParams.addRule(RelativeLayout.ALIGN_PARENT_END);
+        btnAdd.setLayoutParams(btnParams);
+        return btnAdd;
     }
 
     public void clearUI(LinearLayout container){
