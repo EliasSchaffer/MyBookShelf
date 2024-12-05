@@ -5,7 +5,6 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
-import android.widget.Toast;
 
 public class User {
     String user;
@@ -50,6 +49,22 @@ public class User {
         }
         bookList.add(book);
 
+    }
+
+    public void removeBook(Book book, Context main){
+        for (Book listBook:bookList) {
+            if (listBook.getName().equals(book.getName())){
+                bookList.remove(book);
+
+                return;
+            }
+        }
+        Toast.makeText(main, "An Error occurred please try again later or reload the site", Toast.LENGTH_SHORT).show();
+
+    }
+
+    public void setList(List<Book> bookList) {
+        this.bookList = bookList;
     }
 }
 

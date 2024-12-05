@@ -17,6 +17,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 
+import java.util.Objects;
+
 public class UIMaster extends AppCompatActivity {
 
     MainActivity mainActivity;
@@ -37,6 +39,8 @@ public class UIMaster extends AppCompatActivity {
             Log.w("createBookBox", "Received null book object");
             return;
         }
+
+        String name = book.getName();
 
         // Create a container for the book box
         RelativeLayout bookBox = new RelativeLayout(mainActivity);
@@ -84,6 +88,12 @@ public class UIMaster extends AppCompatActivity {
             bookBox.addView(btnAdd);
         }
 
+        //FIX THIS PLEASE
+//        if (!isSearch && !Objects.equals(book.getName(), "An Error occurred please try again")){
+//            Button btnRemove = getBtnRemove(new Book(name));
+//            bookBox.addView(btnRemove);
+//        }
+
 
         bookDetails.setText(details.toString());
         bookDetails.setTextColor(Color.BLACK);
@@ -110,8 +120,24 @@ public class UIMaster extends AppCompatActivity {
     @NonNull
     private Button getBtnAdd(Book book) {
         Button btnAdd = new Button(mainActivity);
-        btnAdd.setOnClickListener(v -> mainActivity.saveBookName(book.getName()));
+        btnAdd.setOnClickListener(v -> mainActivity.saveBookName(book));
         btnAdd.setText("Add Book"); // Use string resource for text
+
+        // Set layout parameters for the button
+        RelativeLayout.LayoutParams btnParams = new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.WRAP_CONTENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT
+        );
+        btnParams.addRule(RelativeLayout.ALIGN_PARENT_END);
+        btnAdd.setLayoutParams(btnParams);
+        return btnAdd;
+    }
+
+    @NonNull
+    private Button getBtnRemove(Book book) {
+        Button btnAdd = new Button(mainActivity);
+        btnAdd.setOnClickListener(v -> mainActivity.removeBook(book));
+        btnAdd.setText("Remove Book"); // Use string resource for text
 
         // Set layout parameters for the button
         RelativeLayout.LayoutParams btnParams = new RelativeLayout.LayoutParams(
@@ -131,7 +157,7 @@ public class UIMaster extends AppCompatActivity {
         timeSpentReading +=pages;
         if (timeSpentReadingTextView != null) {
             runOnUiThread(() ->
-                    timeSpentReadingTextView.setText("Time Spent Reading: " + timeSpentReading / 60 + "h " + timeSpentReading % 60 + "min")
+                    timeSpentReadingTextView.setText("Time Spent Reading: " + + (timeSpentReading / (24 * 60)) + " d, " + ((timeSpentReading % (24 * 60)) / 60) + " h " + ((timeSpentReading % (24 * 60)) % 60) + " min")
             );
         }
     }

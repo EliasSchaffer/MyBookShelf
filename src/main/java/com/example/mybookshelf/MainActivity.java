@@ -138,10 +138,19 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void saveBookName(String bookName){
+    public void saveBookName(Book book){
         Context context = getBaseContext();
-        logedindUser.addBook(new Book(bookName), context);
+        logedindUser.addBook(book, context);
 
+    }
+
+    public void removeBook(Book book){
+        Context context = getBaseContext();
+        logedindUser.removeBook(book, context);
+    }
+
+    public User getUser(){
+        return logedindUser;
     }
 
 
