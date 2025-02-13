@@ -24,6 +24,11 @@ public class Book {
         this.image_url = image_url;
     }
 
+    public Book(String name, int pages) {
+        this.name = name;
+        this.pages = pages;
+    }
+
     public Book(String name) {
         this.name = name;
     }

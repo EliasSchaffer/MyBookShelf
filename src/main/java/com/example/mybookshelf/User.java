@@ -1,9 +1,13 @@
 package com.example.mybookshelf;
 
 import android.content.Context;
+import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class User {
@@ -20,12 +24,7 @@ public class User {
         bookList.add(new Book("To Kill a Mockingbird"));
         bookList.add(new Book("1984"));
         bookList.add(new Book("blue box 1"));
-        bookList.add(new Book("kimitte watashi no koto suki nandesho 1"));
-        bookList.add(new Book("Niggers in Paris"));
-        bookList.add(new Book("Mein Kampf"));
-        bookList.add(new Book("Felix der Neger"));
-        bookList.add(new Book("Schwänze für Blondine"));
-
+        bookList.add(new Book("Erebos"));
     }
 
     public String getUser() {
@@ -44,6 +43,7 @@ public class User {
         for (Book listBook:bookList) {
             if (listBook.getName().equals(book.getName())){
                 Toast.makeText(main, "Book is already in your List", Toast.LENGTH_SHORT).show();
+                Toast.makeText(main,"successfully added book", Toast.LENGTH_SHORT).show();
                 return;
             }
         }
@@ -51,21 +51,35 @@ public class User {
 
     }
 
-    public void removeBook(Book book, Context main){
-        for (Book listBook:bookList) {
-            if (listBook.getName().equals(book.getName())){
-                bookList.remove(book);
-
-                return;
+    public void removeBook(Book book, Context main, LinearLayout container) {
+        // Remove the book from the list
+        Iterator<Book> iterator = bookList.iterator();
+        while (iterator.hasNext()) {
+            Book listBook = iterator.next();
+            if (listBook.getName().equals(book.getName())) {
+                iterator.remove(); // Safely remove the book from the list
+                break; // Exit the loop after removal
             }
         }
-        Toast.makeText(main, "An Error occurred please try again later or reload the site", Toast.LENGTH_SHORT).show();
 
+        // Remove the book's visual part from the UI
+        for (int i = 0; i < container.getChildCount(); i++) {
+            View bookBox = container.getChildAt(i);
+            // Assuming you have a way to tag or identify the book's visual part, like setting a tag to the bookBox
+            if (bookBox instanceof RelativeLayout) {
+                // You might want to set a tag when creating the book box, so you can identify it later
+                if (bookBox.getTag() != null && bookBox.getTag().equals(book.getName())) {
+                    container.removeViewAt(i); // Remove the visual part
+                    break; // Exit the loop after removal
+                }
+            }
+        }
+
+        // Show an error message if the book wasn't found
+        Toast.makeText(main, "An Error occurred, please try again later or reload the site", Toast.LENGTH_SHORT).show();
     }
 
-    public void setList(List<Book> bookList) {
-        this.bookList = bookList;
-    }
+
 }
 
 

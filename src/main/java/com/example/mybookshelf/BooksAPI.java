@@ -16,7 +16,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class ApiRequest {
+public class BooksAPI {
     private final ExecutorService executorService = Executors.newSingleThreadExecutor();
     private final Handler mainHandler = new Handler(Looper.getMainLooper()); // Handler to post to main thread
 
@@ -101,13 +101,13 @@ public class ApiRequest {
                         books.add(new Book(title, year, pageCount, authors, imageUrl));
                     }
                 }
+                reader.close();
             }
+        connection.disconnect();
         } catch (IOException | JSONException e) {
             Log.e("ApiRequest", "Error processing the request", e);
         }
+
         return books;
     }
-
-    // Helper method to parse the year from the published date
-
 }

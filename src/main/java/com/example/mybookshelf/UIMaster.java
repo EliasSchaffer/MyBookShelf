@@ -28,6 +28,16 @@ public class UIMaster extends AppCompatActivity {
         this.mainActivity = main;
     }
 
+    public void reduceTimeSpendReading(int time, TextView timeSpentReadingTextView){
+
+        timeSpentReading-=(time*1.5);
+        if (timeSpentReadingTextView != null) {
+            runOnUiThread(() ->
+                    timeSpentReadingTextView.setText("Time Spent Reading: " + + (timeSpentReading / (24 * 60)) + " d, " + ((timeSpentReading % (24 * 60)) / 60) + " h " + ((timeSpentReading % (24 * 60)) % 60) + " min")
+            );
+        }
+    }
+
     public void createBookBox(LinearLayout container, Book book, boolean isSearch) {
         // Ensure that mainActivity is properly initialized
         if (mainActivity == null) {
@@ -89,15 +99,16 @@ public class UIMaster extends AppCompatActivity {
         }
 
         //FIX THIS PLEASE
-//        if (!isSearch && !Objects.equals(book.getName(), "An Error occurred please try again")){
-//            Button btnRemove = getBtnRemove(new Book(name));
-//            bookBox.addView(btnRemove);
-//        }
+        if (!isSearch && !Objects.equals(book.getName(), "An Error occurred please try again")){
+            Button btnRemove = getBtnRemove(new Book(name, book.getPages()));
+            bookBox.addView(btnRemove);
+        }
 
 
         bookDetails.setText(details.toString());
         bookDetails.setTextColor(Color.BLACK);
         bookDetails.setTextSize(16);
+        bookBox.setTag(name);
 
         // Set up layout for the TextView
         RelativeLayout.LayoutParams textParams = new RelativeLayout.LayoutParams(
@@ -154,7 +165,7 @@ public class UIMaster extends AppCompatActivity {
     }
 
     public void updateReadingTime(int pages, TextView timeSpentReadingTextView){
-        timeSpentReading +=pages;
+        timeSpentReading += (pages*1.5);
         if (timeSpentReadingTextView != null) {
             runOnUiThread(() ->
                     timeSpentReadingTextView.setText("Time Spent Reading: " + + (timeSpentReading / (24 * 60)) + " d, " + ((timeSpentReading % (24 * 60)) / 60) + " h " + ((timeSpentReading % (24 * 60)) % 60) + " min")

@@ -10,19 +10,30 @@ import android.widget.LinearLayout;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.util.List;
-import java.util.Objects;
+import org.json.JSONObject;
 
-public class MainActivity extends AppCompatActivity {
+import java.io.IOException;
+import java.util.List;
+import java.util.concurrent.ExecutionException;
+
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+public class MainActivity extends AppCompatActivity implements ApiResponseCallback {
 
     private EditText usernameEditText;
     private EditText passwordEditText;
     private  Button loginButton;
     private Button addBookButton;
     private Authenticator auth;
-    private ApiRequest api;
+    private BooksAPI booksAPI;
+    private AiAPI ai;
     private UIMaster uiMaster;
     private Search search;
     private SearchView searchView;
@@ -43,16 +54,28 @@ public class MainActivity extends AppCompatActivity {
 
             // Initialize Authenticator and ApiRequest
             auth = new Authenticator();
-            api = new ApiRequest();
+            booksAPI = new BooksAPI();
             uiMaster = new UIMaster();
             uiMaster.setMain(this);
             search = new Search(this);
+            ai = new AiAPI();
 
-            loginButton.setOnClickListener(v -> handleLogin());
+            loginButton.setOnClickListener(v -> {
+                try {
+                    handleLogin();
+                } catch (ExecutionException e) {
+                    throw new RuntimeException(e);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+            });
         } catch (Exception e) {
             Log.e("MainActivity", "Error during initialization", e);
             Toast.makeText(this, "An error occurred during initialization", Toast.LENGTH_SHORT).show();
         }
+
+        String question = "What is the plot of 'Moby Dick'?";  // Your desired question
+        AiAPI.fetchResponse(question, MainActivity.this);
     }
 
     private void handleSearch() {
@@ -60,7 +83,15 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout bookContainer = findViewById(R.id.bookContainer);
         searchView = findViewById(R.id.searchView);
         goToStarting = findViewById(R.id.btnGoBack);
-        goToStarting.setOnClickListener(v -> navigateToStartingPage(this.logedindUser));
+        goToStarting.setOnClickListener(v -> {
+            try {
+                navigateToStartingPage(this.logedindUser);
+            } catch (ExecutionException e) {
+                throw new RuntimeException(e);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
 
         // Set up SearchView listener
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -86,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void handleLogin() {
+    private void handleLogin() throws ExecutionException, InterruptedException {
         String username = usernameEditText.getText().toString().trim();
         String password = passwordEditText.getText().toString().trim();
 
@@ -104,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void navigateToStartingPage(User user) {
+    private void navigateToStartingPage(User user) throws ExecutionException, InterruptedException {
         logedindUser = user;
         setContentView(R.layout.starting_page);
         LinearLayout bookContainer = findViewById(R.id.bookContainer);
@@ -117,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
         if (userBooks != null && !userBooks.isEmpty()) {
             for (Book book : userBooks) {
                 if (book != null && !TextUtils.isEmpty(book.getName())) {
-                    api.getOneBook(book.getName(), new ApiRequest.BookCallback() {
+                    booksAPI.getOneBook(book.getName(), new BooksAPI.BookCallback() {
                         @Override
                         public void onBookFetched(List<Book> books) {
                             // Ensure the list is not empty and fetch the first book
@@ -136,7 +167,13 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Log.w("MainActivity", "User's book list is null or empty.");
         }
+
+        String question = "suggest me books about ai";
+
+
     }
+
+
 
     public void saveBookName(Book book){
         Context context = getBaseContext();
@@ -144,16 +181,38 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+
+
+
+    //AI Response Handeling !!REMOVE LATER!!
     public void removeBook(Book book){
         Context context = getBaseContext();
-        logedindUser.removeBook(book, context);
+        uiMaster.reduceTimeSpendReading(book.getPages(), timeSpentReadingTextView);
+        logedindUser.removeBook(book, context, findViewById(R.id.bookContainer));
     }
 
     public User getUser(){
         return logedindUser;
     }
 
+    @Override
+    public void onSuccess(String response) {
+        // Show the response in a simple dialog when the request succeeds
+        showResponseDialog(response);
+    }
 
+    @Override
+    public void onFailure(String error) {
+        // Show the error in a dialog when the request fails
+        showResponseDialog(error);
+    }
 
-
+    private void showResponseDialog(String message) {
+        // Simple pop-up without any buttons or extra UI elements
+        new AlertDialog.Builder(this)
+                .setMessage(message)
+                .setCancelable(false)  // Makes the dialog non-dismissable unless manually closed
+                .show();
+    }
 }
