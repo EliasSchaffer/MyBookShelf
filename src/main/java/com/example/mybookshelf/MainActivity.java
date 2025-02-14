@@ -6,6 +6,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.SearchView;
 import android.widget.TextView;
@@ -14,11 +15,15 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
+
 import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import okhttp3.ResponseBody;
 import retrofit2.Call;
@@ -29,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
 
     private EditText usernameEditText;
     private EditText passwordEditText;
-    private  Button loginButton;
+    private Button loginButton;
     private Button addBookButton;
     private Authenticator auth;
     private BooksAPI booksAPI;
@@ -74,8 +79,8 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
             Toast.makeText(this, "An error occurred during initialization", Toast.LENGTH_SHORT).show();
         }
 
-        String question = "What is the plot of 'Moby Dick'?";  // Your desired question
-        AiAPI.fetchResponse(question, MainActivity.this);
+//        String question = "What is the plot of 'Moby Dick'?";  // Your desired question
+//        AiAPI.fetchResponse(question, MainActivity.this);
     }
 
     private void handleSearch() {
@@ -144,7 +149,6 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
         addBookButton.setOnClickListener(v -> handleSearch());
 
 
-
         if (userBooks != null && !userBooks.isEmpty()) {
             for (Book book : userBooks) {
                 if (book != null && !TextUtils.isEmpty(book.getName())) {
@@ -168,38 +172,80 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
             Log.w("MainActivity", "User's book list is null or empty.");
         }
 
-        String question = "suggest me books about ai";
+    }
+
+    void navigateToDetails(Book book) {
+        setContentView(R.layout.detail_activity);
+
+        TextView txtDetails = findViewById(R.id.txtDetails);
+        StringBuilder str = new StringBuilder();
+        str.append(book.getName()).append("\n").append(book.getAuthor()).append(book.getRelease_date());
+        txtDetails.setText(str.toString());
+
+        TextView txtDescription = findViewById(R.id.txtDescription);
+        //txtDescription.setText(book.getDescription());
+
+        ImageView imgCover = findViewById(R.id.imgCover);
+        Glide.with(this).load(book.getImageUrl()).into(imgCover);
+
+        Button submitButton = findViewById(R.id.submitButton);
+        submitButton.setOnClickListener(v -> {
+            EditText inpInputText = findViewById(R.id.inpInputText);
+            String prompt = inpInputText.getText().toString();
+            inpInputText.setText("");
+            //ai.fetchResponse("The Question is:" + prompt + "The book is " + book.getName() + " if the question isnt about books say that that question is not about books and they should ask something else. if you know the book provide a short answer with max 50 words and skip all the following instructions . if you dont know the book say:-1", MainActivity.this);
+            ai.fetchResponse(prompt + " The books name is " + book.getName(), MainActivity.this);
+        });
 
 
     }
 
 
-
-    public void saveBookName(Book book){
+    public void saveBookName(Book book) {
         Context context = getBaseContext();
         logedindUser.addBook(book, context);
 
     }
 
 
-
-
-
-    //AI Response Handeling !!REMOVE LATER!!
-    public void removeBook(Book book){
+    public void removeBook(Book book) {
         Context context = getBaseContext();
         uiMaster.reduceTimeSpendReading(book.getPages(), timeSpentReadingTextView);
         logedindUser.removeBook(book, context, findViewById(R.id.bookContainer));
     }
 
-    public User getUser(){
+    public User getUser() {
         return logedindUser;
     }
 
+
+    //AI Response Handeling !!REMOVE LATER!!
     @Override
     public void onSuccess(String response) {
         // Show the response in a simple dialog when the request succeeds
-        showResponseDialog(response);
+        String result = "";
+        // JSON string to parse
+
+        // Define regex to extract the "response" field value (handling newlines)
+        String regex = "\"response\":\"(.*?)\"";
+
+        // Create Pattern object with DOTALL mode to capture newlines
+        Pattern pattern = Pattern.compile(regex, Pattern.DOTALL);
+
+        // Create matcher object
+        Matcher matcher = pattern.matcher(response);
+
+        // If a match is found, print the response
+//        if (matcher.find()) {
+//            result = matcher.group(1); // Extracting the matched value
+//            System.out.println("Response: ");
+//            System.out.println(response.replace("\\n", "\n")); // Replace escaped newlines with actual newlines
+//        } else {
+//            System.out.println("No response found.");
+//        }
+
+        result = response;
+        showResponseDialog(result);
     }
 
     @Override
@@ -209,10 +255,10 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
     }
 
     private void showResponseDialog(String message) {
+
+        TextView boxReturn = findViewById(R.id.boxReturn);
         // Simple pop-up without any buttons or extra UI elements
-        new AlertDialog.Builder(this)
-                .setMessage(message)
-                .setCancelable(false)  // Makes the dialog non-dismissable unless manually closed
-                .show();
+        boxReturn.setText("");
+        boxReturn.setText(message);
     }
 }

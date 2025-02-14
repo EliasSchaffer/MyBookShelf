@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
@@ -98,6 +99,7 @@ public class UIMaster extends AppCompatActivity {
             bookBox.addView(btnAdd);
         }
 
+
         //FIX THIS PLEASE
         if (!isSearch && !Objects.equals(book.getName(), "An Error occurred please try again")){
             Button btnRemove = getBtnRemove(new Book(name, book.getPages()));
@@ -123,6 +125,9 @@ public class UIMaster extends AppCompatActivity {
         // Add the ImageView and TextView to the RelativeLayout
         bookBox.addView(bookImage);
         bookBox.addView(bookDetails);
+
+        bookBox.setOnClickListener(v -> mainActivity.navigateToDetails(book));
+
 
         // Add the book box to the container
         container.addView(bookBox);

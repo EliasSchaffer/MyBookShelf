@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/beige">
+
+    <!-- Original White Box Header -->
+    <RelativeLayout
+        android:id="@+id/white_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:padding="16dp"
+        android:layout_alignParentTop="true">
+
+        <!-- Original Header Text -->
+        <TextView
+            android:id="@+id/tv_my_bookshelf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="30sp"
+            android:textColor="@android:color/black"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="8dp" />
+
+        <!-- Original Header Icon -->
+        <ImageView
+            android:id="@+id/icon_my_bookshelf"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_toEndOf="@id/tv_my_bookshelf"
+            android:layout_centerVertical="true"
+            android:src="@drawable/book_icon" />
+    </RelativeLayout>
+
+    <!-- Image on the Left Below White Bar -->
+    <ImageView
+        android:id="@+id/imgCover"
+        android:layout_width="126dp"
+        android:layout_height="172dp"
+        app:srcCompat="@android:drawable/stat_notify_error"
+        android:layout_below="@id/white_box"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp" />
+
+    <!-- TextView to the Right of the Image -->
+    <TextView
+        android:id="@+id/txtDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Book Title Here"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_toEndOf="@id/imgCover"
+        android:layout_alignTop="@id/imgCover"
+        android:layout_marginStart="16dp" />
+
+    <!-- Text Below the Image -->
+    <TextView
+        android:id="@+id/txtDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description of the book goes here."
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:layout_below="@id/imgCover"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp" />
+
+    <!-- Box Above the Input with a TextView Inside -->
+    <RelativeLayout
+        android:id="@+id/box_above_input"
+        android:layout_width="381dp"
+        android:layout_height="201dp"
+        android:layout_above="@id/inputContainer"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/darker_gray"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/boxReturn"
+            android:layout_width="367dp"
+            android:layout_height="145dp"
+            android:layout_centerInParent="true"
+            android:text="Ask AI about the book"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <!-- Bottom Section: Input & Button -->
+    <LinearLayout
+        android:id="@+id/inputContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/inpInputText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Enter text..."
+            android:padding="12dp"
+            android:background="@android:color/white"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+</RelativeLayout>
