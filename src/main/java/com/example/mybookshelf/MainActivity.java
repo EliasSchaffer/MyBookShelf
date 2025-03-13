@@ -25,10 +25,6 @@ import java.util.concurrent.ExecutionException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import okhttp3.ResponseBody;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity implements ApiResponseCallback {
 
@@ -58,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
             loginButton = findViewById(R.id.btnLogin);
 
             // Initialize Authenticator and ApiRequest
-            auth = new Authenticator();
+            auth = new Authenticator(this);
             booksAPI = new BooksAPI();
             uiMaster = new UIMaster();
             uiMaster.setMain(this);
@@ -183,7 +179,7 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
         txtDetails.setText(str.toString());
 
         TextView txtDescription = findViewById(R.id.txtDescription);
-        //txtDescription.setText(book.getDescription());
+        txtDescription.setText(book.getDescription());
 
         ImageView imgCover = findViewById(R.id.imgCover);
         Glide.with(this).load(book.getImageUrl()).into(imgCover);
@@ -192,12 +188,18 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
         submitButton.setOnClickListener(v -> {
             EditText inpInputText = findViewById(R.id.inpInputText);
             String prompt = inpInputText.getText().toString();
-            inpInputText.setText("");
-            //ai.fetchResponse("The Question is:" + prompt + "The book is " + book.getName() + " if the question isnt about books say that that question is not about books and they should ask something else. if you know the book provide a short answer with max 50 words and skip all the following instructions . if you dont know the book say:-1", MainActivity.this);
+            inpInputText.setText(" ");
             ai.fetchResponse(prompt + " The books name is " + book.getName(), MainActivity.this);
         });
 
-
+        Button backButton2 = findViewById(R.id.btnGoBack2);
+        backButton2.setOnClickListener(v -> {
+            try {
+                navigateToStartingPage(this.logedindUser);
+            } catch (ExecutionException | InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
     }
 
 

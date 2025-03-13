@@ -9,16 +9,41 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 public class User {
     String user;
     String password;
+    String email;
+    String UID;
     List<Book> bookList= new ArrayList<>();
+    DataBaseConnection db = new DataBaseConnection();
 
 
     public User(String user, String password) {
         this.user = user;
         this.password = password;
+
+        bookList.add(new Book("Harry Potter und die Kammer des Schreckens"));
+        bookList.add(new Book("To Kill a Mockingbird"));
+        bookList.add(new Book("1984"));
+        bookList.add(new Book("blue box 1"));
+        bookList.add(new Book("Erebos"));
+    }
+
+    public User (String user, String hash_password, String email, int UID){
+        this.user = user;
+        this.password = hash_password;
+        this.email = email;
+        this.UID = String.valueOf(UID);
+
+        try {
+            bookList = db.getBooksFromUID(UID);
+        } catch (ExecutionException e) {
+            throw new RuntimeException(e);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
 
         bookList.add(new Book("Harry Potter und die Kammer des Schreckens"));
         bookList.add(new Book("To Kill a Mockingbird"));

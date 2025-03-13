@@ -38,7 +38,7 @@ public class BooksAPI {
                 // If the list is empty, create a fallback book
                 if (books.isEmpty()) {
                     books = new ArrayList<>();
-                    books.add(new Book("An Error occurred, please try again", "0", 0, "NA", ""));
+                    books.add(new Book("An Error occurred, please try again", "0", 0, "NA", "", ""));
                 }
                 List<Book> finalBooks = books;
                 mainHandler.post(() -> callback.onBookFetched(finalBooks)); // Pass as a list
@@ -46,7 +46,7 @@ public class BooksAPI {
                 Log.e("ApiRequest", "Error fetching single book", e);
                 mainHandler.post(() -> {
                     List<Book> fallback = new ArrayList<>();
-                    fallback.add(new Book("An Error occurred, please try again", "0", 0, "NA", ""));
+                    fallback.add(new Book("An Error occurred, please try again", "0", 0, "NA", "", ""));
                     callback.onBookFetched(fallback);
                 }); // Handle errors with a fallback list
             }
@@ -98,7 +98,9 @@ public class BooksAPI {
                         String imageUrl = bookJson.optJSONObject("imageLinks") != null ?
                                 bookJson.getJSONObject("imageLinks").optString("thumbnail", "") : "";
 
-                        books.add(new Book(title, year, pageCount, authors, imageUrl));
+                        String description = bookJson.optString("description", "No Description Available");
+
+                        books.add(new Book(title, year, pageCount, authors, imageUrl, description));
                     }
                 }
                 reader.close();

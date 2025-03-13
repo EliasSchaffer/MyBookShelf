@@ -8,6 +8,7 @@ public class Book {
     private int pages;
     private String release_date;
     private String image_url;
+    private String description;
 
     public Book(String name, String release_date, int pages, String author) {
         this.name = name;
@@ -16,12 +17,13 @@ public class Book {
         this.author = author;
     }
 
-    public Book(String name, String release_date, int pages, String author, String image_url) {
+    public Book(String name, String release_date, int pages, String author, String image_url, String description) {
         this.name = name;
         this.release_date = release_date;
         this.pages = pages;
         this.author = author;
         this.image_url = image_url;
+        this.description = description;
     }
 
     public Book(String name, int pages) {
@@ -51,5 +53,9 @@ public class Book {
 
     public String getImageUrl() {
         return image_url;
+    }
+
+    public String getDescription() {
+        return description;
     }
 }
