@@ -12,14 +12,10 @@ import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 
-import org.json.JSONObject;
-
-import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.regex.Matcher;
@@ -28,9 +24,6 @@ import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity implements ApiResponseCallback {
 
-    private EditText usernameEditText;
-    private EditText passwordEditText;
-    private Button loginButton;
     private Button addBookButton;
     private Authenticator auth;
     private BooksAPI booksAPI;
@@ -45,13 +38,10 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_activity);
 
         try {
             // Initialize UI components
-            usernameEditText = findViewById(R.id.txfUser);
-            passwordEditText = findViewById(R.id.txfPassword);
-            loginButton = findViewById(R.id.btnLogin);
+
 
             // Initialize Authenticator and ApiRequest
             auth = new Authenticator(this);
@@ -61,15 +51,16 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
             search = new Search(this);
             ai = new AiAPI();
 
-            loginButton.setOnClickListener(v -> {
-                try {
-                    handleLogin();
-                } catch (ExecutionException e) {
-                    throw new RuntimeException(e);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
-            });
+
+            try {
+                uiMaster.showLogin();
+            } catch (ExecutionException e) {
+                throw new RuntimeException(e);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+
+
         } catch (Exception e) {
             Log.e("MainActivity", "Error during initialization", e);
             Toast.makeText(this, "An error occurred during initialization", Toast.LENGTH_SHORT).show();
@@ -118,7 +109,23 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
     }
 
 
-    private void handleLogin() throws ExecutionException, InterruptedException {
+
+    public void handleRegister(EditText usernameEditText, EditText passwordEditText, EditText emailEditText) throws ExecutionException, InterruptedException {
+        String username = usernameEditText.getText().toString().trim();
+        String password = passwordEditText.getText().toString().trim();
+        String email = emailEditText.getText().toString().trim();
+
+        if (TextUtils.isEmpty(username) || TextUtils.isEmpty(password) || TextUtils.isEmpty(email)) {
+            Toast.makeText(this, "Please enter all fields", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        auth.register(username, password, email);
+        uiMaster.showLogin();
+    }
+
+
+    public void handleLogin(EditText usernameEditText, EditText passwordEditText) throws ExecutionException, InterruptedException {
+
         String username = usernameEditText.getText().toString().trim();
         String password = passwordEditText.getText().toString().trim();
 

@@ -17,6 +17,18 @@
         android:textColor="@android:color/black"
         android:textSize="36sp" />
 
+    <!-- Email Field -->
+    <EditText
+        android:id="@+id/txfEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:textSize="18sp"
+        android:layout_below="@id/app_name"
+        android:layout_marginTop="50dp"
+        android:padding="10dp"
+        android:inputType="textEmailAddress"/>
+
     <!-- Username Field -->
     <EditText
         android:id="@+id/txfUser"
@@ -24,8 +36,8 @@
         android:layout_height="wrap_content"
         android:hint="Username"
         android:textSize="18sp"
-        android:layout_below="@id/app_name"
-        android:layout_marginTop="50dp"
+        android:layout_below="@id/txfEmail"
+        android:layout_marginTop="20dp"
         android:padding="10dp"/>
 
     <!-- Password Field -->
@@ -45,23 +57,23 @@
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:textSize="18sp"
         android:layout_below="@id/txfPassword"
         android:layout_marginTop="20dp"
         android:background="@color/beige"
-        android:textColor="@android:color/white"/>
+        android:text="Register"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
 
     <!-- Switch to Register Button -->
     <Button
         android:id="@+id/btnSwitchToLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Don't have an account? Register"
-        android:textSize="16sp"
         android:layout_below="@id/btnRegister"
         android:layout_marginTop="20dp"
         android:background="@android:color/white"
-        android:textColor="@android:color/black"/>
+        android:text="Already Have An Account? LOGIN"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
 
 </RelativeLayout>

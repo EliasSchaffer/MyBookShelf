@@ -1,5 +1,6 @@
 package com.example.mybookshelf;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
 import java.sql.Connection;
@@ -21,7 +22,7 @@ public class DataBaseConnection {
     private static final String URL = "jdbc:mysql://192.168.60.95:3306/mybookshelfdb";
     private static final String USER = "root";
     private static final String PASSWORD = "MYSQLPW1310&";
-    private Context context;
+    private final Context context;
 
     public DataBaseConnection(Context mainActivity) {
         this.context = mainActivity;
@@ -60,9 +61,11 @@ public class DataBaseConnection {
             String hashedPassword = BCrypt.withDefaults().hashToString(12, password.toCharArray());
 
             String checkUserSql = "SELECT COUNT(*) FROM users WHERE username = ? OR email = ?";
-            String insertUserSql = "INSERT INTO users (username, password, email) VALUES (?, ?, ?)";
+            String insertUserSql = "INSERT INTO users (username, password_hash, email) VALUES (?, ?, ?)";
 
             try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+                // Post the UI update to the main thread
+
 
                 try (PreparedStatement checkStmt = connection.prepareStatement(checkUserSql)) {
                     checkStmt.setString(1, username);
@@ -83,6 +86,13 @@ public class DataBaseConnection {
                     int rowsInserted = insertStmt.executeUpdate();
                     if (rowsInserted > 0) {
                         System.out.println("User added successfully!");
+                        ((Activity) context).runOnUiThread(() -> {
+                            new AlertDialog.Builder(context)
+                                    .setTitle("Debug Info")
+                                    .setMessage("user added to db")
+                                    .setPositiveButton("OK", (dialog, which) -> dialog.dismiss())
+                                    .show();
+                        });
                     }
                 }
 

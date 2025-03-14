@@ -4,8 +4,8 @@ import android.graphics.Color;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -13,16 +13,24 @@ import android.widget.TextView;
 
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 
 import java.util.Objects;
+import java.util.concurrent.ExecutionException;
 
-public class UIMaster extends AppCompatActivity {
+public class UIMaster {
 
     MainActivity mainActivity;
+    private EditText usernameEditText;
+    private EditText passwordEditText;
+    private EditText emailEditText;
+    private Button loginButton;
+    private Button registerButton;
+    private Button switchToLoginButton;
+    private Button switchToRegisterButton;
+
     private int timeSpentReading = 0;
 
     public void setMain(MainActivity main) {
@@ -33,7 +41,7 @@ public class UIMaster extends AppCompatActivity {
 
         timeSpentReading-=(time*1.5);
         if (timeSpentReadingTextView != null) {
-            runOnUiThread(() ->
+            mainActivity.runOnUiThread(() ->
                     timeSpentReadingTextView.setText("Time Spent Reading: " + + (timeSpentReading / (24 * 60)) + " d, " + ((timeSpentReading % (24 * 60)) / 60) + " h " + ((timeSpentReading % (24 * 60)) % 60) + " min")
             );
         }
@@ -172,10 +180,66 @@ public class UIMaster extends AppCompatActivity {
     public void updateReadingTime(int pages, TextView timeSpentReadingTextView){
         timeSpentReading += (pages*1.5);
         if (timeSpentReadingTextView != null) {
-            runOnUiThread(() ->
+            mainActivity.runOnUiThread(() ->
                     timeSpentReadingTextView.setText("Time Spent Reading: " + + (timeSpentReading / (24 * 60)) + " d, " + ((timeSpentReading % (24 * 60)) / 60) + " h " + ((timeSpentReading % (24 * 60)) % 60) + " min")
             );
         }
     }
+
+    public void showLogin() throws ExecutionException, InterruptedException {
+        mainActivity.setContentView(R.layout.login_activity);
+        usernameEditText = mainActivity.findViewById(R.id.txfUser);
+        passwordEditText = mainActivity.findViewById(R.id.txfPassword);
+        loginButton = mainActivity.findViewById(R.id.btnRegister);
+        switchToRegisterButton = mainActivity.findViewById(R.id.btnSwitchToLogin);
+
+
+        loginButton.setOnClickListener(v -> {
+            try {
+                mainActivity.handleLogin(usernameEditText, passwordEditText);
+            } catch (ExecutionException e) {
+                throw new RuntimeException(e);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
+
+        switchToRegisterButton.setOnClickListener(v -> {
+            showRegister();
+            });
+
+    }
+
+    public void showRegister(){
+        mainActivity.setContentView(R.layout.register_activity);
+        usernameEditText = mainActivity.findViewById(R.id.txfUser);
+        passwordEditText = mainActivity.findViewById(R.id.txfPassword);
+        emailEditText = mainActivity.findViewById(R.id.txfEmail);
+        registerButton = mainActivity.findViewById(R.id.btnRegister);
+        switchToLoginButton = mainActivity.findViewById(R.id.btnSwitchToLogin);
+
+
+        registerButton.setOnClickListener(v -> {
+            try {
+                mainActivity.handleRegister(usernameEditText, passwordEditText, emailEditText);
+            } catch (ExecutionException e) {
+                throw new RuntimeException(e);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
+
+        switchToLoginButton.setOnClickListener(v -> {
+            try {
+                showLogin();
+            } catch (ExecutionException e) {
+                throw new RuntimeException(e);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
+    }
+
+
 
 }

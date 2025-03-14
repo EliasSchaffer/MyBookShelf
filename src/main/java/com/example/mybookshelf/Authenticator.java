@@ -4,27 +4,16 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.widget.Toast;
 import at.favre.lib.crypto.bcrypt.BCrypt;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
 public class Authenticator {
-
-    private List<User> safedUsers;
     private DataBaseConnection db;
     private Context context; // Store Android context for UI messages
 
     public Authenticator(Context context) {
         this.context = context;
-        safedUsers = new ArrayList<>();
         db = new DataBaseConnection(context);
-
-        // Sample test users (not stored in DB)
-        safedUsers.add(new User("Test", "123"));
-        safedUsers.add(new User("Test1", "Hallo"));
-        safedUsers.add(new User("Test2", "nnnn"));
-        safedUsers.add(new User("Test3", "Buh!"));
     }
 
     public boolean checkLogin(User attempt) {
@@ -64,5 +53,14 @@ public class Authenticator {
     // Show a quick debug message using Toast
     private void showDebugToast(String message) {
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+    }
+
+    public void register(String username, String password, String email) {
+        new AlertDialog.Builder(context)
+                .setTitle("Debug Info")
+                .setMessage(username + password + email)
+                .setPositiveButton("OK", (dialog, which) -> dialog.dismiss())
+                .show();
+        db.addUser(username, password, email);
     }
 }
