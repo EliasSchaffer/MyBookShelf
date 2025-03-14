@@ -17,7 +17,7 @@ public class User {
     String email;
     String UID;
     List<Book> bookList= new ArrayList<>();
-    DataBaseConnection db = new DataBaseConnection();
+    DataBaseConnection db = new DataBaseConnection(null);
 
 
     public User(String user, String password) {

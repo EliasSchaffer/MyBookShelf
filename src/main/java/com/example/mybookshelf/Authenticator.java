@@ -3,9 +3,7 @@ package com.example.mybookshelf;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.widget.Toast;
-
-import org.mindrot.jbcrypt.BCrypt;
-
+import at.favre.lib.crypto.bcrypt.BCrypt;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
@@ -20,7 +18,7 @@ public class Authenticator {
     public Authenticator(Context context) {
         this.context = context;
         safedUsers = new ArrayList<>();
-        db = new DataBaseConnection();
+        db = new DataBaseConnection(context);
 
         // Sample test users (not stored in DB)
         safedUsers.add(new User("Test", "123"));
@@ -35,9 +33,9 @@ public class Authenticator {
         try {
             User user = futureUser.get(); // Blocks until result is available
             if (user != null) {
-                boolean passwordMatches = BCrypt.checkpw(attempt.getPassword(), user.getPassword());
+                BCrypt.Result result = BCrypt.verifyer().verify(attempt.getPassword().toCharArray(), user.getPassword());
 
-                if (passwordMatches) {
+                if (result.verified) {
                     showDebugPopup("Login Successful!"); // Success message
                     return true;
                 } else {

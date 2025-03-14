@@ -1,5 +1,7 @@
 package com.example.mybookshelf;
 
+import android.app.AlertDialog;
+import android.content.Context;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -11,38 +13,35 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-
-import org.mindrot.jbcrypt.BCrypt;
-
+import at.favre.lib.crypto.bcrypt.BCrypt;
 
 public class DataBaseConnection {
 
     private final ExecutorService executorService = Executors.newSingleThreadExecutor();
-    private static final String URL = "jdbc:mysql://localhost:3306/mybookshelfdb";
+    private static final String URL = "jdbc:mysql://192.168.60.95:3306/mybookshelfdb";
     private static final String USER = "root";
     private static final String PASSWORD = "MYSQLPW1310&";
+    private Context context;
+
+    public DataBaseConnection(Context mainActivity) {
+        this.context = mainActivity;
+    }
 
     public Future<User> getLogin(String username) {
         return executorService.submit(() -> {
             String name = null;
             String passwordHash = null;
-
             String sql = "SELECT username, password_hash FROM users WHERE username = ?";
 
             try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
-
                  PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
 
                 preparedStatement.setString(1, username);
                 ResultSet resultSet = preparedStatement.executeQuery();
 
-                if (resultSet.next()) {  // If user exists
+                if (resultSet.next()) {
                     name = resultSet.getString("username");
-                    passwordHash = resultSet.getString("password_hash"); // Might need to be "password_hash"
-
-                    System.out.println("User Found: " + name + ", Hashed Password: " + passwordHash);
-                } else {
-                    System.out.println("User not found in database: " + username);
+                    passwordHash = resultSet.getString("password_hash");
                 }
 
             } catch (Exception e) {
@@ -54,9 +53,11 @@ public class DataBaseConnection {
     }
 
 
+
     public void addUser(String username, String email, String password) {
         executorService.execute(() -> {
-            String hashedPassword = BCrypt.hashpw(password, BCrypt.gensalt());
+            // Hash the password using new BCrypt version
+            String hashedPassword = BCrypt.withDefaults().hashToString(12, password.toCharArray());
 
             String checkUserSql = "SELECT COUNT(*) FROM users WHERE username = ? OR email = ?";
             String insertUserSql = "INSERT INTO users (username, password, email) VALUES (?, ?, ?)";
@@ -90,6 +91,7 @@ public class DataBaseConnection {
             }
         });
     }
+
 
 
     public List<Book> getBooksFromUID(int uid) throws ExecutionException, InterruptedException {
