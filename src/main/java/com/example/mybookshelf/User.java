@@ -13,29 +13,37 @@ import java.util.concurrent.ExecutionException;
 
 public class User {
     String user;
-    String password;
+    String hash_password;
     String email;
-    String UID;
+    int UID;
     List<Book> bookList= new ArrayList<>();
     DataBaseConnection db = new DataBaseConnection(null);
 
 
-    public User(String user, String password) {
+    public User(String user, String hash_password, int UID) throws ExecutionException, InterruptedException {
         this.user = user;
-        this.password = password;
+        this.hash_password = hash_password;
+        this.UID = UID;
 
-        bookList.add(new Book("Harry Potter und die Kammer des Schreckens"));
+        /*bookList.add(new Book("Harry Potter und die Kammer des Schreckens"));
         bookList.add(new Book("To Kill a Mockingbird"));
         bookList.add(new Book("1984"));
         bookList.add(new Book("blue box 1"));
-        bookList.add(new Book("Erebos"));
+        bookList.add(new Book("Erebos"));*/
+
+        bookList = db.getBooksFromUID(UID);
+    }
+
+    public User(String user, String hash_password) throws ExecutionException, InterruptedException {
+        this.user = user;
+        this.hash_password = hash_password;
     }
 
     public User (String user, String hash_password, String email, int UID){
         this.user = user;
-        this.password = hash_password;
+        this.hash_password = hash_password;
         this.email = email;
-        this.UID = String.valueOf(UID);
+        this.UID = UID;
 
         try {
             bookList = db.getBooksFromUID(UID);
@@ -52,12 +60,16 @@ public class User {
         bookList.add(new Book("Erebos"));
     }
 
+    public void setUID(int UID) {
+        this.UID = UID;
+    }
+
     public String getUser() {
         return user;
     }
 
     public String getPassword() {
-        return password;
+        return hash_password;
     }
 
     public List<Book> getBookList() {

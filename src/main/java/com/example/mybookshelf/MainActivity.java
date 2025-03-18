@@ -135,7 +135,9 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
         }
 
         User user = new User(username, password);
-        if (auth.checkLogin(user)) {
+        Object[] returnObject = auth.checkLogin(user);
+        user = (User) returnObject[1];
+        if ((boolean)returnObject[0]) {
             Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show();
             navigateToStartingPage(user);
         } else {
@@ -244,14 +246,7 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
         // Create matcher object
         Matcher matcher = pattern.matcher(response);
 
-        // If a match is found, print the response
-//        if (matcher.find()) {
-//            result = matcher.group(1); // Extracting the matched value
-//            System.out.println("Response: ");
-//            System.out.println(response.replace("\\n", "\n")); // Replace escaped newlines with actual newlines
-//        } else {
-//            System.out.println("No response found.");
-//        }
+        //TODO: Add parsing the response
 
         result = response;
         showResponseDialog(result);

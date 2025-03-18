@@ -16,8 +16,9 @@ public class Authenticator {
         db = new DataBaseConnection(context);
     }
 
-    public boolean checkLogin(User attempt) {
+    public Object[] checkLogin(User attempt) {
         Future<User> futureUser = db.getLogin(attempt.getUser()); // Get user from DB
+        Object[] returnObject = new Object[2];
 
         try {
             User user = futureUser.get(); // Blocks until result is available
@@ -26,7 +27,9 @@ public class Authenticator {
 
                 if (result.verified) {
                     showDebugPopup("Login Successful!"); // Success message
-                    return true;
+                    returnObject[0] = true;
+                    returnObject[1] = user;
+                    return returnObject;
                 } else {
                     showDebugPopup("Incorrect Password!"); // Wrong password message
                 }
@@ -37,8 +40,9 @@ public class Authenticator {
             e.printStackTrace();
             showDebugPopup("Error: " + e.getMessage());
         }
-
-        return false;
+        returnObject[0] = false;
+        returnObject[1] = null;
+        return returnObject;
     }
 
     // Show a debug pop-up using AlertDialog

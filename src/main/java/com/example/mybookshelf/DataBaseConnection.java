@@ -32,7 +32,8 @@ public class DataBaseConnection {
         return executorService.submit(() -> {
             String name = null;
             String passwordHash = null;
-            String sql = "SELECT username, password_hash FROM users WHERE username = ?";
+            int uid = -1;
+            String sql = "SELECT username, password_hash, user_id FROM users WHERE username = ?";
 
             try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
                  PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
@@ -43,13 +44,14 @@ public class DataBaseConnection {
                 if (resultSet.next()) {
                     name = resultSet.getString("username");
                     passwordHash = resultSet.getString("password_hash");
+                    uid = resultSet.getInt("user_id");
                 }
 
             } catch (Exception e) {
                 e.printStackTrace();
             }
 
-            return (name != null) ? new User(name, passwordHash) : null;
+            return (name != null) ? new User(name, passwordHash, uid) : null;
         });
     }
 

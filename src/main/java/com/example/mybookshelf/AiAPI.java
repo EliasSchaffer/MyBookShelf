@@ -46,7 +46,7 @@ public class AiAPI {
             // Construct the messages as before
             JSONObject systemMessage = new JSONObject();
             systemMessage.put("role", "system");
-            systemMessage.put("content", "You are a friendly assistant that helps answer questions about books.");
+            systemMessage.put("content", "You are a friendly assistant that helps answer questions about books with short answers.");
             JSONObject userMessage = new JSONObject();
             userMessage.put("role", "user");
             userMessage.put("content", question);
