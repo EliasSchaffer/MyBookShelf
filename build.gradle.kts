@@ -42,4 +42,5 @@ dependencies {
     implementation("com.squareup.okhttp3:logging-interceptor:4.10.0")
     implementation ("mysql:mysql-connector-java:5.1.49")
     implementation ("at.favre.lib:bcrypt:0.9.0")
+
 }

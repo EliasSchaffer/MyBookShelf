@@ -48,7 +48,7 @@ public class BooksAPI {
                     List<Book> fallback = new ArrayList<>();
                     fallback.add(new Book("An Error occurred, please try again", "0", 0, "NA", "", ""));
                     callback.onBookFetched(fallback);
-                }); // Handle errors with a fallback list
+                });
             }
         });
     }

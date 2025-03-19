@@ -7,6 +7,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,7 +20,7 @@ import at.favre.lib.crypto.bcrypt.BCrypt;
 public class DataBaseConnection {
 
     private final ExecutorService executorService = Executors.newSingleThreadExecutor();
-    private static final String URL = "jdbc:mysql://192.168.60.95:3306/mybookshelfdb";
+    private static final String URL = "jdbc:mysql://192.168.159.95:3306/mybookshelfdb?connectTimeout=2000&socketTimeout=2000";
     private static final String USER = "root";
     private static final String PASSWORD = "MYSQLPW1310&";
     private final Context context;
@@ -47,7 +48,10 @@ public class DataBaseConnection {
                     uid = resultSet.getInt("user_id");
                 }
 
-            } catch (Exception e) {
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            catch (Exception e) {
                 e.printStackTrace();
             }
 
@@ -129,12 +133,12 @@ public class DataBaseConnection {
 
                 while (resultSet.next()) {
                     Book book = new Book(
-                            resultSet.getString("title"),
-                            resultSet.getString("author"),
-                            resultSet.getInt("pages"),
-                            resultSet.getString("release_date"),
-                            resultSet.getString("cover_url"),
-                            resultSet.getString("description")
+                            resultSet.getString("title"),       // name
+                            resultSet.getString("release_date"), // release_date
+                            resultSet.getInt("pages"),          // pages
+                            resultSet.getString("author"),      // author
+                            resultSet.getString("cover_url"),   // image_url
+                            resultSet.getString("description")  // description
                     );
                     books.add(book);
                 }
