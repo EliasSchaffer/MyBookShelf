@@ -13,12 +13,33 @@ import android.widget.TextView;
 
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 
+import java.util.ArrayList;
 import java.util.Objects;
 import java.util.concurrent.ExecutionException;
+
+import com.example.mybookshelf.R;
+
+import android.os.Bundle;
+
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 
 public class UIMaster {
 
@@ -172,6 +193,8 @@ public class UIMaster {
         btnAdd.setLayoutParams(btnParams);
         return btnAdd;
     }
+    private BarChart barChart;
+
 
     public void clearUI(LinearLayout container){
         container.removeAllViews();
@@ -238,6 +261,33 @@ public class UIMaster {
                 throw new RuntimeException(e);
             }
         });
+    }
+
+    private void setupLineChart() {
+        mainActivity.setContentView(R.layout.test_chart);
+        barChart = barChart.findViewById(R.id.barChart);
+        ArrayList<BarEntry> entries = new ArrayList<>();
+        entries.add(new BarEntry(0f, 10f));  // Entry for Category 1
+        entries.add(new BarEntry(1f, 20f));  // Entry for Category 2
+        entries.add(new BarEntry(2f, 15f));  // Entry for Category 3
+        entries.add(new BarEntry(3f, 25f));  // Entry for Category 4
+
+        BarDataSet dataSet = new BarDataSet(entries, "Sample Data");
+        dataSet.setColor(mainActivity.getResources().getColor(android.R.color.holo_blue_light));
+
+        BarData barData = new BarData(dataSet);
+        barData.setBarWidth(0.4f);  // Set bar width
+        barChart.setData(barData);
+
+        // Customize X-Axis
+        XAxis xAxis = barChart.getXAxis();
+        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+        xAxis.setGranularity(1f);
+        xAxis.setValueFormatter(new IndexAxisValueFormatter(new String[]{"Category 1", "Category 2", "Category 3", "Category 4"}));
+
+        barChart.getDescription().setText("Sample Bar Chart");
+        barChart.animateY(1000);  // Animation for Y-Axis
+        barChart.invalidate();  // Refresh the chart
     }
 
 

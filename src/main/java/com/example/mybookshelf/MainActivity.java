@@ -1,6 +1,11 @@
 package com.example.mybookshelf;
 
+
+
+import android.Manifest;
 import android.content.Context;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -12,14 +17,20 @@ import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.bumptech.glide.Glide;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+
 
 
 public class MainActivity extends AppCompatActivity implements ApiResponseCallback {
@@ -35,9 +46,23 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
     private Button goToStarting;
     private User logedindUser;
 
+    private static final int REQUEST_CODE_POST_NOTIFICATIONS = 1001;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS)
+                    != PackageManager.PERMISSION_GRANTED) {
+                // Request the permission
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.POST_NOTIFICATIONS},
+                        REQUEST_CODE_POST_NOTIFICATIONS);
+            }
+        }
+
+
 
         try {
             // Initialize UI components
@@ -69,6 +94,8 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
 //        String question = "What is the plot of 'Moby Dick'?";  // Your desired question
 //        AiAPI.fetchResponse(question, MainActivity.this);
     }
+
+
 
     private void handleSearch() {
         setContentView(R.layout.search_activity);
