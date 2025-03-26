@@ -79,11 +79,13 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
 
             try {
                 uiMaster.showLogin();
+
             } catch (ExecutionException e) {
                 throw new RuntimeException(e);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
+
 
 
         } catch (Exception e) {
@@ -104,7 +106,7 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
         goToStarting = findViewById(R.id.btnGoBack);
         goToStarting.setOnClickListener(v -> {
             try {
-                navigateToStartingPage(this.logedindUser);
+                navigateToStartingPage();
             } catch (ExecutionException e) {
                 throw new RuntimeException(e);
             } catch (InterruptedException e) {
@@ -166,17 +168,19 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
         user = (User) returnObject[1];
         if ((boolean)returnObject[0]) {
             Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show();
-            navigateToStartingPage(user);
+            logedindUser = user;
+            navigateToStartingPage();
+            //setContentView(R.layout.test_chart);
+            //uiMaster.setupLineChart();
         } else {
             Toast.makeText(this, "User or Password incorrect", Toast.LENGTH_SHORT).show();
         }
     }
 
-    private void navigateToStartingPage(User user) throws ExecutionException, InterruptedException {
-        logedindUser = user;
+    private void navigateToStartingPage() throws ExecutionException, InterruptedException {
         setContentView(R.layout.starting_page);
         LinearLayout bookContainer = findViewById(R.id.bookContainer);
-        List<Book> userBooks = user.getBookList();
+        List<Book> userBooks = logedindUser.getBookList();
         addBookButton = findViewById(R.id.addBook);
         addBookButton.setOnClickListener(v -> handleSearch());
 
@@ -231,7 +235,7 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
         Button backButton2 = findViewById(R.id.btnGoBack2);
         backButton2.setOnClickListener(v -> {
             try {
-                navigateToStartingPage(this.logedindUser);
+                navigateToStartingPage();
             } catch (ExecutionException | InterruptedException e) {
                 throw new RuntimeException(e);
             }

@@ -17,6 +17,7 @@ import androidx.annotation.NonNull;
 import com.bumptech.glide.Glide;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
@@ -25,6 +26,7 @@ import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import java.util.ArrayList;
 import java.util.Objects;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
 
 import com.example.mybookshelf.R;
 
@@ -40,6 +42,7 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
+import com.github.mikephil.charting.formatter.ValueFormatter;
 
 public class UIMaster {
 
@@ -263,33 +266,80 @@ public class UIMaster {
         });
     }
 
-    private void setupLineChart() {
-        mainActivity.setContentView(R.layout.test_chart);
-        barChart = barChart.findViewById(R.id.barChart);
-        ArrayList<BarEntry> entries = new ArrayList<>();
-        entries.add(new BarEntry(0f, 10f));  // Entry for Category 1
-        entries.add(new BarEntry(1f, 20f));  // Entry for Category 2
-        entries.add(new BarEntry(2f, 15f));  // Entry for Category 3
-        entries.add(new BarEntry(3f, 25f));  // Entry for Category 4
+    public void setupLineChart() {
+        DataBaseConnection db = new DataBaseConnection(mainActivity);
+        barChart = mainActivity.findViewById(R.id.barChart);
 
-        BarDataSet dataSet = new BarDataSet(entries, "Sample Data");
-        dataSet.setColor(mainActivity.getResources().getColor(android.R.color.holo_blue_light));
+        // Asynchronously fetch reading time data
+        Future<ArrayList<BarEntry>> futureEntries = db.getReadingTimeByMonthAsync(mainActivity.getUser().getUid());
 
-        BarData barData = new BarData(dataSet);
-        barData.setBarWidth(0.4f);  // Set bar width
-        barChart.setData(barData);
+        // Wait for the result (you can do this in a background thread or asynchronously as well)
+        try {
+            // Get the result from the Future (blocking until the result is available)
+            ArrayList<BarEntry> entries = futureEntries.get(); // This will block until the data is fetched
 
-        // Customize X-Axis
-        XAxis xAxis = barChart.getXAxis();
-        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
-        xAxis.setGranularity(1f);
-        xAxis.setValueFormatter(new IndexAxisValueFormatter(new String[]{"Category 1", "Category 2", "Category 3", "Category 4"}));
+            // Daten von Minuten in Stunden umwandeln
+            ArrayList<BarEntry> entriesInHours = new ArrayList<>();
+            for (BarEntry entry : entries) {
+                // Zeit von Minuten in Stunden umrechnen (Division durch 60)
+                float hoursValue = entry.getY() / 60f;
+                entriesInHours.add(new BarEntry(entry.getX(), hoursValue));
+            }
 
-        barChart.getDescription().setText("Sample Bar Chart");
-        barChart.animateY(1000);  // Animation for Y-Axis
-        barChart.invalidate();  // Refresh the chart
+            // Create the dataset for the bar chart
+            BarDataSet dataSet = new BarDataSet(entriesInHours, "Reading Time (Hours)");
+            dataSet.setColor(mainActivity.getResources().getColor(android.R.color.holo_blue_light));
+            BarData barData = new BarData(dataSet);
+            barData.setBarWidth(0.4f);
+
+            // Set the data to the bar chart
+            barChart.setData(barData);
+
+            // X-Achse anpassen - Monate als Text anzeigen
+            XAxis xAxis = barChart.getXAxis();
+            xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+            xAxis.setGranularity(1f);
+
+            // Formatierung für die X-Achse, um Monate statt YYYYMM-Zahlen anzuzeigen
+            xAxis.setValueFormatter(new ValueFormatter() {
+                @Override
+                public String getFormattedValue(float value) {
+                    // Den Monatswert aus dem BarEntry-X-Wert extrahieren (YYYYMM-Format)
+                    int yearMonth = (int) value;
+                    if (yearMonth == 0) return ""; // Falls keine Daten
+                    // YYYYMM in Jahr und Monat aufteilen
+                    int year = yearMonth / 100;
+                    int month = yearMonth % 100;
+                    // Monatsnamen basierend auf der Nummer zurückgeben
+                    String[] monthNames = {"Januar", "Februar", "März", "April", "Mai", "Juni",
+                            "Juli", "August", "September", "Oktober", "November", "Dezember"};
+                    if (month >= 1 && month <= 12) {
+                        return monthNames[month-1] + " " + year;
+                    } else {
+                        return "Ungültig";
+                    }
+                }
+            });
+
+            // Y-Achse anpassen für Stundenanzeige
+            YAxis yAxis = barChart.getAxisLeft();
+            yAxis.setValueFormatter(new ValueFormatter() {
+                @Override
+                public String getFormattedValue(float value) {
+                    return String.format("%.1f h", value);
+                }
+            });
+
+            // Set the chart description and animate
+            barChart.getDescription().setText("Reading Time in Hours");
+            barChart.animateY(1000);
+
+            // Invalidate the chart to refresh
+            barChart.invalidate();
+
+        } catch (InterruptedException | ExecutionException e) {
+            e.printStackTrace();
+            System.err.println("Error fetching reading time data: " + e.getMessage());
+        }
     }
-
-
-
 }

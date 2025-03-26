@@ -8,7 +8,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
 public class Authenticator {
-    private DataBaseConnection db;
+    DataBaseConnection db;
     private Context context; // Store Android context for UI messages
 
     public Authenticator(Context context) {

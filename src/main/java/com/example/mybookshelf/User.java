@@ -117,6 +117,9 @@ public class User {
     }
 
 
+    public int getUid() {
+        return UID;
+    }
 }
 
 
