@@ -30,16 +30,22 @@ Ensure you have the following installed:
    ```bash
    git clone https://github.com/yourusername/MyBookShelf.git
    ```
+   
+2. Navigate to the project directory:
 
    ```bash
    cd MyBookShelf
    ```
 
+3. Build the project with Gradle:
+
    ```bash
     ./gradlew build
    ```
 
-      ```bash
+4. Run the Application
+
+   ```bash
     ./gradlew run
    ```
 
