@@ -10,12 +10,17 @@ public class Book {
     private String image_url;
     private String description;
     private boolean inDatabase;
+    private int id;
 
     public Book(String name, String release_date, int pages, String author) {
         this.name = name;
         this.release_date = release_date;
         this.pages = pages;
         this.author = author;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public boolean isInDatabase() {
@@ -26,6 +31,16 @@ public class Book {
         this.inDatabase = inDatabase;
     }
 
+    public Book(String name, String release_date, int pages, String author, String image_url, String description, int id) {
+        this.name = name;
+        this.release_date = release_date;
+        this.pages = pages;
+        this.author = author;
+        this.image_url = image_url;
+        this.description = description;
+        this.id = id;
+    }
+
     public Book(String name, String release_date, int pages, String author, String image_url, String description) {
         this.name = name;
         this.release_date = release_date;
@@ -33,6 +48,7 @@ public class Book {
         this.author = author;
         this.image_url = image_url;
         this.description = description;
+        this.id = id;
     }
 
     public Book(String name, int pages) {

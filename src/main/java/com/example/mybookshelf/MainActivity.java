@@ -24,6 +24,7 @@ import androidx.core.content.ContextCompat;
 
 import com.bumptech.glide.Glide;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
     private TextView timeSpentReadingTextView;
     private Button goToStarting;
     private User logedindUser;
+    DataBaseConnection db;
 
     private static final int REQUEST_CODE_POST_NOTIFICATIONS = 1001;
 
@@ -69,11 +71,10 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
 
             // Initialize Authenticator and ApiRequest
             auth = new Authenticator(this);
-            uiMaster = new UIMaster();
-            uiMaster.setMain(this);
+            uiMaster = new UIMaster(this);
             search = new Search(this);
             ai = new AiAPI();
-
+            db = new DataBaseConnection(this);
 
             try {
                 uiMaster.showLogin();
@@ -179,10 +180,12 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
     }
 
 
-    public void removeBook(Book book) {
+    public void removeBook(Book book) throws SQLException {
         Context context = getBaseContext();
+        db.removeBookFromUser(book,logedindUser.getUid());
         uiMaster.reduceTimeSpendReading(book.getPages(), timeSpentReadingTextView);
         logedindUser.removeBook(book, context, findViewById(R.id.bookContainer));
+
     }
 
     public User getUser() {
