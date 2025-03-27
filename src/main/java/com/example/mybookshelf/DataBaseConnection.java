@@ -23,7 +23,7 @@ import at.favre.lib.crypto.bcrypt.BCrypt;
 public class DataBaseConnection {
 
     private final ExecutorService executorService = Executors.newSingleThreadExecutor();
-    private static final String URL = "jdbc:mysql://172.17.75.12:3306/mybookshelfdb?connectTimeout=2000&socketTimeout=2000";
+    private static final String URL = "jdbc:mysql://192.168.170.95:3306/mybookshelfdb?connectTimeout=2000&socketTimeout=2000";
     private static final String USER = "root";
     private static final String PASSWORD = "MYSQLPW1310&";
     private final Context context;
@@ -186,6 +186,7 @@ public class DataBaseConnection {
     public void addBookToUser(int userId, String bookName, String author, int pages, String releaseDate, String imageUrl, String description, int readingTime) {
         String getBookIdSQL = "SELECT book_id FROM Books WHERE title = ?";
         String insertUserBookSQL = "INSERT INTO UserBooks (user_id, book_id, reading_time) VALUES (?, ?, ?)";
+        executorService.execute(() ->{
 
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
              PreparedStatement getBookIdStmt = connection.prepareStatement(getBookIdSQL);
@@ -214,6 +215,7 @@ public class DataBaseConnection {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        });
     }
 
     // Method to add a new book if it doesn't exist

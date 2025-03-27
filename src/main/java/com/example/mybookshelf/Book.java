@@ -83,4 +83,8 @@ public class Book {
     public String getDescription() {
         return description;
     }
+
+    public String getReleaseDate() {
+        return release_date;
+    }
 }

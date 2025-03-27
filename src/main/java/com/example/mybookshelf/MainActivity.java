@@ -11,7 +11,6 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.SearchView;
 import android.widget.TextView;
@@ -22,11 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import com.bumptech.glide.Glide;
-
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -173,9 +168,10 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
     }
 
 
-    public void saveBookName(Book book) {
-        Context context = getBaseContext();
-        logedindUser.addBook(book, context);
+    public void saveBook(Book book) {
+        book.setInDatabase(true);
+        logedindUser.addBook(book, this);
+        db.addBookToUser(logedindUser.getUid(), book.getName(), book.getAuthor(), book.getPages(), book.getReleaseDate(), book.getImageUrl(), book.getDescription(), 0);
 
     }
 
