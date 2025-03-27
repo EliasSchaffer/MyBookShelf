@@ -129,7 +129,7 @@ public class UIMaster {
         details.append("Release Date: ").append(book.getRelease_date() != null ? book.getRelease_date() : "Unknown");
 
         if (isSearch) {
-            Button btnAdd = getBtnAdd(book);
+            ImageButton btnAdd = getBtnAdd(book);
             bookBox.addView(btnAdd);
         }
 
@@ -164,19 +164,25 @@ public class UIMaster {
         container.addView(bookBox);
     }
 
-    @NonNull
-    private Button getBtnAdd(Book book) {
-        Button btnAdd = new Button(mainActivity);
-        btnAdd.setOnClickListener(v -> mainActivity.saveBookName(book));
-        btnAdd.setText("Add Book"); // Use string resource for text
 
-        // Set layout parameters for the button
+    @NonNull
+    private ImageButton getBtnAdd(Book book) {
+        ImageButton btnAdd = new ImageButton(mainActivity);
+        btnAdd.setOnClickListener(v -> mainActivity.saveBook(book));
+
+        // Set image resource (replace `android.R.drawable.ic_menu_delete` with your actual drawable resource)
+        btnAdd.setImageResource(android.R.drawable.ic_menu_add);
+
+        // Set background to transparent to avoid default button styling
+        btnAdd.setBackgroundColor(Color.TRANSPARENT); // Use transparent background instead of null
+
+        // Set layout parameters for the button with a slightly larger size
         RelativeLayout.LayoutParams btnParams = new RelativeLayout.LayoutParams(
-                RelativeLayout.LayoutParams.WRAP_CONTENT,
-                RelativeLayout.LayoutParams.WRAP_CONTENT
+                48, 48 // Slightly larger size for the remove button (increased from 40x40)
         );
         btnParams.addRule(RelativeLayout.ALIGN_PARENT_END);
         btnAdd.setLayoutParams(btnParams);
+
         return btnAdd;
     }
 
@@ -362,6 +368,8 @@ public class UIMaster {
         List<Book> userBooks = logedindUser.getBookList();
         nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
         nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
+        TextView user = mainActivity.findViewById(R.id.current_user);
+        user.setText("Hallo, " + logedindUser.getUser() + " \uD83D\uDC4B");
 
         if (userBooks != null && !userBooks.isEmpty()) {
             for (Book book : userBooks) {
