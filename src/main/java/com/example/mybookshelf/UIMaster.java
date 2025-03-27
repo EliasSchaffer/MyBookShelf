@@ -13,12 +13,37 @@ import android.widget.TextView;
 
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.components.YAxis;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
+
+import com.example.mybookshelf.R;
+
+import android.os.Bundle;
+
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.charts.LineChart;
+import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.data.Entry;
+import com.github.mikephil.charting.data.LineData;
+import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
+import com.github.mikephil.charting.formatter.ValueFormatter;
 
 public class UIMaster {
 
@@ -32,9 +57,22 @@ public class UIMaster {
     private Button switchToRegisterButton;
 
     private int timeSpentReading = 0;
-
+    private Button addBookButton;
+    private TextView timeSpentReadingTextView;
+    private BooksAPI booksAPI;
+    private AiAPI ai;
+    private User logedindUser;
     public void setMain(MainActivity main) {
         this.mainActivity = main;
+    }
+
+    public UIMaster(){
+        booksAPI = new BooksAPI();
+        ai = new AiAPI();
+    }
+
+    public void setUSer(User user){
+        this.logedindUser = user;
     }
 
     public void reduceTimeSpendReading(int time, TextView timeSpentReadingTextView){
@@ -46,6 +84,8 @@ public class UIMaster {
             );
         }
     }
+    
+
 
     public void createBookBox(LinearLayout container, Book book, boolean isSearch) {
         // Ensure that mainActivity is properly initialized
@@ -134,7 +174,7 @@ public class UIMaster {
         bookBox.addView(bookImage);
         bookBox.addView(bookDetails);
 
-        bookBox.setOnClickListener(v -> mainActivity.navigateToDetails(book));
+        bookBox.setOnClickListener(v -> navigateToDetails(book));
 
 
         // Add the book box to the container
@@ -172,6 +212,8 @@ public class UIMaster {
         btnAdd.setLayoutParams(btnParams);
         return btnAdd;
     }
+    private BarChart barChart;
+
 
     public void clearUI(LinearLayout container){
         container.removeAllViews();
@@ -240,6 +282,149 @@ public class UIMaster {
         });
     }
 
+    public void setupLineChart() {
+        DataBaseConnection db = new DataBaseConnection(mainActivity);
+        barChart = mainActivity.findViewById(R.id.barChart);
+
+        // Asynchronously fetch reading time data
+        Future<ArrayList<BarEntry>> futureEntries = db.getReadingTimeByMonthAsync(mainActivity.getUser().getUid());
+
+        // Wait for the result (you can do this in a background thread or asynchronously as well)
+        try {
+            // Get the result from the Future (blocking until the result is available)
+            ArrayList<BarEntry> entries = futureEntries.get(); // This will block until the data is fetched
+
+            // Daten von Minuten in Stunden umwandeln
+            ArrayList<BarEntry> entriesInHours = new ArrayList<>();
+            for (BarEntry entry : entries) {
+                // Zeit von Minuten in Stunden umrechnen (Division durch 60)
+                float hoursValue = entry.getY() / 60f;
+                entriesInHours.add(new BarEntry(entry.getX(), hoursValue));
+            }
+
+            // Create the dataset for the bar chart
+            BarDataSet dataSet = new BarDataSet(entriesInHours, "Reading Time (Hours)");
+            dataSet.setColor(mainActivity.getResources().getColor(android.R.color.holo_blue_light));
+            BarData barData = new BarData(dataSet);
+            barData.setBarWidth(0.4f);
+
+            // Set the data to the bar chart
+            barChart.setData(barData);
+
+            // X-Achse anpassen - Monate als Text anzeigen
+            XAxis xAxis = barChart.getXAxis();
+            xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+            xAxis.setGranularity(1f);
+
+            // Formatierung für die X-Achse, um Monate statt YYYYMM-Zahlen anzuzeigen
+            xAxis.setValueFormatter(new ValueFormatter() {
+                @Override
+                public String getFormattedValue(float value) {
+                    // Den Monatswert aus dem BarEntry-X-Wert extrahieren (YYYYMM-Format)
+                    int yearMonth = (int) value;
+                    if (yearMonth == 0) return ""; // Falls keine Daten
+                    // YYYYMM in Jahr und Monat aufteilen
+                    int year = yearMonth / 100;
+                    int month = yearMonth % 100;
+                    // Monatsnamen basierend auf der Nummer zurückgeben
+                    String[] monthNames = {"Januar", "Februar", "März", "April", "Mai", "Juni",
+                            "Juli", "August", "September", "Oktober", "November", "Dezember"};
+                    if (month >= 1 && month <= 12) {
+                        return monthNames[month-1] + " " + year;
+                    } else {
+                        return "Ungültig";
+                    }
+                }
+            });
+
+            // Y-Achse anpassen für Stundenanzeige
+            YAxis yAxis = barChart.getAxisLeft();
+            yAxis.setValueFormatter(new ValueFormatter() {
+                @Override
+                public String getFormattedValue(float value) {
+                    return String.format("%.1f h", value);
+                }
+            });
+
+            // Set the chart description and animate
+            barChart.getDescription().setText("Reading Time in Hours");
+            barChart.animateY(1000);
+
+            // Invalidate the chart to refresh
+            barChart.invalidate();
+
+        } catch (InterruptedException | ExecutionException e) {
+            e.printStackTrace();
+            System.err.println("Error fetching reading time data: " + e.getMessage());
+        }
+    }
+
+    public void navigateToStartingPage() throws ExecutionException, InterruptedException {
+        mainActivity.setContentView(R.layout.starting_page);
+        LinearLayout bookContainer = mainActivity.findViewById(R.id.bookContainer);
+        List<Book> userBooks = logedindUser.getBookList();
+        addBookButton = mainActivity.findViewById(R.id.addBook);
+        addBookButton.setOnClickListener(v -> mainActivity.handleSearch());
+
+        if (userBooks != null && !userBooks.isEmpty()) {
+            for (Book book : userBooks) {
+                if (book != null && !TextUtils.isEmpty(book.getName())) {
+                    if (book.isInDatabase()) { // Check if the book exists in the database
+                        createBookBox(bookContainer, book, false); // Create the box instantly
+                        timeSpentReadingTextView = mainActivity.findViewById(R.id.etfTimeSpentReading);
+                        updateReadingTime(book.getPages(), timeSpentReadingTextView);
+                    } else {
+                        // Fetch the book from API if not in database
+                        booksAPI.getOneBook(book.getName(), new BooksAPI.BookCallback() {
+                            @Override
+                            public void onBookFetched(List<Book> books) {
+                                if (books != null && !books.isEmpty()) {
+                                    createBookBox(bookContainer, books.get(0), false);
+                                    timeSpentReadingTextView = mainActivity.findViewById(R.id.etfTimeSpentReading);
+                                    updateReadingTime(books.get(0).getPages(), timeSpentReadingTextView);
+                                } else {
+                                    createBookBox(bookContainer, new Book("An Error occurred, please try again", "0", 0, "NA"), false);
+                                }
+                            }
+                        });
+                    }
+                }
+            }
+        } else {
+            Log.w("MainActivity", "User's book list is null or empty.");
+        }
+    }
 
 
+    void navigateToDetails(Book book) {
+        mainActivity.setContentView(R.layout.detail_activity);
+
+        TextView txtDetails = mainActivity.findViewById(R.id.txtDetails);
+        StringBuilder str = new StringBuilder();
+        str.append(book.getName()).append("\n").append(book.getAuthor()).append(book.getRelease_date());
+        txtDetails.setText(str.toString());
+
+        TextView txtDescription = mainActivity.findViewById(R.id.txtDescription);
+        txtDescription.setText(book.getDescription());
+
+        ImageView imgCover = mainActivity.findViewById(R.id.imgCover);
+        Glide.with(mainActivity).load(book.getImageUrl()).into(imgCover);
+
+        Button submitButton = mainActivity.findViewById(R.id.submitButton);
+        submitButton.setOnClickListener(v -> {
+            EditText inpInputText = mainActivity.findViewById(R.id.inpInputText);
+            String prompt = inpInputText.getText().toString();
+            inpInputText.setText(" ");
+            ai.fetchResponse(prompt + " The books name is " + book.getName(), mainActivity);
+        });
+
+        Button backButton2 = mainActivity.findViewById(R.id.btnGoBack2);
+        backButton2.setOnClickListener(v -> {
+            try {
+                navigateToStartingPage();
+            } catch (ExecutionException | InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
+    }
 }

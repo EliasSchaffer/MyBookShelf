@@ -25,13 +25,12 @@ public class User {
         this.hash_password = hash_password;
         this.UID = UID;
 
-        /*bookList.add(new Book("Harry Potter und die Kammer des Schreckens"));
-        bookList.add(new Book("To Kill a Mockingbird"));
-        bookList.add(new Book("1984"));
-        bookList.add(new Book("blue box 1"));
-        bookList.add(new Book("Erebos"));*/
 
         bookList = db.getBooksFromUID(UID);
+
+        for (Book book: bookList){
+            book.setInDatabase(true);
+        }
     }
 
     public User(String user, String hash_password) throws ExecutionException, InterruptedException {
@@ -52,12 +51,6 @@ public class User {
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
-
-        bookList.add(new Book("Harry Potter und die Kammer des Schreckens"));
-        bookList.add(new Book("To Kill a Mockingbird"));
-        bookList.add(new Book("1984"));
-        bookList.add(new Book("blue box 1"));
-        bookList.add(new Book("Erebos"));
     }
 
     public void setUID(int UID) {
@@ -117,6 +110,9 @@ public class User {
     }
 
 
+    public int getUid() {
+        return UID;
+    }
 }
 
 

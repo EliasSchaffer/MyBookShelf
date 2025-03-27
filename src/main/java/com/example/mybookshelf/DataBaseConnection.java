@@ -3,6 +3,9 @@ package com.example.mybookshelf;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
+
+import com.github.mikephil.charting.data.BarEntry;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -20,7 +23,7 @@ import at.favre.lib.crypto.bcrypt.BCrypt;
 public class DataBaseConnection {
 
     private final ExecutorService executorService = Executors.newSingleThreadExecutor();
-    private static final String URL = "jdbc:mysql://192.168.159.95:3306/mybookshelfdb?connectTimeout=2000&socketTimeout=2000";
+    private static final String URL = "jdbc:mysql://192.168.170.95:3306/mybookshelfdb?connectTimeout=2000&socketTimeout=2000";
     private static final String USER = "root";
     private static final String PASSWORD = "MYSQLPW1310&";
     private final Context context;
@@ -249,4 +252,54 @@ public class DataBaseConnection {
     }
 
 
+    public Future<ArrayList<BarEntry>> getReadingTimeByMonthAsync(int UID) {
+        return executorService.submit(() -> {
+            ArrayList<BarEntry> entries = new ArrayList<>();
+            String sql = "SELECT MONTH(created_at) AS month, SUM(reading_time) AS total_reading_time " +
+                    "FROM userbooks WHERE user_id = ? " +
+                    "GROUP BY MONTH(created_at) ORDER BY month";
+
+            try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                 PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+
+                preparedStatement.setInt(1, UID);
+                ResultSet resultSet = preparedStatement.executeQuery();
+
+                // Check if any data is returned
+                boolean hasResults = false;
+
+                while (resultSet.next()) {
+                    int month = resultSet.getInt("month");
+                    int totalTime = resultSet.getInt("total_reading_time");
+
+                    // Log the retrieved data for debugging
+                    System.out.println("Month: " + month + ", Total Time: " + totalTime);
+
+                    // Handle NULL values
+                    if (resultSet.wasNull()) {
+                        totalTime = 0;  // Default to 0 if there's no reading time for this month
+                    }
+
+                    // Add the entry to the list
+                    entries.add(new BarEntry(month, totalTime));
+                    hasResults = true;
+                }
+
+                // Check if no data was found
+                if (!hasResults) {
+                    System.out.println("No results found for UID: " + UID);
+                    // Returning dummy entry to indicate no data found
+                    ArrayList<BarEntry> temp = new ArrayList<>();
+                    temp.add(new BarEntry(99, 1));
+                    return temp;
+                }
+
+            } catch (SQLException e) {
+                e.printStackTrace();
+                System.err.println("Error executing query: " + e.getMessage());
+            }
+
+            return entries;
+        });
+    }
 }

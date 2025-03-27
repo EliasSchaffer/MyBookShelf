@@ -1,6 +1,11 @@
 package com.example.mybookshelf;
 
+
+
+import android.Manifest;
 import android.content.Context;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -12,14 +17,20 @@ import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.bumptech.glide.Glide;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+
 
 
 public class MainActivity extends AppCompatActivity implements ApiResponseCallback {
@@ -35,9 +46,22 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
     private Button goToStarting;
     private User logedindUser;
 
+    private static final int REQUEST_CODE_POST_NOTIFICATIONS = 1001;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS)
+                    != PackageManager.PERMISSION_GRANTED) {
+                // Request the permission
+                ActivityCompat.requestPermissions(this,
+                        new String[]{Manifest.permission.POST_NOTIFICATIONS},
+                        REQUEST_CODE_POST_NOTIFICATIONS);
+            }
+        }
+
 
         try {
             // Initialize UI components
@@ -45,7 +69,6 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
 
             // Initialize Authenticator and ApiRequest
             auth = new Authenticator(this);
-            booksAPI = new BooksAPI();
             uiMaster = new UIMaster();
             uiMaster.setMain(this);
             search = new Search(this);
@@ -54,30 +77,29 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
 
             try {
                 uiMaster.showLogin();
+
             } catch (ExecutionException e) {
                 throw new RuntimeException(e);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
 
-
         } catch (Exception e) {
             Log.e("MainActivity", "Error during initialization", e);
             Toast.makeText(this, "An error occurred during initialization", Toast.LENGTH_SHORT).show();
         }
-
-//        String question = "What is the plot of 'Moby Dick'?";  // Your desired question
-//        AiAPI.fetchResponse(question, MainActivity.this);
     }
 
-    private void handleSearch() {
+
+
+    public void handleSearch() {
         setContentView(R.layout.search_activity);
         LinearLayout bookContainer = findViewById(R.id.bookContainer);
         searchView = findViewById(R.id.searchView);
         goToStarting = findViewById(R.id.btnGoBack);
         goToStarting.setOnClickListener(v -> {
             try {
-                navigateToStartingPage(this.logedindUser);
+                uiMaster.navigateToStartingPage();
             } catch (ExecutionException e) {
                 throw new RuntimeException(e);
             } catch (InterruptedException e) {
@@ -139,76 +161,14 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
         user = (User) returnObject[1];
         if ((boolean)returnObject[0]) {
             Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show();
-            navigateToStartingPage(user);
+            logedindUser = user;
+            uiMaster.setUSer(logedindUser);
+            uiMaster.navigateToStartingPage();
+            //setContentView(R.layout.test_chart);
+            //uiMaster.setupLineChart();
         } else {
             Toast.makeText(this, "User or Password incorrect", Toast.LENGTH_SHORT).show();
         }
-    }
-
-    private void navigateToStartingPage(User user) throws ExecutionException, InterruptedException {
-        logedindUser = user;
-        setContentView(R.layout.starting_page);
-        LinearLayout bookContainer = findViewById(R.id.bookContainer);
-        List<Book> userBooks = user.getBookList();
-        addBookButton = findViewById(R.id.addBook);
-        addBookButton.setOnClickListener(v -> handleSearch());
-
-
-        if (userBooks != null && !userBooks.isEmpty()) {
-            for (Book book : userBooks) {
-                if (book != null && !TextUtils.isEmpty(book.getName())) {
-                    booksAPI.getOneBook(book.getName(), new BooksAPI.BookCallback() {
-                        @Override
-                        public void onBookFetched(List<Book> books) {
-                            // Ensure the list is not empty and fetch the first book
-                            if (books != null && !books.isEmpty()) {
-                                uiMaster.createBookBox(bookContainer, books.get(0), false); // Pass the first book
-                                timeSpentReadingTextView = findViewById(R.id.etfTimeSpentReading);
-                                uiMaster.updateReadingTime(books.get(0).getPages(), timeSpentReadingTextView);
-                            } else {
-                                // Handle error or empty list
-                                uiMaster.createBookBox(bookContainer, new Book("An Error occurred, please try again", "0", 0, "NA"), false);
-                            }
-                        }
-                    });
-                }
-            }
-        } else {
-            Log.w("MainActivity", "User's book list is null or empty.");
-        }
-
-    }
-
-    void navigateToDetails(Book book) {
-        setContentView(R.layout.detail_activity);
-
-        TextView txtDetails = findViewById(R.id.txtDetails);
-        StringBuilder str = new StringBuilder();
-        str.append(book.getName()).append("\n").append(book.getAuthor()).append(book.getRelease_date());
-        txtDetails.setText(str.toString());
-
-        TextView txtDescription = findViewById(R.id.txtDescription);
-        txtDescription.setText(book.getDescription());
-
-        ImageView imgCover = findViewById(R.id.imgCover);
-        Glide.with(this).load(book.getImageUrl()).into(imgCover);
-
-        Button submitButton = findViewById(R.id.submitButton);
-        submitButton.setOnClickListener(v -> {
-            EditText inpInputText = findViewById(R.id.inpInputText);
-            String prompt = inpInputText.getText().toString();
-            inpInputText.setText(" ");
-            ai.fetchResponse(prompt + " The books name is " + book.getName(), MainActivity.this);
-        });
-
-        Button backButton2 = findViewById(R.id.btnGoBack2);
-        backButton2.setOnClickListener(v -> {
-            try {
-                navigateToStartingPage(this.logedindUser);
-            } catch (ExecutionException | InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-        });
     }
 
 
