@@ -4,27 +4,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@android:color/darker_gray">
+    android:background="@drawable/background_image">
 
     <!-- Text "MyBookShelf" -->
 
     <!-- Centered Rounded White Box for ScrollView -->
 
     <TextView
-        android:id="@+id/tv_my_bookshelf"
+        android:id="@+id/current_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MyBookShelf"
-        android:textColor="@android:color/black"
+        android:text="Hallo, Butterschnitzel"
+        android:textColor="@android:color/white"
         android:textSize="30sp"
         android:layout_marginBottom="8dp"
         android:layout_alignLeft="@id/cardView"
         android:layout_above="@+id/cardView" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MyBookShelf"
+        android:textColor="@android:color/white"
+        android:textSize="23sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="150pt"
-        android:layout_height="250pt"
+        android:layout_width="200pt"
+        android:layout_height="280pt"
         android:layout_centerInParent="true"
         android:layout_margin="16dp"
         app:cardCornerRadius="16dp"
