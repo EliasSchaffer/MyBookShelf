@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -21,28 +22,14 @@ import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
-import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
-import com.example.mybookshelf.R;
-
-import android.os.Bundle;
-
-import com.github.mikephil.charting.charts.BarChart;
-import com.github.mikephil.charting.charts.LineChart;
-import com.github.mikephil.charting.components.XAxis;
-import com.github.mikephil.charting.data.BarData;
-import com.github.mikephil.charting.data.BarDataSet;
-import com.github.mikephil.charting.data.BarEntry;
-import com.github.mikephil.charting.data.Entry;
-import com.github.mikephil.charting.data.LineData;
-import com.github.mikephil.charting.data.LineDataSet;
-import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 import com.github.mikephil.charting.formatter.ValueFormatter;
 
 public class UIMaster {
@@ -57,18 +44,18 @@ public class UIMaster {
     private Button switchToRegisterButton;
 
     private int timeSpentReading = 0;
-    private Button addBookButton;
+    private ImageButton nav_searchBtn;
     private TextView timeSpentReadingTextView;
     private BooksAPI booksAPI;
     private AiAPI ai;
+    private DataBaseConnection db;
     private User logedindUser;
-    public void setMain(MainActivity main) {
-        this.mainActivity = main;
-    }
 
-    public UIMaster(){
+    public UIMaster(MainActivity main){
         booksAPI = new BooksAPI();
         ai = new AiAPI();
+        mainActivity = main;
+        db = new DataBaseConnection(mainActivity);
     }
 
     public void setUSer(User user){
@@ -84,7 +71,7 @@ public class UIMaster {
             );
         }
     }
-    
+
 
 
     public void createBookBox(LinearLayout container, Book book, boolean isSearch) {
@@ -104,13 +91,13 @@ public class UIMaster {
         // Create a container for the book box
         RelativeLayout bookBox = new RelativeLayout(mainActivity);
         bookBox.setBackgroundColor(Color.WHITE);
-        bookBox.setPadding(16, 16, 16, 16);
+        bookBox.setPadding(12, 12, 12, 12);  // Reduced padding for a more compact layout
 
         LinearLayout.LayoutParams boxParams = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT
         );
-        boxParams.setMargins(16, 16, 16, 16);
+        boxParams.setMargins(12, 12, 12, 12);  // Reduced margins for better spacing
         bookBox.setLayoutParams(boxParams);
 
         // Create an ImageView for the book cover
@@ -127,7 +114,7 @@ public class UIMaster {
 
         // Set up layout for the ImageView
         RelativeLayout.LayoutParams imageParams = new RelativeLayout.LayoutParams(
-                150, 200 // Adjust dimensions as needed
+                120, 160 // Smaller image size for a more compact look
         );
         imageParams.addRule(RelativeLayout.ALIGN_PARENT_START);
         bookImage.setLayoutParams(imageParams);
@@ -141,23 +128,20 @@ public class UIMaster {
         details.append("Pages: ").append(book.getPages() > 0 ? book.getPages() : "Unknown").append("\n");
         details.append("Release Date: ").append(book.getRelease_date() != null ? book.getRelease_date() : "Unknown");
 
-
-        if (isSearch)  {
+        if (isSearch) {
             Button btnAdd = getBtnAdd(book);
             bookBox.addView(btnAdd);
         }
 
-
-        //FIX THIS PLEASE
-        if (!isSearch && !Objects.equals(book.getName(), "An Error occurred please try again")){
-            Button btnRemove = getBtnRemove(new Book(name, book.getPages()));
+        // FIX: Only add remove button when the book is not searched
+        if (!isSearch && !Objects.equals(book.getName(), "An Error occurred please try again")) {
+            ImageButton btnRemove = getBtnRemove(book);
             bookBox.addView(btnRemove);
         }
 
-
         bookDetails.setText(details.toString());
         bookDetails.setTextColor(Color.BLACK);
-        bookDetails.setTextSize(16);
+        bookDetails.setTextSize(14); // Slightly smaller text size for better fit
         bookBox.setTag(name);
 
         // Set up layout for the TextView
@@ -167,7 +151,7 @@ public class UIMaster {
         );
         textParams.addRule(RelativeLayout.RIGHT_OF, bookImage.getId());
         textParams.addRule(RelativeLayout.CENTER_VERTICAL);
-        textParams.setMargins(16, 0, 0, 0); // Add spacing between the image and text
+        textParams.setMargins(12, 0, 0, 0); // Add spacing between the image and text
         bookDetails.setLayoutParams(textParams);
 
         // Add the ImageView and TextView to the RelativeLayout
@@ -175,7 +159,6 @@ public class UIMaster {
         bookBox.addView(bookDetails);
 
         bookBox.setOnClickListener(v -> navigateToDetails(book));
-
 
         // Add the book box to the container
         container.addView(bookBox);
@@ -198,20 +181,34 @@ public class UIMaster {
     }
 
     @NonNull
-    private Button getBtnRemove(Book book) {
-        Button btnAdd = new Button(mainActivity);
-        btnAdd.setOnClickListener(v -> mainActivity.removeBook(book));
-        btnAdd.setText("Remove Book"); // Use string resource for text
+    private ImageButton getBtnRemove(Book book) {
+        ImageButton btnRemove = new ImageButton(mainActivity);
+        btnRemove.setOnClickListener(v -> {
+            try {
+                mainActivity.removeBook(book);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        });
 
-        // Set layout parameters for the button
+        // Set image resource (replace `android.R.drawable.ic_menu_delete` with your actual drawable resource)
+        btnRemove.setImageResource(android.R.drawable.ic_menu_close_clear_cancel);
+
+        // Set background to transparent to avoid default button styling
+        btnRemove.setBackgroundColor(Color.TRANSPARENT); // Use transparent background instead of null
+
+        // Set layout parameters for the button with a slightly larger size
         RelativeLayout.LayoutParams btnParams = new RelativeLayout.LayoutParams(
-                RelativeLayout.LayoutParams.WRAP_CONTENT,
-                RelativeLayout.LayoutParams.WRAP_CONTENT
+                48, 48 // Slightly larger size for the remove button (increased from 40x40)
         );
         btnParams.addRule(RelativeLayout.ALIGN_PARENT_END);
-        btnAdd.setLayoutParams(btnParams);
-        return btnAdd;
+        btnRemove.setLayoutParams(btnParams);
+
+        return btnRemove;
     }
+
+
+
     private BarChart barChart;
 
 
@@ -360,11 +357,11 @@ public class UIMaster {
     }
 
     public void navigateToStartingPage() throws ExecutionException, InterruptedException {
-        mainActivity.setContentView(R.layout.starting_page);
+        mainActivity.setContentView(R.layout.home);
         LinearLayout bookContainer = mainActivity.findViewById(R.id.bookContainer);
         List<Book> userBooks = logedindUser.getBookList();
-        addBookButton = mainActivity.findViewById(R.id.addBook);
-        addBookButton.setOnClickListener(v -> mainActivity.handleSearch());
+        nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
+        nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
 
         if (userBooks != null && !userBooks.isEmpty()) {
             for (Book book : userBooks) {
@@ -379,6 +376,7 @@ public class UIMaster {
                             @Override
                             public void onBookFetched(List<Book> books) {
                                 if (books != null && !books.isEmpty()) {
+                                    db.addBookToUser(logedindUser.getUid(), books.get(0).getName(), books.get(0).getAuthor(), books.get(0).getPages(), books.get(0).getRelease_date(), books.get(0).getImageUrl(), books.get(0).getDescription(), 0);
                                     createBookBox(bookContainer, books.get(0), false);
                                     timeSpentReadingTextView = mainActivity.findViewById(R.id.etfTimeSpentReading);
                                     updateReadingTime(books.get(0).getPages(), timeSpentReadingTextView);

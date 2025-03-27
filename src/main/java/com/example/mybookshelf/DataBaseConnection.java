@@ -23,7 +23,7 @@ import at.favre.lib.crypto.bcrypt.BCrypt;
 public class DataBaseConnection {
 
     private final ExecutorService executorService = Executors.newSingleThreadExecutor();
-    private static final String URL = "jdbc:mysql://192.168.170.95:3306/mybookshelfdb?connectTimeout=2000&socketTimeout=2000";
+    private static final String URL = "jdbc:mysql://172.17.75.12:3306/mybookshelfdb?connectTimeout=2000&socketTimeout=2000";
     private static final String USER = "root";
     private static final String PASSWORD = "MYSQLPW1310&";
     private final Context context;
@@ -118,6 +118,7 @@ public class DataBaseConnection {
             List<Book> books = new ArrayList<>();
 
             String sql = "SELECT " +
+                    "    b.book_id, " +
                     "    b.title, " +
                     "    b.author, " +
                     "    b.pages, " +
@@ -141,8 +142,10 @@ public class DataBaseConnection {
                             resultSet.getInt("pages"),          // pages
                             resultSet.getString("author"),      // author
                             resultSet.getString("cover_url"),   // image_url
-                            resultSet.getString("description")  // description
+                            resultSet.getString("description") , // description
+                            resultSet.getInt("book_id")
                     );
+                    System.out.println("Retrieved book ID: " + book.getId());
                     books.add(book);
                 }
             } catch (Exception e) {
@@ -244,8 +247,15 @@ public class DataBaseConnection {
         }
     }
 
+    public class BookService {
 
+        private Connection connection;
 
+        // Constructor to initialize the database connection
+        public BookService(Connection connection) {
+            this.connection = connection;
+        }
+    }
 
     public void shutdown() {
         executorService.shutdown();
@@ -302,4 +312,34 @@ public class DataBaseConnection {
             return entries;
         });
     }
+
+    public void removeBookFromUser(Book book, int UID) {
+        executorService.execute(() -> {
+            // SQL statement to remove the book from the userbooks table
+            String sql = "DELETE FROM userbooks WHERE user_id = ? AND book_id = ?";
+
+            try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                 PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+                // Set the parameters for the query
+                preparedStatement.setInt(1, UID);        // Set user_id
+                preparedStatement.setInt(2, book.getId()); // Set book_id
+
+                // Execute the delete operation
+                int rowsAffected = preparedStatement.executeUpdate();
+
+                // Log the result of the operation
+                if (rowsAffected > 0) {
+                    System.out.println("Book removed from user's list.");
+                } else {
+                    System.out.println("No matching record found to remove. BookID" + book.getId() + " UserID " + UID);
+                }
+            } catch (SQLException e) {
+                System.err.println("Error removing book from user: " + e.getMessage());
+                e.printStackTrace();  // Print stack trace for better debugging
+            }
+        });
+    }
+
+
+
 }

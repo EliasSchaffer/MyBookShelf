@@ -20,9 +20,7 @@ public class Search extends AppCompatActivity {
 
     public Search(MainActivity main) {
         api = new BooksAPI();
-        uiMaster = new UIMaster();
-        uiMaster.setMain(main);
-
+        uiMaster = new UIMaster(main);
     }
 
     public void searchByName(String bookName, LinearLayout bookContainer) {
