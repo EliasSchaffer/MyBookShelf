@@ -9,12 +9,21 @@ public class Book {
     private String release_date;
     private String image_url;
     private String description;
+    private boolean inDatabase;
 
     public Book(String name, String release_date, int pages, String author) {
         this.name = name;
         this.release_date = release_date;
         this.pages = pages;
         this.author = author;
+    }
+
+    public boolean isInDatabase() {
+        return inDatabase;
+    }
+
+    public void setInDatabase(boolean inDatabase) {
+        this.inDatabase = inDatabase;
     }
 
     public Book(String name, String release_date, int pages, String author, String image_url, String description) {

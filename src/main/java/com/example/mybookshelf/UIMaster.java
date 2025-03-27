@@ -24,6 +24,7 @@ import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.formatter.IndexAxisValueFormatter;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
@@ -56,9 +57,22 @@ public class UIMaster {
     private Button switchToRegisterButton;
 
     private int timeSpentReading = 0;
-
+    private Button addBookButton;
+    private TextView timeSpentReadingTextView;
+    private BooksAPI booksAPI;
+    private AiAPI ai;
+    private User logedindUser;
     public void setMain(MainActivity main) {
         this.mainActivity = main;
+    }
+
+    public UIMaster(){
+        booksAPI = new BooksAPI();
+        ai = new AiAPI();
+    }
+
+    public void setUSer(User user){
+        this.logedindUser = user;
     }
 
     public void reduceTimeSpendReading(int time, TextView timeSpentReadingTextView){
@@ -70,6 +84,8 @@ public class UIMaster {
             );
         }
     }
+    
+
 
     public void createBookBox(LinearLayout container, Book book, boolean isSearch) {
         // Ensure that mainActivity is properly initialized
@@ -158,7 +174,7 @@ public class UIMaster {
         bookBox.addView(bookImage);
         bookBox.addView(bookDetails);
 
-        bookBox.setOnClickListener(v -> mainActivity.navigateToDetails(book));
+        bookBox.setOnClickListener(v -> navigateToDetails(book));
 
 
         // Add the book box to the container
@@ -341,5 +357,74 @@ public class UIMaster {
             e.printStackTrace();
             System.err.println("Error fetching reading time data: " + e.getMessage());
         }
+    }
+
+    public void navigateToStartingPage() throws ExecutionException, InterruptedException {
+        mainActivity.setContentView(R.layout.starting_page);
+        LinearLayout bookContainer = mainActivity.findViewById(R.id.bookContainer);
+        List<Book> userBooks = logedindUser.getBookList();
+        addBookButton = mainActivity.findViewById(R.id.addBook);
+        addBookButton.setOnClickListener(v -> mainActivity.handleSearch());
+
+        if (userBooks != null && !userBooks.isEmpty()) {
+            for (Book book : userBooks) {
+                if (book != null && !TextUtils.isEmpty(book.getName())) {
+                    if (book.isInDatabase()) { // Check if the book exists in the database
+                        createBookBox(bookContainer, book, false); // Create the box instantly
+                        timeSpentReadingTextView = mainActivity.findViewById(R.id.etfTimeSpentReading);
+                        updateReadingTime(book.getPages(), timeSpentReadingTextView);
+                    } else {
+                        // Fetch the book from API if not in database
+                        booksAPI.getOneBook(book.getName(), new BooksAPI.BookCallback() {
+                            @Override
+                            public void onBookFetched(List<Book> books) {
+                                if (books != null && !books.isEmpty()) {
+                                    createBookBox(bookContainer, books.get(0), false);
+                                    timeSpentReadingTextView = mainActivity.findViewById(R.id.etfTimeSpentReading);
+                                    updateReadingTime(books.get(0).getPages(), timeSpentReadingTextView);
+                                } else {
+                                    createBookBox(bookContainer, new Book("An Error occurred, please try again", "0", 0, "NA"), false);
+                                }
+                            }
+                        });
+                    }
+                }
+            }
+        } else {
+            Log.w("MainActivity", "User's book list is null or empty.");
+        }
+    }
+
+
+    void navigateToDetails(Book book) {
+        mainActivity.setContentView(R.layout.detail_activity);
+
+        TextView txtDetails = mainActivity.findViewById(R.id.txtDetails);
+        StringBuilder str = new StringBuilder();
+        str.append(book.getName()).append("\n").append(book.getAuthor()).append(book.getRelease_date());
+        txtDetails.setText(str.toString());
+
+        TextView txtDescription = mainActivity.findViewById(R.id.txtDescription);
+        txtDescription.setText(book.getDescription());
+
+        ImageView imgCover = mainActivity.findViewById(R.id.imgCover);
+        Glide.with(mainActivity).load(book.getImageUrl()).into(imgCover);
+
+        Button submitButton = mainActivity.findViewById(R.id.submitButton);
+        submitButton.setOnClickListener(v -> {
+            EditText inpInputText = mainActivity.findViewById(R.id.inpInputText);
+            String prompt = inpInputText.getText().toString();
+            inpInputText.setText(" ");
+            ai.fetchResponse(prompt + " The books name is " + book.getName(), mainActivity);
+        });
+
+        Button backButton2 = mainActivity.findViewById(R.id.btnGoBack2);
+        backButton2.setOnClickListener(v -> {
+            try {
+                navigateToStartingPage();
+            } catch (ExecutionException | InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
     }
 }
