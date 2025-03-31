@@ -23,7 +23,7 @@ import at.favre.lib.crypto.bcrypt.BCrypt;
 public class DataBaseConnection {
 
     private final ExecutorService executorService = Executors.newSingleThreadExecutor();
-    private static final String URL = "jdbc:mysql://192.168.170.95:3306/mybookshelfdb?connectTimeout=2000&socketTimeout=2000";
+    private static final String URL = "jdbc:mysql://192.168.20.95:3306/mybookshelfdb?connectTimeout=2000&socketTimeout=2000";
     private static final String USER = "root";
     private static final String PASSWORD = "MYSQLPW1310&";
     private final Context context;
@@ -66,16 +66,12 @@ public class DataBaseConnection {
 
     public void addUser(String username, String email, String password) {
         executorService.execute(() -> {
-            // Hash the password using new BCrypt version
             String hashedPassword = BCrypt.withDefaults().hashToString(12, password.toCharArray());
 
             String checkUserSql = "SELECT COUNT(*) FROM users WHERE username = ? OR email = ?";
             String insertUserSql = "INSERT INTO users (username, password_hash, email) VALUES (?, ?, ?)";
 
             try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
-                // Post the UI update to the main thread
-
-
                 try (PreparedStatement checkStmt = connection.prepareStatement(checkUserSql)) {
                     checkStmt.setString(1, username);
                     checkStmt.setString(2, email);
@@ -319,9 +315,17 @@ public class DataBaseConnection {
         executorService.execute(() -> {
             // SQL statement to remove the book from the userbooks table
             String sql = "DELETE FROM userbooks WHERE user_id = ? AND book_id = ?";
+            String delete = "DELETE FROM NOTES WHERE user_id = ? AND book_id = ?";
+
 
             try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
                  PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+
+                try (PreparedStatement deleteStmt = connection.prepareStatement(delete)) {
+                    deleteStmt.setInt(1, UID);
+                    deleteStmt.setInt(2, book.getId());
+                    deleteStmt.executeUpdate();
+                }
                 // Set the parameters for the query
                 preparedStatement.setInt(1, UID);        // Set user_id
                 preparedStatement.setInt(2, book.getId()); // Set book_id
@@ -341,6 +345,59 @@ public class DataBaseConnection {
             }
         });
     }
+
+    public void notesChanged(int UID, int bookID, String note) {
+        String delete = "DELETE FROM NOTES WHERE user_id = ? AND book_id = ?";
+        String insert = "INSERT INTO Notes (user_id, book_id, note) VALUES (?, ?, ?)";
+
+        executorService.execute(() -> {
+            try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+                connection.setAutoCommit(false); // Start transaction
+
+                // DELETE existing note
+                try (PreparedStatement deleteStmt = connection.prepareStatement(delete)) {
+                    deleteStmt.setInt(1, UID);
+                    deleteStmt.setInt(2, bookID);
+                    deleteStmt.executeUpdate();
+                }
+
+                // INSERT new note
+                try (PreparedStatement insertStmt = connection.prepareStatement(insert)) {
+                    insertStmt.setInt(1, UID);
+                    insertStmt.setInt(2, bookID);
+                    insertStmt.setString(3, note);
+                    insertStmt.executeUpdate();
+                }
+
+                connection.commit(); // Commit transaction
+            } catch (SQLException e) {
+                System.err.println("Error updating book note: " + e.getMessage());
+                e.printStackTrace();
+            }
+        });
+    }
+
+    public String getNotesFromUser(int UID, int bookID) {
+        String sql = "SELECT note FROM NOTES WHERE user_id = ? AND book_id = ?";
+
+        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+             PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+
+            preparedStatement.setInt(1, UID);
+            preparedStatement.setInt(2, bookID);
+
+            try (ResultSet resultSet = preparedStatement.executeQuery()) { // Ensure ResultSet is properly closed
+                return resultSet.next() ? resultSet.getString("note") : "Add notes here...";
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return "Add notes here...";
+    }
+
+
 
 
 

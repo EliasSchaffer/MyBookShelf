@@ -1,9 +1,14 @@
 package com.example.mybookshelf;
 
 import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
+import android.text.Editable;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -75,7 +80,6 @@ public class UIMaster {
 
 
     public void createBookBox(LinearLayout container, Book book, boolean isSearch) {
-        // Ensure that mainActivity is properly initialized
         if (mainActivity == null) {
             Log.e("UIMaster", "MainActivity is null. Cannot create book box.");
             return;
@@ -88,81 +92,151 @@ public class UIMaster {
 
         String name = book.getName();
 
-        // Create a container for the book box
-        RelativeLayout bookBox = new RelativeLayout(mainActivity);
+        // Create a container for the book box with rounded corners
+        LinearLayout bookBox = new LinearLayout(mainActivity);
+        bookBox.setOrientation(LinearLayout.VERTICAL);
+        bookBox.setPadding(16, 16, 16, 16);
         bookBox.setBackgroundColor(Color.WHITE);
-        bookBox.setPadding(12, 12, 12, 12);  // Reduced padding for a more compact layout
+
+        // Apply rounded corners
+        GradientDrawable background = new GradientDrawable();
+        background.setColor(Color.WHITE);
+        background.setCornerRadius(24);
+        bookBox.setBackground(background);
 
         LinearLayout.LayoutParams boxParams = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT
         );
-        boxParams.setMargins(12, 12, 12, 12);  // Reduced margins for better spacing
+        boxParams.setMargins(12, 12, 12, 12);
         bookBox.setLayoutParams(boxParams);
+
+        // Create a horizontal layout for image, text, and buttons
+        LinearLayout horizontalLayout = new LinearLayout(mainActivity);
+        horizontalLayout.setOrientation(LinearLayout.HORIZONTAL);
+        horizontalLayout.setPadding(12, 12, 12, 12);
+        horizontalLayout.setGravity(Gravity.CENTER_VERTICAL);
 
         // Create an ImageView for the book cover
         ImageView bookImage = new ImageView(mainActivity);
-        bookImage.setId(View.generateViewId()); // Set a unique ID for the ImageView
+        bookImage.setId(View.generateViewId());
         String imageUrl = book.getImageUrl();
         if (!TextUtils.isEmpty(imageUrl)) {
-            Glide.with(mainActivity)
-                    .load(imageUrl)
-                    .into(bookImage);
-        } else {
-            Log.w("createBookBox", "No image URL available for book: " + book.getName());
+            Glide.with(mainActivity).load(imageUrl).into(bookImage);
         }
 
-        // Set up layout for the ImageView
-        RelativeLayout.LayoutParams imageParams = new RelativeLayout.LayoutParams(
-                120, 160 // Smaller image size for a more compact look
-        );
-        imageParams.addRule(RelativeLayout.ALIGN_PARENT_START);
+        // Set ImageView layout params
+        LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(120, 160);
         bookImage.setLayoutParams(imageParams);
 
         // Create a TextView for the book details
         TextView bookDetails = new TextView(mainActivity);
-        StringBuilder details;
-        details = new StringBuilder();
+        StringBuilder details = new StringBuilder();
         details.append("Name: ").append(TextUtils.isEmpty(book.getName()) ? "Unknown" : book.getName()).append("\n");
         details.append("Author: ").append(TextUtils.isEmpty(book.getAuthor()) ? "Unknown" : book.getAuthor()).append("\n");
         details.append("Pages: ").append(book.getPages() > 0 ? book.getPages() : "Unknown").append("\n");
         details.append("Release Date: ").append(book.getRelease_date() != null ? book.getRelease_date() : "Unknown");
 
-        if (isSearch) {
-            ImageButton btnAdd = getBtnAdd(book);
-            bookBox.addView(btnAdd);
-        }
-
-        // FIX: Only add remove button when the book is not searched
-        if (!isSearch && !Objects.equals(book.getName(), "An Error occurred please try again")) {
-            ImageButton btnRemove = getBtnRemove(book);
-            bookBox.addView(btnRemove);
-        }
-
         bookDetails.setText(details.toString());
         bookDetails.setTextColor(Color.BLACK);
-        bookDetails.setTextSize(14); // Slightly smaller text size for better fit
+        bookDetails.setTextSize(14);
+        bookDetails.setPadding(12, 0, 0, 0);
         bookBox.setTag(name);
 
-        // Set up layout for the TextView
-        RelativeLayout.LayoutParams textParams = new RelativeLayout.LayoutParams(
-                RelativeLayout.LayoutParams.WRAP_CONTENT,
-                RelativeLayout.LayoutParams.WRAP_CONTENT
-        );
-        textParams.addRule(RelativeLayout.RIGHT_OF, bookImage.getId());
-        textParams.addRule(RelativeLayout.CENTER_VERTICAL);
-        textParams.setMargins(12, 0, 0, 0); // Add spacing between the image and text
-        bookDetails.setLayoutParams(textParams);
+        // Add Image and Details to horizontal layout
+        horizontalLayout.addView(bookImage);
+        horizontalLayout.addView(bookDetails);
 
-        // Add the ImageView and TextView to the RelativeLayout
-        bookBox.addView(bookImage);
-        bookBox.addView(bookDetails);
+        // Add Add/Remove Button (Only if not in search mode)
+        if (!isSearch && !Objects.equals(book.getName(), "An Error occurred please try again")) {
+            ImageButton btnRemove = getBtnRemove(book);
 
+            if (btnRemove != null) {
+                // Remove btnRemove from any existing parent before adding
+                if (btnRemove.getParent() != null) {
+                    ((ViewGroup) btnRemove.getParent()).removeView(btnRemove);
+                }
+
+                // Ensure button has an image
+                btnRemove.setImageResource(android.R.drawable.ic_delete);
+                btnRemove.setVisibility(View.VISIBLE);
+
+                // Set button size and margin
+                LinearLayout.LayoutParams btnParams = new LinearLayout.LayoutParams(80, 80);
+                btnParams.setMargins(12, 0, 0, 0);
+                btnRemove.setLayoutParams(btnParams);
+
+                // Add remove button to layout
+                horizontalLayout.addView(btnRemove);
+            }
+        } else if (isSearch) {
+            ImageButton btnAdd = getBtnAdd(book);
+
+            if (btnAdd != null) {
+                if (btnAdd.getParent() != null) {
+                    ((ViewGroup) btnAdd.getParent()).removeView(btnAdd);
+                }
+
+                // Ensure button has an image
+                btnAdd.setImageResource(android.R.drawable.ic_input_add);
+                btnAdd.setVisibility(View.VISIBLE);
+
+                // Set button size and margin
+                LinearLayout.LayoutParams btnParams = new LinearLayout.LayoutParams(80, 80);
+                btnParams.setMargins(12, 0, 0, 0);
+                btnAdd.setLayoutParams(btnParams);
+
+                // Add add button to layout
+                horizontalLayout.addView(btnAdd);
+            }
+        }
+
+        // Add horizontal layout (Image + Details + Buttons) to the book box
+        bookBox.addView(horizontalLayout);
+
+        // Add Notes input (Only if NOT in search mode)
+        if (!isSearch) {
+            EditText noteField = new EditText(mainActivity);
+            noteField.setHint(db.getNotesFromUser(logedindUser.getUid(), book.getId()));
+            noteField.setTextColor(Color.BLACK);
+            noteField.setBackgroundColor(Color.LTGRAY);
+            noteField.setPadding(8, 8, 8, 8);
+            noteField.setTextSize(14);
+            noteField.setId(View.generateViewId());
+
+            // Set up layout parameters for the note field
+            LinearLayout.LayoutParams noteParams = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT
+            );
+            noteParams.setMargins(12, 12, 12, 12);
+            noteField.setLayoutParams(noteParams);
+
+            // Add a listener to handle text changes
+            noteField.addTextChangedListener(new TextWatcher() {
+                @Override
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+                @Override
+                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                    db.notesChanged(logedindUser.getUid(), book.getId(), s.toString());
+                }
+
+                @Override
+                public void afterTextChanged(Editable s) {}
+            });
+
+            // Add the note field to the book box
+            bookBox.addView(noteField);
+        }
+
+        // Set click listener to navigate to details
         bookBox.setOnClickListener(v -> navigateToDetails(book));
 
         // Add the book box to the container
         container.addView(bookBox);
     }
+
 
 
     @NonNull
