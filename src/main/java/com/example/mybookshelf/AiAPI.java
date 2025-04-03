@@ -87,7 +87,6 @@ public class AiAPI {
                     t.printStackTrace();
                 }
             });
-
         } catch (Exception e) {
             callback.onFailure("Exception occurred: " + e.getMessage());
             e.printStackTrace();
