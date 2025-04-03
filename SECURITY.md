@@ -18,5 +18,5 @@ If you find a vulnerabilities feel free to contact us at:
 -- **paul.staudinger@htl-wels.at
 
 ## Known Bugs
--- Books beeing added to the user twice
--- Its impossible to add Notes to a freshly added Book
+-- **Books beeing added to the user twice
+-- **Its impossible to add Notes to a freshly added Book
