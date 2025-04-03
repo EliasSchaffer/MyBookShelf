@@ -7,7 +7,7 @@ currently being supported with security updates.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 1.0     | :white_check_mark: |
+| 0.1     | :white_check_mark: |
 
 ## Reporting a Vulnerability
 
@@ -16,3 +16,7 @@ If you find a vulnerabilities feel free to contact us at:
 -- **elias.schaffer@htl-wels.at
 -- **christoph.spreitzer@htl-wels.at
 -- **paul.staudinger@htl-wels.at
+
+## Known Bugs
+-- Books beeing added to the user twice
+-- Its impossible to add Notes to a freshly added Book
