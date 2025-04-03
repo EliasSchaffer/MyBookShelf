@@ -32,7 +32,6 @@ import com.github.mikephil.charting.data.BarEntry;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
@@ -439,7 +438,7 @@ public class UIMaster {
     }
 
     public void navigateToStartingPage() throws ExecutionException, InterruptedException {
-        mainActivity.setContentView(R.layout.home);
+        mainActivity.setContentView(R.layout.main_home);
         LinearLayout bookContainer = mainActivity.findViewById(R.id.bookContainer);
         List<Book> userBooks = logedindUser.getBookList();
         nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
