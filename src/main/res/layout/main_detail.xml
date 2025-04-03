@@ -7,106 +7,103 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_image">
 
-    <TextView
-        android:id="@+id/header_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="MyBookShelf"
-        android:textColor="@android:color/white"
-        android:textSize="23sp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        />
-
     <!-- TextView to the Right of the Image -->
+
     <TextView
         android:id="@+id/txtTitle"
-        android:layout_width="83pt"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Title"
+        android:text="Der Schnee, das Feuer, die Schuld und der Tod"
         android:textSize="23sp"
-        android:textColor="@android:color/black"
-        android:layout_below="@id/header_title"
-        android:layout_marginStart="15dp" />
+        android:textColor="@android:color/white"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="4dp"
+        android:layout_above="@id/cardView"/>
     <TextView
         android:id="@+id/txtAuthor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Author"
-        android:textSize="23sp"
-        android:textColor="@android:color/black"
-        android:layout_above="@id/imgCover"
-        android:layout_toEndOf="@id/txtTitle"
-        android:layout_marginStart="16dp" />
-
+        android:text="Gerhard Jäger"
+        android:textSize="26sp"
+        android:textColor="@android:color/white"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="25dp" />
     <!-- Image on the Left Below White Bar -->
     <ImageView
         android:id="@+id/imgCover"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
-        app:srcCompat="@android:drawable/stat_notify_error"
-        android:layout_below="@id/txtTitle"
-        android:layout_above="@id/box_above_input"
+        app:srcCompat="@drawable/cover"
+        android:layout_below="@id/txtAuthor"
+        android:layout_above="@id/txtTitle"
         android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"/>
-
-    <!-- Box Above the Input with a TextView Insid -->
-
-    <RelativeLayout
-        android:id="@+id/box_above_input"
-        android:layout_width="381dp"
-        android:layout_height="201dp"
-        android:layout_above="@id/bottom_nav"
         android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        android:background="@android:color/darker_gray"
-        android:padding="8dp">
+        tools:ignore="NotSibling" />
 
-        <TextView
-            android:id="@+id/boxReturn"
-            android:layout_width="367dp"
-            android:layout_height="145dp"
-            android:layout_centerInParent="true"
-            android:text="Ask AI about the book"
-            android:textColor="@android:color/white"
-            android:textSize="16sp" />
+    <!-- Box Above the Input with a TextView Inside -->
 
-    </RelativeLayout>
-
-
-    <!--Bottom Section: Input & Button
-    <LinearLayout
-        android:id="@+id/inputContainer"
-        android:layout_width="match_parent"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="200pt"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:padding="16dp">
+        android:layout_above="@+id/bottom_nav"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        android:background="@android:color/white">
 
-        <EditText
-            android:id="@+id/inpInputText"
-            android:layout_width="0dp"
+        <!-- Vertical Layout for Text Items -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="Enter text..."
-            android:padding="12dp"
-            android:background="@android:color/white"
-            android:textSize="16sp" />
+            android:orientation="vertical"
+            android:padding="12dp">
 
-        <Button
-            android:id="@+id/submitButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Submit"
-            android:layout_marginStart="8dp" />
-    </LinearLayout> -->
+            <!-- Short Description -->
+            <TextView
+                android:id="@+id/txtDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A thrilling journey through space..."
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="4dp" />
 
+            <!-- Rating -->
+            <TextView
+                android:id="@+id/txtRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rating: ★★★★☆"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="4dp"/>
+
+            <!-- Genre -->
+            <TextView
+                android:id="@+id/txtGenre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Genre: Science Fiction"
+                android:textSize="18sp"
+                android:textColor="@android:color/black" />
+
+            <!-- Page Count -->
+            <TextView
+                android:id="@+id/txtPageCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pages: 432"
+                android:textSize="16sp"
+                android:textColor="@android:color/black"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
     <!-- Nav-bar -->
     <androidx.cardview.widget.CardView
