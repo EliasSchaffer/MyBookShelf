@@ -6,10 +6,10 @@ android {
     namespace = "com.example.mybookshelf"  // Add this line
 
     defaultConfig {
-        compileSdk = 33
+        compileSdk = 34
         applicationId = "com.example.mybookshelf"
         minSdk = 26
-        targetSdk = 33
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"

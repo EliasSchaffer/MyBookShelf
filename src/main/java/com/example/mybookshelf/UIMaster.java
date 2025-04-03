@@ -256,27 +256,38 @@ public class UIMaster {
         ImageButton btnRemove = new ImageButton(mainActivity);
         btnRemove.setOnClickListener(v -> {
             try {
+                // Remove the book from the database
                 mainActivity.removeBook(book);
+
+                // Get the parent container (LinearLayout) where the book box is located
+                FrameLayout bookBox = (FrameLayout) btnRemove.getParent();  // This assumes the bookBox is the direct parent of the button
+                if (bookBox != null) {
+                    ViewGroup parentContainer = (ViewGroup) bookBox.getParent(); // Get the container (LinearLayout)
+                    if (parentContainer != null) {
+                        parentContainer.removeView(bookBox); // Remove the book box from the container
+                    }
+                }
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
         });
 
-        // Set image resource (replace `android.R.drawable.ic_menu_delete` with your actual drawable resource)
+        // Set image resource for remove button
         btnRemove.setImageResource(android.R.drawable.ic_menu_close_clear_cancel);
 
         // Set background to transparent to avoid default button styling
-        btnRemove.setBackgroundColor(Color.TRANSPARENT); // Use transparent background instead of null
+        btnRemove.setBackgroundColor(Color.TRANSPARENT);
 
-        // Set layout parameters for the button with a slightly larger size
+        // Set layout parameters for the button
         RelativeLayout.LayoutParams btnParams = new RelativeLayout.LayoutParams(
-                48, 48 // Slightly larger size for the remove button (increased from 40x40)
+                48, 48
         );
         btnParams.addRule(RelativeLayout.ALIGN_PARENT_END);
         btnRemove.setLayoutParams(btnParams);
 
         return btnRemove;
     }
+
 
 
 
@@ -449,7 +460,7 @@ public class UIMaster {
                             @Override
                             public void onBookFetched(List<Book> books) {
                                 if (books != null && !books.isEmpty()) {
-                                    db.addBookToUser(logedindUser.getUid(), books.get(0).getName(), books.get(0).getAuthor(), books.get(0).getPages(), books.get(0).getRelease_date(), books.get(0).getImageUrl(), books.get(0).getDescription(), 0);
+                                    mainActivity.saveBook(books.get(0));
                                     createBookBox(bookContainer, books.get(0), false);
                                     timeSpentReadingTextView = mainActivity.findViewById(R.id.etfTimeSpentReading);
                                     updateReadingTime(books.get(0).getPages(), timeSpentReadingTextView);

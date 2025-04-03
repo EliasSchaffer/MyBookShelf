@@ -152,32 +152,34 @@ public class DataBaseConnection {
         }).get();  // Waits for the async result and returns the list
     }
 
-    public Book getBookByName(String bookName) {
-        String sql = "SELECT title, author, pages, release_date, cover_url, description FROM Books WHERE title = ?;";
+    public Future<Book> getBookByName(String bookName) {
+        String sql = "SELECT book_id, title, author, pages, release_date, cover_url, description FROM Books WHERE title = ?;";
 
-        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
-             PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+        return executorService.submit(() -> {
+            try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                 PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
 
-            preparedStatement.setString(1, bookName);
-            ResultSet resultSet = preparedStatement.executeQuery();
+                preparedStatement.setString(1, bookName);
+                ResultSet resultSet = preparedStatement.executeQuery();
 
-            if (resultSet.next()) {
-                return new Book(
-                        resultSet.getString("title"),
-                        resultSet.getString("author"),
-                        resultSet.getInt("pages"),
-                        resultSet.getString("release_date"),
-                        resultSet.getString("cover_url"),
-                        resultSet.getString("description")
-                );
+                if (resultSet.next()) {
+                    return new Book(
+                            resultSet.getString("title"),
+                            resultSet.getString("author"),
+                            resultSet.getInt("pages"),
+                            resultSet.getString("release_date"),
+                            resultSet.getString("cover_url"),
+                            resultSet.getString("description"),
+                            resultSet.getInt("book_id")
+                    );
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return null; // Return null if no book is found
+            return null; // Falls kein Buch gefunden wurde
+        });
     }
+
 
     public void addBookToUser(int userId, String bookName, String author, int pages, String releaseDate, String imageUrl, String description, int readingTime) {
         String getBookIdSQL = "SELECT book_id FROM Books WHERE title = ?";
@@ -349,19 +351,33 @@ public class DataBaseConnection {
     public void notesChanged(int UID, int bookID, String note) {
         String delete = "DELETE FROM NOTES WHERE user_id = ? AND book_id = ?";
         String insert = "INSERT INTO Notes (user_id, book_id, note) VALUES (?, ?, ?)";
+        String checkBookExistence = "SELECT COUNT(*) FROM books WHERE book_id = ?";
 
         executorService.execute(() -> {
             try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
                 connection.setAutoCommit(false); // Start transaction
 
-                // DELETE existing note
+                // Check if the book exists in the 'books' table
+                try (PreparedStatement checkStmt = connection.prepareStatement(checkBookExistence)) {
+                    checkStmt.setInt(1, bookID);
+                    ResultSet rs = checkStmt.executeQuery();
+
+                    // If the book doesn't exist, wait for insertion or retry
+                    if (rs.next() && rs.getInt(1) == 0) {
+                        System.err.println("Error: The book with ID " + bookID + " does not exist yet. Retrying...");
+                        // Optionally, you can add retry logic or sleep here to wait for book insertion
+                        connection.commit(); // Commit before exiting
+                        return;
+                    }
+                }
+
+                // If book exists or is inserted, proceed to delete and insert notes
                 try (PreparedStatement deleteStmt = connection.prepareStatement(delete)) {
                     deleteStmt.setInt(1, UID);
                     deleteStmt.setInt(2, bookID);
                     deleteStmt.executeUpdate();
                 }
 
-                // INSERT new note
                 try (PreparedStatement insertStmt = connection.prepareStatement(insert)) {
                     insertStmt.setInt(1, UID);
                     insertStmt.setInt(2, bookID);
@@ -370,12 +386,15 @@ public class DataBaseConnection {
                 }
 
                 connection.commit(); // Commit transaction
+
             } catch (SQLException e) {
                 System.err.println("Error updating book note: " + e.getMessage());
                 e.printStackTrace();
             }
         });
     }
+
+
 
     public Future<String> getNotesFromUser(int UID, int bookID) {
         String sql = "SELECT note FROM NOTES WHERE user_id = ? AND book_id = ?";

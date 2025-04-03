@@ -168,10 +168,16 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
     }
 
 
-    public void saveBook(Book book) {
+    public void saveBook(Book book) {db.addBookToUser(logedindUser.getUid(), book.getName(), book.getAuthor(), book.getPages(), book.getReleaseDate(), book.getImageUrl(), book.getDescription(), 0);
+        try {
+            book = db.getBookByName(book.getName()).get();
+        } catch (ExecutionException e) {
+            throw new RuntimeException(e);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         book.setInDatabase(true);
         logedindUser.addBook(book, this);
-        db.addBookToUser(logedindUser.getUid(), book.getName(), book.getAuthor(), book.getPages(), book.getReleaseDate(), book.getImageUrl(), book.getDescription(), 0);
 
     }
 
@@ -181,7 +187,6 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
         db.removeBookFromUser(book,logedindUser.getUid());
         uiMaster.reduceTimeSpendReading(book.getPages(), timeSpentReadingTextView);
         logedindUser.removeBook(book, context, findViewById(R.id.bookContainer));
-
     }
 
     public User getUser() {
