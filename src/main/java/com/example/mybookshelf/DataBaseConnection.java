@@ -377,25 +377,29 @@ public class DataBaseConnection {
         });
     }
 
-    public String getNotesFromUser(int UID, int bookID) {
+    public Future<String> getNotesFromUser(int UID, int bookID) {
         String sql = "SELECT note FROM NOTES WHERE user_id = ? AND book_id = ?";
 
-        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
-             PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+        return executorService.submit(() -> {
+            try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                 PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
 
-            preparedStatement.setInt(1, UID);
-            preparedStatement.setInt(2, bookID);
+                preparedStatement.setInt(1, UID);
+                preparedStatement.setInt(2, bookID);
 
-            try (ResultSet resultSet = preparedStatement.executeQuery()) { // Ensure ResultSet is properly closed
-                return resultSet.next() ? resultSet.getString("note") : "Add notes here...";
+                try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                    if (resultSet.next()) {
+                        return resultSet.getString("note");
+                    }
+                    return "Add notes here...";
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+                return "Error retrieving note"; // Ensure return in case of an exception
             }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-        return "Add notes here...";
+        });
     }
+
 
 
 

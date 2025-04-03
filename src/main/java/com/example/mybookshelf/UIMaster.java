@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -92,9 +93,8 @@ public class UIMaster {
 
         String name = book.getName();
 
-        // Create a container for the book box with rounded corners
-        LinearLayout bookBox = new LinearLayout(mainActivity);
-        bookBox.setOrientation(LinearLayout.VERTICAL);
+        // Create a container for the book box with rounded corners (using FrameLayout for button positioning)
+        FrameLayout bookBox = new FrameLayout(mainActivity); // Use FrameLayout for absolute button positioning
         bookBox.setPadding(16, 16, 16, 16);
         bookBox.setBackgroundColor(Color.WHITE);
 
@@ -111,7 +111,31 @@ public class UIMaster {
         boxParams.setMargins(12, 12, 12, 12);
         bookBox.setLayoutParams(boxParams);
 
-        // Create a horizontal layout for image, text, and buttons
+        // Add/Remove Button (Always in Top-Right)
+        ImageButton actionButton = isSearch ? getBtnAdd(book) : getBtnRemove(book);
+        if (actionButton != null) {
+            if (actionButton.getParent() != null) {
+                ((ViewGroup) actionButton.getParent()).removeView(actionButton);
+            }
+            actionButton.setVisibility(View.VISIBLE);
+            actionButton.setImageResource(isSearch ? android.R.drawable.ic_input_add : android.R.drawable.ic_delete);
+
+            // Set button size and position it at the top-right
+            FrameLayout.LayoutParams btnParams = new FrameLayout.LayoutParams(80, 80);
+            btnParams.gravity = Gravity.TOP | Gravity.END; // Position it in the top-right
+            btnParams.setMargins(12, 12, 0, 0); // Top and right margin
+            actionButton.setLayoutParams(btnParams);
+
+            // Add the button to the book box (FrameLayout)
+            bookBox.addView(actionButton);
+        }
+
+        // Create a vertical container to manage all content below the button
+        LinearLayout verticalContainer = new LinearLayout(mainActivity);
+        verticalContainer.setOrientation(LinearLayout.VERTICAL);
+        verticalContainer.setPadding(12, 12, 12, 12);
+
+        // Create a horizontal layout for image + text (book details)
         LinearLayout horizontalLayout = new LinearLayout(mainActivity);
         horizontalLayout.setOrientation(LinearLayout.HORIZONTAL);
         horizontalLayout.setPadding(12, 12, 12, 12);
@@ -141,63 +165,29 @@ public class UIMaster {
         bookDetails.setTextColor(Color.BLACK);
         bookDetails.setTextSize(14);
         bookDetails.setPadding(12, 0, 0, 0);
-        bookBox.setTag(name);
 
         // Add Image and Details to horizontal layout
         horizontalLayout.addView(bookImage);
         horizontalLayout.addView(bookDetails);
 
-        // Add Add/Remove Button (Only if not in search mode)
-        if (!isSearch && !Objects.equals(book.getName(), "An Error occurred please try again")) {
-            ImageButton btnRemove = getBtnRemove(book);
-
-            if (btnRemove != null) {
-                // Remove btnRemove from any existing parent before adding
-                if (btnRemove.getParent() != null) {
-                    ((ViewGroup) btnRemove.getParent()).removeView(btnRemove);
-                }
-
-                // Ensure button has an image
-                btnRemove.setImageResource(android.R.drawable.ic_delete);
-                btnRemove.setVisibility(View.VISIBLE);
-
-                // Set button size and margin
-                LinearLayout.LayoutParams btnParams = new LinearLayout.LayoutParams(80, 80);
-                btnParams.setMargins(12, 0, 0, 0);
-                btnRemove.setLayoutParams(btnParams);
-
-                // Add remove button to layout
-                horizontalLayout.addView(btnRemove);
-            }
-        } else if (isSearch) {
-            ImageButton btnAdd = getBtnAdd(book);
-
-            if (btnAdd != null) {
-                if (btnAdd.getParent() != null) {
-                    ((ViewGroup) btnAdd.getParent()).removeView(btnAdd);
-                }
-
-                // Ensure button has an image
-                btnAdd.setImageResource(android.R.drawable.ic_input_add);
-                btnAdd.setVisibility(View.VISIBLE);
-
-                // Set button size and margin
-                LinearLayout.LayoutParams btnParams = new LinearLayout.LayoutParams(80, 80);
-                btnParams.setMargins(12, 0, 0, 0);
-                btnAdd.setLayoutParams(btnParams);
-
-                // Add add button to layout
-                horizontalLayout.addView(btnAdd);
-            }
-        }
-
-        // Add horizontal layout (Image + Details + Buttons) to the book box
-        bookBox.addView(horizontalLayout);
+        // Add the horizontal layout to the vertical container
+        verticalContainer.addView(horizontalLayout);
 
         // Add Notes input (Only if NOT in search mode)
         if (!isSearch) {
             EditText noteField = new EditText(mainActivity);
-            noteField.setHint(db.getNotesFromUser(logedindUser.getUid(), book.getId()));
+            String note;
+            try {
+                note = db.getNotesFromUser(logedindUser.getUid(), book.getId()).get();
+            } catch (ExecutionException | InterruptedException e) {
+                note = "Add notes here...";
+            }
+            if (note.equals("Add notes here...") || note.isEmpty()) {
+                noteField.setHint(note);
+            } else {
+                noteField.setText(note);
+            }
+
             noteField.setTextColor(Color.BLACK);
             noteField.setBackgroundColor(Color.LTGRAY);
             noteField.setPadding(8, 8, 8, 8);
@@ -226,18 +216,19 @@ public class UIMaster {
                 public void afterTextChanged(Editable s) {}
             });
 
-            // Add the note field to the book box
-            bookBox.addView(noteField);
+            // Add the note field to the vertical container
+            verticalContainer.addView(noteField);
         }
 
-        // Set click listener to navigate to details
-        bookBox.setOnClickListener(v -> navigateToDetails(book));
+        // Add the vertical container (with all content) inside the book box
+        bookBox.addView(verticalContainer);
 
-        // Add the book box to the container
+        // Finally, add the book box to the main container
         container.addView(bookBox);
+        container.setOnClickListener(v -> {
+            navigateToDetails(book);
+        });
     }
-
-
 
     @NonNull
     private ImageButton getBtnAdd(Book book) {
