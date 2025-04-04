@@ -19,8 +19,9 @@
         android:textSize="30sp"
         android:layout_marginBottom="8dp"
         android:layout_alignLeft="@id/cardView"
-        android:layout_above="@+id/cardView" />
+        android:layout_below="@+id/txtMyBookShelf" />
     <TextView
+        android:id="@+id/txtMyBookShelf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="MyBookShelf"
@@ -32,13 +33,14 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="200pt"
-        android:layout_height="300pt"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
         android:layout_above="@+id/bottom_nav"
+        android:layout_below="@id/current_user"
         android:layout_margin="16dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="4dp"
-        android:background="@android:color/white">
+        android:background="@android:color/white" >
 
         <ScrollView
             android:id="@+id/scrollView"

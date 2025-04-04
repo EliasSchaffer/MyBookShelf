@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/background_image"
+    android:background="@drawable/background2"
     android:padding="16dp">
 
     <!-- App Title -->
@@ -12,10 +12,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-        android:text="MyBookShelf"
+        android:layout_above="@id/cardView"
+        android:text="Login"
         android:textColor="@android:color/black"
         android:textSize="36sp" />
+
+
 
     <!-- Username Field -->
 
@@ -47,8 +49,9 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:orientation="horizontal"
             android:padding="16dp"
-            android:background="@android:color/darker_gray">
+            android:background="@android:color/system_background_light">
 
             <TextView
                 android:id="@+id/txtUsername"
@@ -56,6 +59,8 @@
                 android:layout_height="wrap_content"
                 android:text="Benutzername: "
                 android:textSize="23sp"
+                android:layout_marginTop="36dp"
+                android:layout_marginLeft="2dp"
                 android:textColor="@android:color/black" />
 
             <EditText
@@ -64,18 +69,30 @@
                 android:layout_height="wrap_content"
                 android:padding="10dp"
                 android:textSize="18sp"
+                android:background="@drawable/rounded_edittext"
+                android:inputType="textPersonName"
                 android:layout_below="@id/txtUsername"/>
+
+            <TextView
+                android:id="@+id/txtPasswd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Passwort: "
+                android:textSize="23sp"
+                android:layout_marginTop="16dp"
+                android:textColor="@android:color/black"
+                android:layout_below="@id/txfUser"
+                android:layout_margin="2dp"/>
 
             <EditText
                 android:id="@+id/txfPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/txfUser"
-                android:layout_marginTop="16dp"
-                android:hint="Password"
+                android:layout_below="@id/txtPasswd"
                 android:inputType="textPassword"
                 android:padding="10dp"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:background="@drawable/rounded_edittext"/>
 
             <Button
                 android:id="@+id/btnRegister"
@@ -83,11 +100,11 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentEnd="true"
-                android:layout_margin="10dp"
-                android:background="@color/beige"
+                android:background="@drawable/rounded_button"
                 android:text="Login"
-                android:textColor="@android:color/white"
+                android:textColor="@android:color/black"
                 android:textSize="18sp" />
+
         </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
