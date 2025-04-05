@@ -2,6 +2,8 @@ package com.example.mybookshelf;
 
 
 
+import static androidx.constraintlayout.motion.utils.Oscillator.TAG;
+
 import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -21,12 +23,27 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.security.KeyStore;
+import java.security.SecureRandom;
+import java.security.cert.Certificate;
+import java.security.cert.CertificateFactory;
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.concurrent.ExecutionException;
+import java.util.function.BiConsumer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.TrustManagerFactory;
 
 
 public class MainActivity extends AppCompatActivity implements ApiResponseCallback {
@@ -80,12 +97,12 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
                 throw new RuntimeException(e);
             }
 
+
         } catch (Exception e) {
             Log.e("MainActivity", "Error during initialization", e);
             Toast.makeText(this, "An error occurred during initialization", Toast.LENGTH_SHORT).show();
         }
     }
-
 
 
     public void handleSearch() {
@@ -153,22 +170,31 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
         }
 
         User user = new User(username, password);
-        Object[] returnObject = auth.checkLogin(user);
-        user = (User) returnObject[1];
-        if ((boolean)returnObject[0]) {
-            Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show();
-            logedindUser = user;
-            uiMaster.setUSer(logedindUser);
-            uiMaster.navigateToStartingPage();
-            //setContentView(R.layout.test_chart);
-            //uiMaster.setupLineChart();
-        } else {
-            Toast.makeText(this, "User or Password incorrect", Toast.LENGTH_SHORT).show();
-        }
+
+        auth.checkLogin(user, (isSuccess, resultUser) -> {
+            if (isSuccess) {
+                Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show();
+                logedindUser = resultUser;
+                uiMaster.setUSer(logedindUser);
+                try {
+                    uiMaster.navigateToStartingPage();
+                } catch (ExecutionException e) {
+                    throw new RuntimeException(e);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
+                //setContentView(R.layout.test_chart);
+                //uiMaster.setupLineChart();
+            } else {
+                Toast.makeText(this, "User or Password incorrect", Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
 
-    public void saveBook(Book book) {db.addBookToUser(logedindUser.getUid(), book.getName(), book.getAuthor(), book.getPages(), book.getReleaseDate(), book.getImageUrl(), book.getDescription(), 0);
+    public void saveBook(Book book) {
+        db.addBookToUser(logedindUser.getUid(), book.getName(), book.getAuthor(), book.getPages(), book.getReleaseDate(), book.getImageUrl(), book.getDescription(), 0);
         try {
             book = db.getBookByName(book.getName()).get();
         } catch (ExecutionException e) {

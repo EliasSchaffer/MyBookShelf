@@ -3,65 +3,138 @@ package com.example.mybookshelf;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
+import android.util.Log;
 
 import com.github.mikephil.charting.data.BarEntry;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.security.KeyStore;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.SQLTimeoutException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Enumeration;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CompletionException;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
+
 import at.favre.lib.crypto.bcrypt.BCrypt;
 
 public class DataBaseConnection {
 
     private final ExecutorService executorService = Executors.newSingleThreadExecutor();
-    private static final String URL = "jdbc:mysql://192.168.20.95:3306/mybookshelfdb?connectTimeout=2000&socketTimeout=2000";
-    private static final String USER = "root";
-    private static final String PASSWORD = "MYSQLPW1310&";
+    //private static final String URL = "jdbc:mysql://mysql-2ca78de3-mybookshelfdb.c.aivencloud.com:20545/mybookshelf?sslmode=require";
+    private static final String USER = "avnadmin";
+    private static final String PASSWORD = "AVNS_g46tQJXWz_2Fh_QBWiM";
+    private String URL;
     private final Context context;
 
-    public DataBaseConnection(Context mainActivity) {
-        this.context = mainActivity;
+    private File trustStoreFile; // Store the file reference
+
+    public DataBaseConnection(Context context) {
+        this.context = context;
+        initialize();
     }
 
-    public Future<User> getLogin(String username) {
-        return executorService.submit(() -> {
-            String name = null;
-            String passwordHash = null;
-            int uid = -1;
-            String sql = "SELECT username, password_hash, user_id FROM users WHERE username = ?";
+    private void initialize() {
+        executorService.execute(() -> {
+            try {
+                // 1. Load and keep truststore in memory
+                KeyStore keyStore = loadTrustStore();
 
-            try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
-                 PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-
-                preparedStatement.setString(1, username);
-                ResultSet resultSet = preparedStatement.executeQuery();
-
-                if (resultSet.next()) {
-                    name = resultSet.getString("username");
-                    passwordHash = resultSet.getString("password_hash");
-                    uid = resultSet.getInt("user_id");
+                // 2. Store the truststore file permanently in app's files dir
+                trustStoreFile = new File(context.getFilesDir(), "truststore.p12");
+                try (OutputStream out = new FileOutputStream(trustStoreFile)) {
+                    keyStore.store(out, "changeit".toCharArray());
                 }
 
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-            catch (Exception e) {
-                e.printStackTrace();
-            }
+                // 3. Build URL with permanent truststore path
+                this.URL = "jdbc:mysql://mysql-2ca78de3-mybookshelfdb.c.aivencloud.com:20545/mybookshelf" +
+                        "?verifyServerCertificate=true" +
+                        "&useSSL=true" +
+                        "&requireSSL=true" +
+                        "&trustCertificateKeyStoreUrl=file:" + trustStoreFile.getAbsolutePath() +
+                        "&trustCertificateKeyStorePassword=changeit" +
+                        "&trustCertificateKeyStoreType=PKCS12" +
+                        "&connectTimeout=5000" +
+                        "&socketTimeout=5000";
 
-            return (name != null) ? new User(name, passwordHash, uid) : null;
+                // 4. Test connection
+                Class.forName("com.mysql.jdbc.Driver");
+                try (Connection testConn = DriverManager.getConnection(URL, USER, PASSWORD)) {
+                    Log.d("DB", "Datenbankverbindung erfolgreich hergestellt!");
+                }
+            } catch (Exception e) {
+                Log.e("DB", "Initialization error", e);
+            }
         });
     }
 
+    private KeyStore loadTrustStore() throws Exception {
+        try (InputStream is = context.getAssets().open("truststore.p12")) {
+            KeyStore ks = KeyStore.getInstance("PKCS12");
+            ks.load(is, "changeit".toCharArray());
+            return ks;
+        }
+    }
+
+    public CompletableFuture<User> getLogin(String username) {
+        CompletableFuture<User> future = new CompletableFuture<>();
+        final int QUERY_TIMEOUT_SECONDS = 5;
+
+        executorService.execute(() -> {
+            try (Connection connection = DriverManager.getConnection(
+                    URL + "&connectTimeout=" + (QUERY_TIMEOUT_SECONDS * 1000) +
+                            "&socketTimeout=" + (QUERY_TIMEOUT_SECONDS * 1000),
+                    USER, PASSWORD);
+                 PreparedStatement stmt = connection.prepareStatement(
+                         "SELECT username, password_hash, user_id FROM users WHERE username = ?")) {
+
+                // Set timeout at both JDBC and network level
+                stmt.setQueryTimeout(QUERY_TIMEOUT_SECONDS);
+
+                stmt.setString(1, username);
+
+                try (ResultSet rs = stmt.executeQuery()) {
+                    if (rs.next()) {
+                        future.complete(new User(
+                                rs.getString("username"),
+                                rs.getString("password_hash"),
+                                rs.getInt("user_id"),
+                                this
+                        ));
+                    } else {
+                        future.complete(null);
+                    }
+                }
+            } catch (SQLTimeoutException e) {
+                future.completeExceptionally(new Exception("Query timed out after " + QUERY_TIMEOUT_SECONDS + " seconds"));
+            } catch (Exception e) {
+                future.completeExceptionally(new Exception("Database error: " + e.getMessage()));
+            }
+        });
+
+        return future;
+    }
+
+    private Connection createConnectionWithTimeout() throws SQLException {
+        // MySQL-specific timeout parameters in URL
+        return DriverManager.getConnection(URL, USER, PASSWORD);
+    }
 
 
     public void addUser(String username, String email, String password) {
@@ -108,7 +181,6 @@ public class DataBaseConnection {
     }
 
 
-
     public List<Book> getBooksFromUID(int uid) throws ExecutionException, InterruptedException {
         return executorService.submit(() -> {
             List<Book> books = new ArrayList<>();
@@ -138,7 +210,7 @@ public class DataBaseConnection {
                             resultSet.getInt("pages"),          // pages
                             resultSet.getString("author"),      // author
                             resultSet.getString("cover_url"),   // image_url
-                            resultSet.getString("description") , // description
+                            resultSet.getString("description"), // description
                             resultSet.getInt("book_id")
                     );
                     System.out.println("Retrieved book ID: " + book.getId());
@@ -184,35 +256,35 @@ public class DataBaseConnection {
     public void addBookToUser(int userId, String bookName, String author, int pages, String releaseDate, String imageUrl, String description, int readingTime) {
         String getBookIdSQL = "SELECT book_id FROM Books WHERE title = ?";
         String insertUserBookSQL = "INSERT INTO UserBooks (user_id, book_id, reading_time) VALUES (?, ?, ?)";
-        executorService.execute(() ->{
+        executorService.execute(() -> {
 
-        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
-             PreparedStatement getBookIdStmt = connection.prepareStatement(getBookIdSQL);
-             PreparedStatement insertUserBookStmt = connection.prepareStatement(insertUserBookSQL)) {
+            try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                 PreparedStatement getBookIdStmt = connection.prepareStatement(getBookIdSQL);
+                 PreparedStatement insertUserBookStmt = connection.prepareStatement(insertUserBookSQL)) {
 
-            // Get book ID by book name
-            getBookIdStmt.setString(1, bookName);
-            ResultSet resultSet = getBookIdStmt.executeQuery();
+                // Get book ID by book name
+                getBookIdStmt.setString(1, bookName);
+                ResultSet resultSet = getBookIdStmt.executeQuery();
 
-            int bookId;
-            if (resultSet.next()) {
-                bookId = resultSet.getInt("book_id"); // Book exists, get its ID
-            } else {
-                // If book is not found, add it to the database and get its ID
-                bookId = addNewBook(bookName, author, pages, releaseDate, imageUrl, description);
+                int bookId;
+                if (resultSet.next()) {
+                    bookId = resultSet.getInt("book_id"); // Book exists, get its ID
+                } else {
+                    // If book is not found, add it to the database and get its ID
+                    bookId = addNewBook(bookName, author, pages, releaseDate, imageUrl, description);
+                }
+
+                // Insert into UserBooks
+                insertUserBookStmt.setInt(1, userId);
+                insertUserBookStmt.setInt(2, bookId);
+                insertUserBookStmt.setInt(3, readingTime);
+                insertUserBookStmt.executeUpdate();
+
+                System.out.println("Book successfully added to user!");
+
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-
-            // Insert into UserBooks
-            insertUserBookStmt.setInt(1, userId);
-            insertUserBookStmt.setInt(2, bookId);
-            insertUserBookStmt.setInt(3, readingTime);
-            insertUserBookStmt.executeUpdate();
-
-            System.out.println("Book successfully added to user!");
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
         });
     }
 
@@ -246,6 +318,30 @@ public class DataBaseConnection {
             return -1; // Return an invalid ID if insertion fails
         }
     }
+
+    public Future<Float> getRatingFromBook(Book book) {
+        String sql = "SELECT AVG(rating) FROM ratings WHERE book_id = ?;";
+        return executorService.submit(() -> {
+            try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                 PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+
+                // Set the parameter for the book_id
+                preparedStatement.setInt(1, book.getId());
+
+                try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                    if (resultSet.next()) {
+                        // Return the average rating if available
+                        return resultSet.getFloat(1);
+                    }
+                    // Return 0.0f if no result found (book does not exist or has no rating)
+                    return 0.0f;
+                }
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        });
+    }
+
 
     public class BookService {
 
@@ -395,7 +491,6 @@ public class DataBaseConnection {
     }
 
 
-
     public Future<String> getNotesFromUser(int UID, int bookID) {
         String sql = "SELECT note FROM NOTES WHERE user_id = ? AND book_id = ?";
 
@@ -418,10 +513,4 @@ public class DataBaseConnection {
             }
         });
     }
-
-
-
-
-
-
 }

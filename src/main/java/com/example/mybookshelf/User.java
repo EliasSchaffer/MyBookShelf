@@ -17,13 +17,15 @@ public class User {
     String email;
     int UID;
     List<Book> bookList= new ArrayList<>();
-    DataBaseConnection db = new DataBaseConnection(null);
+    MainActivity mainActivity;
+    DataBaseConnection db;
 
 
-    public User(String user, String hash_password, int UID) throws ExecutionException, InterruptedException {
+    public User(String user, String hash_password, int UID, DataBaseConnection db) throws ExecutionException, InterruptedException {
         this.user = user;
         this.hash_password = hash_password;
         this.UID = UID;
+        this.db = db;
 
 
         bookList = db.getBooksFromUID(UID);

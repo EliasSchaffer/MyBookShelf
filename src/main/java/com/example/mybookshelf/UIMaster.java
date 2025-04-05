@@ -15,6 +15,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -36,6 +37,8 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
 import com.github.mikephil.charting.formatter.ValueFormatter;
+
+import org.w3c.dom.Text;
 
 public class UIMaster {
 
@@ -478,34 +481,55 @@ public class UIMaster {
 
 
     void navigateToDetails(Book book) {
-        mainActivity.setContentView(R.layout.detail_activity);
+        mainActivity.setContentView(R.layout.main_detail);
 
-        TextView txtDetails = mainActivity.findViewById(R.id.txtDetails);
-        StringBuilder str = new StringBuilder();
-        str.append(book.getName()).append("\n").append(book.getAuthor()).append(book.getRelease_date());
-        txtDetails.setText(str.toString());
-
+        ImageButton nav_homeBtn = mainActivity.findViewById(R.id.nav_home);
+        ImageButton nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
+        TextView txtAutor = mainActivity.findViewById(R.id.txtAuthor);
+        TextView txtTitle = mainActivity.findViewById(R.id.txtTitle);
         TextView txtDescription = mainActivity.findViewById(R.id.txtDescription);
-        txtDescription.setText(book.getDescription());
-
+        TextView txtPages = mainActivity.findViewById(R.id.txtPageCount);
+        RatingBar rbRating = mainActivity.findViewById(R.id.rbRating);
         ImageView imgCover = mainActivity.findViewById(R.id.imgCover);
-        Glide.with(mainActivity).load(book.getImageUrl()).into(imgCover);
 
-        Button submitButton = mainActivity.findViewById(R.id.submitButton);
-        submitButton.setOnClickListener(v -> {
-            EditText inpInputText = mainActivity.findViewById(R.id.inpInputText);
-            String prompt = inpInputText.getText().toString();
-            inpInputText.setText(" ");
-            ai.fetchResponse(prompt + " The books name is " + book.getName(), mainActivity);
-        });
+        txtAutor.setText(book.getAuthor());
+        txtTitle.setText(book.getName());
+        txtDescription.setText(book.getDescription());
+        txtPages.setText(String.valueOf(book.getPages()));
+        float rating;
+        try {
+            rating = db.getRatingFromBook(book).get();
+        } catch (ExecutionException e) {
+            throw new RuntimeException(e);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+        rbRating.setRating(rating);
 
-        Button backButton2 = mainActivity.findViewById(R.id.btnGoBack2);
-        backButton2.setOnClickListener(v -> {
+
+
+        nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
+
+        nav_homeBtn.setOnClickListener(v -> {
             try {
                 navigateToStartingPage();
-            } catch (ExecutionException | InterruptedException e) {
+            } catch (ExecutionException e) {
+                throw new RuntimeException(e);
+            } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
         });
+
+
+        Glide.with(mainActivity).load(book.getImageUrl()).into(imgCover);
+
+//        Button submitButton = mainActivity.findViewById(R.id.submitButton);
+//        submitButton.setOnClickListener(v -> {
+//            EditText inpInputText = mainActivity.findViewById(R.id.inpInputText);
+//            String prompt = inpInputText.getText().toString();
+//            inpInputText.setText(" ");
+//            ai.fetchResponse(prompt + " The books name is " + book.getName(), mainActivity);
+//        });
+
     }
 }
