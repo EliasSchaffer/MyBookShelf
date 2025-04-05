@@ -8,21 +8,21 @@
 
     <!-- App Title -->
     <TextView
-        android:id="@+id/txtLogin"
+        android:id="@+id/txtRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerInParent="true"
-        android:text="Login"
+        android:text="Register"
         android:textColor="@android:color/black"
         android:textSize="36sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:layout_above="@id/cardView"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="200pt"
-        android:layout_below="@id/txtLogin"
         android:layout_alignParentBottom="true"
         android:layout_margin="16dp"
         app:cardCornerRadius="16dp"
@@ -36,15 +36,38 @@
             android:background="@android:color/white">
 
             <TextView
+                android:id="@+id/txtEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email: "
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:layout_marginTop="26dp"
+                android:layout_marginLeft="2dp"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/txfEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="18sp"
+                android:background="@drawable/rounded_edittext"
+                android:inputType="textPersonName"
+                android:layout_below="@id/txtEmail"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
                 android:id="@+id/txtUsername"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Username: "
                 android:textSize="23sp"
                 android:textStyle="bold"
-                android:layout_marginTop="36dp"
+                android:layout_marginTop="6dp"
                 android:layout_marginLeft="2dp"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/black"
+                android:layout_below="@id/txfEmail"/>
 
             <EditText
                 android:id="@+id/txfUser"
@@ -54,25 +77,47 @@
                 android:textSize="18sp"
                 android:background="@drawable/rounded_edittext"
                 android:inputType="textPersonName"
-                android:layout_below="@id/txtUsername"/>
+                android:layout_below="@id/txtUsername"
+                android:layout_marginBottom="6dp" />
 
             <TextView
-                android:id="@+id/txtPasswd"
+                android:id="@+id/txtNewPasswd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Password: "
-                android:textSize="23sp"
                 android:textStyle="bold"
-                android:layout_marginTop="16dp"
+                android:textSize="23sp"
                 android:textColor="@android:color/black"
                 android:layout_below="@id/txfUser"
                 android:layout_margin="2dp"/>
 
             <EditText
-                android:id="@+id/txfPassword"
+                android:id="@+id/txfNewPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/txtPasswd"
+                android:layout_below="@id/txtNewPasswd"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textSize="18sp"
+                android:background="@drawable/rounded_edittext"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:id="@+id/txtRepeatPasswd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Repeat Password: "
+                android:textSize="23sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:layout_below="@id/txfNewPassword"
+                android:layout_margin="2dp"/>
+
+            <EditText
+                android:id="@+id/txfRepeatPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtRepeatPasswd"
                 android:inputType="textPassword"
                 android:padding="10dp"
                 android:textSize="18sp"
@@ -83,20 +128,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
                 android:background="@drawable/rounded_button"
-                android:text="New Account"
+                android:text="OK"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
 
             <Button
-                android:id="@+id/btnLogin"
+                android:id="@+id/btnBackLogin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
                 android:background="@drawable/rounded_button"
-                android:text="OK"
+                android:text="Back to Login"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
 
