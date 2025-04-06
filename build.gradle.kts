@@ -48,8 +48,6 @@ dependencies {
     implementation("mysql:mysql-connector-java:5.1.49")
     implementation("at.favre.lib:bcrypt:0.9.0")
     implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
-    //implementation ("org.apache.commons:commons-dbcp2:2.9.0")
-    //implementation ("commons-pool:commons-pool2:2.11.1")
     implementation(libs.appcompat)
     implementation(libs.material)
 }

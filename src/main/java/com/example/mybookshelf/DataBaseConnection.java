@@ -31,6 +31,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
+import java.util.function.Consumer;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
 
@@ -92,49 +93,44 @@ public class DataBaseConnection {
         }
     }
 
-    public CompletableFuture<User> getLogin(String username) {
-        CompletableFuture<User> future = new CompletableFuture<>();
-        final int QUERY_TIMEOUT_SECONDS = 5;
+    public Future<Integer> checkLogin(String username, char[] password) {
+        return executorService.submit(() -> {
+            String loginQuery = "SELECT username, password_hash, user_id FROM users WHERE username = ?";
 
-        executorService.execute(() -> {
-            try (Connection connection = DriverManager.getConnection(
-                    URL + "&connectTimeout=" + (QUERY_TIMEOUT_SECONDS * 1000) +
-                            "&socketTimeout=" + (QUERY_TIMEOUT_SECONDS * 1000),
-                    USER, PASSWORD);
-                 PreparedStatement stmt = connection.prepareStatement(
-                         "SELECT username, password_hash, user_id FROM users WHERE username = ?")) {
+            try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                 PreparedStatement stmt = connection.prepareStatement(loginQuery)) {
 
-                // Set timeout at both JDBC and network level
-                stmt.setQueryTimeout(QUERY_TIMEOUT_SECONDS);
-
+                stmt.setQueryTimeout(5); // 5 seconds timeout
                 stmt.setString(1, username);
 
                 try (ResultSet rs = stmt.executeQuery()) {
                     if (rs.next()) {
-                        future.complete(new User(
-                                rs.getString("username"),
-                                rs.getString("password_hash"),
-                                rs.getInt("user_id"),
-                                this
-                        ));
-                    } else {
-                        future.complete(null);
+                        // Extract user data from the result set
+                        String passwordHash = rs.getString("password_hash");
+                        int userId = rs.getInt("user_id");
+
+                        // Verify the password
+                        BCrypt.Result result = BCrypt.verifyer().verify(password, passwordHash.toCharArray());
+                        if (result.verified) {
+                            // Create and return the User object with all details if login is successful
+                            connection.close();
+                            return userId;
+                        }
                     }
                 }
             } catch (SQLTimeoutException e) {
-                future.completeExceptionally(new Exception("Query timed out after " + QUERY_TIMEOUT_SECONDS + " seconds"));
+                e.printStackTrace();
             } catch (Exception e) {
-                future.completeExceptionally(new Exception("Database error: " + e.getMessage()));
+                e.printStackTrace();
             }
+
+            // Return null if login failed
+            return -1;
         });
-
-        return future;
     }
 
-    private Connection createConnectionWithTimeout() throws SQLException {
-        // MySQL-specific timeout parameters in URL
-        return DriverManager.getConnection(URL, USER, PASSWORD);
-    }
+
+
 
 
     public void addUser(String username, String email, String password) {
@@ -181,7 +177,7 @@ public class DataBaseConnection {
     }
 
 
-    public List<Book> getBooksFromUID(int uid) throws ExecutionException, InterruptedException {
+    public Future<List<Book>> getBooksFromUID(int uid) {
         return executorService.submit(() -> {
             List<Book> books = new ArrayList<>();
 
@@ -193,36 +189,57 @@ public class DataBaseConnection {
                     "    b.release_date, " +
                     "    b.cover_url, " +
                     "    b.description " +
-                    "FROM UserBooks ub " +
-                    "JOIN Books b ON ub.book_id = b.book_id " +
+                    "FROM userbooks ub " +
+                    "LEFT JOIN books b ON ub.book_id = b.book_id " +  // Using LEFT JOIN to avoid missing books
                     "WHERE ub.user_id = ?;";
 
             try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
                  PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
 
+                preparedStatement.setQueryTimeout(5);  // Set a timeout to prevent hanging
                 preparedStatement.setInt(1, uid);
-                ResultSet resultSet = preparedStatement.executeQuery();
 
-                while (resultSet.next()) {
-                    Book book = new Book(
-                            resultSet.getString("title"),       // name
-                            resultSet.getString("release_date"), // release_date
-                            resultSet.getInt("pages"),          // pages
-                            resultSet.getString("author"),      // author
-                            resultSet.getString("cover_url"),   // image_url
-                            resultSet.getString("description"), // description
-                            resultSet.getInt("book_id")
-                    );
-                    System.out.println("Retrieved book ID: " + book.getId());
-                    books.add(book);
+                // Debug: log the query and the parameter being used
+                System.out.println("Executing SQL: " + preparedStatement);
+                System.out.println("Using UID: " + uid);
+
+                try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                    if (!resultSet.next()) {
+                        System.out.println("No books found for user ID: " + uid);
+                    }
+
+                    // Process the results
+                    do {
+                        Book book = new Book(
+                                resultSet.getString("title"),       // name
+                                resultSet.getString("release_date"), // release_date
+                                resultSet.getInt("pages"),          // pages
+                                resultSet.getString("author"),      // author
+                                resultSet.getString("cover_url"),   // image_url
+                                resultSet.getString("description"), // description
+                                resultSet.getInt("book_id")         // book_id
+                        );
+                        books.add(book);
+                    } while (resultSet.next());  // Ensure we process all results
                 }
+
+            } catch (SQLTimeoutException e) {
+                System.out.println("SQL query timed out.");
+                e.printStackTrace();
+            } catch (SQLException e) {
+                System.out.println("SQLException: " + e.getMessage());
+                e.printStackTrace();
             } catch (Exception e) {
+                System.out.println("Exception: " + e.getMessage());
                 e.printStackTrace();
             }
 
+            // Return the list of books after processing
             return books;
-        }).get();  // Waits for the async result and returns the list
+        });
     }
+
+
 
     public Future<Book> getBookByName(String bookName) {
         String sql = "SELECT book_id, title, author, pages, release_date, cover_url, description FROM Books WHERE title = ?;";
@@ -413,7 +430,7 @@ public class DataBaseConnection {
         executorService.execute(() -> {
             // SQL statement to remove the book from the userbooks table
             String sql = "DELETE FROM userbooks WHERE user_id = ? AND book_id = ?";
-            String delete = "DELETE FROM NOTES WHERE user_id = ? AND book_id = ?";
+            String delete = "DELETE FROM notes WHERE user_id = ? AND book_id = ?";
 
 
             try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
@@ -445,8 +462,8 @@ public class DataBaseConnection {
     }
 
     public void notesChanged(int UID, int bookID, String note) {
-        String delete = "DELETE FROM NOTES WHERE user_id = ? AND book_id = ?";
-        String insert = "INSERT INTO Notes (user_id, book_id, note) VALUES (?, ?, ?)";
+        String delete = "DELETE FROM notes WHERE user_id = ? AND book_id = ?";
+        String insert = "INSERT INTO notes (user_id, book_id, note) VALUES (?, ?, ?)";
         String checkBookExistence = "SELECT COUNT(*) FROM books WHERE book_id = ?";
 
         executorService.execute(() -> {
@@ -492,7 +509,7 @@ public class DataBaseConnection {
 
 
     public Future<String> getNotesFromUser(int UID, int bookID) {
-        String sql = "SELECT note FROM NOTES WHERE user_id = ? AND book_id = ?";
+        String sql = "SELECT note FROM notes WHERE user_id = ? AND book_id = ?";
 
         return executorService.submit(() -> {
             try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);

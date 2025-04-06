@@ -1,89 +1,87 @@
 package com.example.mybookshelf;
 
-import android.content.Context;
 import android.app.AlertDialog;
-import android.util.Log;
+import android.content.Context;
+import android.os.Handler;
+import android.os.Looper;
 import android.widget.Toast;
 
-import at.favre.lib.crypto.bcrypt.BCrypt;
-
-import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.function.BiConsumer;
+
+import at.favre.lib.crypto.bcrypt.BCrypt;
 
 public class Authenticator {
     private final DataBaseConnection db;
     private final Context context;
+    private final ExecutorService executorService = Executors.newSingleThreadExecutor();
+    private final Handler mainHandler = new Handler(Looper.getMainLooper()); // To post to UI thread
 
     public Authenticator(Context context) {
         this.context = context;
-        this.db = new DataBaseConnection(context);
+        db = new DataBaseConnection(context);
     }
 
-    public void checkLogin(User attempt, BiConsumer<Boolean, User> callback) {
-        db.getLogin(attempt.getUser()).thenAccept(user -> {
+    // Async login method with callback
+    public void checkLogin(User attempt, BiConsumer<Boolean, Integer> callback) {
+        executorService.execute(() -> {
             try {
-                Log.d("AUTH", "Login attempt for username: " + attempt.getUser());
-                Log.d("AUTH", "Attempt password: " + attempt.getPassword());
-                Log.d("AUTH", "User object from DB: " + user);
+                // Get the User object and check login
+                int id = db.checkLogin(attempt.getUser(), attempt.getPassword().toCharArray()).get(); // Blocking wait
 
-                if (user != null && user.getPassword() != null && attempt.getPassword() != null) {
-                    Log.d("AUTH", "Stored hash: " + user.getPassword());
-
-                    BCrypt.Result bcryptResult = BCrypt.verifyer().verify(
-                            attempt.getPassword().toCharArray(),
-                            user.getPassword()
-                    );
-
-                    if (bcryptResult.verified) {
+                if (id != 0) {
+                    // Login successful
+                    postToMain(() -> {
                         showDebugPopup("Login Successful!");
-                        callback.accept(true, user);
-                    } else {
-                        showDebugPopup("Incorrect Password!");
-                        callback.accept(false, null);
-                    }
-                } else if (user == null) {
-                    showDebugPopup("User Not Found!");
-                    callback.accept(false, null);
+                        callback.accept(true, id); // Pass the entire User object
+                    });
                 } else {
-                    showDebugPopup("Invalid login data (null password)!");
-                    callback.accept(false, null);
+                    // Login failed
+                    postToMain(() -> {
+                        showDebugPopup("Incorrect Username or Password!");
+                        callback.accept(false, null);
+                    });
                 }
             } catch (Exception e) {
-                showDebugPopup("Error: " + e.getMessage());
-                callback.accept(false, null);
+                e.printStackTrace();
+                postToMain(() -> {
+                    showDebugPopup("Login failed: " + e.getMessage());
+                    callback.accept(false, null);
+                });
             }
-        }).exceptionally(e -> {
-            showDebugPopup("Error: " + e.getMessage());
-            callback.accept(false, null);
-            return null;
         });
     }
 
-    public void register(String username, String password, String email) {
+
+
+
+
+
+
+
+    // Use Handler to post to main thread
+    private void postToMain(Runnable task) {
+        mainHandler.post(task);
+    }
+
+    // Show debug popup (AlertDialog)
+    private void showDebugPopup(String message) {
         new AlertDialog.Builder(context)
                 .setTitle("Debug Info")
-                .setMessage(username + password + email)
+                .setMessage(message)
                 .setPositiveButton("OK", (dialog, which) -> dialog.dismiss())
                 .show();
-
-        CompletableFuture.runAsync(() -> {
-            db.addUser(username, password, email);
-        });
     }
 
-    private void showDebugPopup(String message) {
-        new android.os.Handler(context.getMainLooper()).post(() -> {
-            new AlertDialog.Builder(context)
-                    .setTitle("Debug Info")
-                    .setMessage(message)
-                    .setPositiveButton("OK", (dialog, which) -> dialog.dismiss())
-                    .show();
-        });
-    }
-
+    // Optional: Toast for fast messages
     private void showDebugToast(String message) {
-        new android.os.Handler(context.getMainLooper()).post(() -> {
-            Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
-        });
+        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+    }
+
+    // Simple registration method
+    public void register(String username, String password, String email) {
+        showDebugPopup("Registering: " + username + " / " + email);
+        db.addUser(username, password, email);
     }
 }
