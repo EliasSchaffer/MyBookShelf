@@ -169,13 +169,18 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
             return;
         }
 
-        User user = new User(username, password);
+        User userAttempt = new User(username, password);
 
-        auth.checkLogin(user, (isSuccess, resultUser) -> {
-            if (isSuccess) {
-                Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show();
-                logedindUser = resultUser;
-                uiMaster.setUSer(logedindUser);
+        auth.checkLogin(userAttempt, (success, id) -> {
+            if (success) {
+                try {
+                    logedindUser = new User(username, "", id, db);
+                    uiMaster.setUSer(logedindUser);
+                } catch (ExecutionException e) {
+                    throw new RuntimeException(e);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
                 try {
                     uiMaster.navigateToStartingPage();
                 } catch (ExecutionException e) {
@@ -183,12 +188,11 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
-                //setContentView(R.layout.test_chart);
-                //uiMaster.setupLineChart();
             } else {
                 Toast.makeText(this, "User or Password incorrect", Toast.LENGTH_SHORT).show();
             }
         });
+
 
     }
 

@@ -28,11 +28,14 @@ public class User {
         this.db = db;
 
 
-        bookList = db.getBooksFromUID(UID);
+        bookList = db.getBooksFromUID(UID).get();
+        if (bookList.isEmpty()) bookList.add(new Book("test", "no",12, "no","no", "no", 1));
 
         for (Book book: bookList){
             book.setInDatabase(true);
         }
+
+
     }
 
     public User(String user, String hash_password) throws ExecutionException, InterruptedException {
@@ -40,20 +43,7 @@ public class User {
         this.hash_password = hash_password;
     }
 
-    public User (String user, String hash_password, String email, int UID){
-        this.user = user;
-        this.hash_password = hash_password;
-        this.email = email;
-        this.UID = UID;
 
-        try {
-            bookList = db.getBooksFromUID(UID);
-        } catch (ExecutionException e) {
-            throw new RuntimeException(e);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-    }
 
     public void setUID(int UID) {
         this.UID = UID;
