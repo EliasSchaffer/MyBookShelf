@@ -310,11 +310,11 @@ public class UIMaster {
     }
 
     public void showLogin() throws ExecutionException, InterruptedException {
-        mainActivity.setContentView(R.layout.login_activity);
+        mainActivity.setContentView(R.layout.main_login);
         usernameEditText = mainActivity.findViewById(R.id.txfUser);
         passwordEditText = mainActivity.findViewById(R.id.txfPassword);
-        loginButton = mainActivity.findViewById(R.id.btnRegister);
-        switchToRegisterButton = mainActivity.findViewById(R.id.btnSwitchToLogin);
+        loginButton = mainActivity.findViewById(R.id.btnLogin);
+        switchToRegisterButton = mainActivity.findViewById(R.id.btnRegister);
 
 
         loginButton.setOnClickListener(v -> {
@@ -334,12 +334,12 @@ public class UIMaster {
     }
 
     public void showRegister(){
-        mainActivity.setContentView(R.layout.register_activity);
+        mainActivity.setContentView(R.layout.main_register);
         usernameEditText = mainActivity.findViewById(R.id.txfUser);
         passwordEditText = mainActivity.findViewById(R.id.txfPassword);
         emailEditText = mainActivity.findViewById(R.id.txfEmail);
         registerButton = mainActivity.findViewById(R.id.btnRegister);
-        switchToLoginButton = mainActivity.findViewById(R.id.btnSwitchToLogin);
+        switchToLoginButton = mainActivity.findViewById(R.id.btnBackLogin);
 
 
         registerButton.setOnClickListener(v -> {
