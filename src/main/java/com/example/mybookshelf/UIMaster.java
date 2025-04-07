@@ -34,6 +34,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 import com.github.mikephil.charting.formatter.ValueFormatter;
@@ -53,6 +55,7 @@ public class UIMaster {
 
     private int timeSpentReading = 0;
     private ImageButton nav_searchBtn;
+    private ImageButton nav_StatsBtn;
     private TextView timeSpentReadingTextView;
     private BooksAPI booksAPI;
     private AiAPI ai;
@@ -364,8 +367,18 @@ public class UIMaster {
     }
 
     public void setupLineChart() {
+        mainActivity.setContentView(R.layout.main_chart);
         DataBaseConnection db = new DataBaseConnection(mainActivity);
         barChart = mainActivity.findViewById(R.id.barChart);
+        ImageButton nav_homeBtn = mainActivity.findViewById(R.id.nav_home);
+        ImageButton nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
+        ImageButton nav_StatsBtn = mainActivity.findViewById(R.id.nav_stats);
+
+        nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
+        nav_StatsBtn.setOnClickListener(v -> setupLineChart());
+        nav_homeBtn.setOnClickListener(v -> {
+            navigateToStartingPage();
+        });
 
         // Asynchronously fetch reading time data
         Future<ArrayList<BarEntry>> futureEntries = db.getReadingTimeByMonthAsync(mainActivity.getUser().getUid());
@@ -440,44 +453,65 @@ public class UIMaster {
         }
     }
 
-    public void navigateToStartingPage() throws ExecutionException, InterruptedException {
-        mainActivity.setContentView(R.layout.main_home);
-        LinearLayout bookContainer = mainActivity.findViewById(R.id.bookContainer);
-        List<Book> userBooks = logedindUser.getBookList();
-        nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
-        nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
-        TextView user = mainActivity.findViewById(R.id.current_user);
-        user.setText("Hallo, " + logedindUser.getUser() + " \uD83D\uDC4B");
+    public void navigateToStartingPage() {
+        ExecutorService executor = Executors.newSingleThreadExecutor();
 
-        if (userBooks != null && !userBooks.isEmpty()) {
-            for (Book book : userBooks) {
-                if (book != null && !TextUtils.isEmpty(book.getName())) {
-                    if (book.isInDatabase()) { // Check if the book exists in the database
-                        createBookBox(bookContainer, book, false); // Create the box instantly
-                        timeSpentReadingTextView = mainActivity.findViewById(R.id.etfTimeSpentReading);
-                        updateReadingTime(book.getPages(), timeSpentReadingTextView);
-                    } else {
-                        // Fetch the book from API if not in database
-                        booksAPI.getOneBook(book.getName(), new BooksAPI.BookCallback() {
-                            @Override
-                            public void onBookFetched(List<Book> books) {
-                                if (books != null && !books.isEmpty()) {
-                                    mainActivity.saveBook(books.get(0));
-                                    createBookBox(bookContainer, books.get(0), false);
-                                    timeSpentReadingTextView = mainActivity.findViewById(R.id.etfTimeSpentReading);
-                                    updateReadingTime(books.get(0).getPages(), timeSpentReadingTextView);
-                                } else {
-                                    createBookBox(bookContainer, new Book("An Error occurred, please try again", "0", 0, "NA"), false);
+        executor.execute(() -> {
+            // Do any data processing in background
+            List<Book> userBooks = logedindUser.getBookList();
+
+            mainActivity.runOnUiThread(() -> {
+                // Now do UI setup
+                mainActivity.setContentView(R.layout.main_home);
+                LinearLayout bookContainer = mainActivity.findViewById(R.id.bookContainer);
+                nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
+                nav_StatsBtn = mainActivity.findViewById(R.id.nav_stats);
+                nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
+                nav_StatsBtn.setOnClickListener(v -> setupLineChart());
+
+                TextView user = mainActivity.findViewById(R.id.current_user);
+                user.setText("Hallo, " + logedindUser.getUser() + " \uD83D\uDC4B");
+            });
+
+            if (userBooks != null && !userBooks.isEmpty()) {
+                for (Book book : userBooks) {
+                    if (book != null && !TextUtils.isEmpty(book.getName())) {
+                        if (book.isInDatabase()) {
+                            // UI update must be on main thread
+                            mainActivity.runOnUiThread(() -> {
+                                LinearLayout bookContainer = mainActivity.findViewById(R.id.bookContainer);
+                                createBookBox(bookContainer, book, false);
+                                timeSpentReadingTextView = mainActivity.findViewById(R.id.etfTimeSpentReading);
+                                updateReadingTime(book.getPages(), timeSpentReadingTextView);
+                            });
+                        } else {
+                            // Book will be fetched asynchronously by the API callback
+                            booksAPI.getOneBook(book.getName(), new BooksAPI.BookCallback() {
+                                @Override
+                                public void onBookFetched(List<Book> books) {
+                                    mainActivity.runOnUiThread(() -> {
+                                        LinearLayout bookContainer = mainActivity.findViewById(R.id.bookContainer);
+                                        if (books != null && !books.isEmpty()) {
+                                            Book fetched = books.get(0);
+                                            mainActivity.saveBook(fetched);
+                                            createBookBox(bookContainer, fetched, false);
+                                            timeSpentReadingTextView = mainActivity.findViewById(R.id.etfTimeSpentReading);
+                                            updateReadingTime(fetched.getPages(), timeSpentReadingTextView);
+                                        } else {
+                                            createBookBox(bookContainer, new Book("An Error occurred, please try again", "0", 0, "NA"), false);
+                                        }
+                                    });
                                 }
-                            }
-                        });
+                            });
+                        }
                     }
                 }
+            } else {
+                Log.w("MainActivity", "User's book list is null or empty.");
             }
-        } else {
-            Log.w("MainActivity", "User's book list is null or empty.");
-        }
+        });
     }
+
 
 
     void navigateToDetails(Book book) {
@@ -511,13 +545,7 @@ public class UIMaster {
         nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
 
         nav_homeBtn.setOnClickListener(v -> {
-            try {
-                navigateToStartingPage();
-            } catch (ExecutionException e) {
-                throw new RuntimeException(e);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
+            navigateToStartingPage();
         });
 
 

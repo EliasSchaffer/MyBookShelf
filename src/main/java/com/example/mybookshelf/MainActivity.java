@@ -11,9 +11,13 @@ import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -106,19 +110,19 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
 
 
     public void handleSearch() {
-        setContentView(R.layout.search_activity);
+        setContentView(R.layout.main_search);
+        ImageButton nav_homeBtn = findViewById(R.id.nav_home);
+        ImageButton nav_searchBtn = findViewById(R.id.nav_search);
+        ImageButton nav_StatsBtn = findViewById(R.id.nav_stats);
         LinearLayout bookContainer = findViewById(R.id.bookContainer);
         searchView = findViewById(R.id.searchView);
-        goToStarting = findViewById(R.id.btnGoBack);
-        goToStarting.setOnClickListener(v -> {
-            try {
-                uiMaster.navigateToStartingPage();
-            } catch (ExecutionException e) {
-                throw new RuntimeException(e);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
+
+        nav_searchBtn.setOnClickListener(v -> handleSearch());
+        nav_StatsBtn.setOnClickListener(v -> uiMaster.setupLineChart());
+        nav_homeBtn.setOnClickListener(v -> {
+            uiMaster.navigateToStartingPage();
         });
+
 
         // Set up SearchView listener
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -145,6 +149,7 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
 
 
 
+
     public void handleRegister(EditText usernameEditText, EditText passwordEditText, EditText emailEditText) throws ExecutionException, InterruptedException {
         String username = usernameEditText.getText().toString().trim();
         String password = passwordEditText.getText().toString().trim();
@@ -163,6 +168,7 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
 
         String username = usernameEditText.getText().toString().trim();
         String password = passwordEditText.getText().toString().trim();
+        FrameLayout loadingOverlay = findViewById(R.id.loading_overlay);
 
         if (TextUtils.isEmpty(username) || TextUtils.isEmpty(password)) {
             Toast.makeText(this, "Please enter both username and password", Toast.LENGTH_SHORT).show();
@@ -170,24 +176,21 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
         }
 
         User userAttempt = new User(username, password);
-
+        loadingOverlay.setVisibility(View.VISIBLE);
         auth.checkLogin(userAttempt, (success, id) -> {
             if (success) {
                 try {
                     logedindUser = new User(username, "", id, db);
                     uiMaster.setUSer(logedindUser);
                 } catch (ExecutionException e) {
+                    loadingOverlay.setVisibility(View.GONE);
                     throw new RuntimeException(e);
                 } catch (InterruptedException e) {
+                    loadingOverlay.setVisibility(View.GONE);
                     throw new RuntimeException(e);
                 }
-                try {
-                    uiMaster.navigateToStartingPage();
-                } catch (ExecutionException e) {
-                    throw new RuntimeException(e);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
+                loadingOverlay.setVisibility(View.GONE);
+                uiMaster.navigateToStartingPage();
             } else {
                 Toast.makeText(this, "User or Password incorrect", Toast.LENGTH_SHORT).show();
             }

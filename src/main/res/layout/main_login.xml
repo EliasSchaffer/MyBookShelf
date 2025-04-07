@@ -6,6 +6,23 @@
     android:background="@drawable/background2"
     android:padding="16dp">
 
+    <FrameLayout
+        android:id="@+id/loading_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:visibility="gone"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true" />
+    </FrameLayout>
+
     <!-- App Title -->
     <TextView
         android:id="@+id/txtLogin"
@@ -105,3 +122,5 @@
     </androidx.cardview.widget.CardView>
 
 </RelativeLayout>
+
+
