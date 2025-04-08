@@ -17,7 +17,8 @@
         android:background="@android:color/white"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:queryHint="Nach Buch Suchen"
+        android:queryHint="Search books..."
+        android:iconifiedByDefault="false"
         android:textColor="@android:color/black"/>
 
     <!-- ScrollView to contain the book container -->
