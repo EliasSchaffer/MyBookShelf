@@ -42,6 +42,16 @@
             android:layout_marginRight="16dp"
             android:background="@null"
             android:src="@drawable/ic_search" />
+
+        <ImageButton
+            android:id="@+id/btnCloseSearch"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:background="@null"
+            android:src="@android:drawable/ic_delete"
+            android:visibility="gone"/>
     </RelativeLayout>
 
     <!-- Search Bar with Dropdowns (Initially Hidden) -->
