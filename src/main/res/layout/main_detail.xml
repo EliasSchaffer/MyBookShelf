@@ -48,6 +48,7 @@
                 android:id="@+id/imgCover"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:maxHeight="500dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
                 app:srcCompat="@drawable/cover"
@@ -120,6 +121,71 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <!-- Button Above the NavBar on the Right -->
+    <ImageButton
+        android:id="@+id/btnPopup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_chatbutton"
+        android:layout_above="@id/bottom_nav"
+        android:background="@drawable/ic_circlebutton"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="6dp"
+        />
+
+    <!-- Pop-up Window (Initially Hidden) -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/popupWindow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="180dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@color/popup"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp">
+
+            <!-- Chat messages RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/chatRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_above="@id/boxReturn"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- User input EditText -->
+            <EditText
+                android:id="@+id/boxReturn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:hint="Ask Anything ..."
+                android:textColorHint="@android:color/white"
+                android:background="@drawable/rounded_edittextchat"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:padding="12dp"
+                android:layout_margin="8dp"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 
     <!-- Nav-bar fixed at the bottom -->
     <androidx.cardview.widget.CardView

@@ -101,8 +101,8 @@
 
         <TextView
             android:id="@+id/boxReturn"
-            android:layout_width="367dp"
-            android:layout_height="145dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_centerInParent="true"
             android:text="Ask AI about the book"
             android:textColor="@android:color/white"

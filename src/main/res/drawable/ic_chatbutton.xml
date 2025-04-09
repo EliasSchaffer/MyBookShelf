@@ -1,0 +1,33 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="80dp"
+    android:height="80dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Main Circle Background -->
+    <path
+        android:fillColor="#4F46E5"
+        android:pathData="M100,10 A90,90 0 1,1 100,190 A90,90 0 1,1 100,10Z"/>
+
+    <!-- Chat Bubble -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M65,80 Q65,65 80,65 L120,65 Q135,65 135,80 L135,105 Q135,120 120,120 L105,120 L85,135 L85,120 L80,120 Q65,120 65,105 Z"/>
+
+    <!-- AI Node Connections -->
+    <path android:fillColor="#4F46E5" android:pathData="M85,92 A4,4 0 1,1 93,92 A4,4 0 1,1 85,92Z"/>
+    <path android:fillColor="#4F46E5" android:pathData="M100,92 A4,4 0 1,1 108,92 A4,4 0 1,1 100,92Z"/>
+    <path android:fillColor="#4F46E5" android:pathData="M115,92 A4,4 0 1,1 123,92 A4,4 0 1,1 115,92Z"/>
+
+    <!-- Connecting Lines -->
+    <path android:strokeColor="#4F46E5" android:strokeWidth="2"
+        android:pathData="M85,92 L100,92"/>
+    <path android:strokeColor="#4F46E5" android:strokeWidth="2"
+        android:pathData="M100,92 L115,92"/>
+    <path android:strokeColor="#4F46E5" android:strokeWidth="2"
+        android:pathData="M85,92 L100,100"/>
+    <path android:strokeColor="#4F46E5" android:strokeWidth="2"
+        android:pathData="M115,92 L100,100"/>
+    <path android:fillColor="#4F46E5" android:pathData="M100,100 A4,4 0 1,1 108,100 A4,4 0 1,1 100,100Z"/>
+
+</vector>
