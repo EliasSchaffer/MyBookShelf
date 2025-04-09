@@ -98,8 +98,16 @@ public class BooksAPI {
                         String imageUrl = bookJson.optJSONObject("imageLinks") != null ?
                                 bookJson.getJSONObject("imageLinks").optString("thumbnail", "") : "";
 
+                        JSONArray categoriesArray = bookJson.optJSONArray("categories");
+
+                        String genre = "Unknown";
+                        if (categoriesArray != null && categoriesArray.length() > 0) {
+                            // Get the first category (if there's at least one)
+                            genre = categoriesArray.optString(0, "Unknown");
+                        }
+
                         String description = bookJson.optString("description", "No Description Available");
-                        books.add(new Book(title, year, pageCount, authors, imageUrl, description));
+                        books.add(new Book(title, year, pageCount, authors, imageUrl, description, genre));
                     }
                 }
                 reader.close();

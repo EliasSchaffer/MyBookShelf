@@ -35,7 +35,7 @@ public class Search extends AppCompatActivity {
                                 uiMaster.createBookBox(bookContainer, book, true);
                             }
                         } else {
-                            uiMaster.createBookBox(bookContainer, new Book("An Error occurred please try again", "0", 0, "NA"), false);
+                            uiMaster.createBookBox(bookContainer, new Book("An Error occurred please try again", "0", 0, "NA", "NA", "NA", "NA"), false);
                         }
                     });
                 }

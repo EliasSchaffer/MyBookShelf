@@ -2,6 +2,7 @@ package com.example.mybookshelf;
 
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
+import android.media.Image;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -17,6 +18,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.RelativeLayout;
+import android.widget.SearchView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 
@@ -466,8 +469,10 @@ public class UIMaster {
                 LinearLayout bookContainer = mainActivity.findViewById(R.id.bookContainer);
                 nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
                 nav_StatsBtn = mainActivity.findViewById(R.id.nav_stats);
+                ImageButton searchBtn = mainActivity.findViewById(R.id.btnSearchInList);
                 nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
                 nav_StatsBtn.setOnClickListener(v -> setupLineChart());
+                searchBtn.setOnClickListener(v -> handleUserSearch());
 
                 TextView user = mainActivity.findViewById(R.id.current_user);
                 user.setText("Hallo, " + logedindUser.getUser() + " \uD83D\uDC4B");
@@ -523,6 +528,7 @@ public class UIMaster {
         TextView txtTitle = mainActivity.findViewById(R.id.txtTitle);
         TextView txtDescription = mainActivity.findViewById(R.id.txtDescription);
         TextView txtPages = mainActivity.findViewById(R.id.txtPageCount);
+        TextView txtGenre = mainActivity.findViewById(R.id.txtGenre);
         RatingBar rbRating = mainActivity.findViewById(R.id.rbRating);
         ImageView imgCover = mainActivity.findViewById(R.id.imgCover);
 
@@ -530,6 +536,7 @@ public class UIMaster {
         txtTitle.setText(book.getName());
         txtDescription.setText(book.getDescription());
         txtPages.setText(String.valueOf(book.getPages()));
+        txtGenre.setText(book.getGenre());
         float rating;
         try {
             rating = db.getRatingFromBook(book).get();
@@ -559,5 +566,28 @@ public class UIMaster {
 //            ai.fetchResponse(prompt + " The books name is " + book.getName(), mainActivity);
 //        });
 
+    }
+
+    public void handleUserSearch() {
+        SearchView searchView = mainActivity.findViewById(R.id.searchView);
+        Spinner spinnerGenre = mainActivity.findViewById(R.id.spinnerGenre);
+        Spinner spinnerAuthor = mainActivity.findViewById(R.id.spinnerAuthor);
+        ImageButton searchBtn = mainActivity.findViewById(R.id.btnSearchInList);
+        ImageButton closeSearch = mainActivity.findViewById(R.id.btnCloseSearch);
+        LinearLayout searchContainer = mainActivity.findViewById(R.id.searchContainer);
+
+        // Show the container
+        searchContainer.setVisibility(View.VISIBLE);
+
+        // Optional: these lines are only needed if you're toggling specific elements manually
+        searchView.setVisibility(View.VISIBLE);
+        closeSearch.setVisibility(View.VISIBLE);
+        searchBtn.setVisibility(View.GONE);
+
+        closeSearch.setOnClickListener(v -> {
+            searchContainer.setVisibility(View.GONE);
+            searchBtn.setVisibility(View.VISIBLE);
+            closeSearch.setVisibility(View.GONE);
+        });
     }
 }

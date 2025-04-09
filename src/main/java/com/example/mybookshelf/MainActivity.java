@@ -150,6 +150,7 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
 
 
 
+
     public void handleRegister(EditText usernameEditText, EditText passwordEditText, EditText emailEditText) throws ExecutionException, InterruptedException {
         String username = usernameEditText.getText().toString().trim();
         String password = passwordEditText.getText().toString().trim();
@@ -165,7 +166,6 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
 
 
     public void handleLogin(EditText usernameEditText, EditText passwordEditText) throws ExecutionException, InterruptedException {
-
         String username = usernameEditText.getText().toString().trim();
         String password = passwordEditText.getText().toString().trim();
         FrameLayout loadingOverlay = findViewById(R.id.loading_overlay);
@@ -182,36 +182,55 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
                 try {
                     logedindUser = new User(username, "", id, db);
                     uiMaster.setUSer(logedindUser);
-                } catch (ExecutionException e) {
                     loadingOverlay.setVisibility(View.GONE);
-                    throw new RuntimeException(e);
-                } catch (InterruptedException e) {
+                    uiMaster.navigateToStartingPage();  // Move navigation here after user is set
+                } catch (ExecutionException | InterruptedException e) {
                     loadingOverlay.setVisibility(View.GONE);
-                    throw new RuntimeException(e);
+                    Toast.makeText(this, "Error loading user data", Toast.LENGTH_SHORT).show();
+                    e.printStackTrace();
                 }
-                loadingOverlay.setVisibility(View.GONE);
-                uiMaster.navigateToStartingPage();
             } else {
+                loadingOverlay.setVisibility(View.GONE);
                 Toast.makeText(this, "User or Password incorrect", Toast.LENGTH_SHORT).show();
             }
         });
-
-
     }
 
 
     public void saveBook(Book book) {
-        db.addBookToUser(logedindUser.getUid(), book.getName(), book.getAuthor(), book.getPages(), book.getReleaseDate(), book.getImageUrl(), book.getDescription(), 0);
-        try {
-            book = db.getBookByName(book.getName()).get();
-        } catch (ExecutionException e) {
-            throw new RuntimeException(e);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+        // First check if book is null
+        if (book == null) {
+            Log.e("MainActivity", "Cannot save null book");
+            return;
         }
-        book.setInDatabase(true);
-        logedindUser.addBook(book, this);
 
+        // Add book to database
+        db.addBookToUser(logedindUser.getUid(), book.getName(), book.getAuthor(), book.getPages(),
+                book.getReleaseDate(), book.getImageUrl(), book.getDescription(), 0, book.getGenre());
+
+        try {
+            // Get book from database
+            Book savedBook = db.getBookByName(book.getName()).get();
+
+            // Check if the database returned a valid book
+            if (savedBook != null) {
+                savedBook.setInDatabase(true);
+                logedindUser.addBook(savedBook, this);
+            } else {
+                // Handle the case where the book wasn't found in the database
+                // This might happen if there was an issue with the database operation
+                Log.e("MainActivity", "Failed to retrieve book from database: " + book.getName());
+
+                // Since we couldn't get the book from the database, use the original book object
+                book.setInDatabase(true);
+                logedindUser.addBook(book, this);
+            }
+        } catch (ExecutionException | InterruptedException e) {
+            Log.e("MainActivity", "Error retrieving book from database", e);
+            // Since we couldn't get the book from the database, use the original book object
+            book.setInDatabase(true);
+            logedindUser.addBook(book, this);
+        }
     }
 
 
