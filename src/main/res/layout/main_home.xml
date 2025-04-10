@@ -24,6 +24,7 @@
         android:layout_below="@id/txtMyBookShelf"
         android:layout_margin="8dp">
 
+        <!-- Greeting -->
         <TextView
             android:id="@+id/current_user"
             android:layout_width="wrap_content"
@@ -34,6 +35,7 @@
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"/>
 
+        <!-- Pop out Search Button -->
         <ImageButton
             android:id="@+id/btnSearchInList"
             android:layout_width="40dp"
@@ -43,6 +45,7 @@
             android:background="@null"
             android:src="@drawable/ic_search" />
 
+        <!-- Close Search Popup Button (Initially Hidden)-->
         <ImageButton
             android:id="@+id/btnCloseSearch"
             android:layout_width="40dp"
@@ -65,6 +68,7 @@
         android:orientation="vertical"
         android:visibility="gone">
 
+        <!-- Searching in Personal List -->
         <SearchView
             android:id="@+id/searchView"
             android:layout_width="match_parent"
@@ -79,6 +83,7 @@
             android:iconifiedByDefault="false"
             android:textColor="@android:color/black"/>
 
+        <!-- For Dropdowns Box -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -92,6 +97,7 @@
                 android:orientation="horizontal"
                 android:padding="8dp">
 
+                <!-- Genre Dropdown -->
                 <Spinner
                     android:id="@+id/spinnerGenre"
                     android:layout_width="0dp"
@@ -99,6 +105,7 @@
                     android:layout_weight="1"
                     android:prompt="Select Genre" />
 
+                <!-- Author Dropdown -->
                 <Spinner
                     android:id="@+id/spinnerAuthor"
                     android:layout_width="0dp"

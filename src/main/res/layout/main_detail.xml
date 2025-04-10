@@ -11,7 +11,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/bottom_nav">
+        android:layout_above="@id/bottom_nav"
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -43,18 +44,19 @@
                 android:layout_marginEnd="10dp"
                 android:layout_marginTop="25dp"/>
 
-            <!-- Image on the Left Below White Bar -->
+            <!-- Image Book cover -->
             <ImageView
                 android:id="@+id/imgCover"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxHeight="500dp"
                 android:adjustViewBounds="true"
                 android:scaleType="fitCenter"
+                android:layout_gravity="center_horizontal"
                 app:srcCompat="@drawable/cover"
                 android:layout_marginTop="16dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginStart="26dp"
+                android:layout_marginEnd="26dp"
                 tools:ignore="NotSibling"/>
 
             <!-- Box Above the Input with a TextView Inside -->
@@ -135,7 +137,7 @@
         android:layout_marginBottom="6dp"
         />
 
-    <!-- Pop-up Window (Initially Hidden) -->
+    <!-- Pop-up Window -->
     <androidx.cardview.widget.CardView
         android:id="@+id/popupWindow"
         android:layout_width="match_parent"
@@ -149,7 +151,8 @@
         app:cardCornerRadius="16dp"
         app:cardElevation="0dp"
         app:cardBackgroundColor="@color/popup"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:visibility="gone">
 
         <RelativeLayout
             android:layout_width="match_parent"
