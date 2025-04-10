@@ -58,6 +58,7 @@ public class UIMaster {
     private EditText usernameEditText;
     private EditText passwordEditText;
     private EditText emailEditText;
+    private EditText repeatPassword;
     private Button loginButton;
     private Button registerButton;
     private Button switchToLoginButton;
@@ -360,7 +361,8 @@ public class UIMaster {
     public void showRegister(){
         mainActivity.setContentView(R.layout.main_register);
         usernameEditText = mainActivity.findViewById(R.id.txfUser);
-        passwordEditText = mainActivity.findViewById(R.id.txfPassword);
+        passwordEditText = mainActivity.findViewById(R.id.txfNewPassword);
+        repeatPassword = mainActivity.findViewById(R.id.txfRepeatPassword);
         emailEditText = mainActivity.findViewById(R.id.txfEmail);
         registerButton = mainActivity.findViewById(R.id.btnRegister);
         switchToLoginButton = mainActivity.findViewById(R.id.btnBackLogin);
@@ -368,7 +370,7 @@ public class UIMaster {
 
         registerButton.setOnClickListener(v -> {
             try {
-                mainActivity.handleRegister(usernameEditText, passwordEditText, emailEditText);
+                mainActivity.handleRegister(usernameEditText, passwordEditText,repeatPassword, emailEditText);
             } catch (ExecutionException e) {
                 throw new RuntimeException(e);
             } catch (InterruptedException e) {

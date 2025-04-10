@@ -151,13 +151,18 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
 
 
 
-    public void handleRegister(EditText usernameEditText, EditText passwordEditText, EditText emailEditText) throws ExecutionException, InterruptedException {
+    public void handleRegister(EditText usernameEditText, EditText passwordEditText,EditText reapeatPasswordEditText, EditText emailEditText) throws ExecutionException, InterruptedException {
         String username = usernameEditText.getText().toString().trim();
         String password = passwordEditText.getText().toString().trim();
+        String repeatPassword = reapeatPasswordEditText.getText().toString().trim();
         String email = emailEditText.getText().toString().trim();
 
         if (TextUtils.isEmpty(username) || TextUtils.isEmpty(password) || TextUtils.isEmpty(email)) {
             Toast.makeText(this, "Please enter all fields", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (!password.equals(repeatPassword)){
+            Toast.makeText(this, "Passwords do not match", Toast.LENGTH_SHORT).show();
             return;
         }
         auth.register(username, password, email);
