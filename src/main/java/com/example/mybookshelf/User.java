@@ -9,6 +9,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.TreeSet;
 import java.util.concurrent.ExecutionException;
 
 public class User {
@@ -17,6 +18,8 @@ public class User {
     String email;
     int UID;
     List<Book> bookList= new ArrayList<>();
+    TreeSet<String> authorList = new TreeSet<>();
+    TreeSet<String> genreList = new TreeSet<>();
     MainActivity mainActivity;
     DataBaseConnection db;
 
@@ -29,8 +32,6 @@ public class User {
 
 
         bookList = db.getBooksFromUID(UID).get();
-        if (bookList.isEmpty()) bookList.add(new Book("test", "no",12, "no","no", "no", 1));
-
         for (Book book: bookList){
             book.setInDatabase(true);
         }

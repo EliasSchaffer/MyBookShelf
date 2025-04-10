@@ -103,7 +103,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:prompt="Select Genre" />
+                    android:prompt= "@string/select_genre"/>
 
                 <!-- Author Dropdown -->
                 <Spinner
@@ -111,7 +111,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:prompt="Select Author" />
+                    android:prompt="@string/select_author" />
             </LinearLayout>
         </androidx.cardview.widget.CardView>
     </LinearLayout>
