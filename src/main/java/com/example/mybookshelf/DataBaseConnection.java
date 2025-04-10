@@ -130,9 +130,6 @@ public class DataBaseConnection {
     }
 
 
-
-
-
     public void addUser(String username, String email, String password) {
         executorService.execute(() -> {
             String hashedPassword = BCrypt.withDefaults().hashToString(12, password.toCharArray());
@@ -189,12 +186,13 @@ public class DataBaseConnection {
                     "b.release_date, " +
                     "b.cover_url, " +
                     "b.description, " +
-                    "g.genre_name AS genre " +
+                    "GROUP_CONCAT(g.genre_name) AS genre " +  // Changed to singular
                     "FROM userbooks ub " +
                     "LEFT JOIN books b ON ub.book_id = b.book_id " +
                     "LEFT JOIN bookgenre bg ON b.book_id = bg.book_id " +
                     "LEFT JOIN genres g ON bg.genre_id = g.genre_id " +
-                    "WHERE ub.user_id = ?;";
+                    "WHERE ub.user_id = ? " +
+                    "GROUP BY b.book_id;";
 
 
             try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
@@ -210,21 +208,22 @@ public class DataBaseConnection {
                 try (ResultSet resultSet = preparedStatement.executeQuery()) {
                     if (!resultSet.next()) {
                         System.out.println("No books found for user ID: " + uid);
+                    } else {
+                        // Process the results
+                        do {
+                            Book book = new Book(
+                                    resultSet.getString("title"),
+                                    resultSet.getString("release_date"),
+                                    resultSet.getInt("pages"),
+                                    resultSet.getString("author"),
+                                    resultSet.getString("cover_url"),
+                                    resultSet.getString("description"),
+                                    resultSet.getInt("book_id"),
+                                    resultSet.getString("genre")
+                            );
+                            books.add(book);
+                        } while (resultSet.next());  // Ensure we process all results
                     }
-
-                    // Process the results
-                    do {
-                        Book book = new Book(
-                                resultSet.getString("title"),       // name
-                                resultSet.getString("release_date"), // release_date
-                                resultSet.getInt("pages"),          // pages
-                                resultSet.getString("author"),      // author
-                                resultSet.getString("cover_url"),   // image_url
-                                resultSet.getString("description"), // description
-                                resultSet.getInt("book_id")         // book_id
-                        );
-                        books.add(book);
-                    } while (resultSet.next());  // Ensure we process all results
                 }
 
             } catch (SQLTimeoutException e) {
@@ -244,9 +243,22 @@ public class DataBaseConnection {
     }
 
 
-
     public Future<Book> getBookByName(String bookName) {
-        String sql = "SELECT book_id, title, author, pages, release_date, cover_url, description FROM books WHERE title = ?;";
+        String sql = "SELECT \n" +
+                "    b.book_id,\n" +
+                "    b.title,\n" +
+                "    b.author,\n" +
+                "    b.pages,\n" +
+                "    b.release_date,\n" +
+                "    b.cover_url,\n" +
+                "    b.description,\n" +
+                "    GROUP_CONCAT(g.genre_name) AS genre\n" +
+                "FROM books b\n" +
+                "LEFT JOIN bookgenre bg ON b.book_id = bg.book_id\n" +
+                "LEFT JOIN genres g ON bg.genre_id = g.genre_id\n" +
+                "WHERE b.title = ?\n" +
+                "GROUP BY b.book_id;";
+
 
         return executorService.submit(() -> {
             try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
@@ -263,7 +275,8 @@ public class DataBaseConnection {
                             resultSet.getString("release_date"),
                             resultSet.getString("cover_url"),
                             resultSet.getString("description"),
-                            resultSet.getInt("book_id")
+                            resultSet.getInt("book_id"),
+                            resultSet.getString("genre")
                     );
                 }
             } catch (Exception e) {

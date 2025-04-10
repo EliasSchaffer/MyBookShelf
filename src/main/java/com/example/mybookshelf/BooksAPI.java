@@ -38,7 +38,7 @@ public class BooksAPI {
                 // If the list is empty, create a fallback book
                 if (books.isEmpty()) {
                     books = new ArrayList<>();
-                    books.add(new Book("An Error occurred, please try again", "0", 0, "NA", "", "", -1));
+                    books.add(new Book("An Error occurred, please try again", "0", 0, "NA", "", "", -1, ""));
                 }
                 List<Book> finalBooks = books;
                 mainHandler.post(() -> callback.onBookFetched(finalBooks)); // Pass as a list
@@ -46,7 +46,7 @@ public class BooksAPI {
                 Log.e("ApiRequest", "Error fetching single book", e);
                 mainHandler.post(() -> {
                     List<Book> fallback = new ArrayList<>();
-                    fallback.add(new Book("An Error occurred, please try again", "0", 0, "NA", "", "", -1));
+                    fallback.add(new Book("An Error occurred, please try again", "0", 0, "NA", "", "", -1, ""));
                     callback.onBookFetched(fallback);
                 });
             }
@@ -80,9 +80,13 @@ public class BooksAPI {
                 reader.close();
 
                 JSONArray items = new JSONObject(response).optJSONArray("items");
+
                 if (items != null) {
                     for (int i = 0; i < items.length(); i++) {
+
                         JSONObject bookJson = items.getJSONObject(i).getJSONObject("volumeInfo");
+                        Log.d("APIResponse", bookJson.toString());
+
                         String title = bookJson.optString("title", "No Title Available");
                         String authors = bookJson.optJSONArray("authors") != null ?
                                 bookJson.getJSONArray("authors").join(", ") : "No Authors Available";
@@ -107,7 +111,7 @@ public class BooksAPI {
                         }
 
                         String description = bookJson.optString("description", "No Description Available");
-                        books.add(new Book(title, year, pageCount, authors, imageUrl, description, genre));
+                        books.add(new Book(title, authors, pageCount, year, imageUrl, description, genre));
                     }
                 }
                 reader.close();

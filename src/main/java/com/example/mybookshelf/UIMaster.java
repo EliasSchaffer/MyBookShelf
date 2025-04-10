@@ -10,6 +10,8 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
@@ -24,6 +26,7 @@ import android.widget.TextView;
 
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.solver.ArrayLinkedVariables;
 
 import com.bumptech.glide.Glide;
 import com.github.mikephil.charting.charts.BarChart;
@@ -35,7 +38,11 @@ import com.github.mikephil.charting.data.BarEntry;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -64,12 +71,14 @@ public class UIMaster {
     private AiAPI ai;
     private DataBaseConnection db;
     private User logedindUser;
+    private Map<View, Book> bookViewMap;
 
     public UIMaster(MainActivity main){
         booksAPI = new BooksAPI();
         ai = new AiAPI();
         mainActivity = main;
         db = new DataBaseConnection(mainActivity);
+        bookViewMap = new HashMap<>();
     }
 
     public void setUSer(User user){
@@ -161,6 +170,13 @@ public class UIMaster {
         LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(120, 160);
         bookImage.setLayoutParams(imageParams);
 
+        if (isSearch){
+            String author = book.getRelease_date();
+            String releaseDate = book.getAuthor();
+            book.setAuthor(author);
+            book.setRelease_date(releaseDate);
+        }
+
         // Create a TextView for the book details
         TextView bookDetails = new TextView(mainActivity);
         StringBuilder details = new StringBuilder();
@@ -233,6 +249,8 @@ public class UIMaster {
 
         // Finally, add the book box to the main container
         container.addView(bookBox);
+        bookViewMap.put(bookBox, book);
+
         container.setOnClickListener(v -> {
             navigateToDetails(book);
         });
@@ -558,14 +576,6 @@ public class UIMaster {
 
         Glide.with(mainActivity).load(book.getImageUrl()).into(imgCover);
 
-//        Button submitButton = mainActivity.findViewById(R.id.submitButton);
-//        submitButton.setOnClickListener(v -> {
-//            EditText inpInputText = mainActivity.findViewById(R.id.inpInputText);
-//            String prompt = inpInputText.getText().toString();
-//            inpInputText.setText(" ");
-//            ai.fetchResponse(prompt + " The books name is " + book.getName(), mainActivity);
-//        });
-
     }
 
     public void handleUserSearch() {
@@ -583,11 +593,84 @@ public class UIMaster {
         searchView.setVisibility(View.VISIBLE);
         closeSearch.setVisibility(View.VISIBLE);
         searchBtn.setVisibility(View.GONE);
-
+        fillSpinners();
         closeSearch.setOnClickListener(v -> {
             searchContainer.setVisibility(View.GONE);
             searchBtn.setVisibility(View.VISIBLE);
             closeSearch.setVisibility(View.GONE);
         });
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                filterBooks(query.trim(), spinnerAuthor.getSelectedItem().toString(), spinnerGenre.getSelectedItem().toString());
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                filterBooks(newText.trim(), spinnerAuthor.getSelectedItem().toString(), spinnerGenre.getSelectedItem().toString());
+                return true;
+            }
+        });
+
+        spinnerAuthor.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                filterBooks("", spinnerAuthor.getSelectedItem().toString(), spinnerGenre.getSelectedItem().toString());
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+    }
+
+    private void filterBooks(String titleQuery, String selectedAuthor, String selectedGenre) {
+        for (Map.Entry<View, Book> entry : bookViewMap.entrySet()) {
+            View bookView = entry.getKey();
+            Book book = entry.getValue();
+
+            boolean matchesTitle = book.getName().toLowerCase().contains(titleQuery.toLowerCase());
+            boolean matchesAuthor = selectedAuthor.equals("All") || book.getAuthor().equalsIgnoreCase(selectedAuthor);
+            boolean matchesGenre = selectedGenre.equals("All") || book.getGenre().equalsIgnoreCase(selectedGenre);
+
+            if (matchesTitle && matchesAuthor && matchesGenre) {
+                bookView.setVisibility(View.VISIBLE);
+            } else {
+                bookView.setVisibility(View.GONE);
+            }
+        }
+    }
+
+    public void fillSpinners() {
+        // Get authors and genres from the loggedinUser
+        Set<String> authorsSet = logedindUser.getAuthors(); // assuming this is a Set<String>
+        Set<String> genresSet = logedindUser.getGenres();   // assuming this is a Set<String>
+
+        // Convert the Sets to ArrayLists
+        List<String> authorsList = new ArrayList<>(authorsSet);
+        List<String> genresList = new ArrayList<>(genresSet);
+
+        // Add a default option (e.g., "All") to the lists
+        authorsList.add(0, "All");
+        genresList.add(0, "All");
+
+        // Create ArrayAdapters for the Spinners
+        ArrayAdapter<String> authorAdapter = new ArrayAdapter<>(mainActivity, android.R.layout.simple_spinner_item, authorsList);
+        ArrayAdapter<String> genreAdapter = new ArrayAdapter<>(mainActivity, android.R.layout.simple_spinner_item, genresList);
+
+        // Set the layout for the dropdown view (optional, can customize)
+        authorAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        genreAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // Set the adapters to the Spinners
+        Spinner spinnerAuthor = mainActivity.findViewById(R.id.spinnerAuthor);
+        Spinner spinnerGenre = mainActivity.findViewById(R.id.spinnerGenre);
+
+        spinnerAuthor.setAdapter(authorAdapter);
+        spinnerGenre.setAdapter(genreAdapter);
     }
 }
