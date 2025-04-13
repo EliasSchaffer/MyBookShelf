@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_image">
 
-    <!-- Search View directly below the white box -->
+    <!-- Search View for adding Books -->
     <SearchView
         android:id="@+id/searchView"
         android:layout_width="match_parent"
@@ -17,7 +17,8 @@
         android:background="@android:color/white"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:queryHint="Nach Buch Suchen"
+        android:queryHint="Search books..."
+        android:iconifiedByDefault="false"
         android:textColor="@android:color/black"/>
 
     <!-- ScrollView to contain the book container -->
@@ -44,6 +45,7 @@
         </LinearLayout>
     </ScrollView>
 
+    <!-- Nav-Bar -->
     <androidx.cardview.widget.CardView
         android:id="@+id/bottom_nav"
         android:layout_width="match_parent"

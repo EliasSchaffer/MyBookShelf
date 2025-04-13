@@ -2,6 +2,7 @@ package com.example.mybookshelf;
 
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
+import android.media.Image;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -9,6 +10,8 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
@@ -17,10 +20,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.RelativeLayout;
+import android.widget.SearchView;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.solver.ArrayLinkedVariables;
 
 import com.bumptech.glide.Glide;
 import com.github.mikephil.charting.charts.BarChart;
@@ -32,8 +38,14 @@ import com.github.mikephil.charting.data.BarEntry;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
 import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 import com.github.mikephil.charting.formatter.ValueFormatter;
@@ -46,6 +58,7 @@ public class UIMaster {
     private EditText usernameEditText;
     private EditText passwordEditText;
     private EditText emailEditText;
+    private EditText repeatPassword;
     private Button loginButton;
     private Button registerButton;
     private Button switchToLoginButton;
@@ -53,17 +66,20 @@ public class UIMaster {
 
     private int timeSpentReading = 0;
     private ImageButton nav_searchBtn;
+    private ImageButton nav_StatsBtn;
     private TextView timeSpentReadingTextView;
     private BooksAPI booksAPI;
     private AiAPI ai;
     private DataBaseConnection db;
     private User logedindUser;
+    private Map<View, Book> bookViewMap;
 
     public UIMaster(MainActivity main){
         booksAPI = new BooksAPI();
         ai = new AiAPI();
         mainActivity = main;
         db = new DataBaseConnection(mainActivity);
+        bookViewMap = new HashMap<>();
     }
 
     public void setUSer(User user){
@@ -155,6 +171,13 @@ public class UIMaster {
         LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(120, 160);
         bookImage.setLayoutParams(imageParams);
 
+        if (isSearch){
+            String author = book.getRelease_date();
+            String releaseDate = book.getAuthor();
+            book.setAuthor(author);
+            book.setRelease_date(releaseDate);
+        }
+
         // Create a TextView for the book details
         TextView bookDetails = new TextView(mainActivity);
         StringBuilder details = new StringBuilder();
@@ -227,6 +250,8 @@ public class UIMaster {
 
         // Finally, add the book box to the main container
         container.addView(bookBox);
+        bookViewMap.put(bookBox, book);
+
         container.setOnClickListener(v -> {
             navigateToDetails(book);
         });
@@ -336,7 +361,8 @@ public class UIMaster {
     public void showRegister(){
         mainActivity.setContentView(R.layout.main_register);
         usernameEditText = mainActivity.findViewById(R.id.txfUser);
-        passwordEditText = mainActivity.findViewById(R.id.txfPassword);
+        passwordEditText = mainActivity.findViewById(R.id.txfNewPassword);
+        repeatPassword = mainActivity.findViewById(R.id.txfRepeatPassword);
         emailEditText = mainActivity.findViewById(R.id.txfEmail);
         registerButton = mainActivity.findViewById(R.id.btnRegister);
         switchToLoginButton = mainActivity.findViewById(R.id.btnBackLogin);
@@ -344,7 +370,7 @@ public class UIMaster {
 
         registerButton.setOnClickListener(v -> {
             try {
-                mainActivity.handleRegister(usernameEditText, passwordEditText, emailEditText);
+                mainActivity.handleRegister(usernameEditText, passwordEditText,repeatPassword, emailEditText);
             } catch (ExecutionException e) {
                 throw new RuntimeException(e);
             } catch (InterruptedException e) {
@@ -364,8 +390,18 @@ public class UIMaster {
     }
 
     public void setupLineChart() {
+        mainActivity.setContentView(R.layout.main_chart);
         DataBaseConnection db = new DataBaseConnection(mainActivity);
         barChart = mainActivity.findViewById(R.id.barChart);
+        ImageButton nav_homeBtn = mainActivity.findViewById(R.id.nav_home);
+        ImageButton nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
+        ImageButton nav_StatsBtn = mainActivity.findViewById(R.id.nav_stats);
+
+        nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
+        nav_StatsBtn.setOnClickListener(v -> setupLineChart());
+        nav_homeBtn.setOnClickListener(v -> {
+            navigateToStartingPage();
+        });
 
         // Asynchronously fetch reading time data
         Future<ArrayList<BarEntry>> futureEntries = db.getReadingTimeByMonthAsync(mainActivity.getUser().getUid());
@@ -440,44 +476,67 @@ public class UIMaster {
         }
     }
 
-    public void navigateToStartingPage() throws ExecutionException, InterruptedException {
-        mainActivity.setContentView(R.layout.main_home);
-        LinearLayout bookContainer = mainActivity.findViewById(R.id.bookContainer);
-        List<Book> userBooks = logedindUser.getBookList();
-        nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
-        nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
-        TextView user = mainActivity.findViewById(R.id.current_user);
-        user.setText("Hallo, " + logedindUser.getUser() + " \uD83D\uDC4B");
+    public void navigateToStartingPage() {
+        ExecutorService executor = Executors.newSingleThreadExecutor();
 
-        if (userBooks != null && !userBooks.isEmpty()) {
-            for (Book book : userBooks) {
-                if (book != null && !TextUtils.isEmpty(book.getName())) {
-                    if (book.isInDatabase()) { // Check if the book exists in the database
-                        createBookBox(bookContainer, book, false); // Create the box instantly
-                        timeSpentReadingTextView = mainActivity.findViewById(R.id.etfTimeSpentReading);
-                        updateReadingTime(book.getPages(), timeSpentReadingTextView);
-                    } else {
-                        // Fetch the book from API if not in database
-                        booksAPI.getOneBook(book.getName(), new BooksAPI.BookCallback() {
-                            @Override
-                            public void onBookFetched(List<Book> books) {
-                                if (books != null && !books.isEmpty()) {
-                                    mainActivity.saveBook(books.get(0));
-                                    createBookBox(bookContainer, books.get(0), false);
-                                    timeSpentReadingTextView = mainActivity.findViewById(R.id.etfTimeSpentReading);
-                                    updateReadingTime(books.get(0).getPages(), timeSpentReadingTextView);
-                                } else {
-                                    createBookBox(bookContainer, new Book("An Error occurred, please try again", "0", 0, "NA"), false);
+        executor.execute(() -> {
+            // Do any data processing in background
+            List<Book> userBooks = logedindUser.getBookList();
+
+            mainActivity.runOnUiThread(() -> {
+                // Now do UI setup
+                mainActivity.setContentView(R.layout.main_home);
+                LinearLayout bookContainer = mainActivity.findViewById(R.id.bookContainer);
+                nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
+                nav_StatsBtn = mainActivity.findViewById(R.id.nav_stats);
+                ImageButton searchBtn = mainActivity.findViewById(R.id.btnSearchInList);
+                nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
+                nav_StatsBtn.setOnClickListener(v -> setupLineChart());
+                searchBtn.setOnClickListener(v -> handleUserSearch());
+
+                TextView user = mainActivity.findViewById(R.id.current_user);
+                user.setText("Hallo, " + logedindUser.getUser() + " \uD83D\uDC4B");
+            });
+
+            if (userBooks != null && !userBooks.isEmpty()) {
+                for (Book book : userBooks) {
+                    if (book != null && !TextUtils.isEmpty(book.getName())) {
+                        if (book.isInDatabase()) {
+                            // UI update must be on main thread
+                            mainActivity.runOnUiThread(() -> {
+                                LinearLayout bookContainer = mainActivity.findViewById(R.id.bookContainer);
+                                createBookBox(bookContainer, book, false);
+                                timeSpentReadingTextView = mainActivity.findViewById(R.id.etfTimeSpentReading);
+                                updateReadingTime(book.getPages(), timeSpentReadingTextView);
+                            });
+                        } else {
+                            // Book will be fetched asynchronously by the API callback
+                            booksAPI.getOneBook(book.getName(), new BooksAPI.BookCallback() {
+                                @Override
+                                public void onBookFetched(List<Book> books) {
+                                    mainActivity.runOnUiThread(() -> {
+                                        LinearLayout bookContainer = mainActivity.findViewById(R.id.bookContainer);
+                                        if (books != null && !books.isEmpty()) {
+                                            Book fetched = books.get(0);
+                                            mainActivity.saveBook(fetched);
+                                            createBookBox(bookContainer, fetched, false);
+                                            timeSpentReadingTextView = mainActivity.findViewById(R.id.etfTimeSpentReading);
+                                            updateReadingTime(fetched.getPages(), timeSpentReadingTextView);
+                                        } else {
+                                            createBookBox(bookContainer, new Book("An Error occurred, please try again", "0", 0, "NA"), false);
+                                        }
+                                    });
                                 }
-                            }
-                        });
+                            });
+                        }
                     }
                 }
+            } else {
+                Log.w("MainActivity", "User's book list is null or empty.");
             }
-        } else {
-            Log.w("MainActivity", "User's book list is null or empty.");
-        }
+        });
     }
+
 
 
     void navigateToDetails(Book book) {
@@ -489,6 +548,7 @@ public class UIMaster {
         TextView txtTitle = mainActivity.findViewById(R.id.txtTitle);
         TextView txtDescription = mainActivity.findViewById(R.id.txtDescription);
         TextView txtPages = mainActivity.findViewById(R.id.txtPageCount);
+        TextView txtGenre = mainActivity.findViewById(R.id.txtGenre);
         RatingBar rbRating = mainActivity.findViewById(R.id.rbRating);
         ImageView imgCover = mainActivity.findViewById(R.id.imgCover);
 
@@ -496,6 +556,7 @@ public class UIMaster {
         txtTitle.setText(book.getName());
         txtDescription.setText(book.getDescription());
         txtPages.setText(String.valueOf(book.getPages()));
+        txtGenre.setText(book.getGenre());
         float rating;
         try {
             rating = db.getRatingFromBook(book).get();
@@ -511,25 +572,107 @@ public class UIMaster {
         nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
 
         nav_homeBtn.setOnClickListener(v -> {
-            try {
-                navigateToStartingPage();
-            } catch (ExecutionException e) {
-                throw new RuntimeException(e);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
+            navigateToStartingPage();
         });
 
 
         Glide.with(mainActivity).load(book.getImageUrl()).into(imgCover);
 
-//        Button submitButton = mainActivity.findViewById(R.id.submitButton);
-//        submitButton.setOnClickListener(v -> {
-//            EditText inpInputText = mainActivity.findViewById(R.id.inpInputText);
-//            String prompt = inpInputText.getText().toString();
-//            inpInputText.setText(" ");
-//            ai.fetchResponse(prompt + " The books name is " + book.getName(), mainActivity);
-//        });
+    }
 
+    public void handleUserSearch() {
+        SearchView searchView = mainActivity.findViewById(R.id.searchView);
+        Spinner spinnerGenre = mainActivity.findViewById(R.id.spinnerGenre);
+        Spinner spinnerAuthor = mainActivity.findViewById(R.id.spinnerAuthor);
+        ImageButton searchBtn = mainActivity.findViewById(R.id.btnSearchInList);
+        ImageButton closeSearch = mainActivity.findViewById(R.id.btnCloseSearch);
+        LinearLayout searchContainer = mainActivity.findViewById(R.id.searchContainer);
+
+        // Show the container
+        searchContainer.setVisibility(View.VISIBLE);
+
+        // Optional: these lines are only needed if you're toggling specific elements manually
+        searchView.setVisibility(View.VISIBLE);
+        closeSearch.setVisibility(View.VISIBLE);
+        searchBtn.setVisibility(View.GONE);
+        fillSpinners();
+        closeSearch.setOnClickListener(v -> {
+            searchContainer.setVisibility(View.GONE);
+            searchBtn.setVisibility(View.VISIBLE);
+            closeSearch.setVisibility(View.GONE);
+        });
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                filterBooks(query.trim(), spinnerAuthor.getSelectedItem().toString(), spinnerGenre.getSelectedItem().toString());
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                filterBooks(newText.trim(), spinnerAuthor.getSelectedItem().toString(), spinnerGenre.getSelectedItem().toString());
+                return true;
+            }
+        });
+
+        spinnerAuthor.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                filterBooks("", spinnerAuthor.getSelectedItem().toString(), spinnerGenre.getSelectedItem().toString());
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+    }
+
+    private void filterBooks(String titleQuery, String selectedAuthor, String selectedGenre) {
+        for (Map.Entry<View, Book> entry : bookViewMap.entrySet()) {
+            View bookView = entry.getKey();
+            Book book = entry.getValue();
+
+            boolean matchesTitle = book.getName().toLowerCase().contains(titleQuery.toLowerCase());
+            boolean matchesAuthor = selectedAuthor.equals("All") || book.getAuthor().equalsIgnoreCase(selectedAuthor);
+            boolean matchesGenre = selectedGenre.equals("All") || book.getGenre().equalsIgnoreCase(selectedGenre);
+
+            if (matchesTitle && matchesAuthor && matchesGenre) {
+                bookView.setVisibility(View.VISIBLE);
+            } else {
+                bookView.setVisibility(View.GONE);
+            }
+        }
+    }
+
+    public void fillSpinners() {
+        // Get authors and genres from the loggedinUser
+        Set<String> authorsSet = logedindUser.getAuthors(); // assuming this is a Set<String>
+        Set<String> genresSet = logedindUser.getGenres();   // assuming this is a Set<String>
+
+        // Convert the Sets to ArrayLists
+        List<String> authorsList = new ArrayList<>(authorsSet);
+        List<String> genresList = new ArrayList<>(genresSet);
+
+        // Add a default option (e.g., "All") to the lists
+        authorsList.add(0, "All");
+        genresList.add(0, "All");
+
+        // Create ArrayAdapters for the Spinners
+        ArrayAdapter<String> authorAdapter = new ArrayAdapter<>(mainActivity, android.R.layout.simple_spinner_item, authorsList);
+        ArrayAdapter<String> genreAdapter = new ArrayAdapter<>(mainActivity, android.R.layout.simple_spinner_item, genresList);
+
+        // Set the layout for the dropdown view (optional, can customize)
+        authorAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        genreAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        // Set the adapters to the Spinners
+        Spinner spinnerAuthor = mainActivity.findViewById(R.id.spinnerAuthor);
+        Spinner spinnerGenre = mainActivity.findViewById(R.id.spinnerGenre);
+
+        spinnerAuthor.setAdapter(authorAdapter);
+        spinnerGenre.setAdapter(genreAdapter);
     }
 }

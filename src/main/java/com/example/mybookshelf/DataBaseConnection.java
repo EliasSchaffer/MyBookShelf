@@ -130,9 +130,6 @@ public class DataBaseConnection {
     }
 
 
-
-
-
     public void addUser(String username, String email, String password) {
         executorService.execute(() -> {
             String hashedPassword = BCrypt.withDefaults().hashToString(12, password.toCharArray());
@@ -182,16 +179,21 @@ public class DataBaseConnection {
             List<Book> books = new ArrayList<>();
 
             String sql = "SELECT " +
-                    "    b.book_id, " +
-                    "    b.title, " +
-                    "    b.author, " +
-                    "    b.pages, " +
-                    "    b.release_date, " +
-                    "    b.cover_url, " +
-                    "    b.description " +
+                    "b.book_id, " +
+                    "b.title, " +
+                    "b.author, " +
+                    "b.pages, " +
+                    "b.release_date, " +
+                    "b.cover_url, " +
+                    "b.description, " +
+                    "GROUP_CONCAT(g.genre_name) AS genre " +  // Changed to singular
                     "FROM userbooks ub " +
-                    "LEFT JOIN books b ON ub.book_id = b.book_id " +  // Using LEFT JOIN to avoid missing books
-                    "WHERE ub.user_id = ?;";
+                    "LEFT JOIN books b ON ub.book_id = b.book_id " +
+                    "LEFT JOIN bookgenre bg ON b.book_id = bg.book_id " +
+                    "LEFT JOIN genres g ON bg.genre_id = g.genre_id " +
+                    "WHERE ub.user_id = ? " +
+                    "GROUP BY b.book_id;";
+
 
             try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
                  PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
@@ -206,21 +208,22 @@ public class DataBaseConnection {
                 try (ResultSet resultSet = preparedStatement.executeQuery()) {
                     if (!resultSet.next()) {
                         System.out.println("No books found for user ID: " + uid);
+                    } else {
+                        // Process the results
+                        do {
+                            Book book = new Book(
+                                    resultSet.getString("title"),
+                                    resultSet.getString("release_date"),
+                                    resultSet.getInt("pages"),
+                                    resultSet.getString("author"),
+                                    resultSet.getString("cover_url"),
+                                    resultSet.getString("description"),
+                                    resultSet.getInt("book_id"),
+                                    resultSet.getString("genre")
+                            );
+                            books.add(book);
+                        } while (resultSet.next());  // Ensure we process all results
                     }
-
-                    // Process the results
-                    do {
-                        Book book = new Book(
-                                resultSet.getString("title"),       // name
-                                resultSet.getString("release_date"), // release_date
-                                resultSet.getInt("pages"),          // pages
-                                resultSet.getString("author"),      // author
-                                resultSet.getString("cover_url"),   // image_url
-                                resultSet.getString("description"), // description
-                                resultSet.getInt("book_id")         // book_id
-                        );
-                        books.add(book);
-                    } while (resultSet.next());  // Ensure we process all results
                 }
 
             } catch (SQLTimeoutException e) {
@@ -240,9 +243,22 @@ public class DataBaseConnection {
     }
 
 
-
     public Future<Book> getBookByName(String bookName) {
-        String sql = "SELECT book_id, title, author, pages, release_date, cover_url, description FROM Books WHERE title = ?;";
+        String sql = "SELECT \n" +
+                "    b.book_id,\n" +
+                "    b.title,\n" +
+                "    b.author,\n" +
+                "    b.pages,\n" +
+                "    b.release_date,\n" +
+                "    b.cover_url,\n" +
+                "    b.description,\n" +
+                "    GROUP_CONCAT(g.genre_name) AS genre\n" +
+                "FROM books b\n" +
+                "LEFT JOIN bookgenre bg ON b.book_id = bg.book_id\n" +
+                "LEFT JOIN genres g ON bg.genre_id = g.genre_id\n" +
+                "WHERE b.title = ?\n" +
+                "GROUP BY b.book_id;";
+
 
         return executorService.submit(() -> {
             try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
@@ -259,7 +275,8 @@ public class DataBaseConnection {
                             resultSet.getString("release_date"),
                             resultSet.getString("cover_url"),
                             resultSet.getString("description"),
-                            resultSet.getInt("book_id")
+                            resultSet.getInt("book_id"),
+                            resultSet.getString("genre")
                     );
                 }
             } catch (Exception e) {
@@ -270,9 +287,9 @@ public class DataBaseConnection {
     }
 
 
-    public void addBookToUser(int userId, String bookName, String author, int pages, String releaseDate, String imageUrl, String description, int readingTime) {
-        String getBookIdSQL = "SELECT book_id FROM Books WHERE title = ?";
-        String insertUserBookSQL = "INSERT INTO UserBooks (user_id, book_id, reading_time) VALUES (?, ?, ?)";
+    public void addBookToUser(int userId, String bookName, String author, int pages, String releaseDate, String imageUrl, String description, int readingTime, String genre) {
+        String getBookIdSQL = "SELECT book_id FROM books WHERE title = ?";
+        String insertUserBookSQL = "INSERT INTO userbooks (user_id, book_id, reading_time) VALUES (?, ?, ?)";
         executorService.execute(() -> {
 
             try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
@@ -288,7 +305,7 @@ public class DataBaseConnection {
                     bookId = resultSet.getInt("book_id"); // Book exists, get its ID
                 } else {
                     // If book is not found, add it to the database and get its ID
-                    bookId = addNewBook(bookName, author, pages, releaseDate, imageUrl, description);
+                    bookId = addNewBook(bookName, author, pages, releaseDate, imageUrl, description, genre);
                 }
 
                 // Insert into UserBooks
@@ -306,35 +323,79 @@ public class DataBaseConnection {
     }
 
     // Method to add a new book if it doesn't exist
-    private int addNewBook(String bookName, String author, int pages, String releaseDate, String imageUrl, String description) {
-        String insertBookSQL = "INSERT INTO Books (title, author, pages, release_date, cover_url, description) VALUES (?, ?, ?, ?, ?, ?)";
+    private int addNewBook(String bookName, String author, int pages, String releaseDate, String imageUrl, String description, String genre) {
+        String insertBookSQL = "INSERT INTO books (title, author, pages, release_date, cover_url, description) VALUES (?, ?, ?, ?, ?, ?)";
+        String findGenreSQL = "SELECT genre_id FROM genres WHERE genre_name = ?";
+        String insertGenreSQL = "INSERT INTO genres (genre_name) VALUES (?)";
+        String insertBookGenreSQL = "INSERT INTO bookgenre (book_id, genre_id) VALUES (?, ?)";
 
-        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
-             PreparedStatement insertBookStmt = connection.prepareStatement(insertBookSQL, Statement.RETURN_GENERATED_KEYS)) {
+        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
+            connection.setAutoCommit(false); // Start transaction
 
-            insertBookStmt.setString(1, bookName);
-            insertBookStmt.setString(2, author);
-            insertBookStmt.setInt(3, pages);
-            insertBookStmt.setString(4, releaseDate);
-            insertBookStmt.setString(5, imageUrl);
-            insertBookStmt.setString(6, description);
-            insertBookStmt.executeUpdate();
+            int genreId;
 
-            // Retrieve the generated book ID
-            ResultSet generatedKeys = insertBookStmt.getGeneratedKeys();
-            if (generatedKeys.next()) {
-                int bookId = generatedKeys.getInt(1);
-                System.out.println("New book added with ID: " + bookId);
-                return bookId;
-            } else {
-                throw new Exception("Failed to retrieve new book ID.");
+            // Check if genre exists
+            try (PreparedStatement findGenreStmt = connection.prepareStatement(findGenreSQL)) {
+                findGenreStmt.setString(1, genre);
+                try (ResultSet rs = findGenreStmt.executeQuery()) {
+                    if (rs.next()) {
+                        genreId = rs.getInt("genre_id");
+                    } else {
+                        // Insert new genre
+                        try (PreparedStatement insertGenreStmt = connection.prepareStatement(insertGenreSQL, Statement.RETURN_GENERATED_KEYS)) {
+                            insertGenreStmt.setString(1, genre);
+                            insertGenreStmt.executeUpdate();
+
+                            try (ResultSet generatedGenreKeys = insertGenreStmt.getGeneratedKeys()) {
+                                if (generatedGenreKeys.next()) {
+                                    genreId = generatedGenreKeys.getInt(1);
+                                } else {
+                                    throw new Exception("Failed to retrieve genre ID.");
+                                }
+                            }
+                        }
+                    }
+                }
             }
+
+            int bookId;
+
+            // Insert book
+            try (PreparedStatement insertBookStmt = connection.prepareStatement(insertBookSQL, Statement.RETURN_GENERATED_KEYS)) {
+                insertBookStmt.setString(1, bookName);
+                insertBookStmt.setString(2, author);
+                insertBookStmt.setInt(3, pages);
+                insertBookStmt.setString(4, releaseDate);
+                insertBookStmt.setString(5, imageUrl);
+                insertBookStmt.setString(6, description);
+                insertBookStmt.executeUpdate();
+
+                try (ResultSet generatedBookKeys = insertBookStmt.getGeneratedKeys()) {
+                    if (generatedBookKeys.next()) {
+                        bookId = generatedBookKeys.getInt(1);
+                    } else {
+                        throw new Exception("Failed to retrieve book ID.");
+                    }
+                }
+            }
+
+            // Link book to genre
+            try (PreparedStatement insertBookGenreStmt = connection.prepareStatement(insertBookGenreSQL)) {
+                insertBookGenreStmt.setInt(1, bookId);
+                insertBookGenreStmt.setInt(2, genreId);
+                insertBookGenreStmt.executeUpdate();
+            }
+
+            connection.commit(); // Commit transaction
+            System.out.println("New book and genre link added. Book ID: " + bookId);
+            return bookId;
 
         } catch (Exception e) {
             e.printStackTrace();
-            return -1; // Return an invalid ID if insertion fails
+            return -1; // Return invalid ID if something goes wrong
         }
     }
+
 
     public Future<Float> getRatingFromBook(Book book) {
         String sql = "SELECT AVG(rating) FROM ratings WHERE book_id = ?;";

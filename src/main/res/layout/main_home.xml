@@ -1,25 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/background_image">
 
     <!-- Text "MyBookShelf" -->
-
-    <!-- Centered Rounded White Box for ScrollView -->
-
-    <TextView
-        android:id="@+id/current_user"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hallo, Butterschnitzel"
-        android:textColor="@android:color/white"
-        android:textSize="30sp"
-        android:layout_marginBottom="8dp"
-        android:layout_alignLeft="@id/cardView"
-        android:layout_below="@+id/txtMyBookShelf" />
     <TextView
         android:id="@+id/txtMyBookShelf"
         android:layout_width="wrap_content"
@@ -28,19 +14,119 @@
         android:textColor="@android:color/white"
         android:textSize="23sp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        />
+        android:layout_marginTop="8dp" />
 
+    <!-- User Greeting and Search Button -->
+    <RelativeLayout
+        android:id="@+id/userContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtMyBookShelf"
+        android:layout_margin="8dp">
+
+        <!-- Greeting -->
+        <TextView
+            android:id="@+id/current_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hallo, Butterschnitzel"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"/>
+
+        <!-- Pop out Search Button -->
+        <ImageButton
+            android:id="@+id/btnSearchInList"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:background="@null"
+            android:src="@drawable/ic_search" />
+
+        <!-- Close Search Popup Button (Initially Hidden)-->
+        <ImageButton
+            android:id="@+id/btnCloseSearch"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:background="@null"
+            android:src="@android:drawable/ic_delete"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <!-- Search Bar with Dropdowns (Initially Hidden) -->
+    <LinearLayout
+        android:id="@+id/searchContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/userContainer"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <!-- Searching in Personal List -->
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="25pt"
+            android:layout_marginTop="16dp"
+            android:padding="4dp"
+            android:layout_alignParentStart="true"
+            android:background="@android:color/white"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:queryHint="Search books..."
+            android:iconifiedByDefault="false"
+            android:textColor="@android:color/black"/>
+
+        <!-- For Dropdowns Box -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp">
+
+                <!-- Genre Dropdown -->
+                <Spinner
+                    android:id="@+id/spinnerGenre"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:prompt= "@string/select_genre"/>
+
+                <!-- Author Dropdown -->
+                <Spinner
+                    android:id="@+id/spinnerAuthor"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:prompt="@string/select_author" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <!-- Centered Rounded White Box for ScrollView -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:layout_above="@+id/bottom_nav"
-        android:layout_below="@id/current_user"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/searchContainer"
+        android:layout_above="@id/bottom_nav"
         android:layout_margin="16dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="4dp"
-        android:background="@android:color/white" >
+        android:background="@android:color/white">
 
         <ScrollView
             android:id="@+id/scrollView"
@@ -57,8 +143,7 @@
         </ScrollView>
     </androidx.cardview.widget.CardView>
 
-    <!-- Bottom Navigation Bar with Rounded Corners -->
-
+    <!-- Bottom Navigation Bar -->
     <androidx.cardview.widget.CardView
         android:id="@+id/bottom_nav"
         android:layout_width="match_parent"

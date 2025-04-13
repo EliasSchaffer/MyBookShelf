@@ -8,7 +8,9 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.TreeSet;
 import java.util.concurrent.ExecutionException;
 
 public class User {
@@ -16,7 +18,9 @@ public class User {
     String hash_password;
     String email;
     int UID;
-    List<Book> bookList= new ArrayList<>();
+    LinkedList<Book> bookList= new LinkedList<>();
+    TreeSet<String> authorList = new TreeSet<>();
+    TreeSet<String> genreList;
     MainActivity mainActivity;
     DataBaseConnection db;
 
@@ -26,11 +30,10 @@ public class User {
         this.hash_password = hash_password;
         this.UID = UID;
         this.db = db;
+        genreList = new TreeSet<>();
+        authorList = new TreeSet<>();
 
-
-        bookList = db.getBooksFromUID(UID).get();
-        if (bookList.isEmpty()) bookList.add(new Book("test", "no",12, "no","no", "no", 1));
-
+        bookList = new LinkedList<>(db.getBooksFromUID(UID).get());
         for (Book book: bookList){
             book.setInDatabase(true);
         }
@@ -101,10 +104,28 @@ public class User {
         Toast.makeText(main, "An Error occurred, please try again later or reload the site", Toast.LENGTH_SHORT).show();
     }
 
+    public TreeSet<String> getAuthors(){
+        for (Book book : bookList) {
+            authorList.add(book.getAuthor());
+        }
+        return authorList;
+    }
+
+    public TreeSet<String> getGenres(){
+        for (Book book : bookList) {
+            String genre = book.getGenre();
+            if (genre != null) {
+                genreList.add(genre);
+            }
+        }
+        return genreList;
+    }
+
 
     public int getUid() {
         return UID;
     }
 }
+
 
 

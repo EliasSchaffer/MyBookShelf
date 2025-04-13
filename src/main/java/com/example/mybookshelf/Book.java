@@ -3,6 +3,7 @@ package com.example.mybookshelf;
 import java.util.Date;
 
 public class Book {
+    private String genre;
     private String name;
     private String author;
     private int pages;
@@ -19,6 +20,10 @@ public class Book {
         this.author = author;
     }
 
+    public String getGenre() {
+        return genre;
+    }
+
     public int getId() {
         return id;
     }
@@ -31,7 +36,7 @@ public class Book {
         this.inDatabase = inDatabase;
     }
 
-    public Book(String name, String release_date, int pages, String author, String image_url, String description, int id) {
+    public Book(String name, String release_date, int pages, String author, String image_url, String description, int id, String genre) {
         this.name = name;
         this.release_date = release_date;
         this.pages = pages;
@@ -41,14 +46,15 @@ public class Book {
         this.id = id;
     }
 
-    public Book(String name, String release_date, int pages, String author, String image_url, String description) {
+
+    public Book(String name,String release_date , int pages,String author , String image_url, String description, String genre) {
         this.name = name;
         this.release_date = release_date;
         this.pages = pages;
         this.author = author;
         this.image_url = image_url;
         this.description = description;
-        this.id = id;
+        this.genre = genre;
     }
 
     public Book(String name, int pages) {
@@ -86,5 +92,13 @@ public class Book {
 
     public String getReleaseDate() {
         return release_date;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void setRelease_date(String release_date) {
+        this.release_date = release_date;
     }
 }
