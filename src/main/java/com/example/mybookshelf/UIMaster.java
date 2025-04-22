@@ -3,6 +3,7 @@ package com.example.mybookshelf;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.media.Image;
+import android.os.Build;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -10,17 +11,20 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.GridLayout;
+import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.SearchView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -31,6 +35,7 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.solver.ArrayLinkedVariables;
 import androidx.recyclerview.widget.AsyncListDiffer;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.github.mikephil.charting.charts.BarChart;
@@ -79,6 +84,8 @@ public class UIMaster {
     private User logedindUser;
     private Map<View, Book> bookViewMap;
     private final ExecutorService executorService = Executors.newSingleThreadExecutor();
+    private String AIprompt = "";
+    private BookRecommendationFlow brf;
 
 
     public UIMaster(MainActivity main){
@@ -561,6 +568,10 @@ public class UIMaster {
         ImageView imgCover = mainActivity.findViewById(R.id.imgCover);
         ImageButton btnPopup = mainActivity.findViewById(R.id.btnPopup);
         CardView popupWindow = mainActivity.findViewById(R.id.popupWindow);
+        GridLayout chat = mainActivity.findViewById(R.id.grdChat);
+        brf = new BookRecommendationFlow(mainActivity, this, book.getName());
+
+
         nav_StatsBtn = mainActivity.findViewById(R.id.nav_stats);
         nav_StatsBtn.setOnClickListener(v -> setupLineChart());
 
@@ -593,28 +604,43 @@ public class UIMaster {
 
 
                 RelativeLayout box = mainActivity.findViewById(R.id.inputBox);
-                //box.removeAllViews();
+                box.removeAllViews(); // Clear first
+                chat.removeAllViews();
+
+                chat.setColumnCount(2);
 
 
-                // Create styled buttons
-                Button freshStart = new Button(mainActivity);
-                freshStart.setText("Fresh Start");
-                Button bookBased = new Button(mainActivity);
-                bookBased.setText("Book Based");
+                brf.addChatMessage("Would you like recommendations based on the book you are currently watching or a completly fresh start?", "question");
 
-                // Add to container
-                box.addView(freshStart);
-                box.addView(bookBased);
+                GridLayout layout = new GridLayout(mainActivity);
+                layout.setColumnCount(2);
+                layout.setRowCount(1);
 
-                // Set click listeners
-                freshStart.setOnClickListener(v1 -> handleAI("freshStart"));
-                bookBased.setOnClickListener(v1 -> handleAI("bookBased"));
+                // Add styled buttons
+                layout.addView(createStyledGridButton("Fresh Start", v1 -> {
+                    brf.addChatMessage("Fresh Start", "user");
+                    brf.handleAI("freshStart");
+                }));
+                layout.addView(createStyledGridButton("Book Based", v1 -> {
+                    brf.addChatMessage("Book Based", "user");
+                    brf.handleAI("bookBased");
+                }));
+
+                // Stick layout to bottom
+                RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT
+                );
+                layoutParams.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
+                layout.setLayoutParams(layoutParams);
+
+                box.addView(layout);
+
+
+
             }
 
         });
-
-
-
 
         txtAutor.setText(book.getAuthor());
         txtTitle.setText(book.getName());
@@ -740,47 +766,6 @@ public class UIMaster {
         spinnerGenre.setAdapter(genreAdapter);
     }
 
-    private void handleAI(String pathType) {
-        RelativeLayout box = mainActivity.findViewById(R.id.inputBox);
-        box.removeAllViews();  // Clear previous content
-
-        // UI changes must run on the UI thread
-        mainActivity.runOnUiThread(() -> {
-            // Create a GridLayout for buttons
-            GridLayout grid = new GridLayout(mainActivity);
-            grid.setColumnCount(2);
-            grid.setLayoutParams(new RelativeLayout.LayoutParams(
-                    ViewGroup.LayoutParams.MATCH_PARENT,
-                    ViewGroup.LayoutParams.WRAP_CONTENT));
-            grid.setPadding(40, 40, 40, 40);
-
-            // Add question at the top
-            TextView question = new TextView(mainActivity);
-            question.setTextSize(16);
-            question.setTextColor(Color.BLACK);
-            question.setPadding(20, 20, 20, 30);
-
-            if (pathType.equals("bookBased")) {
-                question.setText("What did you like most about the book?");
-                grid.addView(createStyledGridButton("Characters", v -> handleAnswer("Characters")));
-                grid.addView(createStyledGridButton("Plot", v -> handleAnswer("Plot")));
-                grid.addView(createStyledGridButton("Pacing", v -> handleAnswer("Pacing")));
-                grid.addView(createStyledGridButton("Writing style", v -> handleAnswer("Writing style")));
-            } else if (pathType.equals("freshStart")) {
-                question.setText("What kind of books are you into right now?");
-                grid.addView(createStyledGridButton("Romance", v -> handleAnswer("Romance")));
-                grid.addView(createStyledGridButton("Mystery", v -> handleAnswer("Mystery")));
-                grid.addView(createStyledGridButton("Fantasy", v -> handleAnswer("Fantasy")));
-                grid.addView(createStyledGridButton("Sci-Fi", v -> handleAnswer("Sci-Fi")));
-                grid.addView(createStyledGridButton("Drama", v -> handleAnswer("Drama")));
-            }
-
-            // Add question and grid to box
-            box.addView(question);
-            box.addView(grid);
-        });
-    }
-
     private Button createStyledGridButton(String text, View.OnClickListener listener) {
         Button btn = new Button(mainActivity);
         btn.setText(text);
@@ -799,35 +784,4 @@ public class UIMaster {
         btn.setOnClickListener(listener);
         return btn;
     }
-
-    private void handleAnswer(String selectedOption) {
-        Log.d("AIInput", "User chose: " + selectedOption);
-        mainActivity.runOnUiThread(() -> {
-            Toast.makeText(mainActivity, "You chose: " + selectedOption, Toast.LENGTH_SHORT).show();
-            // Optional: show next step here
-        });
-    }
-
-
-    private Button createStyledGridButton(String text) {
-        Button btn = new Button(mainActivity);
-        btn.setText(text);
-        btn.setBackgroundColor(Color.parseColor("#6200EE")); // Purple background
-        btn.setTextColor(Color.WHITE);
-        btn.setTextSize(16f);
-
-        GridLayout.LayoutParams params = new GridLayout.LayoutParams();
-        params.width = 0;
-        params.height = ViewGroup.LayoutParams.WRAP_CONTENT;
-        params.columnSpec = GridLayout.spec(GridLayout.UNDEFINED, 1f);
-        params.setMargins(20, 20, 20, 20); // margin around each button
-
-        btn.setLayoutParams(params);
-        btn.setPadding(30, 30, 30, 30);
-        return btn;
-    }
-
-
-
-
 }
