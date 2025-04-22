@@ -15,6 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.GridLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -23,11 +24,13 @@ import android.widget.RelativeLayout;
 import android.widget.SearchView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.solver.ArrayLinkedVariables;
+import androidx.recyclerview.widget.AsyncListDiffer;
 
 import com.bumptech.glide.Glide;
 import com.github.mikephil.charting.charts.BarChart;
@@ -50,6 +53,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 import com.github.mikephil.charting.formatter.ValueFormatter;
+import com.google.android.material.textfield.TextInputEditText;
 
 import org.w3c.dom.Text;
 
@@ -74,6 +78,8 @@ public class UIMaster {
     private DataBaseConnection db;
     private User logedindUser;
     private Map<View, Book> bookViewMap;
+    private final ExecutorService executorService = Executors.newSingleThreadExecutor();
+
 
     public UIMaster(MainActivity main){
         booksAPI = new BooksAPI();
@@ -492,9 +498,9 @@ public class UIMaster {
                 LinearLayout bookContainer = mainActivity.findViewById(R.id.bookContainer);
                 nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
                 nav_StatsBtn = mainActivity.findViewById(R.id.nav_stats);
+                nav_StatsBtn.setOnClickListener(v -> setupLineChart());
                 ImageButton searchBtn = mainActivity.findViewById(R.id.btnSearchInList);
                 nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
-                nav_StatsBtn.setOnClickListener(v -> setupLineChart());
                 searchBtn.setOnClickListener(v -> handleUserSearch());
 
                 TextView user = mainActivity.findViewById(R.id.current_user);
@@ -556,14 +562,59 @@ public class UIMaster {
         ImageView imgCover = mainActivity.findViewById(R.id.imgCover);
         ImageButton btnPopup = mainActivity.findViewById(R.id.btnPopup);
         CardView popupWindow = mainActivity.findViewById(R.id.popupWindow);
+        nav_StatsBtn = mainActivity.findViewById(R.id.nav_stats);
+        nav_StatsBtn.setOnClickListener(v -> setupLineChart());
 
         btnPopup.setOnClickListener(v -> {
             if (popupWindow.getVisibility() == View.VISIBLE) {
-                popupWindow.setVisibility(View.GONE);
+                popupWindow.animate()
+                        .scaleX(0f)
+                        .scaleY(0f)
+                        .alpha(0f)
+                        .setDuration(300)
+                        .withEndAction(() -> popupWindow.setVisibility(View.GONE))
+                        .start();
             } else {
+                // Set pivot to bottom right
+                popupWindow.setPivotX(popupWindow.getWidth());
+                popupWindow.setPivotY(popupWindow.getHeight());
+
+                popupWindow.setScaleX(0f);
+                popupWindow.setScaleY(0f);
+                popupWindow.setAlpha(0f);
                 popupWindow.setVisibility(View.VISIBLE);
+
+                popupWindow.animate()
+                        .scaleX(1f)
+                        .scaleY(1f)
+                        .alpha(1f)
+                        .setDuration(300)
+                        .start();
+
+
+
+                RelativeLayout box = mainActivity.findViewById(R.id.inputBox);
+                //box.removeAllViews();
+
+
+                // Create styled buttons
+                Button freshStart = new Button(mainActivity);
+                freshStart.setText("Fresh Start");
+                Button bookBased = new Button(mainActivity);
+                bookBased.setText("Book Based");
+
+                // Add to container
+                box.addView(freshStart);
+                box.addView(bookBased);
+
+                // Set click listeners
+                freshStart.setOnClickListener(v1 -> handleAI("freshStart"));
+                bookBased.setOnClickListener(v1 -> handleAI("bookBased"));
             }
+
         });
+
+
 
 
         txtAutor.setText(book.getAuthor());
@@ -689,4 +740,95 @@ public class UIMaster {
         spinnerAuthor.setAdapter(authorAdapter);
         spinnerGenre.setAdapter(genreAdapter);
     }
+
+    private void handleAI(String pathType) {
+        RelativeLayout box = mainActivity.findViewById(R.id.inputBox);
+        box.removeAllViews();  // Clear previous content
+
+        // UI changes must run on the UI thread
+        mainActivity.runOnUiThread(() -> {
+            // Create a GridLayout for buttons
+            GridLayout grid = new GridLayout(mainActivity);
+            grid.setColumnCount(2);
+            grid.setLayoutParams(new RelativeLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT));
+            grid.setPadding(40, 40, 40, 40);
+
+            // Add question at the top
+            TextView question = new TextView(mainActivity);
+            question.setTextSize(16);
+            question.setTextColor(Color.BLACK);
+            question.setPadding(20, 20, 20, 30);
+
+            if (pathType.equals("bookBased")) {
+                question.setText("What did you like most about the book?");
+                grid.addView(createStyledGridButton("Characters", v -> handleAnswer("Characters")));
+                grid.addView(createStyledGridButton("Plot", v -> handleAnswer("Plot")));
+                grid.addView(createStyledGridButton("Pacing", v -> handleAnswer("Pacing")));
+                grid.addView(createStyledGridButton("Writing style", v -> handleAnswer("Writing style")));
+            } else if (pathType.equals("freshStart")) {
+                question.setText("What kind of books are you into right now?");
+                grid.addView(createStyledGridButton("Romance", v -> handleAnswer("Romance")));
+                grid.addView(createStyledGridButton("Mystery", v -> handleAnswer("Mystery")));
+                grid.addView(createStyledGridButton("Fantasy", v -> handleAnswer("Fantasy")));
+                grid.addView(createStyledGridButton("Sci-Fi", v -> handleAnswer("Sci-Fi")));
+                grid.addView(createStyledGridButton("Drama", v -> handleAnswer("Drama")));
+            }
+
+            // Add question and grid to box
+            box.addView(question);
+            box.addView(grid);
+        });
+    }
+
+    private Button createStyledGridButton(String text, View.OnClickListener listener) {
+        Button btn = new Button(mainActivity);
+        btn.setText(text);
+        btn.setBackgroundColor(Color.parseColor("#6200EE"));
+        btn.setTextColor(Color.WHITE);
+        btn.setTextSize(16f);
+
+        GridLayout.LayoutParams params = new GridLayout.LayoutParams();
+        params.width = 0;
+        params.height = ViewGroup.LayoutParams.WRAP_CONTENT;
+        params.columnSpec = GridLayout.spec(GridLayout.UNDEFINED, 1f);
+        params.setMargins(20, 20, 20, 20);
+
+        btn.setLayoutParams(params);
+        btn.setPadding(30, 30, 30, 30);
+        btn.setOnClickListener(listener);
+        return btn;
+    }
+
+    private void handleAnswer(String selectedOption) {
+        Log.d("AIInput", "User chose: " + selectedOption);
+        mainActivity.runOnUiThread(() -> {
+            Toast.makeText(mainActivity, "You chose: " + selectedOption, Toast.LENGTH_SHORT).show();
+            // Optional: show next step here
+        });
+    }
+
+
+    private Button createStyledGridButton(String text) {
+        Button btn = new Button(mainActivity);
+        btn.setText(text);
+        btn.setBackgroundColor(Color.parseColor("#6200EE")); // Purple background
+        btn.setTextColor(Color.WHITE);
+        btn.setTextSize(16f);
+
+        GridLayout.LayoutParams params = new GridLayout.LayoutParams();
+        params.width = 0;
+        params.height = ViewGroup.LayoutParams.WRAP_CONTENT;
+        params.columnSpec = GridLayout.spec(GridLayout.UNDEFINED, 1f);
+        params.setMargins(20, 20, 20, 20); // margin around each button
+
+        btn.setLayoutParams(params);
+        btn.setPadding(30, 30, 30, 30);
+        return btn;
+    }
+
+
+
+
 }

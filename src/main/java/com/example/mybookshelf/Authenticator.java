@@ -30,7 +30,7 @@ public class Authenticator {
                 // Get the User object and check login
                 int id = db.checkLogin(attempt.getUser(), attempt.getPassword().toCharArray()).get(); // Blocking wait
 
-                if (id != 0) {
+                if (id != -1) {
                     // Login successful
                     postToMain(() -> {
                         showDebugPopup("Login Successful!");
