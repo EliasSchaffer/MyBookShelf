@@ -26,6 +26,7 @@ import android.widget.TextView;
 
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.solver.ArrayLinkedVariables;
 
 import com.bumptech.glide.Glide;
@@ -248,13 +249,15 @@ public class UIMaster {
         // Add the vertical container (with all content) inside the book box
         bookBox.addView(verticalContainer);
 
+        bookBox.setOnClickListener(v -> {
+            navigateToDetails(book);
+        });
+
         // Finally, add the book box to the main container
         container.addView(bookBox);
         bookViewMap.put(bookBox, book);
 
-        container.setOnClickListener(v -> {
-            navigateToDetails(book);
-        });
+
     }
 
     @NonNull
@@ -551,6 +554,17 @@ public class UIMaster {
         TextView txtGenre = mainActivity.findViewById(R.id.txtGenre);
         RatingBar rbRating = mainActivity.findViewById(R.id.rbRating);
         ImageView imgCover = mainActivity.findViewById(R.id.imgCover);
+        ImageButton btnPopup = mainActivity.findViewById(R.id.btnPopup);
+        CardView popupWindow = mainActivity.findViewById(R.id.popupWindow);
+
+        btnPopup.setOnClickListener(v -> {
+            if (popupWindow.getVisibility() == View.VISIBLE) {
+                popupWindow.setVisibility(View.GONE);
+            } else {
+                popupWindow.setVisibility(View.VISIBLE);
+            }
+        });
+
 
         txtAutor.setText(book.getAuthor());
         txtTitle.setText(book.getName());
