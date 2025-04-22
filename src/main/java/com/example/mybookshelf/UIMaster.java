@@ -594,7 +594,7 @@ public class UIMaster {
 
 
                 RelativeLayout box = mainActivity.findViewById(R.id.inputBox);
-                box.removeAllViews();
+                //box.removeAllViews();
 
 
                 // Create styled buttons
