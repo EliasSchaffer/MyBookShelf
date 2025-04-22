@@ -26,6 +26,7 @@ import android.widget.TextView;
 
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.constraintlayout.solver.ArrayLinkedVariables;
 
 import com.bumptech.glide.Glide;
@@ -551,6 +552,17 @@ public class UIMaster {
         TextView txtGenre = mainActivity.findViewById(R.id.txtGenre);
         RatingBar rbRating = mainActivity.findViewById(R.id.rbRating);
         ImageView imgCover = mainActivity.findViewById(R.id.imgCover);
+        ImageButton btnPopup = mainActivity.findViewById(R.id.btnPopup);
+        CardView popupWindow = mainActivity.findViewById(R.id.popupWindow);
+
+        btnPopup.setOnClickListener(v -> {
+            if (popupWindow.getVisibility() == View.VISIBLE) {
+                popupWindow.setVisibility(View.GONE);
+            } else {
+                popupWindow.setVisibility(View.VISIBLE);
+            }
+        });
+
 
         txtAutor.setText(book.getAuthor());
         txtTitle.setText(book.getName());
