@@ -152,7 +152,7 @@
         app:cardElevation="0dp"
         app:cardBackgroundColor="@color/popup"
         android:padding="16dp"
-        android:visibility="">
+        android:visibility="gone">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -195,13 +195,16 @@
                     android:padding="12dp"
                     android:layout_margin="8dp"/>
 
-                <Button
+                <ImageButton
                     android:id="@+id/btnsend"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    />
+                    android:background="@drawable/ic_round_button_aichat"
+                    android:contentDescription="Send"
+                    app:srcCompat="@drawable/ic_arrow_right" />
+
             </RelativeLayout>
 
 
