@@ -185,13 +185,12 @@ public class UIMaster {
             book.setRelease_date(releaseDate);
         }
 
+
         // Create a TextView for the book details
         TextView bookDetails = new TextView(mainActivity);
         StringBuilder details = new StringBuilder();
-        details.append("Name: ").append(TextUtils.isEmpty(book.getName()) ? "Unknown" : book.getName()).append("\n");
+        details.append(TextUtils.isEmpty(book.getName()) ? "Unknown" : book.getName()).append("\n");
         details.append("Author: ").append(TextUtils.isEmpty(book.getAuthor()) ? "Unknown" : book.getAuthor()).append("\n");
-        details.append("Pages: ").append(book.getPages() > 0 ? book.getPages() : "Unknown").append("\n");
-        details.append("Release Date: ").append(book.getRelease_date() != null ? book.getRelease_date() : "Unknown");
 
         bookDetails.setText(details.toString());
         bookDetails.setTextColor(Color.BLACK);
