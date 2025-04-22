@@ -249,13 +249,15 @@ public class UIMaster {
         // Add the vertical container (with all content) inside the book box
         bookBox.addView(verticalContainer);
 
+        bookBox.setOnClickListener(v -> {
+            navigateToDetails(book);
+        });
+
         // Finally, add the book box to the main container
         container.addView(bookBox);
         bookViewMap.put(bookBox, book);
 
-        container.setOnClickListener(v -> {
-            navigateToDetails(book);
-        });
+
     }
 
     @NonNull
