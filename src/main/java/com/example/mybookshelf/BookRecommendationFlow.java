@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class BookRecommendationFlow implements ApiResponseCallback{
+public class BookRecommendationFlow{
 
     private MainActivity mainActivity;
     private UIMaster uiMaster;
@@ -39,16 +39,6 @@ public class BookRecommendationFlow implements ApiResponseCallback{
 
         // UI changes must run on the UI thread
         mainActivity.runOnUiThread(() -> {
-            // Create a GridLayout for buttons
-            GridLayout grid = new GridLayout(mainActivity);
-            grid.setColumnCount(2);
-            grid.setLayoutParams(new RelativeLayout.LayoutParams(
-                    ViewGroup.LayoutParams.MATCH_PARENT,
-                    ViewGroup.LayoutParams.WRAP_CONTENT));
-            grid.setPadding(40, 40, 40, 40);
-
-            // Add question at the top
-
 
             if (pathType.equals("bookBased")) {
                 showBookBasedStep1();
@@ -352,6 +342,7 @@ public class BookRecommendationFlow implements ApiResponseCallback{
                     // Update UI if needed
                     //TODO Add parsing for the AI response
                     Toast.makeText(mainActivity, "AI Suggestion: " + response, Toast.LENGTH_LONG).show();
+                    addChatMessage(response, "question");
 
                 });
             }
@@ -432,13 +423,4 @@ public class BookRecommendationFlow implements ApiResponseCallback{
         chat.addView(messageView, params);
     }
 
-    @Override
-    public void onSuccess(String response) {
-
-    }
-
-    @Override
-    public void onFailure(String error) {
-
-    }
 }
