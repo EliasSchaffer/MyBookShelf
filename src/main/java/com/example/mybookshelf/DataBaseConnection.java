@@ -733,9 +733,7 @@ public class DataBaseConnection {
                         goals.add(goal);
                     }
                 }
-
                 callback.accept(goals);
-
             } catch (SQLException e) {
                 System.err.println("Error fetching goals: " + e.getMessage());
                 e.printStackTrace();
