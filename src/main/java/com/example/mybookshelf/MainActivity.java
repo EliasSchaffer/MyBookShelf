@@ -28,6 +28,8 @@ import androidx.core.content.ContextCompat;
 
 import com.example.mybookshelf.apis.AiAPI;
 import com.example.mybookshelf.apis.BooksAPI;
+import com.example.mybookshelf.dataClass.Book;
+import com.example.mybookshelf.dataClass.User;
 
 import java.sql.SQLException;
 import java.util.concurrent.ExecutionException;

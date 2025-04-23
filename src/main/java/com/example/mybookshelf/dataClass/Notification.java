@@ -1,4 +1,4 @@
-package com.example.mybookshelf;
+package com.example.mybookshelf.dataClass;
 
 public class Notification {
     private int id;

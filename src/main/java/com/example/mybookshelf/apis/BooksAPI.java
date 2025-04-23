@@ -4,7 +4,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 
-import com.example.mybookshelf.Book;
+import com.example.mybookshelf.dataClass.Book;
 
 import java.io.InputStreamReader;
 import java.io.IOException;

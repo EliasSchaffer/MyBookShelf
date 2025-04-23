@@ -31,6 +31,8 @@ import androidx.cardview.widget.CardView;
 import com.bumptech.glide.Glide;
 import com.example.mybookshelf.apis.AiAPI;
 import com.example.mybookshelf.apis.BooksAPI;
+import com.example.mybookshelf.dataClass.Book;
+import com.example.mybookshelf.dataClass.User;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;

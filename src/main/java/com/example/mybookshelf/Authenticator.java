@@ -6,11 +6,11 @@ import android.os.Handler;
 import android.os.Looper;
 import android.widget.Toast;
 
+import com.example.mybookshelf.dataClass.User;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.function.BiConsumer;
-
-import at.favre.lib.crypto.bcrypt.BCrypt;
 
 public class Authenticator {
     private final DataBaseConnection db;
