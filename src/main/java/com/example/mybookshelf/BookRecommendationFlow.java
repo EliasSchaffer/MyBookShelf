@@ -12,6 +12,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.mybookshelf.apis.AiAPI;
+
 import java.util.ArrayList;
 
 public class BookRecommendationFlow{

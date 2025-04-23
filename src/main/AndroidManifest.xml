@@ -21,6 +21,19 @@
             </intent-filter>
         </activity>
 
+        <service
+            android:name=".localServer.LocalServerService"
+            android:foregroundServiceType="connectedDevice" />
+
+        <receiver
+            android:name=".localServer.BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
     </application>
 
 </manifest>

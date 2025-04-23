@@ -1,8 +1,11 @@
-package com.example.mybookshelf;
+package com.example.mybookshelf.apis;
 
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
+
+import com.example.mybookshelf.Book;
+
 import java.io.InputStreamReader;
 import java.io.IOException;
 import java.net.HttpURLConnection;

@@ -21,6 +21,7 @@ import java.sql.SQLException;
 import java.sql.SQLTimeoutException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Enumeration;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -591,4 +592,83 @@ public class DataBaseConnection {
             }
         });
     }
+
+    public void addNotification(User user, String message) {
+        executorService.execute(() -> {
+            String sql = "INSERT INTO notifications (user_id, message, is_read) VALUES (?, ?, ?)";
+
+            try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                 PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+
+                preparedStatement.setInt(1, user.getUid());
+                preparedStatement.setString(2, message);
+                preparedStatement.setBoolean(3, false);
+
+                int rowsInserted = preparedStatement.executeUpdate();
+
+                if (rowsInserted > 0) {
+                    System.out.println("Notification added successfully.");
+                } else {
+                    System.out.println("No notification was added.");
+                }
+            } catch (SQLException e) {
+                System.err.println("Error adding notification: " + e.getMessage());
+                e.printStackTrace();
+            }
+        });
+    }
+
+    public void removeNotification(int notificationId, int userId) {
+        executorService.execute(() -> {
+            String sql = "DELETE FROM notifications WHERE notification_id = ? AND user_id = ?";
+
+            try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                 PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+
+                preparedStatement.setInt(1, notificationId);
+                preparedStatement.setInt(2, userId);
+
+                int rowsDeleted = preparedStatement.executeUpdate();
+
+                if (rowsDeleted > 0) {
+                    System.out.println("Notification removed successfully.");
+                } else {
+                    System.out.println("No matching notification found to remove.");
+                }
+            } catch (SQLException e) {
+                System.err.println("Error removing notification: " + e.getMessage());
+                e.printStackTrace();
+            }
+        });
+    }
+
+    public void getAllNotificationsForUser(int userId, Consumer<List<Notification>> callback) {
+        executorService.execute(() -> {
+            String sql = "SELECT notification_id, user_id, message, is_read, created_at FROM notifications WHERE user_id = ? ORDER BY created_at DESC";
+            List<Notification> notifications = new ArrayList<>();
+
+            try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                 PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+
+                preparedStatement.setInt(1, userId);
+
+                try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                    while (resultSet.next()) {
+                        Notification notification = new Notification(resultSet.getInt("notification_id"), resultSet.getString("message"));
+                        notifications.add(notification);
+                    }
+                }
+
+                // Pass the list to the callback (e.g., update UI)
+                callback.accept(notifications);
+
+            } catch (SQLException e) {
+                System.err.println("Error fetching notifications: " + e.getMessage());
+                e.printStackTrace();
+                callback.accept(Collections.emptyList());
+            }
+        });
+    }
+
+
 }
