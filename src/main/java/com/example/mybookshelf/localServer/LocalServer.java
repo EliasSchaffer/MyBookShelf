@@ -1,11 +1,11 @@
 package com.example.mybookshelf.localServer;
 
-import static androidx.core.content.ContextCompat.getSystemService;
-
 import android.app.NotificationManager;
 import android.content.Context;
 
 import androidx.core.app.NotificationCompat;
+
+import com.example.mybookshelf.notifications.NotificationChannelManager;
 
 import fi.iki.elonen.NanoHTTPD;
 
@@ -29,17 +29,19 @@ public class LocalServer extends NanoHTTPD {
     }
 
     private void sendNotification(String title, String message) {
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(context.getApplicationContext(), "default")
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(
+                context.getApplicationContext(),
+                NotificationChannelManager.DEFAULT_CHANNEL_ID)
                 .setSmallIcon(android.R.drawable.ic_dialog_info)
                 .setContentTitle(title)
                 .setContentText(message)
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setAutoCancel(true);
 
-        NotificationManager notificationManager = (NotificationManager) getSystemService(context, NotificationManager.class);
+        NotificationManager notificationManager =
+                (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
         if (notificationManager != null) {
             notificationManager.notify(1002, builder.build());
         }
     }
 }
-
