@@ -11,6 +11,10 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
+import com.example.mybookshelf.R;
+
+import java.util.Calendar;
+
 public class NotificationReceiver extends BroadcastReceiver {
     private static final String TAG = "NotificationReceiver";
 
@@ -23,9 +27,29 @@ public class NotificationReceiver extends BroadcastReceiver {
         // Show the notification
         showNotification(context, title, message);
 
-        // If this is a monthly notification, reschedule it for next month
-        if ("monthly".equals(notificationType)) {
-            rescheduleMonthlyNotification(context, intent);
+        // Reschedule the notification based on its type
+        if (notificationType != null) {
+            switch (notificationType) {
+                case "daily":
+                    int dailyHour = intent.getIntExtra("hour", 20);
+                    int dailyMinute = intent.getIntExtra("minute", 0);
+                    NotificationScheduler.scheduleDailyNotification(context, dailyHour, dailyMinute, message);
+                    break;
+
+                case "weekly":
+                    int weeklyDayOfWeek = intent.getIntExtra("dayOfWeek", Calendar.SUNDAY);
+                    int weeklyHour = intent.getIntExtra("hour", 18);
+                    int weeklyMinute = intent.getIntExtra("minute", 0);
+                    NotificationScheduler.scheduleWeeklyNotification(context, weeklyDayOfWeek, weeklyHour, weeklyMinute, message);
+                    break;
+
+                case "monthly":
+                    int monthlyDay = intent.getIntExtra("dayOfMonth", 1);
+                    int monthlyHour = intent.getIntExtra("hour", 10);
+                    int monthlyMinute = intent.getIntExtra("minute", 0);
+                    NotificationScheduler.scheduleMonthlyNotification(context, monthlyDay, monthlyHour, monthlyMinute, message);
+                    break;
+            }
         }
     }
 
@@ -33,29 +57,24 @@ public class NotificationReceiver extends BroadcastReceiver {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(
                 context,
                 NotificationChannelManager.DEFAULT_CHANNEL_ID)
-                .setSmallIcon(android.R.drawable.ic_dialog_info)
+                .setSmallIcon(R.drawable.icon)
                 .setContentTitle(title != null ? title : "Reminder")
-                .setContentText(message != null ? message : "You have a task.")
-                .setPriority(NotificationCompat.PRIORITY_HIGH);
+                .setContentText(message != null ? message : "Time to check your books!")
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setAutoCancel(true);
 
-        NotificationManagerCompat manager = NotificationManagerCompat.from(context);
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
+
+        // Check if we have notification permission (required for Android 13+)
         if (ActivityCompat.checkSelfPermission(context, Manifest.permission.POST_NOTIFICATIONS)
                 != PackageManager.PERMISSION_GRANTED) {
             Log.w(TAG, "Notification permission not granted");
             return;
         }
 
-        manager.notify(101, builder.build());
-    }
-
-    private void rescheduleMonthlyNotification(Context context, Intent receivedIntent) {
-        // Extract parameters needed to reschedule
-        int dayOfMonth = receivedIntent.getIntExtra("dayOfMonth", 1);
-        int hours = receivedIntent.getIntExtra("hours", 10);
-        int minutes = receivedIntent.getIntExtra("minutes", 0);
-        String message = receivedIntent.getStringExtra("message");
-
-        // Reschedule for next month
-        NotificationScheduler.scheduleMonthlyNotification(context, dayOfMonth, hours, minutes, message);
+        // Use a hashcode of the title and message for a unique notification ID
+        int notificationId = (title + message).hashCode();
+        notificationManager.notify(notificationId, builder.build());
     }
 }
+

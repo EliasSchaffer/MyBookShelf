@@ -71,6 +71,8 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
             }
         }
 
+
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             AlarmManager am = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
             if (!am.canScheduleExactAlarms()) {
@@ -92,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
 
         NotificationChannelManager.createNotificationChannels(this);
 
-        NotificationScheduler.scheduleDailyNotification(this, 7, 50,"test");
+        NotificationScheduler.scheduleDailyNotification(this, 8, 47,"test");
 
 
         try {
