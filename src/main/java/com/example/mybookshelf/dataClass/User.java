@@ -1,4 +1,4 @@
-package com.example.mybookshelf;
+package com.example.mybookshelf.dataClass;
 
 import android.content.Context;
 import android.view.View;
@@ -6,7 +6,9 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import java.util.ArrayList;
+import com.example.mybookshelf.DataBaseConnection;
+import com.example.mybookshelf.MainActivity;
+
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;

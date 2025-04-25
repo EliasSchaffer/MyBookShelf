@@ -5,6 +5,10 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.util.Log;
 
+import com.example.mybookshelf.dataClass.Book;
+import com.example.mybookshelf.dataClass.Goal;
+import com.example.mybookshelf.dataClass.Notification;
+import com.example.mybookshelf.dataClass.User;
 import com.github.mikephil.charting.data.BarEntry;
 
 import java.io.File;
@@ -21,16 +25,11 @@ import java.sql.SQLException;
 import java.sql.SQLTimeoutException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Enumeration;
+import java.util.Collections;
 import java.util.List;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.CompletionException;
-import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
 import java.util.function.Consumer;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
@@ -588,6 +587,157 @@ public class DataBaseConnection {
             } catch (SQLException e) {
                 e.printStackTrace();
                 return "Error retrieving note"; // Ensure return in case of an exception
+            }
+        });
+    }
+
+    public void addNotification(User user, String message) {
+        executorService.execute(() -> {
+            String sql = "INSERT INTO notifications (user_id, message, is_read) VALUES (?, ?, ?)";
+
+            try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                 PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+
+                preparedStatement.setInt(1, user.getUid());
+                preparedStatement.setString(2, message);
+                preparedStatement.setBoolean(3, false);
+
+                int rowsInserted = preparedStatement.executeUpdate();
+
+                if (rowsInserted > 0) {
+                    System.out.println("Notification added successfully.");
+                } else {
+                    System.out.println("No notification was added.");
+                }
+            } catch (SQLException e) {
+                System.err.println("Error adding notification: " + e.getMessage());
+                e.printStackTrace();
+            }
+        });
+    }
+
+    public void removeNotification(int notificationId, int userId) {
+        executorService.execute(() -> {
+            String sql = "DELETE FROM notifications WHERE notification_id = ? AND user_id = ?";
+
+            try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                 PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+
+                preparedStatement.setInt(1, notificationId);
+                preparedStatement.setInt(2, userId);
+
+                int rowsDeleted = preparedStatement.executeUpdate();
+
+                if (rowsDeleted > 0) {
+                    System.out.println("Notification removed successfully.");
+                } else {
+                    System.out.println("No matching notification found to remove.");
+                }
+            } catch (SQLException e) {
+                System.err.println("Error removing notification: " + e.getMessage());
+                e.printStackTrace();
+            }
+        });
+    }
+
+    public void getAllNotificationsForUser(int userId, Consumer<List<Notification>> callback) {
+        executorService.execute(() -> {
+            String sql = "SELECT notification_id, user_id, message, is_read, created_at FROM notifications WHERE user_id = ? ORDER BY created_at DESC";
+            List<Notification> notifications = new ArrayList<>();
+
+            try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                 PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+
+                preparedStatement.setInt(1, userId);
+
+                try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                    while (resultSet.next()) {
+                        Notification notification = new Notification(resultSet.getInt("notification_id"), resultSet.getString("message"));
+                        notifications.add(notification);
+                    }
+                }
+
+                // Pass the list to the callback (e.g., update UI)
+                callback.accept(notifications);
+
+            } catch (SQLException e) {
+                System.err.println("Error fetching notifications: " + e.getMessage());
+                e.printStackTrace();
+                callback.accept(Collections.emptyList());
+            }
+        });
+    }
+
+    public void addGoal(Goal goal, User user) {
+        executorService.execute(() -> {
+            String sql = "INSERT INTO goals (user_id, target, progress) VALUES (?, ?, ?)";
+
+            try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                 PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+
+                preparedStatement.setInt(1, user.getUid());
+                preparedStatement.setInt(2, goal.getTarget());
+                preparedStatement.setInt(3, goal.getProgress());
+
+                int rowsInserted = preparedStatement.executeUpdate();
+
+                if (rowsInserted > 0) {
+                    System.out.println("Goal added successfully.");
+                } else {
+                    System.out.println("No goal was added.");
+                }
+            } catch (SQLException e) {
+                System.err.println("Error adding goal: " + e.getMessage());
+                e.printStackTrace();
+            }
+        });
+    }
+
+    public void removeGoal(int goalId, int userId) {
+        executorService.execute(() -> {
+            String sql = "DELETE FROM goals WHERE goal_id = ? AND user_id = ?";
+
+            try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                 PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+
+                preparedStatement.setInt(1, goalId);
+                preparedStatement.setInt(2, userId);
+
+                int rowsDeleted = preparedStatement.executeUpdate();
+
+                if (rowsDeleted > 0) {
+                    System.out.println("Goal removed successfully.");
+                } else {
+                    System.out.println("No matching goal found to remove.");
+                }
+            } catch (SQLException e) {
+                System.err.println("Error removing goal: " + e.getMessage());
+                e.printStackTrace();
+            }
+        });
+    }
+
+    public void getAllGoalsForUser(int userId, Consumer<List<Goal>> callback) {
+        executorService.execute(() -> {
+            String sql = "SELECT goal_id, user_id, target, progress, created_at FROM goals WHERE user_id = ? ORDER BY created_at DESC";
+            List<Goal> goals = new ArrayList<>();
+
+            try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                 PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+
+                preparedStatement.setInt(1, userId);
+
+                try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                    while (resultSet.next()) {
+                        Goal goal = new Goal(resultSet.getInt("goal_id"), resultSet.getInt("progress"), resultSet.getInt("target"));
+                        goals.add(goal);
+                    }
+                }
+                callback.accept(goals);
+            } catch (SQLException e) {
+                System.err.println("Error fetching goals: " + e.getMessage());
+                e.printStackTrace();
+                callback.accept(Collections.emptyList());
             }
         });
     }

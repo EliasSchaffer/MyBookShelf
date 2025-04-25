@@ -2,13 +2,16 @@ package com.example.mybookshelf;
 
 
 
-import static androidx.constraintlayout.motion.utils.Oscillator.TAG;
-
 import android.Manifest;
+import android.app.AlarmManager;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -17,7 +20,6 @@ import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,27 +29,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.security.KeyStore;
-import java.security.SecureRandom;
-import java.security.cert.Certificate;
-import java.security.cert.CertificateFactory;
-import java.sql.Connection;
-import java.sql.DriverManager;
+import com.example.mybookshelf.apis.AiAPI;
+import com.example.mybookshelf.apis.BooksAPI;
+import com.example.mybookshelf.dataClass.Book;
+import com.example.mybookshelf.dataClass.User;
+import com.example.mybookshelf.notifications.NotificationChannelManager;
+import com.example.mybookshelf.notifications.NotificationScheduler;
+
 import java.sql.SQLException;
 import java.util.concurrent.ExecutionException;
-import java.util.function.BiConsumer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import javax.net.ssl.HttpsURLConnection;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.TrustManager;
-import javax.net.ssl.TrustManagerFactory;
 
 
 public class MainActivity extends AppCompatActivity implements ApiResponseCallback {
@@ -63,7 +55,6 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
     private Button goToStarting;
     private User logedindUser;
     DataBaseConnection db;
-
     private static final int REQUEST_CODE_POST_NOTIFICATIONS = 1001;
 
     @Override
@@ -79,6 +70,31 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
                         REQUEST_CODE_POST_NOTIFICATIONS);
             }
         }
+
+
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            AlarmManager am = (AlarmManager) this.getSystemService(Context.ALARM_SERVICE);
+            if (!am.canScheduleExactAlarms()) {
+                Toast.makeText(this, "Schedule exact alarms permission not granted", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM);
+                this.startActivity(intent);
+                return;
+            }
+        }
+
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel =new NotificationChannel(NotificationChannelManager.DEFAULT_CHANNEL_ID, "Main", NotificationManager.IMPORTANCE_HIGH);
+            NotificationChannel serverChannel = new NotificationChannel("server_channel", "Server", NotificationManager.IMPORTANCE_LOW);
+            NotificationManager manager = getSystemService(NotificationManager.class);
+            manager.createNotificationChannel(channel);
+            manager.createNotificationChannel(serverChannel);
+        }
+
+        NotificationChannelManager.createNotificationChannels(this);
+
+        NotificationScheduler.scheduleDailyNotification(this, 8, 47,"test");
 
 
         try {

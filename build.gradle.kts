@@ -48,6 +48,7 @@ dependencies {
     implementation("mysql:mysql-connector-java:5.1.49")
     implementation("at.favre.lib:bcrypt:0.9.0")
     implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+    implementation ("org.nanohttpd:nanohttpd:2.3.1")
     implementation(libs.appcompat)
     implementation(libs.material)
 }

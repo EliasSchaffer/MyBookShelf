@@ -2,8 +2,6 @@ package com.example.mybookshelf;
 
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
-import android.media.Image;
-import android.os.Build;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -11,33 +9,30 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewTreeObserver;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.GridLayout;
-import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.RelativeLayout;
-import android.widget.ScrollView;
 import android.widget.SearchView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
-import androidx.constraintlayout.solver.ArrayLinkedVariables;
-import androidx.recyclerview.widget.AsyncListDiffer;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.mybookshelf.apis.AiAPI;
+import com.example.mybookshelf.apis.BooksAPI;
+import com.example.mybookshelf.dataClass.Book;
+import com.example.mybookshelf.dataClass.User;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
@@ -51,16 +46,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import java.util.TreeMap;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 import com.github.mikephil.charting.formatter.ValueFormatter;
-import com.google.android.material.textfield.TextInputEditText;
-
-import org.w3c.dom.Text;
 
 public class UIMaster {
 

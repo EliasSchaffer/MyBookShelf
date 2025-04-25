@@ -11,6 +11,9 @@ import java.util.concurrent.ExecutorService;
 import android.os.Handler;
 import android.os.Looper;
 
+import com.example.mybookshelf.apis.BooksAPI;
+import com.example.mybookshelf.dataClass.Book;
+
 public class Search extends AppCompatActivity {
 
     BooksAPI api;

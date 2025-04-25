@@ -1,6 +1,4 @@
-package com.example.mybookshelf;
-
-import java.util.Date;
+package com.example.mybookshelf.dataClass;
 
 public class Book {
     private String genre;
