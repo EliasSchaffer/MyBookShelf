@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
 
         NotificationChannelManager.createNotificationChannels(this);
 
-        NotificationScheduler.scheduleDailyNotification(this, 8, 47,"test");
+        NotificationScheduler.scheduleDailyNotification(this, 7, 26,"test");
 
 
         try {

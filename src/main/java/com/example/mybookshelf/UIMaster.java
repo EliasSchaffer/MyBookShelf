@@ -33,6 +33,7 @@ import com.example.mybookshelf.apis.AiAPI;
 import com.example.mybookshelf.apis.BooksAPI;
 import com.example.mybookshelf.dataClass.Book;
 import com.example.mybookshelf.dataClass.User;
+import com.example.mybookshelf.notifications.NotificationScheduler;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.components.YAxis;
@@ -204,15 +205,22 @@ public class UIMaster {
 
         // Add Notes input (Only if NOT in search mode)
         if (!isSearch) {
-            EditText noteField = new EditText(mainActivity);
             String note;
+
             try {
                 note = db.getNotesFromUser(logedindUser.getUid(), book.getId()).get();
+            } catch (NullPointerException e) {
+                // Skip adding the note field if a NullPointerException occurs
+                return;
             } catch (ExecutionException | InterruptedException e) {
+                // For all other exceptions, set default note text
                 note = "Add notes here...";
             }
-            if (note.equals("Add notes here...") || note.isEmpty()) {
-                noteField.setHint(note);
+
+            EditText noteField = new EditText(mainActivity);
+
+            if (note == null || note.isEmpty() || note.equals("Add notes here...")) {
+                noteField.setHint("Add notes here...");
             } else {
                 noteField.setText(note);
             }
@@ -223,7 +231,6 @@ public class UIMaster {
             noteField.setTextSize(14);
             noteField.setId(View.generateViewId());
 
-            // Set up layout parameters for the note field
             LinearLayout.LayoutParams noteParams = new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.MATCH_PARENT,
                     LinearLayout.LayoutParams.WRAP_CONTENT
@@ -231,7 +238,6 @@ public class UIMaster {
             noteParams.setMargins(12, 12, 12, 12);
             noteField.setLayoutParams(noteParams);
 
-            // Add a listener to handle text changes
             noteField.addTextChangedListener(new TextWatcher() {
                 @Override
                 public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
@@ -245,9 +251,9 @@ public class UIMaster {
                 public void afterTextChanged(Editable s) {}
             });
 
-            // Add the note field to the vertical container
             verticalContainer.addView(noteField);
         }
+
 
         // Add the vertical container (with all content) inside the book box
         bookBox.addView(verticalContainer);
@@ -595,7 +601,7 @@ public class UIMaster {
 
 
                 RelativeLayout box = mainActivity.findViewById(R.id.inputBox);
-                box.removeAllViews(); // Clear first
+                box.removeAllViews();
                 chat.removeAllViews();
 
                 chat.setColumnCount(2);
@@ -774,5 +780,31 @@ public class UIMaster {
         btn.setPadding(30, 30, 30, 30);
         btn.setOnClickListener(listener);
         return btn;
+    }
+
+    public void navigateToGoals(){
+        ImageButton nav_homeBtn = mainActivity.findViewById(R.id.nav_home);
+        ImageButton nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
+        ImageButton nav_StatsBtn = mainActivity.findViewById(R.id.nav_stats);
+        Button addGoal = mainActivity.findViewById(R.id.btnAddGoal);
+        nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
+        nav_StatsBtn.setOnClickListener(v -> setupLineChart());
+        nav_homeBtn.setOnClickListener(v -> navigateToStartingPage());
+
+        addGoal.setOnClickListener(v -> {
+            String goalType;
+
+            //TODO implement getting Userdata
+            //TODO durch switch ersetzen
+//            if (goalType.equals("daily")){
+//                NotificationScheduler.scheduleDailyNotification();
+//            }else if (goalType.equals("weekly")){
+//                NotificationScheduler.scheduleWeeklyNotification();
+//            } else {
+//                NotificationScheduler.scheduleMonthlyNotification();
+//            }
+        });
+
+
     }
 }
