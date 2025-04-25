@@ -160,32 +160,25 @@
             android:padding="8dp">
 
             <!-- Chat messages RecyclerView -->
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/chatRecyclerView"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_above="@id/boxReturn"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginTop="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="16dp"
-                tools:ignore="NotSibling" />
 
             <ScrollView
+                android:id="@+id/scrollChat"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="0dp"
+                android:layout_above="@id/inputBox"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="8dp"
+                android:fillViewport="true">
+
                 <GridLayout
                     android:id="@+id/grdChat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:columnCount="2"
                     android:orientation="horizontal"
-                    android:padding="16dp">
-                </GridLayout>
+                    android:padding="16dp" />
             </ScrollView>
+
 
             <!-- User input EditText -->
             <RelativeLayout

@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -421,6 +422,10 @@ public class BookRecommendationFlow{
         }
 
         chat.addView(messageView, params);
+
+
+        ScrollView scrollView = mainActivity.findViewById(R.id.scrollChat);
+        scrollView.post(() -> scrollView.fullScroll(View.FOCUS_DOWN));
     }
 
 }
