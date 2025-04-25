@@ -93,7 +93,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true"
-                android:background="@drawable/rounded_button"
+                android:background="@drawable/rounded_button_black"
                 android:text="new account"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
@@ -105,7 +105,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentEnd="true"
-                android:background="@drawable/rounded_button"
+                android:background="@drawable/rounded_button_black"
                 android:text="OK"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />

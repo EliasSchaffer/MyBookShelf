@@ -1,63 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/goalPage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:orientation="vertical">
 
     <!-- Goal Input Section -->
     <TextView
         android:id="@+id/tvAddGoal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add New Goal"
-        android:textSize="18sp"
+        android:layout_marginTop="72dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginBottom="52dp"
+        android:text="MY GOALS"
+        android:textColor="@color/black"
+        android:textSize="38sp"
         android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/etNewGoal"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter your goal" />
+        android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/btnAddGoal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Add Goal"
-        android:layout_marginTop="8dp" />
+        <Button
+            android:id="@+id/btncurrentgoals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button_black"
+            android:text="current"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:padding="12dp"
+            android:layout_margin="20dp"
+            app:layout_constraintEnd_toStartOf="@id/centerGuideline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
-    <!-- Current Goals Section -->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/centerGuideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <Button
+            android:id="@+id/btncompletedgoals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button_grey"
+            android:text="completed"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:padding="12dp"
+            android:layout_margin="20dp"
+            app:layout_constraintStart_toEndOf="@id/centerGuideline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
     <TextView
-        android:id="@+id/tvCurrentGoals"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Current Goals"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:layout_marginTop="16dp" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvCurrentGoals"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-
-    <!-- Completed Goals Section -->
-    <TextView
-        android:id="@+id/tvCompletedGoals"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Completed Goals"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="52dp"
+        android:layout_marginLeft="22dp"
+        android:text="Completed"
+        android:textColor="@color/black"
+        android:textSize="38sp"
+        android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvCompletedGoals"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
+
+
+    <!-- Nav-bar -->
+    <Button
+        android:id="@+id/btnAddGoal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp"
+        android:background="@drawable/rounded_button_black"
+        android:text="+     Add Goal"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:padding="14dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="12dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/nav_home"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/ic_home"
+                android:contentDescription="Home" />
+
+            <ImageButton
+                android:id="@+id/nav_search"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/ic_search"
+                android:contentDescription="Search" />
+
+            <ImageButton
+                android:id="@+id/nav_stats"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/ic_stats"
+                android:contentDescription="Stats" />
+
+            <ImageButton
+                android:id="@+id/nav_goals"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/ic_home"
+                android:contentDescription="Home" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 </LinearLayout>

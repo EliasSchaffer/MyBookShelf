@@ -37,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_margin="16dp"
+        android:layout_margin="12dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="4dp"
         android:background="@android:color/white">
@@ -75,6 +75,15 @@
                 android:background="@null"
                 android:src="@drawable/ic_stats"
                 android:contentDescription="Stats" />
+
+            <ImageButton
+                android:id="@+id/nav_goals"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/ic_home"
+                android:contentDescription="Home" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </RelativeLayout>
