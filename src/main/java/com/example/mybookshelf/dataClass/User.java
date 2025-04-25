@@ -16,15 +16,17 @@ import java.util.TreeSet;
 import java.util.concurrent.ExecutionException;
 
 public class User {
-    String user;
-    String hash_password;
-    String email;
-    int UID;
-    LinkedList<Book> bookList= new LinkedList<>();
-    TreeSet<String> authorList = new TreeSet<>();
-    TreeSet<String> genreList;
-    MainActivity mainActivity;
-    DataBaseConnection db;
+    private String user;
+    private String hash_password;
+    private String email;
+    private int UID;
+    private LinkedList<Book> bookList= new LinkedList<>();
+    private TreeSet<String> authorList = new TreeSet<>();
+    private LinkedList<Goal> goalList = new LinkedList<>();
+    private LinkedList<Notification> notificationList = new LinkedList<>();
+    private TreeSet<String> genreList;
+    private MainActivity mainActivity;
+    private DataBaseConnection db;
 
 
     public User(String user, String hash_password, int UID, DataBaseConnection db) throws ExecutionException, InterruptedException {
@@ -34,6 +36,16 @@ public class User {
         this.db = db;
         genreList = new TreeSet<>();
         authorList = new TreeSet<>();
+        db.getAllGoalsForUser(UID, goals -> {
+            for (Goal goal : goals) {
+                goalList.add(goal);
+            }
+        });
+        db.getAllNotificationsForUser(UID, notifications -> {
+            for (Notification notification : notifications) {
+                notificationList.add(notification);
+            }
+        });
 
         bookList = new LinkedList<>(db.getBooksFromUID(UID).get());
         for (Book book: bookList){
@@ -126,6 +138,10 @@ public class User {
 
     public int getUid() {
         return UID;
+    }
+
+    public LinkedList<Goal> getGoalList() {
+        return goalList;
     }
 }
 
