@@ -6,6 +6,8 @@ import android.os.Build;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.RelativeLayout;
@@ -34,6 +36,9 @@ public class BookRecommendationFlow{
     private AiAPI ai;
     private String bookName;
     private HashSet<String> doNotRecommend;
+    private RelativeLayout loadingLayout;
+    private List<View> balls = new ArrayList<>();
+    private boolean isThinking = false;
 
     public BookRecommendationFlow(MainActivity mainActivity, UIMaster uiMaster, String bookName) {
         this.mainActivity = mainActivity;
@@ -357,6 +362,7 @@ public class BookRecommendationFlow{
 
     private void callAI(String prompt){
         box.removeAllViews();
+        showThinkingAnimation();
         AiAPI.fetchResponse(prompt, new ApiResponseCallback() {
             @Override
             public void onSuccess(String response) {
@@ -371,6 +377,7 @@ public class BookRecommendationFlow{
                         String parsedResponse = obj.getJSONObject("result").getString("response");
                         parsedResponse = parsedResponse.replace("\\n", Objects.requireNonNull(System.lineSeparator())).replace("\\\"", "\"");
                         doNotRecommend.add(parsedResponse);
+                        hideThinkingAnimation();
                         addChatMessage("Based on your answers we think you will like \"" + parsedResponse + "\"", "question");
                         addChatMessage("Should I suggest you another one?", "question");
                         GridLayout grid = new GridLayout(mainActivity);
@@ -389,6 +396,7 @@ public class BookRecommendationFlow{
                         grid.addView(createStyledGridButton("No", v -> handleNo()));
                         box.addView(grid);
                     } catch (JSONException e) {
+                        hideThinkingAnimation();
                         Toast.makeText(mainActivity, "Something went wronge, please try again", Toast.LENGTH_LONG).show();
                         throw new RuntimeException(e);
 
@@ -491,5 +499,51 @@ public class BookRecommendationFlow{
         ScrollView scrollView = mainActivity.findViewById(R.id.scrollChat);
         scrollView.post(() -> scrollView.fullScroll(View.FOCUS_DOWN));
     }
+
+    private void showThinkingAnimation() {
+        mainActivity.runOnUiThread(() -> {
+            box.removeAllViews(); // Clear box first
+            loadingLayout = new RelativeLayout(mainActivity);
+
+            int ballSize = 50;
+
+            for (int i = 0; i < 3; i++) {
+                View ball = new View(mainActivity);
+                RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ballSize, ballSize);
+                params.leftMargin = 200 + (i * 100); // spacing between balls
+                params.topMargin = 400;
+                ball.setLayoutParams(params);
+                ball.setBackgroundResource(R.drawable.circle_background); // We'll create this drawable
+                loadingLayout.addView(ball);
+                balls.add(ball);
+
+                // Add bouncing animation
+                TranslateAnimation bounce = new TranslateAnimation(0, 0, 0, -100);
+                bounce.setDuration(500);
+                bounce.setRepeatMode(Animation.REVERSE);
+                bounce.setRepeatCount(Animation.INFINITE);
+                bounce.setStartOffset(i * 200); // delay each ball
+                ball.startAnimation(bounce);
+            }
+
+            box.addView(loadingLayout);
+            isThinking = true;
+        });
+    }
+
+    private void hideThinkingAnimation() {
+        mainActivity.runOnUiThread(() -> {
+            if (isThinking) {
+                for (View ball : balls) {
+                    ball.clearAnimation();
+                }
+                balls.clear();
+                box.removeAllViews();
+                isThinking = false;
+            }
+        });
+    }
+
+
 
 }
