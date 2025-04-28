@@ -11,13 +11,13 @@
         android:id="@+id/txtAllTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Total Reading Time: 200 h"
-        android:textSize="23sp"
-        android:textColor="@android:color/white"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="25dp"
+        android:layout_alignLeft="@id/barChart"
         android:layout_alignParentTop="true"
-        android:layout_alignLeft="@id/barChart"/>
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="10dp"
+        android:text="Total Reading Time: 0 h"
+        android:textColor="@android:color/white"
+        android:textSize="23sp" />
 
     <!-- Chart for Reading time per Month -->
     <com.github.mikephil.charting.charts.BarChart

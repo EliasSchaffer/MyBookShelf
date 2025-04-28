@@ -14,11 +14,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mybookshelf.apis.AiAPI;
+import com.example.mybookshelf.dataClass.Book;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Objects;
 
 public class BookRecommendationFlow{
@@ -29,6 +33,7 @@ public class BookRecommendationFlow{
     private ArrayList<String> atributes;
     private AiAPI ai;
     private String bookName;
+    private HashSet<String> doNotRecommend;
 
     public BookRecommendationFlow(MainActivity mainActivity, UIMaster uiMaster, String bookName) {
         this.mainActivity = mainActivity;
@@ -36,6 +41,11 @@ public class BookRecommendationFlow{
         this.bookName = bookName;
         atributes = new ArrayList<>();
         ai = new AiAPI();
+        doNotRecommend = new HashSet<>();
+        List<Book> bookList = mainActivity.getUser().getBookList();
+        for (Book book : bookList) {
+            doNotRecommend.add(book.getName());
+        }
     }
 
     public void handleAI(String pathType) {
@@ -332,11 +342,17 @@ public class BookRecommendationFlow{
     private void buildAIStringFresh(String selectedOption){
         atributes.add(selectedOption);
 
-        String prompt = "I want a " + atributes.get(0) + " book that has a " + atributes.get(1) +
+        StringBuilder prompt = new StringBuilder();
+        prompt.append("I want a " + atributes.get(0) + " book that has a " + atributes.get(1) +
                 " vibe and a " + atributes.get(2) + " setting. The story should follow a " +
                 atributes.get(3) + " and have a " + atributes.get(4) +
-                " ending. I want only 1 book and only the name of the book, nothing else.";
-        callAI(prompt);
+                " ending. I want only 1 book and only the name of the book, nothing else. Never say: ");
+        for (String book: doNotRecommend) {
+            prompt.append(book).append(", ");
+        }
+
+        Log.e("PROMPT", "buildAIStringFresh: ");
+        callAI(prompt.toString());
     }
 
     private void callAI(String prompt){
@@ -348,14 +364,14 @@ public class BookRecommendationFlow{
                 Log.d("AI_RESPONSE", response);
                 mainActivity.runOnUiThread(() -> {
                     // Update UI if needed
-                    //TODO Add parsing for the AI response
 
                     JSONObject obj = null;
                     try {
                         obj = new JSONObject(response);
                         String parsedResponse = obj.getJSONObject("result").getString("response");
-                        parsedResponse = parsedResponse.replace("\\n", Objects.requireNonNull(System.lineSeparator())).replace("\\\"", Objects.requireNonNull(System.lineSeparator()));
-                        addChatMessage("Based on your answers we think you will like " + parsedResponse, "question");
+                        parsedResponse = parsedResponse.replace("\\n", Objects.requireNonNull(System.lineSeparator())).replace("\\\"", "\"");
+                        doNotRecommend.add(parsedResponse);
+                        addChatMessage("Based on your answers we think you will like \"" + parsedResponse + "\"", "question");
                         addChatMessage("Should I suggest you another one?", "question");
                         GridLayout grid = new GridLayout(mainActivity);
                         grid.setColumnCount(2);
@@ -364,9 +380,11 @@ public class BookRecommendationFlow{
                                 ViewGroup.LayoutParams.WRAP_CONTENT));
                         grid.setPadding(40, 40, 40, 40);
 
+                        String finalParsedResponse = parsedResponse;
                         grid.addView(createStyledGridButton("Yes", v -> {
                             addChatMessage("Yes","user");
-                            callAI(prompt);
+                            String newPrompt = prompt + "," + finalParsedResponse;
+                            callAI(newPrompt);
                         }));
                         grid.addView(createStyledGridButton("No", v -> handleNo()));
                         box.addView(grid);
