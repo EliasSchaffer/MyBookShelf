@@ -15,7 +15,11 @@ import android.widget.Toast;
 
 import com.example.mybookshelf.apis.AiAPI;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class BookRecommendationFlow{
 
@@ -336,6 +340,7 @@ public class BookRecommendationFlow{
     }
 
     private void callAI(String prompt){
+        box.removeAllViews();
         AiAPI.fetchResponse(prompt, new ApiResponseCallback() {
             @Override
             public void onSuccess(String response) {
@@ -344,9 +349,32 @@ public class BookRecommendationFlow{
                 mainActivity.runOnUiThread(() -> {
                     // Update UI if needed
                     //TODO Add parsing for the AI response
-                    Toast.makeText(mainActivity, "AI Suggestion: " + response, Toast.LENGTH_LONG).show();
-                    addChatMessage(response, "question");
 
+                    JSONObject obj = null;
+                    try {
+                        obj = new JSONObject(response);
+                        String parsedResponse = obj.getJSONObject("result").getString("response");
+                        parsedResponse = parsedResponse.replace("\\n", Objects.requireNonNull(System.lineSeparator())).replace("\\\"", Objects.requireNonNull(System.lineSeparator()));
+                        addChatMessage("Based on your answers we think you will like " + parsedResponse, "question");
+                        addChatMessage("Should I suggest you another one?", "question");
+                        GridLayout grid = new GridLayout(mainActivity);
+                        grid.setColumnCount(2);
+                        grid.setLayoutParams(new RelativeLayout.LayoutParams(
+                                ViewGroup.LayoutParams.MATCH_PARENT,
+                                ViewGroup.LayoutParams.WRAP_CONTENT));
+                        grid.setPadding(40, 40, 40, 40);
+
+                        grid.addView(createStyledGridButton("Yes", v -> {
+                            addChatMessage("Yes","user");
+                            callAI(prompt);
+                        }));
+                        grid.addView(createStyledGridButton("No", v -> handleNo()));
+                        box.addView(grid);
+                    } catch (JSONException e) {
+                        Toast.makeText(mainActivity, "Something went wronge, please try again", Toast.LENGTH_LONG).show();
+                        throw new RuntimeException(e);
+
+                    }
                 });
             }
 
@@ -381,11 +409,27 @@ public class BookRecommendationFlow{
         return btn;
     }
 
-    private void handleAnswer(String selectedOption) {
-        Log.d("AIInput", "User chose: " + selectedOption);
+    private void handleNo() {
         mainActivity.runOnUiThread(() -> {
-            addChatMessage(selectedOption, "user");
-            // Optional: show next step here
+            box.removeAllViews();
+            addChatMessage("No", "user");
+            addChatMessage("Would you like recommendations based on the book you are currently watching or a completly fresh start?", "question");
+            GridLayout grid = new GridLayout(mainActivity);
+            grid.setColumnCount(2);
+            grid.setLayoutParams(new RelativeLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT));
+            grid.setPadding(40, 40, 40, 40);
+
+            grid.addView(createStyledGridButton("Fresh Start", v -> {
+                addChatMessage("Fresh Start", "user");
+                handleAI("freshStart");
+            }));
+            grid.addView(createStyledGridButton("Book Based", v -> {
+                addChatMessage("Book Based", "user");
+                handleAI("bookBased");
+            }));
+            box.addView(grid);
         });
     }
 
