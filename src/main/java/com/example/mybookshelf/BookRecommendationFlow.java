@@ -6,6 +6,8 @@ import android.os.Build;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.RelativeLayout;
@@ -14,8 +16,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mybookshelf.apis.AiAPI;
+import com.example.mybookshelf.dataClass.Book;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Objects;
 
 public class BookRecommendationFlow{
 
@@ -25,6 +35,10 @@ public class BookRecommendationFlow{
     private ArrayList<String> atributes;
     private AiAPI ai;
     private String bookName;
+    private HashSet<String> doNotRecommend;
+    private RelativeLayout loadingLayout;
+    private List<View> balls = new ArrayList<>();
+    private boolean isThinking = false;
 
     public BookRecommendationFlow(MainActivity mainActivity, UIMaster uiMaster, String bookName) {
         this.mainActivity = mainActivity;
@@ -32,6 +46,11 @@ public class BookRecommendationFlow{
         this.bookName = bookName;
         atributes = new ArrayList<>();
         ai = new AiAPI();
+        doNotRecommend = new HashSet<>();
+        List<Book> bookList = mainActivity.getUser().getBookList();
+        for (Book book : bookList) {
+            doNotRecommend.add(book.getName());
+        }
     }
 
     public void handleAI(String pathType) {
@@ -328,14 +347,22 @@ public class BookRecommendationFlow{
     private void buildAIStringFresh(String selectedOption){
         atributes.add(selectedOption);
 
-        String prompt = "I want a " + atributes.get(0) + " book that has a " + atributes.get(1) +
+        StringBuilder prompt = new StringBuilder();
+        prompt.append("I want a " + atributes.get(0) + " book that has a " + atributes.get(1) +
                 " vibe and a " + atributes.get(2) + " setting. The story should follow a " +
                 atributes.get(3) + " and have a " + atributes.get(4) +
-                " ending. I want only 1 book and only the name of the book, nothing else.";
-        callAI(prompt);
+                " ending. I want only 1 book and only the name of the book, nothing else. Never say: ");
+        for (String book: doNotRecommend) {
+            prompt.append(book).append(", ");
+        }
+
+        Log.e("PROMPT", "buildAIStringFresh: ");
+        callAI(prompt.toString());
     }
 
     private void callAI(String prompt){
+        box.removeAllViews();
+        showThinkingAnimation();
         AiAPI.fetchResponse(prompt, new ApiResponseCallback() {
             @Override
             public void onSuccess(String response) {
@@ -343,10 +370,37 @@ public class BookRecommendationFlow{
                 Log.d("AI_RESPONSE", response);
                 mainActivity.runOnUiThread(() -> {
                     // Update UI if needed
-                    //TODO Add parsing for the AI response
-                    Toast.makeText(mainActivity, "AI Suggestion: " + response, Toast.LENGTH_LONG).show();
-                    addChatMessage(response, "question");
 
+                    JSONObject obj = null;
+                    try {
+                        obj = new JSONObject(response);
+                        String parsedResponse = obj.getJSONObject("result").getString("response");
+                        parsedResponse = parsedResponse.replace("\\n", Objects.requireNonNull(System.lineSeparator())).replace("\\\"", "\"");
+                        doNotRecommend.add(parsedResponse);
+                        hideThinkingAnimation();
+                        addChatMessage("Based on your answers we think you will like \"" + parsedResponse + "\"", "question");
+                        addChatMessage("Should I suggest you another one?", "question");
+                        GridLayout grid = new GridLayout(mainActivity);
+                        grid.setColumnCount(2);
+                        grid.setLayoutParams(new RelativeLayout.LayoutParams(
+                                ViewGroup.LayoutParams.MATCH_PARENT,
+                                ViewGroup.LayoutParams.WRAP_CONTENT));
+                        grid.setPadding(40, 40, 40, 40);
+
+                        String finalParsedResponse = parsedResponse;
+                        grid.addView(createStyledGridButton("Yes", v -> {
+                            addChatMessage("Yes","user");
+                            String newPrompt = prompt + "," + finalParsedResponse;
+                            callAI(newPrompt);
+                        }));
+                        grid.addView(createStyledGridButton("No", v -> handleNo()));
+                        box.addView(grid);
+                    } catch (JSONException e) {
+                        hideThinkingAnimation();
+                        Toast.makeText(mainActivity, "Something went wronge, please try again", Toast.LENGTH_LONG).show();
+                        throw new RuntimeException(e);
+
+                    }
                 });
             }
 
@@ -381,11 +435,27 @@ public class BookRecommendationFlow{
         return btn;
     }
 
-    private void handleAnswer(String selectedOption) {
-        Log.d("AIInput", "User chose: " + selectedOption);
+    private void handleNo() {
         mainActivity.runOnUiThread(() -> {
-            addChatMessage(selectedOption, "user");
-            // Optional: show next step here
+            box.removeAllViews();
+            addChatMessage("No", "user");
+            addChatMessage("Would you like recommendations based on the book you are currently watching or a completly fresh start?", "question");
+            GridLayout grid = new GridLayout(mainActivity);
+            grid.setColumnCount(2);
+            grid.setLayoutParams(new RelativeLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT));
+            grid.setPadding(40, 40, 40, 40);
+
+            grid.addView(createStyledGridButton("Fresh Start", v -> {
+                addChatMessage("Fresh Start", "user");
+                handleAI("freshStart");
+            }));
+            grid.addView(createStyledGridButton("Book Based", v -> {
+                addChatMessage("Book Based", "user");
+                handleAI("bookBased");
+            }));
+            box.addView(grid);
         });
     }
 
@@ -429,5 +499,51 @@ public class BookRecommendationFlow{
         ScrollView scrollView = mainActivity.findViewById(R.id.scrollChat);
         scrollView.post(() -> scrollView.fullScroll(View.FOCUS_DOWN));
     }
+
+    private void showThinkingAnimation() {
+        mainActivity.runOnUiThread(() -> {
+            box.removeAllViews(); // Clear box first
+            loadingLayout = new RelativeLayout(mainActivity);
+
+            int ballSize = 50;
+
+            for (int i = 0; i < 3; i++) {
+                View ball = new View(mainActivity);
+                RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(ballSize, ballSize);
+                params.leftMargin = 200 + (i * 100); // spacing between balls
+                params.topMargin = 400;
+                ball.setLayoutParams(params);
+                ball.setBackgroundResource(R.drawable.circle_background); // We'll create this drawable
+                loadingLayout.addView(ball);
+                balls.add(ball);
+
+                // Add bouncing animation
+                TranslateAnimation bounce = new TranslateAnimation(0, 0, 0, -100);
+                bounce.setDuration(500);
+                bounce.setRepeatMode(Animation.REVERSE);
+                bounce.setRepeatCount(Animation.INFINITE);
+                bounce.setStartOffset(i * 200); // delay each ball
+                ball.startAnimation(bounce);
+            }
+
+            box.addView(loadingLayout);
+            isThinking = true;
+        });
+    }
+
+    private void hideThinkingAnimation() {
+        mainActivity.runOnUiThread(() -> {
+            if (isThinking) {
+                for (View ball : balls) {
+                    ball.clearAnimation();
+                }
+                balls.clear();
+                box.removeAllViews();
+                isThinking = false;
+            }
+        });
+    }
+
+
 
 }
