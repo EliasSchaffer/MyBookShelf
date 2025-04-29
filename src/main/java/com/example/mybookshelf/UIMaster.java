@@ -9,20 +9,28 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.Animation;
+import android.view.animation.DecelerateInterpolator;
+import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.GridLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.SearchView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import androidx.annotation.NonNull;
@@ -32,6 +40,7 @@ import com.bumptech.glide.Glide;
 import com.example.mybookshelf.apis.AiAPI;
 import com.example.mybookshelf.apis.BooksAPI;
 import com.example.mybookshelf.dataClass.Book;
+import com.example.mybookshelf.dataClass.Goal;
 import com.example.mybookshelf.dataClass.User;
 import com.example.mybookshelf.notifications.NotificationScheduler;
 import com.github.mikephil.charting.charts.BarChart;
@@ -43,7 +52,10 @@ import com.github.mikephil.charting.data.BarEntry;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -505,6 +517,8 @@ public class UIMaster {
                 ImageButton searchBtn = mainActivity.findViewById(R.id.btnSearchInList);
                 nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
                 searchBtn.setOnClickListener(v -> handleUserSearch());
+                ImageButton nav_goals = mainActivity.findViewById(R.id.nav_goals);
+                nav_goals.setOnClickListener(v -> navigateToGoals());
 
                 TextView user = mainActivity.findViewById(R.id.current_user);
                 user.setText("Hallo, " + logedindUser.getUser() + " \uD83D\uDC4B");
@@ -783,28 +797,154 @@ public class UIMaster {
     }
 
     public void navigateToGoals(){
+        mainActivity.setContentView(R.layout.main_goal);
         ImageButton nav_homeBtn = mainActivity.findViewById(R.id.nav_home);
         ImageButton nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
         ImageButton nav_StatsBtn = mainActivity.findViewById(R.id.nav_stats);
         Button addGoal = mainActivity.findViewById(R.id.btnAddGoal);
+        Spinner spinnerGoalType = mainActivity.findViewById(R.id.spinnerGoaltype);
+        Button cancel = mainActivity.findViewById(R.id.btnPopupCancel);
+        EditText book = mainActivity.findViewById(R.id.etGoalPopupName);
+        EditText number = mainActivity.findViewById(R.id.editTextNumber);
+        CardView popUp = mainActivity.findViewById(R.id.popupWindow);
+        Button save = mainActivity.findViewById(R.id.btnPopupSave);
+        CheckBox reminder = mainActivity.findViewById(R.id.activateNot);
+        RadioGroup type = mainActivity.findViewById(R.id.frequencyRadioGroup);
         nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
         nav_StatsBtn.setOnClickListener(v -> setupLineChart());
         nav_homeBtn.setOnClickListener(v -> navigateToStartingPage());
 
-        addGoal.setOnClickListener(v -> {
-            String goalType;
+        Set<String> goalTypesSet = new HashSet<>(Arrays.asList("Read Books", "Read Pages", "Read Time", "Read Specific Book"));
+        List<String> goalTypesList = new ArrayList<>(goalTypesSet);
+        Collections.sort(goalTypesList);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(mainActivity, android.R.layout.simple_spinner_item, goalTypesList);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerGoalType.setAdapter(adapter);
 
-            //TODO implement getting Userdata
-            //TODO durch switch ersetzen
-//            if (goalType.equals("daily")){
-//                NotificationScheduler.scheduleDailyNotification();
-//            }else if (goalType.equals("weekly")){
-//                NotificationScheduler.scheduleWeeklyNotification();
-//            } else {
-//                NotificationScheduler.scheduleMonthlyNotification();
-//            }
+        spinnerGoalType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selected = parent.getItemAtPosition(position).toString();
+
+                if (selected.equals("Read Specific Book")) {
+                    book.setVisibility(View.VISIBLE);
+                    number.setVisibility(View.GONE);
+                } else {
+                    book.setVisibility(View.GONE);
+                    number.setVisibility(View.VISIBLE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // Optional
+            }
         });
 
+
+        addGoal.setOnClickListener(v -> {
+            TranslateAnimation slideIn = new TranslateAnimation(
+                    Animation.RELATIVE_TO_SELF, 0f,
+                    Animation.RELATIVE_TO_SELF, 0f,
+                    Animation.RELATIVE_TO_SELF, 1f,   // from bottom
+                    Animation.RELATIVE_TO_SELF, 0f    // to original position
+            );
+            slideIn.setDuration(3000);
+            slideIn.setInterpolator(new DecelerateInterpolator());
+
+            popUp.startAnimation(slideIn);
+            popUp.setVisibility(View.VISIBLE);
+            addGoal.setVisibility(View.GONE);
+        });
+
+
+        cancel.setOnClickListener(v -> {
+            TranslateAnimation slideOut = new TranslateAnimation(
+                    Animation.RELATIVE_TO_SELF, 0f,
+                    Animation.RELATIVE_TO_SELF, 0f,
+                    Animation.RELATIVE_TO_SELF, 0f,    // from original position
+                    Animation.RELATIVE_TO_SELF, 1f     // to bottom
+            );
+            slideOut.setDuration(300);
+            slideOut.setInterpolator(new AccelerateInterpolator());
+
+            slideOut.setAnimationListener(new Animation.AnimationListener() {
+                @Override
+                public void onAnimationStart(Animation animation) {}
+
+                @Override
+                public void onAnimationEnd(Animation animation) {
+                    popUp.setVisibility(View.GONE);
+                    addGoal.setVisibility(View.VISIBLE);
+                }
+
+                @Override
+                public void onAnimationRepeat(Animation animation) {}
+            });
+
+            popUp.startAnimation(slideOut);
+        });
+
+
+        save.setOnClickListener(v -> {
+            String goalType="";
+            int id = type.getCheckedRadioButtonId();
+            if (id != -1) {
+                RadioButton selectedRadioButton = mainActivity.findViewById(id);
+                goalType = selectedRadioButton.getText().toString();
+            }
+            String goal = spinnerGoalType.getSelectedItem().toString();
+            Goal tempGoal = null;
+
+            if (spinnerGoalType.getSelectedItem().toString().equals("Read Specific Book")) {
+                tempGoal = new Goal(0, book.getText().toString(), goalType, goal);
+            } else {
+                tempGoal = new Goal(0, Integer.parseInt(number.getText().toString()), goalType, goal);
+            }
+
+            if (reminder.isChecked()) {
+
+            switch (goalType) {
+                case "daily":
+                    NotificationScheduler.scheduleDailyNotification(mainActivity,12,0,"Daily Reading Reminder");
+                    break;
+                case "weekly":
+                    NotificationScheduler.scheduleWeeklyNotification(mainActivity, 1,12,0,"Weekly Reading Reminder");
+                    break;
+                case "monthly":
+                    NotificationScheduler.scheduleMonthlyNotification(mainActivity, 1,12,0,"Monthly Reading Reminder");
+                    break;
+                case "yearly":
+                    NotificationScheduler.scheduleYearlyNotification();
+                    break;
+            }
+            }
+            mainActivity.getUser().addGoal(tempGoal);
+            TranslateAnimation slideOut = new TranslateAnimation(
+                    Animation.RELATIVE_TO_SELF, 0f,
+                    Animation.RELATIVE_TO_SELF, 0f,
+                    Animation.RELATIVE_TO_SELF, 0f,    // from original position
+                    Animation.RELATIVE_TO_SELF, 1f     // to bottom
+            );
+            slideOut.setDuration(300);
+            slideOut.setInterpolator(new AccelerateInterpolator());
+
+            slideOut.setAnimationListener(new Animation.AnimationListener() {
+                @Override
+                public void onAnimationStart(Animation animation) {}
+
+                @Override
+                public void onAnimationEnd(Animation animation) {
+                    popUp.setVisibility(View.GONE);
+                    addGoal.setVisibility(View.VISIBLE);
+                }
+
+                @Override
+                public void onAnimationRepeat(Animation animation) {}
+            });
+
+            popUp.startAnimation(slideOut);
+        });
 
     }
 }

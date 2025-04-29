@@ -729,8 +729,9 @@ public class DataBaseConnection {
 
                 try (ResultSet resultSet = preparedStatement.executeQuery()) {
                     while (resultSet.next()) {
-                        Goal goal = new Goal(resultSet.getInt("goal_id"), resultSet.getInt("progress"), resultSet.getInt("target"));
-                        goals.add(goal);
+                        //TODO change to new Constructor
+                        //Goal goal = new Goal(resultSet.getInt("goal_id"), resultSet.getInt("progress"), resultSet.getInt("target"));
+                        //goals.add(goal);
                     }
                 }
                 callback.accept(goals);

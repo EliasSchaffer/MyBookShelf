@@ -1,5 +1,6 @@
 package com.example.mybookshelf.notifications;
 
+import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -7,6 +8,12 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Build;
 import android.util.Log;
+
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
+
+import com.example.mybookshelf.R;
+import com.example.mybookshelf.dataClass.Goal;
 
 import java.util.Calendar;
 
@@ -36,63 +43,7 @@ public class NotificationScheduler {
     private static final String KEY_MONTHLY_MESSAGE = "monthly_message";
 
     public static void scheduleDailyNotification(Context context, int hour, int minute, String message) {
-        Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.HOUR_OF_DAY, hour);
-        calendar.set(Calendar.MINUTE, minute);
-        calendar.set(Calendar.SECOND, 0);
-        calendar.set(Calendar.MILLISECOND, 0);
 
-        // If time already passed today, schedule for tomorrow
-        if (calendar.getTimeInMillis() <= System.currentTimeMillis()) {
-            calendar.add(Calendar.DAY_OF_YEAR, 1);
-        }
-
-        Intent intent = new Intent(context, NotificationReceiver.class);
-        intent.putExtra("title", "Reading Reminder");
-        intent.putExtra("message", message);
-        intent.putExtra("notificationType", "daily");
-        intent.putExtra("hour", hour);
-        intent.putExtra("minute", minute);
-
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(
-                context,
-                REQUEST_CODE_DAILY,
-                intent,
-                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
-        );
-
-        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-        if (alarmManager != null) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S && !alarmManager.canScheduleExactAlarms()) {
-                Log.w(TAG, "App doesn't have SCHEDULE_EXACT_ALARM permission");
-                return;
-            }
-
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                alarmManager.setExactAndAllowWhileIdle(
-                        AlarmManager.RTC_WAKEUP,
-                        calendar.getTimeInMillis(),
-                        pendingIntent
-                );
-            } else {
-                alarmManager.setExact(
-                        AlarmManager.RTC_WAKEUP,
-                        calendar.getTimeInMillis(),
-                        pendingIntent
-                );
-            }
-
-            // Save notification settings to SharedPreferences
-            SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
-            SharedPreferences.Editor editor = prefs.edit();
-            editor.putBoolean(KEY_DAILY_ACTIVE, true);
-            editor.putInt(KEY_DAILY_HOUR, hour);
-            editor.putInt(KEY_DAILY_MINUTE, minute);
-            editor.putString(KEY_DAILY_MESSAGE, message);
-            editor.apply();
-
-            Log.d(TAG, "Daily notification scheduled for " + calendar.getTime());
-        }
     }
 
     public static void scheduleWeeklyNotification(Context context, int dayOfWeek, int hour, int minute, String message) {
@@ -230,6 +181,19 @@ public class NotificationScheduler {
         }
     }
 
+    @SuppressLint("MissingPermission")
+    public void sendNotification(Context context, Goal goal) {
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(context, "my_channel_id")
+                .setSmallIcon(R.drawable.icon)
+                .setContentTitle("You Completed Your Goal")
+                .setContentText("You read" + goal.getGoal() + "pages")
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+
+        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
+        notificationManager.notify(1, builder.build());
+    }
+
+
     public static void cancelDailyNotification(Context context) {
         Intent intent = new Intent(context, NotificationReceiver.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(
@@ -342,5 +306,8 @@ public class NotificationScheduler {
     public static boolean isMonthlyNotificationActive(Context context) {
         SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
         return prefs.getBoolean(KEY_MONTHLY_ACTIVE, false);
+    }
+
+    public static void scheduleYearlyNotification() {
     }
 }
