@@ -162,15 +162,6 @@
             android:gravity="center">
 
             <ImageButton
-                android:id="@+id/nav_home"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:background="@null"
-                android:src="@drawable/ic_home"
-                android:contentDescription="Home" />
-
-            <ImageButton
                 android:id="@+id/nav_search"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
@@ -194,7 +185,16 @@
                 android:layout_height="48dp"
                 android:layout_weight="1"
                 android:background="@null"
-                android:src="@drawable/ic_home"
+                android:src="@drawable/ic_goal"
+                android:contentDescription="Home" />
+
+            <ImageButton
+                android:id="@+id/nav_settings"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/ic_settings"
                 android:contentDescription="Home" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
