@@ -4,4 +4,5 @@
     <string name="close_drawer">Close Drawer</string>
     <string name="select_genre">Select Genre</string>
     <string name="select_author">Select Author</string>
+    <string name="select_goaltype">Select Type</string>
 </resources>
