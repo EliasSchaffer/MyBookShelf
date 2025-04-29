@@ -6,4 +6,10 @@
         <item name="android:windowActionBar">false</item> <!-- Disable action bar -->
         <item name="android:windowFullscreen">true</item> <!-- Optional, makes the app fullscreen -->
     </style>
+
+    <style name="WhiteSpinnerStyle" parent="Widget.AppCompat.Spinner">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
 </resources>
