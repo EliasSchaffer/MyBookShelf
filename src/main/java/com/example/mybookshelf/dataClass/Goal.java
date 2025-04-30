@@ -46,4 +46,12 @@ public class Goal {
     public String getGoal() {
         return goal;
     }
+
+    public String getBookName() {
+        return bookName;
+    }
+
+    public String getGoalType() {
+        return goalType;
+    }
 }
