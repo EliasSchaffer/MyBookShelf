@@ -9,29 +9,41 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.Animation;
+import android.view.animation.DecelerateInterpolator;
+import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.GridLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.SearchView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.mybookshelf.LayoutManager.CustomGoalAdapter;
 import com.example.mybookshelf.apis.AiAPI;
 import com.example.mybookshelf.apis.BooksAPI;
 import com.example.mybookshelf.dataClass.Book;
+import com.example.mybookshelf.dataClass.Goal;
 import com.example.mybookshelf.dataClass.User;
 import com.example.mybookshelf.notifications.NotificationScheduler;
 import com.github.mikephil.charting.charts.BarChart;
@@ -43,7 +55,10 @@ import com.github.mikephil.charting.data.BarEntry;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -78,6 +93,8 @@ public class UIMaster {
     private final ExecutorService executorService = Executors.newSingleThreadExecutor();
     private String AIprompt = "";
     private BookRecommendationFlow brf;
+    List<Goal> goalList = new ArrayList<>();
+
 
 
     public UIMaster(MainActivity main){
@@ -505,6 +522,8 @@ public class UIMaster {
                 ImageButton searchBtn = mainActivity.findViewById(R.id.btnSearchInList);
                 nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
                 searchBtn.setOnClickListener(v -> handleUserSearch());
+                ImageButton nav_goals = mainActivity.findViewById(R.id.nav_goals);
+                nav_goals.setOnClickListener(v -> navigateToGoals());
 
                 TextView user = mainActivity.findViewById(R.id.current_user);
                 user.setText("Hallo, " + logedindUser.getUser() + " \uD83D\uDC4B");
@@ -782,29 +801,251 @@ public class UIMaster {
         return btn;
     }
 
-    public void navigateToGoals(){
+    public void navigateToGoals() {
+        mainActivity.setContentView(R.layout.main_goal);
+
+        // Debug log
+        Log.d("GoalsDebug", "Navigating to goals screen");
+
+        // UI Elements setup
         ImageButton nav_homeBtn = mainActivity.findViewById(R.id.nav_home);
         ImageButton nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
         ImageButton nav_StatsBtn = mainActivity.findViewById(R.id.nav_stats);
         Button addGoal = mainActivity.findViewById(R.id.btnAddGoal);
+        Spinner spinnerGoalType = mainActivity.findViewById(R.id.spinnerGoaltype);
+        Button cancel = mainActivity.findViewById(R.id.btnPopupCancel);
+        EditText book = mainActivity.findViewById(R.id.etGoalPopupName);
+        EditText number = mainActivity.findViewById(R.id.editTextNumber);
+        CardView popUp = mainActivity.findViewById(R.id.popupWindow);
+        Button save = mainActivity.findViewById(R.id.btnPopupSave);
+        CheckBox reminder = mainActivity.findViewById(R.id.activateNot);
+        RadioGroup type = mainActivity.findViewById(R.id.frequencyRadioGroup);
+        RecyclerView rvCompletedGoals = mainActivity.findViewById(R.id.rvCompletedGoals);
+
+        // Check if RecyclerView was found
+        if (rvCompletedGoals == null) {
+            Log.e("GoalsDebug", "RecyclerView not found in layout!");
+            Toast.makeText(mainActivity, "Error: RecyclerView not found", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        // Navigation setup
         nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
         nav_StatsBtn.setOnClickListener(v -> setupLineChart());
         nav_homeBtn.setOnClickListener(v -> navigateToStartingPage());
 
-        addGoal.setOnClickListener(v -> {
-            String goalType;
+        // Get goals from user
+        if (logedindUser != null && logedindUser.getGoalList() != null) {
+            goalList = new ArrayList<>(logedindUser.getGoalList());
+            Log.d("GoalsDebug", "Loaded " + goalList.size() + " goals from user");
+        } else {
+            goalList = new ArrayList<>();
+            Log.d("GoalsDebug", "No goals found, creating empty list");
+        }
 
-            //TODO implement getting Userdata
-            //TODO durch switch ersetzen
-//            if (goalType.equals("daily")){
-//                NotificationScheduler.scheduleDailyNotification();
-//            }else if (goalType.equals("weekly")){
-//                NotificationScheduler.scheduleWeeklyNotification();
-//            } else {
-//                NotificationScheduler.scheduleMonthlyNotification();
-//            }
+        // Setup RecyclerView with clear visibility
+        rvCompletedGoals.setVisibility(View.VISIBLE);
+
+        // Setup LayoutManager first
+        LinearLayoutManager layoutManager = new LinearLayoutManager(mainActivity);
+        rvCompletedGoals.setLayoutManager(layoutManager);
+
+        // Create and set adapter
+        CustomGoalAdapter goalAdapter = new CustomGoalAdapter(mainActivity, goalList);
+        rvCompletedGoals.setAdapter(goalAdapter);
+
+        Log.d("GoalsDebug", "RecyclerView setup complete with " + goalList.size() + " items");
+
+        // Setup goal types spinner
+        Set<String> goalTypesSet = new HashSet<>(Arrays.asList("Read Books", "Read Pages", "Read Time", "Read Specific Book"));
+        List<String> goalTypesList = new ArrayList<>(goalTypesSet);
+        Collections.sort(goalTypesList);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(mainActivity, android.R.layout.simple_spinner_item, goalTypesList);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerGoalType.setAdapter(adapter);
+
+        spinnerGoalType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selected = parent.getItemAtPosition(position).toString();
+
+                if (selected.equals("Read Specific Book")) {
+                    book.setVisibility(View.VISIBLE);
+                    number.setVisibility(View.GONE);
+                } else {
+                    book.setVisibility(View.GONE);
+                    number.setVisibility(View.VISIBLE);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // Optional
+            }
         });
 
+        // Add Goal button click listener
+        addGoal.setOnClickListener(v -> {
+            Log.d("GoalsDebug", "Add goal button clicked");
+            TranslateAnimation slideIn = new TranslateAnimation(
+                    Animation.RELATIVE_TO_SELF, 0f,
+                    Animation.RELATIVE_TO_SELF, 0f,
+                    Animation.RELATIVE_TO_SELF, 1f,   // from bottom
+                    Animation.RELATIVE_TO_SELF, 0f    // to original position
+            );
+            slideIn.setDuration(300);
+            slideIn.setInterpolator(new DecelerateInterpolator());
 
-    }
-}
+            popUp.startAnimation(slideIn);
+            popUp.setVisibility(View.VISIBLE);
+            addGoal.setVisibility(View.GONE);
+        });
+
+        // Cancel button listener
+        cancel.setOnClickListener(v -> {
+            Log.d("GoalsDebug", "Cancel button clicked");
+            TranslateAnimation slideOut = new TranslateAnimation(
+                    Animation.RELATIVE_TO_SELF, 0f,
+                    Animation.RELATIVE_TO_SELF, 0f,
+                    Animation.RELATIVE_TO_SELF, 0f,    // from original position
+                    Animation.RELATIVE_TO_SELF, 1f     // to bottom
+            );
+            slideOut.setDuration(300);
+            slideOut.setInterpolator(new AccelerateInterpolator());
+
+            slideOut.setAnimationListener(new Animation.AnimationListener() {
+                @Override
+                public void onAnimationStart(Animation animation) {}
+
+                @Override
+                public void onAnimationEnd(Animation animation) {
+                    popUp.setVisibility(View.GONE);
+                    addGoal.setVisibility(View.VISIBLE);
+                }
+
+                @Override
+                public void onAnimationRepeat(Animation animation) {}
+            });
+
+            popUp.startAnimation(slideOut);
+        });
+
+        // Save button listener
+        save.setOnClickListener(v -> {
+            Log.d("GoalsDebug", "Save button clicked");
+
+            // Validate user selections
+            String goalType = "";
+            int id = type.getCheckedRadioButtonId();
+            if (id != -1) {
+                RadioButton selectedRadioButton = mainActivity.findViewById(id);
+                goalType = selectedRadioButton.getText().toString();
+                Log.d("GoalsDebug", "Selected frequency: " + goalType);
+            } else {
+                Log.e("GoalsDebug", "No frequency selected!");
+                Toast.makeText(mainActivity, "Please select a frequency", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            String goalCategory = spinnerGoalType.getSelectedItem().toString();
+            Log.d("GoalsDebug", "Goal category: " + goalCategory);
+
+            Goal tempGoal = null;
+
+            try {
+                if (goalCategory.equals("Read Specific Book")) {
+                    String bookName = book.getText().toString().trim();
+                    if (bookName.isEmpty()) {
+                        Log.e("GoalsDebug", "Book name is empty!");
+                        Toast.makeText(mainActivity, "Please enter a book name", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    tempGoal = new Goal(0, bookName, goalType, goalCategory);
+                    Log.d("GoalsDebug", "Created book goal: " + bookName);
+                } else {
+                    String numberStr = number.getText().toString().trim();
+                    if (numberStr.isEmpty()) {
+                        Log.e("GoalsDebug", "Number field is empty!");
+                        Toast.makeText(mainActivity, "Please enter a number", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    int targetNumber = Integer.parseInt(numberStr);
+                    tempGoal = new Goal(0, targetNumber, goalType, goalCategory);
+                    Log.d("GoalsDebug", "Created numeric goal: " + targetNumber);
+                }
+            } catch (NumberFormatException e) {
+                Log.e("GoalsDebug", "Error parsing number: " + e.getMessage());
+                Toast.makeText(mainActivity, "Please enter a valid number", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            // Handle notifications
+            if (reminder.isChecked()) {
+                Log.d("GoalsDebug", "Setting up notification for " + goalType);
+                switch (goalType) {
+                    case "daily":
+                        NotificationScheduler.scheduleDailyNotification(mainActivity, 12, 0, "Daily Reading Reminder");
+                        break;
+                    case "weekly":
+                        NotificationScheduler.scheduleWeeklyNotification(mainActivity, 1, 12, 0, "Weekly Reading Reminder");
+                        break;
+                    case "monthly":
+                        NotificationScheduler.scheduleMonthlyNotification(mainActivity, 1, 12, 0, "Monthly Reading Reminder");
+                        break;
+                    case "yearly":
+                        NotificationScheduler.scheduleYearlyNotification();
+                        break;
+                }
+            }
+
+            // Add goal to list and update adapter
+            final Goal finalGoal = tempGoal;
+            goalList.add(finalGoal);
+
+            Log.d("GoalsDebug", "Goal added to list, new size: " + goalList.size());
+            Log.d("GoalsDebug", "Adapter item count before update: " + goalAdapter.getItemCount());
+
+            // Update the adapter
+            goalAdapter.notifyDataSetChanged();
+
+            Log.d("GoalsDebug", "Adapter notified of data change");
+
+            // Save goal to user
+            mainActivity.getUser().addGoal(finalGoal);
+            Log.d("GoalsDebug", "Goal added to user");
+
+            // Consider saving to database here
+            // db.saveGoal(logedindUser.getUid(), finalGoal);
+
+            // Animation to close the popup
+            TranslateAnimation slideOut = new TranslateAnimation(
+                    Animation.RELATIVE_TO_SELF, 0f,
+                    Animation.RELATIVE_TO_SELF, 0f,
+                    Animation.RELATIVE_TO_SELF, 0f,    // from original position
+                    Animation.RELATIVE_TO_SELF, 1f     // to bottom
+            );
+            slideOut.setDuration(300);
+            slideOut.setInterpolator(new AccelerateInterpolator());
+
+            slideOut.setAnimationListener(new Animation.AnimationListener() {
+                @Override
+                public void onAnimationStart(Animation animation) {}
+
+                @Override
+                public void onAnimationEnd(Animation animation) {
+                    popUp.setVisibility(View.GONE);
+                    addGoal.setVisibility(View.VISIBLE);
+
+                    // Clear input fields for next use
+                    book.setText("");
+                    number.setText("");
+                    reminder.setChecked(false);
+                }
+
+                @Override
+                public void onAnimationRepeat(Animation animation) {}
+            });
+
+            popUp.startAnimation(slideOut);
+        });
+    }}
