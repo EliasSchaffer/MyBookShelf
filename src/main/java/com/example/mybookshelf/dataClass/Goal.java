@@ -8,19 +8,24 @@ public class Goal {
     String bookName;
     String goal;
     String goalType;
+    boolean reminder;
 
-    public Goal(int progress, int target, String goalType, String goal) {
+    public Goal(int progress, int target, String goalType, String goal, boolean reminder) {
         this.progress = progress;
         this.target = target;
         this.goal = goal;
+        this.goalType = goalType;
+        this.reminder = reminder;
         if (progress == 100) {
             completed = true;
         } else completed = false;
     }
 
-    public Goal(int progress, String bookName, String goalType, String goal) {
+    public Goal(int progress, String bookName, String goalType, String goal, boolean reminder) {
         this.progress = progress;
         this.bookName = bookName;
+        this.goalType = goalType;
+        this.reminder=reminder;
         this.goal = goal;
         if (progress == 100) {
             completed = true;
@@ -53,5 +58,9 @@ public class Goal {
 
     public String getGoalType() {
         return goalType;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
