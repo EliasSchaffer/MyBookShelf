@@ -29,6 +29,7 @@ import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.SearchView;
 import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -424,10 +425,12 @@ public class UIMaster {
         barChart = mainActivity.findViewById(R.id.barChart);
         ImageButton nav_homeBtn = mainActivity.findViewById(R.id.nav_home);
         ImageButton nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
-        ImageButton nav_StatsBtn = mainActivity.findViewById(R.id.nav_stats);
+        ImageButton nav_goalsBtn = mainActivity.findViewById(R.id.nav_goals);
+        ImageButton nav_settingBtn = mainActivity.findViewById(R.id.nav_settings);
 
         nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
-        nav_StatsBtn.setOnClickListener(v -> setupLineChart());
+        nav_goalsBtn.setOnClickListener(v -> navigateToGoals());
+        nav_settingBtn.setOnClickListener(v -> navigateToSettings());
         nav_homeBtn.setOnClickListener(v -> {
             navigateToStartingPage();
         });
@@ -516,14 +519,16 @@ public class UIMaster {
                 // Now do UI setup
                 mainActivity.setContentView(R.layout.main_home);
                 LinearLayout bookContainer = mainActivity.findViewById(R.id.bookContainer);
-                nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
-                nav_StatsBtn = mainActivity.findViewById(R.id.nav_stats);
-                nav_StatsBtn.setOnClickListener(v -> setupLineChart());
+                ImageButton nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
+                ImageButton nav_StatsBtn = mainActivity.findViewById(R.id.nav_stats);
+                ImageButton nav_goals = mainActivity.findViewById(R.id.nav_goals);
+                ImageButton nav_SettingBtn = mainActivity.findViewById(R.id.nav_settings);
                 ImageButton searchBtn = mainActivity.findViewById(R.id.btnSearchInList);
                 nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
-                searchBtn.setOnClickListener(v -> handleUserSearch());
-                ImageButton nav_goals = mainActivity.findViewById(R.id.nav_goals);
+                nav_StatsBtn.setOnClickListener(v -> setupLineChart());
                 nav_goals.setOnClickListener(v -> navigateToGoals());
+                nav_SettingBtn.setOnClickListener(v -> navigateToSettings());
+                searchBtn.setOnClickListener(v -> handleUserSearch());
 
                 TextView user = mainActivity.findViewById(R.id.current_user);
                 user.setText("Hallo, " + logedindUser.getUser() + " \uD83D\uDC4B");
@@ -811,6 +816,7 @@ public class UIMaster {
         ImageButton nav_homeBtn = mainActivity.findViewById(R.id.nav_home);
         ImageButton nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
         ImageButton nav_StatsBtn = mainActivity.findViewById(R.id.nav_stats);
+        ImageButton nav_SettingBtn = mainActivity.findViewById(R.id.nav_settings);
         Button addGoal = mainActivity.findViewById(R.id.btnAddGoal);
         Spinner spinnerGoalType = mainActivity.findViewById(R.id.spinnerGoaltype);
         Button cancel = mainActivity.findViewById(R.id.btnPopupCancel);
@@ -833,6 +839,7 @@ public class UIMaster {
         nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
         nav_StatsBtn.setOnClickListener(v -> setupLineChart());
         nav_homeBtn.setOnClickListener(v -> navigateToStartingPage());
+        nav_SettingBtn.setOnClickListener(v -> navigateToSettings());
 
         // Get goals from user
         if (logedindUser != null && logedindUser.getGoalList() != null) {
@@ -1048,4 +1055,38 @@ public class UIMaster {
 
             popUp.startAnimation(slideOut);
         });
-    }}
+    }
+
+    public void navigateToSettings() {
+        mainActivity.setContentView(R.layout.main_setting);
+
+        // Debug log
+        Log.d("SettingsDebug", "Navigating to Settings screen");
+
+        // UI Elements Setup
+        ImageButton nav_homeBtn = mainActivity.findViewById(R.id.nav_home);
+        ImageButton nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
+        ImageButton nav_StatsBtn = mainActivity.findViewById(R.id.nav_stats);
+        ImageButton nav_GoalsBtn = mainActivity.findViewById(R.id.nav_goals);
+        Switch mode = mainActivity.findViewById(R.id.switchdarkmode);
+        RelativeLayout changePasswdBox = mainActivity.findViewById(R.id.passwdChangeBox);
+        EditText passwd = mainActivity.findViewById(R.id.etpasswd);
+        EditText newPasswd = mainActivity.findViewById(R.id.etNewpasswd);
+        EditText repeatNewPasswd = mainActivity.findViewById(R.id.etNewpasswdrepeat);
+        Button savePasswd = mainActivity.findViewById(R.id.btnSavepasswd);
+        RelativeLayout changeUsernameBox = mainActivity.findViewById(R.id.usernameChangeBox);
+        EditText newUsername = mainActivity.findViewById(R.id.etNewUsername);
+        Button saveUsername = mainActivity.findViewById(R.id.btnSaveUsername);
+        RelativeLayout changeEmailBox = mainActivity.findViewById(R.id.EmailChangeBox);
+        EditText newEmail = mainActivity.findViewById(R.id.etNewEmail);
+        Button saveEmail = mainActivity.findViewById(R.id.btnSaveEmail);
+        Button signOut = mainActivity.findViewById(R.id.btnSignOut);
+        Button delAcc = mainActivity.findViewById(R.id.btndelAcc);
+
+        // Navigation setup
+        nav_homeBtn.setOnClickListener(v -> navigateToStartingPage());
+        nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
+        nav_StatsBtn.setOnClickListener(v -> setupLineChart());
+        nav_GoalsBtn.setOnClickListener(v -> navigateToGoals());
+    }
+}
