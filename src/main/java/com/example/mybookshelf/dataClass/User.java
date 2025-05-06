@@ -23,6 +23,7 @@ public class User {
     private LinkedList<Book> bookList= new LinkedList<>();
     private TreeSet<String> authorList = new TreeSet<>();
     private LinkedList<Goal> goalList = new LinkedList<>();
+    private LinkedList<Goal> completedGoalList = new LinkedList<>();
     private LinkedList<Notification> notificationList = new LinkedList<>();
     private TreeSet<String> genreList;
     private MainActivity mainActivity;
@@ -38,6 +39,9 @@ public class User {
         authorList = new TreeSet<>();
         db.getAllGoalsForUser(UID, goals -> {
             for (Goal goal : goals) {
+                if (goal.isCompleted()) {
+                    completedGoalList.add(goal);
+                } else
                 goalList.add(goal);
             }
         });

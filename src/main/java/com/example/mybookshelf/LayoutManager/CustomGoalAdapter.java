@@ -1,17 +1,26 @@
 package com.example.mybookshelf.LayoutManager;
 
+import static java.security.AccessController.getContext;
+
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.GradientDrawable;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.mybookshelf.R;
 import com.example.mybookshelf.dataClass.Goal;
 
 import java.util.List;
@@ -57,50 +66,85 @@ public class CustomGoalAdapter extends RecyclerView.Adapter<CustomGoalAdapter.Go
         }
     }
 
-    private View createGoalBox(Goal goal){
-        FrameLayout rootLayout = new FrameLayout(context);
+    private View createGoalBox(Goal goal) {
 
-        // Create the Cancel button
+        // Root container (FrameLayout for absolute positioning)
+        FrameLayout rootLayout = new FrameLayout(context);
+        rootLayout.setLayoutParams(new FrameLayout.LayoutParams(
+                FrameLayout.LayoutParams.WRAP_CONTENT,
+                FrameLayout.LayoutParams.WRAP_CONTENT
+        ));
+
+        // Card container (LinearLayout)
+        LinearLayout cardLayout = new LinearLayout(context);
+        cardLayout.setOrientation(LinearLayout.VERTICAL);
+        cardLayout.setPadding(16, 16, 16, 16); // Reduced padding
+
+        // Card background
+        GradientDrawable background = new GradientDrawable();
+        background.setColor(Color.WHITE);
+        background.setCornerRadius(24f);
+        background.setStroke(2, Color.LTGRAY);
+        cardLayout.setBackground(background);
+
+        // Cancel button (absolute positioning)
         Button cancelButton = new Button(context);
         cancelButton.setText("Cancel");
-        cancelButton.setBackgroundColor(Color.RED);
         cancelButton.setTextColor(Color.WHITE);
+        cancelButton.setBackgroundColor(Color.parseColor("#E53935"));
+        cancelButton.setAllCaps(false);
 
-        // Set layout params for top-left placement
+        // Position button outside the card at top-right
         FrameLayout.LayoutParams cancelParams = new FrameLayout.LayoutParams(
                 FrameLayout.LayoutParams.WRAP_CONTENT,
                 FrameLayout.LayoutParams.WRAP_CONTENT
         );
-        cancelParams.gravity = Gravity.TOP | Gravity.END;
-        cancelParams.setMargins(20, 20, 0, 0); // Add some padding from edges
+        cancelParams.gravity = Gravity.END|Gravity.TOP;
+        cancelParams.setMargins(0, 8, 8, 0);
         cancelButton.setLayoutParams(cancelParams);
 
-        // Add a TextView
+        // Goal text
         TextView textView = new TextView(context);
-        textView.setText("Goal: " + goal.getGoalType() + "| Progress: " + goal.getProgress() + "/" +goal.getTarget());
-        textView.setTextSize(18);
-        textView.setTextColor(Color.BLACK);
+        textView.setText("📘 Goal: " + goal.getGoalType());
+        textView.setTextSize(16);
+        textView.setTextColor(Color.DKGRAY);
 
-        // Center the TextView
-        FrameLayout.LayoutParams textParams = new FrameLayout.LayoutParams(
-                FrameLayout.LayoutParams.WRAP_CONTENT,
-                FrameLayout.LayoutParams.WRAP_CONTENT
-        );
-        textParams.gravity = Gravity.CENTER;
-        textView.setLayoutParams(textParams);
+        // Progress bar (fixed width)
+        ProgressBar progressBar = new ProgressBar(context, null,
+                android.R.attr.progressBarStyleHorizontal);
+        progressBar.setLayoutParams(new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT, // Will expand to available width
+                LinearLayout.LayoutParams.WRAP_CONTENT
+        ));
+        progressBar.setMax(goal.getTarget());
+        progressBar.setProgress(goal.getProgress());
 
-        // Optional: Set Cancel button action
-        cancelButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //TODO Cancel button action
-            }
-        });
+        // Progress text
+        TextView progressText = new TextView(context);
+        progressText.setText("Progress: " + goal.getProgress() + " / " + goal.getTarget());
+        progressText.setTextColor(Color.GRAY);
+        progressText.setTextSize(14);
 
-        // Add views to root layout
+        // Add views to card
+        cardLayout.addView(textView);
+        cardLayout.addView(progressBar);
+        cardLayout.addView(progressText);
+
+        // Add views to root
+        rootLayout.addView(cardLayout);
         rootLayout.addView(cancelButton);
-        rootLayout.addView(textView);
+
+        // Post-layout adjustment to match widths
+        cardLayout.post(() -> {
+            int buttonWidth = cancelButton.getWidth();
+            int cardWidth = cardLayout.getWidth();
+
+            // Set minimum width to ensure progress bar + button fit
+            int minWidth = cardWidth + buttonWidth + 50; // 32 = extra padding
+            cardLayout.setMinimumWidth(minWidth);
+        });
 
         return rootLayout;
     }
+
 }
