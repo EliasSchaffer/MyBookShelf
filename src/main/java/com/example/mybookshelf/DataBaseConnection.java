@@ -27,9 +27,12 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicLong;
 import java.util.function.Consumer;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
@@ -668,29 +671,99 @@ public class DataBaseConnection {
         });
     }
 
-    public void addGoal(Goal goal, User user) {
+    public long addGoal(Goal goal, User user) {
+        // Create an atomic reference to hold the generated ID that can be updated from another thread
+        AtomicLong generatedId = new AtomicLong(-1);
+
+        // Create a CountDownLatch to wait for the database operation to complete
+        CountDownLatch latch = new CountDownLatch(1);
+
+        // Map verbose goal type to enum value
+        String goalTypeEnum;
+        switch (goal.getGoalType()) {
+            case "Read Books":
+                goalTypeEnum = "books";
+                break;
+            case "Read Pages":
+                goalTypeEnum = "pages";
+                break;
+            case "Read Time":
+                goalTypeEnum = "time";
+                break;
+            case "Read Specific Book":
+                goalTypeEnum = "finishBook";
+                break;
+            default:
+                goalTypeEnum = "books"; // fallback or throw an exception
+                Log.w("GoalsDebug", "Unknown goal type: " + goal.getGoalType() + ", defaulting to 'books'");
+                break;
+        }
+
+
         executorService.execute(() -> {
-            String sql = "INSERT INTO goals (user_id, target, progress) VALUES (?, ?, ?)";
+            String sql = "INSERT INTO goals (user_id, book_name, target, type, goalType, progress) VALUES (?, ?, ?, ?, ?, ?)";
 
             try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
-                 PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+                 // Use RETURN_GENERATED_KEYS to get the auto-generated ID
+                 PreparedStatement preparedStatement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
 
                 preparedStatement.setInt(1, user.getUid());
-                preparedStatement.setInt(2, goal.getTarget());
-                preparedStatement.setInt(3, goal.getProgress());
+
+                // Handle different goal types
+                if (goal.getGoalType().equals("Read Specific Book")) {
+                    preparedStatement.setString(2, goal.getBookName());
+                    preparedStatement.setInt(3, 0); // No target number for book goals
+                } else {
+                    preparedStatement.setString(2, ""); // No book name
+                    preparedStatement.setInt(3, goal.getTarget());
+                }
+
+                preparedStatement.setString(4, goal.getGoalType());
+                preparedStatement.setString(5,goalTypeEnum);
+                preparedStatement.setInt(6, goal.getProgress());
 
                 int rowsInserted = preparedStatement.executeUpdate();
 
                 if (rowsInserted > 0) {
-                    System.out.println("Goal added successfully.");
+                    // Get the generated ID
+                    ResultSet generatedKeys = preparedStatement.getGeneratedKeys();
+                    if (generatedKeys.next()) {
+                        long id = generatedKeys.getLong(1);
+                        generatedId.set(id);
+                        System.out.println("Goal added successfully with ID: " + id);
+
+                        // Log success for debugging
+                        Log.d("GoalsDebug", "Goal added to database with ID: " + id);
+                    }
                 } else {
                     System.out.println("No goal was added.");
+                    Log.e("GoalsDebug", "No goal was added to database");
                 }
             } catch (SQLException e) {
                 System.err.println("Error adding goal: " + e.getMessage());
                 e.printStackTrace();
+                Log.e("GoalsDebug", "Database error: " + e.getMessage(), e);
+            } finally {
+                // Count down the latch to signal that the operation is complete
+                latch.countDown();
             }
         });
+
+        try {
+            // Wait for the database operation to complete (with a timeout)
+            boolean completed = latch.await(5, TimeUnit.SECONDS);
+            if (!completed) {
+                Log.e("GoalsDebug", "Database operation timed out");
+                return -1;
+            }
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            Log.e("GoalsDebug", "Database operation was interrupted", e);
+            return -1;
+        }
+
+        // Return the generated ID
+        return generatedId.get();
     }
 
     public void removeGoal(int goalId, int userId) {

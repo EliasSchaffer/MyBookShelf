@@ -76,16 +76,12 @@ public class UIMaster {
     private EditText passwordEditText;
     private EditText emailEditText;
     private EditText repeatPassword;
-    private Button loginButton;
-    private Button registerButton;
-    private Button switchToLoginButton;
-    private Button switchToRegisterButton;
 
     private int timeSpentReading = 0;
     private ImageButton nav_searchBtn;
     private ImageButton nav_StatsBtn;
     private TextView timeSpentReadingTextView;
-    private BooksAPI booksAPI;
+    private final BooksAPI booksAPI;
     private AiAPI ai;
     private DataBaseConnection db;
     private User logedindUser;
@@ -367,8 +363,8 @@ public class UIMaster {
         mainActivity.setContentView(R.layout.main_login);
         usernameEditText = mainActivity.findViewById(R.id.txfUser);
         passwordEditText = mainActivity.findViewById(R.id.txfPassword);
-        loginButton = mainActivity.findViewById(R.id.btnLogin);
-        switchToRegisterButton = mainActivity.findViewById(R.id.btnRegister);
+        Button loginButton = mainActivity.findViewById(R.id.btnLogin);
+        Button switchToRegisterButton = mainActivity.findViewById(R.id.btnRegister);
 
 
         loginButton.setOnClickListener(v -> {
@@ -393,8 +389,8 @@ public class UIMaster {
         passwordEditText = mainActivity.findViewById(R.id.txfNewPassword);
         repeatPassword = mainActivity.findViewById(R.id.txfRepeatPassword);
         emailEditText = mainActivity.findViewById(R.id.txfEmail);
-        registerButton = mainActivity.findViewById(R.id.btnRegister);
-        switchToLoginButton = mainActivity.findViewById(R.id.btnBackLogin);
+        Button registerButton = mainActivity.findViewById(R.id.btnRegister);
+        Button switchToLoginButton = mainActivity.findViewById(R.id.btnBackLogin);
 
 
         registerButton.setOnClickListener(v -> {
@@ -950,7 +946,7 @@ public class UIMaster {
             String goalCategory = spinnerGoalType.getSelectedItem().toString();
             Log.d("GoalsDebug", "Goal category: " + goalCategory);
 
-            Goal tempGoal = null;
+            Goal finalGoal = null; // Changed variable name for clarity
 
             try {
                 if (goalCategory.equals("Read Specific Book")) {
@@ -960,7 +956,8 @@ public class UIMaster {
                         Toast.makeText(mainActivity, "Please enter a book name", Toast.LENGTH_SHORT).show();
                         return;
                     }
-                    tempGoal = new Goal(0, bookName, goalType, goalCategory);
+                    // Create goal with a proper ID (0 will be replaced by the database)
+                    finalGoal = new Goal(0, bookName, goalType, goalCategory, reminder.isChecked());
                     Log.d("GoalsDebug", "Created book goal: " + bookName);
                 } else {
                     String numberStr = number.getText().toString().trim();
@@ -970,12 +967,34 @@ public class UIMaster {
                         return;
                     }
                     int targetNumber = Integer.parseInt(numberStr);
-                    tempGoal = new Goal(0, targetNumber, goalType, goalCategory);
+                    finalGoal = new Goal(0, targetNumber, goalType, goalCategory, reminder.isChecked());
                     Log.d("GoalsDebug", "Created numeric goal: " + targetNumber);
                 }
             } catch (NumberFormatException e) {
                 Log.e("GoalsDebug", "Error parsing number: " + e.getMessage());
                 Toast.makeText(mainActivity, "Please enter a valid number", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            // Debug check to ensure goal is created properly
+            if (finalGoal == null) {
+                Log.e("GoalsDebug", "Failed to create goal object!");
+                Toast.makeText(mainActivity, "Error creating goal", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            // Add goal to user first (database operation)
+            // This should generate a proper ID if your database is set up correctly
+            long newGoalId = db.addGoal(finalGoal, mainActivity.getUser());
+            mainActivity.getUser().addGoal(finalGoal);
+
+            // Update the goal object with the new ID if needed
+            if (newGoalId > 0) {
+                finalGoal.setId((int)newGoalId);
+                Log.d("GoalsDebug", "Goal saved to database with ID: " + newGoalId);
+            } else {
+                Log.e("GoalsDebug", "Failed to save goal to database");
+                Toast.makeText(mainActivity, "Failed to save goal", Toast.LENGTH_SHORT).show();
                 return;
             }
 
@@ -998,31 +1017,38 @@ public class UIMaster {
                 }
             }
 
-            // Add goal to list and update adapter
-            final Goal finalGoal = tempGoal;
+            // Now add to the displayed list after successful database operation
+            int insertPosition = goalList.size();
             goalList.add(finalGoal);
 
-            Log.d("GoalsDebug", "Goal added to list, new size: " + goalList.size());
-            Log.d("GoalsDebug", "Adapter item count before update: " + goalAdapter.getItemCount());
+            // Debug check after adding to list
+            Log.d("GoalsDebug", "Goal added to list: " + (finalGoal != null ? finalGoal.toString() : "null"));
+            Log.d("GoalsDebug", "List size now: " + goalList.size());
 
-            // Update the adapter
-            goalAdapter.notifyDataSetChanged();
+            // Use specific notify method for better animation
+            goalAdapter.notifyItemInserted(insertPosition);
 
-            Log.d("GoalsDebug", "Adapter notified of data change");
+            // Animate the newly added item
+            RecyclerView.ViewHolder viewHolder = rvCompletedGoals.findViewHolderForAdapterPosition(insertPosition);
+            if (viewHolder != null) {
+                viewHolder.itemView.setAlpha(0f);
+                viewHolder.itemView.setTranslationY(20f);
+                viewHolder.itemView.animate()
+                        .alpha(1f)
+                        .translationY(0f)
+                        .setDuration(300)
+                        .start();
+            }
 
-            // Save goal to user
-            mainActivity.getUser().addGoal(finalGoal);
-            Log.d("GoalsDebug", "Goal added to user");
-
-            // Consider saving to database here
-            // db.saveGoal(logedindUser.getUid(), finalGoal);
+            // Scroll to the new item if needed
+            rvCompletedGoals.smoothScrollToPosition(insertPosition);
 
             // Animation to close the popup
             TranslateAnimation slideOut = new TranslateAnimation(
                     Animation.RELATIVE_TO_SELF, 0f,
                     Animation.RELATIVE_TO_SELF, 0f,
-                    Animation.RELATIVE_TO_SELF, 0f,    // from original position
-                    Animation.RELATIVE_TO_SELF, 1f     // to bottom
+                    Animation.RELATIVE_TO_SELF, 0f,
+                    Animation.RELATIVE_TO_SELF, 1f
             );
             slideOut.setDuration(300);
             slideOut.setInterpolator(new AccelerateInterpolator());
@@ -1040,6 +1066,7 @@ public class UIMaster {
                     book.setText("");
                     number.setText("");
                     reminder.setChecked(false);
+                    type.clearCheck();
                 }
 
                 @Override
@@ -1047,5 +1074,4 @@ public class UIMaster {
             });
 
             popUp.startAnimation(slideOut);
-        });
-    }}
+        });    }}

@@ -143,8 +143,9 @@ public class User {
     public LinkedList<Goal> getGoalList() {
         return goalList;
     }
-    public void addGoal(Goal goal){
+    public long addGoal(Goal goal){
         goalList.add(goal);
+        return goal.getId();
     }
 }
 
