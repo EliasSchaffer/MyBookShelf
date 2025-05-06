@@ -1,17 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/goalPage"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
+
+    <!-- Scrollbarer Bereich -->
+    <ScrollView
+        android:id="@+id/scrollViewContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_nav">
+
+        <LinearLayout
+            android:id="@+id/goalPage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="100dp">
 
     <TextView
         android:id="@+id/tvSetting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="52dp"
         android:layout_marginLeft="22dp"
         android:layout_marginBottom="52dp"
         android:text="Setting"
@@ -35,12 +46,78 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="22dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="22dp"
         android:text="Change Password >"
         android:textColor="@color/black"
         android:textSize="38sp"
         android:clickable="true"
         android:focusable="true" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewpasswd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtLogin"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp">
+
+        <RelativeLayout
+            android:id="@+id/passwdChangeBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/etpasswd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Password"
+                android:padding="10dp"
+                android:layout_marginBottom="8dp"
+                android:textSize="18sp"
+                android:background="@drawable/rounded_edittext"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/etNewpasswd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etpasswd"
+                android:hint="Enter New Password"
+                android:padding="10dp"
+                android:layout_marginBottom="8dp"
+                android:textSize="18sp"
+                android:background="@drawable/rounded_edittext"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/etNewpasswdrepeat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/etNewpasswd"
+                android:hint="Repeat New Password"
+                android:padding="10dp"
+                android:layout_marginBottom="8dp"
+                android:textSize="18sp"
+                android:background="@drawable/rounded_edittext"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/btnSavepasswd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:layout_below="@id/etNewpasswdrepeat"
+                android:layout_alignParentEnd="true"
+                android:textColor="@color/white"
+                android:background="@drawable/rounded_button_black"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/tvchangeUsername"
@@ -62,8 +139,7 @@
         android:layout_alignParentBottom="true"
         android:layout_margin="16dp"
         app:cardCornerRadius="16dp"
-        app:cardElevation="4dp"
-        android:visibility="visible">
+        app:cardElevation="4dp">
 
     <RelativeLayout
         android:id="@+id/usernameChangeBox"
@@ -71,7 +147,7 @@
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:orientation="vertical"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <EditText
             android:id="@+id/etNewUsername"
@@ -116,8 +192,7 @@
         android:layout_alignParentBottom="true"
         android:layout_margin="16dp"
         app:cardCornerRadius="16dp"
-        app:cardElevation="4dp"
-        android:visibility="visible">
+        app:cardElevation="4dp">
 
         <RelativeLayout
             android:id="@+id/EmailChangeBox"
@@ -147,13 +222,14 @@
                 android:layout_alignParentEnd="true"
                 android:textColor="@color/white"
                 android:background="@drawable/rounded_button_black"/>
+
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 
     <!-- Add space between content and the bottom navbar -->
     <Space
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="130dp"
         android:layout_weight="1" />
 
     <!-- Sign out button styled like a browser sign-out button -->
@@ -199,59 +275,63 @@
             style="@style/Widget.AppCompat.Button.Borderless" />
     </RelativeLayout>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/bottom_nav"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="12dp"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="4dp"
-        android:background="@android:color/white">
+    </LinearLayout>
+</ScrollView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="8dp"
-            android:gravity="center">
+    <!-- Fixierte Bottom Navigation -->
+<androidx.cardview.widget.CardView
+android:id="@+id/bottom_nav"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_alignParentBottom="true"
+android:layout_margin="12dp"
+app:cardCornerRadius="16dp"
+app:cardElevation="4dp"
+android:background="@android:color/white">
 
-            <ImageButton
-                android:id="@+id/nav_home"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:background="@null"
-                android:src="@drawable/ic_home"
-                android:contentDescription="Home" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:gravity="center">
 
-            <ImageButton
-                android:id="@+id/nav_search"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:background="@null"
-                android:src="@drawable/ic_search"
-                android:contentDescription="Search" />
+    <ImageButton
+        android:id="@+id/nav_home"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:background="@null"
+        android:src="@drawable/ic_home"
+        android:contentDescription="Home" />
 
-            <ImageButton
-                android:id="@+id/nav_stats"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:background="@null"
-                android:src="@drawable/ic_stats"
-                android:contentDescription="Stats" />
+    <ImageButton
+        android:id="@+id/nav_search"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:background="@null"
+        android:src="@drawable/ic_search"
+        android:contentDescription="Search" />
 
-            <ImageButton
-                android:id="@+id/nav_goals"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:background="@null"
-                android:src="@drawable/ic_home"
-                android:contentDescription="Home" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+    <ImageButton
+        android:id="@+id/nav_stats"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:background="@null"
+        android:src="@drawable/ic_stats"
+        android:contentDescription="Stats" />
 
+    <ImageButton
+        android:id="@+id/nav_goals"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_weight="1"
+        android:background="@null"
+        android:src="@drawable/ic_home"
+        android:contentDescription="Home" />
 </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
