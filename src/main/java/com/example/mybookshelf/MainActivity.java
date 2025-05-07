@@ -135,11 +135,9 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
         searchView = findViewById(R.id.searchView);
 
         nav_GoalBtn.setOnClickListener(v -> uiMaster.navigateToGoals());
-        nav_SettingBtn.setOnClickListener(v -> uiMaster.navigateToSettings());
+        nav_SettingBtn.setOnClickListener(v -> uiMaster.navigateToSetting());
         nav_StatsBtn.setOnClickListener(v -> uiMaster.setupLineChart());
-        nav_homeBtn.setOnClickListener(v -> {
-            uiMaster.navigateToStartingPage();
-        });
+        nav_homeBtn.setOnClickListener(v -> uiMaster.navigateToStartingPage());
 
 
         // Set up SearchView listener
