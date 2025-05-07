@@ -680,7 +680,7 @@ public class DataBaseConnection {
 
         // Map verbose goal type to enum value
         String goalTypeEnum;
-        switch (goal.getFrequenzy()) {
+        switch (goal.getGoal()) {
             case "Read Books":
                 goalTypeEnum = "books";
                 break;
@@ -804,6 +804,7 @@ public class DataBaseConnection {
                     while (resultSet.next()) {
                         int goalId = resultSet.getInt("goal_id");
                         int progress = resultSet.getInt("progress");
+                        int target = resultSet.getInt("target");
                         String frequenzy = resultSet.getString("type"); // 'daily','weekly','monthly','yearly'
                         String goalType = resultSet.getString("goalType"); // 'books','pages','time','finishBook'
                         String bookName = resultSet.getString("book_name");
@@ -834,9 +835,8 @@ public class DataBaseConnection {
 
                         // Handle "finishBook" type goals which use a different constructor
                         if (goalType.equals("finishBook")) {
-                            goal = new Goal(progress, bookName, frequenzy, goalTypeVerbose, reminder);
+                            goal = new Goal(progress,target, bookName, frequenzy, goalTypeVerbose, reminder);
                         } else {
-                            int target = resultSet.getInt("target");
                             goal = new Goal(progress, target, frequenzy, goalTypeVerbose, reminder);
                         }
 
