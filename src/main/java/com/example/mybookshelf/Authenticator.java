@@ -33,20 +33,17 @@ public class Authenticator {
                 if (id != -1) {
                     // Login successful
                     postToMain(() -> {
-                        showDebugPopup("Login Successful!");
                         callback.accept(true, id); // Pass the entire User object
                     });
                 } else {
                     // Login failed
                     postToMain(() -> {
-                        showDebugPopup("Incorrect Username or Password!");
                         callback.accept(false, null);
                     });
                 }
             } catch (Exception e) {
                 e.printStackTrace();
                 postToMain(() -> {
-                    showDebugPopup("Login failed: " + e.getMessage());
                     callback.accept(false, null);
                 });
             }
@@ -66,22 +63,13 @@ public class Authenticator {
     }
 
     // Show debug popup (AlertDialog)
-    private void showDebugPopup(String message) {
-        new AlertDialog.Builder(context)
-                .setTitle("Debug Info")
-                .setMessage(message)
-                .setPositiveButton("OK", (dialog, which) -> dialog.dismiss())
-                .show();
-    }
+
 
     // Optional: Toast for fast messages
-    private void showDebugToast(String message) {
-        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
-    }
+
 
     // Simple registration method
     public void register(String username, String password, String email) {
-        showDebugPopup("Registering: " + username + " / " + email);
         db.addUser(username, password, email);
     }
 }

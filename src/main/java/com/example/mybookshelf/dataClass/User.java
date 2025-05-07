@@ -1,6 +1,8 @@
 package com.example.mybookshelf.dataClass;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -9,6 +11,7 @@ import android.widget.Toast;
 import com.example.mybookshelf.DataBaseConnection;
 import com.example.mybookshelf.MainActivity;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -30,6 +33,7 @@ public class User {
     private DataBaseConnection db;
 
 
+    @SuppressLint("SuspiciousIndentation")
     public User(String user, String hash_password, int UID, DataBaseConnection db) throws ExecutionException, InterruptedException {
         this.user = user;
         this.hash_password = hash_password;
@@ -37,14 +41,25 @@ public class User {
         this.db = db;
         genreList = new TreeSet<>();
         authorList = new TreeSet<>();
-        db.getAllGoalsForUser(UID, goals -> {
-            for (Goal goal : goals) {
+
+        // Initialize the goal lists before using them
+        goalList = new LinkedList<>();
+        completedGoalList = new LinkedList<>();
+
+        db.getAllGoalsForUser(UID, (List<Goal> goalsList) -> {
+            for (Goal goal : goalsList) {
+                Log.i("Goal", goal.toString());
                 if (goal.isCompleted()) {
                     completedGoalList.add(goal);
-                } else
-                goalList.add(goal);
+                } else {
+                    goalList.add(goal);
+                }
             }
         });
+
+        // Initialize notification list before using it
+        notificationList = new LinkedList<>();
+
         db.getAllNotificationsForUser(UID, notifications -> {
             for (Notification notification : notifications) {
                 notificationList.add(notification);
@@ -55,8 +70,6 @@ public class User {
         for (Book book: bookList){
             book.setInDatabase(true);
         }
-
-
     }
 
     public User(String user, String hash_password) throws ExecutionException, InterruptedException {
@@ -151,6 +164,8 @@ public class User {
         goalList.add(goal);
         return goal.getId();
     }
+
+
 }
 
 
