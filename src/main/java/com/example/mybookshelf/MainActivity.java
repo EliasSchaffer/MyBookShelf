@@ -129,13 +129,15 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
         setContentView(R.layout.main_search);
         ImageButton nav_homeBtn = findViewById(R.id.nav_home);
         ImageButton nav_StatsBtn = findViewById(R.id.nav_stats);
+        ImageButton nav_GoalBtn = findViewById(R.id.nav_goals);
+        ImageButton nav_SettingBtn = findViewById(R.id.nav_settings);
         LinearLayout bookContainer = findViewById(R.id.bookContainer);
         searchView = findViewById(R.id.searchView);
 
+        nav_GoalBtn.setOnClickListener(v -> uiMaster.navigateToGoals());
+        nav_SettingBtn.setOnClickListener(v -> uiMaster.navigateToSetting());
         nav_StatsBtn.setOnClickListener(v -> uiMaster.setupLineChart());
-        nav_homeBtn.setOnClickListener(v -> {
-            uiMaster.navigateToStartingPage();
-        });
+        nav_homeBtn.setOnClickListener(v -> uiMaster.navigateToStartingPage());
 
 
         // Set up SearchView listener

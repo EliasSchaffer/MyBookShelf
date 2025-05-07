@@ -329,8 +329,8 @@ android:background="@android:color/white">
         android:layout_height="48dp"
         android:layout_weight="1"
         android:background="@null"
-        android:src="@drawable/ic_home"
-        android:contentDescription="Home" />
+        android:src="@drawable/ic_goal"
+        android:contentDescription="Goal" />
 </LinearLayout>
 </androidx.cardview.widget.CardView>
 

@@ -29,6 +29,7 @@ import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.SearchView;
 import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -76,12 +77,16 @@ public class UIMaster {
     private EditText passwordEditText;
     private EditText emailEditText;
     private EditText repeatPassword;
+    private Button loginButton;
+    private Button registerButton;
+    private Button switchToLoginButton;
+    private Button switchToRegisterButton;
 
     private int timeSpentReading = 0;
     private ImageButton nav_searchBtn;
     private ImageButton nav_StatsBtn;
     private TextView timeSpentReadingTextView;
-    private final BooksAPI booksAPI;
+    private BooksAPI booksAPI;
     private AiAPI ai;
     private DataBaseConnection db;
     private User logedindUser;
@@ -92,7 +97,8 @@ public class UIMaster {
     List<Goal> goalList = new ArrayList<>();
 
 
-    public UIMaster(MainActivity main) {
+
+    public UIMaster(MainActivity main){
         booksAPI = new BooksAPI();
         ai = new AiAPI();
         mainActivity = main;
@@ -113,6 +119,7 @@ public class UIMaster {
             );
         }
     }
+
 
 
     public void createBookBox(LinearLayout container, Book book, boolean isSearch) {
@@ -341,6 +348,8 @@ public class UIMaster {
     }
 
 
+
+
     private BarChart barChart;
 
 
@@ -361,8 +370,8 @@ public class UIMaster {
         mainActivity.setContentView(R.layout.main_login);
         usernameEditText = mainActivity.findViewById(R.id.txfUser);
         passwordEditText = mainActivity.findViewById(R.id.txfPassword);
-        Button loginButton = mainActivity.findViewById(R.id.btnLogin);
-        Button switchToRegisterButton = mainActivity.findViewById(R.id.btnRegister);
+        loginButton = mainActivity.findViewById(R.id.btnLogin);
+        switchToRegisterButton = mainActivity.findViewById(R.id.btnRegister);
 
 
         loginButton.setOnClickListener(v -> {
@@ -387,8 +396,8 @@ public class UIMaster {
         passwordEditText = mainActivity.findViewById(R.id.txfNewPassword);
         repeatPassword = mainActivity.findViewById(R.id.txfRepeatPassword);
         emailEditText = mainActivity.findViewById(R.id.txfEmail);
-        Button registerButton = mainActivity.findViewById(R.id.btnRegister);
-        Button switchToLoginButton = mainActivity.findViewById(R.id.btnBackLogin);
+        registerButton = mainActivity.findViewById(R.id.btnRegister);
+        switchToLoginButton = mainActivity.findViewById(R.id.btnBackLogin);
 
 
         registerButton.setOnClickListener(v -> {
@@ -418,13 +427,13 @@ public class UIMaster {
         barChart = mainActivity.findViewById(R.id.barChart);
         ImageButton nav_homeBtn = mainActivity.findViewById(R.id.nav_home);
         ImageButton nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
-        ImageButton nav_StatsBtn = mainActivity.findViewById(R.id.nav_stats);
+        ImageButton nav_goalsBtn = mainActivity.findViewById(R.id.nav_goals);
+        ImageButton nav_settingBtn = mainActivity.findViewById(R.id.nav_settings);
 
         nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
-        nav_StatsBtn.setOnClickListener(v -> setupLineChart());
-        nav_homeBtn.setOnClickListener(v -> {
-            navigateToStartingPage();
-        });
+        nav_goalsBtn.setOnClickListener(v -> navigateToGoals());
+        nav_homeBtn.setOnClickListener(v -> navigateToStartingPage());
+        nav_settingBtn.setOnClickListener(v -> navigateToSetting());
 
         // Asynchronously fetch reading time data
         Future<ArrayList<BarEntry>> futureEntries = db.getReadingTimeByMonthAsync(mainActivity.getUser().getUid());
@@ -510,14 +519,17 @@ public class UIMaster {
                 // Now do UI setup
                 mainActivity.setContentView(R.layout.main_home);
                 LinearLayout bookContainer = mainActivity.findViewById(R.id.bookContainer);
-                nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
-                nav_StatsBtn = mainActivity.findViewById(R.id.nav_stats);
-                nav_StatsBtn.setOnClickListener(v -> setupLineChart());
-                ImageButton searchBtn = mainActivity.findViewById(R.id.btnSearchInList);
-                nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
-                searchBtn.setOnClickListener(v -> handleUserSearch());
+                ImageButton nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
+                ImageButton nav_StatsBtn = mainActivity.findViewById(R.id.nav_stats);
                 ImageButton nav_goals = mainActivity.findViewById(R.id.nav_goals);
+                ImageButton nav_settingBtn = mainActivity.findViewById(R.id.nav_settings);
+                ImageButton searchBtn = mainActivity.findViewById(R.id.btnSearchInList);
+
+                nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
+                nav_StatsBtn.setOnClickListener(v -> setupLineChart());
                 nav_goals.setOnClickListener(v -> navigateToGoals());
+                nav_settingBtn.setOnClickListener(v -> navigateToSetting());
+                searchBtn.setOnClickListener(v -> handleListSearch());
 
                 TextView user = mainActivity.findViewById(R.id.current_user);
                 user.setText("Hallo, " + logedindUser.getUser() + " \uD83D\uDC4B");
@@ -563,11 +575,15 @@ public class UIMaster {
     }
 
 
+
     void navigateToDetails(Book book) {
         mainActivity.setContentView(R.layout.main_detail);
 
         ImageButton nav_homeBtn = mainActivity.findViewById(R.id.nav_home);
         ImageButton nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
+        ImageButton nav_StatsBtn = mainActivity.findViewById(R.id.nav_stats);
+        ImageButton nav_goalBtn = mainActivity.findViewById(R.id.nav_goals);
+        ImageButton nav_settingBtn = mainActivity.findViewById(R.id.nav_settings);
         TextView txtAutor = mainActivity.findViewById(R.id.txtAuthor);
         TextView txtTitle = mainActivity.findViewById(R.id.txtTitle);
         TextView txtDescription = mainActivity.findViewById(R.id.txtDescription);
@@ -581,8 +597,11 @@ public class UIMaster {
         brf = new BookRecommendationFlow(mainActivity, this, book.getName());
 
 
-        nav_StatsBtn = mainActivity.findViewById(R.id.nav_stats);
         nav_StatsBtn.setOnClickListener(v -> setupLineChart());
+        nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
+        nav_homeBtn.setOnClickListener(v -> navigateToStartingPage());
+        nav_goalBtn.setOnClickListener(v -> navigateToGoals());
+        nav_settingBtn.setOnClickListener(v -> navigateToSetting());
 
         btnPopup.setOnClickListener(v -> {
             if (popupWindow.getVisibility() == View.VISIBLE) {
@@ -609,6 +628,7 @@ public class UIMaster {
                         .alpha(1f)
                         .setDuration(300)
                         .start();
+
 
 
                 RelativeLayout box = mainActivity.findViewById(R.id.inputBox);
@@ -645,6 +665,7 @@ public class UIMaster {
                 box.addView(layout);
 
 
+
             }
 
         });
@@ -665,18 +686,14 @@ public class UIMaster {
         rbRating.setRating(rating);
 
 
-        nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
 
-        nav_homeBtn.setOnClickListener(v -> {
-            navigateToStartingPage();
-        });
 
 
         Glide.with(mainActivity).load(book.getImageUrl()).into(imgCover);
 
     }
 
-    public void handleUserSearch() {
+    public void handleListSearch() {
         SearchView searchView = mainActivity.findViewById(R.id.searchView);
         Spinner spinnerGenre = mainActivity.findViewById(R.id.spinnerGenre);
         Spinner spinnerAuthor = mainActivity.findViewById(R.id.spinnerAuthor);
@@ -801,6 +818,7 @@ public class UIMaster {
         ImageButton nav_homeBtn = mainActivity.findViewById(R.id.nav_home);
         ImageButton nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
         ImageButton nav_StatsBtn = mainActivity.findViewById(R.id.nav_stats);
+        ImageButton nav_SettingBtn = mainActivity.findViewById(R.id.nav_settings);
         Button addGoal = mainActivity.findViewById(R.id.btnAddGoal);
         Spinner spinnerGoalType = mainActivity.findViewById(R.id.spinnerGoaltype);
         Button cancel = mainActivity.findViewById(R.id.btnPopupCancel);
@@ -823,6 +841,7 @@ public class UIMaster {
         nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
         nav_StatsBtn.setOnClickListener(v -> setupLineChart());
         nav_homeBtn.setOnClickListener(v -> navigateToStartingPage());
+        nav_SettingBtn.setOnClickListener(v -> navigateToSetting());
 
         // IMPORTANT: First get the most up-to-date goals list from the user object
         if (logedindUser != null && logedindUser.getGoalList() != null) {
@@ -942,7 +961,7 @@ public class UIMaster {
             String goalCategory = spinnerGoalType.getSelectedItem().toString();
             Log.d("GoalsDebug", "Goal category: " + goalCategory);
 
-            Goal finalGoal = null; // Changed variable name for clarity
+            Goal finalGoal = null;
 
             try {
                 if (goalCategory.equals("Read Specific Book")) {
@@ -952,7 +971,6 @@ public class UIMaster {
                         Toast.makeText(mainActivity, "Please enter a book name", Toast.LENGTH_SHORT).show();
                         return;
                     }
-                    // Create goal with a proper ID (0 will be replaced by the database)
                     finalGoal = new Goal(0, bookName, goalType, goalCategory, reminder.isChecked());
                     Log.d("GoalsDebug", "Created book goal: " + bookName);
                 } else {
@@ -1051,8 +1069,7 @@ public class UIMaster {
 
             slideOut.setAnimationListener(new Animation.AnimationListener() {
                 @Override
-                public void onAnimationStart(Animation animation) {
-                }
+                public void onAnimationStart(Animation animation) {}
 
                 @Override
                 public void onAnimationEnd(Animation animation) {
@@ -1067,11 +1084,31 @@ public class UIMaster {
                 }
 
                 @Override
-                public void onAnimationRepeat(Animation animation) {
-                }
+                public void onAnimationRepeat(Animation animation) {}
             });
 
             popUp.startAnimation(slideOut);
         });
     }
+
+    public void navigateToSetting(){
+        mainActivity.setContentView(R.layout.main_setting);
+
+        // Debug log
+        Log.d("GoalsDebug", "Navigating to goals screen");
+
+        // UI Elements setup
+        ImageButton nav_homeBtn = mainActivity.findViewById(R.id.nav_home);
+        ImageButton nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
+        ImageButton nav_StatsBtn = mainActivity.findViewById(R.id.nav_stats);
+        ImageButton nav_GoalBtn = mainActivity.findViewById(R.id.nav_goals);
+        Switch mode = mainActivity.findViewById(R.id.switchdarkmode);
+
+        nav_homeBtn.setOnClickListener(v -> navigateToStartingPage());
+        nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
+        nav_StatsBtn.setOnClickListener(v -> setupLineChart());
+        nav_GoalBtn.setOnClickListener(v -> navigateToGoals());
+
+    }
+
 }
