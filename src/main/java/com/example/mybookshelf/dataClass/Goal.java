@@ -7,14 +7,14 @@ public class Goal {
     int target;
     String bookName;
     String goal;
-    String goalType;
+    String frequenzy;
     boolean reminder;
 
     public Goal(int progress, int target, String goalType, String goal, boolean reminder) {
         this.progress = progress;
         this.target = target;
         this.goal = goal;
-        this.goalType = goalType;
+        this.frequenzy = goalType;
         this.reminder = reminder;
         if (progress == 100) {
             completed = true;
@@ -24,7 +24,7 @@ public class Goal {
     public Goal(int progress, String bookName, String goalType, String goal, boolean reminder) {
         this.progress = progress;
         this.bookName = bookName;
-        this.goalType = goalType;
+        this.frequenzy = goalType;
         this.reminder=reminder;
         this.goal = goal;
         if (progress == 100) {
@@ -56,11 +56,25 @@ public class Goal {
         return bookName;
     }
 
-    public String getGoalType() {
-        return goalType;
+    public String getFrequenzy() {
+        return frequenzy;
     }
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Goal{" +
+                "id=" + id +
+                ", completed=" + completed +
+                ", progress=" + progress +
+                ", target=" + target +
+                ", bookName='" + bookName + '\'' +
+                ", goal='" + goal + '\'' +
+                ", frequenzy='" + frequenzy + '\'' +
+                ", reminder=" + reminder +
+                '}';
     }
 }

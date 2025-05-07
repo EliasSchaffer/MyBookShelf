@@ -680,7 +680,7 @@ public class DataBaseConnection {
 
         // Map verbose goal type to enum value
         String goalTypeEnum;
-        switch (goal.getGoalType()) {
+        switch (goal.getFrequenzy()) {
             case "Read Books":
                 goalTypeEnum = "books";
                 break;
@@ -695,7 +695,7 @@ public class DataBaseConnection {
                 break;
             default:
                 goalTypeEnum = "books"; // fallback or throw an exception
-                Log.w("GoalsDebug", "Unknown goal type: " + goal.getGoalType() + ", defaulting to 'books'");
+                Log.w("GoalsDebug", "Unknown goal type: " + goal.getFrequenzy() + ", defaulting to 'books'");
                 break;
         }
 
@@ -710,7 +710,7 @@ public class DataBaseConnection {
                 preparedStatement.setInt(1, user.getUid());
 
                 // Handle different goal types
-                if (goal.getGoalType().equals("Read Specific Book")) {
+                if (goal.getFrequenzy().equals("Read Specific Book")) {
                     preparedStatement.setString(2, goal.getBookName());
                     preparedStatement.setInt(3, 0); // No target number for book goals
                 } else {
@@ -718,7 +718,7 @@ public class DataBaseConnection {
                     preparedStatement.setInt(3, goal.getTarget());
                 }
 
-                preparedStatement.setString(4, goal.getGoalType());
+                preparedStatement.setString(4, goal.getFrequenzy());
                 preparedStatement.setString(5,goalTypeEnum);
                 preparedStatement.setInt(6, goal.getProgress());
 
@@ -792,7 +792,7 @@ public class DataBaseConnection {
 
     public void getAllGoalsForUser(int userId, Consumer<List<Goal>> callback) {
         executorService.execute(() -> {
-            String sql = "SELECT goal_id, user_id, target, progress, created_at FROM goals WHERE user_id = ? ORDER BY created_at DESC";
+            String sql = "SELECT goal_id, user_id, book_name, target, type, goalType, progress, reminder, created_at FROM goals WHERE user_id = ? ORDER BY created_at DESC";
             List<Goal> goals = new ArrayList<>();
 
             try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
@@ -802,15 +802,55 @@ public class DataBaseConnection {
 
                 try (ResultSet resultSet = preparedStatement.executeQuery()) {
                     while (resultSet.next()) {
-                        //TODO change to new Constructor
-                        //Goal goal = new Goal(resultSet.getInt("goal_id"), resultSet.getInt("progress"), resultSet.getInt("target"));
-                        //goals.add(goal);
+                        int goalId = resultSet.getInt("goal_id");
+                        int progress = resultSet.getInt("progress");
+                        String frequenzy = resultSet.getString("type"); // 'daily','weekly','monthly','yearly'
+                        String goalType = resultSet.getString("goalType"); // 'books','pages','time','finishBook'
+                        String bookName = resultSet.getString("book_name");
+                        boolean reminder = resultSet.getBoolean("reminder");
+
+                        Goal goal;
+
+                        // Map goalType enum back to verbose goal description
+                        String goalTypeVerbose;
+                        switch (goalType) {
+                            case "books":
+                                goalTypeVerbose = "Read Books";
+                                break;
+                            case "pages":
+                                goalTypeVerbose = "Read Pages";
+                                break;
+                            case "time":
+                                goalTypeVerbose = "Read Time";
+                                break;
+                            case "finishBook":
+                                goalTypeVerbose = "Read Specific Book";
+                                break;
+                            default:
+                                goalTypeVerbose = "Read Books"; // fallback
+                                Log.w("GoalsDebug", "Unknown goal type enum: " + goalType + ", defaulting to 'Read Books'");
+                                break;
+                        }
+
+                        // Handle "finishBook" type goals which use a different constructor
+                        if (goalType.equals("finishBook")) {
+                            goal = new Goal(progress, bookName, frequenzy, goalTypeVerbose, reminder);
+                        } else {
+                            int target = resultSet.getInt("target");
+                            goal = new Goal(progress, target, frequenzy, goalTypeVerbose, reminder);
+                        }
+
+                        // Set the ID after construction
+                        goal.setId(goalId);
+
+                        goals.add(goal);
                     }
                 }
                 callback.accept(goals);
             } catch (SQLException e) {
                 System.err.println("Error fetching goals: " + e.getMessage());
                 e.printStackTrace();
+                Log.e("GoalsDebug", "Database error fetching goals: " + e.getMessage(), e);
                 callback.accept(Collections.emptyList());
             }
         });

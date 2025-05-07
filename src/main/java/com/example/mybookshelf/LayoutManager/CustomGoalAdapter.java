@@ -1,14 +1,16 @@
 package com.example.mybookshelf.LayoutManager;
 
-import static java.security.AccessController.getContext;
-
+import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
+import android.graphics.Rect;
 import android.graphics.drawable.GradientDrawable;
+import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.view.WindowMetrics;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
@@ -16,23 +18,26 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.mybookshelf.R;
+import com.example.mybookshelf.DataBaseConnection;
+import com.example.mybookshelf.MainActivity;
 import com.example.mybookshelf.dataClass.Goal;
 
 import java.util.List;
 
 public class CustomGoalAdapter extends RecyclerView.Adapter<CustomGoalAdapter.GoalViewHolder> {
     private List<Goal> goals;
-    private Context context;
+    private MainActivity context;
+    private DataBaseConnection db;
 
-    public CustomGoalAdapter(Context context, List<Goal> goals) {
+    public CustomGoalAdapter(MainActivity context, List<Goal> goals, DataBaseConnection db) {
         this.context = context;
         this.goals = goals;
+        this.db = db;
     }
+
+
 
     @NonNull
     @Override
@@ -51,6 +56,19 @@ public class CustomGoalAdapter extends RecyclerView.Adapter<CustomGoalAdapter.Go
     public void addGoal(Goal goal) {
         goals.add(goal);
         notifyItemInserted(goals.size() - 1);
+    }
+
+    /**
+     * Updates the goals list with new data
+     *
+     * @param newGoals The new list of goals to display
+     */
+    public void setGoals(List<Goal> newGoals) {
+        this.goals.clear();
+        if (newGoals != null) {
+            this.goals.addAll(newGoals);
+        }
+        notifyDataSetChanged();
     }
 
     @Override
@@ -93,6 +111,14 @@ public class CustomGoalAdapter extends RecyclerView.Adapter<CustomGoalAdapter.Go
         cancelButton.setTextColor(Color.WHITE);
         cancelButton.setBackgroundColor(Color.parseColor("#E53935"));
         cancelButton.setAllCaps(false);
+        cancelButton.setOnClickListener(v -> {
+            // Remove the goal from the list
+            goals.remove(goal);
+            context.getUser().getGoalList().remove(goal);
+            db.removeGoal(goal.getId(), context.getUser().getUid());
+            notifyDataSetChanged();
+
+        });
 
         // Position button outside the card at top-right
         FrameLayout.LayoutParams cancelParams = new FrameLayout.LayoutParams(
@@ -105,7 +131,7 @@ public class CustomGoalAdapter extends RecyclerView.Adapter<CustomGoalAdapter.Go
 
         // Goal text
         TextView textView = new TextView(context);
-        textView.setText("📘 Goal: " + goal.getGoalType());
+        textView.setText("📘 Goal: " + goal.getFrequenzy());
         textView.setTextSize(16);
         textView.setTextColor(Color.DKGRAY);
 
@@ -140,11 +166,16 @@ public class CustomGoalAdapter extends RecyclerView.Adapter<CustomGoalAdapter.Go
             int cardWidth = cardLayout.getWidth();
 
             // Set minimum width to ensure progress bar + button fit
-            int minWidth = cardWidth + buttonWidth + 50; // 32 = extra padding
+            DisplayMetrics displayMetrics = new DisplayMetrics();
+            if (context instanceof Activity) {
+                context.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
+
+
+            }
+            int minWidth = displayMetrics.widthPixels;
             cardLayout.setMinimumWidth(minWidth);
         });
 
         return rootLayout;
     }
-
 }

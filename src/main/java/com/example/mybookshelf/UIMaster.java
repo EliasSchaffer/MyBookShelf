@@ -106,16 +106,16 @@ public class UIMaster {
         bookViewMap = new HashMap<>();
     }
 
-    public void setUSer(User user){
+    public void setUSer(User user) {
         this.logedindUser = user;
     }
 
-    public void reduceTimeSpendReading(int time, TextView timeSpentReadingTextView){
+    public void reduceTimeSpendReading(int time, TextView timeSpentReadingTextView) {
 
-        timeSpentReading-=(time*1.5);
+        timeSpentReading -= (time * 1.5);
         if (timeSpentReadingTextView != null) {
             mainActivity.runOnUiThread(() ->
-                    timeSpentReadingTextView.setText("Time Spent Reading: " + + (timeSpentReading / (24 * 60)) + " d, " + ((timeSpentReading % (24 * 60)) / 60) + " h " + ((timeSpentReading % (24 * 60)) % 60) + " min")
+                    timeSpentReadingTextView.setText("Time Spent Reading: " + +(timeSpentReading / (24 * 60)) + " d, " + ((timeSpentReading % (24 * 60)) / 60) + " h " + ((timeSpentReading % (24 * 60)) % 60) + " min")
             );
         }
     }
@@ -195,7 +195,7 @@ public class UIMaster {
         LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(120, 160);
         bookImage.setLayoutParams(imageParams);
 
-        if (isSearch){
+        if (isSearch) {
             String author = book.getRelease_date();
             String releaseDate = book.getAuthor();
             book.setAuthor(author);
@@ -258,7 +258,8 @@ public class UIMaster {
 
             noteField.addTextChangedListener(new TextWatcher() {
                 @Override
-                public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                }
 
                 @Override
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
@@ -266,7 +267,8 @@ public class UIMaster {
                 }
 
                 @Override
-                public void afterTextChanged(Editable s) {}
+                public void afterTextChanged(Editable s) {
+                }
             });
 
             verticalContainer.addView(noteField);
@@ -351,15 +353,15 @@ public class UIMaster {
     private BarChart barChart;
 
 
-    public void clearUI(LinearLayout container){
+    public void clearUI(LinearLayout container) {
         container.removeAllViews();
     }
 
-    public void updateReadingTime(int pages, TextView timeSpentReadingTextView){
-        timeSpentReading += (pages*1.5);
+    public void updateReadingTime(int pages, TextView timeSpentReadingTextView) {
+        timeSpentReading += (pages * 1.5);
         if (timeSpentReadingTextView != null) {
             mainActivity.runOnUiThread(() ->
-                    timeSpentReadingTextView.setText("Time Spent Reading: " + + (timeSpentReading / (24 * 60)) + " d, " + ((timeSpentReading % (24 * 60)) / 60) + " h " + ((timeSpentReading % (24 * 60)) % 60) + " min")
+                    timeSpentReadingTextView.setText("Time Spent Reading: " + +(timeSpentReading / (24 * 60)) + " d, " + ((timeSpentReading % (24 * 60)) / 60) + " h " + ((timeSpentReading % (24 * 60)) % 60) + " min")
             );
         }
     }
@@ -384,11 +386,11 @@ public class UIMaster {
 
         switchToRegisterButton.setOnClickListener(v -> {
             showRegister();
-            });
+        });
 
     }
 
-    public void showRegister(){
+    public void showRegister() {
         mainActivity.setContentView(R.layout.main_register);
         usernameEditText = mainActivity.findViewById(R.id.txfUser);
         passwordEditText = mainActivity.findViewById(R.id.txfNewPassword);
@@ -400,7 +402,7 @@ public class UIMaster {
 
         registerButton.setOnClickListener(v -> {
             try {
-                mainActivity.handleRegister(usernameEditText, passwordEditText,repeatPassword, emailEditText);
+                mainActivity.handleRegister(usernameEditText, passwordEditText, repeatPassword, emailEditText);
             } catch (ExecutionException e) {
                 throw new RuntimeException(e);
             } catch (InterruptedException e) {
@@ -477,7 +479,7 @@ public class UIMaster {
                     String[] monthNames = {"Januar", "Februar", "März", "April", "Mai", "Juni",
                             "Juli", "August", "September", "Oktober", "November", "Dezember"};
                     if (month >= 1 && month <= 12) {
-                        return monthNames[month-1] + " " + year;
+                        return monthNames[month - 1] + " " + year;
                     } else {
                         return "Ungültig";
                     }
@@ -841,7 +843,7 @@ public class UIMaster {
         nav_homeBtn.setOnClickListener(v -> navigateToStartingPage());
         nav_SettingBtn.setOnClickListener(v -> navigateToSetting());
 
-        // Get goals from user
+        // IMPORTANT: First get the most up-to-date goals list from the user object
         if (logedindUser != null && logedindUser.getGoalList() != null) {
             goalList = new ArrayList<>(logedindUser.getGoalList());
             Log.d("GoalsDebug", "Loaded " + goalList.size() + " goals from user");
@@ -857,8 +859,8 @@ public class UIMaster {
         LinearLayoutManager layoutManager = new LinearLayoutManager(mainActivity);
         rvCompletedGoals.setLayoutManager(layoutManager);
 
-        // Create and set adapter
-        CustomGoalAdapter goalAdapter = new CustomGoalAdapter(mainActivity, goalList);
+        // Create and set adapter AFTER getting updated goals
+        CustomGoalAdapter goalAdapter = new CustomGoalAdapter(mainActivity, goalList, db);
         rvCompletedGoals.setAdapter(goalAdapter);
 
         Log.d("GoalsDebug", "RecyclerView setup complete with " + goalList.size() + " items");
@@ -922,7 +924,8 @@ public class UIMaster {
 
             slideOut.setAnimationListener(new Animation.AnimationListener() {
                 @Override
-                public void onAnimationStart(Animation animation) {}
+                public void onAnimationStart(Animation animation) {
+                }
 
                 @Override
                 public void onAnimationEnd(Animation animation) {
@@ -931,7 +934,8 @@ public class UIMaster {
                 }
 
                 @Override
-                public void onAnimationRepeat(Animation animation) {}
+                public void onAnimationRepeat(Animation animation) {
+                }
             });
 
             popUp.startAnimation(slideOut);
@@ -957,7 +961,7 @@ public class UIMaster {
             String goalCategory = spinnerGoalType.getSelectedItem().toString();
             Log.d("GoalsDebug", "Goal category: " + goalCategory);
 
-            Goal tempGoal = null;
+            Goal finalGoal = null;
 
             try {
                 if (goalCategory.equals("Read Specific Book")) {
@@ -967,7 +971,7 @@ public class UIMaster {
                         Toast.makeText(mainActivity, "Please enter a book name", Toast.LENGTH_SHORT).show();
                         return;
                     }
-                    tempGoal = new Goal(0, bookName, goalType, goalCategory, reminder.isChecked());
+                    finalGoal = new Goal(0, bookName, goalType, goalCategory, reminder.isChecked());
                     Log.d("GoalsDebug", "Created book goal: " + bookName);
                 } else {
                     String numberStr = number.getText().toString().trim();
@@ -977,12 +981,39 @@ public class UIMaster {
                         return;
                     }
                     int targetNumber = Integer.parseInt(numberStr);
-                    tempGoal = new Goal(0, targetNumber, goalType, goalCategory, reminder.isChecked());
+                    finalGoal = new Goal(0, targetNumber, goalType, goalCategory, reminder.isChecked());
                     Log.d("GoalsDebug", "Created numeric goal: " + targetNumber);
                 }
             } catch (NumberFormatException e) {
                 Log.e("GoalsDebug", "Error parsing number: " + e.getMessage());
                 Toast.makeText(mainActivity, "Please enter a valid number", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            // Debug check to ensure goal is created properly
+            if (finalGoal == null) {
+                Log.e("GoalsDebug", "Failed to create goal object!");
+                Toast.makeText(mainActivity, "Error creating goal", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            // Add goal to user first (database operation)
+            // This should generate a proper ID if your database is set up correctly
+            long newGoalId = db.addGoal(finalGoal, mainActivity.getUser());
+
+            // Update the goal object with the new ID if needed
+            if (newGoalId > 0) {
+                finalGoal.setId((int) newGoalId);
+                Log.d("GoalsDebug", "Goal saved to database with ID: " + newGoalId);
+
+                // Update user's goal list AFTER successful database operation
+                mainActivity.getUser().addGoal(finalGoal);
+
+                // Update our local list to match
+                goalList.add(finalGoal);
+            } else {
+                Log.e("GoalsDebug", "Failed to save goal to database");
+                Toast.makeText(mainActivity, "Failed to save goal", Toast.LENGTH_SHORT).show();
                 return;
             }
 
@@ -1005,31 +1036,33 @@ public class UIMaster {
                 }
             }
 
-            // Add goal to list and update adapter
-            final Goal finalGoal = tempGoal;
-            goalList.add(finalGoal);
+            // Now add to the displayed list after successful database operation
+            int insertPosition = goalList.size() - 1;
 
-            Log.d("GoalsDebug", "Goal added to list, new size: " + goalList.size());
-            Log.d("GoalsDebug", "Adapter item count before update: " + goalAdapter.getItemCount());
+            // Use specific notify method for better animation
+            goalAdapter.notifyItemInserted(insertPosition);
 
-            // Update the adapter
-            goalAdapter.notifyDataSetChanged();
+            // Animate the newly added item
+            RecyclerView.ViewHolder viewHolder = rvCompletedGoals.findViewHolderForAdapterPosition(insertPosition);
+            if (viewHolder != null) {
+                viewHolder.itemView.setAlpha(0f);
+                viewHolder.itemView.setTranslationY(20f);
+                viewHolder.itemView.animate()
+                        .alpha(1f)
+                        .translationY(0f)
+                        .setDuration(300)
+                        .start();
+            }
 
-            Log.d("GoalsDebug", "Adapter notified of data change");
-
-            // Save goal to user
-            mainActivity.getUser().addGoal(finalGoal);
-            Log.d("GoalsDebug", "Goal added to user");
-
-            // Consider saving to database here
-            // db.saveGoal(logedindUser.getUid(), finalGoal);
+            // Scroll to the new item if needed
+            rvCompletedGoals.smoothScrollToPosition(insertPosition);
 
             // Animation to close the popup
             TranslateAnimation slideOut = new TranslateAnimation(
                     Animation.RELATIVE_TO_SELF, 0f,
                     Animation.RELATIVE_TO_SELF, 0f,
-                    Animation.RELATIVE_TO_SELF, 0f,    // from original position
-                    Animation.RELATIVE_TO_SELF, 1f     // to bottom
+                    Animation.RELATIVE_TO_SELF, 0f,
+                    Animation.RELATIVE_TO_SELF, 1f
             );
             slideOut.setDuration(300);
             slideOut.setInterpolator(new AccelerateInterpolator());
@@ -1047,6 +1080,7 @@ public class UIMaster {
                     book.setText("");
                     number.setText("");
                     reminder.setChecked(false);
+                    type.clearCheck();
                 }
 
                 @Override
