@@ -89,6 +89,24 @@
                         android:scaleX="2"
                         android:scaleY="2"/>
 
+                    <Spinner
+                        android:id="@+id/spinnerGoaltype"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_edittext"
+                        android:padding="10dp"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginTop="12dp"
+                        android:prompt="@string/select_status" />
+
+                    <TextView
+                        android:id="@+id/txtsyn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="Synopsis:"
+                        android:textSize="23sp"/>
+
                     <!-- Short Description -->
                     <TextView
                         android:id="@+id/txtDescription"
