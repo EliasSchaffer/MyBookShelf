@@ -165,7 +165,9 @@ public class User {
         return goal.getId();
     }
 
-
+    public LinkedList<Goal> getCompletedGoalList() {
+        return completedGoalList;
+    }
 }
 
 

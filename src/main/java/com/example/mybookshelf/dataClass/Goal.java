@@ -16,18 +16,19 @@ public class Goal {
         this.goal = goal;
         this.frequenzy = goalType;
         this.reminder = reminder;
-        if (progress == 100) {
+        if (progress == target) {
             completed = true;
         } else completed = false;
     }
 
-    public Goal(int progress, String bookName, String goalType, String goal, boolean reminder) {
+    public Goal(int progress, int target, String bookName, String goalType, String goal, boolean reminder) {
         this.progress = progress;
         this.bookName = bookName;
         this.frequenzy = goalType;
         this.reminder=reminder;
+        this.target = target;
         this.goal = goal;
-        if (progress == 100) {
+        if (progress == target) {
             completed = true;
         } else completed = false;
     }

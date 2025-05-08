@@ -594,6 +594,7 @@ public class UIMaster {
         ImageButton btnPopup = mainActivity.findViewById(R.id.btnPopup);
         CardView popupWindow = mainActivity.findViewById(R.id.popupWindow);
         GridLayout chat = mainActivity.findViewById(R.id.grdChat);
+
         brf = new BookRecommendationFlow(mainActivity, this, book.getName());
 
 
@@ -602,6 +603,8 @@ public class UIMaster {
         nav_homeBtn.setOnClickListener(v -> navigateToStartingPage());
         nav_goalBtn.setOnClickListener(v -> navigateToGoals());
         nav_settingBtn.setOnClickListener(v -> navigateToSetting());
+
+
 
         btnPopup.setOnClickListener(v -> {
             if (popupWindow.getVisibility() == View.VISIBLE) {
@@ -829,6 +832,8 @@ public class UIMaster {
         CheckBox reminder = mainActivity.findViewById(R.id.activateNot);
         RadioGroup type = mainActivity.findViewById(R.id.frequencyRadioGroup);
         RecyclerView rvCompletedGoals = mainActivity.findViewById(R.id.rvCompletedGoals);
+        Button current = mainActivity.findViewById(R.id.btnCurrent);
+        Button completed = mainActivity.findViewById(R.id.btnCompleted);
 
         // Check if RecyclerView was found
         if (rvCompletedGoals == null) {
@@ -852,6 +857,8 @@ public class UIMaster {
             Log.d("GoalsDebug", "No goals found, creating empty list");
         }
 
+
+
         // Setup RecyclerView with clear visibility
         rvCompletedGoals.setVisibility(View.VISIBLE);
 
@@ -862,6 +869,26 @@ public class UIMaster {
         // Create and set adapter AFTER getting updated goals
         CustomGoalAdapter goalAdapter = new CustomGoalAdapter(mainActivity, goalList, db);
         rvCompletedGoals.setAdapter(goalAdapter);
+
+        // Set click listener for "current" button
+        current.setOnClickListener(v -> {
+            completed.setBackgroundResource(R.drawable.rounded_button_black);
+            completed.setTextColor(mainActivity.getColor(R.color.white));
+            current.setBackgroundResource(R.drawable.rounded_button_grey);
+            current.setTextColor(mainActivity.getColor(R.color.black));
+            goalAdapter.setGoals(logedindUser.getGoalList());
+        });
+
+        // Set click listener for "completed" button
+        completed.setOnClickListener(v -> {
+            current.setBackgroundResource(R.drawable.rounded_button_black);
+            current.setTextColor(mainActivity.getColor(R.color.white));
+            completed.setBackgroundResource(R.drawable.rounded_button_grey);
+            completed.setTextColor(mainActivity.getColor(R.color.black));
+            goalAdapter.setGoals(logedindUser.getCompletedGoalList());
+        });
+
+
 
         Log.d("GoalsDebug", "RecyclerView setup complete with " + goalList.size() + " items");
 
@@ -946,12 +973,12 @@ public class UIMaster {
             Log.d("GoalsDebug", "Save button clicked");
 
             // Validate user selections
-            String goalType = "";
+            String frequenzy = "";
             int id = type.getCheckedRadioButtonId();
             if (id != -1) {
                 RadioButton selectedRadioButton = mainActivity.findViewById(id);
-                goalType = selectedRadioButton.getText().toString();
-                Log.d("GoalsDebug", "Selected frequency: " + goalType);
+                frequenzy = selectedRadioButton.getText().toString();
+                Log.d("GoalsDebug", "Selected frequency: " + frequenzy);
             } else {
                 Log.e("GoalsDebug", "No frequency selected!");
                 Toast.makeText(mainActivity, "Please select a frequency", Toast.LENGTH_SHORT).show();
@@ -964,6 +991,9 @@ public class UIMaster {
             Goal finalGoal = null;
 
             try {
+                String numberStr = number.getText().toString().trim();
+                int targetNumber = Integer.parseInt(numberStr);
+
                 if (goalCategory.equals("Read Specific Book")) {
                     String bookName = book.getText().toString().trim();
                     if (bookName.isEmpty()) {
@@ -971,17 +1001,17 @@ public class UIMaster {
                         Toast.makeText(mainActivity, "Please enter a book name", Toast.LENGTH_SHORT).show();
                         return;
                     }
-                    finalGoal = new Goal(0, bookName, goalType, goalCategory, reminder.isChecked());
+                    finalGoal = new Goal(0,targetNumber, bookName, frequenzy, goalCategory, reminder.isChecked());
                     Log.d("GoalsDebug", "Created book goal: " + bookName);
                 } else {
-                    String numberStr = number.getText().toString().trim();
+
                     if (numberStr.isEmpty()) {
                         Log.e("GoalsDebug", "Number field is empty!");
                         Toast.makeText(mainActivity, "Please enter a number", Toast.LENGTH_SHORT).show();
                         return;
                     }
-                    int targetNumber = Integer.parseInt(numberStr);
-                    finalGoal = new Goal(0, targetNumber, goalType, goalCategory, reminder.isChecked());
+
+                    finalGoal = new Goal(0, targetNumber, frequenzy, goalCategory, reminder.isChecked());
                     Log.d("GoalsDebug", "Created numeric goal: " + targetNumber);
                 }
             } catch (NumberFormatException e) {
@@ -1019,8 +1049,8 @@ public class UIMaster {
 
             // Handle notifications
             if (reminder.isChecked()) {
-                Log.d("GoalsDebug", "Setting up notification for " + goalType);
-                switch (goalType) {
+                Log.d("GoalsDebug", "Setting up notification for " + frequenzy);
+                switch (frequenzy) {
                     case "daily":
                         NotificationScheduler.scheduleDailyNotification(mainActivity, 12, 0, "Daily Reading Reminder");
                         break;
