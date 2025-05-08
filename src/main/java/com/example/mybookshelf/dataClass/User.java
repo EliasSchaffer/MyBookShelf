@@ -72,6 +72,45 @@ public class User {
         }
     }
 
+    @SuppressLint("SuspiciousIndentation")
+    public User(String user, int UID, DataBaseConnection db) throws ExecutionException, InterruptedException {
+        this.user = user;
+        this.hash_password = hash_password;
+        this.UID = UID;
+        this.db = db;
+        genreList = new TreeSet<>();
+        authorList = new TreeSet<>();
+
+        // Initialize the goal lists before using them
+        goalList = new LinkedList<>();
+        completedGoalList = new LinkedList<>();
+
+        db.getAllGoalsForUser(UID, (List<Goal> goalsList) -> {
+            for (Goal goal : goalsList) {
+                Log.i("Goal", goal.toString());
+                if (goal.isCompleted()) {
+                    completedGoalList.add(goal);
+                } else {
+                    goalList.add(goal);
+                }
+            }
+        });
+
+        // Initialize notification list before using it
+        notificationList = new LinkedList<>();
+
+        db.getAllNotificationsForUser(UID, notifications -> {
+            for (Notification notification : notifications) {
+                notificationList.add(notification);
+            }
+        });
+
+        bookList = new LinkedList<>(db.getBooksFromUID(UID).get());
+        for (Book book: bookList){
+            book.setInDatabase(true);
+        }
+    }
+
     public User(String user, String hash_password) throws ExecutionException, InterruptedException {
         this.user = user;
         this.hash_password = hash_password;

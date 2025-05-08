@@ -1,5 +1,7 @@
 package com.example.mybookshelf;
 
+import static java.security.spec.MGF1ParameterSpec.SHA256;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -17,6 +19,8 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.security.KeyStore;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -27,6 +31,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.UUID;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -131,13 +136,42 @@ public class DataBaseConnection {
         });
     }
 
+    public Future<String> getToken(int uid) {
+        return executorService.submit(() -> {
+            String loginQuery = "SELECT token FROM users WHERE user_id = ?";
+
+            try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                 PreparedStatement stmt = connection.prepareStatement(loginQuery)) {
+
+                stmt.setQueryTimeout(5); // 5 seconds timeout
+                stmt.setInt(1, uid);
+
+                try (ResultSet rs = stmt.executeQuery()) {
+                    if (rs.next()) {
+                        return rs.getString("token");
+                    }
+                }
+
+            } catch (SQLTimeoutException e) {
+                e.printStackTrace();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            // Return empty string if no token found
+            Log.e("DB", "No token found for user ID: " + uid);
+            return "";
+        });
+    }
+
+
 
     public void addUser(String username, String email, String password) {
         executorService.execute(() -> {
             String hashedPassword = BCrypt.withDefaults().hashToString(12, password.toCharArray());
 
             String checkUserSql = "SELECT COUNT(*) FROM users WHERE username = ? OR email = ?";
-            String insertUserSql = "INSERT INTO users (username, password_hash, email) VALUES (?, ?, ?)";
+            String insertUserSql = "INSERT INTO users (username, password_hash, email, token) VALUES (?, ?, ?, ?)";
 
             try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
                 try (PreparedStatement checkStmt = connection.prepareStatement(checkUserSql)) {
@@ -155,6 +189,7 @@ public class DataBaseConnection {
                     insertStmt.setString(1, username);
                     insertStmt.setString(2, hashedPassword);
                     insertStmt.setString(3, email);
+                    insertStmt.setString(4, generateSessionToken());
 
                     int rowsInserted = insertStmt.executeUpdate();
                     if (rowsInserted > 0) {
@@ -174,6 +209,33 @@ public class DataBaseConnection {
             }
         });
     }
+
+
+    public String generateSessionToken() {
+        try {
+            // Generate a random UUID and concatenate with a random number
+            String input = UUID.randomUUID().toString() + Math.random();
+
+            // Create a MessageDigest instance for SHA-256
+            MessageDigest digest = MessageDigest.getInstance("SHA-256");
+
+            // Compute the hash of the input string
+            byte[] hash = digest.digest(input.getBytes());
+
+            // Convert the byte array into a hexadecimal string
+            StringBuilder hexString = new StringBuilder();
+            for (byte b : hash) {
+                hexString.append(String.format("%02x", b));
+            }
+
+            // Return the hex string as the session token
+            return hexString.toString();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
 
 
     public Future<List<Book>> getBooksFromUID(int uid) {
