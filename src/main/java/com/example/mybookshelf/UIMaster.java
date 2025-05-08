@@ -1,5 +1,9 @@
 package com.example.mybookshelf;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.ValueAnimator;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.text.Editable;
@@ -35,11 +39,13 @@ import android.widget.Toast;
 
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.mybookshelf.LayoutManager.CostumeListAdapter;
 import com.example.mybookshelf.LayoutManager.CustomGoalAdapter;
 import com.example.mybookshelf.apis.AiAPI;
 import com.example.mybookshelf.apis.BooksAPI;
@@ -434,7 +440,7 @@ public class UIMaster {
         nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
         nav_goalsBtn.setOnClickListener(v -> navigateToGoals());
         nav_homeBtn.setOnClickListener(v -> navigateToStartingPage());
-        nav_settingBtn.setOnClickListener(v -> navigateToSetting());
+        nav_settingBtn.setOnClickListener(v -> navigateToSettings());
 
         // Asynchronously fetch reading time data
         Future<ArrayList<BarEntry>> futureEntries = db.getReadingTimeByMonthAsync(mainActivity.getUser().getUid());
@@ -513,23 +519,24 @@ public class UIMaster {
         ExecutorService executor = Executors.newSingleThreadExecutor();
 
         executor.execute(() -> {
-            // Do any data processing in background
+            // Do any data processing in the background
             List<Book> userBooks = logedindUser.getBookList();
 
             mainActivity.runOnUiThread(() -> {
                 // Now do UI setup
                 mainActivity.setContentView(R.layout.main_home);
-                LinearLayout bookContainer = mainActivity.findViewById(R.id.bookContainer);
+                RecyclerView recyclerView = mainActivity.findViewById(R.id.rvmyList);  // Assuming you have a RecyclerView in your layout
                 ImageButton nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
                 ImageButton nav_StatsBtn = mainActivity.findViewById(R.id.nav_stats);
                 ImageButton nav_goals = mainActivity.findViewById(R.id.nav_goals);
                 ImageButton nav_settingBtn = mainActivity.findViewById(R.id.nav_settings);
                 ImageButton searchBtn = mainActivity.findViewById(R.id.btnSearchInList);
 
+                // Set up navigation buttons
                 nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
                 nav_StatsBtn.setOnClickListener(v -> setupLineChart());
                 nav_goals.setOnClickListener(v -> navigateToGoals());
-                nav_settingBtn.setOnClickListener(v -> navigateToSetting());
+                nav_settingBtn.setOnClickListener(v -> navigateToSettings());
                 searchBtn.setOnClickListener(v -> handleListSearch());
 
                 TextView user = mainActivity.findViewById(R.id.current_user);
@@ -537,38 +544,22 @@ public class UIMaster {
             });
 
             if (userBooks != null && !userBooks.isEmpty()) {
-                for (Book book : userBooks) {
-                    if (book != null && !TextUtils.isEmpty(book.getName())) {
-                        if (book.isInDatabase()) {
-                            // UI update must be on main thread
-                            mainActivity.runOnUiThread(() -> {
-                                LinearLayout bookContainer = mainActivity.findViewById(R.id.bookContainer);
-                                createBookBox(bookContainer, book, false);
-                                timeSpentReadingTextView = mainActivity.findViewById(R.id.etfTimeSpentReading);
-                                updateReadingTime(book.getPages(), timeSpentReadingTextView);
-                            });
-                        } else {
-                            // Book will be fetched asynchronously by the API callback
-                            booksAPI.getOneBook(book.getName(), new BooksAPI.BookCallback() {
-                                @Override
-                                public void onBookFetched(List<Book> books) {
-                                    mainActivity.runOnUiThread(() -> {
-                                        LinearLayout bookContainer = mainActivity.findViewById(R.id.bookContainer);
-                                        if (books != null && !books.isEmpty()) {
-                                            Book fetched = books.get(0);
-                                            mainActivity.saveBook(fetched);
-                                            createBookBox(bookContainer, fetched, false);
-                                            timeSpentReadingTextView = mainActivity.findViewById(R.id.etfTimeSpentReading);
-                                            updateReadingTime(fetched.getPages(), timeSpentReadingTextView);
-                                        } else {
-                                            createBookBox(bookContainer, new Book("An Error occurred, please try again", "0", 0, "NA"), false);
-                                        }
-                                    });
-                                }
-                            });
-                        }
-                    }
-                }
+                // Set up the RecyclerView with the CostumeListAdapter
+                mainActivity.runOnUiThread(() -> {
+                    // Create an adapter for the RecyclerView
+                    CostumeListAdapter adapter = new CostumeListAdapter(mainActivity, userBooks, db, logedindUser, this);
+
+                    // Set the adapter to the RecyclerView
+                    RecyclerView recyclerView = mainActivity.findViewById(R.id.rvmyList);
+                    recyclerView.setLayoutManager(new LinearLayoutManager(mainActivity));
+                    recyclerView.setAdapter(adapter);
+                });
+
+                // Also update the reading time for the first book (or all books)
+                mainActivity.runOnUiThread(() -> {
+                    timeSpentReadingTextView = mainActivity.findViewById(R.id.etfTimeSpentReading);
+                    updateReadingTime(userBooks.get(0).getPages(), timeSpentReadingTextView);
+                });
             } else {
                 Log.w("MainActivity", "User's book list is null or empty.");
             }
@@ -577,7 +568,7 @@ public class UIMaster {
 
 
 
-    void navigateToDetails(Book book) {
+    public void navigateToDetails(Book book) {
         mainActivity.setContentView(R.layout.main_detail);
 
         ImageButton nav_homeBtn = mainActivity.findViewById(R.id.nav_home);
@@ -603,7 +594,7 @@ public class UIMaster {
         nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
         nav_homeBtn.setOnClickListener(v -> navigateToStartingPage());
         nav_goalBtn.setOnClickListener(v -> navigateToGoals());
-        nav_settingBtn.setOnClickListener(v -> navigateToSetting());
+        nav_settingBtn.setOnClickListener(v -> navigateToSettings());
 
 
 
@@ -847,7 +838,7 @@ public class UIMaster {
         nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
         nav_StatsBtn.setOnClickListener(v -> setupLineChart());
         nav_homeBtn.setOnClickListener(v -> navigateToStartingPage());
-        nav_SettingBtn.setOnClickListener(v -> navigateToSetting());
+        nav_SettingBtn.setOnClickListener(v -> navigateToSettings());
 
         // IMPORTANT: First get the most up-to-date goals list from the user object
         if (logedindUser != null && logedindUser.getGoalList() != null) {
@@ -1122,7 +1113,7 @@ public class UIMaster {
         });
     }
 
-    public void navigateToSetting(){
+    public void navigateToSettings(){
         mainActivity.setContentView(R.layout.main_setting);
 
         // Debug log
@@ -1133,11 +1124,90 @@ public class UIMaster {
         ImageButton nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
         ImageButton nav_StatsBtn = mainActivity.findViewById(R.id.nav_stats);
         ImageButton nav_GoalBtn = mainActivity.findViewById(R.id.nav_goals);
+        Button signOut = mainActivity.findViewById(R.id.btnSignOut);
+        Button delAcc = mainActivity.findViewById(R.id.btndelAcc);
         Switch mode = mainActivity.findViewById(R.id.switchdarkmode);
+        TextView changePasswd = mainActivity.findViewById(R.id.tvchangePasswd);
+        TextView changeUsername = mainActivity.findViewById(R.id.tvchangeUsername);
+        TextView changeEmail = mainActivity.findViewById(R.id.tvchangeEmail);
+        RelativeLayout passwdChangeBox = mainActivity.findViewById(R.id.passwdChangeBox);
+        RelativeLayout usernameChangeBox = mainActivity.findViewById(R.id.usernameChangeBox);
+        RelativeLayout EmailChangeBox = mainActivity.findViewById(R.id.EmailChangeBox);
 
         nav_homeBtn.setOnClickListener(v -> navigateToStartingPage());
         nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
         nav_StatsBtn.setOnClickListener(v -> setupLineChart());
         nav_GoalBtn.setOnClickListener(v -> navigateToGoals());
+
+        signOut.setOnClickListener(v -> {
+            Authenticator.clearStoredToken(mainActivity);
+            try {
+                showLogin();
+            } catch (ExecutionException e) {
+                throw new RuntimeException(e);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+
+        });
+
+        delAcc.setOnClickListener(v ->{
+            Authenticator.clearStoredToken(mainActivity);
+            new AlertDialog.Builder(mainActivity)
+                    .setTitle("Confirm")
+                    .setMessage("Are you sure you want to do this?")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            db.deleteUser(logedindUser.getUid());
+                            try {
+                                showLogin();
+                            } catch (ExecutionException e) {
+                                throw new RuntimeException(e);
+                            } catch (InterruptedException e) {
+                                throw new RuntimeException(e);
+                            }
+                        }
+                    })
+                    .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    })
+                    .show();
+        });
+
+        changePasswd.setOnClickListener(v -> toggleVisibilityAnimated(passwdChangeBox));
+        changeUsername.setOnClickListener(v -> toggleVisibilityAnimated(usernameChangeBox));
+        changeEmail.setOnClickListener(v -> toggleVisibilityAnimated(EmailChangeBox));
+
+
+
+
     }
+
+    private void toggleVisibilityAnimated(RelativeLayout layout) {
+        layout.setPivotY(0f); // Set animation pivot to top
+
+        if (layout.getVisibility() == View.GONE) {
+            layout.setScaleY(0f);
+            layout.setVisibility(View.VISIBLE);
+            layout.animate()
+                    .scaleY(1f)
+                    .alpha(1f)
+                    .setDuration(250)
+                    .setInterpolator(new DecelerateInterpolator())
+                    .start();
+        } else {
+            layout.animate()
+                    .scaleY(0f)
+                    .alpha(0f)
+                    .setDuration(250)
+                    .setInterpolator(new AccelerateInterpolator())
+                    .withEndAction(() -> layout.setVisibility(View.GONE))
+                    .start();
+        }
+    }
+
+
+
 }

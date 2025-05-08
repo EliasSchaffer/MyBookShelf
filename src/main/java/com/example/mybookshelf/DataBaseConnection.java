@@ -917,4 +917,27 @@ public class DataBaseConnection {
             }
         });
     }
+
+    public void deleteUser(int userId){
+        executorService.execute(() -> {
+            String sql = "DELETE FROM users WHERE user_id = ?";
+
+            try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                 PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+
+                preparedStatement.setInt(1, userId);
+
+                int rowsDeleted = preparedStatement.executeUpdate();
+
+                if (rowsDeleted > 0) {
+                    System.out.println("User removed successfully.");
+                } else {
+                    System.out.println("No matching user found to remove.");
+                }
+            } catch (SQLException e) {
+                System.err.println("Error removing user: " + e.getMessage());
+                e.printStackTrace();
+            }
+        });
+    }
 }

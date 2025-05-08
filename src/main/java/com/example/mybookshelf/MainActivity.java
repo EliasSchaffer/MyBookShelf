@@ -108,13 +108,14 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
             ai = new AiAPI();
             db = new DataBaseConnection(this);
 
+
             int uid = auth.getUid(this);
             String tempToken = auth.getToken(this);
             Log.d("MainActivity", "Token: " + tempToken);
             Log.d("MainActivity", "UID: " + uid);
 
             if (uid != -1){
-                if (tempToken.equals(db.getToken(uid))){
+                if (tempToken.equals(db.getToken(uid).get())){
                     logedindUser = new User(auth.getUsername(this), uid, db);
                     uiMaster.setUSer(logedindUser);
                     uiMaster.navigateToStartingPage();
@@ -122,6 +123,7 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
             }else {
 
                 try {
+                    Authenticator.clearStoredToken(this);
                     uiMaster.showLogin();
 
                 } catch (ExecutionException e) {
@@ -149,7 +151,7 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
         searchView = findViewById(R.id.searchView);
 
         nav_GoalBtn.setOnClickListener(v -> uiMaster.navigateToGoals());
-        nav_SettingBtn.setOnClickListener(v -> uiMaster.navigateToSetting());
+        nav_SettingBtn.setOnClickListener(v -> uiMaster.navigateToSettings());
         nav_StatsBtn.setOnClickListener(v -> uiMaster.setupLineChart());
         nav_homeBtn.setOnClickListener(v -> uiMaster.navigateToStartingPage());
 
