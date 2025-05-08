@@ -108,13 +108,27 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
             ai = new AiAPI();
             db = new DataBaseConnection(this);
 
-            try {
-                uiMaster.showLogin();
+            int uid = auth.getUid(this);
+            String tempToken = auth.getToken(this);
+            Log.d("MainActivity", "Token: " + tempToken);
+            Log.d("MainActivity", "UID: " + uid);
 
-            } catch (ExecutionException e) {
-                throw new RuntimeException(e);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+            if (uid != -1){
+                if (tempToken.equals(db.getToken(uid))){
+                    logedindUser = new User(auth.getUsername(this), uid, db);
+                    uiMaster.setUSer(logedindUser);
+                    uiMaster.navigateToStartingPage();
+                }
+            }else {
+
+                try {
+                    uiMaster.showLogin();
+
+                } catch (ExecutionException e) {
+                    throw new RuntimeException(e);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                }
             }
 
 
@@ -186,7 +200,7 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
     }
 
 
-    public void handleLogin(EditText usernameEditText, EditText passwordEditText) throws ExecutionException, InterruptedException {
+    public void handleLogin(EditText usernameEditText, EditText passwordEditText, boolean stayLoggedIn) throws ExecutionException, InterruptedException {
         String username = usernameEditText.getText().toString().trim();
         String password = passwordEditText.getText().toString().trim();
         FrameLayout loadingOverlay = findViewById(R.id.loading_overlay);
@@ -201,14 +215,21 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
         auth.checkLogin(userAttempt, (success, id) -> {
             if (success) {
                 try {
-                    logedindUser = new User(username, "", id, db);
+                    logedindUser = new User(username, id, db);
                     uiMaster.setUSer(logedindUser);
                     loadingOverlay.setVisibility(View.GONE);
+                    if (stayLoggedIn){
+                        String token = db.getToken(id).get();
+                        auth.saveToken(this, token,id, username);
+                    }
+
                     uiMaster.navigateToStartingPage();  // Move navigation here after user is set
                 } catch (ExecutionException | InterruptedException e) {
                     loadingOverlay.setVisibility(View.GONE);
                     Toast.makeText(this, "Error loading user data", Toast.LENGTH_SHORT).show();
                     e.printStackTrace();
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
                 }
             } else {
                 loadingOverlay.setVisibility(View.GONE);

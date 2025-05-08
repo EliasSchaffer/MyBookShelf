@@ -372,11 +372,12 @@ public class UIMaster {
         passwordEditText = mainActivity.findViewById(R.id.txfPassword);
         loginButton = mainActivity.findViewById(R.id.btnLogin);
         switchToRegisterButton = mainActivity.findViewById(R.id.btnRegister);
+        CheckBox stayLoggedIn = mainActivity.findViewById(R.id.stayLoggedIn);
 
 
         loginButton.setOnClickListener(v -> {
             try {
-                mainActivity.handleLogin(usernameEditText, passwordEditText);
+                mainActivity.handleLogin(usernameEditText, passwordEditText, stayLoggedIn.isChecked());
             } catch (ExecutionException e) {
                 throw new RuntimeException(e);
             } catch (InterruptedException e) {
@@ -1138,7 +1139,5 @@ public class UIMaster {
         nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
         nav_StatsBtn.setOnClickListener(v -> setupLineChart());
         nav_GoalBtn.setOnClickListener(v -> navigateToGoals());
-
     }
-
 }

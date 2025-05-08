@@ -131,7 +131,7 @@ public class CustomGoalAdapter extends RecyclerView.Adapter<CustomGoalAdapter.Go
 
         // Goal text
         TextView textView = new TextView(context);
-        textView.setText("📘 Goal: " + goal.getFrequenzy());
+        textView.setText("📘 Goal: " + goal.getGoal() + " per " + goal.getFrequenzy().substring(0, goal.getFrequenzy().length()-2));
         textView.setTextSize(16);
         textView.setTextColor(Color.DKGRAY);
 
