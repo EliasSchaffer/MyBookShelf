@@ -1,7 +1,5 @@
 package com.example.mybookshelf;
 
-import static java.security.spec.MGF1ParameterSpec.SHA256;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -485,6 +483,8 @@ public class DataBaseConnection {
     }
 
 
+
+
     public class BookService {
 
         private Connection connection;
@@ -940,4 +940,111 @@ public class DataBaseConnection {
             }
         });
     }
+
+    public Future<String> checkPassword(int userId) {
+        return executorService.submit(() -> {
+            String sql = "SELECT password_hash FROM users WHERE user_id = ?";
+
+            try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                 PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+
+                preparedStatement.setInt(1, userId);
+
+                try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                    if (resultSet.next()) {
+                        String passwordHash = resultSet.getString("password_hash");
+                        System.out.println("Password received from DB");
+                        return passwordHash;
+                    } else {
+                        System.out.println("No matching user found");
+                        return null;
+                    }
+                }
+
+            } catch (SQLException e) {
+                System.err.println("Error getting password: " + e.getMessage());
+                e.printStackTrace();
+                return null;
+            }
+        });
+    }
+
+
+    public void changePassword(int userId, String newPassword){
+        String hashedPassword = BCrypt.withDefaults().hashToString(12, newPassword.toCharArray());
+
+        executorService.execute(() -> {
+            String sql = "UPDATE users SET password_hash = ? WHERE user_id = ?;";
+
+            try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                 PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+
+                preparedStatement.setString(1, hashedPassword);
+                preparedStatement.setInt(2, userId);
+
+                int rowsDeleted = preparedStatement.executeUpdate();
+
+                if (rowsDeleted > 0) {
+                    System.out.println("Password changed successfully.");
+                } else {
+                    System.out.println("No matching user found to change password.");
+                }
+            } catch (SQLException e) {
+                System.err.println("Error changing password: " + e.getMessage());
+                e.printStackTrace();
+            }
+        });
+    }
+
+    public void changeUserName(int userId, String newUser){
+
+        executorService.execute(() -> {
+            String sql = "UPDATE users SET username = ? WHERE user_id = ?;";
+
+            try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                 PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+
+                preparedStatement.setString(1, newUser);
+                preparedStatement.setInt(2, userId);
+
+                int rowsDeleted = preparedStatement.executeUpdate();
+
+                if (rowsDeleted > 0) {
+                    System.out.println("Username changed successfully.");
+                } else {
+                    System.out.println("No matching user found to change username.");
+                }
+            } catch (SQLException e) {
+                System.err.println("Error changing username: " + e.getMessage());
+                e.printStackTrace();
+            }
+        });
+    }
+
+    public void changeEmail(int userId, String email){
+
+        executorService.execute(() -> {
+            String sql = "UPDATE users SET email = ? WHERE user_id = ?;";
+
+            try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                 PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+
+                preparedStatement.setString(1, email);
+                preparedStatement.setInt(2, userId);
+
+                int rowsDeleted = preparedStatement.executeUpdate();
+
+                if (rowsDeleted > 0) {
+                    System.out.println("Email changed successfully.");
+                } else {
+                    System.out.println("No matching user found to change email.");
+                }
+            } catch (SQLException e) {
+                System.err.println("Error changing email: " + e.getMessage());
+                e.printStackTrace();
+            }
+        });
+    }
+
+
 }

@@ -77,6 +77,8 @@ import java.util.concurrent.Future;
 
 import com.github.mikephil.charting.formatter.ValueFormatter;
 
+import at.favre.lib.crypto.bcrypt.BCrypt;
+
 public class UIMaster {
 
     MainActivity mainActivity;
@@ -1203,8 +1205,11 @@ public class UIMaster {
         ImageButton nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
         ImageButton nav_StatsBtn = mainActivity.findViewById(R.id.nav_stats);
         ImageButton nav_GoalBtn = mainActivity.findViewById(R.id.nav_goals);
-        Button signOut = mainActivity.findViewById(R.id.btnSignOut);
-        Button delAcc = mainActivity.findViewById(R.id.btndelAcc);
+        Button btnSignOut = mainActivity.findViewById(R.id.btnSignOut);
+        Button btnDelAcc = mainActivity.findViewById(R.id.btndelAcc);
+        Button btnChangePasswd = mainActivity.findViewById(R.id.btnSavepasswd);
+        Button btnChangeEmail = mainActivity.findViewById(R.id.btnSaveEmail);
+        Button btnChangeUsername = mainActivity.findViewById(R.id.btnSaveUsername);
         Switch mode = mainActivity.findViewById(R.id.switchdarkmode);
         TextView changePasswd = mainActivity.findViewById(R.id.tvchangePasswd);
         TextView changeUsername = mainActivity.findViewById(R.id.tvchangeUsername);
@@ -1212,13 +1217,18 @@ public class UIMaster {
         RelativeLayout passwdChangeBox = mainActivity.findViewById(R.id.passwdChangeBox);
         RelativeLayout usernameChangeBox = mainActivity.findViewById(R.id.usernameChangeBox);
         RelativeLayout EmailChangeBox = mainActivity.findViewById(R.id.EmailChangeBox);
+        EditText etPassword = mainActivity.findViewById(R.id.etpasswd);
+        EditText etNewPassword = mainActivity.findViewById(R.id.etNewpasswd);
+        EditText etNewPasswordRepeat = mainActivity.findViewById(R.id.etNewpasswdrepeat);
+        EditText etEmail = mainActivity.findViewById(R.id.etNewEmail);
+        EditText etNewUsername = mainActivity.findViewById(R.id.etNewUsername);
 
         nav_homeBtn.setOnClickListener(v -> navigateToStartingPage());
         nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
         nav_StatsBtn.setOnClickListener(v -> setupLineChart());
         nav_GoalBtn.setOnClickListener(v -> navigateToGoals());
 
-        signOut.setOnClickListener(v -> {
+        btnSignOut.setOnClickListener(v -> {
             Authenticator.clearStoredToken(mainActivity);
             try {
                 showLogin();
@@ -1230,7 +1240,7 @@ public class UIMaster {
 
         });
 
-        delAcc.setOnClickListener(v ->{
+        btnDelAcc.setOnClickListener(v ->{
             Authenticator.clearStoredToken(mainActivity);
             new AlertDialog.Builder(mainActivity)
                     .setTitle("Confirm")
@@ -1259,6 +1269,84 @@ public class UIMaster {
         changeUsername.setOnClickListener(v -> toggleVisibilityAnimated(usernameChangeBox));
         changeEmail.setOnClickListener(v -> toggleVisibilityAnimated(EmailChangeBox));
 
+        btnChangePasswd.setOnClickListener(v -> {
+            if (etPassword.getText().toString().isEmpty() ||
+                etNewPassword.getText().toString().isEmpty() ||
+                etNewPasswordRepeat.getText().toString().isEmpty()) {
+                Toast.makeText(mainActivity, "Please fill in all fields", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            if (!etNewPassword.getText().toString().equals(etNewPasswordRepeat.getText().toString())) {
+                Toast.makeText(mainActivity, "Passwords do not match", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            String dbPassword = null;
+            try {
+                dbPassword = db.checkPassword(logedindUser.getUid()).get();
+            } catch (ExecutionException e) {
+                throw new RuntimeException(e);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            if (etNewPassword.getText().toString().equals(etPassword.getText().toString())) {
+                if (BCrypt.verifyer().verify(etPassword.getText().toString().toCharArray(), dbPassword).verified) {
+                    db.changePassword(logedindUser.getUid(), etNewPassword.getText().toString());
+                    Toast.makeText(mainActivity, "Password changed successfully", Toast.LENGTH_SHORT).show();
+                    toggleVisibilityAnimated(passwdChangeBox);
+
+                    etNewPassword.getText().clear();
+                    etPassword.getText().clear();
+                    etNewPasswordRepeat.getText().clear();
+                    toggleVisibilityAnimated(passwdChangeBox);
+                } else {
+                    Toast.makeText(mainActivity, "Incorrect password", Toast.LENGTH_SHORT).show();
+                }
+            } else {
+                Toast.makeText(mainActivity, "Passwords dont match", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btnChangeUsername.setOnClickListener(v -> {
+            new AlertDialog.Builder(mainActivity)
+                    .setTitle("Confirm")
+                    .setMessage("Are you sure you want to change your username?")
+                    .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            db.changeUserName(logedindUser.getUid(), etNewUsername.getText().toString());
+                            logedindUser.setUserName(etNewUsername.getText().toString());
+                        }
+                    })
+                    .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.dismiss();
+                        }
+                    })
+                    .show();
+
+        });
+
+        btnChangeEmail.setOnClickListener(v -> {
+            if (etEmail.getText().toString().isEmpty()){
+                Toast.makeText(mainActivity, "Please fill in all fields", Toast.LENGTH_SHORT).show();
+                return;
+            }else {
+                new AlertDialog.Builder(mainActivity)
+                        .setTitle("Confirm")
+                        .setMessage("Are you sure you want to change your email?")
+                        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                db.changeEmail(logedindUser.getUid(), etEmail.getText().toString());
+                            }
+                        })
+                        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                dialog.dismiss();
+                            }
+                        })
+                        .show();
+            }
+        });
+
 
 
 
@@ -1285,7 +1373,10 @@ public class UIMaster {
                     .withEndAction(() -> layout.setVisibility(View.GONE))
                     .start();
         }
+
     }
+
+
 
 
 

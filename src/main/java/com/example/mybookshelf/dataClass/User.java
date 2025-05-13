@@ -226,6 +226,10 @@ public class User {
     public LinkedList<Goal> getCompletedGoalList() {
         return completedGoalList;
     }
+
+    public void setUserName(String username){
+        this.user = username;;
+    }
 }
 
 
