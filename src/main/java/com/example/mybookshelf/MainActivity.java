@@ -15,17 +15,20 @@ import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.SearchView;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
@@ -37,6 +40,10 @@ import com.example.mybookshelf.notifications.NotificationChannelManager;
 import com.example.mybookshelf.notifications.NotificationScheduler;
 
 import java.sql.SQLException;
+import java.time.LocalDate;
+import java.time.chrono.ChronoLocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -242,39 +249,92 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
 
 
     public void saveBook(Book book) {
+        FrameLayout frame = findViewById(R.id.frame);
+        CardView popUp = findViewById(R.id.popupAddBook);
+        Button btnSave = findViewById(R.id.saveButtonSearch);
+        Button btnCancel = findViewById(R.id.cancelButtonSearch);
+        Spinner spinnerScore = findViewById(R.id.scoreSpinner);
+        Spinner spinnerStatus = findViewById(R.id.statusSpinner);
+        EditText etPagesRead = findViewById(R.id.pagesInput);
+        EditText etFiishedAt = findViewById(R.id.finishedAtInput);
+        frame.setVisibility(View.VISIBLE);
         // First check if book is null
-        if (book == null) {
-            Log.e("MainActivity", "Cannot save null book");
-            return;
-        }
 
-        // Add book to database
-        db.addBookToUser(logedindUser.getUid(), book.getName(), book.getAuthor(), book.getPages(),
-                book.getReleaseDate(), book.getImageUrl(), book.getDescription(), 0, book.getGenre());
+        ArrayList<String> scoreList = new ArrayList<>(List.of("none", "1 Appalling", "2 Horrible", "3 Very Bad", "4 Bad", "5 Average", "6 Fine", "7 Good", "8 Very Good", "9 Great", "10 Masterpiece"));
+        ArrayList<String> statusList = new ArrayList<>(List.of("Reading","Completed","On-Hold","Dropped","Planned To Read"));
 
-        try {
-            // Get book from database
-            Book savedBook = db.getBookByName(book.getName()).get();
+        // Create ArrayAdapters for the Spinners
+        ArrayAdapter<String> scoreAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, scoreList);
+        ArrayAdapter<String> statusAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, statusList);
 
-            // Check if the database returned a valid book
-            if (savedBook != null) {
-                savedBook.setInDatabase(true);
-                logedindUser.addBook(savedBook, this);
-            } else {
-                // Handle the case where the book wasn't found in the database
-                // This might happen if there was an issue with the database operation
-                Log.e("MainActivity", "Failed to retrieve book from database: " + book.getName());
+        // Set the layout for the dropdown view (optional, can customize)
+        scoreAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        statusAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
+        // Set the adapters to the Spinners
+        Spinner spinnerAuthor = findViewById(R.id.spinnerAuthor);
+        Spinner spinnerGenre = findViewById(R.id.spinnerGenre);
+
+        spinnerScore.setAdapter(scoreAdapter);
+        spinnerStatus.setAdapter(statusAdapter);
+
+
+
+        btnSave.setOnClickListener(v -> {
+            if (book == null) {
+                Log.e("MainActivity", "Cannot save null book");
+                return;
+            }
+
+            String score = "";
+
+            if (! spinnerScore.getSelectedItem().toString().equalsIgnoreCase("no")) {
+                // Split by space and take the first part (e.g., "10" from "10 Masterpiece")
+                score =  spinnerScore.getSelectedItem().toString().split(" ")[0];
+            }
+
+            LocalDate finished = null;
+            if (etFiishedAt.getText().toString().isEmpty()){
+                finished = LocalDate.now();
+            }
+
+            // Add book to database
+            db.addBookToUser(logedindUser.getUid(), spinnerStatus.getSelectedItem().toString() ,score,finished, book.getName(), book.getAuthor(), book.getPages(),
+                    book.getReleaseDate(), book.getImageUrl(), book.getDescription(), 0, book.getGenre());
+
+            try {
+                // Get book from database
+                Book savedBook = db.getBookByName(book.getName()).get();
+
+                // Check if the database returned a valid book
+                if (savedBook != null) {
+                    savedBook.setInDatabase(true);
+                    logedindUser.addBook(savedBook, this);
+                } else {
+                    // Handle the case where the book wasn't found in the database
+                    // This might happen if there was an issue with the database operation
+                    Log.e("MainActivity", "Failed to retrieve book from database: " + book.getName());
+
+                    // Since we couldn't get the book from the database, use the original book object
+                    book.setInDatabase(true);
+                    logedindUser.addBook(book, this);
+                }
+            } catch (ExecutionException | InterruptedException e) {
+                Log.e("MainActivity", "Error retrieving book from database", e);
                 // Since we couldn't get the book from the database, use the original book object
                 book.setInDatabase(true);
                 logedindUser.addBook(book, this);
             }
-        } catch (ExecutionException | InterruptedException e) {
-            Log.e("MainActivity", "Error retrieving book from database", e);
-            // Since we couldn't get the book from the database, use the original book object
-            book.setInDatabase(true);
-            logedindUser.addBook(book, this);
-        }
+            etPagesRead.getText().clear();
+            etPagesRead.getText().clear();
+            frame.setVisibility(View.GONE);
+        });
+
+        btnCancel.setOnClickListener(v ->{
+            etPagesRead.getText().clear();
+            etPagesRead.getText().clear();
+            frame.setVisibility(View.GONE);
+        });
     }
 
 

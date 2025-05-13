@@ -303,6 +303,8 @@ public class UIMaster {
     @NonNull
     private ImageButton getBtnAdd(Book book) {
         ImageButton btnAdd = new ImageButton(mainActivity);
+
+
         btnAdd.setOnClickListener(v -> mainActivity.saveBook(book));
 
         // Set image resource (replace `android.R.drawable.ic_menu_delete` with your actual drawable resource)

@@ -55,7 +55,7 @@
         android:elevation="10dp"
         android:clickable="true"
         android:focusable="true"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/popupAddBook"
@@ -65,7 +65,8 @@
             app:cardCornerRadius="16dp"
             app:cardElevation="4dp"
             app:cardBackgroundColor="@color/white"
-            android:padding="16dp">
+            android:padding="16dp"
+            >
 
             <LinearLayout
                 android:layout_width="match_parent"

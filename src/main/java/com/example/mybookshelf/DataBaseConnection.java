@@ -20,12 +20,14 @@ import java.security.KeyStore;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.SQLTimeoutException;
 import java.sql.Statement;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -380,6 +382,64 @@ public class DataBaseConnection {
 
             } catch (Exception e) {
                 e.printStackTrace();
+            }
+        });
+    }
+
+    public void addBookToUser(int userId, String status, String score, LocalDate finished, String bookName, String author, int pages, String releaseDate, String imageUrl, String description, int readingTime, String genre) {
+        String getBookIdSQL = "SELECT book_id FROM books WHERE title = ?";
+        String insertUserBookSQL = "INSERT INTO userbooks (user_id, book_id, reading_time, status, finished_at) VALUES (?, ?, ?, ?, ?)";
+        String insertRatingsSQL = "INSERT INTO ratings (user_id, book_id, rating) VALUES (?, ?, ?)";
+
+        executorService.execute(() -> {
+            Date finishedDate = Date.valueOf(finished.toString());
+            int bookId = -1;
+            try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                 PreparedStatement getBookIdStmt = connection.prepareStatement(getBookIdSQL);
+                 PreparedStatement insertUserBookStmt = connection.prepareStatement(insertUserBookSQL)) {
+
+                // Get book ID by book name
+                getBookIdStmt.setString(1, bookName);
+                ResultSet resultSet = getBookIdStmt.executeQuery();
+
+
+                if (resultSet.next()) {
+                    bookId = resultSet.getInt("book_id"); // Book exists, get its ID
+                } else {
+                    // If book is not found, add it to the database and get its ID
+                    bookId = addNewBook(bookName, author, pages, releaseDate, imageUrl, description, genre);
+                }
+
+                // Insert into UserBooks
+                insertUserBookStmt.setInt(1, userId);
+                insertUserBookStmt.setInt(2, bookId);
+                insertUserBookStmt.setInt(3, readingTime);
+                insertUserBookStmt.setString(4,status);
+                insertUserBookStmt.setObject(5,finishedDate);
+                insertUserBookStmt.executeUpdate();
+
+                System.out.println("Book successfully added to user!");
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            if (!score.isEmpty()){
+                try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                     PreparedStatement insertRatingStmt = connection.prepareStatement(insertRatingsSQL)) {
+
+
+                    // Insert into UserBooks
+                    insertRatingStmt.setInt(1, userId);
+                    insertRatingStmt.setInt(2, bookId);
+                    insertRatingStmt.setInt(3, Integer.parseInt(score));
+                    insertRatingStmt.executeUpdate();
+
+                    System.out.println("Succesfully added rating");
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
         });
     }
