@@ -8,6 +8,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.mybookshelf.DataBaseConnection;
 import com.example.mybookshelf.MainActivity;
 
@@ -146,34 +148,51 @@ public class User {
 
     }
 
-    public void removeBook(Book book, Context main, LinearLayout container) {
+    public void removeBook(Book book, Context main, RecyclerView container) {
+        boolean bookFound = false;
+
         // Remove the book from the list
         Iterator<Book> iterator = bookList.iterator();
         while (iterator.hasNext()) {
             Book listBook = iterator.next();
             if (listBook.getName().equals(book.getName())) {
                 iterator.remove(); // Safely remove the book from the list
+                bookFound = true;
                 break; // Exit the loop after removal
             }
         }
 
-        // Remove the book's visual part from the UI
-        for (int i = 0; i < container.getChildCount(); i++) {
-            View bookBox = container.getChildAt(i);
-            // Assuming you have a way to tag or identify the book's visual part, like setting a tag to the bookBox
-            if (bookBox instanceof RelativeLayout) {
-                // You might want to set a tag when creating the book box, so you can identify it later
-                if (bookBox.getTag() != null && bookBox.getTag().equals(book.getName())) {
-                    container.removeViewAt(i); // Remove the visual part
-                    break; // Exit the loop after removal
+        // Remove the book's visual part from the UI if the book was found in the list
+        if (bookFound) {
+            for (int i = 0; i < container.getChildCount(); i++) {
+                View bookBox = container.getChildAt(i);
+                // Assuming you have a way to tag or identify the book's visual part, like setting a tag to the bookBox
+                if (bookBox instanceof RelativeLayout) {
+                    // You might want to set a tag when creating the book box, so you can identify it later
+                    if (bookBox.getTag() != null && bookBox.getTag().equals(book.getName())) {
+                        container.removeViewAt(i); // Remove the visual part
+                        break; // Exit the loop after removal
+                    }
                 }
             }
+
+            // Show success message
+            Toast.makeText(main, "Book successfully removed", Toast.LENGTH_SHORT).show();
+
+            // If the book is in the database, you might want to remove it there too
+            if (book.isInDatabase() && db != null) {
+                try {
+                    db.removeBookFromUser(book, getUid());
+                } catch (Exception e) {
+                    Log.e("User", "Error removing book from database", e);
+                    Toast.makeText(main, "Error syncing with database", Toast.LENGTH_SHORT).show();
+                }
+            }
+        } else {
+            // Show an error message only if the book wasn't found
+            Toast.makeText(main, "Book not found in your list", Toast.LENGTH_SHORT).show();
         }
-
-        // Show an error message if the book wasn't found
-        Toast.makeText(main, "An Error occurred, please try again later or reload the site", Toast.LENGTH_SHORT).show();
     }
-
     public TreeSet<String> getAuthors(){
         for (Book book : bookList) {
             authorList.add(book.getAuthor());
@@ -206,6 +225,10 @@ public class User {
 
     public LinkedList<Goal> getCompletedGoalList() {
         return completedGoalList;
+    }
+
+    public void setUserName(String username){
+        this.user = username;;
     }
 }
 

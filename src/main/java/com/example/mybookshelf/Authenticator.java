@@ -82,7 +82,7 @@ public class Authenticator {
 
     // Simple registration method
     public void register(String username, String password, String email) {
-        db.addUser(username, password, email);
+        db.addUser(username, email, password);
     }
 
     public void saveToken(Context context, String token, int uid, String username) throws Exception {
@@ -157,6 +157,16 @@ public class Authenticator {
     public String getUsername(Context context) {
         SharedPreferences prefs = context.getSharedPreferences("secure_store", Context.MODE_PRIVATE);
         return prefs.getString("USERNAME", null);
+    }
+
+    public static void clearStoredToken(Context context) {
+        SharedPreferences prefs = context.getSharedPreferences("secure_store", Context.MODE_PRIVATE);
+        prefs.edit()
+                .remove("ENCRYPTED_TOKEN")
+                .remove("IV")
+                .remove("UID")
+                .remove("USERNAME")
+                .apply();
     }
 
 }

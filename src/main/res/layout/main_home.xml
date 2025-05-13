@@ -128,11 +128,7 @@
         app:cardElevation="4dp"
         android:background="@android:color/white">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvmyList"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1" />
+
 
         <ScrollView
             android:id="@+id/scrollView"
@@ -140,12 +136,13 @@
             android:layout_height="match_parent"
             android:fillViewport="true">
 
-            <LinearLayout
-                android:id="@+id/bookContainer"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvmyList"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="16dp" />
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+
         </ScrollView>
     </androidx.cardview.widget.CardView>
 
