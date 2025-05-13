@@ -1288,7 +1288,7 @@ public class UIMaster {
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            if (etNewPassword.getText().toString().equals(etPassword.getText().toString())) {
+            if (etNewPassword.getText().toString().equals(etNewPasswordRepeat.getText().toString())) {
                 if (BCrypt.verifyer().verify(etPassword.getText().toString().toCharArray(), dbPassword).verified) {
                     db.changePassword(logedindUser.getUid(), etNewPassword.getText().toString());
                     Toast.makeText(mainActivity, "Password changed successfully", Toast.LENGTH_SHORT).show();
@@ -1314,6 +1314,8 @@ public class UIMaster {
                         public void onClick(DialogInterface dialog, int which) {
                             db.changeUserName(logedindUser.getUid(), etNewUsername.getText().toString());
                             logedindUser.setUserName(etNewUsername.getText().toString());
+                            etNewUsername.getText().clear();
+                            toggleVisibilityAnimated(usernameChangeBox);
                         }
                     })
                     .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -1336,6 +1338,8 @@ public class UIMaster {
                         .setPositiveButton("OK", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 db.changeEmail(logedindUser.getUid(), etEmail.getText().toString());
+                                etEmail.getText().clear();
+                                toggleVisibilityAnimated(EmailChangeBox);
                             }
                         })
                         .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -1375,9 +1379,4 @@ public class UIMaster {
         }
 
     }
-
-
-
-
-
 }
