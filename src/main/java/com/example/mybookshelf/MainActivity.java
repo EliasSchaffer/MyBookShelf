@@ -282,7 +282,7 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
         Context context = getBaseContext();
         db.removeBookFromUser(book,logedindUser.getUid());
         uiMaster.reduceTimeSpendReading(book.getPages(), timeSpentReadingTextView);
-        logedindUser.removeBook(book, context, findViewById(R.id.bookContainer));
+        logedindUser.removeBook(book, context, findViewById(R.id.rvmyList));
     }
 
     public User getUser() {

@@ -41,6 +41,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -101,6 +102,8 @@ public class UIMaster {
     private String AIprompt = "";
     private BookRecommendationFlow brf;
     List<Goal> goalList = new ArrayList<>();
+
+    private CostumeListAdapter listAdapter;
 
 
 
@@ -515,55 +518,131 @@ public class UIMaster {
         }
     }
 
+
+    // Modified navigateToStartingPage method for UIMaster class
     public void navigateToStartingPage() {
+        // Create a dedicated executor for background work
         ExecutorService executor = Executors.newSingleThreadExecutor();
 
-        executor.execute(() -> {
-            // Do any data processing in the background
-            List<Book> userBooks = logedindUser.getBookList();
+        // First update the UI immediately to improve perceived performance
+        mainActivity.runOnUiThread(() -> {
+            // Set the content view first for better user experience
+            mainActivity.setContentView(R.layout.main_home);
 
-            mainActivity.runOnUiThread(() -> {
-                // Now do UI setup
-                mainActivity.setContentView(R.layout.main_home);
-                RecyclerView recyclerView = mainActivity.findViewById(R.id.rvmyList);  // Assuming you have a RecyclerView in your layout
-                ImageButton nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
-                ImageButton nav_StatsBtn = mainActivity.findViewById(R.id.nav_stats);
-                ImageButton nav_goals = mainActivity.findViewById(R.id.nav_goals);
-                ImageButton nav_settingBtn = mainActivity.findViewById(R.id.nav_settings);
-                ImageButton searchBtn = mainActivity.findViewById(R.id.btnSearchInList);
+            // Initialize navigation buttons
+            setupNavigationButtons();
 
-                // Set up navigation buttons
-                nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
-                nav_StatsBtn.setOnClickListener(v -> setupLineChart());
-                nav_goals.setOnClickListener(v -> navigateToGoals());
-                nav_settingBtn.setOnClickListener(v -> navigateToSettings());
-                searchBtn.setOnClickListener(v -> handleListSearch());
-
-                TextView user = mainActivity.findViewById(R.id.current_user);
+            // Update user greeting
+            TextView user = mainActivity.findViewById(R.id.current_user);
+            if (user != null && logedindUser != null) {
                 user.setText("Hallo, " + logedindUser.getUser() + " \uD83D\uDC4B");
-            });
+            }
 
-            if (userBooks != null && !userBooks.isEmpty()) {
-                // Set up the RecyclerView with the CostumeListAdapter
-                mainActivity.runOnUiThread(() -> {
-                    // Create an adapter for the RecyclerView
-                    CostumeListAdapter adapter = new CostumeListAdapter(mainActivity, userBooks, db, logedindUser, this);
+            // Pre-configure RecyclerView for better performance
+            RecyclerView recyclerView = mainActivity.findViewById(R.id.rvmyList);
+            if (recyclerView != null) {
+                recyclerView.setHasFixedSize(true);
 
-                    // Set the adapter to the RecyclerView
-                    RecyclerView recyclerView = mainActivity.findViewById(R.id.rvmyList);
-                    recyclerView.setLayoutManager(new LinearLayoutManager(mainActivity));
-                    recyclerView.setAdapter(adapter);
+                // Use a LinearLayoutManager with prefetch
+                LinearLayoutManager layoutManager = new LinearLayoutManager(mainActivity);
+                layoutManager.setInitialPrefetchItemCount(10); // Prefetch items
+                recyclerView.setLayoutManager(layoutManager);
+
+                // Disable predictive animations for smoother scrolling
+                layoutManager.setItemPrefetchEnabled(true);
+
+                // Use a custom item animator that minimizes work
+                recyclerView.setItemAnimator(new DefaultItemAnimator() {
+                    @Override
+                    public boolean animateChange(RecyclerView.ViewHolder oldHolder, RecyclerView.ViewHolder newHolder, int fromX, int fromY, int toX, int toY) {
+                        // Skip animation for large position changes
+                        if (Math.abs(fromX - toX) > 100 || Math.abs(fromY - toY) > 100) {
+                            dispatchChangeFinished(oldHolder, true);
+                            dispatchChangeFinished(newHolder, false);
+                            return true;
+                        }
+                        return super.animateChange(oldHolder, newHolder, fromX, fromY, toX, toY);
+                    }
                 });
-
-                // Also update the reading time for the first book (or all books)
-                mainActivity.runOnUiThread(() -> {
-                    timeSpentReadingTextView = mainActivity.findViewById(R.id.etfTimeSpentReading);
-                    updateReadingTime(userBooks.get(0).getPages(), timeSpentReadingTextView);
-                });
-            } else {
-                Log.w("MainActivity", "User's book list is null or empty.");
             }
         });
+
+        // Then load data in background
+        executor.execute(() -> {
+            try {
+                // Get user books with timeout to avoid ANR
+                List<Book> userBooks = null;
+                try {
+                    // Add timeout logic if needed
+                    userBooks = logedindUser.getBookList();
+                } catch (Exception e) {
+                    Log.e("UIMaster", "Error loading book list", e);
+                }
+
+                // Store final reference for use in lambda
+                final List<Book> finalUserBooks = userBooks != null ? userBooks : new ArrayList<>();
+
+                // Update UI on main thread with loaded data
+                mainActivity.runOnUiThread(() -> {
+                    RecyclerView recyclerView = mainActivity.findViewById(R.id.rvmyList);
+                    if (recyclerView != null) {
+                        // Create adapter with the loaded books
+                        CostumeListAdapter adapter = new CostumeListAdapter(mainActivity, finalUserBooks, db, logedindUser, this);
+                        recyclerView.setAdapter(adapter);
+
+                        // Add scroll listener for lazy loading if needed
+                        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+                            @Override
+                            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                                // Pause image loading when fast scrolling
+                                if (newState == RecyclerView.SCROLL_STATE_DRAGGING) {
+                                    Glide.with(mainActivity).pauseRequests();
+                                } else if (newState == RecyclerView.SCROLL_STATE_IDLE) {
+                                    Glide.with(mainActivity).resumeRequests();
+                                }
+                            }
+                        });
+
+                        // Register adapter in a variable for potential cleanup
+                        listAdapter = adapter;
+                    }
+
+
+
+                    // Update reading time if needed
+                    TextView timeSpentReadingTextView = mainActivity.findViewById(R.id.etfTimeSpentReading);
+                    if (timeSpentReadingTextView != null && !finalUserBooks.isEmpty()) {
+                        updateReadingTime(finalUserBooks.get(0).getPages(), timeSpentReadingTextView);
+                    }
+                });
+            } catch (Exception e) {
+                Log.e("UIMaster", "Error in navigateToStartingPage", e);
+
+                // Show error message on UI thread
+                mainActivity.runOnUiThread(() -> {
+                    Toast.makeText(mainActivity, "Failed to load books", Toast.LENGTH_SHORT).show();
+                });
+            }
+        });
+
+        // Clean up executor when done
+        executor.shutdown();
+    }
+
+    // Helper method to set up navigation buttons
+    private void setupNavigationButtons() {
+        ImageButton nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
+        ImageButton nav_StatsBtn = mainActivity.findViewById(R.id.nav_stats);
+        ImageButton nav_goals = mainActivity.findViewById(R.id.nav_goals);
+        ImageButton nav_settingBtn = mainActivity.findViewById(R.id.nav_settings);
+        ImageButton searchBtn = mainActivity.findViewById(R.id.btnSearchInList);
+
+        // Set up navigation buttons
+        nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
+        nav_StatsBtn.setOnClickListener(v -> setupLineChart());
+        nav_goals.setOnClickListener(v -> navigateToGoals());
+        nav_settingBtn.setOnClickListener(v -> navigateToSettings());
+        searchBtn.setOnClickListener(v -> handleListSearch());
     }
 
 

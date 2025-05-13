@@ -2,11 +2,15 @@ package com.example.mybookshelf.LayoutManager;
 
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
+import android.os.Handler;
+import android.os.Looper;
 import android.text.Editable;
+import android.text.InputType;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
@@ -17,17 +21,24 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.mybookshelf.DataBaseConnection;
 import com.example.mybookshelf.MainActivity;
+import com.example.mybookshelf.R;
 import com.example.mybookshelf.UIMaster;
 import com.example.mybookshelf.dataClass.Book;
 import com.example.mybookshelf.dataClass.User;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class CostumeListAdapter extends RecyclerView.Adapter<CostumeListAdapter.BookViewHolder> {
     private List<Book> bookList;
@@ -35,141 +46,123 @@ public class CostumeListAdapter extends RecyclerView.Adapter<CostumeListAdapter.
     private DataBaseConnection db;
     private User loggedInUser;
     private UIMaster uiMaster;
+    private ExecutorService databaseExecutor;
+    private RequestOptions imageRequestOptions;
 
     public CostumeListAdapter(MainActivity mainActivity, List<Book> bookList, DataBaseConnection db, User loggedInUser, UIMaster uiMaster) {
         this.mainActivity = mainActivity;
-        this.bookList = bookList;
+        this.bookList = new ArrayList<>(bookList); // Create a copy to avoid external modifications
         this.db = db;
         this.loggedInUser = loggedInUser;
         this.uiMaster = uiMaster;
+        this.databaseExecutor = Executors.newSingleThreadExecutor();
+
+        // Pre-configure Glide request options for reuse
+        this.imageRequestOptions = new RequestOptions()
+                .override(120, 160)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .placeholder(android.R.drawable.ic_menu_report_image);
     }
 
     @NonNull
     @Override
     public BookViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        // Create a FrameLayout as the root view for each book
+        // Create a book item layout that matches your design
         FrameLayout frameLayout = new FrameLayout(mainActivity);
-        return new BookViewHolder(frameLayout);
-    }
+        RecyclerView.LayoutParams params = new RecyclerView.LayoutParams(
+                RecyclerView.LayoutParams.MATCH_PARENT,
+                RecyclerView.LayoutParams.WRAP_CONTENT
+        );
+        frameLayout.setLayoutParams(params);
 
-    @Override
-    public void onBindViewHolder(@NonNull BookViewHolder holder, int position) {
-        Book book = bookList.get(position);
-        holder.bookBox.removeAllViews();  // Clear previous views
-        holder.bookBox.addView(createBookBoxView(book));  // Create the new book box view and add it
-    }
-
-    @Override
-    public int getItemCount() {
-        return bookList.size();
-    }
-
-    static class BookViewHolder extends RecyclerView.ViewHolder {
-        FrameLayout bookBox;
-
-        public BookViewHolder(@NonNull View itemView) {
-            super(itemView);
-            bookBox = (FrameLayout) itemView;
-        }
-    }
-
-    private View createBookBoxView(Book book) {
-        // Create a container for the book box with rounded corners (using LinearLayout)
+        // Create and configure the book item view
         LinearLayout bookBox = new LinearLayout(mainActivity);
         bookBox.setOrientation(LinearLayout.VERTICAL);
         bookBox.setPadding(16, 16, 16, 16);
         bookBox.setBackgroundColor(Color.WHITE);
 
-        // Apply rounded corners to the bookBox background
+        // Apply rounded corners
         GradientDrawable background = new GradientDrawable();
         background.setColor(Color.WHITE);
         background.setCornerRadius(24);
         bookBox.setBackground(background);
 
-        // Set book box width to match the parent (RecyclerView's width)
-        LinearLayout.LayoutParams boxParams = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.MATCH_PARENT,  // Match parent width
-                LinearLayout.LayoutParams.WRAP_CONTENT  // Wrap content height
+        // Set layout params
+        FrameLayout.LayoutParams boxParams = new FrameLayout.LayoutParams(
+                FrameLayout.LayoutParams.MATCH_PARENT,
+                FrameLayout.LayoutParams.WRAP_CONTENT
         );
-        boxParams.setMargins(12, 12, 12, 12); // Set margins between each book box
+        boxParams.setMargins(12, 12, 12, 12);
         bookBox.setLayoutParams(boxParams);
 
-        // Remove Button (Always in Top-Right)
-        ImageButton actionButton = getBtnRemove(book);
-        if (actionButton != null) {
-            if (actionButton.getParent() != null) {
-                ((ViewGroup) actionButton.getParent()).removeView(actionButton);
-            }
-            actionButton.setVisibility(View.VISIBLE);
+        // Create the button container
+        FrameLayout buttonContainer = new FrameLayout(mainActivity);
+        buttonContainer.setId(View.generateViewId());
+        FrameLayout.LayoutParams containerParams = new FrameLayout.LayoutParams(
+                FrameLayout.LayoutParams.MATCH_PARENT,
+                FrameLayout.LayoutParams.WRAP_CONTENT
+        );
+        buttonContainer.setLayoutParams(containerParams);
 
-            // Set button size and position it at the top-right
-            FrameLayout.LayoutParams btnParams = new FrameLayout.LayoutParams(80, 80);
-            btnParams.gravity = Gravity.TOP | Gravity.END; // Position it in the top-right
-            btnParams.setMargins(12, 12, 0, 0); // Top and right margin
-            actionButton.setLayoutParams(btnParams);
+        // Create remove button
+        ImageButton btnRemove = new ImageButton(mainActivity);
+        btnRemove.setId(View.generateViewId());
+        btnRemove.setImageResource(android.R.drawable.ic_menu_close_clear_cancel);
+        btnRemove.setBackgroundColor(Color.TRANSPARENT);
+        FrameLayout.LayoutParams btnParams = new FrameLayout.LayoutParams(80, 80);
+        btnParams.gravity = Gravity.TOP | Gravity.END;
+        btnRemove.setLayoutParams(btnParams);
+        buttonContainer.addView(btnRemove);
 
-            // Add the button to the book box (LinearLayout)
-            bookBox.addView(actionButton);
-        }
+        // Add button container to book box
+        bookBox.addView(buttonContainer);
 
-        // Create a horizontal layout for image + text (book details)
+        // Create horizontal layout for book content
         LinearLayout horizontalLayout = new LinearLayout(mainActivity);
+        horizontalLayout.setId(View.generateViewId());
         horizontalLayout.setOrientation(LinearLayout.HORIZONTAL);
         horizontalLayout.setPadding(12, 12, 12, 12);
         horizontalLayout.setGravity(Gravity.CENTER_VERTICAL);
+        LinearLayout.LayoutParams horizontalParams = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT
+        );
+        horizontalLayout.setLayoutParams(horizontalParams);
 
-        // Create an ImageView for the book cover
+        // Create book cover image view
         ImageView bookImage = new ImageView(mainActivity);
         bookImage.setId(View.generateViewId());
-        String imageUrl = book.getImageUrl();
-        if (!TextUtils.isEmpty(imageUrl)) {
-            Glide.with(mainActivity).load(imageUrl).into(bookImage);
-        }
-
-        // Set ImageView layout params
         LinearLayout.LayoutParams imageParams = new LinearLayout.LayoutParams(120, 160);
         bookImage.setLayoutParams(imageParams);
 
-        // Swap author and release date if needed
-        String author = book.getRelease_date();
-        String releaseDate = book.getAuthor();
-        book.setAuthor(author);
-        book.setRelease_date(releaseDate);
-
-        // Create a TextView for the book details
+        // Create book details text view
         TextView bookDetails = new TextView(mainActivity);
-        StringBuilder details = new StringBuilder();
-        details.append(TextUtils.isEmpty(book.getName()) ? "Unknown" : book.getName()).append("\n");
-        details.append("Author: ").append(TextUtils.isEmpty(book.getAuthor()) ? "Unknown" : book.getAuthor()).append("\n");
-
-        bookDetails.setText(details.toString());
+        bookDetails.setId(View.generateViewId());
         bookDetails.setTextColor(Color.BLACK);
         bookDetails.setTextSize(14);
         bookDetails.setPadding(12, 0, 0, 0);
+        LinearLayout.LayoutParams detailsParams = new LinearLayout.LayoutParams(
+                0, LinearLayout.LayoutParams.WRAP_CONTENT
+        );
+        detailsParams.weight = 1;
+        bookDetails.setLayoutParams(detailsParams);
 
-        // Add Image and Details to horizontal layout
+        // Add views to horizontal layout
         horizontalLayout.addView(bookImage);
         horizontalLayout.addView(bookDetails);
 
-        // Add the horizontal layout to the vertical container
+        // Add horizontal layout to book box
         bookBox.addView(horizontalLayout);
 
-        // Add Notes input
-        String note = "Add notes here...";  // Default note
-        try {
-            note = db.getNotesFromUser(loggedInUser.getUid(), book.getId()).get();
-        } catch (Exception e) {
-            Log.e("CostumeListAdapter", "Error retrieving notes: " + e.getMessage());
-        }
-
+        // Create note field
         EditText noteField = new EditText(mainActivity);
-        noteField.setHint(note);
+        noteField.setId(View.generateViewId());
         noteField.setTextColor(Color.BLACK);
         noteField.setBackgroundColor(Color.LTGRAY);
         noteField.setPadding(8, 8, 8, 8);
         noteField.setTextSize(14);
-        noteField.setId(View.generateViewId());
-
+        noteField.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_FLAG_MULTI_LINE);
+        noteField.setMaxLines(4);
         LinearLayout.LayoutParams noteParams = new LinearLayout.LayoutParams(
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.WRAP_CONTENT
@@ -177,58 +170,203 @@ public class CostumeListAdapter extends RecyclerView.Adapter<CostumeListAdapter.
         noteParams.setMargins(12, 12, 12, 12);
         noteField.setLayoutParams(noteParams);
 
-        noteField.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                db.notesChanged(loggedInUser.getUid(), book.getId(), s.toString());
-            }
-            @Override
-            public void afterTextChanged(Editable s) {}
-        });
-
+        // Add note field to book box
         bookBox.addView(noteField);
 
-        // Navigate to book details when clicked
-        bookBox.setOnClickListener(v -> uiMaster.navigateToDetails(book));
+        // Add book box to frame layout
+        frameLayout.addView(bookBox);
 
-        return bookBox;
+        return new BookViewHolder(frameLayout, btnRemove, bookImage, bookDetails, noteField);
     }
 
-    @NonNull
-    private ImageButton getBtnRemove(Book book) {
-        ImageButton btnRemove = new ImageButton(mainActivity);
-        btnRemove.setOnClickListener(v -> {
-            try {
-                // Remove the book from the database
-                mainActivity.removeBook(book);
+    @Override
+    public void onBindViewHolder(@NonNull BookViewHolder holder, int position) {
+        Book book = bookList.get(position);
 
-                // Get the parent container (FrameLayout) where the book box is located
-                FrameLayout bookBox = (FrameLayout) btnRemove.getParent();  // This assumes the bookBox is the direct parent of the button
-                if (bookBox != null) {
-                    ViewGroup parentContainer = (ViewGroup) bookBox.getParent(); // Get the container (LinearLayout)
-                    if (parentContainer != null) {
-                        parentContainer.removeView(bookBox); // Remove the book box from the container
+        // Bind book data to views
+        bindBookData(holder, book, position);
+    }
+
+    private void bindBookData(BookViewHolder holder, Book book, int position) {
+        // Load book image using Glide with pre-configured options
+        String imageUrl = book.getImageUrl();
+        if (!TextUtils.isEmpty(imageUrl)) {
+            Glide.with(mainActivity)
+                    .load(imageUrl)
+                    .apply(imageRequestOptions)
+                    .into(holder.bookImage);
+        } else {
+            holder.bookImage.setImageResource(android.R.drawable.ic_menu_report_image);
+        }
+
+        // Set book details text
+        StringBuilder details = new StringBuilder();
+        details.append(TextUtils.isEmpty(book.getName()) ? "Unknown" : book.getName()).append("\n");
+        details.append("Author: ").append(TextUtils.isEmpty(book.getAuthor()) ? "Unknown" : book.getAuthor()).append("\n");
+        holder.bookDetails.setText(details.toString());
+
+        // Setup note field - load notes asynchronously
+        holder.noteField.setHint("Add notes here...");
+        holder.noteField.setText("");
+
+        // Remove existing text watchers to prevent duplicate callbacks
+        if (holder.textWatcher != null) {
+            holder.noteField.removeTextChangedListener(holder.textWatcher);
+        }
+
+        // Load notes from database in background
+        databaseExecutor.execute(() -> {
+            try {
+                final String notes = db.getNotesFromUser(loggedInUser.getUid(), book.getId()).get();
+                // Update UI on main thread
+                mainActivity.runOnUiThread(() -> {
+                    if (!TextUtils.isEmpty(notes)) {
+                        holder.noteField.setText(notes);
+                    } else {
+                        holder.noteField.setHint("Add notes here...");
                     }
-                }
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
+
+                    // Create and set text watcher after loading notes
+                    holder.textWatcher = createTextWatcher(book);
+                    holder.noteField.addTextChangedListener(holder.textWatcher);
+                });
+            } catch (Exception e) {
+                Log.e("CostumeListAdapter", "Error retrieving notes: " + e.getMessage());
             }
         });
 
-        // Set image resource for remove button
-        btnRemove.setImageResource(android.R.drawable.ic_menu_close_clear_cancel);
+        // Setup click listener for the remove button
+        holder.btnRemove.setOnClickListener(v -> {
+                try {
+                    // Remove the book from the database
+                    mainActivity.removeBook(book);
 
-        // Set background to transparent to avoid default button styling
-        btnRemove.setBackgroundColor(Color.TRANSPARENT);
+                    // Update UI on main thread
+                    mainActivity.runOnUiThread(() -> {
+                        // Remove from list and notify adapter
+                        int currentPos = holder.getAdapterPosition();
+                        if (currentPos != RecyclerView.NO_POSITION) {
+                            bookList.remove(currentPos);
+                            notifyItemRemoved(currentPos);
+                            notifyItemRangeChanged(currentPos, bookList.size() - currentPos);
+                        }
+                    });
+                } catch (SQLException e) {
+                    Log.e("CostumeListAdapter", "Error removing book: " + e.getMessage());
+                }
+        });
 
-        // Set layout parameters for the button
-        FrameLayout.LayoutParams btnParams = new FrameLayout.LayoutParams(80, 80);
-        btnParams.gravity = Gravity.TOP | Gravity.END;
-        btnParams.setMargins(12, 12, 0, 0); // Top and right margin
-        btnRemove.setLayoutParams(btnParams);
+        // Set click listener for the book item
+        holder.itemView.setOnClickListener(v -> uiMaster.navigateToDetails(book));
+    }
 
-        return btnRemove;
+    private DebouncedTextWatcher createTextWatcher(Book book) {
+        return new DebouncedTextWatcher(500) {
+            @Override
+            public void onDebouncedTextChanged(String text) {
+                databaseExecutor.execute(() -> {
+                    db.notesChanged(loggedInUser.getUid(), book.getId(), text);
+                });
+            }
+        };
+    }
+
+    @Override
+    public int getItemCount() {
+        return bookList.size();
+    }
+
+    // Method to update data with DiffUtil for efficient updates
+    public void updateData(List<Book> newBooks) {
+        if (newBooks == null) {
+            return;
+        }
+
+        // Calculate the difference between old and new lists
+        DiffUtil.DiffResult diffResult = DiffUtil.calculateDiff(new DiffUtil.Callback() {
+            @Override
+            public int getOldListSize() {
+                return bookList.size();
+            }
+
+            @Override
+            public int getNewListSize() {
+                return newBooks.size();
+            }
+
+            @Override
+            public boolean areItemsTheSame(int oldItemPosition, int newItemPosition) {
+                return bookList.get(oldItemPosition).getId() == newBooks.get(newItemPosition).getId();
+            }
+
+            @Override
+            public boolean areContentsTheSame(int oldItemPosition, int newItemPosition) {
+                Book oldBook = bookList.get(oldItemPosition);
+                Book newBook = newBooks.get(newItemPosition);
+                return oldBook.equals(newBook);
+            }
+        });
+
+        // Update the list and notify adapter with calculated diff
+        this.bookList = new ArrayList<>(newBooks);
+        diffResult.dispatchUpdatesTo(this);
+    }
+
+    public void cleanup() {
+        if (databaseExecutor != null) {
+            databaseExecutor.shutdown();
+        }
+    }
+
+    static class BookViewHolder extends RecyclerView.ViewHolder {
+        final ImageButton btnRemove;
+        final ImageView bookImage;
+        final TextView bookDetails;
+        final EditText noteField;
+        DebouncedTextWatcher textWatcher;
+
+        public BookViewHolder(@NonNull View itemView, ImageButton btnRemove,
+                              ImageView bookImage, TextView bookDetails, EditText noteField) {
+            super(itemView);
+            this.btnRemove = btnRemove;
+            this.bookImage = bookImage;
+            this.bookDetails = bookDetails;
+            this.noteField = noteField;
+        }
+    }
+
+    /**
+     * Custom TextWatcher that debounces text change events
+     */
+    private abstract class DebouncedTextWatcher implements TextWatcher {
+        private final long delayMillis;
+        private final Handler handler;
+        private Runnable runnable;
+
+        public DebouncedTextWatcher(long delayMillis) {
+            this.delayMillis = delayMillis;
+            this.handler = new Handler(Looper.getMainLooper());
+        }
+
+        @Override
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            // Not used
+        }
+
+        @Override
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
+            // Remove any pending callbacks
+            if (runnable != null) {
+                handler.removeCallbacks(runnable);
+            }
+        }
+
+        @Override
+        public void afterTextChanged(final Editable s) {
+            runnable = () -> onDebouncedTextChanged(s.toString());
+            handler.postDelayed(runnable, delayMillis);
+        }
+
+        public abstract void onDebouncedTextChanged(String text);
     }
 }
