@@ -288,7 +288,7 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
 
             String score = "";
 
-            if (! spinnerScore.getSelectedItem().toString().equalsIgnoreCase("no")) {
+            if (! spinnerScore.getSelectedItem().toString().equalsIgnoreCase("none")) {
                 // Split by space and take the first part (e.g., "10" from "10 Masterpiece")
                 score =  spinnerScore.getSelectedItem().toString().split(" ")[0];
             }
@@ -300,7 +300,7 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
 
             // Add book to database
             db.addBookToUser(logedindUser.getUid(), spinnerStatus.getSelectedItem().toString() ,score,finished, book.getName(), book.getAuthor(), book.getPages(),
-                    book.getReleaseDate(), book.getImageUrl(), book.getDescription(), 0, book.getGenre());
+                    book.getReleaseDate(), book.getImageUrl(), book.getDescription(), book.getPages()*1.5, book.getGenre());
 
             try {
                 // Get book from database
@@ -350,7 +350,7 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
     }
 
 
-    //AI Response Handeling !!REMOVE LATER!!
+    //TODO AI Response Handeling !!REMOVE LATER!!
     @Override
     public void onSuccess(String response) {
         // Show the response in a simple dialog when the request succeeds

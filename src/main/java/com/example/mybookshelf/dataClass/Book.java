@@ -10,6 +10,7 @@ public class Book {
     private String description;
     private boolean inDatabase;
     private int id;
+    private int reading_time;
 
     public Book(String name, String release_date, int pages, String author) {
         this.name = name;
@@ -42,6 +43,7 @@ public class Book {
         this.image_url = image_url;
         this.description = description;
         this.id = id;
+        this.genre = genre;
     }
 
 

@@ -443,6 +443,7 @@ public class UIMaster {
         ImageButton nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
         ImageButton nav_goalsBtn = mainActivity.findViewById(R.id.nav_goals);
         ImageButton nav_settingBtn = mainActivity.findViewById(R.id.nav_settings);
+        TextView allTime = mainActivity.findViewById(R.id.txtAllTime);
 
         nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
         nav_goalsBtn.setOnClickListener(v -> navigateToGoals());
@@ -515,11 +516,19 @@ public class UIMaster {
 
             // Invalidate the chart to refresh
             barChart.invalidate();
+            double totalTime = 0;
+            for (BarEntry entriesInHour : entriesInHours) {
+                totalTime+=entriesInHour.getY();
+            }
+            totalTime = Math.floor(totalTime * 100) / 100.0;
+
+            allTime.setText("Total Reading Time: " + totalTime + " h");
 
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
             System.err.println("Error fetching reading time data: " + e.getMessage());
         }
+
     }
 
 
@@ -779,8 +788,23 @@ public class UIMaster {
         ImageButton closeSearch = mainActivity.findViewById(R.id.btnCloseSearch);
         LinearLayout searchContainer = mainActivity.findViewById(R.id.searchContainer);
 
-        // Show the container
+        // Make the view visible and prepare initial state
         searchContainer.setVisibility(View.VISIBLE);
+        searchContainer.setAlpha(0f);
+        searchContainer.setScaleX(0.95f);
+        searchContainer.setScaleY(0.95f);
+        searchContainer.setTranslationY(-50); // slide from -50px above (adjust as needed)
+
+        // Animate all properties together
+        searchContainer.animate()
+                .alpha(1f)
+                .scaleX(1f)
+                .scaleY(1f)
+                .translationY(0)
+                .setDuration(400)
+                .setInterpolator(new DecelerateInterpolator()) // Smooth acceleration/deceleration
+                .start();
+
 
         // Optional: these lines are only needed if you're toggling specific elements manually
         searchView.setVisibility(View.VISIBLE);

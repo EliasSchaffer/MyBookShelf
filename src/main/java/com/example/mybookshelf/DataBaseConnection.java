@@ -334,9 +334,9 @@ public class DataBaseConnection {
                 if (resultSet.next()) {
                     return new Book(
                             resultSet.getString("title"),
-                            resultSet.getString("author"),
-                            resultSet.getInt("pages"),
                             resultSet.getString("release_date"),
+                            resultSet.getInt("pages"),
+                            resultSet.getString("author"),
                             resultSet.getString("cover_url"),
                             resultSet.getString("description"),
                             resultSet.getInt("book_id"),
@@ -350,50 +350,21 @@ public class DataBaseConnection {
         });
     }
 
-
-    public void addBookToUser(int userId, String bookName, String author, int pages, String releaseDate, String imageUrl, String description, int readingTime, String genre) {
-        String getBookIdSQL = "SELECT book_id FROM books WHERE title = ?";
-        String insertUserBookSQL = "INSERT INTO userbooks (user_id, book_id, reading_time) VALUES (?, ?, ?)";
-        executorService.execute(() -> {
-
-            try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
-                 PreparedStatement getBookIdStmt = connection.prepareStatement(getBookIdSQL);
-                 PreparedStatement insertUserBookStmt = connection.prepareStatement(insertUserBookSQL)) {
-
-                // Get book ID by book name
-                getBookIdStmt.setString(1, bookName);
-                ResultSet resultSet = getBookIdStmt.executeQuery();
-
-                int bookId;
-                if (resultSet.next()) {
-                    bookId = resultSet.getInt("book_id"); // Book exists, get its ID
-                } else {
-                    // If book is not found, add it to the database and get its ID
-                    bookId = addNewBook(bookName, author, pages, releaseDate, imageUrl, description, genre);
-                }
-
-                // Insert into UserBooks
-                insertUserBookStmt.setInt(1, userId);
-                insertUserBookStmt.setInt(2, bookId);
-                insertUserBookStmt.setInt(3, readingTime);
-                insertUserBookStmt.executeUpdate();
-
-                System.out.println("Book successfully added to user!");
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        });
-    }
-
-    public void addBookToUser(int userId, String status, String score, LocalDate finished, String bookName, String author, int pages, String releaseDate, String imageUrl, String description, int readingTime, String genre) {
+    public void addBookToUser(int userId, String status, String score, LocalDate finished, String bookName, String author, int pages, String releaseDate, String imageUrl, String description, double readingTime, String genre) {
         String getBookIdSQL = "SELECT book_id FROM books WHERE title = ?";
         String insertUserBookSQL = "INSERT INTO userbooks (user_id, book_id, reading_time, status, finished_at) VALUES (?, ?, ?, ?, ?)";
         String insertRatingsSQL = "INSERT INTO ratings (user_id, book_id, rating) VALUES (?, ?, ?)";
 
+
+
         executorService.execute(() -> {
-            Date finishedDate = Date.valueOf(finished.toString());
+            Date finishedDate;
             int bookId = -1;
+
+            if ( status.equals("Completed")) {
+                finishedDate = Date.valueOf(finished.toString());
+            } else finishedDate = null;
+
             try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
                  PreparedStatement getBookIdStmt = connection.prepareStatement(getBookIdSQL);
                  PreparedStatement insertUserBookStmt = connection.prepareStatement(insertUserBookSQL)) {
@@ -413,7 +384,7 @@ public class DataBaseConnection {
                 // Insert into UserBooks
                 insertUserBookStmt.setInt(1, userId);
                 insertUserBookStmt.setInt(2, bookId);
-                insertUserBookStmt.setInt(3, readingTime);
+                insertUserBookStmt.setDouble(3, readingTime);
                 insertUserBookStmt.setString(4,status);
                 insertUserBookStmt.setObject(5,finishedDate);
                 insertUserBookStmt.executeUpdate();
@@ -566,6 +537,7 @@ public class DataBaseConnection {
             String sql = "SELECT MONTH(created_at) AS month, SUM(reading_time) AS total_reading_time " +
                     "FROM userbooks WHERE user_id = ? " +
                     "GROUP BY MONTH(created_at) ORDER BY month";
+
 
             try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
                  PreparedStatement preparedStatement = connection.prepareStatement(sql)) {

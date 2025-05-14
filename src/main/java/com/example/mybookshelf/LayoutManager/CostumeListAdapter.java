@@ -255,9 +255,12 @@ public class CostumeListAdapter extends RecyclerView.Adapter<CostumeListAdapter.
                     Log.e("CostumeListAdapter", "Error removing book: " + e.getMessage());
                 }
         });
-
+        FrameLayout loadingOverlay = mainActivity.findViewById(R.id.home_loading_overlay);
         // Set click listener for the book item
-        holder.itemView.setOnClickListener(v -> uiMaster.navigateToDetails(book));
+        holder.itemView.setOnClickListener(v -> {
+            loadingOverlay.setVisibility(View.VISIBLE);
+            uiMaster.navigateToDetails(book);
+        });
     }
 
     private DebouncedTextWatcher createTextWatcher(Book book) {
