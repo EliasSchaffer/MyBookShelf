@@ -157,11 +157,12 @@
 
     <!-- Pop-up Window -->
     <androidx.cardview.widget.CardView
-        android:id="@+id/popupWindow"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:id="@+id/popupCard"
+        android:layout_width="400dp"
+        android:layout_height="700dp"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginRight="45dp"
         android:layout_marginTop="8dp"
         android:layout_marginLeft="8dp"
@@ -170,11 +171,15 @@
         app:cardElevation="0dp"
         app:cardBackgroundColor="@color/popup"
         android:padding="16dp"
-        android:visibility="gone">
+        android:visibility="invisible"
+        >
 
         <RelativeLayout
+            android:id="@+id/popupRel"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
             android:padding="8dp">
 
             <!-- Chat messages RecyclerView -->

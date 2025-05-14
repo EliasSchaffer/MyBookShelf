@@ -16,6 +16,7 @@ import android.view.ViewGroup;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Animation;
 import android.view.animation.DecelerateInterpolator;
+import android.view.animation.OvershootInterpolator;
 import android.view.animation.TranslateAnimation;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -667,7 +668,8 @@ public class UIMaster {
         RatingBar rbRating = mainActivity.findViewById(R.id.rbRating);
         ImageView imgCover = mainActivity.findViewById(R.id.imgCover);
         ImageButton btnPopup = mainActivity.findViewById(R.id.btnPopup);
-        CardView popupWindow = mainActivity.findViewById(R.id.popupWindow);
+        CardView popupCard = mainActivity.findViewById(R.id.popupCard);
+        RelativeLayout popupRel = mainActivity.findViewById(R.id.popupRel);
         GridLayout chat = mainActivity.findViewById(R.id.grdChat);
 
         brf = new BookRecommendationFlow(mainActivity, this, book.getName());
@@ -682,30 +684,36 @@ public class UIMaster {
 
 
         btnPopup.setOnClickListener(v -> {
-            if (popupWindow.getVisibility() == View.VISIBLE) {
-                popupWindow.animate()
+            if (popupCard.getVisibility() == View.VISIBLE) {
+                popupCard.animate()
                         .scaleX(0f)
                         .scaleY(0f)
                         .alpha(0f)
                         .setDuration(300)
-                        .withEndAction(() -> popupWindow.setVisibility(View.GONE))
+                        .withEndAction(() -> popupCard.setVisibility(View.INVISIBLE))
                         .start();
             } else {
-                // Set pivot to bottom right
-                popupWindow.setPivotX(popupWindow.getWidth());
-                popupWindow.setPivotY(popupWindow.getHeight());
+                // First make visible but keep at 0 size
+                popupCard.setVisibility(View.VISIBLE);
+                popupCard.setAlpha(0f);
+                popupCard.setScaleX(0f);
+                popupCard.setScaleY(0f);
 
-                popupWindow.setScaleX(0f);
-                popupWindow.setScaleY(0f);
-                popupWindow.setAlpha(0f);
-                popupWindow.setVisibility(View.VISIBLE);
+                // Post to wait for layout
+                popupCard.post(() -> {
+                    // Set pivot to bottom-right corner
+                    popupCard.setPivotX(popupCard.getWidth());
+                    popupCard.setPivotY(popupCard.getHeight());
 
-                popupWindow.animate()
-                        .scaleX(1f)
-                        .scaleY(1f)
-                        .alpha(1f)
-                        .setDuration(300)
-                        .start();
+                    // Animate
+                    popupCard.animate()
+                            .scaleX(1f)
+                            .scaleY(1f)
+                            .alpha(1f)
+                            .setDuration(300)
+                            .setInterpolator(new OvershootInterpolator(1.0f))
+                            .start();
+                });
 
 
 
