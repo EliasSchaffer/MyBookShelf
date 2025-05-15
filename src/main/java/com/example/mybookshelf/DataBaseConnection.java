@@ -28,6 +28,7 @@ import java.sql.SQLException;
 import java.sql.SQLTimeoutException;
 import java.sql.Statement;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -250,13 +251,15 @@ public class DataBaseConnection {
                     "b.release_date, " +
                     "b.cover_url, " +
                     "b.description, " +
-                    "GROUP_CONCAT(g.genre_name) AS genre " +  // Changed to singular
+                    "MAX(ub.status) AS status, " +
+                    "GROUP_CONCAT(g.genre_name) AS genre " +
                     "FROM userbooks ub " +
                     "LEFT JOIN books b ON ub.book_id = b.book_id " +
                     "LEFT JOIN bookgenre bg ON b.book_id = bg.book_id " +
                     "LEFT JOIN genres g ON bg.genre_id = g.genre_id " +
                     "WHERE ub.user_id = ? " +
                     "GROUP BY b.book_id;";
+
 
 
             try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
@@ -283,7 +286,8 @@ public class DataBaseConnection {
                                     resultSet.getString("cover_url"),
                                     resultSet.getString("description"),
                                     resultSet.getInt("book_id"),
-                                    resultSet.getString("genre")
+                                    resultSet.getString("genre"),
+                                    resultSet.getString("status")
                             );
                             books.add(book);
                         } while (resultSet.next());  // Ensure we process all results
@@ -738,6 +742,7 @@ public class DataBaseConnection {
     }
 
     public void getAllNotificationsForUser(int userId, Consumer<List<Notification>> callback) {
+        //TODO auf neue Notifications Implementiereung ändern
         executorService.execute(() -> {
             String sql = "SELECT notification_id, user_id, message, is_read, created_at FROM notifications WHERE user_id = ? ORDER BY created_at DESC";
             List<Notification> notifications = new ArrayList<>();
@@ -749,8 +754,8 @@ public class DataBaseConnection {
 
                 try (ResultSet resultSet = preparedStatement.executeQuery()) {
                     while (resultSet.next()) {
-                        Notification notification = new Notification(resultSet.getInt("notification_id"), resultSet.getString("message"));
-                        notifications.add(notification);
+                        //Notification notification = new Notification(resultSet.getInt("notification_id"), resultSet.getString("message"));
+                        //notifications.add(notification);
                     }
                 }
 
@@ -903,6 +908,7 @@ public class DataBaseConnection {
                         String goalType = resultSet.getString("goalType"); // 'books','pages','time','finishBook'
                         String bookName = resultSet.getString("book_name");
                         boolean reminder = resultSet.getBoolean("reminder");
+                        int id = resultSet.getInt("goal_id");
 
                         Goal goal;
 
@@ -929,9 +935,9 @@ public class DataBaseConnection {
 
                         // Handle "finishBook" type goals which use a different constructor
                         if (goalType.equals("finishBook")) {
-                            goal = new Goal(progress,target, bookName, frequenzy, goalTypeVerbose, reminder);
+                            goal = new Goal(id, progress,target, bookName, frequenzy, goalTypeVerbose, reminder);
                         } else {
-                            goal = new Goal(progress, target, frequenzy, goalTypeVerbose, reminder);
+                            goal = new Goal(id,progress, target, frequenzy, goalTypeVerbose, reminder);
                         }
 
                         // Set the ID after construction
@@ -1073,6 +1079,101 @@ public class DataBaseConnection {
                 }
             } catch (SQLException e) {
                 System.err.println("Error changing email: " + e.getMessage());
+                e.printStackTrace();
+            }
+        });
+    }
+
+    public Future<LocalTime> getTime(int userId) {
+        return executorService.submit(() -> {
+            String sql = "SELECT hour, minute, reminder FROM notifications WHERE user_id = ?";
+
+            try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                 PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+
+                preparedStatement.setInt(1, userId);
+
+                try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                    if (resultSet.next()) {
+                        if (resultSet.getBoolean("reminder")) {
+                            LocalTime time = LocalTime.of(resultSet.getInt("hour"), resultSet.getInt("minute"));
+                            System.out.println("TIme received from DB");
+                            return time;
+                        } else return null;
+                    } else {
+                        System.out.println("No matching user found");
+                        return null;
+                    }
+                }
+
+            } catch (SQLException e) {
+                System.err.println("Error getting Time: " + e.getMessage());
+                e.printStackTrace();
+                return null;
+            }
+        });
+    }
+
+    public void updateReadingStatus(int userId, int bookId, String readingStatus){
+        String sql;
+        if (readingStatus.equals("Completed")){
+           sql = "UPDATE userbooks SET status = ? , finished_at = ? WHERE user_id = ? AND book_id = ?;";
+
+        }else {
+             sql = "UPDATE userbooks SET status = ? WHERE user_id = ? AND book_id = ?;";
+        }
+        executorService.execute(() -> {
+            LocalDate currentDate = LocalDate.now();
+            Date finished = Date.valueOf(currentDate.toString());
+
+            try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                 PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+
+                if (readingStatus.equals("Completed")){
+                    preparedStatement.setString(1, readingStatus);
+                    preparedStatement.setObject(2, finished);
+                    preparedStatement.setInt(3, userId);
+                    preparedStatement.setInt(4, bookId);
+                }else {
+                    preparedStatement.setString(1, readingStatus);
+                    preparedStatement.setInt(2, userId);
+                    preparedStatement.setInt(3, bookId);
+                }
+
+                int rowsDeleted = preparedStatement.executeUpdate();
+
+                if (rowsDeleted > 0) {
+                    System.out.println("Status changed successfully.");
+                } else {
+                    System.out.println("No matching user found to change Status.");
+                }
+            } catch (SQLException e) {
+                System.err.println("Status changing Status: " + e.getMessage());
+                e.printStackTrace();
+            }
+        });
+    }
+
+    public  void updateGoalProgress(int userId, int goalID, int progress){
+        executorService.execute(() -> {
+            String sql = "UPDATE goals SET progress = ? WHERE user_id = ? AND goal_id = ?;";
+
+            try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                 PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+
+                preparedStatement.setInt(1, progress);
+                preparedStatement.setInt(2, userId);
+                preparedStatement.setInt(3, goalID);
+
+                int rowsDeleted = preparedStatement.executeUpdate();
+
+                if (rowsDeleted > 0) {
+                    System.out.println("Goal changed successfully.");
+                } else {
+                    System.out.println("No matching user found to change goal.");
+                }
+            } catch (SQLException e) {
+                System.err.println("Status changing goal: " + e.getMessage());
                 e.printStackTrace();
             }
         });

@@ -58,6 +58,12 @@ public class CustomGoalAdapter extends RecyclerView.Adapter<CustomGoalAdapter.Go
         notifyItemInserted(goals.size() - 1);
     }
 
+    public void removeGoal(Goal goal) {
+        int index = goals.indexOf(goal);
+        goals.remove(goal);
+        notifyItemRemoved(index);
+    }
+
     /**
      * Updates the goals list with new data
      *
@@ -178,4 +184,6 @@ public class CustomGoalAdapter extends RecyclerView.Adapter<CustomGoalAdapter.Go
 
         return rootLayout;
     }
+
+
 }

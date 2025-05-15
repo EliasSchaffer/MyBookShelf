@@ -10,7 +10,7 @@ public class Goal {
     String frequenzy;
     boolean reminder;
 
-    public Goal(int progress, int target, String goalType, String goal, boolean reminder) {
+    public Goal(int id, int progress, int target, String goalType, String goal, boolean reminder) {
         this.progress = progress;
         this.target = target;
         this.goal = goal;
@@ -21,7 +21,7 @@ public class Goal {
         } else completed = false;
     }
 
-    public Goal(int progress, int target, String bookName, String goalType, String goal, boolean reminder) {
+    public Goal(int id, int progress, int target, String bookName, String goalType, String goal, boolean reminder) {
         this.progress = progress;
         this.bookName = bookName;
         this.frequenzy = goalType;
@@ -77,5 +77,9 @@ public class Goal {
                 ", frequenzy='" + frequenzy + '\'' +
                 ", reminder=" + reminder +
                 '}';
+    }
+
+    public void setProgress(int progress) {
+        this.progress = progress;
     }
 }

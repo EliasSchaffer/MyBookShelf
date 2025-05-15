@@ -41,7 +41,7 @@ import com.example.mybookshelf.notifications.NotificationScheduler;
 
 import java.sql.SQLException;
 import java.time.LocalDate;
-import java.time.chrono.ChronoLocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
@@ -62,6 +62,8 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
     private Button goToStarting;
     private User logedindUser;
     DataBaseConnection db;
+    private GoalHandler handler;
+
     private static final int REQUEST_CODE_POST_NOTIFICATIONS = 1001;
 
     @Override
@@ -226,6 +228,13 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
                 try {
                     logedindUser = new User(username, id, db);
                     uiMaster.setUSer(logedindUser);
+                    LocalTime time = db.getTime(id).get();
+
+                    if (time != null){
+                        logedindUser.setHour(time.getHour());
+                        logedindUser.setMinute(time.getMinute());
+                    }
+                    handler = new GoalHandler(logedindUser, db);
                     loadingOverlay.setVisibility(View.GONE);
                     if (stayLoggedIn){
                         String token = db.getToken(id).get();
@@ -271,9 +280,6 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
         scoreAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         statusAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        // Set the adapters to the Spinners
-        Spinner spinnerAuthor = findViewById(R.id.spinnerAuthor);
-        Spinner spinnerGenre = findViewById(R.id.spinnerGenre);
 
         spinnerScore.setAdapter(scoreAdapter);
         spinnerStatus.setAdapter(statusAdapter);
@@ -285,6 +291,8 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
                 Log.e("MainActivity", "Cannot save null book");
                 return;
             }
+
+            book.setStatus(spinnerStatus.getSelectedItem().toString());
 
             String score = "";
 
@@ -319,6 +327,7 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
                     book.setInDatabase(true);
                     logedindUser.addBook(book, this);
                 }
+                handler.handleBookAdded(book);
             } catch (ExecutionException | InterruptedException e) {
                 Log.e("MainActivity", "Error retrieving book from database", e);
                 // Since we couldn't get the book from the database, use the original book object
@@ -340,6 +349,7 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
 
     public void removeBook(Book book) throws SQLException {
         Context context = getBaseContext();
+        handler.handleBookRemoved(book);
         db.removeBookFromUser(book,logedindUser.getUid());
         uiMaster.reduceTimeSpendReading(book.getPages(), timeSpentReadingTextView);
         logedindUser.removeBook(book, context, findViewById(R.id.rvmyList));
@@ -370,6 +380,11 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
 
         result = response;
         showResponseDialog(result);
+    }
+
+    public void handleBookChange(Book book) {
+        db.updateReadingStatus(logedindUser.getUid(), book.getId(), book.getStatus());
+        handler.handleBookChange(book);
     }
 
     @Override

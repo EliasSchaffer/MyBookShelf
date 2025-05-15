@@ -33,6 +33,9 @@ public class User {
     private TreeSet<String> genreList;
     private MainActivity mainActivity;
     private DataBaseConnection db;
+    private boolean reminder;
+    private int hour;
+    private int minute;
 
 
     @SuppressLint("SuspiciousIndentation")
@@ -119,6 +122,29 @@ public class User {
     }
 
 
+    public int getMinute() {
+        return minute;
+    }
+
+    public void setMinute(int minute) {
+        this.minute = minute;
+    }
+
+    public int getHour() {
+        return hour;
+    }
+
+    public void setHour(int hour) {
+        this.hour = hour;
+    }
+
+    public boolean isReminder() {
+        return reminder;
+    }
+
+    public void setReminder(boolean reminder) {
+        this.reminder = reminder;
+    }
 
     public void setUID(int UID) {
         this.UID = UID;

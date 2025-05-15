@@ -1,8 +1,5 @@
 package com.example.mybookshelf;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
-import android.animation.ValueAnimator;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
@@ -304,7 +301,6 @@ public class UIMaster {
     @NonNull
     private ImageButton getBtnAdd(Book book) {
         ImageButton btnAdd = new ImageButton(mainActivity);
-
 
         btnAdd.setOnClickListener(v -> mainActivity.saveBook(book));
 
@@ -680,6 +676,7 @@ public class UIMaster {
         CardView popupCard = mainActivity.findViewById(R.id.popupCard);
         RelativeLayout popupRel = mainActivity.findViewById(R.id.popupRel);
         GridLayout chat = mainActivity.findViewById(R.id.grdChat);
+        Spinner spinnerStatus = mainActivity.findViewById(R.id.spinnerStatus);
 
         brf = new BookRecommendationFlow(mainActivity, this, book.getName());
 
@@ -689,6 +686,38 @@ public class UIMaster {
         nav_homeBtn.setOnClickListener(v -> navigateToStartingPage());
         nav_goalBtn.setOnClickListener(v -> navigateToGoals());
         nav_settingBtn.setOnClickListener(v -> navigateToSettings());
+
+        ArrayList<String> statusList = new ArrayList<>(List.of("Reading","Completed","On-Hold","Dropped","Planned To Read"));
+        String selectedStatus = book.getStatus();
+
+        if (statusList.contains(selectedStatus)) {
+            statusList.remove(selectedStatus);
+            statusList.add(0, selectedStatus);
+        }
+
+        ArrayAdapter<String> statusAdapter = new ArrayAdapter<>(mainActivity, android.R.layout.simple_spinner_item, statusList);
+        spinnerStatus.setAdapter(statusAdapter);
+
+
+        final boolean[] isSpinnerInitial = {true};
+
+        spinnerStatus.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (isSpinnerInitial[0]) {
+                    // Ignore this initial callback
+                    isSpinnerInitial[0] = false;
+                    return;
+                }
+
+                // Now handle user selection
+                book.setStatus(spinnerStatus.getSelectedItem().toString());
+                mainActivity.handleBookChange(book);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {}
+        });
 
 
 
@@ -930,7 +959,7 @@ public class UIMaster {
         ImageButton nav_StatsBtn = mainActivity.findViewById(R.id.nav_stats);
         ImageButton nav_SettingBtn = mainActivity.findViewById(R.id.nav_settings);
         Button addGoal = mainActivity.findViewById(R.id.btnAddGoal);
-        Spinner spinnerGoalType = mainActivity.findViewById(R.id.spinnerGoaltype);
+        Spinner spinnerGoalType = mainActivity.findViewById(R.id.spinnerStatus);
         Button cancel = mainActivity.findViewById(R.id.btnPopupCancel);
         EditText book = mainActivity.findViewById(R.id.etGoalPopupName);
         EditText number = mainActivity.findViewById(R.id.editTextNumber);
@@ -1108,7 +1137,7 @@ public class UIMaster {
                         Toast.makeText(mainActivity, "Please enter a book name", Toast.LENGTH_SHORT).show();
                         return;
                     }
-                    finalGoal = new Goal(0,targetNumber, bookName, frequenzy, goalCategory, reminder.isChecked());
+                    finalGoal = new Goal(0,0,targetNumber, bookName, frequenzy, goalCategory, reminder.isChecked());
                     Log.d("GoalsDebug", "Created book goal: " + bookName);
                 } else {
 
@@ -1118,7 +1147,7 @@ public class UIMaster {
                         return;
                     }
 
-                    finalGoal = new Goal(0, targetNumber, frequenzy, goalCategory, reminder.isChecked());
+                    finalGoal = new Goal(0,0, targetNumber, frequenzy, goalCategory, reminder.isChecked());
                     Log.d("GoalsDebug", "Created numeric goal: " + targetNumber);
                 }
             } catch (NumberFormatException e) {
@@ -1132,6 +1161,10 @@ public class UIMaster {
                 Log.e("GoalsDebug", "Failed to create goal object!");
                 Toast.makeText(mainActivity, "Error creating goal", Toast.LENGTH_SHORT).show();
                 return;
+            }
+
+            if (logedindUser.getGoalList().isEmpty()) {
+                NotificationScheduler.scheduleDailyNotification(mainActivity, 12, 0, "Time to read!");
             }
 
             // Add goal to user first (database operation)
@@ -1154,24 +1187,6 @@ public class UIMaster {
                 return;
             }
 
-            // Handle notifications
-            if (reminder.isChecked()) {
-                Log.d("GoalsDebug", "Setting up notification for " + frequenzy);
-                switch (frequenzy) {
-                    case "daily":
-                        NotificationScheduler.scheduleDailyNotification(mainActivity, 12, 0, "Daily Reading Reminder");
-                        break;
-                    case "weekly":
-                        NotificationScheduler.scheduleWeeklyNotification(mainActivity, 1, 12, 0, "Weekly Reading Reminder");
-                        break;
-                    case "monthly":
-                        NotificationScheduler.scheduleMonthlyNotification(mainActivity, 1, 12, 0, "Monthly Reading Reminder");
-                        break;
-                    case "yearly":
-                        NotificationScheduler.scheduleYearlyNotification();
-                        break;
-                }
-            }
 
             // Now add to the displayed list after successful database operation
             int insertPosition = goalList.size() - 1;

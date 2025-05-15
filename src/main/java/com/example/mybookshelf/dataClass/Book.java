@@ -11,6 +11,7 @@ public class Book {
     private boolean inDatabase;
     private int id;
     private int reading_time;
+    private String status;
 
     public Book(String name, String release_date, int pages, String author) {
         this.name = name;
@@ -33,6 +34,18 @@ public class Book {
 
     public void setInDatabase(boolean inDatabase) {
         this.inDatabase = inDatabase;
+    }
+
+    public Book(String name, String release_date, int pages, String author, String image_url, String description, int id, String genre, String Status) {
+        this.name = name;
+        this.release_date = release_date;
+        this.pages = pages;
+        this.author = author;
+        this.image_url = image_url;
+        this.description = description;
+        this.id = id;
+        this.genre = genre;
+        this.status = Status;
     }
 
     public Book(String name, String release_date, int pages, String author, String image_url, String description, int id, String genre) {
@@ -100,5 +113,13 @@ public class Book {
 
     public void setRelease_date(String release_date) {
         this.release_date = release_date;
+    }
+    public void setStatus(String status) {
+        this.status = status;
+
+    }
+    public String getStatus() {
+        return status;
+
     }
 }

@@ -43,12 +43,7 @@ public class NotificationScheduler {
     private static final String KEY_MONTHLY_MESSAGE = "monthly_message";
 
     public static void scheduleDailyNotification(Context context, int hour, int minute, String message) {
-
-    }
-
-    public static void scheduleWeeklyNotification(Context context, int dayOfWeek, int hour, int minute, String message) {
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.DAY_OF_WEEK, dayOfWeek);
         calendar.set(Calendar.HOUR_OF_DAY, hour);
         calendar.set(Calendar.MINUTE, minute);
         calendar.set(Calendar.SECOND, 0);
@@ -56,20 +51,19 @@ public class NotificationScheduler {
 
         // If time already passed this week, schedule for next week
         if (calendar.getTimeInMillis() <= System.currentTimeMillis()) {
-            calendar.add(Calendar.WEEK_OF_YEAR, 1);
+            calendar.add(Calendar.HOUR_OF_DAY, 1);
         }
 
         Intent intent = new Intent(context, NotificationReceiver.class);
         intent.putExtra("title", "Weekly Reading Check-in");
         intent.putExtra("message", message);
         intent.putExtra("notificationType", "weekly");
-        intent.putExtra("dayOfWeek", dayOfWeek);
         intent.putExtra("hour", hour);
         intent.putExtra("minute", minute);
 
         PendingIntent pendingIntent = PendingIntent.getBroadcast(
                 context,
-                REQUEST_CODE_WEEKLY,
+                REQUEST_CODE_DAILY,
                 intent,
                 PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
         );
@@ -99,14 +93,17 @@ public class NotificationScheduler {
             SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = prefs.edit();
             editor.putBoolean(KEY_WEEKLY_ACTIVE, true);
-            editor.putInt(KEY_WEEKLY_DAY, dayOfWeek);
             editor.putInt(KEY_WEEKLY_HOUR, hour);
             editor.putInt(KEY_WEEKLY_MINUTE, minute);
             editor.putString(KEY_WEEKLY_MESSAGE, message);
             editor.apply();
 
-            Log.d(TAG, "Weekly notification scheduled for " + calendar.getTime());
+            Log.d(TAG, "Daily notification scheduled for " + calendar.getTime());
         }
+    }
+
+    public static void scheduleWeeklyNotification(Context context, int dayOfWeek, int hour, int minute, String message) {
+
     }
 
     public static void scheduleMonthlyNotification(Context context, int dayOfMonth, int hour, int minute, String message) {
