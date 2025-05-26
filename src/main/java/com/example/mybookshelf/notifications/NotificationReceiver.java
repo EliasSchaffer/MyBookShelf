@@ -13,8 +13,6 @@ import androidx.core.app.NotificationManagerCompat;
 
 import com.example.mybookshelf.R;
 
-import java.util.Calendar;
-
 public class NotificationReceiver extends BroadcastReceiver {
     private static final String TAG = "NotificationReceiver";
 
@@ -24,33 +22,12 @@ public class NotificationReceiver extends BroadcastReceiver {
         String message = intent.getStringExtra("message");
         String notificationType = intent.getStringExtra("notificationType");
 
-        // Show the notification
+        // Zeige die Notification an
         showNotification(context, title, message);
 
-        // Reschedule the notification based on its type
-        if (notificationType != null) {
-            switch (notificationType) {
-                case "daily":
-                    int dailyHour = intent.getIntExtra("hour", 20);
-                    int dailyMinute = intent.getIntExtra("minute", 0);
-                    NotificationScheduler.scheduleDailyNotification(context, dailyHour, dailyMinute, message);
-                    break;
-
-                case "weekly":
-                    int weeklyDayOfWeek = intent.getIntExtra("dayOfWeek", Calendar.SUNDAY);
-                    int weeklyHour = intent.getIntExtra("hour", 18);
-                    int weeklyMinute = intent.getIntExtra("minute", 0);
-                    NotificationScheduler.scheduleWeeklyNotification(context, weeklyDayOfWeek, weeklyHour, weeklyMinute, message);
-                    break;
-
-                case "monthly":
-                    int monthlyDay = intent.getIntExtra("dayOfMonth", 1);
-                    int monthlyHour = intent.getIntExtra("hour", 10);
-                    int monthlyMinute = intent.getIntExtra("minute", 0);
-                    NotificationScheduler.scheduleMonthlyNotification(context, monthlyDay, monthlyHour, monthlyMinute, message);
-                    break;
-            }
-        }
+        // Bei täglichen Notifications müssen wir nichts neu planen,
+        // da AlarmManager.setRepeating automatisch wiederholt
+        Log.d(TAG, "Daily notification shown: " + title + " - " + message);
     }
 
     private void showNotification(Context context, String title, String message) {
@@ -58,23 +35,24 @@ public class NotificationReceiver extends BroadcastReceiver {
                 context,
                 NotificationChannelManager.DEFAULT_CHANNEL_ID)
                 .setSmallIcon(R.drawable.icon)
-                .setContentTitle(title != null ? title : "Reminder")
-                .setContentText(message != null ? message : "Time to check your books!")
+                .setContentTitle(title != null ? title : "Lese-Erinnerung")
+                .setContentText(message != null ? message : "Zeit zum Lesen!")
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
                 .setAutoCancel(true);
 
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
 
-        // Check if we have notification permission (required for Android 13+)
+        // Prüfe, ob wir die Berechtigung für Notifications haben (erforderlich für Android 13+)
         if (ActivityCompat.checkSelfPermission(context, Manifest.permission.POST_NOTIFICATIONS)
                 != PackageManager.PERMISSION_GRANTED) {
             Log.w(TAG, "Notification permission not granted");
             return;
         }
 
-        // Use a hashcode of the title and message for a unique notification ID
-        int notificationId = (title + message).hashCode();
+        // Verwende eine feste ID für tägliche Notifications
+        int notificationId = 1;
         notificationManager.notify(notificationId, builder.build());
+
+        Log.d(TAG, "Notification displayed successfully");
     }
 }
-

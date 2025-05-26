@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
     private User logedindUser;
     DataBaseConnection db;
     private GoalHandler handler;
+    private FrameLayout loadingOverlay;
 
     private static final int REQUEST_CODE_POST_NOTIFICATIONS = 1001;
 
@@ -107,15 +108,12 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
 
 
         try {
-            // Initialize UI components
 
 
-            // Initialize Authenticator and ApiRequest
-            auth = new Authenticator(this);
-            uiMaster = new UIMaster(this);
             search = new Search(this);
             ai = new AiAPI();
-            db = new DataBaseConnection(this);
+            auth = new Authenticator(this);
+            uiMaster = new UIMaster(this);
 
 
             int uid = auth.getUid(this);
@@ -134,6 +132,10 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
                 try {
                     Authenticator.clearStoredToken(this);
                     uiMaster.showLogin();
+                    db = new DataBaseConnection(this);
+                    auth.setDb(this.db);
+                    uiMaster.setDb(this.db);
+
 
                 } catch (ExecutionException e) {
                     throw new RuntimeException(e);
@@ -212,9 +214,10 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
 
 
     public void handleLogin(EditText usernameEditText, EditText passwordEditText, boolean stayLoggedIn) throws ExecutionException, InterruptedException {
+        loadingOverlay = findViewById(R.id.loading_overlay);
+
         String username = usernameEditText.getText().toString().trim();
         String password = passwordEditText.getText().toString().trim();
-        FrameLayout loadingOverlay = findViewById(R.id.loading_overlay);
 
         if (TextUtils.isEmpty(username) || TextUtils.isEmpty(password)) {
             Toast.makeText(this, "Please enter both username and password", Toast.LENGTH_SHORT).show();
@@ -399,5 +402,16 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
         // Simple pop-up without any buttons or extra UI elements
         boxReturn.setText("");
         boxReturn.setText(message);
+    }
+
+    public DataBaseConnection getDb() {
+        return db;
+    }
+
+    public void setLoadingVisibility(int visibility) {
+        runOnUiThread(() -> {
+            loadingOverlay = findViewById(R.id.loading_overlay);
+            loadingOverlay.setVisibility(visibility);
+        });
     }
 }

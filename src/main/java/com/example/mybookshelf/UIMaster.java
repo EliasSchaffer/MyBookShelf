@@ -111,7 +111,7 @@ public class UIMaster {
         booksAPI = new BooksAPI();
         ai = new AiAPI();
         mainActivity = main;
-        db = new DataBaseConnection(mainActivity);
+        db = mainActivity.getDb();
         bookViewMap = new HashMap<>();
     }
 
@@ -434,7 +434,6 @@ public class UIMaster {
 
     public void setupLineChart() {
         mainActivity.setContentView(R.layout.main_chart);
-        DataBaseConnection db = new DataBaseConnection(mainActivity);
         barChart = mainActivity.findViewById(R.id.barChart);
         ImageButton nav_homeBtn = mainActivity.findViewById(R.id.nav_home);
         ImageButton nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
@@ -1427,5 +1426,9 @@ public class UIMaster {
                     .start();
         }
 
+    }
+
+    public void setDb(DataBaseConnection db) {
+        this.db = db;
     }
 }

@@ -3,7 +3,9 @@ package com.example.mybookshelf;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.util.Log;
+import android.view.View;
 
 import com.example.mybookshelf.dataClass.Book;
 import com.example.mybookshelf.dataClass.Goal;
@@ -50,16 +52,17 @@ public class DataBaseConnection {
     private static final String USER = "avnadmin";
     private static final String PASSWORD = "AVNS_g46tQJXWz_2Fh_QBWiM";
     private String URL;
-    private final Context context;
+    private final MainActivity context;
 
     private File trustStoreFile; // Store the file reference
 
-    public DataBaseConnection(Context context) {
+    public DataBaseConnection(MainActivity context) {
         this.context = context;
         initialize();
     }
 
     private void initialize() {
+        context.setLoadingVisibility(View.VISIBLE);
         executorService.execute(() -> {
             try {
                 // 1. Load and keep truststore in memory
@@ -85,10 +88,29 @@ public class DataBaseConnection {
                 // 4. Test connection
                 Class.forName("com.mysql.jdbc.Driver");
                 try (Connection testConn = DriverManager.getConnection(URL, USER, PASSWORD)) {
+                    context.setLoadingVisibility(View.GONE);
                     Log.d("DB", "Datenbankverbindung erfolgreich hergestellt!");
                 }
             } catch (Exception e) {
+                context.setLoadingVisibility(View.VISIBLE);
                 Log.e("DB", "Initialization error", e);
+                context.runOnUiThread(() -> {
+                    new AlertDialog.Builder(context)
+                            .setTitle("Connection Error")
+                            .setMessage("No connection to server")
+                            .setCancelable(false)
+                            .setPositiveButton("Retry", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    initialize();
+                                }
+                            })
+                            .setNegativeButton("Exit", new DialogInterface.OnClickListener() {
+                                public void onClick(DialogInterface dialog, int which) {
+                                    System.exit(0); // Exit the app
+                                }
+                            })
+                            .show();
+                });
             }
         });
     }
@@ -744,7 +766,7 @@ public class DataBaseConnection {
     public void getAllNotificationsForUser(int userId, Consumer<List<Notification>> callback) {
         //TODO auf neue Notifications Implementiereung ändern
         executorService.execute(() -> {
-            String sql = "SELECT notification_id, user_id, message, is_read, created_at FROM notifications WHERE user_id = ? ORDER BY created_at DESC";
+            String sql = "SELECT notification_id, user_id, created_at FROM notifications WHERE user_id = ? ORDER BY created_at DESC";
             List<Notification> notifications = new ArrayList<>();
 
             try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);

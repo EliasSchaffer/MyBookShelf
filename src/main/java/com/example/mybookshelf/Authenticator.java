@@ -23,16 +23,16 @@ import javax.crypto.SecretKey;
 import javax.crypto.spec.GCMParameterSpec;
 
 public class Authenticator {
-    private final DataBaseConnection db;
-    private final Context context;
+    private DataBaseConnection db;
+    private final MainActivity context;
     private final ExecutorService executorService = Executors.newSingleThreadExecutor();
     private final Handler mainHandler = new Handler(Looper.getMainLooper()); // To post to UI thread
     private static final String KEY_ALIAS = "com.example.mybookshelf.NB1ziSTb9ekHnFh11OhL";
 
 
-    public Authenticator(Context context) {
+    public Authenticator(MainActivity context) {
         this.context = context;
-        db = new DataBaseConnection(context);
+        db = context.getDb();
     }
 
     // Async login method with callback
@@ -167,6 +167,10 @@ public class Authenticator {
                 .remove("UID")
                 .remove("USERNAME")
                 .apply();
+    }
+
+    public void setDb(DataBaseConnection db) {
+        this.db = db;
     }
 
 }
