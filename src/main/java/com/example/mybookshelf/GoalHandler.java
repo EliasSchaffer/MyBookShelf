@@ -4,6 +4,7 @@ import com.example.mybookshelf.dataClass.Book;
 import com.example.mybookshelf.dataClass.Goal;
 import com.example.mybookshelf.dataClass.User;
 import com.example.mybookshelf.LayoutManager.CustomGoalAdapter;
+import com.example.mybookshelf.notifications.NotificationScheduler;
 
 import java.util.Date;
 import java.util.Iterator;
@@ -16,8 +17,9 @@ public class GoalHandler {
     private List<Goal> goalList;
     private List<Goal> completedGoalList;
     private DataBaseConnection db;
+    private MainActivity mainActivity;
 
-    public GoalHandler(User user, DataBaseConnection db) {
+    public GoalHandler(User user, DataBaseConnection db, MainActivity mainActivity) {
         this.user = user;
         this.goalList = user.getGoalList();
         this.completedGoalList = user.getCompletedGoalList();
@@ -252,6 +254,9 @@ public class GoalHandler {
                             break;
                     }
                     db.updateGoalProgress(user.getUid(),goal.getId(),progress);
+                    if (goalList.isEmpty()){
+                        NotificationScheduler.cancelDailyNotification(mainActivity);
+                    }
                 }
     }
 }

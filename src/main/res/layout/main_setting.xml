@@ -18,320 +18,380 @@
             android:orientation="vertical"
             android:paddingBottom="100dp">
 
-    <TextView
-        android:id="@+id/tvSetting"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:layout_marginLeft="22dp"
-        android:layout_marginBottom="52dp"
-        android:text="Setting"
-        android:textColor="@color/black"
-        android:textSize="38sp"
-        android:textStyle="bold" />
-
-    <Switch
-        android:id="@+id/switchdarkmode"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
-        android:layout_marginEnd="22dp"
-        android:layout_marginBottom="52dp"
-        android:text="Dark Mode"
-        android:textSize="38sp"
-        tools:ignore="UseSwitchCompatOrMaterialXml" />
-
-    <TextView
-        android:id="@+id/tvchangePasswd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="22dp"
-        android:layout_marginBottom="22dp"
-        android:text="Change Password >"
-        android:textColor="@color/black"
-        android:textSize="38sp"
-        android:clickable="true"
-        android:focusable="true" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardViewpasswd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txtLogin"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="16dp"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="4dp">
-
-        <RelativeLayout
-            android:id="@+id/passwdChangeBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:orientation="vertical"
-            android:visibility="gone">
-
-            <EditText
-                android:id="@+id/etpasswd"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Enter Password"
-                android:padding="10dp"
-                android:layout_marginBottom="8dp"
-                android:textSize="18sp"
-                android:background="@drawable/rounded_edittext"
-                android:inputType="textPassword" />
-
-            <EditText
-                android:id="@+id/etNewpasswd"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/etpasswd"
-                android:hint="Enter New Password"
-                android:padding="10dp"
-                android:layout_marginBottom="8dp"
-                android:textSize="18sp"
-                android:background="@drawable/rounded_edittext"
-                android:inputType="textPassword" />
-
-            <EditText
-                android:id="@+id/etNewpasswdrepeat"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/etNewpasswd"
-                android:hint="Repeat New Password"
-                android:padding="10dp"
-                android:layout_marginBottom="8dp"
-                android:textSize="18sp"
-                android:background="@drawable/rounded_edittext"
-                android:inputType="textPassword" />
-
-            <Button
-                android:id="@+id/btnSavepasswd"
+            <TextView
+                android:id="@+id/tvSetting"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Submit"
-                android:layout_below="@id/etNewpasswdrepeat"
-                android:layout_alignParentEnd="true"
-                android:textColor="@color/white"
-                android:background="@drawable/rounded_button_black"/>
+                android:layout_marginTop="52dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginBottom="52dp"
+                android:text="Setting"
+                android:textColor="@color/black"
+                android:textSize="38sp"
+                android:textStyle="bold" />
 
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
-
-    <TextView
-        android:id="@+id/tvchangeUsername"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="22dp"
-        android:layout_marginBottom="22dp"
-        android:text="Change Username >"
-        android:textColor="@color/black"
-        android:textSize="38sp"
-        android:clickable="true"
-        android:focusable="true" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardViewUsername"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txtLogin"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="16dp"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="4dp">
-
-    <RelativeLayout
-        android:id="@+id/usernameChangeBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:orientation="vertical"
-        android:visibility="gone">
-
-        <EditText
-            android:id="@+id/etNewUsername"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter New Username"
-            android:padding="10dp"
-            android:layout_marginBottom="8dp"
-            android:textSize="18sp"
-            android:background="@drawable/rounded_edittext"
-            android:inputType="textPersonName" />
-
-        <Button
-            android:id="@+id/btnSaveUsername"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Submit"
-            android:layout_below="@id/etNewUsername"
-            android:layout_alignParentEnd="true"
-            android:textColor="@color/white"
-            android:background="@drawable/rounded_button_black"/>
-    </RelativeLayout>
-    </androidx.cardview.widget.CardView>
-
-    <TextView
-        android:id="@+id/tvchangeEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="22dp"
-        android:layout_marginBottom="22dp"
-        android:text="Change Email >"
-        android:textColor="@color/black"
-        android:textSize="38sp"
-        android:clickable="true"
-        android:focusable="true" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardViewEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txtLogin"
-        android:layout_alignParentBottom="true"
-        android:layout_margin="16dp"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="4dp">
-
-        <RelativeLayout
-            android:id="@+id/EmailChangeBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:orientation="vertical"
-            android:visibility="gone">
-
-            <EditText
-                android:id="@+id/etNewEmail"
+            <Switch
+                android:id="@+id/switchdarkmode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Enter New Email"
-                android:padding="10dp"
-                android:layout_marginBottom="8dp"
-                android:textSize="18sp"
-                android:background="@drawable/rounded_edittext"
-                android:inputType="textEmailAddress" />
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                android:layout_marginBottom="52dp"
+                android:text="Dark Mode"
+                android:textSize="38sp"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
 
-            <Button
-                android:id="@+id/btnSaveEmail"
+            <TextView
+                android:id="@+id/tvchangePasswd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Submit"
-                android:layout_below="@id/etNewEmail"
-                android:layout_alignParentEnd="true"
-                android:textColor="@color/white"
-                android:background="@drawable/rounded_button_black"/>
+                android:layout_marginLeft="22dp"
+                android:layout_marginBottom="22dp"
+                android:text="Change Password >"
+                android:textColor="@color/black"
+                android:textSize="38sp"
+                android:clickable="true"
+                android:focusable="true" />
 
-        </RelativeLayout>
-    </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewpasswd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtLogin"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
 
-    <!-- Add space between content and the bottom navbar -->
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:layout_weight="1" />
+                <RelativeLayout
+                    android:id="@+id/passwdChangeBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
 
-    <!-- Sign out button styled like a browser sign-out button -->
-    <!-- Modern browser-style sign-out button -->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        android:padding="8dp">
+                    <EditText
+                        android:id="@+id/etpasswd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter Password"
+                        android:padding="10dp"
+                        android:layout_marginBottom="8dp"
+                        android:textSize="18sp"
+                        android:background="@drawable/rounded_edittext"
+                        android:inputType="textPassword" />
 
-        <Button
-            android:id="@+id/btndelAcc"
-            android:layout_width="wrap_content"
-            android:layout_height="68dp"
-            android:layout_alignParentStart="true"
-            android:drawableStart="@drawable/ic_delete_acc"
-            android:drawablePadding="4dp"
-            android:background="@drawable/rounded_button_outline"
-            android:text="Delete Account"
-            android:textStyle="bold"
-            android:textColor="@color/red"
-            android:textSize="16sp"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:gravity="center_vertical"
-            style="@style/Widget.AppCompat.Button.Borderless" />
+                    <EditText
+                        android:id="@+id/etNewpasswd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/etpasswd"
+                        android:hint="Enter New Password"
+                        android:padding="10dp"
+                        android:layout_marginBottom="8dp"
+                        android:textSize="18sp"
+                        android:background="@drawable/rounded_edittext"
+                        android:inputType="textPassword" />
 
-        <Button
-            android:id="@+id/btnSignOut"
-            android:layout_width="wrap_content"
-            android:layout_height="68dp"
-            android:layout_alignParentEnd="true"
-            android:drawableStart="@drawable/ic_sign_out"
-            android:drawablePadding="8dp"
-            android:background="@drawable/rounded_button_outline"
-            android:text="Sign Out"
-            android:textStyle="bold"
-            android:textColor="@color/red"
-            android:textSize="16sp"
-            android:paddingStart="26dp"
-            android:paddingEnd="26dp"
-            android:gravity="center_vertical"
-            style="@style/Widget.AppCompat.Button.Borderless" />
-    </RelativeLayout>
+                    <EditText
+                        android:id="@+id/etNewpasswdrepeat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/etNewpasswd"
+                        android:hint="Repeat New Password"
+                        android:padding="10dp"
+                        android:layout_marginBottom="8dp"
+                        android:textSize="18sp"
+                        android:background="@drawable/rounded_edittext"
+                        android:inputType="textPassword" />
 
-    </LinearLayout>
-</ScrollView>
+                    <Button
+                        android:id="@+id/btnSavepasswd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Submit"
+                        android:layout_below="@id/etNewpasswdrepeat"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/white"
+                        android:background="@drawable/rounded_button_black"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvchangeUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginBottom="22dp"
+                android:text="Change Username >"
+                android:textColor="@color/black"
+                android:textSize="38sp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtLogin"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:id="@+id/usernameChangeBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/etNewUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter New Username"
+                        android:padding="10dp"
+                        android:layout_marginBottom="8dp"
+                        android:textSize="18sp"
+                        android:background="@drawable/rounded_edittext"
+                        android:inputType="textPersonName" />
+
+                    <Button
+                        android:id="@+id/btnSaveUsername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Submit"
+                        android:layout_below="@id/etNewUsername"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/white"
+                        android:background="@drawable/rounded_button_black"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvchangeEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginBottom="22dp"
+                android:text="Change Email >"
+                android:textColor="@color/black"
+                android:textSize="38sp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtLogin"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:id="@+id/EmailChangeBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <EditText
+                        android:id="@+id/etNewEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter New Email"
+                        android:padding="10dp"
+                        android:layout_marginBottom="8dp"
+                        android:textSize="18sp"
+                        android:background="@drawable/rounded_edittext"
+                        android:inputType="textEmailAddress" />
+
+                    <Button
+                        android:id="@+id/btnSaveEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Submit"
+                        android:layout_below="@id/etNewEmail"
+                        android:layout_alignParentEnd="true"
+                        android:textColor="@color/white"
+                        android:background="@drawable/rounded_button_black"/>
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- New TimePicker and Checkbox Section -->
+            <TextView
+                android:id="@+id/tvNotificationSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:layout_marginBottom="22dp"
+                android:text="Notification Settings >"
+                android:textColor="@color/black"
+                android:textSize="38sp"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtLogin"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <RelativeLayout
+                    android:id="@+id/notificationSettingsBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <CheckBox
+                        android:id="@+id/cbEnableNotifications"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Enable Daily Notifications"
+                        android:textSize="18sp"
+                        android:layout_marginBottom="16dp"/>
+
+                    <TimePicker
+                        android:id="@+id/timePickerNotification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/cbEnableNotifications"
+                        android:layout_centerHorizontal="true"
+                        android:timePickerMode="spinner"/>
+
+                    <Button
+                        android:id="@+id/btnSaveNotificationSettings"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Save"
+                        android:layout_below="@id/timePickerNotification"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="16dp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/rounded_button_black"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Add space between content and the bottom navbar -->
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_weight="1" />
+
+            <!-- Sign out button styled like a browser sign-out button -->
+            <!-- Modern browser-style sign-out button -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:padding="8dp">
+
+                <Button
+                    android:id="@+id/btndelAcc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="68dp"
+                    android:layout_alignParentStart="true"
+                    android:drawableStart="@drawable/ic_delete_acc"
+                    android:drawablePadding="4dp"
+                    android:background="@drawable/rounded_button_outline"
+                    android:text="Delete Account"
+                    android:textStyle="bold"
+                    android:textColor="@color/red"
+                    android:textSize="16sp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:gravity="center_vertical"
+                    style="@style/Widget.AppCompat.Button.Borderless" />
+
+                <Button
+                    android:id="@+id/btnSignOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="68dp"
+                    android:layout_alignParentEnd="true"
+                    android:drawableStart="@drawable/ic_sign_out"
+                    android:drawablePadding="8dp"
+                    android:background="@drawable/rounded_button_outline"
+                    android:text="Sign Out"
+                    android:textStyle="bold"
+                    android:textColor="@color/red"
+                    android:textSize="16sp"
+                    android:paddingStart="26dp"
+                    android:paddingEnd="26dp"
+                    android:gravity="center_vertical"
+                    style="@style/Widget.AppCompat.Button.Borderless" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
     <!-- Fixierte Bottom Navigation -->
-<androidx.cardview.widget.CardView
-android:id="@+id/bottom_nav"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:layout_alignParentBottom="true"
-android:layout_margin="12dp"
-app:cardCornerRadius="16dp"
-app:cardElevation="4dp"
-android:background="@android:color/white">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="12dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        android:background="@android:color/white">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="8dp"
-    android:gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:gravity="center">
 
-    <ImageButton
-        android:id="@+id/nav_home"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_weight="1"
-        android:background="@null"
-        android:src="@drawable/ic_home"
-        android:contentDescription="Home" />
+            <ImageButton
+                android:id="@+id/nav_home"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/ic_home"
+                android:contentDescription="Home" />
 
-    <ImageButton
-        android:id="@+id/nav_search"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_weight="1"
-        android:background="@null"
-        android:src="@drawable/ic_search"
-        android:contentDescription="Search" />
+            <ImageButton
+                android:id="@+id/nav_search"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/ic_search"
+                android:contentDescription="Search" />
 
-    <ImageButton
-        android:id="@+id/nav_stats"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_weight="1"
-        android:background="@null"
-        android:src="@drawable/ic_stats"
-        android:contentDescription="Stats" />
+            <ImageButton
+                android:id="@+id/nav_stats"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/ic_stats"
+                android:contentDescription="Stats" />
 
-    <ImageButton
-        android:id="@+id/nav_goals"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_weight="1"
-        android:background="@null"
-        android:src="@drawable/ic_goal"
-        android:contentDescription="Goal" />
-</LinearLayout>
-</androidx.cardview.widget.CardView>
+            <ImageButton
+                android:id="@+id/nav_goals"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/ic_goal"
+                android:contentDescription="Goal" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
-    </RelativeLayout>
+</RelativeLayout>

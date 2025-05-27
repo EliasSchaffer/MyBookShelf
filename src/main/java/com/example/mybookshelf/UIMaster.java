@@ -3,6 +3,7 @@ package com.example.mybookshelf;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
+import android.os.Build;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -33,6 +34,7 @@ import android.widget.SearchView;
 import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 
@@ -60,6 +62,8 @@ import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 
 import java.sql.SQLException;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -964,7 +968,6 @@ public class UIMaster {
         EditText number = mainActivity.findViewById(R.id.editTextNumber);
         CardView popUp = mainActivity.findViewById(R.id.popupWindow);
         Button save = mainActivity.findViewById(R.id.btnPopupSave);
-        CheckBox reminder = mainActivity.findViewById(R.id.activateNot);
         RadioGroup type = mainActivity.findViewById(R.id.frequencyRadioGroup);
         RecyclerView rvCompletedGoals = mainActivity.findViewById(R.id.rvCompletedGoals);
         Button current = mainActivity.findViewById(R.id.btnCurrent);
@@ -1136,7 +1139,7 @@ public class UIMaster {
                         Toast.makeText(mainActivity, "Please enter a book name", Toast.LENGTH_SHORT).show();
                         return;
                     }
-                    finalGoal = new Goal(0,0,targetNumber, bookName, frequenzy, goalCategory, reminder.isChecked());
+                    finalGoal = new Goal(0,0,targetNumber, bookName, frequenzy, goalCategory);
                     Log.d("GoalsDebug", "Created book goal: " + bookName);
                 } else {
 
@@ -1146,7 +1149,7 @@ public class UIMaster {
                         return;
                     }
 
-                    finalGoal = new Goal(0,0, targetNumber, frequenzy, goalCategory, reminder.isChecked());
+                    finalGoal = new Goal(0,0, targetNumber, frequenzy, goalCategory);
                     Log.d("GoalsDebug", "Created numeric goal: " + targetNumber);
                 }
             } catch (NumberFormatException e) {
@@ -1162,9 +1165,7 @@ public class UIMaster {
                 return;
             }
 
-            if (logedindUser.getGoalList().isEmpty()) {
-                NotificationScheduler.scheduleDailyNotification(mainActivity, 12, 0, "Time to read!");
-            }
+
 
             // Add goal to user first (database operation)
             // This should generate a proper ID if your database is set up correctly
@@ -1230,7 +1231,6 @@ public class UIMaster {
                     // Clear input fields for next use
                     book.setText("");
                     number.setText("");
-                    reminder.setChecked(false);
                     type.clearCheck();
                 }
 
@@ -1258,23 +1258,41 @@ public class UIMaster {
         Button btnChangePasswd = mainActivity.findViewById(R.id.btnSavepasswd);
         Button btnChangeEmail = mainActivity.findViewById(R.id.btnSaveEmail);
         Button btnChangeUsername = mainActivity.findViewById(R.id.btnSaveUsername);
+        Button btnSaveNotificationSettings = mainActivity.findViewById(R.id.btnSaveNotificationSettings);
         Switch mode = mainActivity.findViewById(R.id.switchdarkmode);
         TextView changePasswd = mainActivity.findViewById(R.id.tvchangePasswd);
         TextView changeUsername = mainActivity.findViewById(R.id.tvchangeUsername);
         TextView changeEmail = mainActivity.findViewById(R.id.tvchangeEmail);
+        TextView notificationSettings = mainActivity.findViewById(R.id.tvNotificationSettings);
         RelativeLayout passwdChangeBox = mainActivity.findViewById(R.id.passwdChangeBox);
         RelativeLayout usernameChangeBox = mainActivity.findViewById(R.id.usernameChangeBox);
         RelativeLayout EmailChangeBox = mainActivity.findViewById(R.id.EmailChangeBox);
+        RelativeLayout notificationSettingsBox = mainActivity.findViewById(R.id.notificationSettingsBox);
         EditText etPassword = mainActivity.findViewById(R.id.etpasswd);
         EditText etNewPassword = mainActivity.findViewById(R.id.etNewpasswd);
         EditText etNewPasswordRepeat = mainActivity.findViewById(R.id.etNewpasswdrepeat);
         EditText etEmail = mainActivity.findViewById(R.id.etNewEmail);
         EditText etNewUsername = mainActivity.findViewById(R.id.etNewUsername);
+        CheckBox notification = mainActivity.findViewById(R.id.cbEnableNotifications);
+        TimePicker timePicker = mainActivity.findViewById(R.id.timePickerNotification);
 
         nav_homeBtn.setOnClickListener(v -> navigateToStartingPage());
         nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
         nav_StatsBtn.setOnClickListener(v -> setupLineChart());
         nav_GoalBtn.setOnClickListener(v -> navigateToGoals());
+
+        timePicker.setIs24HourView(true);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            timePicker.setHour(12);
+            timePicker.setMinute(0);
+        }
+
+        if (NotificationScheduler.isDailyNotificationActive(mainActivity)) {
+            timePicker.setHour(NotificationScheduler.getDailyNotificationHour(mainActivity));
+            timePicker.setMinute(NotificationScheduler.getDailyNotificationMinute(mainActivity));
+            notification.setChecked(true);
+        }
 
         btnSignOut.setOnClickListener(v -> {
             Authenticator.clearStoredToken(mainActivity);
@@ -1316,6 +1334,7 @@ public class UIMaster {
         changePasswd.setOnClickListener(v -> toggleVisibilityAnimated(passwdChangeBox));
         changeUsername.setOnClickListener(v -> toggleVisibilityAnimated(usernameChangeBox));
         changeEmail.setOnClickListener(v -> toggleVisibilityAnimated(EmailChangeBox));
+        notificationSettings.setOnClickListener(v -> toggleVisibilityAnimated(notificationSettingsBox));
 
         btnChangePasswd.setOnClickListener(v -> {
             if (etPassword.getText().toString().isEmpty() ||
@@ -1398,6 +1417,21 @@ public class UIMaster {
                         .show();
             }
         });
+
+        btnSaveNotificationSettings.setOnClickListener(v -> {
+            int minute = timePicker.getMinute();
+            int hour = timePicker.getHour();
+            if (minute!=logedindUser.getMinute() || hour!=logedindUser.getHour()){
+                db.setTime(logedindUser.getUid(), LocalTime.of(hour, minute));
+            }
+            NotificationScheduler.cancelDailyNotification(mainActivity);
+            if (notification.isChecked()) {
+                NotificationScheduler.scheduleDailyNotification(mainActivity, hour, minute, "Time to read!");
+            }
+            toggleVisibilityAnimated(notificationSettingsBox);
+        });
+
+
 
 
 

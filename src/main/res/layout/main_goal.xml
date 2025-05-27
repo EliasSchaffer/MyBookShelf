@@ -195,26 +195,14 @@
                     android:buttonTint="@android:color/white" />
             </RadioGroup>
 
-            <CheckBox
-                android:id="@+id/activateNot"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/frequencyRadioGroup"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="20dp"
-                android:buttonTint="@android:color/white"
-                android:text="Remind me"
-                android:textColor="@android:color/white"
-                android:textSize="16sp"
-                android:scaleY="1.3"
-                android:scaleX="1.3" />
+
 
             <LinearLayout
                 android:id="@+id/popupButtons"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_below="@id/activateNot"
+                android:layout_below="@id/frequencyRadioGroup"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="24dp">
 

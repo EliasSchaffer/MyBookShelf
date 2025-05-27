@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.mybookshelf.DataBaseConnection;
 import com.example.mybookshelf.MainActivity;
+import com.example.mybookshelf.notifications.NotificationScheduler;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -39,7 +40,7 @@ public class User {
 
 
     @SuppressLint("SuspiciousIndentation")
-    public User(String user, String hash_password, int UID, DataBaseConnection db) throws ExecutionException, InterruptedException {
+    public User(String user, String hash_password, int UID, DataBaseConnection db, boolean reminder, int hour, int minute, MainActivity mainActivity) throws ExecutionException, InterruptedException {
         this.user = user;
         this.hash_password = hash_password;
         this.UID = UID;
@@ -62,23 +63,18 @@ public class User {
             }
         });
 
-        // Initialize notification list before using it
-        notificationList = new LinkedList<>();
-
-        db.getAllNotificationsForUser(UID, notifications -> {
-            for (Notification notification : notifications) {
-                notificationList.add(notification);
-            }
-        });
-
         bookList = new LinkedList<>(db.getBooksFromUID(UID).get());
         for (Book book: bookList){
             book.setInDatabase(true);
         }
+
+        if (goalList.isEmpty()){
+            NotificationScheduler.cancelDailyNotification(mainActivity);
+        }
     }
 
     @SuppressLint("SuspiciousIndentation")
-    public User(String user, int UID, DataBaseConnection db) throws ExecutionException, InterruptedException {
+    public User(String user, int UID, DataBaseConnection db, boolean reminder, int hour, int minute, MainActivity mainActivity) throws ExecutionException, InterruptedException {
         this.user = user;
         this.hash_password = hash_password;
         this.UID = UID;

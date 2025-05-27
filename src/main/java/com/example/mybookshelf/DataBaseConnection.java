@@ -29,6 +29,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.SQLTimeoutException;
 import java.sql.Statement;
+import java.sql.Time;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -957,9 +958,9 @@ public class DataBaseConnection {
 
                         // Handle "finishBook" type goals which use a different constructor
                         if (goalType.equals("finishBook")) {
-                            goal = new Goal(id, progress,target, bookName, frequenzy, goalTypeVerbose, reminder);
+                            goal = new Goal(id, progress,target, bookName, frequenzy, goalTypeVerbose);
                         } else {
-                            goal = new Goal(id,progress, target, frequenzy, goalTypeVerbose, reminder);
+                            goal = new Goal(id,progress, target, frequenzy, goalTypeVerbose);
                         }
 
                         // Set the ID after construction
@@ -1108,7 +1109,7 @@ public class DataBaseConnection {
 
     public Future<LocalTime> getTime(int userId) {
         return executorService.submit(() -> {
-            String sql = "SELECT hour, minute, reminder FROM notifications WHERE user_id = ?";
+            String sql = "SELECT notificationTime, reminder FROM users WHERE user_id = ?";
 
             try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
                  PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
@@ -1118,10 +1119,10 @@ public class DataBaseConnection {
                 try (ResultSet resultSet = preparedStatement.executeQuery()) {
                     if (resultSet.next()) {
                         if (resultSet.getBoolean("reminder")) {
-                            LocalTime time = LocalTime.of(resultSet.getInt("hour"), resultSet.getInt("minute"));
-                            System.out.println("TIme received from DB");
+                            LocalTime time = LocalTime.parse(resultSet.getTime("notificationTime").toString());
+                            System.out.println("Time received from DB");
                             return time;
-                        } else return null;
+                        }
                     } else {
                         System.out.println("No matching user found");
                         return null;
@@ -1133,8 +1134,32 @@ public class DataBaseConnection {
                 e.printStackTrace();
                 return null;
             }
+            return null; // Add this line
         });
     }
+
+    public void setTime(int userId, LocalTime time) {
+        String sql = "UPDATE users SET notificationTime = ?, reminder = true WHERE user_id = ?";
+
+        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+             PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
+
+            preparedStatement.setTime(1, Time.valueOf(time.toString()));
+            preparedStatement.setInt(2, userId);
+
+            int rowsAffected = preparedStatement.executeUpdate();
+            if (rowsAffected > 0) {
+                System.out.println("Time updated successfully for user " + userId);
+            } else {
+                System.out.println("No user found with ID " + userId);
+            }
+
+        } catch (SQLException e) {
+            System.err.println("Error setting Time: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
 
     public void updateReadingStatus(int userId, int bookId, String readingStatus){
         String sql;

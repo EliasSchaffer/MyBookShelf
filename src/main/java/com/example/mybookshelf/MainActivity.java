@@ -102,9 +102,6 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
             manager.createNotificationChannel(serverChannel);
         }
 
-        NotificationChannelManager.createNotificationChannels(this);
-
-        NotificationScheduler.scheduleDailyNotification(this, 7, 26,"test");
 
 
         try {
@@ -123,7 +120,11 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
 
             if (uid != -1){
                 if (tempToken.equals(db.getToken(uid).get())){
-                    logedindUser = new User(auth.getUsername(this), uid, db);
+
+                    LocalTime time = db.getTime(uid).get();
+                    if (time != null) {
+                        logedindUser = new User(auth.getUsername(this), uid, db, true, time.getHour(), time.getMinute(), this);
+                    }else logedindUser = new User(auth.getUsername(this), uid, db, false, 0, 0, this);
                     uiMaster.setUSer(logedindUser);
                     uiMaster.navigateToStartingPage();
                 }
@@ -229,15 +230,14 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
         auth.checkLogin(userAttempt, (success, id) -> {
             if (success) {
                 try {
-                    logedindUser = new User(username, id, db);
-                    uiMaster.setUSer(logedindUser);
                     LocalTime time = db.getTime(id).get();
+                    if (time != null) {
+                        logedindUser = new User(username, id, db, true, time.getHour(), time.getMinute(), this);
+                    }else logedindUser = new User(username, id, db, false, 0, 0, this);
 
-                    if (time != null){
-                        logedindUser.setHour(time.getHour());
-                        logedindUser.setMinute(time.getMinute());
-                    }
-                    handler = new GoalHandler(logedindUser, db);
+                    uiMaster.setUSer(logedindUser);
+
+                    handler = new GoalHandler(logedindUser, db, this);
                     loadingOverlay.setVisibility(View.GONE);
                     if (stayLoggedIn){
                         String token = db.getToken(id).get();
