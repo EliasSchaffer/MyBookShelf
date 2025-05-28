@@ -15,7 +15,12 @@ import androidx.core.app.NotificationManagerCompat;
 import com.example.mybookshelf.R;
 import com.example.mybookshelf.dataClass.Goal;
 
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.Calendar;
+import java.util.Date;
+import java.util.Random;
 
 public class NotificationScheduler {
     private static final String TAG = "NotificationScheduler";
@@ -33,6 +38,7 @@ public class NotificationScheduler {
     /**
      * Plant eine tägliche Notification zu einer bestimmten Uhrzeit
      */
+
     public static void scheduleDailyNotification(Context context, int hour, int minute, String message) {
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.HOUR_OF_DAY, hour);
@@ -40,13 +46,29 @@ public class NotificationScheduler {
         calendar.set(Calendar.SECOND, 0);
         calendar.set(Calendar.MILLISECOND, 0);
 
-        // Wenn die Zeit heute bereits vorbei ist, für morgen planen
         if (calendar.getTimeInMillis() <= System.currentTimeMillis()) {
             calendar.add(Calendar.DAY_OF_MONTH, 1);
         }
 
+        // Step 1: Define your titles
+        String[] titles = {
+                "Stay on Track!",
+                "Your Goals Are Waiting 🚀",
+                "Time to Make Progress",
+                "Don’t Lose Sight of Your Goal!",
+                "Let’s Crush It Today 💪",
+                "Your Future Self Will Thank You",
+                "Keep Going – You’re Doing Great!",
+                "Goal Check-In 🔔",
+                "You’re One Step Closer",
+                "Small Steps = Big Wins"
+        };
+
+        // Step 2: Pick one randomly
+        String randomTitle = titles[new Random().nextInt(titles.length)];
+
         Intent intent = new Intent(context, NotificationReceiver.class);
-        intent.putExtra("title", "Tägliche Lese-Erinnerung");
+        intent.putExtra("title", randomTitle); // Step 3: Use it here
         intent.putExtra("message", message != null ? message : "Zeit zum Lesen!");
         intent.putExtra("notificationType", "daily");
         intent.putExtra("hour", hour);
@@ -66,15 +88,12 @@ public class NotificationScheduler {
                 return;
             }
 
-            // Setze wiederkehrenden Alarm
-            alarmManager.setRepeating(
+            alarmManager.setExactAndAllowWhileIdle(
                     AlarmManager.RTC_WAKEUP,
                     calendar.getTimeInMillis(),
-                    AlarmManager.INTERVAL_DAY,
                     pendingIntent
             );
 
-            // Speichere Notification-Einstellungen
             SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
             SharedPreferences.Editor editor = prefs.edit();
             editor.putBoolean(KEY_DAILY_ACTIVE, true);
@@ -83,7 +102,8 @@ public class NotificationScheduler {
             editor.putString(KEY_DAILY_MESSAGE, message);
             editor.apply();
 
-            Log.d(TAG, "Daily notification scheduled for " + String.format("%02d:%02d", hour, minute));
+            Log.d(TAG, "Scheduled exact daily notification at " +
+                    String.format("%02d:%02d", hour, minute) + " with title \"" + randomTitle + "\" for " + new Date(calendar.getTimeInMillis()));
         }
     }
 
@@ -243,4 +263,71 @@ public class NotificationScheduler {
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
         notificationManager.notify(999, builder.build());
     }
+
+
+
+    public static void scheduleOneTimeNotification(Context context, LocalDateTime dateTime, int requestCode) {
+        ZonedDateTime zdt = dateTime.atZone(ZoneId.systemDefault());
+        long triggerAtMillis = zdt.toInstant().toEpochMilli();
+
+        if (triggerAtMillis <= System.currentTimeMillis()) {
+            Log.w(TAG, "Cannot schedule notification in the past.");
+            return;
+        }
+
+        Intent intent = new Intent(context, NotificationReceiver.class);
+        intent.putExtra("title", "You are a failure");
+        intent.putExtra("message", "Cant even complete your own goals on time");
+        intent.putExtra("notificationType", "oneTime");
+        intent.putExtra("requestCode", requestCode);
+
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(
+                context,
+                requestCode,
+                intent,
+                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE
+        );
+
+        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+        if (alarmManager != null) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S && !alarmManager.canScheduleExactAlarms()) {
+                Log.w(TAG, "Missing SCHEDULE_EXACT_ALARM permission.");
+                return;
+            }
+
+            alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP, triggerAtMillis, pendingIntent);
+            Log.d(TAG, "One-time notification scheduled for " + dateTime.toString());
+        }
+    }
+
+
+
+
+    public static void cancelOneTimeNotification(Context context, int requestCode) {
+        Intent intent = new Intent(context, NotificationReceiver.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(
+                context,
+                requestCode,
+                intent,
+                PendingIntent.FLAG_IMMUTABLE
+        );
+
+        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+        if (alarmManager != null) {
+            alarmManager.cancel(pendingIntent);
+            Log.d(TAG, "Cancelled one-time notification (ID: " + requestCode + ")");
+        }
+    }
+
+    public static boolean isOneTimeNotificationScheduled(Context context, int requestCode) {
+        Intent intent = new Intent(context, NotificationReceiver.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(
+                context,
+                requestCode,
+                intent,
+                PendingIntent.FLAG_NO_CREATE | PendingIntent.FLAG_IMMUTABLE
+        );
+        return pendingIntent != null;
+    }
+
 }

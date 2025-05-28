@@ -20,15 +20,19 @@ public class NotificationReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         String title = intent.getStringExtra("title");
         String message = intent.getStringExtra("message");
-        String notificationType = intent.getStringExtra("notificationType");
 
-        // Zeige die Notification an
+        // Show your notification (implementation depends on your codebase)
         showNotification(context, title, message);
 
-        // Bei täglichen Notifications müssen wir nichts neu planen,
-        // da AlarmManager.setRepeating automatisch wiederholt
-        Log.d(TAG, "Daily notification shown: " + title + " - " + message);
+        // Reschedule for the next day
+        int hour = intent.getIntExtra("hour", 8);
+        int minute = intent.getIntExtra("minute", 0);
+        String nextMessage = intent.getStringExtra("message");
+
+        NotificationScheduler.scheduleDailyNotification(context, hour, minute, nextMessage); // replace with your class
     }
+
+
 
     private void showNotification(Context context, String title, String message) {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(

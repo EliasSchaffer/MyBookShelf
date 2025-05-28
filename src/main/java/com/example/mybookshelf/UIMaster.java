@@ -972,6 +972,7 @@ public class UIMaster {
         RecyclerView rvCompletedGoals = mainActivity.findViewById(R.id.rvCompletedGoals);
         Button current = mainActivity.findViewById(R.id.btnCurrent);
         Button completed = mainActivity.findViewById(R.id.btnCompleted);
+        Button failed = mainActivity.findViewById(R.id.btnFailed);
 
         // Check if RecyclerView was found
         if (rvCompletedGoals == null) {
@@ -1012,6 +1013,8 @@ public class UIMaster {
         current.setOnClickListener(v -> {
             completed.setBackgroundResource(R.drawable.rounded_button_black);
             completed.setTextColor(mainActivity.getColor(R.color.white));
+            failed.setBackgroundResource(R.drawable.rounded_button_black);
+            failed.setTextColor(mainActivity.getColor(R.color.white));
             current.setBackgroundResource(R.drawable.rounded_button_grey);
             current.setTextColor(mainActivity.getColor(R.color.black));
             goalAdapter.setGoals(logedindUser.getGoalList());
@@ -1021,9 +1024,22 @@ public class UIMaster {
         completed.setOnClickListener(v -> {
             current.setBackgroundResource(R.drawable.rounded_button_black);
             current.setTextColor(mainActivity.getColor(R.color.white));
+            failed.setBackgroundResource(R.drawable.rounded_button_black);
+            failed.setTextColor(mainActivity.getColor(R.color.white));
             completed.setBackgroundResource(R.drawable.rounded_button_grey);
             completed.setTextColor(mainActivity.getColor(R.color.black));
             goalAdapter.setGoals(logedindUser.getCompletedGoalList());
+        });
+
+        // Set click listener for "failed" button
+        failed.setOnClickListener(v -> {
+            current.setBackgroundResource(R.drawable.rounded_button_grey);
+            current.setTextColor(mainActivity.getColor(R.color.black));
+            completed.setBackgroundResource(R.drawable.rounded_button_grey);
+            completed.setTextColor(mainActivity.getColor(R.color.black));
+            failed.setBackgroundResource(R.drawable.rounded_button_grey);
+            failed.setTextColor(mainActivity.getColor(R.color.white));
+            goalAdapter.setGoals(logedindUser.getFailedGoalList());
         });
 
 
@@ -1174,6 +1190,7 @@ public class UIMaster {
             // Update the goal object with the new ID if needed
             if (newGoalId > 0) {
                 finalGoal.setId((int) newGoalId);
+                NotificationScheduler.scheduleOneTimeNotification(mainActivity, finalGoal.getDeadline(), Integer.parseInt(String.valueOf(newGoalId)));
                 Log.d("GoalsDebug", "Goal saved to database with ID: " + newGoalId);
 
                 // Update user's goal list AFTER successful database operation
@@ -1426,7 +1443,7 @@ public class UIMaster {
             }
             NotificationScheduler.cancelDailyNotification(mainActivity);
             if (notification.isChecked()) {
-                NotificationScheduler.scheduleDailyNotification(mainActivity, hour, minute, "Time to read!");
+                NotificationScheduler.scheduleDailyNotification(mainActivity, hour, minute, "Dont forget to complete your goals");
             }
             toggleVisibilityAnimated(notificationSettingsBox);
         });

@@ -1,5 +1,9 @@
 package com.example.mybookshelf.dataClass;
 
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 public class Goal {
     int id;
     boolean completed;
@@ -9,11 +13,24 @@ public class Goal {
     String goal;
     String frequenzy;
     boolean reminder;
+    LocalDateTime deadline;
+
+    public Goal(int id, int progress, int target, String goalType, String goal, LocalDateTime deadline) {
+        this.progress = progress;
+        this.target = target;
+        this.goal = goal;
+        this.deadline = deadline;
+        this.frequenzy = goalType;
+        if (progress == target) {
+            completed = true;
+        } else completed = false;
+    }
 
     public Goal(int id, int progress, int target, String goalType, String goal) {
         this.progress = progress;
         this.target = target;
         this.goal = goal;
+        this.deadline = deadline;
         this.frequenzy = goalType;
         if (progress == target) {
             completed = true;
@@ -79,5 +96,9 @@ public class Goal {
 
     public void setProgress(int progress) {
         this.progress = progress;
+    }
+
+    public LocalDateTime getDeadline() {
+        return deadline;
     }
 }

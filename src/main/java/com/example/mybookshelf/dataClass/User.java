@@ -14,6 +14,8 @@ import com.example.mybookshelf.DataBaseConnection;
 import com.example.mybookshelf.MainActivity;
 import com.example.mybookshelf.notifications.NotificationScheduler;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -30,6 +32,8 @@ public class User {
     private TreeSet<String> authorList = new TreeSet<>();
     private LinkedList<Goal> goalList = new LinkedList<>();
     private LinkedList<Goal> completedGoalList = new LinkedList<>();
+    private LinkedList<Goal> failedGoalList = new LinkedList<>();
+
     private LinkedList<Notification> notificationList = new LinkedList<>();
     private TreeSet<String> genreList;
     private MainActivity mainActivity;
@@ -54,12 +58,21 @@ public class User {
 
         db.getAllGoalsForUser(UID, (List<Goal> goalsList) -> {
             for (Goal goal : goalsList) {
-                Log.i("Goal", goal.toString());
-                if (goal.isCompleted()) {
-                    completedGoalList.add(goal);
-                } else {
-                    goalList.add(goal);
-                }
+
+                    Log.i("Goal", goal.toString());
+                    if (goal.isCompleted()) {
+                        completedGoalList.add(goal);
+                    } else if (goal.getDeadline().isBefore(LocalDateTime.now())){
+                        failedGoalList.add(goal);
+                        NotificationScheduler.cancelOneTimeNotification(mainActivity, goal.getId());
+
+                    } else {
+                        if (!NotificationScheduler.isOneTimeNotificationScheduled(mainActivity, goal.getId())){
+                            NotificationScheduler.scheduleOneTimeNotification(mainActivity, goal.getDeadline(), goal.getId());
+                        }
+                        goalList.add(goal);
+                    }
+
             }
         });
 
@@ -88,12 +101,21 @@ public class User {
 
         db.getAllGoalsForUser(UID, (List<Goal> goalsList) -> {
             for (Goal goal : goalsList) {
-                Log.i("Goal", goal.toString());
-                if (goal.isCompleted()) {
-                    completedGoalList.add(goal);
-                } else {
-                    goalList.add(goal);
+                if (goal.getDeadline().isBefore(LocalDateTime.now())){
+                    failedGoalList.add(goal);
+                    NotificationScheduler.cancelOneTimeNotification(mainActivity, goal.getId());
+                }else {
+                    Log.i("Goal", goal.toString());
+                    if (goal.isCompleted()) {
+                        completedGoalList.add(goal);
+                    } else {
+                        if (!NotificationScheduler.isOneTimeNotificationScheduled(mainActivity, goal.getId())){
+                            NotificationScheduler.scheduleOneTimeNotification(mainActivity, goal.getDeadline(), goal.getId());
+                        }
+                        goalList.add(goal);
+                    }
                 }
+
             }
         });
 
@@ -251,6 +273,10 @@ public class User {
 
     public void setUserName(String username){
         this.user = username;;
+    }
+
+    public List<Goal> getFailedGoalList() {
+        return failedGoalList;
     }
 }
 

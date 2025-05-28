@@ -31,7 +31,9 @@ import java.sql.SQLTimeoutException;
 import java.sql.Statement;
 import java.sql.Time;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -932,6 +934,7 @@ public class DataBaseConnection {
                         String bookName = resultSet.getString("book_name");
                         boolean reminder = resultSet.getBoolean("reminder");
                         int id = resultSet.getInt("goal_id");
+                        LocalDateTime deadline = LocalDateTime.ofInstant(resultSet.getTimestamp("created_at").toInstant(), ZoneId.systemDefault());
 
                         Goal goal;
 
@@ -956,11 +959,27 @@ public class DataBaseConnection {
                                 break;
                         }
 
+                        //
+                        switch (frequenzy) {
+                            case "daily":
+                                deadline.plusDays(1);
+                                break;
+                            case "weeklky":
+                                deadline.plusWeeks(1);
+                                break;
+                            case "monthly":
+                                deadline.plusMonths(1);
+                                break;
+                            case "yearly":
+                                deadline.plusYears(1);
+                                break;
+                        }
+
                         // Handle "finishBook" type goals which use a different constructor
                         if (goalType.equals("finishBook")) {
                             goal = new Goal(id, progress,target, bookName, frequenzy, goalTypeVerbose);
                         } else {
-                            goal = new Goal(id,progress, target, frequenzy, goalTypeVerbose);
+                            goal = new Goal(id,progress, target, frequenzy, goalTypeVerbose, deadline);
                         }
 
                         // Set the ID after construction
@@ -1225,6 +1244,4 @@ public class DataBaseConnection {
             }
         });
     }
-
-
 }

@@ -81,6 +81,9 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
             }
         }
 
+        NotificationChannelManager.createNotificationChannels(this);
+
+
 
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
