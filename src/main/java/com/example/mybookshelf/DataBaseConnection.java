@@ -2,7 +2,6 @@ package com.example.mybookshelf;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.util.Log;
 import android.view.View;
@@ -544,29 +543,17 @@ public class DataBaseConnection {
 
 
 
-
-    public class BookService {
-
-        private Connection connection;
-
-        // Constructor to initialize the database connection
-        public BookService(Connection connection) {
-            this.connection = connection;
-        }
-    }
-
-    public void shutdown() {
-        executorService.shutdown();
-    }
-
-
-    public Future<ArrayList<BarEntry>> getReadingTimeByMonthAsync(int UID) {
+    public Future<ArrayList<BarEntry>> getReadingTimeByMonth(int UID) {
         return executorService.submit(() -> {
             ArrayList<BarEntry> entries = new ArrayList<>();
-            String sql = "SELECT MONTH(created_at) AS month, SUM(reading_time) AS total_reading_time " +
-                    "FROM userbooks WHERE user_id = ? " +
-                    "GROUP BY MONTH(created_at) ORDER BY month";
 
+            // SQL korrigiert: Liefert YYYYMM Format für Jahr-Monat Kombination
+            String sql = "SELECT YEAR(finished_at) AS year_val, MONTH(finished_at) AS month_val, " +
+                    "SUM(reading_time) AS total_reading_time " +
+                    "FROM userbooks " +
+                    "WHERE user_id = ? AND status = 'COMPLETED' AND finished_at IS NOT NULL " +
+                    "GROUP BY YEAR(finished_at), MONTH(finished_at) " +
+                    "ORDER BY YEAR(finished_at), MONTH(finished_at)";
 
             try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
                  PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
@@ -574,43 +561,70 @@ public class DataBaseConnection {
                 preparedStatement.setInt(1, UID);
                 ResultSet resultSet = preparedStatement.executeQuery();
 
-                // Check if any data is returned
                 boolean hasResults = false;
 
                 while (resultSet.next()) {
-                    int month = resultSet.getInt("month");
+                    int year = resultSet.getInt("year_val");
+                    int month = resultSet.getInt("month_val");
                     int totalTime = resultSet.getInt("total_reading_time");
 
-                    // Log the retrieved data for debugging
-                    System.out.println("Month: " + month + ", Total Time: " + totalTime);
+                    // Jahr-Monat Format erstellen (YYYYMM)
+                    int yearMonth = year * 100 + month;
 
-                    // Handle NULL values
+                    // Log für Debugging - jetzt mit korrektem Format
+                    System.out.println("Year: " + year + ", Month: " + month + ", Year-Month: " + yearMonth + ", Total Time: " + totalTime);
+
+                    // NULL-Werte behandeln
                     if (resultSet.wasNull()) {
-                        totalTime = 0;  // Default to 0 if there's no reading time for this month
+                        totalTime = 0;
                     }
 
-                    // Add the entry to the list
-                    entries.add(new BarEntry(month, totalTime));
-                    hasResults = true;
+                    // Validierung: Überprüfe ob yearMonth ein gültiges Format hat
+                    if (yearMonth > 0) {
+                        // Jahr und Monat sind bereits validiert durch die SQL-Abfrage
+                        // Zusätzliche Validierung für Sicherheit
+                        if (month >= 1 && month <= 12 && year >= 2000 && year <= 2030) {
+                            entries.add(new BarEntry(yearMonth, totalTime));
+                            hasResults = true;
+
+                            // Zusätzliches Logging für erfolgreiche Einträge
+                            System.out.println("Added entry: " + month + "/" + year + " - " + totalTime + " minutes");
+                        } else {
+                            System.out.println("Skipped invalid date: Year=" + year + ", Month=" + month);
+                        }
+                    } else {
+                        System.out.println("Skipped invalid yearMonth value: " + yearMonth);
+                    }
                 }
 
-                // Check if no data was found
+                // Überprüfung ob Daten gefunden wurden
                 if (!hasResults) {
-                    System.out.println("No results found for UID: " + UID);
-                    // Returning dummy entry to indicate no data found
-                    ArrayList<BarEntry> temp = new ArrayList<>();
-                    temp.add(new BarEntry(99, 1));
-                    return temp;
+                    System.out.println("No valid results found for UID: " + UID);
+                    // Leere Liste zurückgeben anstatt Dummy-Daten
+                    return new ArrayList<>();
+                } else {
+                    System.out.println("Successfully loaded " + entries.size() + " entries for UID: " + UID);
                 }
 
             } catch (SQLException e) {
                 e.printStackTrace();
-                System.err.println("Error executing query: " + e.getMessage());
+                System.err.println("SQL Error: " + e.getMessage());
+                System.err.println("SQL State: " + e.getSQLState());
+                System.err.println("Error Code: " + e.getErrorCode());
+
+                // Bei Fehler leere Liste zurückgeben
+                return new ArrayList<>();
+            } catch (Exception e) {
+                e.printStackTrace();
+                System.err.println("Unexpected error: " + e.getMessage());
+                return new ArrayList<>();
             }
 
             return entries;
         });
     }
+
+
 
     public void removeBookFromUser(Book book, int UID) {
         executorService.execute(() -> {

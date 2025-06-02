@@ -37,7 +37,6 @@ import com.example.mybookshelf.apis.BooksAPI;
 import com.example.mybookshelf.dataClass.Book;
 import com.example.mybookshelf.dataClass.User;
 import com.example.mybookshelf.notifications.NotificationChannelManager;
-import com.example.mybookshelf.notifications.NotificationScheduler;
 
 import java.sql.SQLException;
 import java.time.LocalDate;
@@ -167,7 +166,7 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
 
         nav_GoalBtn.setOnClickListener(v -> uiMaster.navigateToGoals());
         nav_SettingBtn.setOnClickListener(v -> uiMaster.navigateToSettings());
-        nav_StatsBtn.setOnClickListener(v -> uiMaster.setupLineChart());
+        nav_StatsBtn.setOnClickListener(v -> uiMaster.navigateToStats());
         nav_homeBtn.setOnClickListener(v -> uiMaster.navigateToStartingPage());
 
 

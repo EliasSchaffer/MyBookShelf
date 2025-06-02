@@ -3,6 +3,7 @@ package com.example.mybookshelf;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
+import android.os.AsyncTask;
 import android.os.Build;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -62,7 +63,6 @@ import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 
 import java.sql.SQLException;
-import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -436,100 +436,229 @@ public class UIMaster {
         });
     }
 
-    public void setupLineChart() {
+    public void navigateToStats() {
+        // Set layout and initialize views
         mainActivity.setContentView(R.layout.main_chart);
+        initializeViews();
+        setupNavigationListeners();
+
+        // Load chart data asynchronously without blocking UI thread
+        loadChartDataAsync();
+    }
+
+    private void initializeViews() {
         barChart = mainActivity.findViewById(R.id.barChart);
+        // Consider caching these views if this method is called frequently
+    }
+
+    private void setupNavigationListeners() {
         ImageButton nav_homeBtn = mainActivity.findViewById(R.id.nav_home);
         ImageButton nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
         ImageButton nav_goalsBtn = mainActivity.findViewById(R.id.nav_goals);
         ImageButton nav_settingBtn = mainActivity.findViewById(R.id.nav_settings);
+
+        nav_searchBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mainActivity.handleSearch();
+            }
+        });
+
+        nav_goalsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navigateToGoals();
+            }
+        });
+
+        nav_homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navigateToStartingPage();
+            }
+        });
+
+        nav_settingBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navigateToSettings();
+            }
+        });
+    }
+
+    private void loadChartDataAsync() {
+        // Show loading indicator while data is being fetched
+        // progressBar.setVisibility(View.VISIBLE); // Uncomment if you have a progress bar
+
+        // Use AsyncTask or ExecutorService for background processing
+        new AsyncTask<Void, Void, ChartData>() {
+            @Override
+            protected ChartData doInBackground(Void... voids) {
+                try {
+                    // Fetch both reading time AND completed books data
+                    Future<ArrayList<BarEntry>> readingTimeFuture = db.getReadingTimeByMonth(mainActivity.getUser().getUid());
+                    // Future<ArrayList<BarEntry>> completedBooksFuture = db.getCompletedBooksByMonthAsync(mainActivity.getUser().getUid());
+
+                    ArrayList<BarEntry> readingTimeEntries = readingTimeFuture.get();
+                    // ArrayList<BarEntry> completedBooksEntries = completedBooksFuture.get();
+
+                    // For now, using empty list for completed books - you'll need to implement the database method
+                    ArrayList<BarEntry> completedBooksEntries = new ArrayList<>();
+
+                    return new ChartData(readingTimeEntries, completedBooksEntries);
+                } catch (InterruptedException e) {
+                    Log.e("StatsActivity", "Interrupted while fetching chart data", e);
+                    return null;
+                } catch (ExecutionException e) {
+                    Log.e("StatsActivity", "Error fetching chart data", e);
+                    return null;
+                }
+            }
+
+            @Override
+            protected void onPostExecute(ChartData chartData) {
+                if (chartData != null) {
+                    setupChart(chartData);
+                } else {
+                    showErrorMessage();
+                }
+                // Hide loading indicator
+                // progressBar.setVisibility(View.GONE);
+            }
+        }.execute();
+    }
+
+    private void setupChart(ChartData chartData) {
+        // Clean and convert reading time from minutes to hours
+        ArrayList<BarEntry> cleanedEntries = filterValidEntries(chartData.readingTimeEntries);
+        ArrayList<BarEntry> readingTimeInHours = convertMinutesToHours(cleanedEntries);
+
+        // Create dataset for reading time
+        BarDataSet readingTimeDataSet = new BarDataSet(readingTimeInHours, "Reading Time (Hours)");
+        readingTimeDataSet.setColor(mainActivity.getResources().getColor(android.R.color.holo_blue_light));
+
+        // If you have completed books data, add it here:
+        // BarDataSet completedBooksDataSet = new BarDataSet(chartData.completedBooksEntries, "Completed Books");
+        // completedBooksDataSet.setColor(mainActivity.getResources().getColor(android.R.color.holo_green_light));
+
+        BarData barData = new BarData(readingTimeDataSet);
+        barData.setBarWidth(0.4f);
+
+        barChart.setData(barData);
+
+        configureAxes();
+        configureChart();
+
+        // Calculate and display total reading time
+        displayTotalReadingTime(readingTimeInHours);
+    }
+
+    private ArrayList<BarEntry> filterValidEntries(ArrayList<BarEntry> entries) {
+        ArrayList<BarEntry> validEntries = new ArrayList<>();
+        for (BarEntry entry : entries) {
+            int yearMonth = (int) entry.getX();
+            if (yearMonth > 0) { // Check if it's a valid year-month value
+                int year = yearMonth / 100;
+                int month = yearMonth % 100;
+                // Only include entries with valid months (1-12) and reasonable years
+                if (month >= 1 && month <= 12 && year >= 2000 && year <= 2030) {
+                    validEntries.add(entry);
+                }
+            }
+        }
+        return validEntries;
+    }
+
+    private ArrayList<BarEntry> convertMinutesToHours(ArrayList<BarEntry> entries) {
+        ArrayList<BarEntry> hoursEntries = new ArrayList<>();
+        for (BarEntry entry : entries) {
+            hoursEntries.add(new BarEntry(entry.getX(), entry.getY() / 60f));
+        }
+        return hoursEntries;
+    }
+
+    private void configureAxes() {
+        // X-axis configuration
+        XAxis xAxis = barChart.getXAxis();
+        xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
+        xAxis.setGranularity(1f);
+        xAxis.setValueFormatter(new MonthValueFormatter());
+
+        // Y-axis configuration for left side (reading time)
+        YAxis leftAxis = barChart.getAxisLeft();
+        leftAxis.setAxisMinimum(0f); // Prevent negative values
+        leftAxis.setValueFormatter(new ValueFormatter() {
+            @Override
+            public String getFormattedValue(float value) {
+                return String.format("%.1f h", value);
+            }
+        });
+
+        // Disable right axis for now
+        YAxis rightAxis = barChart.getAxisRight();
+        rightAxis.setEnabled(false);
+        rightAxis.setAxisMinimum(0f); // Also prevent negative values on right axis if you enable it later
+    }
+
+    private void configureChart() {
+        barChart.getDescription().setText("Reading Time in Hours");
+        barChart.setDrawGridBackground(false);
+        barChart.setDrawBarShadow(false);
+        barChart.setHighlightFullBarEnabled(false);
+        barChart.animateY(1000);
+        barChart.invalidate();
+    }
+
+    private void displayTotalReadingTime(ArrayList<BarEntry> entriesInHours) {
         TextView allTime = mainActivity.findViewById(R.id.txtAllTime);
+        double totalTime = 0;
 
-        nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
-        nav_goalsBtn.setOnClickListener(v -> navigateToGoals());
-        nav_homeBtn.setOnClickListener(v -> navigateToStartingPage());
-        nav_settingBtn.setOnClickListener(v -> navigateToSettings());
-
-        // Asynchronously fetch reading time data
-        Future<ArrayList<BarEntry>> futureEntries = db.getReadingTimeByMonthAsync(mainActivity.getUser().getUid());
-
-        // Wait for the result (you can do this in a background thread or asynchronously as well)
-        try {
-            // Get the result from the Future (blocking until the result is available)
-            ArrayList<BarEntry> entries = futureEntries.get(); // This will block until the data is fetched
-
-            // Daten von Minuten in Stunden umwandeln
-            ArrayList<BarEntry> entriesInHours = new ArrayList<>();
-            for (BarEntry entry : entries) {
-                // Zeit von Minuten in Stunden umrechnen (Division durch 60)
-                float hoursValue = entry.getY() / 60f;
-                entriesInHours.add(new BarEntry(entry.getX(), hoursValue));
-            }
-
-            // Create the dataset for the bar chart
-            BarDataSet dataSet = new BarDataSet(entriesInHours, "Reading Time (Hours)");
-            dataSet.setColor(mainActivity.getResources().getColor(android.R.color.holo_blue_light));
-            BarData barData = new BarData(dataSet);
-            barData.setBarWidth(0.4f);
-
-            // Set the data to the bar chart
-            barChart.setData(barData);
-
-            // X-Achse anpassen - Monate als Text anzeigen
-            XAxis xAxis = barChart.getXAxis();
-            xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
-            xAxis.setGranularity(1f);
-
-            // Formatierung für die X-Achse, um Monate statt YYYYMM-Zahlen anzuzeigen
-            xAxis.setValueFormatter(new ValueFormatter() {
-                @Override
-                public String getFormattedValue(float value) {
-                    // Den Monatswert aus dem BarEntry-X-Wert extrahieren (YYYYMM-Format)
-                    int yearMonth = (int) value;
-                    if (yearMonth == 0) return ""; // Falls keine Daten
-                    // YYYYMM in Jahr und Monat aufteilen
-                    int year = yearMonth / 100;
-                    int month = yearMonth % 100;
-                    // Monatsnamen basierend auf der Nummer zurückgeben
-                    String[] monthNames = {"Januar", "Februar", "März", "April", "Mai", "Juni",
-                            "Juli", "August", "September", "Oktober", "November", "Dezember"};
-                    if (month >= 1 && month <= 12) {
-                        return monthNames[month - 1] + " " + year;
-                    } else {
-                        return "Ungültig";
-                    }
-                }
-            });
-
-            // Y-Achse anpassen für Stundenanzeige
-            YAxis yAxis = barChart.getAxisLeft();
-            yAxis.setValueFormatter(new ValueFormatter() {
-                @Override
-                public String getFormattedValue(float value) {
-                    return String.format("%.1f h", value);
-                }
-            });
-
-            // Set the chart description and animate
-            barChart.getDescription().setText("Reading Time in Hours");
-            barChart.animateY(1000);
-
-            // Invalidate the chart to refresh
-            barChart.invalidate();
-            double totalTime = 0;
-            for (BarEntry entriesInHour : entriesInHours) {
-                totalTime+=entriesInHour.getY();
-            }
-            totalTime = Math.floor(totalTime * 100) / 100.0;
-
-            allTime.setText("Total Reading Time: " + totalTime + " h");
-
-        } catch (InterruptedException | ExecutionException e) {
-            e.printStackTrace();
-            System.err.println("Error fetching reading time data: " + e.getMessage());
+        for (BarEntry entry : entriesInHours) {
+            totalTime += entry.getY();
         }
 
+        totalTime = Math.round(totalTime * 100.0) / 100.0; // More precise rounding
+
+        allTime.setText("Total Reading Time: " + totalTime + " h");
     }
+
+    private void showErrorMessage() {
+        Toast.makeText(mainActivity, "Failed to load reading statistics", Toast.LENGTH_SHORT).show();
+    }
+
+    // Helper class to hold chart data
+    private static class ChartData {
+        final ArrayList<BarEntry> readingTimeEntries;
+        final ArrayList<BarEntry> completedBooksEntries;
+
+        ChartData(ArrayList<BarEntry> readingTimeEntries, ArrayList<BarEntry> completedBooksEntries) {
+            this.readingTimeEntries = readingTimeEntries;
+            this.completedBooksEntries = completedBooksEntries;
+        }
+    }
+
+    // Extracted formatter class for better organization
+    private static class MonthValueFormatter extends ValueFormatter {
+        private static final String[] MONTH_NAMES = {
+                "Januar", "Februar", "März", "April", "Mai", "Juni",
+                "Juli", "August", "September", "Oktober", "November", "Dezember"
+        };
+
+        @Override
+        public String getFormattedValue(float value) {
+            int yearMonth = (int) value;
+            if (yearMonth == 0) return "";
+
+            int year = yearMonth / 100;
+            int month = yearMonth % 100;
+
+            if (month >= 1 && month <= 12) {
+                return MONTH_NAMES[month - 1] + " " + year;
+            }
+            return ""; // Return empty string instead of "Invalid"
+        }
+    }
+
 
 
     // Modified navigateToStartingPage method for UIMaster class
@@ -652,7 +781,7 @@ public class UIMaster {
 
         // Set up navigation buttons
         nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
-        nav_StatsBtn.setOnClickListener(v -> setupLineChart());
+        nav_StatsBtn.setOnClickListener(v -> navigateToStats());
         nav_goals.setOnClickListener(v -> navigateToGoals());
         nav_settingBtn.setOnClickListener(v -> navigateToSettings());
         searchBtn.setOnClickListener(v -> handleListSearch());
@@ -684,7 +813,7 @@ public class UIMaster {
         brf = new BookRecommendationFlow(mainActivity, this, book.getName());
 
 
-        nav_StatsBtn.setOnClickListener(v -> setupLineChart());
+        nav_StatsBtn.setOnClickListener(v -> navigateToStats());
         nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
         nav_homeBtn.setOnClickListener(v -> navigateToStartingPage());
         nav_goalBtn.setOnClickListener(v -> navigateToGoals());
@@ -983,7 +1112,7 @@ public class UIMaster {
 
         // Navigation setup
         nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
-        nav_StatsBtn.setOnClickListener(v -> setupLineChart());
+        nav_StatsBtn.setOnClickListener(v -> navigateToStats());
         nav_homeBtn.setOnClickListener(v -> navigateToStartingPage());
         nav_SettingBtn.setOnClickListener(v -> navigateToSettings());
 
@@ -1295,7 +1424,7 @@ public class UIMaster {
 
         nav_homeBtn.setOnClickListener(v -> navigateToStartingPage());
         nav_searchBtn.setOnClickListener(v -> mainActivity.handleSearch());
-        nav_StatsBtn.setOnClickListener(v -> setupLineChart());
+        nav_StatsBtn.setOnClickListener(v -> navigateToStats());
         nav_GoalBtn.setOnClickListener(v -> navigateToGoals());
 
         timePicker.setIs24HourView(true);
