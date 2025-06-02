@@ -1128,7 +1128,7 @@ public class DataBaseConnection {
 
     public Future<LocalTime> getTime(int userId) {
         return executorService.submit(() -> {
-            String sql = "SELECT notificationTime, reminder FROM users WHERE user_id = ?";
+            String sql = "SELECT notificationTime, notifications FROM users WHERE user_id = ?";
 
             try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
                  PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
@@ -1137,7 +1137,7 @@ public class DataBaseConnection {
 
                 try (ResultSet resultSet = preparedStatement.executeQuery()) {
                     if (resultSet.next()) {
-                        if (resultSet.getBoolean("reminder")) {
+                        if (resultSet.getBoolean("notifications")) {
                             LocalTime time = LocalTime.parse(resultSet.getTime("notificationTime").toString());
                             System.out.println("Time received from DB");
                             return time;

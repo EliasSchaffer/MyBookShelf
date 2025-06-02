@@ -101,24 +101,23 @@ public class User {
 
         db.getAllGoalsForUser(UID, (List<Goal> goalsList) -> {
             for (Goal goal : goalsList) {
-                if (goal.getDeadline().isBefore(LocalDateTime.now())){
+
+                Log.i("Goal", goal.toString());
+                if (goal.isCompleted()) {
+                    completedGoalList.add(goal);
+                } else if (goal.getDeadline().isBefore(LocalDateTime.now())){
                     failedGoalList.add(goal);
                     NotificationScheduler.cancelOneTimeNotification(mainActivity, goal.getId());
-                }else {
-                    Log.i("Goal", goal.toString());
-                    if (goal.isCompleted()) {
-                        completedGoalList.add(goal);
-                    } else {
-                        if (!NotificationScheduler.isOneTimeNotificationScheduled(mainActivity, goal.getId())){
-                            NotificationScheduler.scheduleOneTimeNotification(mainActivity, goal.getDeadline(), goal.getId());
-                        }
-                        goalList.add(goal);
+
+                } else {
+                    if (!NotificationScheduler.isOneTimeNotificationScheduled(mainActivity, goal.getId())){
+                        NotificationScheduler.scheduleOneTimeNotification(mainActivity, goal.getDeadline(), goal.getId());
                     }
+                    goalList.add(goal);
                 }
 
             }
         });
-
         // Initialize notification list before using it
         notificationList = new LinkedList<>();
 

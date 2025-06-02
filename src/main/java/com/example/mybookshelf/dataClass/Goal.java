@@ -16,6 +16,7 @@ public class Goal {
     LocalDateTime deadline;
 
     public Goal(int id, int progress, int target, String goalType, String goal, LocalDateTime deadline) {
+        this.id = id;
         this.progress = progress;
         this.target = target;
         this.goal = goal;
@@ -27,6 +28,7 @@ public class Goal {
     }
 
     public Goal(int id, int progress, int target, String goalType, String goal) {
+        this.id = id;
         this.progress = progress;
         this.target = target;
         this.goal = goal;
