@@ -25,14 +25,23 @@ public class BooksAPI {
 
     // Interface for callbacks for single and multiple books
     public interface BookCallback {
+        /**
+         * Handles the event when a list of books is fetched.
+         */
         void onBookFetched(List<Book> book);
     }
 
     public interface BooksCallback {
+        /**
+         * Handles the event when a list of books is fetched.
+         */
         void onBooksFetched(List<Book> books);
     }
 
     // Fetch a single book
+    /**
+     * Fetches a single book by name and invokes the provided callback with the result.
+     */
     public void getOneBook(String bookName, final BookCallback callback) {
         executorService.execute(() -> {
             try {
@@ -58,6 +67,9 @@ public class BooksAPI {
 
 
     // Fetch multiple books
+    /**
+     * Fetches and processes multiple books based on a given book name.
+     */
     public void getMultipleBooks(String bookName, final BookCallback callback) {
         executorService.execute(() -> {
             try {
@@ -71,6 +83,17 @@ public class BooksAPI {
     }
 
     // Shared method to fetch books from the API
+    /**
+     * Fetches a list of books from the specified URL.
+     *
+     * Establishes an HTTP connection to the given URL, retrieves the JSON response,
+     * and parses it to extract book information. Each book's details are then used to
+     * create a new Book object which is added to the list. Handles potential exceptions
+     * such as IOException or JSONException during the process.
+     *
+     * @param urlString the URL from which to fetch the books
+     * @return a list of Book objects representing the fetched books
+     */
     private List<Book> fetchBooks(String urlString) {
         List<Book> books = new ArrayList<>();
         try {

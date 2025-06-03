@@ -9,6 +9,9 @@ public class NotificationChannelManager {
     public static final String DEFAULT_CHANNEL_ID = "default_channel";
     public static final String SERVER_CHANNEL_ID = "server_channel";
 
+    /**
+     * Creates notification channels required for Android Oreo and above.
+     */
     public static void createNotificationChannels(Context context) {
         // Only needed for Android Oreo and above
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

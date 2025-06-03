@@ -31,6 +31,9 @@ public class AiAPI {
 
     private interface AiService {
         @POST("client/v4/accounts/b8ef0a87c7a80c0d51c106c1314f906d/ai/run/@cf/meta/llama-3-8b-instruct")
+        /**
+         * Fetches books using a POST request with a JSON payload.
+         */
         Call<ResponseBody> fetchBooks(@Body RequestBody payload, @Header("Authorization") String authHeader, @Header("Content-Type") String contentType);
     }
 
@@ -42,6 +45,17 @@ public class AiAPI {
 
     private static final AiService aiService = retrofit.create(AiService.class);
 
+    /**
+     * Fetches a response from an AI service based on a given question.
+     *
+     * This method constructs a JSON payload with system and user messages, sends it to an AI service,
+     * and handles the response or failure through callbacks. It logs the request payload and processes
+     * the response body if successful, passing it to the success callback. In case of errors, it passes
+     * an appropriate error message to the failure callback.
+     *
+     * @param question The user's question to be sent to the AI service.
+     * @param callback The callback interface to handle the AI service response or failure.
+     */
     public static void fetchResponse(final String question, final ApiResponseCallback callback) {
         JSONArray messages = new JSONArray();
         try {
@@ -69,6 +83,9 @@ public class AiAPI {
 
             call.enqueue(new Callback<ResponseBody>() {
                 @Override
+                /**
+                 * Handles the response from a network call, passing it to the appropriate callback method.
+                 */
                 public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                     if (response.isSuccessful() && response.body() != null) {
                         try {
@@ -84,6 +101,9 @@ public class AiAPI {
                 }
 
                 @Override
+                /**
+                 * Handles request failure by notifying the callback and printing the stack trace.
+                 */
                 public void onFailure(Call<ResponseBody> call, Throwable t) {
                     callback.onFailure("Request failed: " + t.getMessage());
                     t.printStackTrace();

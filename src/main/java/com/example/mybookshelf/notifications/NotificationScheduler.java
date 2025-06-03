@@ -108,14 +108,14 @@ public class NotificationScheduler {
     }
 
     /**
-     * Plant eine tägliche Notification mit Standardwerten (20:00 Uhr)
+     * Schedules a daily notification at 8:00 PM with default message "Zeit zum Lesen!".
      */
     public static void scheduleDailyNotification(Context context) {
         scheduleDailyNotification(context, 20, 0, "Zeit zum Lesen!");
     }
 
     /**
-     * Ändert die Uhrzeit der täglichen Notification
+     * Changes the time of the daily notification.
      */
     public static void changeDailyNotificationTime(Context context, int hour, int minute) {
         String currentMessage = getDailyNotificationMessage(context);
@@ -130,7 +130,7 @@ public class NotificationScheduler {
     }
 
     /**
-     * Ändert die Nachricht der täglichen Notification
+     * �ndert die Nachricht der t�glichen Notification und aktualisiert den Zeitplan.
      */
     public static void changeDailyNotificationMessage(Context context, String message) {
         if (!isDailyNotificationActive(context)) {
@@ -151,7 +151,7 @@ public class NotificationScheduler {
     }
 
     /**
-     * Schaltet die tägliche Notification aus
+     * Cancels the daily notification and updates preferences.
      */
     public static void cancelDailyNotification(Context context) {
         Intent intent = new Intent(context, NotificationReceiver.class);
@@ -177,7 +177,7 @@ public class NotificationScheduler {
     }
 
     /**
-     * Schaltet die tägliche Notification ein/aus
+     * Toggles the daily notification on or off.
      */
     public static void toggleDailyNotification(Context context) {
         if (isDailyNotificationActive(context)) {
@@ -188,7 +188,7 @@ public class NotificationScheduler {
     }
 
     /**
-     * Stellt die Notifications nach einem Neustart wieder her
+     * Restores daily notifications based on saved preferences.
      */
     public static void restoreNotifications(Context context) {
         SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
@@ -206,7 +206,7 @@ public class NotificationScheduler {
     // Getter-Methoden für die aktuellen Einstellungen
 
     /**
-     * Prüft, ob die tägliche Notification aktiv ist
+     * Checks if daily notifications are active.
      */
     public static boolean isDailyNotificationActive(Context context) {
         SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
@@ -214,7 +214,7 @@ public class NotificationScheduler {
     }
 
     /**
-     * Gibt die Stunde der täglichen Notification zurück
+     * Returns the hour of the daily notification from SharedPreferences.
      */
     public static int getDailyNotificationHour(Context context) {
         SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
@@ -222,7 +222,7 @@ public class NotificationScheduler {
     }
 
     /**
-     * Gibt die Minute der täglichen Notification zurück
+     * Retrieves the minute of the daily notification.
      */
     public static int getDailyNotificationMinute(Context context) {
         SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
@@ -230,7 +230,7 @@ public class NotificationScheduler {
     }
 
     /**
-     * Gibt die Nachricht der täglichen Notification zurück
+     * Retrieves the daily notification message from SharedPreferences.
      */
     public static String getDailyNotificationMessage(Context context) {
         SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
@@ -238,7 +238,7 @@ public class NotificationScheduler {
     }
 
     /**
-     * Gibt die aktuelle Uhrzeit als formatierter String zurück
+     * Returns the formatted daily notification time string.
      */
     public static String getDailyNotificationTimeString(Context context) {
         int hour = getDailyNotificationHour(context);
@@ -247,9 +247,9 @@ public class NotificationScheduler {
     }
 
     /**
-     * Sendet eine Notification für erreichte Ziele
+    /**
+     * Sends a notification when a goal is completed.
      */
-    @SuppressLint("MissingPermission")
     public static void sendGoalCompletedNotification(Context context, Goal goal) {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(
                 context,
@@ -266,6 +266,14 @@ public class NotificationScheduler {
 
 
 
+    /**
+     * Schedules a one-time notification at a specified date and time.
+     *
+     * This method sets up an alarm to trigger a notification at the given LocalDateTime.
+     * It checks if the provided date and time is in the past, logs a warning, and returns early if true.
+     * Otherwise, it creates an Intent with necessary extras and uses PendingIntent to schedule the notification
+     * using AlarmManager. The method also handles permission checks for scheduling exact alarms on newer Android versions.
+     */
     public static void scheduleOneTimeNotification(Context context, LocalDateTime dateTime, int requestCode) {
         ZonedDateTime zdt = dateTime.atZone(ZoneId.systemDefault());
         long triggerAtMillis = zdt.toInstant().toEpochMilli();
@@ -303,6 +311,9 @@ public class NotificationScheduler {
 
 
 
+    /**
+     * Cancels a one-time scheduled notification using the provided request code.
+     */
     public static void cancelOneTimeNotification(Context context, int requestCode) {
         Intent intent = new Intent(context, NotificationReceiver.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(
@@ -319,6 +330,9 @@ public class NotificationScheduler {
         }
     }
 
+    /**
+     * Checks if a one-time notification is scheduled.
+     */
     public static boolean isOneTimeNotificationScheduled(Context context, int requestCode) {
         Intent intent = new Intent(context, NotificationReceiver.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(

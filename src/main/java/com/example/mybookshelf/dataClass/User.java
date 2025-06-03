@@ -139,46 +139,79 @@ public class User {
     }
 
 
+    /**
+     * Returns the current minute value.
+     */
     public int getMinute() {
         return minute;
     }
 
+    /**
+     * Sets the minute value.
+     */
     public void setMinute(int minute) {
         this.minute = minute;
     }
 
+    /**
+     * Returns the current hour.
+     */
     public int getHour() {
         return hour;
     }
 
+    /**
+     * Sets the hour value.
+     */
     public void setHour(int hour) {
         this.hour = hour;
     }
 
+    /**
+     * Checks if a reminder is set.
+     */
     public boolean isReminder() {
         return reminder;
     }
 
+    /**
+     * Sets the reminder flag to the specified value.
+     */
     public void setReminder(boolean reminder) {
         this.reminder = reminder;
     }
 
+    /**
+     * Sets the unique identifier (UID) of the object.
+     */
     public void setUID(int UID) {
         this.UID = UID;
     }
 
+    /**
+     * Returns the current user.
+     */
     public String getUser() {
         return user;
     }
 
+    /**
+     * Returns the hashed password.
+     */
     public String getPassword() {
         return hash_password;
     }
 
+    /**
+     * Returns the list of books.
+     */
     public List<Book> getBookList() {
         return bookList;
     }
 
+    /**
+     * Adds a book to the list if it is not already present.
+     */
     public void addBook(Book book, Context main){
         for (Book listBook:bookList) {
             if (listBook.getName().equals(book.getName())){
@@ -191,6 +224,18 @@ public class User {
 
     }
 
+    /**
+     * Removes a book from both the local list and the user interface.
+     *
+     * Iterates through the local book list to find and remove the specified book.
+     * Updates the UI by removing the corresponding visual representation of the book.
+     * If the book is marked as being in the database, attempts to remove it from there as well.
+     * Handles exceptions that may occur during database operations and provides user feedback.
+     *
+     * @param book the Book object representing the book to be removed
+     * @param main the Context object for UI operations
+     * @param container the RecyclerView container where the book's visual part is located
+     */
     public void removeBook(Book book, Context main, RecyclerView container) {
         boolean bookFound = false;
 
@@ -236,6 +281,9 @@ public class User {
             Toast.makeText(main, "Book not found in your list", Toast.LENGTH_SHORT).show();
         }
     }
+    /**
+     * Retrieves a set of authors from the list of books.
+     */
     public TreeSet<String> getAuthors(){
         for (Book book : bookList) {
             authorList.add(book.getAuthor());
@@ -243,6 +291,9 @@ public class User {
         return authorList;
     }
 
+    /**
+     * Retrieves a set of genres from the list of books.
+     */
     public TreeSet<String> getGenres(){
         for (Book book : bookList) {
             String genre = book.getGenre();
@@ -254,26 +305,44 @@ public class User {
     }
 
 
+    /**
+     * Returns the unique identifier (UID).
+     */
     public int getUid() {
         return UID;
     }
 
+    /**
+     * Returns the list of goals.
+     */
     public LinkedList<Goal> getGoalList() {
         return goalList;
     }
+    /**
+     * Adds a goal to the list and returns its ID.
+     */
     public long addGoal(Goal goal){
         goalList.add(goal);
         return goal.getId();
     }
 
+    /**
+     * Returns the list of completed goals.
+     */
     public LinkedList<Goal> getCompletedGoalList() {
         return completedGoalList;
     }
 
+    /**
+     * Sets the user name.
+     */
     public void setUserName(String username){
         this.user = username;;
     }
 
+    /**
+     * Returns the list of failed goals.
+     */
     public List<Goal> getFailedGoalList() {
         return failedGoalList;
     }

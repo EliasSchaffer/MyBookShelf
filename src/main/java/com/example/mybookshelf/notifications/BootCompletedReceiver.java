@@ -10,6 +10,9 @@ public class BootCompletedReceiver extends BroadcastReceiver {
     private static final String TAG = "BootCompletedReceiver";
 
     @Override
+    /**
+     * Handles system boot completion by restoring notifications.
+     */
     public void onReceive(Context context, Intent intent) {
         if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
             Log.d(TAG, "Boot completed, restoring notifications");
