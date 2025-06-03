@@ -41,23 +41,35 @@ public class CustomGoalAdapter extends RecyclerView.Adapter<CustomGoalAdapter.Go
 
     @NonNull
     @Override
+    /**
+     * Creates and returns a new GoalViewHolder with a FrameLayout as its view.
+     */
     public GoalViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         FrameLayout layout = new FrameLayout(context);
         return new GoalViewHolder(layout);
     }
 
     @Override
+    /**
+     * Binds a Goal to a ViewHolder by creating and adding a goal box view.
+     */
     public void onBindViewHolder(@NonNull GoalViewHolder holder, int position) {
         Goal goal = goals.get(position);
         holder.layout.removeAllViews();
         holder.layout.addView(createGoalBox(goal));
     }
 
+    /**
+     * Adds a new goal to the list and notifies of the insertion.
+     */
     public void addGoal(Goal goal) {
         goals.add(goal);
         notifyItemInserted(goals.size() - 1);
     }
 
+    /**
+     * Removes a specified goal from the list and notifies of the item removal.
+     */
     public void removeGoal(Goal goal) {
         int index = goals.indexOf(goal);
         goals.remove(goal);
@@ -65,9 +77,7 @@ public class CustomGoalAdapter extends RecyclerView.Adapter<CustomGoalAdapter.Go
     }
 
     /**
-     * Updates the goals list with new data
-     *
-     * @param newGoals The new list of goals to display
+     * Updates the goals list with new data and refreshes the view.
      */
     public void setGoals(List<Goal> newGoals) {
         this.goals.clear();
@@ -78,6 +88,9 @@ public class CustomGoalAdapter extends RecyclerView.Adapter<CustomGoalAdapter.Go
     }
 
     @Override
+    /**
+     * Returns the number of items in the goals list.
+     */
     public int getItemCount() {
         return goals.size();
     }
@@ -90,6 +103,9 @@ public class CustomGoalAdapter extends RecyclerView.Adapter<CustomGoalAdapter.Go
         }
     }
 
+    /**
+     * Creates a visual representation of a goal as a card view.
+     */
     private View createGoalBox(Goal goal) {
 
         // Root container (FrameLayout for absolute positioning)
