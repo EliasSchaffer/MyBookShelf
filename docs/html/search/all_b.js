@@ -1,0 +1,11 @@
+var searchData=
+[
+  ['mainactivity_0',['MainActivity',['../classcom_1_1example_1_1mybookshelf_1_1MainActivity.html',1,'com::example::mybookshelf']]],
+  ['mainactivity_1',['mainActivity',['../classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#a5c4f8d77996615f8ededabfa10258e0c',1,'com.example.mybookshelf.BookRecommendationFlow.mainActivity'],['../classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User.html#a325845acb5fa2ac2736baa42dd0ca70f',1,'com.example.mybookshelf.dataClass.User.mainActivity'],['../classcom_1_1example_1_1mybookshelf_1_1GoalHandler.html#a8f1df45673baddd5b1003de32cf9e729',1,'com.example.mybookshelf.GoalHandler.mainActivity'],['../classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter.html#aaf8e893647b40f7def148f2e3702c584',1,'com.example.mybookshelf.LayoutManager.CostumeListAdapter.mainActivity']]],
+  ['mainactivity_2ejava_2',['MainActivity.java',['../MainActivity_8java.html',1,'']]],
+  ['mainhandler_3',['mainHandler',['../classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI.html#ac7482ff0418a335a176a2515aa86ef3f',1,'com.example.mybookshelf.apis.BooksAPI.mainHandler'],['../classcom_1_1example_1_1mybookshelf_1_1Authenticator.html#acf1a0d1b640a234f1391db433eac9501',1,'com.example.mybookshelf.Authenticator.mainHandler']]],
+  ['message_4',['message',['../classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification.html#adf01ab721d4364e05f27c8d592d1583a',1,'com::example::mybookshelf::dataClass::Notification']]],
+  ['minute_5',['minute',['../classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User.html#a228107724f3c21395a42fb97ca30f778',1,'com::example::mybookshelf::dataClass::User']]],
+  ['month_5fnames_6',['MONTH_NAMES',['../classcom_1_1example_1_1mybookshelf_1_1UIMaster_1_1MonthValueFormatter.html#a97f2890c62ccc7a0a2a09c464cff7e95',1,'com::example::mybookshelf::UIMaster::MonthValueFormatter']]],
+  ['monthvalueformatter_7',['MonthValueFormatter',['../classcom_1_1example_1_1mybookshelf_1_1UIMaster_1_1MonthValueFormatter.html',1,'com::example::mybookshelf::UIMaster']]]
+];

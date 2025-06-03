@@ -1,0 +1,21 @@
+<map id="com.example.mybookshelf.GoalHandler.handleBookChange" name="com.example.mybookshelf.GoalHandler.handleBookChange">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,261,237,301"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal.html#a3b610e27f691556a8dcf5b8301b9a9d1" title=" " alt="" coords="285,5,517,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,260,151,217,184,162,229,104,255,78,284,55,293,49,296,54,287,60,259,82,233,108,189,165,156,220,134,262"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal.html#a1c80a58d3e1cd2e1ab6ef14c40d3b274" title=" " alt="" coords="285,69,517,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="136,259,195,190,237,152,284,119,297,112,299,117,287,124,241,156,199,194,140,263"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal.html#abcf308a0e49a9b60f6761102438d9d04" title=" " alt="" coords="285,133,517,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="150,259,210,221,284,183,304,175,306,180,286,188,213,225,153,263"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book.html#a4109da1bdee13601576c6725d6e89e71" title=" " alt="" coords="285,197,517,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="209,259,299,238,301,243,210,264"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book.html#af362f232851507c1d64779533639edf8" title=" " alt="" coords="285,261,517,301"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="237,279,272,279,272,284,237,284"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal.html#a964cb06dadac4c69df6c931402733779" title=" " alt="" coords="285,325,517,365"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="210,299,301,320,299,325,209,304"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book.html#a7c4ec1f3e154fad200b64643574e5c9c" title=" " alt="" coords="285,389,517,429"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="153,299,213,337,286,375,306,382,304,387,284,380,210,342,150,304"/>
+<area shape="rect" id="Node000009" href="$classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal.html#a84c2af13824c14a2b6c3dcf25a493d0f" title=" " alt="" coords="285,453,517,493"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="140,300,199,369,241,407,287,439,299,446,297,450,284,444,237,411,195,372,136,304"/>
+<area shape="rect" id="Node000010" href="$classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal.html#a695831f2ac1529bf5e48ea738b00aaec" title=" " alt="" coords="285,517,517,557"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="134,300,156,343,189,398,233,455,259,481,287,503,296,509,293,513,284,508,255,485,229,458,184,401,151,346,129,303"/>
+</map>

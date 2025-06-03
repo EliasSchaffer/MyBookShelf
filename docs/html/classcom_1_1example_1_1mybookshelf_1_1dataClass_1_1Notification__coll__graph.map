@@ -1,0 +1,7 @@
+<map id="com.example.mybookshelf.dataClass.Notification" name="com.example.mybookshelf.dataClass.Notification">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,133,229,253"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="70,5,101,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="95,70,104,117,99,118,89,72"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="125,5,177,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="146,72,136,118,131,117,141,70"/>
+</map>

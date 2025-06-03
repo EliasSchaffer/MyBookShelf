@@ -1,0 +1,130 @@
+\doxysection{com.\+example.\+mybookshelf.\+apis.\+Ai\+API Class Reference}
+\hypertarget{classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI}{}\label{classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI}\index{com.example.mybookshelf.apis.AiAPI@{com.example.mybookshelf.apis.AiAPI}}
+
+
+Collaboration diagram for com.\+example.\+mybookshelf.\+apis.\+Ai\+API\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+interface \mbox{\hyperlink{interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1_1AiService}{Ai\+Service}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_a4a45b91f0717302661d9e35ed956c049}{fetch\+Response}} (final String question, final \mbox{\hyperlink{interfacecom_1_1example_1_1mybookshelf_1_1ApiResponseCallback}{Api\+Response\+Callback}} callback)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_a62f0ba451acb21dcf4872e3801046446}{API\+\_\+\+URL}} = "{}https\+://api.\+cloudflare.\+com/"{}
+\item 
+static final String \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_adbd8f23489c5f42a96d42fcf9b77cb6c}{API\+\_\+\+KEY}} = "{}5z2t0n\+Uwi\+Yny\+RRf1w\+\_\+q\+DB1\+Eai0\+K\+\_\+yuh\+Qg8\+BAT0nk"{}
+\item 
+static final Ok\+Http\+Client \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_a3f60dedc2406280d2793f726a0460a13}{client}}
+\item 
+static final Retrofit \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_a958c698db1d9e49dc07ee10349d0e4c5}{retrofit}}
+\item 
+static final \mbox{\hyperlink{interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1_1AiService}{Ai\+Service}} \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_a4a38dcc1f948bc099f5c4e1400e40935}{ai\+Service}} = retrofit.\+create(Ai\+Service.\+class)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_a4a45b91f0717302661d9e35ed956c049}\index{com.example.mybookshelf.apis.AiAPI@{com.example.mybookshelf.apis.AiAPI}!fetchResponse@{fetchResponse}}
+\index{fetchResponse@{fetchResponse}!com.example.mybookshelf.apis.AiAPI@{com.example.mybookshelf.apis.AiAPI}}
+\doxysubsubsection{\texorpdfstring{fetchResponse()}{fetchResponse()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_a4a45b91f0717302661d9e35ed956c049} 
+static void com.\+example.\+mybookshelf.\+apis.\+Ai\+API.\+fetch\+Response (\begin{DoxyParamCaption}\item[{final String}]{question}{, }\item[{final \mbox{\hyperlink{interfacecom_1_1example_1_1mybookshelf_1_1ApiResponseCallback}{Api\+Response\+Callback}}}]{callback}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Fetches a response from an AI service based on a given question.
+
+This method constructs a JSON payload with system and user messages, sends it to an AI service, and handles the response or failure through callbacks. It logs the request payload and processes the response body if successful, passing it to the success callback. In case of errors, it passes an appropriate error message to the failure callback.
+
+
+\begin{DoxyParams}{Parameters}
+{\em question} & The user\textquotesingle{}s question to be sent to the AI service. \\
+\hline
+{\em callback} & The callback interface to handle the AI service response or failure. \\
+\hline
+\end{DoxyParams}
+Handles the response from a network call, passing it to the appropriate callback method.
+
+Handles request failure by notifying the callback and printing the stack trace.Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_a4a45b91f0717302661d9e35ed956c049_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_a4a45b91f0717302661d9e35ed956c049_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_a4a38dcc1f948bc099f5c4e1400e40935}\index{com.example.mybookshelf.apis.AiAPI@{com.example.mybookshelf.apis.AiAPI}!aiService@{aiService}}
+\index{aiService@{aiService}!com.example.mybookshelf.apis.AiAPI@{com.example.mybookshelf.apis.AiAPI}}
+\doxysubsubsection{\texorpdfstring{aiService}{aiService}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_a4a38dcc1f948bc099f5c4e1400e40935} 
+final \mbox{\hyperlink{interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1_1AiService}{Ai\+Service}} com.\+example.\+mybookshelf.\+apis.\+Ai\+API.\+ai\+Service = retrofit.\+create(Ai\+Service.\+class)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_adbd8f23489c5f42a96d42fcf9b77cb6c}\index{com.example.mybookshelf.apis.AiAPI@{com.example.mybookshelf.apis.AiAPI}!API\_KEY@{API\_KEY}}
+\index{API\_KEY@{API\_KEY}!com.example.mybookshelf.apis.AiAPI@{com.example.mybookshelf.apis.AiAPI}}
+\doxysubsubsection{\texorpdfstring{API\_KEY}{API\_KEY}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_adbd8f23489c5f42a96d42fcf9b77cb6c} 
+final String com.\+example.\+mybookshelf.\+apis.\+Ai\+API.\+API\+\_\+\+KEY = "{}5z2t0n\+Uwi\+Yny\+RRf1w\+\_\+q\+DB1\+Eai0\+K\+\_\+yuh\+Qg8\+BAT0nk"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_a62f0ba451acb21dcf4872e3801046446}\index{com.example.mybookshelf.apis.AiAPI@{com.example.mybookshelf.apis.AiAPI}!API\_URL@{API\_URL}}
+\index{API\_URL@{API\_URL}!com.example.mybookshelf.apis.AiAPI@{com.example.mybookshelf.apis.AiAPI}}
+\doxysubsubsection{\texorpdfstring{API\_URL}{API\_URL}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_a62f0ba451acb21dcf4872e3801046446} 
+final String com.\+example.\+mybookshelf.\+apis.\+Ai\+API.\+API\+\_\+\+URL = "{}https\+://api.\+cloudflare.\+com/"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_a3f60dedc2406280d2793f726a0460a13}\index{com.example.mybookshelf.apis.AiAPI@{com.example.mybookshelf.apis.AiAPI}!client@{client}}
+\index{client@{client}!com.example.mybookshelf.apis.AiAPI@{com.example.mybookshelf.apis.AiAPI}}
+\doxysubsubsection{\texorpdfstring{client}{client}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_a3f60dedc2406280d2793f726a0460a13} 
+final Ok\+Http\+Client com.\+example.\+mybookshelf.\+apis.\+Ai\+API.\+client\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \textcolor{keyword}{new}\ OkHttpClient.Builder()}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ .connectTimeout(30,\ TimeUnit.SECONDS)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ .readTimeout(30,\ TimeUnit.SECONDS)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ .writeTimeout(30,\ TimeUnit.SECONDS)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ .addInterceptor(\textcolor{keyword}{new}\ HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ .build()}
+
+\end{DoxyCode}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_a958c698db1d9e49dc07ee10349d0e4c5}\index{com.example.mybookshelf.apis.AiAPI@{com.example.mybookshelf.apis.AiAPI}!retrofit@{retrofit}}
+\index{retrofit@{retrofit}!com.example.mybookshelf.apis.AiAPI@{com.example.mybookshelf.apis.AiAPI}}
+\doxysubsubsection{\texorpdfstring{retrofit}{retrofit}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_a958c698db1d9e49dc07ee10349d0e4c5} 
+final Retrofit com.\+example.\+mybookshelf.\+apis.\+Ai\+API.\+retrofit\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \textcolor{keyword}{new}\ Retrofit.Builder()}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ .baseUrl(\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_a62f0ba451acb21dcf4872e3801046446}{API\_URL}})}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ .client(\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_a3f60dedc2406280d2793f726a0460a13}{client}})}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ .addConverterFactory(GsonConverterFactory.create())}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ .build()}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/app/doc\+\_\+state/github\+\_\+repos\+Repo\+Arch\+Doc\+Gen\+Context/\+Elias\+Schaffer/\+My\+Book\+Shelf/src/main/java/com/example/mybookshelf/apis/\mbox{\hyperlink{AiAPI_8java}{Ai\+API.\+java}}\end{DoxyCompactItemize}

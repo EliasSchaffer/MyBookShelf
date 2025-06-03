@@ -1,0 +1,532 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.13.2" xml:lang="en-US">
+  <compound refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI" kind="class"><name>com::example::mybookshelf::apis::AiAPI</name>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a62f0ba451acb21dcf4872e3801046446" kind="variable"><name>API_URL</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1adbd8f23489c5f42a96d42fcf9b77cb6c" kind="variable"><name>API_KEY</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a3f60dedc2406280d2793f726a0460a13" kind="variable"><name>client</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a958c698db1d9e49dc07ee10349d0e4c5" kind="variable"><name>retrofit</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a4a38dcc1f948bc099f5c4e1400e40935" kind="variable"><name>aiService</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a4a45b91f0717302661d9e35ed956c049" kind="function"><name>fetchResponse</name></member>
+  </compound>
+  <compound refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1_1AiService" kind="interface"><name>com::example::mybookshelf::apis::AiAPI::AiService</name>
+    <member refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1_1AiService_1a3d98325386aa8dea5726317b65fba3a7" kind="function"><name>fetchBooks</name></member>
+  </compound>
+  <compound refid="interfacecom_1_1example_1_1mybookshelf_1_1ApiResponseCallback" kind="interface"><name>com::example::mybookshelf::ApiResponseCallback</name>
+    <member refid="interfacecom_1_1example_1_1mybookshelf_1_1ApiResponseCallback_1aa87fb9e3b5f171b2b3f6acc98072657d" kind="function"><name>onSuccess</name></member>
+    <member refid="interfacecom_1_1example_1_1mybookshelf_1_1ApiResponseCallback_1a8e7bdf5946a617eedd9b807fc7b45b53" kind="function"><name>onFailure</name></member>
+  </compound>
+  <compound refid="classAppCompatActivity" kind="class"><name>AppCompatActivity</name>
+  </compound>
+  <compound refid="classcom_1_1example_1_1mybookshelf_1_1Authenticator" kind="class"><name>com::example::mybookshelf::Authenticator</name>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1Authenticator_1ae81896043bf8a0559df6c16ce4cd656b" kind="variable"><name>db</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1Authenticator_1a8793f7c7709a82bfe4e9fc01ceffb921" kind="variable"><name>context</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1Authenticator_1a4136438e8289b133149974c57612154c" kind="variable"><name>executorService</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1Authenticator_1acf1a0d1b640a234f1391db433eac9501" kind="variable"><name>mainHandler</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1Authenticator_1ade7109667fe291a94b3caaa8951f6ef8" kind="variable"><name>KEY_ALIAS</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1Authenticator_1a94316758fa5f1d24b4b0f37bc47d8941" kind="function"><name>Authenticator</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1Authenticator_1a5b51bf95ee53d9d25544eac679e67f7c" kind="function"><name>checkLogin</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1Authenticator_1a95735d7b36b08b09da3829afe903015c" kind="function"><name>register</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1Authenticator_1adebcfe7ba4f68b9fe56cb7f7bf481cf7" kind="function"><name>saveToken</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1Authenticator_1a9f7d314a9b2b3b6749571c810ba1405d" kind="function"><name>getUid</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1Authenticator_1a1f33cf9d687e90c42550e8aacf290a2c" kind="function"><name>getToken</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1Authenticator_1a365d4ab016ac0d1c7a59f5fa535ce52c" kind="function"><name>getUsername</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1Authenticator_1aed7f6698a11da95d35c1af54e763ee8f" kind="function"><name>setDb</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1Authenticator_1ad35502fa53cac65e3042d5d295db08f3" kind="function"><name>postToMain</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1Authenticator_1a57eb5913cd07c88e3f0771b4bf88bc0c" kind="function"><name>clearStoredToken</name></member>
+  </compound>
+  <compound refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book" kind="class"><name>com::example::mybookshelf::dataClass::Book</name>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1adecdb539a7b96a7ed6738cb61f2a5855" kind="variable"><name>genre</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a628b11acb47a0e2050df73420ed11687" kind="variable"><name>name</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a3b6cb312479596b6af26e28f6135e4ff" kind="variable"><name>author</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a1a028f264e2ace9e6bc8f0ca95534a95" kind="variable"><name>pages</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1afcedb56c6822b09f8ebd947bcb392095" kind="variable"><name>release_date</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1aa5ab068f4dccbe382b46f81512c81b65" kind="variable"><name>image_url</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a7e155af4225503897eeb756543dc6331" kind="variable"><name>description</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1aada77ec14a69a92c76d58cdb44be321a" kind="variable"><name>inDatabase</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a9014d1ca4a42e83cf1373ddf22a2d2d3" kind="variable"><name>id</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a10387afe95bef1f0f5279139ec1edfee" kind="variable"><name>reading_time</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a35d589bb977d39d87d1391082728ef02" kind="variable"><name>status</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ac921cbeaf1c2ee96086e47d2d7586c6f" kind="function"><name>Book</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ab78862de4a0e97e9190086f397a88fd4" kind="function"><name>getGenre</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ab76b4ec7891e641d4c1a70a564805ffb" kind="function"><name>getId</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a71f2e0de123a2cd2f072c4b3426c5d1f" kind="function"><name>isInDatabase</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a44a086ea4c79159d292634cf7c07a3b7" kind="function"><name>setInDatabase</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1abd4859f20d99f9f603b40a2f4a06f5bd" kind="function"><name>Book</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ab0f3ce1105d827eb45236089598f37c8" kind="function"><name>Book</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1aa54a2193f20e365db53206d4bf9d7688" kind="function"><name>Book</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ae12a6b9c36d0c9fc32b18f7903198f6b" kind="function"><name>Book</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a9c7d1fed8ed10b566260912ab7e596d1" kind="function"><name>Book</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a4109da1bdee13601576c6725d6e89e71" kind="function"><name>getName</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a013544b074d1a225d85d4870e85f2eb6" kind="function"><name>getRelease_date</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1af362f232851507c1d64779533639edf8" kind="function"><name>getPages</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a72061c36f82e9d925effeb02dc0da55d" kind="function"><name>getAuthor</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a20229b9b1dcc454fc3f09a50e719294c" kind="function"><name>getImageUrl</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a458c546dddffe750414f225231ac7762" kind="function"><name>getDescription</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ac360d6fd5854218af0be0939d5b8a88a" kind="function"><name>getReleaseDate</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1aac979a1131aa1e38e45ded0e55fcbc05" kind="function"><name>setAuthor</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a1059730606a2b2dd0f6e5d1e50f9bd3c" kind="function"><name>setRelease_date</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1afe792f46758c4c095ba85c7e996f678f" kind="function"><name>setStatus</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a7c4ec1f3e154fad200b64643574e5c9c" kind="function"><name>getStatus</name></member>
+  </compound>
+  <compound refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1_1BookCallback" kind="interface"><name>com::example::mybookshelf::apis::BooksAPI::BookCallback</name>
+    <member refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1_1BookCallback_1a3e72ba2e384dd024c32999bda2af65d4" kind="function"><name>onBookFetched</name></member>
+  </compound>
+  <compound refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow" kind="class"><name>com::example::mybookshelf::BookRecommendationFlow</name>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5c4f8d77996615f8ededabfa10258e0c" kind="variable"><name>mainActivity</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a3241cec472497dd23e79a34f00b95e73" kind="variable"><name>uiMaster</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a47dec962e67966f1d0839dcc4974a787" kind="variable"><name>box</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a2ee00fe81142dfe81477667b65ee95e1" kind="variable"><name>atributes</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a6615c82186cfaa4d3ec7793874af3c22" kind="variable"><name>ai</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a9286fe4afcec70b7194e628cb1961b72" kind="variable"><name>bookName</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a481ff10f4ef7414fd50f71fe6ee1a5b0" kind="variable"><name>doNotRecommend</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a374256be23590ea576a06aeea9dad292" kind="variable"><name>loadingLayout</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a0151ac229657fcb892f88bdac483f91b" kind="variable"><name>balls</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a29ea78dc5162b295abccceda385d9975" kind="variable"><name>isThinking</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5ba48ea80adf0d66e51462b0da680e8e" kind="function"><name>BookRecommendationFlow</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a22f0dcaea578fbd7358e6237cd4873d4" kind="function"><name>handleAI</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a3855117e802e54923c308e0df6280c17" kind="function"><name>addChatMessage</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a276e931dabe3e85af257a9d16ce7cc67" kind="function"><name>showBookBasedStep1</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5c657be258c13c85848c7b7115f8a0b5" kind="function"><name>showBookBasedStep2</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1aa95301256c7f5377d1bc432189483b3c" kind="function"><name>showBookBasedStep3</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a78dda71d2c403a463d824ff61b2ce27f" kind="function"><name>buildAIStringBased</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a4c7dc337216592f7f214f69ce7009d37" kind="function"><name>showFreshStartStep1</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1aaf567ca97b0d7f0c58ebba4d6f4b18bd" kind="function"><name>showFreshStartStep2</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a2bc1c0125eb3c1fe64ed1ed3ee93d3eb" kind="function"><name>showFreshStartStep3</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ad10515cfcf8650b6830b68f15d393b3b" kind="function"><name>showFreshStartStep4</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a46c6733f27b3527d3934cee02cfcd7ac" kind="function"><name>showFreshStartStep5</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1abe4c57ea57ed54c344739295e70066ff" kind="function"><name>buildAIStringFresh</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ae50cf18619872a365eebe91c18d86e8d" kind="function"><name>callAI</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a02b6d699653b58f244907bd10db53ab5" kind="function"><name>createStyledGridButton</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a4dceb0fa4d170b8c7e5a7a6718593dfe" kind="function"><name>handleNo</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a78597ba37409daeee77dcfa6236b2e6a" kind="function"><name>showThinkingAnimation</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ac62af5d6edeffa96b2862a609ebb40df" kind="function"><name>hideThinkingAnimation</name></member>
+  </compound>
+  <compound refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI" kind="class"><name>com::example::mybookshelf::apis::BooksAPI</name>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1a684022e402edb00f89528d2c14bdf385" kind="variable"><name>executorService</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1ac7482ff0418a335a176a2515aa86ef3f" kind="variable"><name>mainHandler</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1ac350a4b300b12277d646f8dc3fd57aef" kind="function"><name>getOneBook</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1a8a2a962adad00e7ab410b7b23c13a45e" kind="function"><name>getMultipleBooks</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1aa9d3aee665891e612035b5d0ffe1f93e" kind="function"><name>fetchBooks</name></member>
+  </compound>
+  <compound refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1_1BooksCallback" kind="interface"><name>com::example::mybookshelf::apis::BooksAPI::BooksCallback</name>
+    <member refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1_1BooksCallback_1aa9e5ff08d07263a7489c68e82b91cc3f" kind="function"><name>onBooksFetched</name></member>
+  </compound>
+  <compound refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1BookViewHolder" kind="class"><name>com::example::mybookshelf::LayoutManager::CostumeListAdapter::BookViewHolder</name>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1BookViewHolder_1a455f9e17e54007e000e73f4534d1208a" kind="variable"><name>btnRemove</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1BookViewHolder_1a84fd6983e576eef23842b10e9695d4a2" kind="variable"><name>bookImage</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1BookViewHolder_1a7bf353bb1d32c6a53dadc196bfb5cd6d" kind="variable"><name>bookDetails</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1BookViewHolder_1aae3afb378da228446dad78cadb6d50dd" kind="variable"><name>noteField</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1BookViewHolder_1a2a60c2d41b2677351b3256fa9f6566e6" kind="variable"><name>textWatcher</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1BookViewHolder_1af305ca13e1cb2e7514032edcefddc1e6" kind="function"><name>BookViewHolder</name></member>
+  </compound>
+  <compound refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1BootCompletedReceiver" kind="class"><name>com::example::mybookshelf::notifications::BootCompletedReceiver</name>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1BootCompletedReceiver_1a1d13680b27b02a1aeed100e85b8364ba" kind="variable"><name>TAG</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1BootCompletedReceiver_1a42ee4762f446eaf5c82cf00042f40593" kind="function"><name>onReceive</name></member>
+  </compound>
+  <compound refid="classBroadcastReceiver" kind="class"><name>BroadcastReceiver</name>
+  </compound>
+  <compound refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1_1ChartData" kind="class"><name>com::example::mybookshelf::UIMaster::ChartData</name>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1_1ChartData_1aa19d2e88e3dd237997d929932e86b971" kind="variable"><name>readingTimeEntries</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1_1ChartData_1a99f4a957db65574782639ad62823fd13" kind="variable"><name>completedBooksEntries</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1_1ChartData_1a6ae2851d7039e2296ce53ef8c87fa0db" kind="function"><name>ChartData</name></member>
+  </compound>
+  <compound refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter" kind="class"><name>com::example::mybookshelf::LayoutManager::CostumeListAdapter</name>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1a2cf9a5b90fa3d0767eae16c22674a4b1" kind="variable"><name>bookList</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1aaf8e893647b40f7def148f2e3702c584" kind="variable"><name>mainActivity</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1ae3b422d5b21eda2073e4d800c3e4fe48" kind="variable"><name>db</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1a1150c28089f1926af44f049d0d200b9a" kind="variable"><name>loggedInUser</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1a2e570ce48821e13f775071adcf4ee5fc" kind="variable"><name>uiMaster</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1a9c4728df3db8275ee24559a73664ef54" kind="variable"><name>databaseExecutor</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1a1e562af8df77a04fa5931b1e7d7b8cc1" kind="variable"><name>imageRequestOptions</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1a5994fe8dd83b16ff0ea9b665e6b6507a" kind="function"><name>CostumeListAdapter</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1abab5454d246f54bbccfc3f3b2bdaaa0b" kind="function"><name>onCreateViewHolder</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1a6195566266811486050ad2962a7a161f" kind="function"><name>onBindViewHolder</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1a8dac537a1812227e1b2ed9b12571c2ee" kind="function"><name>getItemCount</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1a392b83cf767e3637969ceb24e6d44559" kind="function"><name>updateData</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1a3c5988a6efbd9ccb0206b69b6b8dfb96" kind="function"><name>cleanup</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1aecf267c9d5fc023c90187a13bc4ebe2e" kind="function"><name>bindBookData</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1a73afe4df78d60ab38b9b7d8b9e804d05" kind="function"><name>createTextWatcher</name></member>
+  </compound>
+  <compound refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter" kind="class"><name>com::example::mybookshelf::LayoutManager::CustomGoalAdapter</name>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a48530b4ad4b9eb7c01f2b014bc3e4467" kind="variable"><name>goals</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a68a52c1dac4939e8157d6ff3276367a1" kind="variable"><name>context</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a59feaafb13310e59cdbc5bdd0d70c64d" kind="variable"><name>db</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a13d70d3a6b0d8feb8930c35739e73822" kind="function"><name>CustomGoalAdapter</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a9a1f100c5c84e79e54f397e4a3f76c4f" kind="function"><name>onCreateViewHolder</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1ad2264dc4c944b992a8cac174bebb6694" kind="function"><name>onBindViewHolder</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a18720554189fa678140625ede54eb24f" kind="function"><name>addGoal</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1af9a0f3484addd304be457c6dbdb93a4c" kind="function"><name>removeGoal</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1abad93cc513b4470ac284a0756e1c3f65" kind="function"><name>setGoals</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a8a2ff008d6c39c13ae379b236bd4fb9f" kind="function"><name>getItemCount</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1af6a51f456a68a61bedc36289b91e0716" kind="function"><name>createGoalBox</name></member>
+  </compound>
+  <compound refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection" kind="class"><name>com::example::mybookshelf::DataBaseConnection</name>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a19f85f9ddffa0a97088614d80d2c46e9" kind="variable"><name>executorService</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" kind="variable"><name>URL</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1adadd13914192fd766da3e78bb288b688" kind="variable"><name>context</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a89f590f8fe8376ed0bbfc61f50a3f604" kind="variable"><name>trustStoreFile</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" kind="variable"><name>USER</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" kind="variable"><name>PASSWORD</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a3ed5c18c7b9fb86f9fe23c531136dc5a" kind="function"><name>DataBaseConnection</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aee74be9d7674275d682de94e068a3bec" kind="function"><name>checkLogin</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa495d1fe38fd1c36bc4bd3f4338b426d" kind="function"><name>getToken</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ab37c8cc6cf8d9437799cf3a3d414bfc9" kind="function"><name>addUser</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1acf3ef21ff7a224367d185748b6247481" kind="function"><name>generateSessionToken</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aad5aa12951cce78e9438fbc4056f5544" kind="function"><name>getBooksFromUID</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ec52be0a15b422e5307257258d2950" kind="function"><name>getBookByName</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1abc615b05c31c508894dc2d300292738a" kind="function"><name>addBookToUser</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a6bfa78cc6e4957456c3c0a7d6d5281dc" kind="function"><name>getRatingFromBook</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a99a86e8b98d2d0ccc944aa93c10c878d" kind="function"><name>getReadingTimeByMonth</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ab32626fd4493c33e19a7875ff500b2e6" kind="function"><name>removeBookFromUser</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1af193be7b7a849bfac39f8f45d5e16ee8" kind="function"><name>notesChanged</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ac60874dcdc45687598a20a0d61a01d6d" kind="function"><name>getNotesFromUser</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ae83460b1effd3376ba0caca7220f7ced" kind="function"><name>addNotification</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a1aaec1cad853f2dda5dff2c6e07b5cb8" kind="function"><name>removeNotification</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aaefa5b0d10088dc34c39ba72307026eb" kind="function"><name>getAllNotificationsForUser</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a3b22d6106c92d008ed8b05c10892f0b7" kind="function"><name>addGoal</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8504514977721bef71acfcdb0019b6c" kind="function"><name>removeGoal</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a7889f4b8cbd0a3c254d6e1b390f22e00" kind="function"><name>getAllGoalsForUser</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa0888bddcc69a7e612d2b55269f3ce4a" kind="function"><name>deleteUser</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a86b6ffa92fad445bf50ba17e72ed7652" kind="function"><name>checkPassword</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a59558eec699341c6309b60e3c90b8093" kind="function"><name>changePassword</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a3938ac17813d30aea19e71d1b149e972" kind="function"><name>changeUserName</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a47a8bd471a1f2e4336a9378446c9ed86" kind="function"><name>changeEmail</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a219c11f4d9a8683e6f6d963a2e5592fa" kind="function"><name>getTime</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1afb94e7db2769200aba9d3eed97a6174b" kind="function"><name>setTime</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a62d192fe1bc6c3cbe531112364da3fa5" kind="function"><name>updateReadingStatus</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a76f8124415bc76fa523847cba23c8146" kind="function"><name>updateGoalProgress</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5dad5786ba9d3e263569a9b1838a0092" kind="function"><name>initialize</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a6551f4e8da2da417bc29f8b6af08aa51" kind="function"><name>loadTrustStore</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1af697f4f75aef2a9a2b45f603452a8c4e" kind="function"><name>addNewBook</name></member>
+  </compound>
+  <compound refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher" kind="class"><name>com::example::mybookshelf::LayoutManager::CostumeListAdapter::DebouncedTextWatcher</name>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_1afed750fba44ab26627b627007a8bdfd3" kind="variable"><name>delayMillis</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_1af89b5d5dbfa6780db5b781cdfc05a7fc" kind="variable"><name>handler</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_1af031464fd93d271bb0434a0a8803d910" kind="variable"><name>runnable</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_1a22fb1fa555f166b095d4578ce39d9b32" kind="function"><name>DebouncedTextWatcher</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_1a18f754b1a2dcda772746fbe55b4a2187" kind="function"><name>beforeTextChanged</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_1afda4cbae58f7e60f79c163ab3a7f965f" kind="function"><name>onTextChanged</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_1a4d39d4fc771e3c4f77c97bb281067b6c" kind="function"><name>afterTextChanged</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_1a9ef3906e8ddd6e46c1400517e9dc9a8b" kind="function"><name>onDebouncedTextChanged</name></member>
+  </compound>
+  <compound refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal" kind="class"><name>com::example::mybookshelf::dataClass::Goal</name>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1ad6241e554fdf011228659d99d0c8ea2d" kind="variable"><name>id</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a4432cf44dcd6f38e3056a7f00979b029" kind="variable"><name>completed</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1aeae5f251c761d9dbf9b70bcd361dfb3c" kind="variable"><name>progress</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a2f99aeffbc87fa8191be1ca933e900ce" kind="variable"><name>target</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a20a07e2c29608a8192b37369989972e9" kind="variable"><name>bookName</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a6da9951b8dd031b6f3db43b62e618488" kind="variable"><name>goal</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a7604002f4f1c4f27923de5f1613a9e53" kind="variable"><name>frequenzy</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1af7939d76edf2eca34f8aed30026a2c54" kind="variable"><name>reminder</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1ab3f672626fd9809a052e6ceff617d66e" kind="variable"><name>deadline</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1ac16516ca910e247b38cafd0a61091fa4" kind="function"><name>Goal</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1ae3af06e883ffba04cbd617fe5692a928" kind="function"><name>Goal</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a35df8d1ea12ab64a2d5b083935b83de6" kind="function"><name>Goal</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1abcf308a0e49a9b60f6761102438d9d04" kind="function"><name>getId</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1af7b1e82158b03f007b5e058438e74dd7" kind="function"><name>isCompleted</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a964cb06dadac4c69df6c931402733779" kind="function"><name>getProgress</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a84c2af13824c14a2b6c3dcf25a493d0f" kind="function"><name>getTarget</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a1c80a58d3e1cd2e1ab6ef14c40d3b274" kind="function"><name>getGoal</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a3b610e27f691556a8dcf5b8301b9a9d1" kind="function"><name>getBookName</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1ada3305dadb216e065d9bb31e12ff6107" kind="function"><name>getFrequenzy</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a6d63369ad63bbffa2e26cf8466a53e8b" kind="function"><name>setId</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1aa71a066ecf1e4404a13c28abee75be82" kind="function"><name>toString</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a695831f2ac1529bf5e48ea738b00aaec" kind="function"><name>setProgress</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a24e2c7e0cd0f5cc54b8270358c8650ec" kind="function"><name>getDeadline</name></member>
+  </compound>
+  <compound refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler" kind="class"><name>com::example::mybookshelf::GoalHandler</name>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1a6854b776b31da6d1485c855b643e67c3" kind="variable"><name>user</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1ac561f9c94abdc5b149263155cc14f08f" kind="variable"><name>adapter</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1a0fd89fa896fa4a710c6951d4268325aa" kind="variable"><name>goalList</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1a352c4ed88f4ce4f56c74b32202cc3a22" kind="variable"><name>completedGoalList</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1ad266a0b08a96d5ed016916466e3b37d1" kind="variable"><name>db</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1a8f1df45673baddd5b1003de32cf9e729" kind="variable"><name>mainActivity</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1a91f64c1f150fe835857c59e1f209e050" kind="function"><name>GoalHandler</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1ac10bf110d981c8788e0e4b9b2e25177e" kind="function"><name>handleBookAdded</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1a5ddb8c71cb9828e9525f4bafefaf685f" kind="function"><name>handleBookChange</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1a326d9e94cb83508cae6d760df1bd5718" kind="function"><name>handleBookRemoved</name></member>
+  </compound>
+  <compound refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1_1GoalViewHolder" kind="class"><name>com::example::mybookshelf::LayoutManager::CustomGoalAdapter::GoalViewHolder</name>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1_1GoalViewHolder_1ad6fd97298fca9e229143f20ac8a7fcaa" kind="variable"><name>layout</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1_1GoalViewHolder_1aa84a9ab12137647e69c2efc82b6ebd5a" kind="function"><name>GoalViewHolder</name></member>
+  </compound>
+  <compound refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity" kind="class"><name>com::example::mybookshelf::MainActivity</name>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1adb1d7a8167a1c239fb47005d437e2677" kind="variable"><name>addBookButton</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1abcc4b781cf26507daaa8eda91d03bae9" kind="variable"><name>auth</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a02f1318d4e519da726c2004c5207b8ae" kind="variable"><name>booksAPI</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ad9b9883f3d697a62d4a7ebbbcd172b90" kind="variable"><name>ai</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ad052780eff7c27821bcac0c3fa479cfc" kind="variable"><name>uiMaster</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a0da50a5995889cb8824b41d6e1a47cf4" kind="variable"><name>search</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ac3f9490edb7b69f4a82a738418892218" kind="variable"><name>searchView</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a0f0b0b87d4bcd82b826f6119f8c8f4ed" kind="variable"><name>timeSpentReadingTextView</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1aed9597784f32b7165f8ebc7e5771fe2c" kind="variable"><name>goToStarting</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a7edb90fcb347a011e2039d71ddf55ccc" kind="variable"><name>logedindUser</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ac0bfe95d624fc4c53ee55f2a9d5b6a9c" kind="variable"><name>handler</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a01bfe3e5a914f9b659031549a6a70fc6" kind="variable"><name>loadingOverlay</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1aef4a72d74b4049db6a9d59ca083cdea4" kind="variable"><name>db</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1aa4b49fa3923ae42e6ed60203e5d9baf7" kind="variable"><name>REQUEST_CODE_POST_NOTIFICATIONS</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a20792967e760ef1556080e252584e35f" kind="function"><name>onCreate</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ae835969f88426a20de973e577bdf0f8d" kind="function"><name>handleSearch</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a904eef7a2ffa10b03c833016464e03c7" kind="function"><name>handleRegister</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a81b3fef1d3e60bd882a453eb941c4797" kind="function"><name>handleLogin</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ab1625f7432f6fcc4f53a63d3b893065f" kind="function"><name>saveBook</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a5cd85dfa3b0e1f23e7c51726aa4f3098" kind="function"><name>removeBook</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a50926ed5b57d759bc1f31b521ee7f104" kind="function"><name>getUser</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1af611e0f07a0e558281325c1052b52054" kind="function"><name>onSuccess</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a50ffabe98d3e06a1168741e025b21b58" kind="function"><name>handleBookChange</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1abae210c11c5d5105978aaf496adcff4d" kind="function"><name>onFailure</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a749ccb389a8cff8eaf8ae429e30e3c6b" kind="function"><name>getDb</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a5d1ff08cd88a729f9b531d898843a0cf" kind="function"><name>setLoadingVisibility</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a7dc4981a407c45a60ab3e92c56f73ea7" kind="function"><name>showResponseDialog</name></member>
+  </compound>
+  <compound refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1_1MonthValueFormatter" kind="class"><name>com::example::mybookshelf::UIMaster::MonthValueFormatter</name>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1_1MonthValueFormatter_1a97f2890c62ccc7a0a2a09c464cff7e95" kind="variable"><name>MONTH_NAMES</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1_1MonthValueFormatter_1a3e8376ebdc1ce3a4dcaab8f8d961c421" kind="function"><name>getFormattedValue</name></member>
+  </compound>
+  <compound refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification" kind="class"><name>com::example::mybookshelf::dataClass::Notification</name>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification_1a1127ea491882c30bce4272d852816ea4" kind="variable"><name>id</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification_1adf01ab721d4364e05f27c8d592d1583a" kind="variable"><name>message</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification_1a9dc622a763a56b59170634a6f8276893" kind="function"><name>Notification</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification_1ac2480b5d64b232390b4f22bd37620859" kind="function"><name>getId</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification_1a7305353ee2a1824ad211ac13e60bdfc6" kind="function"><name>getMessage</name></member>
+  </compound>
+  <compound refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationChannelManager" kind="class"><name>com::example::mybookshelf::notifications::NotificationChannelManager</name>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationChannelManager_1a9d0ba4e30a7959d3ca4d5047054be4e8" kind="variable"><name>DEFAULT_CHANNEL_ID</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationChannelManager_1a48ca3492a09404fe4d838dbcb0607c71" kind="variable"><name>SERVER_CHANNEL_ID</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationChannelManager_1ab57e2b123ed881523d1e0465605396b3" kind="function"><name>createNotificationChannels</name></member>
+  </compound>
+  <compound refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationReceiver" kind="class"><name>com::example::mybookshelf::notifications::NotificationReceiver</name>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationReceiver_1aeec8428424ab3fc1e77d9404f621b290" kind="variable"><name>TAG</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationReceiver_1a16b9874ec4597faf7be00d3c2f9f4c81" kind="function"><name>onReceive</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationReceiver_1abe5c4b7b501921cbb9ebbf22dcb06be7" kind="function"><name>showNotification</name></member>
+  </compound>
+  <compound refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler" kind="class"><name>com::example::mybookshelf::notifications::NotificationScheduler</name>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a351db1eeb0a6f1c2889b7bc90000e1bc" kind="variable"><name>TAG</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adbfc27021f5087d5f958e70d9a45f58b" kind="variable"><name>PREFS_NAME</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a3f4772314ecfd41cd9db5513155c0ede" kind="variable"><name>KEY_DAILY_ACTIVE</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a0b16799acc5ad3eba1ead62b47ef62ea" kind="variable"><name>KEY_DAILY_HOUR</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adafbd47943b49f9a6bcff839d60ca078" kind="variable"><name>KEY_DAILY_MINUTE</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1af907f287b80d0fa0fb8768f1e71f1549" kind="variable"><name>KEY_DAILY_MESSAGE</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a766a9c3decb9600b1297ed171dfe1b83" kind="variable"><name>REQUEST_CODE_DAILY</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a5833d4c1b987dddea26acdad230c640f" kind="function"><name>scheduleDailyNotification</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ae8deb5392302274178dbbd3116654098" kind="function"><name>scheduleDailyNotification</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a79dcce93490bc0df80c03c0a410672b2" kind="function"><name>changeDailyNotificationTime</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afeb40a8c5551b18f32abe21dcc0e130a" kind="function"><name>changeDailyNotificationMessage</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afc96590cd792b862b32762b84cab085e" kind="function"><name>cancelDailyNotification</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ae2ade14f140458ae3bdac1c7e0ac35d8" kind="function"><name>toggleDailyNotification</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a6a67704352785acd6dcd956ec2f8834f" kind="function"><name>restoreNotifications</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ac8a096801252bd85cf58f0b4ded28ebe" kind="function"><name>isDailyNotificationActive</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1aaf3ebda4b3bc3da4f2c4e8cabb4a3602" kind="function"><name>getDailyNotificationHour</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ad29a9938277c2a671b0399cdc84c7844" kind="function"><name>getDailyNotificationMinute</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afad2859e0654bc94cdec599cd6ae9949" kind="function"><name>getDailyNotificationMessage</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a46f062698cb770f1def693f3e18ce7ba" kind="function"><name>getDailyNotificationTimeString</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ab4c513c92fc23addef85f0992fb6ddaf" kind="function"><name>sendGoalCompletedNotification</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a0a97077bdcc3f2c0fc441d5f3e8e2d62" kind="function"><name>scheduleOneTimeNotification</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a10e7adec73e1f0e63d8376cad273e11a" kind="function"><name>cancelOneTimeNotification</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adb2c3bbb24876b087277d011a6df1577" kind="function"><name>isOneTimeNotificationScheduled</name></member>
+  </compound>
+  <compound refid="classcom_1_1example_1_1mybookshelf_1_1Search" kind="class"><name>com::example::mybookshelf::Search</name>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1Search_1ad33004b69635e28e382c86acd561421f" kind="variable"><name>api</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1Search_1a50d5bb96d7998ebb3affbdf6fe3cee96" kind="variable"><name>uiMaster</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1Search_1a973ba95f090e9efe420f90451f5163ab" kind="variable"><name>executorService</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1Search_1a63cf81298cb2711a8197123e5b0b0d38" kind="variable"><name>mainThreadHandler</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1Search_1a6b4a6d87b928f7f14c803fb9dd63ab25" kind="function"><name>Search</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1Search_1a30776e720ae30856be221a2f5bbc5aed" kind="function"><name>searchByName</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1Search_1a3f8b7e03d9788e74fdc49eaa92792dda" kind="function"><name>onDestroy</name></member>
+  </compound>
+  <compound refid="classTextWatcher" kind="class"><name>TextWatcher</name>
+  </compound>
+  <compound refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster" kind="class"><name>com::example::mybookshelf::UIMaster</name>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a99664fe186d6cb741c01898ff195937d" kind="variable"><name>mainActivity</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aeb718f8b7c1e891bfeb515d302b4fb62" kind="variable"><name>goalList</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a61448faa08032ad7f27f29c4a6d08e75" kind="variable"><name>usernameEditText</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac38373761aef1dccd30d4418583c194f" kind="variable"><name>passwordEditText</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a03ef58ea33c530aab57a58a298e12c1d" kind="variable"><name>emailEditText</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a33c96fac4ab139d0ee338ed0cefee6cf" kind="variable"><name>repeatPassword</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a1578fb1dc832e74fc94d2c6115e16b6a" kind="variable"><name>loginButton</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1acfa71075f7a34512b0d3b97c1ee11af2" kind="variable"><name>registerButton</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a8725961b54c4b55c77f54f1686cdcc02" kind="variable"><name>switchToLoginButton</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a92107a45357a577f1600118d4bcd03ab" kind="variable"><name>switchToRegisterButton</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1af7a5045ff2d7c1e6ae4042b87305a3f2" kind="variable"><name>timeSpentReading</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa656ff54b76d2aad814455a921b23769" kind="variable"><name>nav_searchBtn</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a2f9dd9d99fba9fbf71600f940fb5eb9e" kind="variable"><name>nav_StatsBtn</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a51f677da9e14df925e0078873b518490" kind="variable"><name>timeSpentReadingTextView</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a3ebd4eaa7d80139bd41dc5e1fa218c4c" kind="variable"><name>booksAPI</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a7988f320c66cc06640a7e88dfea44791" kind="variable"><name>ai</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a4b26ad26de31c25665781530f174561d" kind="variable"><name>db</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a725459700c0500c243299fc80cd0ea7a" kind="variable"><name>logedindUser</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a673cf5a9e0adbd1e6ecdef9a1afa9818" kind="variable"><name>bookViewMap</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa3a5fde5cd9073a735c5bbac40a79a98" kind="variable"><name>executorService</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ae58fc63fffcaeca03afa133ba306d62c" kind="variable"><name>AIprompt</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a498a128e82ebf6851cb77f377169e05e" kind="variable"><name>brf</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a118323285918e37742fb31592587087e" kind="variable"><name>listAdapter</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac22273bb30e9f228991043bcdfbd8af2" kind="variable"><name>barChart</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aaf0e05b3454197f2e623075569b118d4" kind="function"><name>UIMaster</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ad68836f56831277d04d47f04bcb4e6e4" kind="function"><name>setUSer</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a78605aa6a9565efbae9637ee1c9f9c0c" kind="function"><name>reduceTimeSpendReading</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a1533d0ed2384f2ec729cfcec7bd9a25f" kind="function"><name>createBookBox</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa1dc0909ddd670cbf7ed2fd6ecb141cf" kind="function"><name>clearUI</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a0306308fc0728bc63c3dcc670b14a402" kind="function"><name>updateReadingTime</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5d06d53d8ef756629247fde0f557a3d1" kind="function"><name>showLogin</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5f5bae724e7f3d3de15486430b3bc8c1" kind="function"><name>showRegister</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa3079f36c20fc1b0ec8c01197f06faa3" kind="function"><name>navigateToStats</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ad609d5e0b54e87afcb60aed6c66a792e" kind="function"><name>navigateToStartingPage</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac2a608fcf86d3dbe14b4684dbbaf1431" kind="function"><name>navigateToDetails</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a4636b546c38ace5aedccfd989edc0bb1" kind="function"><name>handleListSearch</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a3e552449814fd4b18a4070128261c571" kind="function"><name>fillSpinners</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ad30bff41c8ec833af2293c0b6c8b47b2" kind="function"><name>navigateToGoals</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac859db60f9068e6a87b633ef697d4d0f" kind="function"><name>navigateToSettings</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a00d8b97e1a726995297f32919c1921ab" kind="function"><name>setDb</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ae7d87877ec33cbf6de7c0cb67ef5eb39" kind="function"><name>getBtnAdd</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a066a14333819f9cde27957ef8a02f180" kind="function"><name>getBtnRemove</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aeadc13ea946b279afce35c39bb36f3b6" kind="function"><name>initializeViews</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a3bb75047e98f0333fa2fdfd173bc80b0" kind="function"><name>setupNavigationListeners</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5c502183bab9192d9f38b42a28be7164" kind="function"><name>loadChartDataAsync</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a1d0b44fba73323953ffbbf69f4f3f4cb" kind="function"><name>setupChart</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a897a27ba41fe604acf9472257ad18685" kind="function"><name>filterValidEntries</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a2f446043c1019868262b5e49ddb58609" kind="function"><name>convertMinutesToHours</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a66cf6ce29c43e6db34be85ae9990c102" kind="function"><name>configureAxes</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ae589c66b6b1826db14cd0185e2453c12" kind="function"><name>configureChart</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5368b8b93b9216d91a256a2302ea04c8" kind="function"><name>displayTotalReadingTime</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a3beb8f5e82c56206227f83e05d2e2dba" kind="function"><name>showErrorMessage</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa6aad8404432bdaf23db9b41e99a6ed5" kind="function"><name>setupNavigationButtons</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a39a8f40aa163994c415f165d94ee47fd" kind="function"><name>filterBooks</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a4709f542c160eca1392685b8ba9455e5" kind="function"><name>createStyledGridButton</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a3bfddda8973b9c902065851da2802cd1" kind="function"><name>toggleVisibilityAnimated</name></member>
+  </compound>
+  <compound refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User" kind="class"><name>com::example::mybookshelf::dataClass::User</name>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a86fba9c7015ae122da29b6899badcd36" kind="variable"><name>user</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a673d6ff276fa01ab6b6293a341ef2bb5" kind="variable"><name>hash_password</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a094ddf13c798dd3492265ebb5b42781b" kind="variable"><name>email</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a35cd3238251b678c6c395e1c9baf6d5c" kind="variable"><name>UID</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a785ec56f99c56fe99ba9bc3ab666adf3" kind="variable"><name>bookList</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1abbbc6820ebedbf54ab9cf36983a20e7c" kind="variable"><name>authorList</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1adf08a44a715034a56cdd99a665a4cb99" kind="variable"><name>goalList</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a3505787a0fc187c315bceb705c605631" kind="variable"><name>completedGoalList</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a69491968b60bd3c828412878877f8578" kind="variable"><name>failedGoalList</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afeb7f16cf5d4bb293f266e88dd473284" kind="variable"><name>notificationList</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a06c2114b02402131a1558fc9bfbd6077" kind="variable"><name>genreList</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a325845acb5fa2ac2736baa42dd0ca70f" kind="variable"><name>mainActivity</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a55d9f7b2a47df1b9837fd7d97b5638f4" kind="variable"><name>db</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aa68383b852810acf9263049aa417394b" kind="variable"><name>reminder</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1ae2578fd7a3eaedf5cec2121de0ef1107" kind="variable"><name>hour</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a228107724f3c21395a42fb97ca30f778" kind="variable"><name>minute</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb85fd04c8149bfb77f1810c9301b0bc" kind="function"><name>User</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aeccdf2ba94dc9b82428e2339fce94f16" kind="function"><name>User</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1ac09dcc32668756828345d30aae7a191b" kind="function"><name>User</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a622f9d92b708fda1f742cfb1a897d34d" kind="function"><name>getMinute</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a0563e903741fe2efd9dd04c22b0fd346" kind="function"><name>setMinute</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1af08f2807e34258190031d801a5413115" kind="function"><name>getHour</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aa73b4323619977d53f636c8e23a1f797" kind="function"><name>setHour</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1ac3688c9dbc4e92f6761f17917ab40c6e" kind="function"><name>isReminder</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a1399483c690be9c2c04f74ddbe0b3a58" kind="function"><name>setReminder</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a67b00d944624281342cd2d39a9ab82e0" kind="function"><name>setUID</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1af5409209c13843de1262a2b184fffab7" kind="function"><name>getUser</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a682645dc02a2e495219e209d2581a07b" kind="function"><name>getPassword</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a81f758175e66306d62b76c819520b794" kind="function"><name>getBookList</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aade37d8176c8c756543ce0de90e91e80" kind="function"><name>addBook</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb442e89bbb66fadad2986d9229014b0" kind="function"><name>removeBook</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a8945dfa4eb3a89d2e5a76c00286fec8f" kind="function"><name>getAuthors</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aadab6730552307e5c6b3f9b7f01b92da" kind="function"><name>getGenres</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1af713b8b3cee54ffce03b9beebe4facff" kind="function"><name>getUid</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a69baea7bd18f7364b50bb4c1bd360285" kind="function"><name>getGoalList</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1acb4d2c7eb719b6b820003c8c22cc052e" kind="function"><name>addGoal</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1adc427d68c8c4bcab811c3b9de649ad9c" kind="function"><name>getCompletedGoalList</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a76ba302b47ed858bff0eeee089485296" kind="function"><name>setUserName</name></member>
+    <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aec12ec6f78185cd89393de775261d4b8" kind="function"><name>getFailedGoalList</name></member>
+  </compound>
+  <compound refid="classValueFormatter" kind="class"><name>ValueFormatter</name>
+  </compound>
+  <compound refid="namespacecom" kind="namespace"><name>com</name>
+  </compound>
+  <compound refid="namespacecom_1_1example" kind="namespace"><name>com::example</name>
+  </compound>
+  <compound refid="namespacecom_1_1example_1_1mybookshelf" kind="namespace"><name>com::example::mybookshelf</name>
+  </compound>
+  <compound refid="namespacecom_1_1example_1_1mybookshelf_1_1apis" kind="namespace"><name>com::example::mybookshelf::apis</name>
+  </compound>
+  <compound refid="namespacecom_1_1example_1_1mybookshelf_1_1dataClass" kind="namespace"><name>com::example::mybookshelf::dataClass</name>
+  </compound>
+  <compound refid="namespacecom_1_1example_1_1mybookshelf_1_1LayoutManager" kind="namespace"><name>com::example::mybookshelf::LayoutManager</name>
+  </compound>
+  <compound refid="namespacecom_1_1example_1_1mybookshelf_1_1notifications" kind="namespace"><name>com::example::mybookshelf::notifications</name>
+  </compound>
+  <compound refid="namespacejava_1_1lang" kind="namespace"><name>java::lang</name>
+  </compound>
+  <compound refid="namespaceokhttp3" kind="namespace"><name>okhttp3</name>
+  </compound>
+  <compound refid="namespaceRecyclerView" kind="namespace"><name>RecyclerView</name>
+  </compound>
+  <compound refid="namespaceretrofit2" kind="namespace"><name>retrofit2</name>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="README_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="SECURITY_8md" kind="file"><name>SECURITY.md</name>
+  </compound>
+  <compound refid="ApiResponseCallback_8java" kind="file"><name>ApiResponseCallback.java</name>
+  </compound>
+  <compound refid="AiAPI_8java" kind="file"><name>AiAPI.java</name>
+  </compound>
+  <compound refid="BooksAPI_8java" kind="file"><name>BooksAPI.java</name>
+  </compound>
+  <compound refid="Authenticator_8java" kind="file"><name>Authenticator.java</name>
+  </compound>
+  <compound refid="BookRecommendationFlow_8java" kind="file"><name>BookRecommendationFlow.java</name>
+  </compound>
+  <compound refid="DataBaseConnection_8java" kind="file"><name>DataBaseConnection.java</name>
+  </compound>
+  <compound refid="Book_8java" kind="file"><name>Book.java</name>
+  </compound>
+  <compound refid="Goal_8java" kind="file"><name>Goal.java</name>
+  </compound>
+  <compound refid="Notification_8java" kind="file"><name>Notification.java</name>
+  </compound>
+  <compound refid="User_8java" kind="file"><name>User.java</name>
+  </compound>
+  <compound refid="GoalHandler_8java" kind="file"><name>GoalHandler.java</name>
+  </compound>
+  <compound refid="CostumeListAdapter_8java" kind="file"><name>CostumeListAdapter.java</name>
+  </compound>
+  <compound refid="CustomGoalAdapter_8java" kind="file"><name>CustomGoalAdapter.java</name>
+  </compound>
+  <compound refid="MainActivity_8java" kind="file"><name>MainActivity.java</name>
+  </compound>
+  <compound refid="BootCompletedReceiver_8java" kind="file"><name>BootCompletedReceiver.java</name>
+  </compound>
+  <compound refid="NotificationChannelManager_8java" kind="file"><name>NotificationChannelManager.java</name>
+  </compound>
+  <compound refid="NotificationReceiver_8java" kind="file"><name>NotificationReceiver.java</name>
+  </compound>
+  <compound refid="NotificationScheduler_8java" kind="file"><name>NotificationScheduler.java</name>
+  </compound>
+  <compound refid="Search_8java" kind="file"><name>Search.java</name>
+  </compound>
+  <compound refid="UIMaster_8java" kind="file"><name>UIMaster.java</name>
+  </compound>
+  <compound refid="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2EliasSchaffer_2MyBookShelf_2SECURITY" kind="page"><name>md__2app_2doc__state_2github__reposRepoArchDocGenContext_2EliasSchaffer_2MyBookShelf_2SECURITY</name>
+  </compound>
+  <compound refid="dir_994aee0e188876e5cfdaf15b555af1c8" kind="dir"><name>/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis</name>
+  </compound>
+  <compound refid="dir_4f7d8b545d3fc5eaf5172a718e26ec88" kind="dir"><name>/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com</name>
+  </compound>
+  <compound refid="dir_c6a968f081ce903b6b4b1c544fbdc4be" kind="dir"><name>/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass</name>
+  </compound>
+  <compound refid="dir_cd10b98cd5b7eee6a02b63959d0863bb" kind="dir"><name>/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example</name>
+  </compound>
+  <compound refid="dir_b5eadab8ccafa2fd0eaa9c53d5818b03" kind="dir"><name>/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java</name>
+  </compound>
+  <compound refid="dir_8f00bb01f6e9704ecca083d5ab7792ba" kind="dir"><name>/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/LayoutManager</name>
+  </compound>
+  <compound refid="dir_defcdd8ecd11004ae7e9a5846a970d13" kind="dir"><name>/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main</name>
+  </compound>
+  <compound refid="dir_20c809ed3c4f43db3e1d4e3653dd65d7" kind="dir"><name>/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf</name>
+  </compound>
+  <compound refid="dir_3ca9899027aabbe14225419e751ab3c8" kind="dir"><name>/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf</name>
+  </compound>
+  <compound refid="dir_46a52ef8c8449aa1b38a4e6a7027c630" kind="dir"><name>/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications</name>
+  </compound>
+  <compound refid="dir_cf067b1a391dfd83ba1087c92d552641" kind="dir"><name>/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src</name>
+  </compound>
+</doxygenindex>

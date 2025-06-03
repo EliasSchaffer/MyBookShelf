@@ -1,0 +1,23 @@
+<map id="com.example.mybookshelf.UIMaster.fillSpinners" name="com.example.mybookshelf.UIMaster.fillSpinners">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1839,63,2041,103"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a4636b546c38ace5aedccfd989edc0bb1" title=" " alt="" coords="1588,63,1791,103"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1825,85,1791,85,1791,80,1825,80"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#aa6aad8404432bdaf23db9b41e99a6ed5" title=" " alt="" coords="1299,63,1540,103"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1574,85,1540,85,1540,80,1574,80"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#ad609d5e0b54e87afcb60aed6c66a792e" title=" " alt="" coords="1013,5,1251,45"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="1305,63,1232,48,1233,43,1306,57"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#ac2a608fcf86d3dbe14b4684dbbaf1431" title=" " alt="" coords="256,63,459,103"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="1000,26,769,31,637,39,507,53,441,65,440,60,506,48,637,34,769,25,1000,21"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#ad30bff41c8ec833af2293c0b6c8b47b2" title=" " alt="" coords="763,120,965,160"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="1072,53,913,122,911,118,1070,49"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#ac859db60f9068e6a87b633ef697d4d0f" title=" " alt="" coords="507,63,715,103"/>
+<area shape="poly" id="edge13_Node000004_Node000008" title=" " alt="" coords="1000,41,763,67,715,72,715,67,762,61,999,36"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a1533d0ed2384f2ec729cfcec7bd9a25f" title=" " alt="" coords="5,63,208,103"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="242,85,208,85,208,80,242,80"/>
+<area shape="poly" id="edge12_Node000007_Node000003" title=" " alt="" coords="979,126,1250,99,1298,94,1299,99,1251,104,979,132"/>
+<area shape="poly" id="edge7_Node000007_Node000005" title=" " alt="" coords="749,139,631,131,506,117,441,105,442,100,507,112,632,126,749,133"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="749,126,666,105,667,100,750,120"/>
+<area shape="poly" id="edge11_Node000008_Node000003" title=" " alt="" coords="729,80,1299,80,1299,85,729,85"/>
+<area shape="poly" id="edge9_Node000008_Node000005" title=" " alt="" coords="493,85,459,85,459,80,493,80"/>
+<area shape="poly" id="edge10_Node000008_Node000007" title=" " alt="" coords="729,98,809,117,808,123,727,103"/>
+</map>

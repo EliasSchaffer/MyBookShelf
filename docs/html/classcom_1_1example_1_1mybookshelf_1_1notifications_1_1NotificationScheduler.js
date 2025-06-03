@@ -1,0 +1,26 @@
+var classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler =
+[
+    [ "cancelDailyNotification", "classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#afc96590cd792b862b32762b84cab085e", null ],
+    [ "cancelOneTimeNotification", "classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#a10e7adec73e1f0e63d8376cad273e11a", null ],
+    [ "changeDailyNotificationMessage", "classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#afeb40a8c5551b18f32abe21dcc0e130a", null ],
+    [ "changeDailyNotificationTime", "classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#a79dcce93490bc0df80c03c0a410672b2", null ],
+    [ "getDailyNotificationHour", "classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#aaf3ebda4b3bc3da4f2c4e8cabb4a3602", null ],
+    [ "getDailyNotificationMessage", "classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#afad2859e0654bc94cdec599cd6ae9949", null ],
+    [ "getDailyNotificationMinute", "classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#ad29a9938277c2a671b0399cdc84c7844", null ],
+    [ "getDailyNotificationTimeString", "classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#a46f062698cb770f1def693f3e18ce7ba", null ],
+    [ "isDailyNotificationActive", "classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#ac8a096801252bd85cf58f0b4ded28ebe", null ],
+    [ "isOneTimeNotificationScheduled", "classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#adb2c3bbb24876b087277d011a6df1577", null ],
+    [ "restoreNotifications", "classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#a6a67704352785acd6dcd956ec2f8834f", null ],
+    [ "scheduleDailyNotification", "classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#ae8deb5392302274178dbbd3116654098", null ],
+    [ "scheduleDailyNotification", "classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#a5833d4c1b987dddea26acdad230c640f", null ],
+    [ "scheduleOneTimeNotification", "classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#a0a97077bdcc3f2c0fc441d5f3e8e2d62", null ],
+    [ "sendGoalCompletedNotification", "classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#ab4c513c92fc23addef85f0992fb6ddaf", null ],
+    [ "toggleDailyNotification", "classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#ae2ade14f140458ae3bdac1c7e0ac35d8", null ],
+    [ "KEY_DAILY_ACTIVE", "classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#a3f4772314ecfd41cd9db5513155c0ede", null ],
+    [ "KEY_DAILY_HOUR", "classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#a0b16799acc5ad3eba1ead62b47ef62ea", null ],
+    [ "KEY_DAILY_MESSAGE", "classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#af907f287b80d0fa0fb8768f1e71f1549", null ],
+    [ "KEY_DAILY_MINUTE", "classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#adafbd47943b49f9a6bcff839d60ca078", null ],
+    [ "PREFS_NAME", "classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#adbfc27021f5087d5f958e70d9a45f58b", null ],
+    [ "REQUEST_CODE_DAILY", "classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#a766a9c3decb9600b1297ed171dfe1b83", null ],
+    [ "TAG", "classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#a351db1eeb0a6f1c2889b7bc90000e1bc", null ]
+];

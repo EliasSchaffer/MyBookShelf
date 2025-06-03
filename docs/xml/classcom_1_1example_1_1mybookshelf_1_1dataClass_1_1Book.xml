@@ -1,0 +1,815 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book" kind="class" language="Java" prot="public">
+    <compoundname>com::example::mybookshelf::dataClass::Book</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1adecdb539a7b96a7ed6738cb61f2a5855" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.dataClass.Book.genre</definition>
+        <argsstring></argsstring>
+        <name>genre</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.genre</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="4" column="20" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="4" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ab0f3ce1105d827eb45236089598f37c8" compoundref="Book_8java" startline="63" endline="72">com.example.mybookshelf.dataClass.Book.Book</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1abd4859f20d99f9f603b40a2f4a06f5bd" compoundref="Book_8java" startline="51" endline="61">com.example.mybookshelf.dataClass.Book.Book</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1aa54a2193f20e365db53206d4bf9d7688" compoundref="Book_8java" startline="75" endline="83">com.example.mybookshelf.dataClass.Book.Book</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ab78862de4a0e97e9190086f397a88fd4" compoundref="Book_8java" startline="26" endline="28">com.example.mybookshelf.dataClass.Book.getGenre</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a628b11acb47a0e2050df73420ed11687" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.dataClass.Book.name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="5" column="20" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="5" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a9c7d1fed8ed10b566260912ab7e596d1" compoundref="Book_8java" startline="90" endline="92">com.example.mybookshelf.dataClass.Book.Book</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ae12a6b9c36d0c9fc32b18f7903198f6b" compoundref="Book_8java" startline="85" endline="88">com.example.mybookshelf.dataClass.Book.Book</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ac921cbeaf1c2ee96086e47d2d7586c6f" compoundref="Book_8java" startline="16" endline="21">com.example.mybookshelf.dataClass.Book.Book</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ab0f3ce1105d827eb45236089598f37c8" compoundref="Book_8java" startline="63" endline="72">com.example.mybookshelf.dataClass.Book.Book</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1abd4859f20d99f9f603b40a2f4a06f5bd" compoundref="Book_8java" startline="51" endline="61">com.example.mybookshelf.dataClass.Book.Book</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1aa54a2193f20e365db53206d4bf9d7688" compoundref="Book_8java" startline="75" endline="83">com.example.mybookshelf.dataClass.Book.Book</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a4109da1bdee13601576c6725d6e89e71" compoundref="Book_8java" startline="97" endline="99">com.example.mybookshelf.dataClass.Book.getName</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a3b6cb312479596b6af26e28f6135e4ff" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.dataClass.Book.author</definition>
+        <argsstring></argsstring>
+        <name>author</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.author</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="6" column="20" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="6" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ac921cbeaf1c2ee96086e47d2d7586c6f" compoundref="Book_8java" startline="16" endline="21">com.example.mybookshelf.dataClass.Book.Book</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ab0f3ce1105d827eb45236089598f37c8" compoundref="Book_8java" startline="63" endline="72">com.example.mybookshelf.dataClass.Book.Book</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1abd4859f20d99f9f603b40a2f4a06f5bd" compoundref="Book_8java" startline="51" endline="61">com.example.mybookshelf.dataClass.Book.Book</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1aa54a2193f20e365db53206d4bf9d7688" compoundref="Book_8java" startline="75" endline="83">com.example.mybookshelf.dataClass.Book.Book</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a72061c36f82e9d925effeb02dc0da55d" compoundref="Book_8java" startline="118" endline="120">com.example.mybookshelf.dataClass.Book.getAuthor</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1aac979a1131aa1e38e45ded0e55fcbc05" compoundref="Book_8java" startline="146" endline="148">com.example.mybookshelf.dataClass.Book.setAuthor</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a1a028f264e2ace9e6bc8f0ca95534a95" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int com.example.mybookshelf.dataClass.Book.pages</definition>
+        <argsstring></argsstring>
+        <name>pages</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.pages</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="7" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="7" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ae12a6b9c36d0c9fc32b18f7903198f6b" compoundref="Book_8java" startline="85" endline="88">com.example.mybookshelf.dataClass.Book.Book</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ac921cbeaf1c2ee96086e47d2d7586c6f" compoundref="Book_8java" startline="16" endline="21">com.example.mybookshelf.dataClass.Book.Book</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ab0f3ce1105d827eb45236089598f37c8" compoundref="Book_8java" startline="63" endline="72">com.example.mybookshelf.dataClass.Book.Book</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1abd4859f20d99f9f603b40a2f4a06f5bd" compoundref="Book_8java" startline="51" endline="61">com.example.mybookshelf.dataClass.Book.Book</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1aa54a2193f20e365db53206d4bf9d7688" compoundref="Book_8java" startline="75" endline="83">com.example.mybookshelf.dataClass.Book.Book</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1af362f232851507c1d64779533639edf8" compoundref="Book_8java" startline="111" endline="113">com.example.mybookshelf.dataClass.Book.getPages</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1afcedb56c6822b09f8ebd947bcb392095" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.dataClass.Book.release_date</definition>
+        <argsstring></argsstring>
+        <name>release_date</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.release_date</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="8" column="20" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="8" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ac921cbeaf1c2ee96086e47d2d7586c6f" compoundref="Book_8java" startline="16" endline="21">com.example.mybookshelf.dataClass.Book.Book</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ab0f3ce1105d827eb45236089598f37c8" compoundref="Book_8java" startline="63" endline="72">com.example.mybookshelf.dataClass.Book.Book</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1abd4859f20d99f9f603b40a2f4a06f5bd" compoundref="Book_8java" startline="51" endline="61">com.example.mybookshelf.dataClass.Book.Book</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1aa54a2193f20e365db53206d4bf9d7688" compoundref="Book_8java" startline="75" endline="83">com.example.mybookshelf.dataClass.Book.Book</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a013544b074d1a225d85d4870e85f2eb6" compoundref="Book_8java" startline="104" endline="106">com.example.mybookshelf.dataClass.Book.getRelease_date</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ac360d6fd5854218af0be0939d5b8a88a" compoundref="Book_8java" startline="139" endline="141">com.example.mybookshelf.dataClass.Book.getReleaseDate</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a1059730606a2b2dd0f6e5d1e50f9bd3c" compoundref="Book_8java" startline="153" endline="155">com.example.mybookshelf.dataClass.Book.setRelease_date</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1aa5ab068f4dccbe382b46f81512c81b65" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.dataClass.Book.image_url</definition>
+        <argsstring></argsstring>
+        <name>image_url</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.image_url</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="9" column="20" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="9" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ab0f3ce1105d827eb45236089598f37c8" compoundref="Book_8java" startline="63" endline="72">com.example.mybookshelf.dataClass.Book.Book</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1abd4859f20d99f9f603b40a2f4a06f5bd" compoundref="Book_8java" startline="51" endline="61">com.example.mybookshelf.dataClass.Book.Book</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1aa54a2193f20e365db53206d4bf9d7688" compoundref="Book_8java" startline="75" endline="83">com.example.mybookshelf.dataClass.Book.Book</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a20229b9b1dcc454fc3f09a50e719294c" compoundref="Book_8java" startline="125" endline="127">com.example.mybookshelf.dataClass.Book.getImageUrl</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a7e155af4225503897eeb756543dc6331" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.dataClass.Book.description</definition>
+        <argsstring></argsstring>
+        <name>description</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.description</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="10" column="20" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="10" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ab0f3ce1105d827eb45236089598f37c8" compoundref="Book_8java" startline="63" endline="72">com.example.mybookshelf.dataClass.Book.Book</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1abd4859f20d99f9f603b40a2f4a06f5bd" compoundref="Book_8java" startline="51" endline="61">com.example.mybookshelf.dataClass.Book.Book</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1aa54a2193f20e365db53206d4bf9d7688" compoundref="Book_8java" startline="75" endline="83">com.example.mybookshelf.dataClass.Book.Book</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a458c546dddffe750414f225231ac7762" compoundref="Book_8java" startline="132" endline="134">com.example.mybookshelf.dataClass.Book.getDescription</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1aada77ec14a69a92c76d58cdb44be321a" prot="private" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean com.example.mybookshelf.dataClass.Book.inDatabase</definition>
+        <argsstring></argsstring>
+        <name>inDatabase</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.inDatabase</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="11" column="21" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="11" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a71f2e0de123a2cd2f072c4b3426c5d1f" compoundref="Book_8java" startline="40" endline="42">com.example.mybookshelf.dataClass.Book.isInDatabase</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a44a086ea4c79159d292634cf7c07a3b7" compoundref="Book_8java" startline="47" endline="49">com.example.mybookshelf.dataClass.Book.setInDatabase</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a9014d1ca4a42e83cf1373ddf22a2d2d3" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int com.example.mybookshelf.dataClass.Book.id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="12" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="12" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ab0f3ce1105d827eb45236089598f37c8" compoundref="Book_8java" startline="63" endline="72">com.example.mybookshelf.dataClass.Book.Book</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1abd4859f20d99f9f603b40a2f4a06f5bd" compoundref="Book_8java" startline="51" endline="61">com.example.mybookshelf.dataClass.Book.Book</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ab76b4ec7891e641d4c1a70a564805ffb" compoundref="Book_8java" startline="33" endline="35">com.example.mybookshelf.dataClass.Book.getId</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a10387afe95bef1f0f5279139ec1edfee" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int com.example.mybookshelf.dataClass.Book.reading_time</definition>
+        <argsstring></argsstring>
+        <name>reading_time</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.reading_time</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="13" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a35d589bb977d39d87d1391082728ef02" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.dataClass.Book.status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.status</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="14" column="20" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="14" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a7c4ec1f3e154fad200b64643574e5c9c" compoundref="Book_8java" startline="166" endline="169">com.example.mybookshelf.dataClass.Book.getStatus</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1afe792f46758c4c095ba85c7e996f678f" compoundref="Book_8java" startline="159" endline="162">com.example.mybookshelf.dataClass.Book.setStatus</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ac921cbeaf1c2ee96086e47d2d7586c6f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.example.mybookshelf.dataClass.Book.Book</definition>
+        <argsstring>(String name, String release_date, int pages, String author)</argsstring>
+        <name>Book</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.Book</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>release_date</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pages</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>author</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="16" column="12" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="16" bodyend="21"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a3b6cb312479596b6af26e28f6135e4ff" compoundref="Book_8java" startline="6">com.example.mybookshelf.dataClass.Book.author</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a628b11acb47a0e2050df73420ed11687" compoundref="Book_8java" startline="5">com.example.mybookshelf.dataClass.Book.name</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a1a028f264e2ace9e6bc8f0ca95534a95" compoundref="Book_8java" startline="7">com.example.mybookshelf.dataClass.Book.pages</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1afcedb56c6822b09f8ebd947bcb392095" compoundref="Book_8java" startline="8">com.example.mybookshelf.dataClass.Book.release_date</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ab78862de4a0e97e9190086f397a88fd4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.dataClass.Book.getGenre</definition>
+        <argsstring>()</argsstring>
+        <name>getGenre</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.getGenre</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the genre. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="26" column="19" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="26" bodyend="28"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1adecdb539a7b96a7ed6738cb61f2a5855" compoundref="Book_8java" startline="4">com.example.mybookshelf.dataClass.Book.genre</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a39a8f40aa163994c415f165d94ee47fd" compoundref="UIMaster_8java" startline="1153" endline="1168">com.example.mybookshelf.UIMaster.filterBooks</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ab1625f7432f6fcc4f53a63d3b893065f" compoundref="MainActivity_8java" startline="265" endline="352">com.example.mybookshelf.MainActivity.saveBook</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ab76b4ec7891e641d4c1a70a564805ffb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.example.mybookshelf.dataClass.Book.getId</definition>
+        <argsstring>()</argsstring>
+        <name>getId</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.getId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the unique identifier of the object. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="33" column="16" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="33" bodyend="35"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a9014d1ca4a42e83cf1373ddf22a2d2d3" compoundref="Book_8java" startline="12">com.example.mybookshelf.dataClass.Book.id</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1aecf267c9d5fc023c90187a13bc4ebe2e" compoundref="CostumeListAdapter_8java" startline="210" endline="284">com.example.mybookshelf.LayoutManager.CostumeListAdapter.bindBookData</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a1533d0ed2384f2ec729cfcec7bd9a25f" compoundref="UIMaster_8java" startline="147" endline="321">com.example.mybookshelf.UIMaster.createBookBox</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1a73afe4df78d60ab38b9b7d8b9e804d05" compoundref="CostumeListAdapter_8java" startline="289" endline="298">com.example.mybookshelf.LayoutManager.CostumeListAdapter.createTextWatcher</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a6bfa78cc6e4957456c3c0a7d6d5281dc" compoundref="DataBaseConnection_8java" startline="521" endline="542">com.example.mybookshelf.DataBaseConnection.getRatingFromBook</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a50ffabe98d3e06a1168741e025b21b58" compoundref="MainActivity_8java" startline="390" endline="393">com.example.mybookshelf.MainActivity.handleBookChange</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ab32626fd4493c33e19a7875ff500b2e6" compoundref="DataBaseConnection_8java" startline="629" endline="662">com.example.mybookshelf.DataBaseConnection.removeBookFromUser</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a71f2e0de123a2cd2f072c4b3426c5d1f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean com.example.mybookshelf.dataClass.Book.isInDatabase</definition>
+        <argsstring>()</argsstring>
+        <name>isInDatabase</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.isInDatabase</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks if the object is present in the database. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="40" column="20" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="40" bodyend="42"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1aada77ec14a69a92c76d58cdb44be321a" compoundref="Book_8java" startline="11">com.example.mybookshelf.dataClass.Book.inDatabase</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb442e89bbb66fadad2986d9229014b0" compoundref="User_8java" startline="239" endline="283">com.example.mybookshelf.dataClass.User.removeBook</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a44a086ea4c79159d292634cf7c07a3b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.dataClass.Book.setInDatabase</definition>
+        <argsstring>(boolean inDatabase)</argsstring>
+        <name>setInDatabase</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.setInDatabase</qualifiedname>
+        <param>
+          <type>boolean</type>
+          <declname>inDatabase</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets whether the object is stored in the database. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="47" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="47" bodyend="49"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1aada77ec14a69a92c76d58cdb44be321a" compoundref="Book_8java" startline="11">com.example.mybookshelf.dataClass.Book.inDatabase</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ab1625f7432f6fcc4f53a63d3b893065f" compoundref="MainActivity_8java" startline="265" endline="352">com.example.mybookshelf.MainActivity.saveBook</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1abd4859f20d99f9f603b40a2f4a06f5bd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.example.mybookshelf.dataClass.Book.Book</definition>
+        <argsstring>(String name, String release_date, int pages, String author, String image_url, String description, int id, String genre, String Status)</argsstring>
+        <name>Book</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.Book</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>release_date</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pages</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>author</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>image_url</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>description</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>genre</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>Status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="51" column="12" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="51" bodyend="61"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a3b6cb312479596b6af26e28f6135e4ff" compoundref="Book_8java" startline="6">com.example.mybookshelf.dataClass.Book.author</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a7e155af4225503897eeb756543dc6331" compoundref="Book_8java" startline="10">com.example.mybookshelf.dataClass.Book.description</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1adecdb539a7b96a7ed6738cb61f2a5855" compoundref="Book_8java" startline="4">com.example.mybookshelf.dataClass.Book.genre</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a9014d1ca4a42e83cf1373ddf22a2d2d3" compoundref="Book_8java" startline="12">com.example.mybookshelf.dataClass.Book.id</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1aa5ab068f4dccbe382b46f81512c81b65" compoundref="Book_8java" startline="9">com.example.mybookshelf.dataClass.Book.image_url</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a628b11acb47a0e2050df73420ed11687" compoundref="Book_8java" startline="5">com.example.mybookshelf.dataClass.Book.name</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a1a028f264e2ace9e6bc8f0ca95534a95" compoundref="Book_8java" startline="7">com.example.mybookshelf.dataClass.Book.pages</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1afcedb56c6822b09f8ebd947bcb392095" compoundref="Book_8java" startline="8">com.example.mybookshelf.dataClass.Book.release_date</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ab0f3ce1105d827eb45236089598f37c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.example.mybookshelf.dataClass.Book.Book</definition>
+        <argsstring>(String name, String release_date, int pages, String author, String image_url, String description, int id, String genre)</argsstring>
+        <name>Book</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.Book</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>release_date</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pages</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>author</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>image_url</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>description</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>genre</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="63" column="12" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="63" bodyend="72"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a3b6cb312479596b6af26e28f6135e4ff" compoundref="Book_8java" startline="6">com.example.mybookshelf.dataClass.Book.author</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a7e155af4225503897eeb756543dc6331" compoundref="Book_8java" startline="10">com.example.mybookshelf.dataClass.Book.description</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1adecdb539a7b96a7ed6738cb61f2a5855" compoundref="Book_8java" startline="4">com.example.mybookshelf.dataClass.Book.genre</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a9014d1ca4a42e83cf1373ddf22a2d2d3" compoundref="Book_8java" startline="12">com.example.mybookshelf.dataClass.Book.id</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1aa5ab068f4dccbe382b46f81512c81b65" compoundref="Book_8java" startline="9">com.example.mybookshelf.dataClass.Book.image_url</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a628b11acb47a0e2050df73420ed11687" compoundref="Book_8java" startline="5">com.example.mybookshelf.dataClass.Book.name</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a1a028f264e2ace9e6bc8f0ca95534a95" compoundref="Book_8java" startline="7">com.example.mybookshelf.dataClass.Book.pages</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1afcedb56c6822b09f8ebd947bcb392095" compoundref="Book_8java" startline="8">com.example.mybookshelf.dataClass.Book.release_date</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1aa54a2193f20e365db53206d4bf9d7688" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.example.mybookshelf.dataClass.Book.Book</definition>
+        <argsstring>(String name, String release_date, int pages, String author, String image_url, String description, String genre)</argsstring>
+        <name>Book</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.Book</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>release_date</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pages</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>author</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>image_url</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>description</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>genre</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="75" column="12" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="75" bodyend="83"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a3b6cb312479596b6af26e28f6135e4ff" compoundref="Book_8java" startline="6">com.example.mybookshelf.dataClass.Book.author</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a7e155af4225503897eeb756543dc6331" compoundref="Book_8java" startline="10">com.example.mybookshelf.dataClass.Book.description</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1adecdb539a7b96a7ed6738cb61f2a5855" compoundref="Book_8java" startline="4">com.example.mybookshelf.dataClass.Book.genre</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1aa5ab068f4dccbe382b46f81512c81b65" compoundref="Book_8java" startline="9">com.example.mybookshelf.dataClass.Book.image_url</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a628b11acb47a0e2050df73420ed11687" compoundref="Book_8java" startline="5">com.example.mybookshelf.dataClass.Book.name</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a1a028f264e2ace9e6bc8f0ca95534a95" compoundref="Book_8java" startline="7">com.example.mybookshelf.dataClass.Book.pages</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1afcedb56c6822b09f8ebd947bcb392095" compoundref="Book_8java" startline="8">com.example.mybookshelf.dataClass.Book.release_date</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ae12a6b9c36d0c9fc32b18f7903198f6b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.example.mybookshelf.dataClass.Book.Book</definition>
+        <argsstring>(String name, int pages)</argsstring>
+        <name>Book</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.Book</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pages</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="85" column="12" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="85" bodyend="88"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a628b11acb47a0e2050df73420ed11687" compoundref="Book_8java" startline="5">com.example.mybookshelf.dataClass.Book.name</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a1a028f264e2ace9e6bc8f0ca95534a95" compoundref="Book_8java" startline="7">com.example.mybookshelf.dataClass.Book.pages</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a9c7d1fed8ed10b566260912ab7e596d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.example.mybookshelf.dataClass.Book.Book</definition>
+        <argsstring>(String name)</argsstring>
+        <name>Book</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.Book</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="90" column="12" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="90" bodyend="92"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a628b11acb47a0e2050df73420ed11687" compoundref="Book_8java" startline="5">com.example.mybookshelf.dataClass.Book.name</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a4109da1bdee13601576c6725d6e89e71" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.dataClass.Book.getName</definition>
+        <argsstring>()</argsstring>
+        <name>getName</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.getName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the name. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="97" column="19" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="97" bodyend="99"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a628b11acb47a0e2050df73420ed11687" compoundref="Book_8java" startline="5">com.example.mybookshelf.dataClass.Book.name</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aade37d8176c8c756543ce0de90e91e80" compoundref="User_8java" startline="215" endline="225">com.example.mybookshelf.dataClass.User.addBook</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1aecf267c9d5fc023c90187a13bc4ebe2e" compoundref="CostumeListAdapter_8java" startline="210" endline="284">com.example.mybookshelf.LayoutManager.CostumeListAdapter.bindBookData</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a1533d0ed2384f2ec729cfcec7bd9a25f" compoundref="UIMaster_8java" startline="147" endline="321">com.example.mybookshelf.UIMaster.createBookBox</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a39a8f40aa163994c415f165d94ee47fd" compoundref="UIMaster_8java" startline="1153" endline="1168">com.example.mybookshelf.UIMaster.filterBooks</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1ac10bf110d981c8788e0e4b9b2e25177e" compoundref="GoalHandler_8java" startline="31" endline="90">com.example.mybookshelf.GoalHandler.handleBookAdded</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1a5ddb8c71cb9828e9525f4bafefaf685f" compoundref="GoalHandler_8java" startline="92" endline="203">com.example.mybookshelf.GoalHandler.handleBookChange</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1a326d9e94cb83508cae6d760df1bd5718" compoundref="GoalHandler_8java" startline="205" endline="261">com.example.mybookshelf.GoalHandler.handleBookRemoved</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac2a608fcf86d3dbe14b4684dbbaf1431" compoundref="UIMaster_8java" startline="912" endline="1070">com.example.mybookshelf.UIMaster.navigateToDetails</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb442e89bbb66fadad2986d9229014b0" compoundref="User_8java" startline="239" endline="283">com.example.mybookshelf.dataClass.User.removeBook</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ab1625f7432f6fcc4f53a63d3b893065f" compoundref="MainActivity_8java" startline="265" endline="352">com.example.mybookshelf.MainActivity.saveBook</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a013544b074d1a225d85d4870e85f2eb6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.dataClass.Book.getRelease_date</definition>
+        <argsstring>()</argsstring>
+        <name>getRelease_date</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.getRelease_date</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the release date of the item. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="104" column="19" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="104" bodyend="106"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1afcedb56c6822b09f8ebd947bcb392095" compoundref="Book_8java" startline="8">com.example.mybookshelf.dataClass.Book.release_date</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a1533d0ed2384f2ec729cfcec7bd9a25f" compoundref="UIMaster_8java" startline="147" endline="321">com.example.mybookshelf.UIMaster.createBookBox</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1af362f232851507c1d64779533639edf8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.example.mybookshelf.dataClass.Book.getPages</definition>
+        <argsstring>()</argsstring>
+        <name>getPages</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.getPages</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the number of pages. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="111" column="16" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="111" bodyend="113"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a1a028f264e2ace9e6bc8f0ca95534a95" compoundref="Book_8java" startline="7">com.example.mybookshelf.dataClass.Book.pages</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1ac10bf110d981c8788e0e4b9b2e25177e" compoundref="GoalHandler_8java" startline="31" endline="90">com.example.mybookshelf.GoalHandler.handleBookAdded</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1a5ddb8c71cb9828e9525f4bafefaf685f" compoundref="GoalHandler_8java" startline="92" endline="203">com.example.mybookshelf.GoalHandler.handleBookChange</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1a326d9e94cb83508cae6d760df1bd5718" compoundref="GoalHandler_8java" startline="205" endline="261">com.example.mybookshelf.GoalHandler.handleBookRemoved</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ab1625f7432f6fcc4f53a63d3b893065f" compoundref="MainActivity_8java" startline="265" endline="352">com.example.mybookshelf.MainActivity.saveBook</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a72061c36f82e9d925effeb02dc0da55d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.dataClass.Book.getAuthor</definition>
+        <argsstring>()</argsstring>
+        <name>getAuthor</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.getAuthor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the author of the book. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="118" column="19" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="118" bodyend="120"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a3b6cb312479596b6af26e28f6135e4ff" compoundref="Book_8java" startline="6">com.example.mybookshelf.dataClass.Book.author</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1aecf267c9d5fc023c90187a13bc4ebe2e" compoundref="CostumeListAdapter_8java" startline="210" endline="284">com.example.mybookshelf.LayoutManager.CostumeListAdapter.bindBookData</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a1533d0ed2384f2ec729cfcec7bd9a25f" compoundref="UIMaster_8java" startline="147" endline="321">com.example.mybookshelf.UIMaster.createBookBox</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a39a8f40aa163994c415f165d94ee47fd" compoundref="UIMaster_8java" startline="1153" endline="1168">com.example.mybookshelf.UIMaster.filterBooks</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ab1625f7432f6fcc4f53a63d3b893065f" compoundref="MainActivity_8java" startline="265" endline="352">com.example.mybookshelf.MainActivity.saveBook</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a20229b9b1dcc454fc3f09a50e719294c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.dataClass.Book.getImageUrl</definition>
+        <argsstring>()</argsstring>
+        <name>getImageUrl</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.getImageUrl</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the URL of the image. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="125" column="19" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="125" bodyend="127"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1aa5ab068f4dccbe382b46f81512c81b65" compoundref="Book_8java" startline="9">com.example.mybookshelf.dataClass.Book.image_url</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1aecf267c9d5fc023c90187a13bc4ebe2e" compoundref="CostumeListAdapter_8java" startline="210" endline="284">com.example.mybookshelf.LayoutManager.CostumeListAdapter.bindBookData</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a1533d0ed2384f2ec729cfcec7bd9a25f" compoundref="UIMaster_8java" startline="147" endline="321">com.example.mybookshelf.UIMaster.createBookBox</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ab1625f7432f6fcc4f53a63d3b893065f" compoundref="MainActivity_8java" startline="265" endline="352">com.example.mybookshelf.MainActivity.saveBook</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a458c546dddffe750414f225231ac7762" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.dataClass.Book.getDescription</definition>
+        <argsstring>()</argsstring>
+        <name>getDescription</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.getDescription</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the description. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="132" column="19" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="132" bodyend="134"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a7e155af4225503897eeb756543dc6331" compoundref="Book_8java" startline="10">com.example.mybookshelf.dataClass.Book.description</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ab1625f7432f6fcc4f53a63d3b893065f" compoundref="MainActivity_8java" startline="265" endline="352">com.example.mybookshelf.MainActivity.saveBook</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ac360d6fd5854218af0be0939d5b8a88a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.dataClass.Book.getReleaseDate</definition>
+        <argsstring>()</argsstring>
+        <name>getReleaseDate</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.getReleaseDate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the release date of the product. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="139" column="19" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="139" bodyend="141"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1afcedb56c6822b09f8ebd947bcb392095" compoundref="Book_8java" startline="8">com.example.mybookshelf.dataClass.Book.release_date</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ab1625f7432f6fcc4f53a63d3b893065f" compoundref="MainActivity_8java" startline="265" endline="352">com.example.mybookshelf.MainActivity.saveBook</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1aac979a1131aa1e38e45ded0e55fcbc05" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.dataClass.Book.setAuthor</definition>
+        <argsstring>(String author)</argsstring>
+        <name>setAuthor</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.setAuthor</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>author</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the author of the document. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="146" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="146" bodyend="148"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a3b6cb312479596b6af26e28f6135e4ff" compoundref="Book_8java" startline="6">com.example.mybookshelf.dataClass.Book.author</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a1533d0ed2384f2ec729cfcec7bd9a25f" compoundref="UIMaster_8java" startline="147" endline="321">com.example.mybookshelf.UIMaster.createBookBox</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a1059730606a2b2dd0f6e5d1e50f9bd3c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.dataClass.Book.setRelease_date</definition>
+        <argsstring>(String release_date)</argsstring>
+        <name>setRelease_date</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.setRelease_date</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>release_date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the release date. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="153" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="153" bodyend="155"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1afcedb56c6822b09f8ebd947bcb392095" compoundref="Book_8java" startline="8">com.example.mybookshelf.dataClass.Book.release_date</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a1533d0ed2384f2ec729cfcec7bd9a25f" compoundref="UIMaster_8java" startline="147" endline="321">com.example.mybookshelf.UIMaster.createBookBox</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1afe792f46758c4c095ba85c7e996f678f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.dataClass.Book.setStatus</definition>
+        <argsstring>(String status)</argsstring>
+        <name>setStatus</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.setStatus</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the status to the specified value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="159" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="159" bodyend="162"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a35d589bb977d39d87d1391082728ef02" compoundref="Book_8java" startline="14">com.example.mybookshelf.dataClass.Book.status</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ab1625f7432f6fcc4f53a63d3b893065f" compoundref="MainActivity_8java" startline="265" endline="352">com.example.mybookshelf.MainActivity.saveBook</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a7c4ec1f3e154fad200b64643574e5c9c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.dataClass.Book.getStatus</definition>
+        <argsstring>()</argsstring>
+        <name>getStatus</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Book.getStatus</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the current status. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="166" column="19" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="166" bodyend="169"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a35d589bb977d39d87d1391082728ef02" compoundref="Book_8java" startline="14">com.example.mybookshelf.dataClass.Book.status</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1ac10bf110d981c8788e0e4b9b2e25177e" compoundref="GoalHandler_8java" startline="31" endline="90">com.example.mybookshelf.GoalHandler.handleBookAdded</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1a5ddb8c71cb9828e9525f4bafefaf685f" compoundref="GoalHandler_8java" startline="92" endline="203">com.example.mybookshelf.GoalHandler.handleBookChange</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a50ffabe98d3e06a1168741e025b21b58" compoundref="MainActivity_8java" startline="390" endline="393">com.example.mybookshelf.MainActivity.handleBookChange</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac2a608fcf86d3dbe14b4684dbbaf1431" compoundref="UIMaster_8java" startline="912" endline="1070">com.example.mybookshelf.UIMaster.navigateToDetails</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>String</label>
+      </node>
+      <node id="4">
+        <label>boolean</label>
+      </node>
+      <node id="1">
+        <label>com.example.mybookshelf.dataClass.Book</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-author</edgelabel>
+          <edgelabel>-description</edgelabel>
+          <edgelabel>-genre</edgelabel>
+          <edgelabel>-image_url</edgelabel>
+          <edgelabel>-name</edgelabel>
+          <edgelabel>-release_date</edgelabel>
+          <edgelabel>-status</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-id</edgelabel>
+          <edgelabel>-pages</edgelabel>
+          <edgelabel>-reading_time</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-inDatabase</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>int</label>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" line="3" column="7" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Book.java" bodystart="3" bodyend="170"/>
+    <listofallmembers>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a3b6cb312479596b6af26e28f6135e4ff" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>author</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ac921cbeaf1c2ee96086e47d2d7586c6f" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>Book</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1abd4859f20d99f9f603b40a2f4a06f5bd" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>Book</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ab0f3ce1105d827eb45236089598f37c8" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>Book</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1aa54a2193f20e365db53206d4bf9d7688" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>Book</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ae12a6b9c36d0c9fc32b18f7903198f6b" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>Book</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a9c7d1fed8ed10b566260912ab7e596d1" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>Book</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a7e155af4225503897eeb756543dc6331" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>description</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1adecdb539a7b96a7ed6738cb61f2a5855" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>genre</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a72061c36f82e9d925effeb02dc0da55d" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>getAuthor</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a458c546dddffe750414f225231ac7762" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>getDescription</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ab78862de4a0e97e9190086f397a88fd4" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>getGenre</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ab76b4ec7891e641d4c1a70a564805ffb" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>getId</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a20229b9b1dcc454fc3f09a50e719294c" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>getImageUrl</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a4109da1bdee13601576c6725d6e89e71" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>getName</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1af362f232851507c1d64779533639edf8" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>getPages</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a013544b074d1a225d85d4870e85f2eb6" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>getRelease_date</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ac360d6fd5854218af0be0939d5b8a88a" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>getReleaseDate</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a7c4ec1f3e154fad200b64643574e5c9c" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>getStatus</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a9014d1ca4a42e83cf1373ddf22a2d2d3" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>id</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1aa5ab068f4dccbe382b46f81512c81b65" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>image_url</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1aada77ec14a69a92c76d58cdb44be321a" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>inDatabase</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a71f2e0de123a2cd2f072c4b3426c5d1f" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>isInDatabase</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a628b11acb47a0e2050df73420ed11687" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>name</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a1a028f264e2ace9e6bc8f0ca95534a95" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>pages</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a10387afe95bef1f0f5279139ec1edfee" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>reading_time</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1afcedb56c6822b09f8ebd947bcb392095" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>release_date</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1aac979a1131aa1e38e45ded0e55fcbc05" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>setAuthor</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a44a086ea4c79159d292634cf7c07a3b7" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>setInDatabase</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a1059730606a2b2dd0f6e5d1e50f9bd3c" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>setRelease_date</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1afe792f46758c4c095ba85c7e996f678f" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>setStatus</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a35d589bb977d39d87d1391082728ef02" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Book</scope><name>status</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,13 @@
+<map id="com.example.mybookshelf.UIMaster.setupChart" name="com.example.mybookshelf.UIMaster.setupChart">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,133,208,173"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a66cf6ce29c43e6db34be85ae9990c102" title=" " alt="" coords="279,5,481,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,131,187,93,255,55,274,47,276,52,257,60,189,97,135,135"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#ae589c66b6b1826db14cd0185e2453c12" title=" " alt="" coords="279,69,481,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="192,131,280,110,282,115,194,136"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a2f446043c1019868262b5e49ddb58609" title=" " alt="" coords="261,133,499,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="208,151,248,151,248,156,208,156"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a5368b8b93b9216d91a256a2302ea04c8" title=" " alt="" coords="256,197,504,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="194,171,282,192,280,197,192,176"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a897a27ba41fe604acf9472257ad18685" title=" " alt="" coords="279,261,481,301"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="135,171,189,210,257,247,276,254,274,259,255,252,187,214,132,176"/>
+</map>

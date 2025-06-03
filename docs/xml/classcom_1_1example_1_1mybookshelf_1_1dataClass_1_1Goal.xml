@@ -1,0 +1,515 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal" kind="class" language="Java" prot="public">
+    <compoundname>com::example::mybookshelf::dataClass::Goal</compoundname>
+    <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1ad6241e554fdf011228659d99d0c8ea2d" prot="package" static="no" mutable="no">
+        <type>int</type>
+        <definition>int com.example.mybookshelf.dataClass.Goal.id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Goal.id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" line="8" column="9" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a4432cf44dcd6f38e3056a7f00979b029" prot="package" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean com.example.mybookshelf.dataClass.Goal.completed</definition>
+        <argsstring></argsstring>
+        <name>completed</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Goal.completed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" line="9" column="13" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1aeae5f251c761d9dbf9b70bcd361dfb3c" prot="package" static="no" mutable="no">
+        <type>int</type>
+        <definition>int com.example.mybookshelf.dataClass.Goal.progress</definition>
+        <argsstring></argsstring>
+        <name>progress</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Goal.progress</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" line="10" column="9" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a2f99aeffbc87fa8191be1ca933e900ce" prot="package" static="no" mutable="no">
+        <type>int</type>
+        <definition>int com.example.mybookshelf.dataClass.Goal.target</definition>
+        <argsstring></argsstring>
+        <name>target</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Goal.target</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" line="11" column="9" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a20a07e2c29608a8192b37369989972e9" prot="package" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.dataClass.Goal.bookName</definition>
+        <argsstring></argsstring>
+        <name>bookName</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Goal.bookName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" line="12" column="12" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a6da9951b8dd031b6f3db43b62e618488" prot="package" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.dataClass.Goal.goal</definition>
+        <argsstring></argsstring>
+        <name>goal</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Goal.goal</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" line="13" column="12" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a7604002f4f1c4f27923de5f1613a9e53" prot="package" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.dataClass.Goal.frequenzy</definition>
+        <argsstring></argsstring>
+        <name>frequenzy</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Goal.frequenzy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" line="14" column="12" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1af7939d76edf2eca34f8aed30026a2c54" prot="package" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean com.example.mybookshelf.dataClass.Goal.reminder</definition>
+        <argsstring></argsstring>
+        <name>reminder</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Goal.reminder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" line="15" column="13" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1ab3f672626fd9809a052e6ceff617d66e" prot="package" static="no" mutable="no">
+        <type>LocalDateTime</type>
+        <definition>LocalDateTime com.example.mybookshelf.dataClass.Goal.deadline</definition>
+        <argsstring></argsstring>
+        <name>deadline</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Goal.deadline</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" line="16" column="19" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" bodystart="16" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1ac16516ca910e247b38cafd0a61091fa4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.example.mybookshelf.dataClass.Goal.Goal</definition>
+        <argsstring>(int id, int progress, int target, String goalType, String goal, LocalDateTime deadline)</argsstring>
+        <name>Goal</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Goal.Goal</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>progress</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>goalType</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>goal</declname>
+        </param>
+        <param>
+          <type>LocalDateTime</type>
+          <declname>deadline</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" line="18" column="12" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" bodystart="18" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1ae3af06e883ffba04cbd617fe5692a928" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.example.mybookshelf.dataClass.Goal.Goal</definition>
+        <argsstring>(int id, int progress, int target, String goalType, String goal)</argsstring>
+        <name>Goal</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Goal.Goal</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>progress</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>goalType</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>goal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" line="30" column="12" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" bodystart="30" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a35df8d1ea12ab64a2d5b083935b83de6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.example.mybookshelf.dataClass.Goal.Goal</definition>
+        <argsstring>(int id, int progress, int target, String bookName, String goalType, String goal)</argsstring>
+        <name>Goal</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Goal.Goal</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>progress</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>bookName</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>goalType</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>goal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" line="42" column="12" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" bodystart="42" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1abcf308a0e49a9b60f6761102438d9d04" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.example.mybookshelf.dataClass.Goal.getId</definition>
+        <argsstring>()</argsstring>
+        <name>getId</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Goal.getId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the ID of the object. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" line="56" column="16" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" bodystart="56" bodyend="58"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1acb4d2c7eb719b6b820003c8c22cc052e" compoundref="User_8java" startline="324" endline="327">com.example.mybookshelf.dataClass.User.addGoal</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1af6a51f456a68a61bedc36289b91e0716" compoundref="CustomGoalAdapter_8java" startline="109" endline="202">com.example.mybookshelf.LayoutManager.CustomGoalAdapter.createGoalBox</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1ac10bf110d981c8788e0e4b9b2e25177e" compoundref="GoalHandler_8java" startline="31" endline="90">com.example.mybookshelf.GoalHandler.handleBookAdded</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1a5ddb8c71cb9828e9525f4bafefaf685f" compoundref="GoalHandler_8java" startline="92" endline="203">com.example.mybookshelf.GoalHandler.handleBookChange</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1a326d9e94cb83508cae6d760df1bd5718" compoundref="GoalHandler_8java" startline="205" endline="261">com.example.mybookshelf.GoalHandler.handleBookRemoved</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1af7b1e82158b03f007b5e058438e74dd7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean com.example.mybookshelf.dataClass.Goal.isCompleted</definition>
+        <argsstring>()</argsstring>
+        <name>isCompleted</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Goal.isCompleted</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks if the task is completed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" line="63" column="20" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" bodystart="63" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a964cb06dadac4c69df6c931402733779" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.example.mybookshelf.dataClass.Goal.getProgress</definition>
+        <argsstring>()</argsstring>
+        <name>getProgress</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Goal.getProgress</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the current progress value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" line="70" column="16" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" bodystart="70" bodyend="72"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a3b22d6106c92d008ed8b05c10892f0b7" compoundref="DataBaseConnection_8java" startline="812" endline="905">com.example.mybookshelf.DataBaseConnection.addGoal</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1af6a51f456a68a61bedc36289b91e0716" compoundref="CustomGoalAdapter_8java" startline="109" endline="202">com.example.mybookshelf.LayoutManager.CustomGoalAdapter.createGoalBox</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1ac10bf110d981c8788e0e4b9b2e25177e" compoundref="GoalHandler_8java" startline="31" endline="90">com.example.mybookshelf.GoalHandler.handleBookAdded</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1a5ddb8c71cb9828e9525f4bafefaf685f" compoundref="GoalHandler_8java" startline="92" endline="203">com.example.mybookshelf.GoalHandler.handleBookChange</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1a326d9e94cb83508cae6d760df1bd5718" compoundref="GoalHandler_8java" startline="205" endline="261">com.example.mybookshelf.GoalHandler.handleBookRemoved</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a84c2af13824c14a2b6c3dcf25a493d0f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.example.mybookshelf.dataClass.Goal.getTarget</definition>
+        <argsstring>()</argsstring>
+        <name>getTarget</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Goal.getTarget</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the target value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" line="77" column="16" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" bodystart="77" bodyend="79"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a3b22d6106c92d008ed8b05c10892f0b7" compoundref="DataBaseConnection_8java" startline="812" endline="905">com.example.mybookshelf.DataBaseConnection.addGoal</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1af6a51f456a68a61bedc36289b91e0716" compoundref="CustomGoalAdapter_8java" startline="109" endline="202">com.example.mybookshelf.LayoutManager.CustomGoalAdapter.createGoalBox</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1ac10bf110d981c8788e0e4b9b2e25177e" compoundref="GoalHandler_8java" startline="31" endline="90">com.example.mybookshelf.GoalHandler.handleBookAdded</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1a5ddb8c71cb9828e9525f4bafefaf685f" compoundref="GoalHandler_8java" startline="92" endline="203">com.example.mybookshelf.GoalHandler.handleBookChange</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1a326d9e94cb83508cae6d760df1bd5718" compoundref="GoalHandler_8java" startline="205" endline="261">com.example.mybookshelf.GoalHandler.handleBookRemoved</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a1c80a58d3e1cd2e1ab6ef14c40d3b274" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.dataClass.Goal.getGoal</definition>
+        <argsstring>()</argsstring>
+        <name>getGoal</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Goal.getGoal</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the current goal. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" line="84" column="19" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" bodystart="84" bodyend="86"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a3b22d6106c92d008ed8b05c10892f0b7" compoundref="DataBaseConnection_8java" startline="812" endline="905">com.example.mybookshelf.DataBaseConnection.addGoal</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1af6a51f456a68a61bedc36289b91e0716" compoundref="CustomGoalAdapter_8java" startline="109" endline="202">com.example.mybookshelf.LayoutManager.CustomGoalAdapter.createGoalBox</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1ac10bf110d981c8788e0e4b9b2e25177e" compoundref="GoalHandler_8java" startline="31" endline="90">com.example.mybookshelf.GoalHandler.handleBookAdded</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1a5ddb8c71cb9828e9525f4bafefaf685f" compoundref="GoalHandler_8java" startline="92" endline="203">com.example.mybookshelf.GoalHandler.handleBookChange</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1a326d9e94cb83508cae6d760df1bd5718" compoundref="GoalHandler_8java" startline="205" endline="261">com.example.mybookshelf.GoalHandler.handleBookRemoved</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ab4c513c92fc23addef85f0992fb6ddaf" compoundref="NotificationScheduler_8java" startline="253" endline="265">com.example.mybookshelf.notifications.NotificationScheduler.sendGoalCompletedNotification</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a3b610e27f691556a8dcf5b8301b9a9d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.dataClass.Goal.getBookName</definition>
+        <argsstring>()</argsstring>
+        <name>getBookName</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Goal.getBookName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the name of the book. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" line="91" column="19" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" bodystart="91" bodyend="93"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a3b22d6106c92d008ed8b05c10892f0b7" compoundref="DataBaseConnection_8java" startline="812" endline="905">com.example.mybookshelf.DataBaseConnection.addGoal</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1ac10bf110d981c8788e0e4b9b2e25177e" compoundref="GoalHandler_8java" startline="31" endline="90">com.example.mybookshelf.GoalHandler.handleBookAdded</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1a5ddb8c71cb9828e9525f4bafefaf685f" compoundref="GoalHandler_8java" startline="92" endline="203">com.example.mybookshelf.GoalHandler.handleBookChange</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1a326d9e94cb83508cae6d760df1bd5718" compoundref="GoalHandler_8java" startline="205" endline="261">com.example.mybookshelf.GoalHandler.handleBookRemoved</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1ada3305dadb216e065d9bb31e12ff6107" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.dataClass.Goal.getFrequenzy</definition>
+        <argsstring>()</argsstring>
+        <name>getFrequenzy</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Goal.getFrequenzy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the value of frequenzy. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" line="98" column="19" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" bodystart="98" bodyend="100"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a3b22d6106c92d008ed8b05c10892f0b7" compoundref="DataBaseConnection_8java" startline="812" endline="905">com.example.mybookshelf.DataBaseConnection.addGoal</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1af6a51f456a68a61bedc36289b91e0716" compoundref="CustomGoalAdapter_8java" startline="109" endline="202">com.example.mybookshelf.LayoutManager.CustomGoalAdapter.createGoalBox</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a6d63369ad63bbffa2e26cf8466a53e8b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.dataClass.Goal.setId</definition>
+        <argsstring>(int id)</argsstring>
+        <name>setId</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Goal.setId</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the ID of the object. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" line="105" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" bodystart="105" bodyend="107"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a7889f4b8cbd0a3c254d6e1b390f22e00" compoundref="DataBaseConnection_8java" startline="931" endline="1013">com.example.mybookshelf.DataBaseConnection.getAllGoalsForUser</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1aa71a066ecf1e4404a13c28abee75be82" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.dataClass.Goal.toString</definition>
+        <argsstring>()</argsstring>
+        <name>toString</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Goal.toString</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns a string representation of the <ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal" kindref="compound">Goal</ref> object. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" line="113" column="19" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" bodystart="113" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a695831f2ac1529bf5e48ea738b00aaec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.dataClass.Goal.setProgress</definition>
+        <argsstring>(int progress)</argsstring>
+        <name>setProgress</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Goal.setProgress</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>progress</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the progress to the specified value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" line="129" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" bodystart="129" bodyend="131"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1ac10bf110d981c8788e0e4b9b2e25177e" compoundref="GoalHandler_8java" startline="31" endline="90">com.example.mybookshelf.GoalHandler.handleBookAdded</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1a5ddb8c71cb9828e9525f4bafefaf685f" compoundref="GoalHandler_8java" startline="92" endline="203">com.example.mybookshelf.GoalHandler.handleBookChange</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1a326d9e94cb83508cae6d760df1bd5718" compoundref="GoalHandler_8java" startline="205" endline="261">com.example.mybookshelf.GoalHandler.handleBookRemoved</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a24e2c7e0cd0f5cc54b8270358c8650ec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LocalDateTime</type>
+        <definition>LocalDateTime com.example.mybookshelf.dataClass.Goal.getDeadline</definition>
+        <argsstring>()</argsstring>
+        <name>getDeadline</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Goal.getDeadline</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the deadline. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" line="136" column="26" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" bodystart="136" bodyend="138"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5">
+        <label>LocalDateTime</label>
+      </node>
+      <node id="4">
+        <label>String</label>
+      </node>
+      <node id="3">
+        <label>boolean</label>
+      </node>
+      <node id="1">
+        <label>com.example.mybookshelf.dataClass.Goal</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>~id</edgelabel>
+          <edgelabel>~progress</edgelabel>
+          <edgelabel>~target</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>~completed</edgelabel>
+          <edgelabel>~reminder</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>~bookName</edgelabel>
+          <edgelabel>~frequenzy</edgelabel>
+          <edgelabel>~goal</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>~deadline</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>int</label>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" line="7" column="7" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Goal.java" bodystart="7" bodyend="139"/>
+    <listofallmembers>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a20a07e2c29608a8192b37369989972e9" prot="package" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Goal</scope><name>bookName</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a4432cf44dcd6f38e3056a7f00979b029" prot="package" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Goal</scope><name>completed</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1ab3f672626fd9809a052e6ceff617d66e" prot="package" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Goal</scope><name>deadline</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a7604002f4f1c4f27923de5f1613a9e53" prot="package" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Goal</scope><name>frequenzy</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a3b610e27f691556a8dcf5b8301b9a9d1" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Goal</scope><name>getBookName</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a24e2c7e0cd0f5cc54b8270358c8650ec" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Goal</scope><name>getDeadline</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1ada3305dadb216e065d9bb31e12ff6107" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Goal</scope><name>getFrequenzy</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a1c80a58d3e1cd2e1ab6ef14c40d3b274" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Goal</scope><name>getGoal</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1abcf308a0e49a9b60f6761102438d9d04" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Goal</scope><name>getId</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a964cb06dadac4c69df6c931402733779" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Goal</scope><name>getProgress</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a84c2af13824c14a2b6c3dcf25a493d0f" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Goal</scope><name>getTarget</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1ac16516ca910e247b38cafd0a61091fa4" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Goal</scope><name>Goal</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1ae3af06e883ffba04cbd617fe5692a928" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Goal</scope><name>Goal</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a35df8d1ea12ab64a2d5b083935b83de6" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Goal</scope><name>Goal</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a6da9951b8dd031b6f3db43b62e618488" prot="package" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Goal</scope><name>goal</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1ad6241e554fdf011228659d99d0c8ea2d" prot="package" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Goal</scope><name>id</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1af7b1e82158b03f007b5e058438e74dd7" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Goal</scope><name>isCompleted</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1aeae5f251c761d9dbf9b70bcd361dfb3c" prot="package" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Goal</scope><name>progress</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1af7939d76edf2eca34f8aed30026a2c54" prot="package" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Goal</scope><name>reminder</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a6d63369ad63bbffa2e26cf8466a53e8b" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Goal</scope><name>setId</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a695831f2ac1529bf5e48ea738b00aaec" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Goal</scope><name>setProgress</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a2f99aeffbc87fa8191be1ca933e900ce" prot="package" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Goal</scope><name>target</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1aa71a066ecf1e4404a13c28abee75be82" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Goal</scope><name>toString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

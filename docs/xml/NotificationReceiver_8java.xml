@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="NotificationReceiver_8java" kind="file" language="Java">
+    <compoundname>NotificationReceiver.java</compoundname>
+    <includes local="no">android.Manifest</includes>
+    <includes local="no">android.content.BroadcastReceiver</includes>
+    <includes local="no">android.content.Context</includes>
+    <includes local="no">android.content.Intent</includes>
+    <includes local="no">android.content.pm.PackageManager</includes>
+    <includes local="no">android.util.Log</includes>
+    <includes local="no">androidx.core.app.ActivityCompat</includes>
+    <includes local="no">androidx.core.app.NotificationCompat</includes>
+    <includes local="no">androidx.core.app.NotificationManagerCompat</includes>
+    <includes local="no">com.example.mybookshelf.R</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationReceiver.java</label>
+        <link refid="NotificationReceiver_8java"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>android.Manifest</label>
+      </node>
+      <node id="3">
+        <label>android.content.BroadcastReceiver</label>
+      </node>
+      <node id="4">
+        <label>android.content.Context</label>
+      </node>
+      <node id="5">
+        <label>android.content.Intent</label>
+      </node>
+      <node id="6">
+        <label>android.content.pm.PackageManager</label>
+      </node>
+      <node id="7">
+        <label>android.util.Log</label>
+      </node>
+      <node id="8">
+        <label>androidx.core.app.ActivityCompat</label>
+      </node>
+      <node id="9">
+        <label>androidx.core.app.NotificationCompat</label>
+      </node>
+      <node id="10">
+        <label>androidx.core.app.NotificationManagerCompat</label>
+      </node>
+      <node id="11">
+        <label>com.example.mybookshelf.R</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationReceiver" prot="public">com::example::mybookshelf::notifications::NotificationReceiver</innerclass>
+    <innernamespace refid="namespacecom_1_1example_1_1mybookshelf_1_1notifications">com::example::mybookshelf::notifications</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">package<sp/></highlight><highlight class="normal">com.example.mybookshelf.notifications;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.Manifest;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.content.BroadcastReceiver;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.content.Context;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.content.Intent;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.content.pm.PackageManager;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.util.Log;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>androidx.core.app.ActivityCompat;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>androidx.core.app.NotificationCompat;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>androidx.core.app.NotificationManagerCompat;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>com.example.mybookshelf.R;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationReceiver" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationReceiver" kindref="compound">NotificationReceiver</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="classBroadcastReceiver" kindref="compound">BroadcastReceiver</ref><sp/>{</highlight></codeline>
+<codeline lineno="17" refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationReceiver_1aeec8428424ab3fc1e77d9404f621b290" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationReceiver_1aeec8428424ab3fc1e77d9404f621b290" kindref="member">TAG</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;NotificationReceiver&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="23" refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationReceiver_1a16b9874ec4597faf7be00d3c2f9f4c81" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationReceiver_1a16b9874ec4597faf7be00d3c2f9f4c81" kindref="member">onReceive</ref>(Context<sp/>context,<sp/>Intent<sp/>intent)<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>title<sp/>=<sp/>intent.getStringExtra(</highlight><highlight class="stringliteral">&quot;title&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>message<sp/>=<sp/>intent.getStringExtra(</highlight><highlight class="stringliteral">&quot;message&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Show<sp/>your<sp/>notification<sp/>(implementation<sp/>depends<sp/>on<sp/>your<sp/>codebase)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationReceiver_1abe5c4b7b501921cbb9ebbf22dcb06be7" kindref="member">showNotification</ref>(context,<sp/>title,<sp/>message);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Reschedule<sp/>for<sp/>the<sp/>next<sp/>day</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>hour<sp/>=<sp/>intent.getIntExtra(</highlight><highlight class="stringliteral">&quot;hour&quot;</highlight><highlight class="normal">,<sp/>8);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>minute<sp/>=<sp/>intent.getIntExtra(</highlight><highlight class="stringliteral">&quot;minute&quot;</highlight><highlight class="normal">,<sp/>0);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>nextMessage<sp/>=<sp/>intent.getStringExtra(</highlight><highlight class="stringliteral">&quot;message&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler" kindref="compound">NotificationScheduler</ref>.<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a5833d4c1b987dddea26acdad230c640f" kindref="member">scheduleDailyNotification</ref>(context,<sp/>hour,<sp/>minute,<sp/>nextMessage);<sp/></highlight><highlight class="comment">//<sp/>replace<sp/>with<sp/>your<sp/>class</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationReceiver_1abe5c4b7b501921cbb9ebbf22dcb06be7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationReceiver_1abe5c4b7b501921cbb9ebbf22dcb06be7" kindref="member">showNotification</ref>(Context<sp/>context,<sp/>String<sp/>title,<sp/>String<sp/>message)<sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NotificationCompat.Builder<sp/>builder<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>NotificationCompat.Builder(</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>context,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationChannelManager" kindref="compound">NotificationChannelManager</ref>.<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationChannelManager_1a9d0ba4e30a7959d3ca4d5047054be4e8" kindref="member">DEFAULT_CHANNEL_ID</ref>)</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.setSmallIcon(R.drawable.icon)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.setContentTitle(title<sp/>!=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal"><sp/>?<sp/>title<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;Lese-Erinnerung&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.setContentText(message<sp/>!=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal"><sp/>?<sp/>message<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;Zeit<sp/>zum<sp/>Lesen!&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.setPriority(NotificationCompat.PRIORITY_HIGH)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.setAutoCancel(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NotificationManagerCompat<sp/>notificationManager<sp/>=<sp/>NotificationManagerCompat.from(context);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Prüfe,<sp/>ob<sp/>wir<sp/>die<sp/>Berechtigung<sp/>für<sp/>Notifications<sp/>haben<sp/>(erforderlich<sp/>für<sp/>Android<sp/>13+)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ActivityCompat.checkSelfPermission(context,<sp/>Manifest.permission.POST_NOTIFICATIONS)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>!=<sp/>PackageManager.PERMISSION_GRANTED)<sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Log.w(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationReceiver_1aeec8428424ab3fc1e77d9404f621b290" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Notification<sp/>permission<sp/>not<sp/>granted&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Verwende<sp/>eine<sp/>feste<sp/>ID<sp/>für<sp/>tägliche<sp/>Notifications</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>notificationId<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>notificationManager.notify(notificationId,<sp/>builder.build());</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Log.d(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationReceiver_1aeec8428424ab3fc1e77d9404f621b290" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Notification<sp/>displayed<sp/>successfully&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationReceiver.java"/>
+  </compounddef>
+</doxygen>

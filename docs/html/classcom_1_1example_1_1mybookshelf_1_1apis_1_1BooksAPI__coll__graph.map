@@ -1,0 +1,7 @@
+<map id="com.example.mybookshelf.apis.BooksAPI" name="com.example.mybookshelf.apis.BooksAPI">
+<area shape="rect" id="Node000001" title=" " alt="" coords="23,133,250,253"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,124,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="63,71,64,90,69,108,73,118,68,120,63,110,59,91,58,71"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="176,5,241,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="198,72,182,110,177,120,173,117,177,108,194,70"/>
+</map>

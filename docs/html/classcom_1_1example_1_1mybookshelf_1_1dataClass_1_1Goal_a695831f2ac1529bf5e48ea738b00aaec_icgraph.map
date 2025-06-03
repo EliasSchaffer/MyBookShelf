@@ -1,0 +1,9 @@
+<map id="com.example.mybookshelf.dataClass.Goal.setProgress" name="com.example.mybookshelf.dataClass.Goal.setProgress">
+<area shape="rect" id="Node000001" title=" " alt="" coords="299,69,531,109"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1example_1_1mybookshelf_1_1GoalHandler.html#ac10bf110d981c8788e0e4b9b2e25177e" title=" " alt="" coords="16,5,240,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="310,69,218,48,219,43,312,64"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1example_1_1mybookshelf_1_1GoalHandler.html#a5ddb8c71cb9828e9525f4bafefaf685f" title=" " alt="" coords="12,69,244,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="285,92,244,92,244,87,285,87"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1example_1_1mybookshelf_1_1GoalHandler.html#a326d9e94cb83508cae6d760df1bd5718" title=" " alt="" coords="5,133,251,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="312,115,219,136,218,131,310,110"/>
+</map>

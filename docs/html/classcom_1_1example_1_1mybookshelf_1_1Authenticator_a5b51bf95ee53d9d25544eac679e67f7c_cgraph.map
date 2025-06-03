@@ -1,0 +1,9 @@
+<map id="com.example.mybookshelf.Authenticator.checkLogin" name="com.example.mybookshelf.Authenticator.checkLogin">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,69,208,109"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User.html#a682645dc02a2e495219e209d2581a07b" title=" " alt="" coords="256,5,488,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="190,67,275,46,276,51,191,72"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User.html#af5409209c13843de1262a2b184fffab7" title=" " alt="" coords="256,69,488,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="208,87,242,87,242,92,208,92"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1example_1_1mybookshelf_1_1Authenticator.html#ad35502fa53cac65e3042d5d295db08f3" title=" " alt="" coords="271,133,473,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="191,107,276,128,275,133,190,112"/>
+</map>

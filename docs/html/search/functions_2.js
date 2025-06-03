@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['callai_0',['callAI',['../classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#ae50cf18619872a365eebe91c18d86e8d',1,'com::example::mybookshelf::BookRecommendationFlow']]],
+  ['canceldailynotification_1',['cancelDailyNotification',['../classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#afc96590cd792b862b32762b84cab085e',1,'com::example::mybookshelf::notifications::NotificationScheduler']]],
+  ['cancelonetimenotification_2',['cancelOneTimeNotification',['../classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#a10e7adec73e1f0e63d8376cad273e11a',1,'com::example::mybookshelf::notifications::NotificationScheduler']]],
+  ['changedailynotificationmessage_3',['changeDailyNotificationMessage',['../classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#afeb40a8c5551b18f32abe21dcc0e130a',1,'com::example::mybookshelf::notifications::NotificationScheduler']]],
+  ['changedailynotificationtime_4',['changeDailyNotificationTime',['../classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#a79dcce93490bc0df80c03c0a410672b2',1,'com::example::mybookshelf::notifications::NotificationScheduler']]],
+  ['changeemail_5',['changeEmail',['../classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection.html#a47a8bd471a1f2e4336a9378446c9ed86',1,'com::example::mybookshelf::DataBaseConnection']]],
+  ['changepassword_6',['changePassword',['../classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection.html#a59558eec699341c6309b60e3c90b8093',1,'com::example::mybookshelf::DataBaseConnection']]],
+  ['changeusername_7',['changeUserName',['../classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection.html#a3938ac17813d30aea19e71d1b149e972',1,'com::example::mybookshelf::DataBaseConnection']]],
+  ['checklogin_8',['checkLogin',['../classcom_1_1example_1_1mybookshelf_1_1Authenticator.html#a5b51bf95ee53d9d25544eac679e67f7c',1,'com.example.mybookshelf.Authenticator.checkLogin()'],['../classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection.html#aee74be9d7674275d682de94e068a3bec',1,'com.example.mybookshelf.DataBaseConnection.checkLogin(String username, char[] password)']]],
+  ['checkpassword_9',['checkPassword',['../classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection.html#a86b6ffa92fad445bf50ba17e72ed7652',1,'com::example::mybookshelf::DataBaseConnection']]],
+  ['cleanup_10',['cleanup',['../classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter.html#a3c5988a6efbd9ccb0206b69b6b8dfb96',1,'com::example::mybookshelf::LayoutManager::CostumeListAdapter']]],
+  ['clearstoredtoken_11',['clearStoredToken',['../classcom_1_1example_1_1mybookshelf_1_1Authenticator.html#a57eb5913cd07c88e3f0771b4bf88bc0c',1,'com::example::mybookshelf::Authenticator']]],
+  ['clearui_12',['clearUI',['../classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#aa1dc0909ddd670cbf7ed2fd6ecb141cf',1,'com::example::mybookshelf::UIMaster']]],
+  ['configureaxes_13',['configureAxes',['../classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a66cf6ce29c43e6db34be85ae9990c102',1,'com::example::mybookshelf::UIMaster']]],
+  ['configurechart_14',['configureChart',['../classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#ae589c66b6b1826db14cd0185e2453c12',1,'com::example::mybookshelf::UIMaster']]],
+  ['convertminutestohours_15',['convertMinutesToHours',['../classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a2f446043c1019868262b5e49ddb58609',1,'com::example::mybookshelf::UIMaster']]],
+  ['costumelistadapter_16',['CostumeListAdapter',['../classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter.html#a5994fe8dd83b16ff0ea9b665e6b6507a',1,'com::example::mybookshelf::LayoutManager::CostumeListAdapter']]],
+  ['createbookbox_17',['createBookBox',['../classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a1533d0ed2384f2ec729cfcec7bd9a25f',1,'com::example::mybookshelf::UIMaster']]],
+  ['creategoalbox_18',['createGoalBox',['../classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter.html#af6a51f456a68a61bedc36289b91e0716',1,'com::example::mybookshelf::LayoutManager::CustomGoalAdapter']]],
+  ['createnotificationchannels_19',['createNotificationChannels',['../classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationChannelManager.html#ab57e2b123ed881523d1e0465605396b3',1,'com::example::mybookshelf::notifications::NotificationChannelManager']]],
+  ['createstyledgridbutton_20',['createStyledGridButton',['../classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#a02b6d699653b58f244907bd10db53ab5',1,'com.example.mybookshelf.BookRecommendationFlow.createStyledGridButton()'],['../classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a4709f542c160eca1392685b8ba9455e5',1,'com.example.mybookshelf.UIMaster.createStyledGridButton()']]],
+  ['createtextwatcher_21',['createTextWatcher',['../classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter.html#a73afe4df78d60ab38b9b7d8b9e804d05',1,'com::example::mybookshelf::LayoutManager::CostumeListAdapter']]],
+  ['customgoaladapter_22',['CustomGoalAdapter',['../classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter.html#a13d70d3a6b0d8feb8930c35739e73822',1,'com::example::mybookshelf::LayoutManager::CustomGoalAdapter']]]
+];

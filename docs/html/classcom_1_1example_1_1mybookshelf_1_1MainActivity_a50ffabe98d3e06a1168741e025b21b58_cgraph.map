@@ -1,0 +1,7 @@
+<map id="com.example.mybookshelf.MainActivity.handleBookChange" name="com.example.mybookshelf.MainActivity.handleBookChange">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,37,237,77"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book.html#ab76b4ec7891e641d4c1a70a564805ffb" title=" " alt="" coords="285,5,517,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="237,41,272,37,272,43,238,47"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book.html#a7c4ec1f3e154fad200b64643574e5c9c" title=" " alt="" coords="285,69,517,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="238,68,272,72,272,77,237,73"/>
+</map>

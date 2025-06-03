@@ -1,0 +1,338 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="CustomGoalAdapter_8java" kind="file" language="Java">
+    <compoundname>CustomGoalAdapter.java</compoundname>
+    <includes local="no">android.app.Activity</includes>
+    <includes local="no">android.content.Context</includes>
+    <includes local="no">android.graphics.Color</includes>
+    <includes local="no">android.graphics.Rect</includes>
+    <includes local="no">android.graphics.drawable.GradientDrawable</includes>
+    <includes local="no">android.util.DisplayMetrics</includes>
+    <includes local="no">android.view.Gravity</includes>
+    <includes local="no">android.view.View</includes>
+    <includes local="no">android.view.ViewGroup</includes>
+    <includes local="no">android.view.WindowManager</includes>
+    <includes local="no">android.view.WindowMetrics</includes>
+    <includes local="no">android.widget.Button</includes>
+    <includes local="no">android.widget.FrameLayout</includes>
+    <includes local="no">android.widget.LinearLayout</includes>
+    <includes local="no">android.widget.ProgressBar</includes>
+    <includes local="no">android.widget.TextView</includes>
+    <includes local="no">androidx.annotation.NonNull</includes>
+    <includes local="no">androidx.recyclerview.widget.RecyclerView</includes>
+    <includes local="no">com.example.mybookshelf.DataBaseConnection</includes>
+    <includes local="no">com.example.mybookshelf.MainActivity</includes>
+    <includes local="no">com.example.mybookshelf.dataClass.Goal</includes>
+    <includes local="no">java.util.List</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/LayoutManager/CustomGoalAdapter.java</label>
+        <link refid="CustomGoalAdapter_8java"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>android.app.Activity</label>
+      </node>
+      <node id="3">
+        <label>android.content.Context</label>
+      </node>
+      <node id="4">
+        <label>android.graphics.Color</label>
+      </node>
+      <node id="5">
+        <label>android.graphics.Rect</label>
+      </node>
+      <node id="6">
+        <label>android.graphics.drawable.GradientDrawable</label>
+      </node>
+      <node id="7">
+        <label>android.util.DisplayMetrics</label>
+      </node>
+      <node id="8">
+        <label>android.view.Gravity</label>
+      </node>
+      <node id="9">
+        <label>android.view.View</label>
+      </node>
+      <node id="10">
+        <label>android.view.ViewGroup</label>
+      </node>
+      <node id="11">
+        <label>android.view.WindowManager</label>
+      </node>
+      <node id="12">
+        <label>android.view.WindowMetrics</label>
+      </node>
+      <node id="13">
+        <label>android.widget.Button</label>
+      </node>
+      <node id="14">
+        <label>android.widget.FrameLayout</label>
+      </node>
+      <node id="15">
+        <label>android.widget.LinearLayout</label>
+      </node>
+      <node id="16">
+        <label>android.widget.ProgressBar</label>
+      </node>
+      <node id="17">
+        <label>android.widget.TextView</label>
+      </node>
+      <node id="18">
+        <label>androidx.annotation.NonNull</label>
+      </node>
+      <node id="19">
+        <label>androidx.recyclerview.widget.RecyclerView</label>
+      </node>
+      <node id="20">
+        <label>com.example.mybookshelf.DataBaseConnection</label>
+      </node>
+      <node id="21">
+        <label>com.example.mybookshelf.MainActivity</label>
+      </node>
+      <node id="22">
+        <label>com.example.mybookshelf.dataClass.Goal</label>
+      </node>
+      <node id="23">
+        <label>java.util.List</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter" prot="public">com::example::mybookshelf::LayoutManager::CustomGoalAdapter</innerclass>
+    <innerclass refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1_1GoalViewHolder" prot="package">com::example::mybookshelf::LayoutManager::CustomGoalAdapter::GoalViewHolder</innerclass>
+    <innernamespace refid="namespacecom_1_1example_1_1mybookshelf_1_1LayoutManager">com::example::mybookshelf::LayoutManager</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">package<sp/></highlight><highlight class="normal">com.example.mybookshelf.LayoutManager;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.app.Activity;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.content.Context;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.graphics.Color;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.graphics.Rect;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.graphics.drawable.GradientDrawable;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.util.DisplayMetrics;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.view.Gravity;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.view.View;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.view.ViewGroup;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.view.WindowManager;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.view.WindowMetrics;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.widget.Button;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.widget.FrameLayout;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.widget.LinearLayout;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.widget.ProgressBar;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.widget.TextView;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>androidx.annotation.NonNull;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>androidx.recyclerview.widget.RecyclerView;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>com.example.mybookshelf.DataBaseConnection;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>com.example.mybookshelf.MainActivity;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>com.example.mybookshelf.dataClass.Goal;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.List;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a13d70d3a6b0d8feb8930c35739e73822" kindref="member">CustomGoalAdapter</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/>RecyclerView.Adapter&lt;CustomGoalAdapter.GoalViewHolder&gt;<sp/>{</highlight></codeline>
+<codeline lineno="30" refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a48530b4ad4b9eb7c01f2b014bc3e4467" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>List&lt;Goal&gt;<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a48530b4ad4b9eb7c01f2b014bc3e4467" kindref="member">goals</ref>;</highlight></codeline>
+<codeline lineno="31" refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a68a52c1dac4939e8157d6ff3276367a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity" kindref="compound">MainActivity</ref><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a68a52c1dac4939e8157d6ff3276367a1" kindref="member">context</ref>;</highlight></codeline>
+<codeline lineno="32" refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a59feaafb13310e59cdbc5bdd0d70c64d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection" kindref="compound">DataBaseConnection</ref><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a59feaafb13310e59cdbc5bdd0d70c64d" kindref="member">db</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a13d70d3a6b0d8feb8930c35739e73822" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a13d70d3a6b0d8feb8930c35739e73822" kindref="member">CustomGoalAdapter</ref>(<ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity" kindref="compound">MainActivity</ref><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a68a52c1dac4939e8157d6ff3276367a1" kindref="member">context</ref>,<sp/>List&lt;Goal&gt;<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a48530b4ad4b9eb7c01f2b014bc3e4467" kindref="member">goals</ref>,<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection" kindref="compound">DataBaseConnection</ref><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a59feaafb13310e59cdbc5bdd0d70c64d" kindref="member">db</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.context<sp/>=<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a68a52c1dac4939e8157d6ff3276367a1" kindref="member">context</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.goals<sp/>=<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a48530b4ad4b9eb7c01f2b014bc3e4467" kindref="member">goals</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.db<sp/>=<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a59feaafb13310e59cdbc5bdd0d70c64d" kindref="member">db</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>@NonNull</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="47" refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a9a1f100c5c84e79e54f397e4a3f76c4f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>GoalViewHolder<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a9a1f100c5c84e79e54f397e4a3f76c4f" kindref="member">onCreateViewHolder</ref>(@NonNull<sp/>ViewGroup<sp/>parent,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>viewType)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FrameLayout<sp/>layout<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>FrameLayout(<ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a68a52c1dac4939e8157d6ff3276367a1" kindref="member">context</ref>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>GoalViewHolder(layout);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="56" refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1ad2264dc4c944b992a8cac174bebb6694" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1ad2264dc4c944b992a8cac174bebb6694" kindref="member">onBindViewHolder</ref>(@NonNull<sp/>GoalViewHolder<sp/>holder,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>position)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal" kindref="compound">Goal</ref><sp/>goal<sp/>=<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a48530b4ad4b9eb7c01f2b014bc3e4467" kindref="member">goals</ref>.get(position);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>holder.layout.removeAllViews();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>holder.layout.addView(<ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1af6a51f456a68a61bedc36289b91e0716" kindref="member">createGoalBox</ref>(goal));</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a18720554189fa678140625ede54eb24f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a18720554189fa678140625ede54eb24f" kindref="member">addGoal</ref>(<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal" kindref="compound">Goal</ref><sp/>goal)<sp/>{</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a48530b4ad4b9eb7c01f2b014bc3e4467" kindref="member">goals</ref>.add(goal);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>notifyItemInserted(<ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a48530b4ad4b9eb7c01f2b014bc3e4467" kindref="member">goals</ref>.size()<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1af9a0f3484addd304be457c6dbdb93a4c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1af9a0f3484addd304be457c6dbdb93a4c" kindref="member">removeGoal</ref>(<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal" kindref="compound">Goal</ref><sp/>goal)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index<sp/>=<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a48530b4ad4b9eb7c01f2b014bc3e4467" kindref="member">goals</ref>.indexOf(goal);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a48530b4ad4b9eb7c01f2b014bc3e4467" kindref="member">goals</ref>.remove(goal);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>notifyItemRemoved(index);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1abad93cc513b4470ac284a0756e1c3f65" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1abad93cc513b4470ac284a0756e1c3f65" kindref="member">setGoals</ref>(List&lt;Goal&gt;<sp/>newGoals)<sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.goals.clear();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(newGoals<sp/>!=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.goals.addAll(newGoals);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>notifyDataSetChanged();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="94" refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a8a2ff008d6c39c13ae379b236bd4fb9f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a8a2ff008d6c39c13ae379b236bd4fb9f" kindref="member">getItemCount</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a48530b4ad4b9eb7c01f2b014bc3e4467" kindref="member">goals</ref>.size();</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">GoalViewHolder<sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/>RecyclerView.ViewHolder<sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FrameLayout<sp/>layout;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GoalViewHolder(@NonNull<sp/>View<sp/>itemView)<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super(itemView);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>layout<sp/>=<sp/>(FrameLayout)<sp/>itemView;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1af6a51f456a68a61bedc36289b91e0716" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>View<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1af6a51f456a68a61bedc36289b91e0716" kindref="member">createGoalBox</ref>(<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal" kindref="compound">Goal</ref><sp/>goal)<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Root<sp/>container<sp/>(FrameLayout<sp/>for<sp/>absolute<sp/>positioning)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FrameLayout<sp/>rootLayout<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>FrameLayout(<ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a68a52c1dac4939e8157d6ff3276367a1" kindref="member">context</ref>);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rootLayout.setLayoutParams(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>FrameLayout.LayoutParams(</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FrameLayout.LayoutParams.WRAP_CONTENT,</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FrameLayout.LayoutParams.WRAP_CONTENT</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>));</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Card<sp/>container<sp/>(LinearLayout)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LinearLayout<sp/>cardLayout<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>LinearLayout(<ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a68a52c1dac4939e8157d6ff3276367a1" kindref="member">context</ref>);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cardLayout.setOrientation(LinearLayout.VERTICAL);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cardLayout.setPadding(16,<sp/>16,<sp/>16,<sp/>16);<sp/></highlight><highlight class="comment">//<sp/>Reduced<sp/>padding</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Card<sp/>background</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GradientDrawable<sp/>background<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>GradientDrawable();</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>background.setColor(Color.WHITE);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>background.setCornerRadius(24f);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>background.setStroke(2,<sp/>Color.LTGRAY);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cardLayout.setBackground(background);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Cancel<sp/>button<sp/>(absolute<sp/>positioning)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Button<sp/>cancelButton<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Button(<ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a68a52c1dac4939e8157d6ff3276367a1" kindref="member">context</ref>);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cancelButton.setText(</highlight><highlight class="stringliteral">&quot;Cancel&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cancelButton.setTextColor(Color.WHITE);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cancelButton.setBackgroundColor(Color.parseColor(</highlight><highlight class="stringliteral">&quot;#E53935&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cancelButton.setAllCaps(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cancelButton.setOnClickListener(v<sp/>-&gt;<sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>the<sp/>goal<sp/>from<sp/>the<sp/>list</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a48530b4ad4b9eb7c01f2b014bc3e4467" kindref="member">goals</ref>.remove(goal);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a68a52c1dac4939e8157d6ff3276367a1" kindref="member">context</ref>.getUser().getGoalList().remove(goal);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a59feaafb13310e59cdbc5bdd0d70c64d" kindref="member">db</ref>.removeGoal(goal.<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1abcf308a0e49a9b60f6761102438d9d04" kindref="member">getId</ref>(),<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a68a52c1dac4939e8157d6ff3276367a1" kindref="member">context</ref>.getUser().getUid());</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>notifyDataSetChanged();</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Position<sp/>button<sp/>outside<sp/>the<sp/>card<sp/>at<sp/>top-right</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FrameLayout.LayoutParams<sp/>cancelParams<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>FrameLayout.LayoutParams(</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FrameLayout.LayoutParams.WRAP_CONTENT,</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FrameLayout.LayoutParams.WRAP_CONTENT</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cancelParams.gravity<sp/>=<sp/>Gravity.END|Gravity.TOP;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cancelParams.setMargins(0,<sp/>8,<sp/>8,<sp/>0);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cancelButton.setLayoutParams(cancelParams);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Goal<sp/>text</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TextView<sp/>textView<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TextView(<ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a68a52c1dac4939e8157d6ff3276367a1" kindref="member">context</ref>);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>textView.setText(</highlight><highlight class="stringliteral">&quot;📘<sp/>Goal:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>goal.<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a1c80a58d3e1cd2e1ab6ef14c40d3b274" kindref="member">getGoal</ref>()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>per<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>goal.<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1ada3305dadb216e065d9bb31e12ff6107" kindref="member">getFrequenzy</ref>().substring(0,<sp/>goal.<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1ada3305dadb216e065d9bb31e12ff6107" kindref="member">getFrequenzy</ref>().length()-2));</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>textView.setTextSize(16);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>textView.setTextColor(Color.DKGRAY);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Progress<sp/>bar<sp/>(fixed<sp/>width)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ProgressBar<sp/>progressBar<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>ProgressBar(<ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a68a52c1dac4939e8157d6ff3276367a1" kindref="member">context</ref>,<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>android.R.attr.progressBarStyleHorizontal);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>progressBar.setLayoutParams(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>LinearLayout.LayoutParams(</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LinearLayout.LayoutParams.MATCH_PARENT,<sp/></highlight><highlight class="comment">//<sp/>Will<sp/>expand<sp/>to<sp/>available<sp/>width</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LinearLayout.LayoutParams.WRAP_CONTENT</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>));</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>progressBar.setMax(goal.<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a84c2af13824c14a2b6c3dcf25a493d0f" kindref="member">getTarget</ref>());</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>progressBar.setProgress(goal.<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a964cb06dadac4c69df6c931402733779" kindref="member">getProgress</ref>());</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Progress<sp/>text</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TextView<sp/>progressText<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TextView(<ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a68a52c1dac4939e8157d6ff3276367a1" kindref="member">context</ref>);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>progressText.setText(</highlight><highlight class="stringliteral">&quot;Progress:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>goal.<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a964cb06dadac4c69df6c931402733779" kindref="member">getProgress</ref>()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>/<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>goal.<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a84c2af13824c14a2b6c3dcf25a493d0f" kindref="member">getTarget</ref>());</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>progressText.setTextColor(Color.GRAY);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>progressText.setTextSize(14);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>views<sp/>to<sp/>card</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cardLayout.addView(textView);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cardLayout.addView(progressBar);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cardLayout.addView(progressText);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>views<sp/>to<sp/>root</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rootLayout.addView(cardLayout);</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rootLayout.addView(cancelButton);</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Post-layout<sp/>adjustment<sp/>to<sp/>match<sp/>widths</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cardLayout.post(()<sp/>-&gt;<sp/>{</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>buttonWidth<sp/>=<sp/>cancelButton.getWidth();</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>cardWidth<sp/>=<sp/>cardLayout.getWidth();</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>minimum<sp/>width<sp/>to<sp/>ensure<sp/>progress<sp/>bar<sp/>+<sp/>button<sp/>fit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DisplayMetrics<sp/>displayMetrics<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>DisplayMetrics();</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a68a52c1dac4939e8157d6ff3276367a1" kindref="member">context</ref><sp/>instanceof<sp/>Activity)<sp/>{</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1a68a52c1dac4939e8157d6ff3276367a1" kindref="member">context</ref>.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>minWidth<sp/>=<sp/>displayMetrics.widthPixels;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cardLayout.setMinimumWidth(minWidth);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rootLayout;</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/LayoutManager/CustomGoalAdapter.java"/>
+  </compounddef>
+</doxygen>

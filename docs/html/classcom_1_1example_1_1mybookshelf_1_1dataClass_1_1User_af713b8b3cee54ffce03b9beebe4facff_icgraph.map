@@ -1,0 +1,9 @@
+<map id="com.example.mybookshelf.dataClass.User.getUid" name="com.example.mybookshelf.dataClass.User.getUid">
+<area shape="rect" id="Node000001" title=" " alt="" coords="315,69,547,109"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection.html#a3b22d6106c92d008ed8b05c10892f0b7" title=" " alt="" coords="28,5,244,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="324,69,228,48,229,43,325,64"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection.html#ae83460b1effd3376ba0caca7220f7ced" title=" " alt="" coords="5,69,267,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="301,92,267,92,267,87,301,87"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User.html#afb442e89bbb66fadad2986d9229014b0" title=" " alt="" coords="20,133,252,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="325,115,229,136,228,131,324,110"/>
+</map>

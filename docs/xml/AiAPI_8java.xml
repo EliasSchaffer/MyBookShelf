@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="AiAPI_8java" kind="file" language="Java">
+    <compoundname>AiAPI.java</compoundname>
+    <includes local="no">com.example.mybookshelf.ApiResponseCallback</includes>
+    <includes local="no">okhttp3.*</includes>
+    <includes local="no">okhttp3.logging.HttpLoggingInterceptor</includes>
+    <includes local="no">org.json.JSONArray</includes>
+    <includes local="no">org.json.JSONObject</includes>
+    <includes local="no">retrofit2.*</includes>
+    <includes local="no">retrofit2.Call</includes>
+    <includes local="no">retrofit2.Callback</includes>
+    <includes local="no">retrofit2.Response</includes>
+    <includes local="no">retrofit2.converter.gson.GsonConverterFactory</includes>
+    <includes local="no">retrofit2.http.Body</includes>
+    <includes local="no">retrofit2.http.Header</includes>
+    <includes local="no">retrofit2.http.POST</includes>
+    <includes local="no">java.util.concurrent.TimeUnit</includes>
+    <includes local="no">java.io.IOException</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/AiAPI.java</label>
+        <link refid="AiAPI_8java"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>com.example.mybookshelf.ApiResponseCallback</label>
+      </node>
+      <node id="16">
+        <label>java.io.IOException</label>
+      </node>
+      <node id="15">
+        <label>java.util.concurrent.TimeUnit</label>
+      </node>
+      <node id="3">
+        <label>okhttp3.*</label>
+      </node>
+      <node id="4">
+        <label>okhttp3.logging.HttpLoggingInterceptor</label>
+      </node>
+      <node id="5">
+        <label>org.json.JSONArray</label>
+      </node>
+      <node id="6">
+        <label>org.json.JSONObject</label>
+      </node>
+      <node id="7">
+        <label>retrofit2.*</label>
+      </node>
+      <node id="8">
+        <label>retrofit2.Call</label>
+      </node>
+      <node id="9">
+        <label>retrofit2.Callback</label>
+      </node>
+      <node id="10">
+        <label>retrofit2.Response</label>
+      </node>
+      <node id="11">
+        <label>retrofit2.converter.gson.GsonConverterFactory</label>
+      </node>
+      <node id="12">
+        <label>retrofit2.http.Body</label>
+      </node>
+      <node id="13">
+        <label>retrofit2.http.Header</label>
+      </node>
+      <node id="14">
+        <label>retrofit2.http.POST</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI" prot="public">com::example::mybookshelf::apis::AiAPI</innerclass>
+    <innerclass refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1_1AiService" prot="public">com::example::mybookshelf::apis::AiAPI::AiService</innerclass>
+    <innernamespace refid="namespacecom_1_1example_1_1mybookshelf_1_1apis">com::example::mybookshelf::apis</innernamespace>
+    <innernamespace refid="namespaceokhttp3">okhttp3</innernamespace>
+    <innernamespace refid="namespaceretrofit2">retrofit2</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespacecom_1_1example_1_1mybookshelf_1_1apis" refkind="compound"><highlight class="keyword">package<sp/></highlight><highlight class="normal">com.example.mybookshelf.apis;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>com.example.mybookshelf.ApiResponseCallback;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>okhttp3.*;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>okhttp3.logging.HttpLoggingInterceptor;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.json.JSONArray;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>org.json.JSONObject;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>retrofit2.*;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>retrofit2.Call;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>retrofit2.Callback;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>retrofit2.Response;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>retrofit2.converter.gson.GsonConverterFactory;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>retrofit2.http.Body;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>retrofit2.http.Header;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>retrofit2.http.POST;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.concurrent.TimeUnit;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.io.IOException;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI" kindref="compound">AiAPI</ref><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a62f0ba451acb21dcf4872e3801046446" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a62f0ba451acb21dcf4872e3801046446" kindref="member">API_URL</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;https://api.cloudflare.com/&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23" refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1adbd8f23489c5f42a96d42fcf9b77cb6c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1adbd8f23489c5f42a96d42fcf9b77cb6c" kindref="member">API_KEY</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;5z2t0nUwiYnyRRf1w_qDB1Eai0K_yuhQg8BAT0nk&quot;</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>No<sp/>&quot;Bearer&quot;<sp/>prefix</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a3f60dedc2406280d2793f726a0460a13" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>OkHttpClient<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a3f60dedc2406280d2793f726a0460a13" kindref="member">client</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>OkHttpClient.Builder()</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.connectTimeout(30,<sp/>TimeUnit.SECONDS)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.readTimeout(30,<sp/>TimeUnit.SECONDS)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.writeTimeout(30,<sp/>TimeUnit.SECONDS)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.addInterceptor(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.build();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1_1AiService" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">interface<sp/></highlight><highlight class="normal"><ref refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1_1AiService" kindref="compound">AiService</ref><sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>@POST(</highlight><highlight class="stringliteral">&quot;client/v4/accounts/b8ef0a87c7a80c0d51c106c1314f906d/ai/run/@cf/meta/llama-3-8b-instruct&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="37" refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1_1AiService_1a3d98325386aa8dea5726317b65fba3a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Call&lt;ResponseBody&gt;<sp/><ref refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1_1AiService_1a3d98325386aa8dea5726317b65fba3a7" kindref="member">fetchBooks</ref>(@Body<sp/>RequestBody<sp/>payload,<sp/>@Header(</highlight><highlight class="stringliteral">&quot;Authorization&quot;</highlight><highlight class="normal">)<sp/>String<sp/>authHeader,<sp/>@Header(</highlight><highlight class="stringliteral">&quot;Content-Type&quot;</highlight><highlight class="normal">)<sp/>String<sp/>contentType);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a958c698db1d9e49dc07ee10349d0e4c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>private<sp/>static<sp/>final<sp/>Retrofit<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a958c698db1d9e49dc07ee10349d0e4c5" kindref="member">retrofit</ref><sp/>=<sp/>new<sp/>Retrofit.Builder()</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.baseUrl(<ref refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a62f0ba451acb21dcf4872e3801046446" kindref="member">API_URL</ref>)</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.<ref refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a3f60dedc2406280d2793f726a0460a13" kindref="member">client</ref>(<ref refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a3f60dedc2406280d2793f726a0460a13" kindref="member">client</ref>)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.addConverterFactory(GsonConverterFactory.create())</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.build();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a4a38dcc1f948bc099f5c4e1400e40935" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>private<sp/>static<sp/>final<sp/><ref refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1_1AiService" kindref="compound">AiService</ref><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a4a38dcc1f948bc099f5c4e1400e40935" kindref="member">aiService</ref><sp/>=<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a958c698db1d9e49dc07ee10349d0e4c5" kindref="member">retrofit</ref>.create(<ref refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1_1AiService" kindref="compound">AiService</ref>.class);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a4a45b91f0717302661d9e35ed956c049" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>public<sp/>static<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a4a45b91f0717302661d9e35ed956c049" kindref="member">fetchResponse</ref>(final<sp/>String<sp/>question,<sp/>final<sp/><ref refid="interfacecom_1_1example_1_1mybookshelf_1_1ApiResponseCallback" kindref="compound">ApiResponseCallback</ref><sp/>callback)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSONArray<sp/>messages<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>JSONArray();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Construct<sp/>the<sp/>messages<sp/>as<sp/>before</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSONObject<sp/>systemMessage<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>JSONObject();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>systemMessage.put(</highlight><highlight class="stringliteral">&quot;role&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;system&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>systemMessage.put(</highlight><highlight class="stringliteral">&quot;content&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;You<sp/>are<sp/>a<sp/>friendly<sp/>assistant<sp/>that<sp/>helps<sp/>answer<sp/>questions<sp/>about<sp/>books<sp/>with<sp/>short<sp/>answers.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSONObject<sp/>userMessage<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>JSONObject();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>userMessage.put(</highlight><highlight class="stringliteral">&quot;role&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;user&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>userMessage.put(</highlight><highlight class="stringliteral">&quot;content&quot;</highlight><highlight class="normal">,<sp/>question);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>messages.put(systemMessage);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>messages.put(userMessage);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>JSONObject<sp/>json<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>JSONObject();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>json.put(</highlight><highlight class="stringliteral">&quot;messages&quot;</highlight><highlight class="normal">,<sp/>messages);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MediaType<sp/>mediaType<sp/>=<sp/>MediaType.parse(</highlight><highlight class="stringliteral">&quot;application/json&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RequestBody<sp/>body<sp/>=<sp/>RequestBody.create(mediaType,<sp/>json.toString());</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>System.out.println(</highlight><highlight class="stringliteral">&quot;Request<sp/>Payload:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>json.toString());</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Call<sp/>the<sp/>API</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Call&lt;ResponseBody&gt;<sp/>call<sp/>=<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a4a38dcc1f948bc099f5c4e1400e40935" kindref="member">aiService</ref>.fetchBooks(body,<sp/></highlight><highlight class="stringliteral">&quot;Bearer<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1adbd8f23489c5f42a96d42fcf9b77cb6c" kindref="member">API_KEY</ref>,<sp/></highlight><highlight class="stringliteral">&quot;application/json&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>call.enqueue(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Callback&lt;ResponseBody&gt;()<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>onResponse(Call&lt;ResponseBody&gt;<sp/>call,<sp/>Response&lt;ResponseBody&gt;<sp/>response)<sp/>{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(response.isSuccessful()<sp/>&amp;&amp;<sp/>response.body()<sp/>!=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>responseBody<sp/>=<sp/>response.body().string();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>callback.onSuccess(responseBody);<sp/></highlight><highlight class="comment">//<sp/>Pass<sp/>response<sp/>to<sp/>callback</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(IOException<sp/>e)<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>callback.onFailure(</highlight><highlight class="stringliteral">&quot;Error<sp/>parsing<sp/>response:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>e.getMessage());</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>e.printStackTrace();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>callback.onFailure(</highlight><highlight class="stringliteral">&quot;Request<sp/>failed:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>response.message());</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>onFailure(Call&lt;ResponseBody&gt;<sp/>call,<sp/>Throwable<sp/>t)<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>callback.onFailure(</highlight><highlight class="stringliteral">&quot;Request<sp/>failed:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>t.getMessage());</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t.printStackTrace();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(Exception<sp/>e)<sp/>{</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>callback.onFailure(</highlight><highlight class="stringliteral">&quot;Exception<sp/>occurred:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>e.getMessage());</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>e.printStackTrace();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/AiAPI.java"/>
+  </compounddef>
+</doxygen>

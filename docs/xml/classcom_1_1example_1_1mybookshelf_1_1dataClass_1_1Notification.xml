@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification" kind="class" language="Java" prot="public">
+    <compoundname>com::example::mybookshelf::dataClass::Notification</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification_1a1127ea491882c30bce4272d852816ea4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int com.example.mybookshelf.dataClass.Notification.id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Notification.id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Notification.java" line="4" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Notification.java" bodystart="4" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification_1ac2480b5d64b232390b4f22bd37620859" compoundref="Notification_8java" startline="15" endline="17">com.example.mybookshelf.dataClass.Notification.getId</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification_1a9dc622a763a56b59170634a6f8276893" compoundref="Notification_8java" startline="7" endline="10">com.example.mybookshelf.dataClass.Notification.Notification</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification_1adf01ab721d4364e05f27c8d592d1583a" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.dataClass.Notification.message</definition>
+        <argsstring></argsstring>
+        <name>message</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Notification.message</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Notification.java" line="5" column="20" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Notification.java" bodystart="5" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification_1a7305353ee2a1824ad211ac13e60bdfc6" compoundref="Notification_8java" startline="22" endline="24">com.example.mybookshelf.dataClass.Notification.getMessage</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification_1a9dc622a763a56b59170634a6f8276893" compoundref="Notification_8java" startline="7" endline="10">com.example.mybookshelf.dataClass.Notification.Notification</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification_1a9dc622a763a56b59170634a6f8276893" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.example.mybookshelf.dataClass.Notification.Notification</definition>
+        <argsstring>(int id, String message)</argsstring>
+        <name>Notification</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Notification.Notification</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Notification.java" line="7" column="12" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Notification.java" bodystart="7" bodyend="10"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification_1a1127ea491882c30bce4272d852816ea4" compoundref="Notification_8java" startline="4">com.example.mybookshelf.dataClass.Notification.id</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification_1adf01ab721d4364e05f27c8d592d1583a" compoundref="Notification_8java" startline="5">com.example.mybookshelf.dataClass.Notification.message</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification_1ac2480b5d64b232390b4f22bd37620859" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.example.mybookshelf.dataClass.Notification.getId</definition>
+        <argsstring>()</argsstring>
+        <name>getId</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Notification.getId</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the ID. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Notification.java" line="15" column="16" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Notification.java" bodystart="15" bodyend="17"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification_1a1127ea491882c30bce4272d852816ea4" compoundref="Notification_8java" startline="4">com.example.mybookshelf.dataClass.Notification.id</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification_1a7305353ee2a1824ad211ac13e60bdfc6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.dataClass.Notification.getMessage</definition>
+        <argsstring>()</argsstring>
+        <name>getMessage</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.Notification.getMessage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the stored message. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Notification.java" line="22" column="19" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Notification.java" bodystart="22" bodyend="24"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification_1adf01ab721d4364e05f27c8d592d1583a" compoundref="Notification_8java" startline="5">com.example.mybookshelf.dataClass.Notification.message</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>String</label>
+      </node>
+      <node id="1">
+        <label>com.example.mybookshelf.dataClass.Notification</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-id</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-message</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>int</label>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Notification.java" line="3" column="7" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/Notification.java" bodystart="3" bodyend="25"/>
+    <listofallmembers>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification_1ac2480b5d64b232390b4f22bd37620859" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Notification</scope><name>getId</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification_1a7305353ee2a1824ad211ac13e60bdfc6" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Notification</scope><name>getMessage</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification_1a1127ea491882c30bce4272d852816ea4" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Notification</scope><name>id</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification_1adf01ab721d4364e05f27c8d592d1583a" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Notification</scope><name>message</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification_1a9dc622a763a56b59170634a6f8276893" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::Notification</scope><name>Notification</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
