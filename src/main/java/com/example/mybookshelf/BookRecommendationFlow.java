@@ -53,6 +53,9 @@ public class BookRecommendationFlow{
         }
     }
 
+    /**
+     * Handles AI logic based on the path type and updates the UI accordingly.
+     */
     public void handleAI(String pathType) {
         atributes.clear();
         box = this.mainActivity.findViewById(R.id.inputBox);
@@ -73,6 +76,9 @@ public class BookRecommendationFlow{
         });
     }
 
+    /**
+     * Displays buttons for user to choose aspects of a book they liked most.
+     */
     private void showBookBasedStep1() {
         mainActivity.runOnUiThread(() -> {
             box.removeAllViews();  // Clear previous content
@@ -105,6 +111,9 @@ public class BookRecommendationFlow{
         });
     }
 
+    /**
+     * Displays a grid of buttons to choose book genre preferences and navigates to step 3 based on selection.
+     */
     private void showBookBasedStep2(String selectedOption) {
         atributes.add(selectedOption);
 
@@ -136,6 +145,9 @@ public class BookRecommendationFlow{
         });
     }
 
+    /**
+     * Displays a grid of buttons to select book attributes based on user input.
+     */
     private void showBookBasedStep3(String selectedOption) {
         atributes.add(selectedOption);
 
@@ -168,6 +180,9 @@ public class BookRecommendationFlow{
 
     }
 
+    /**
+     * Builds a prompt based on selected attributes and calls the AI to generate a recommendation.
+     */
     private void buildAIStringBased(String selectedOption){
         atributes.add(selectedOption);
 
@@ -179,6 +194,9 @@ public class BookRecommendationFlow{
 
 
 
+    /**
+     * Displays a grid of buttons with book genres and handles user selection.
+     */
     private void showFreshStartStep1() {
         mainActivity.runOnUiThread(() -> {
             box.removeAllViews();  // Clear previous content
@@ -211,6 +229,9 @@ public class BookRecommendationFlow{
         });
     }
 
+    /**
+     * Displays a step in the fresh start process with styled buttons.
+     */
     private void showFreshStartStep2(String selectedOption) {
         atributes.add(selectedOption);
         mainActivity.runOnUiThread(() -> {
@@ -244,6 +265,9 @@ public class BookRecommendationFlow{
         });
     }
 
+    /**
+     * Displays a grid of buttons to select a setting.
+     */
     private void showFreshStartStep3(String selectedOption) {
         atributes.add(selectedOption);
         mainActivity.runOnUiThread(() -> {
@@ -277,6 +301,9 @@ public class BookRecommendationFlow{
         });
     }
 
+    /**
+     * Displays step 4 of the fresh start process with character type selection options.
+     */
     private void showFreshStartStep4(String selectedOption) {
         atributes.add(selectedOption);
         mainActivity.runOnUiThread(() -> {
@@ -310,6 +337,9 @@ public class BookRecommendationFlow{
         });
     }
 
+    /**
+     * Displays a grid of buttons for selecting story endings and updates chat messages accordingly.
+     */
     private void showFreshStartStep5(String selectedOption) {
         atributes.add(selectedOption);
         mainActivity.runOnUiThread(() -> {
@@ -344,6 +374,9 @@ public class BookRecommendationFlow{
     }
 
 
+    /**
+     * Builds a prompt string based on selected attributes and calls the AI to fetch a book recommendation.
+     */
     private void buildAIStringFresh(String selectedOption){
         atributes.add(selectedOption);
 
@@ -360,11 +393,17 @@ public class BookRecommendationFlow{
         callAI(prompt.toString());
     }
 
+    /**
+     * Initiates an AI request based on the given prompt and processes the response.
+     */
     private void callAI(String prompt){
         box.removeAllViews();
         showThinkingAnimation();
         AiAPI.fetchResponse(prompt, new ApiResponseCallback() {
             @Override
+            /**
+             * Handles the successful AI response by updating the UI with parsed data and options.
+             */
             public void onSuccess(String response) {
                 // Handle the raw response (likely a JSON string)
                 Log.d("AI_RESPONSE", response);
@@ -405,6 +444,9 @@ public class BookRecommendationFlow{
             }
 
             @Override
+            /**
+             * Handles failure by logging an error, displaying a toast message, and adding a chat message.
+             */
             public void onFailure(String errorMessage) {
                 Log.e("AI_ERROR", errorMessage);
                 mainActivity.runOnUiThread(() -> {
@@ -416,6 +458,9 @@ public class BookRecommendationFlow{
     }
 
 
+    /**
+     * Creates a styled button with specified text and click listener for use in a grid layout.
+     */
     private Button createStyledGridButton(String text, View.OnClickListener listener) {
         Button btn = new Button(mainActivity);
         btn.setText(text);
@@ -435,6 +480,10 @@ public class BookRecommendationFlow{
         return btn;
     }
 
+    /**
+     * Handles user response to a question by removing previous views, adding chat messages,
+     * and displaying a grid of options for further interaction.
+     */
     private void handleNo() {
         mainActivity.runOnUiThread(() -> {
             box.removeAllViews();
@@ -460,6 +509,15 @@ public class BookRecommendationFlow{
     }
 
 
+    /**
+     * Adds a chat message to the UI based on the provided text and sender type.
+     * The method creates a TextView for the message, sets its properties such as color,
+     * background, and layout, and adds it to the GridLayout in the main activity. It also
+     * ensures that the ScrollView scrolls to show the latest message.
+     *
+     * @param text       The text content of the chat message.
+     * @param senderType The type of the sender, either "user" or another identifier for system messages.
+     */
     public void addChatMessage(String text, String senderType) {
         GridLayout chat = mainActivity.findViewById(R.id.grdChat);
 
@@ -500,6 +558,9 @@ public class BookRecommendationFlow{
         scrollView.post(() -> scrollView.fullScroll(View.FOCUS_DOWN));
     }
 
+    /**
+     * Displays a thinking animation with three bouncing balls in a RelativeLayout.
+     */
     private void showThinkingAnimation() {
         mainActivity.runOnUiThread(() -> {
             box.removeAllViews(); // Clear box first
@@ -531,6 +592,9 @@ public class BookRecommendationFlow{
         });
     }
 
+    /**
+     * Hides the thinking animation by clearing animations and resetting views.
+     */
     private void hideThinkingAnimation() {
         mainActivity.runOnUiThread(() -> {
             if (isThinking) {
