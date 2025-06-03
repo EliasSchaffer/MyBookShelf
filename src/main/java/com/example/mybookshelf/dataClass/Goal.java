@@ -50,39 +50,66 @@ public class Goal {
         } else completed = false;
     }
 
+    /**
+     * Returns the ID of the object.
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * Checks if the task is completed.
+     */
     public boolean isCompleted() {
         return completed;
     }
 
+    /**
+     * Returns the current progress value.
+     */
     public int getProgress() {
         return progress;
     }
 
+    /**
+     * Returns the target value.
+     */
     public int getTarget() {
         return target;
     }
 
+    /**
+     * Returns the current goal.
+     */
     public String getGoal() {
         return goal;
     }
 
+    /**
+     * Returns the name of the book.
+     */
     public String getBookName() {
         return bookName;
     }
 
+    /**
+     * Returns the value of frequenzy.
+     */
     public String getFrequenzy() {
         return frequenzy;
     }
 
+    /**
+     * Sets the ID of the object.
+     */
     public void setId(int id) {
         this.id = id;
     }
 
     @Override
+    /**
+     * Returns a string representation of the Goal object.
+     */
     public String toString() {
         return "Goal{" +
                 "id=" + id +
@@ -96,10 +123,16 @@ public class Goal {
                 '}';
     }
 
+    /**
+     * Sets the progress to the specified value.
+     */
     public void setProgress(int progress) {
         this.progress = progress;
     }
 
+    /**
+     * Returns the deadline.
+     */
     public LocalDateTime getDeadline() {
         return deadline;
     }

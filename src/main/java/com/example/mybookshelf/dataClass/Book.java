@@ -20,18 +20,30 @@ public class Book {
         this.author = author;
     }
 
+    /**
+     * Returns the genre.
+     */
     public String getGenre() {
         return genre;
     }
 
+    /**
+     * Returns the unique identifier of the object.
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * Checks if the object is present in the database.
+     */
     public boolean isInDatabase() {
         return inDatabase;
     }
 
+    /**
+     * Sets whether the object is stored in the database.
+     */
     public void setInDatabase(boolean inDatabase) {
         this.inDatabase = inDatabase;
     }
@@ -79,45 +91,78 @@ public class Book {
         this.name = name;
     }
 
+    /**
+     * Returns the name.
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Returns the release date of the item.
+     */
     public String getRelease_date() {
         return release_date;
     }
 
+    /**
+     * Returns the number of pages.
+     */
     public int getPages() {
         return pages;
     }
 
+    /**
+     * Returns the author of the book.
+     */
     public String getAuthor() {
         return author;
     }
 
+    /**
+     * Returns the URL of the image.
+     */
     public String getImageUrl() {
         return image_url;
     }
 
+    /**
+     * Returns the description.
+     */
     public String getDescription() {
         return description;
     }
 
+    /**
+     * Returns the release date of the product.
+     */
     public String getReleaseDate() {
         return release_date;
     }
 
+    /**
+     * Sets the author of the document.
+     */
     public void setAuthor(String author) {
         this.author = author;
     }
 
+    /**
+     * Sets the release date.
+     */
     public void setRelease_date(String release_date) {
         this.release_date = release_date;
     }
+    /**
+     * Sets the status to the specified value.
+     */
     public void setStatus(String status) {
         this.status = status;
 
     }
+    /**
+     * Returns the current status.
+     */
     public String getStatus() {
         return status;
 
