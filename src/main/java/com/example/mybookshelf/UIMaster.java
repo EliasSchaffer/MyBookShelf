@@ -1222,18 +1222,15 @@ public class UIMaster {
     }
 
     /**
-     * Navigates to and sets up the Goals screen, allowing users to view,
-     * add, and manage their reading goals.
+     * Sets up the UI and functionality for the goals management screen.
+     * This method initializes various components such as buttons, spinners,
+     * animations, and a RecyclerView to display goals. It also handles user interactions
+     * like adding new goals, selecting different goal types, and navigating between
+     * different lists of goals (current, completed, failed).
      *
-     * This method performs several key tasks:
-     * - Sets the content view to the Goals activity layout.
-     * - Initializes and configures a RecyclerView to display goal items.
-     * - Adds click listeners for buttons that switch between displaying current,
-     *   completed, and failed goals.
-     * - Configures an AlertDialog with options to edit or delete selected goals.
-     * - Handles adding new goals through user input, including validation
-     *   of fields and database operations.
-     *
+     * @see CustomGoalAdapter for the adapter used by the RecyclerView.
+     * @see Goal for the data model representing a reading goal.
+     * @see NotificationScheduler for scheduling notifications related to goals.
      */
     public void navigateToGoals() {
         mainActivity.setContentView(R.layout.main_goal);

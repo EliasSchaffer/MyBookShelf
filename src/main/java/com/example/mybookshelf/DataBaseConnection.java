@@ -928,6 +928,16 @@ public class DataBaseConnection {
         });
     }
 
+    /**
+     * Fetches all goals for a given user from the database and processes them asynchronously.
+     *
+     * Executes a SQL query to retrieve goals associated with the provided user ID, maps the results to Goal objects,
+     * and handles different goal types with appropriate constructors. Sets the ID for each goal after construction.
+     * Uses a callback to return the list of goals or an empty list in case of an error.
+     *
+     * @param userId   the ID of the user whose goals are to be fetched
+     * @param callback a Consumer that will accept the list of Goal objects
+     */
     public void getAllGoalsForUser(int userId, Consumer<List<Goal>> callback) {
         executorService.execute(() -> {
             String sql = "SELECT goal_id, user_id, book_name, target, type, goalType, progress, reminder, created_at FROM goals WHERE user_id = ? ORDER BY created_at DESC";
