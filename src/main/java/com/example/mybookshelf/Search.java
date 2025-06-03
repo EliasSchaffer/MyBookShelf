@@ -26,10 +26,16 @@ public class Search extends AppCompatActivity {
         uiMaster = new UIMaster(main);
     }
 
+    /**
+     * Searches for books by name and displays them in the specified container.
+     */
     public void searchByName(String bookName, LinearLayout bookContainer) {
         executorService.execute(() -> {
             api.getMultipleBooks(bookName, new BooksAPI.BookCallback() {
                 @Override
+                /**
+                 * Updates the UI with fetched books or an error message if no books are available.
+                 */
                 public void onBookFetched(List<Book> books) {
                     // Post the results back to the main thread
                     mainThreadHandler.post(() -> {
@@ -47,6 +53,9 @@ public class Search extends AppCompatActivity {
     }
 
     @Override
+    /**
+     * Shuts down the executor service if it is not already shut down.
+     */
     protected void onDestroy() {
         super.onDestroy();
         if (executorService != null && !executorService.isShutdown()) {

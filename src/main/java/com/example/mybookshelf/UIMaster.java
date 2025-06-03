@@ -119,10 +119,16 @@ public class UIMaster {
         bookViewMap = new HashMap<>();
     }
 
+    /**
+     * Sets the logged-in user.
+     */
     public void setUSer(User user) {
         this.logedindUser = user;
     }
 
+    /**
+     * Reduces the time spent reading by a given duration and updates the UI accordingly.
+     */
     public void reduceTimeSpendReading(int time, TextView timeSpentReadingTextView) {
 
         timeSpentReading -= (time * 1.5);
@@ -135,6 +141,9 @@ public class UIMaster {
 
 
 
+    /**
+     * Creates a visual representation of a book as a box within a given container.
+     */
     public void createBookBox(LinearLayout container, Book book, boolean isSearch) {
         if (mainActivity == null) {
             Log.e("UIMaster", "MainActivity is null. Cannot create book box.");
@@ -271,15 +280,24 @@ public class UIMaster {
 
             noteField.addTextChangedListener(new TextWatcher() {
                 @Override
+                /**
+                 * Handles text change events before they occur.
+                 */
                 public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 }
 
                 @Override
+                /**
+                 * Updates notes in the database when text changes.
+                 */
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
                     db.notesChanged(logedindUser.getUid(), book.getId(), s.toString());
                 }
 
                 @Override
+                /**
+                 * Handles text changes in an editable field.
+                 */
                 public void afterTextChanged(Editable s) {
                 }
             });
@@ -303,6 +321,9 @@ public class UIMaster {
     }
 
     @NonNull
+    /**
+     * Creates and returns an ImageButton that, when clicked, calls saveBook with the given book.
+     */
     private ImageButton getBtnAdd(Book book) {
         ImageButton btnAdd = new ImageButton(mainActivity);
 
@@ -325,6 +346,9 @@ public class UIMaster {
     }
 
     @NonNull
+    /**
+     * Creates and configures an ImageButton to remove a specified book.
+     */
     private ImageButton getBtnRemove(Book book) {
         ImageButton btnRemove = new ImageButton(mainActivity);
         btnRemove.setOnClickListener(v -> {
@@ -367,10 +391,16 @@ public class UIMaster {
     private BarChart barChart;
 
 
+    /**
+     * Clears all views from the given LinearLayout container.
+     */
     public void clearUI(LinearLayout container) {
         container.removeAllViews();
     }
 
+    /**
+     * Updates the reading time based on the number of pages read and displays it in the specified TextView.
+     */
     public void updateReadingTime(int pages, TextView timeSpentReadingTextView) {
         timeSpentReading += (pages * 1.5);
         if (timeSpentReadingTextView != null) {
@@ -380,6 +410,9 @@ public class UIMaster {
         }
     }
 
+    /**
+     * Displays the login screen and handles user login attempts.
+     */
     public void showLogin() throws ExecutionException, InterruptedException {
         mainActivity.setContentView(R.layout.main_login);
         usernameEditText = mainActivity.findViewById(R.id.txfUser);
@@ -405,6 +438,18 @@ public class UIMaster {
 
     }
 
+    /**
+     * Displays the registration screen and sets up event listeners for user interactions.
+     * <p>
+     * This method switches the main activity's content view to the registration layout,
+     * initializes UI components, and registers click listeners for the register button
+     * and the switch-to-login button. When the register button is clicked, it calls
+     * {@link MainActivity#handleRegister(EditText, EditText, EditText, EditText)} to process
+     * user input and register a new account. If an exception occurs during this process,
+     * it throws a runtime exception. Similarly, when the switch-to-login button is clicked,
+     * it attempts to show the login screen by calling {@link #showLogin()}, handling exceptions
+     * in the same manner.
+     */
     public void showRegister() {
         mainActivity.setContentView(R.layout.main_register);
         usernameEditText = mainActivity.findViewById(R.id.txfUser);
@@ -436,6 +481,9 @@ public class UIMaster {
         });
     }
 
+    /**
+     * Navigates to the stats page, initializes views, sets up navigation listeners, and loads chart data asynchronously.
+     */
     public void navigateToStats() {
         // Set layout and initialize views
         mainActivity.setContentView(R.layout.main_chart);
@@ -446,11 +494,22 @@ public class UIMaster {
         loadChartDataAsync();
     }
 
+    /**
+     * Initializes the bar chart view by finding it in the main activity layout.
+     */
     private void initializeViews() {
         barChart = mainActivity.findViewById(R.id.barChart);
         // Consider caching these views if this method is called frequently
     }
 
+    /**
+     * Sets up click listeners for navigation buttons in the main activity.
+     * Each button is associated with a different navigation action:
+     * - Home button navigates to the starting page.
+     * - Search button triggers a search operation handled by the main activity.
+     * - Goals button navigates to the goals page.
+     * - Settings button navigates to the settings page.
+     */
     private void setupNavigationListeners() {
         ImageButton nav_homeBtn = mainActivity.findViewById(R.id.nav_home);
         ImageButton nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
@@ -486,6 +545,9 @@ public class UIMaster {
         });
     }
 
+    /**
+     * Asynchronously loads and displays chart data using AsyncTask.
+     */
     private void loadChartDataAsync() {
         // Show loading indicator while data is being fetched
         // progressBar.setVisibility(View.VISIBLE); // Uncomment if you have a progress bar
@@ -493,6 +555,9 @@ public class UIMaster {
         // Use AsyncTask or ExecutorService for background processing
         new AsyncTask<Void, Void, ChartData>() {
             @Override
+            /**
+             * Fetches reading time and completed books data for a user and returns it as ChartData.
+             */
             protected ChartData doInBackground(Void... voids) {
                 try {
                     // Fetch both reading time AND completed books data
@@ -516,6 +581,9 @@ public class UIMaster {
             }
 
             @Override
+            /**
+             * Handles post-execution tasks, either setting up the chart with data or showing an error message.
+             */
             protected void onPostExecute(ChartData chartData) {
                 if (chartData != null) {
                     setupChart(chartData);
@@ -528,6 +596,9 @@ public class UIMaster {
         }.execute();
     }
 
+    /**
+     * Sets up the bar chart with reading time data in hours.
+     */
     private void setupChart(ChartData chartData) {
         // Clean and convert reading time from minutes to hours
         ArrayList<BarEntry> cleanedEntries = filterValidEntries(chartData.readingTimeEntries);
@@ -553,6 +624,15 @@ public class UIMaster {
         displayTotalReadingTime(readingTimeInHours);
     }
 
+    /**
+     * Filters out invalid BarEntry objects based on specific criteria.
+     *
+     * This method iterates through a list of BarEntry objects and checks each entry's year-month value.
+     * It ensures that the year is between 2000 and 2030 and the month is within the range of 1 to 12.
+     * Only entries meeting these conditions are added to the validEntries list, which is then returned.
+     *
+     * @param entries List of BarEntry objects to be filtered
+     */
     private ArrayList<BarEntry> filterValidEntries(ArrayList<BarEntry> entries) {
         ArrayList<BarEntry> validEntries = new ArrayList<>();
         for (BarEntry entry : entries) {
@@ -569,6 +649,9 @@ public class UIMaster {
         return validEntries;
     }
 
+    /**
+     * Converts a list of BarEntries from minutes to hours.
+     */
     private ArrayList<BarEntry> convertMinutesToHours(ArrayList<BarEntry> entries) {
         ArrayList<BarEntry> hoursEntries = new ArrayList<>();
         for (BarEntry entry : entries) {
@@ -577,6 +660,9 @@ public class UIMaster {
         return hoursEntries;
     }
 
+    /**
+     * Configures the X and Y axes of a bar chart.
+     */
     private void configureAxes() {
         // X-axis configuration
         XAxis xAxis = barChart.getXAxis();
@@ -600,6 +686,9 @@ public class UIMaster {
         rightAxis.setAxisMinimum(0f); // Also prevent negative values on right axis if you enable it later
     }
 
+    /**
+     * Configures the chart with default settings and animations.
+     */
     private void configureChart() {
         barChart.getDescription().setText("Reading Time in Hours");
         barChart.setDrawGridBackground(false);
@@ -609,6 +698,9 @@ public class UIMaster {
         barChart.invalidate();
     }
 
+    /**
+     * Displays the total reading time by summing up entries and updating a TextView.
+     */
     private void displayTotalReadingTime(ArrayList<BarEntry> entriesInHours) {
         TextView allTime = mainActivity.findViewById(R.id.txtAllTime);
         double totalTime = 0;
@@ -622,6 +714,9 @@ public class UIMaster {
         allTime.setText("Total Reading Time: " + totalTime + " h");
     }
 
+    /**
+     * Displays a short toast message indicating failure to load reading statistics.
+     */
     private void showErrorMessage() {
         Toast.makeText(mainActivity, "Failed to load reading statistics", Toast.LENGTH_SHORT).show();
     }
@@ -645,6 +740,9 @@ public class UIMaster {
         };
 
         @Override
+        /**
+         * Converts a float value representing a year and month to its formatted string representation.
+         */
         public String getFormattedValue(float value) {
             int yearMonth = (int) value;
             if (yearMonth == 0) return "";
@@ -662,6 +760,9 @@ public class UIMaster {
 
 
     // Modified navigateToStartingPage method for UIMaster class
+    /**
+     * Navigates to the starting page, updating the UI and loading user data in the background.
+     */
     public void navigateToStartingPage() {
         // Create a dedicated executor for background work
         ExecutorService executor = Executors.newSingleThreadExecutor();
@@ -696,6 +797,9 @@ public class UIMaster {
                 // Use a custom item animator that minimizes work
                 recyclerView.setItemAnimator(new DefaultItemAnimator() {
                     @Override
+                    /**
+                     * Animates a change in RecyclerView item position if within a small threshold.
+                     */
                     public boolean animateChange(RecyclerView.ViewHolder oldHolder, RecyclerView.ViewHolder newHolder, int fromX, int fromY, int toX, int toY) {
                         // Skip animation for large position changes
                         if (Math.abs(fromX - toX) > 100 || Math.abs(fromY - toY) > 100) {
@@ -735,6 +839,9 @@ public class UIMaster {
                         // Add scroll listener for lazy loading if needed
                         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
                             @Override
+                            /**
+                             * Pauses or resumes image loading based on the scroll state of the RecyclerView.
+                             */
                             public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
                                 // Pause image loading when fast scrolling
                                 if (newState == RecyclerView.SCROLL_STATE_DRAGGING) {
@@ -772,6 +879,9 @@ public class UIMaster {
     }
 
     // Helper method to set up navigation buttons
+    /**
+     * Sets up the navigation buttons with their respective click listeners.
+     */
     private void setupNavigationButtons() {
         ImageButton nav_searchBtn = mainActivity.findViewById(R.id.nav_search);
         ImageButton nav_StatsBtn = mainActivity.findViewById(R.id.nav_stats);
@@ -789,6 +899,16 @@ public class UIMaster {
 
 
 
+    /**
+     * Navigates to the details page of a selected book.
+     *
+     * This method sets up the UI for displaying detailed information about a book, including its title,
+     * author, description, number of pages, genre, and rating. It also handles user interactions such as
+     * navigating to other sections of the app, updating the reading status of the book, and initiating AI-based
+     * recommendations.
+     *
+     * @param book The {@link Book} object containing details about the book to be displayed.
+     */
     public void navigateToDetails(Book book) {
         mainActivity.setContentView(R.layout.main_detail);
 
@@ -949,6 +1069,9 @@ public class UIMaster {
 
     }
 
+    /**
+     * Handles the display and functionality of the list search interface, including animations and filtering books based on user input.
+     */
     public void handleListSearch() {
         SearchView searchView = mainActivity.findViewById(R.id.searchView);
         Spinner spinnerGenre = mainActivity.findViewById(R.id.spinnerGenre);
@@ -988,12 +1111,18 @@ public class UIMaster {
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
+            /**
+             * Filters books based on the search query and selected author/genre.
+             */
             public boolean onQueryTextSubmit(String query) {
                 filterBooks(query.trim(), spinnerAuthor.getSelectedItem().toString(), spinnerGenre.getSelectedItem().toString());
                 return true;
             }
 
             @Override
+            /**
+             * Filters books based on the query text, author selection, and genre selection.
+             */
             public boolean onQueryTextChange(String newText) {
                 filterBooks(newText.trim(), spinnerAuthor.getSelectedItem().toString(), spinnerGenre.getSelectedItem().toString());
                 return true;
@@ -1014,6 +1143,13 @@ public class UIMaster {
 
     }
 
+    /**
+     * Filters books based on title, author, and genre queries.
+     *
+     * This method iterates over a map of book views and their corresponding Book objects.
+     * It checks if each book matches the provided title query, author, and genre filters.
+     * If a book meets all criteria, its view is set to visible; otherwise, it is hidden.
+     */
     private void filterBooks(String titleQuery, String selectedAuthor, String selectedGenre) {
         for (Map.Entry<View, Book> entry : bookViewMap.entrySet()) {
             View bookView = entry.getKey();
@@ -1031,6 +1167,9 @@ public class UIMaster {
         }
     }
 
+    /**
+     * Fills spinners with authors and genres from the logged-in user, adding a default "All" option.
+     */
     public void fillSpinners() {
         // Get authors and genres from the loggedinUser
         Set<String> authorsSet = logedindUser.getAuthors(); // assuming this is a Set<String>
@@ -1060,6 +1199,9 @@ public class UIMaster {
         spinnerGenre.setAdapter(genreAdapter);
     }
 
+    /**
+     * Creates a styled button with specified text and click listener.
+     */
     private Button createStyledGridButton(String text, View.OnClickListener listener) {
         Button btn = new Button(mainActivity);
         btn.setText(text);
@@ -1079,6 +1221,22 @@ public class UIMaster {
         return btn;
     }
 
+    /**
+     * Navigates to and sets up the Goals screen, allowing users to view,
+     * add, and manage their reading goals.
+     *
+     * This method performs several key tasks:
+     * - Sets the content view to the Goals activity layout.
+     * - Initializes and configures a RecyclerView to display goal items.
+     * - Adds click listeners for buttons that switch between displaying current,
+     *   completed, and failed goals.
+     * - Configures an AlertDialog with options to edit or delete selected goals.
+     * - Handles adding new goals through user input, including validation
+     *   of fields and database operations.
+     *
+     * @param mainActivity The MainActivity instance that calls this method,
+     *                     used for accessing resources, context, and user data.
+     */
     public void navigateToGoals() {
         mainActivity.setContentView(R.layout.main_goal);
 
@@ -1185,6 +1343,9 @@ public class UIMaster {
 
         spinnerGoalType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
+            /**
+             * Toggles visibility of book and number views based on selected item.
+             */
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 String selected = parent.getItemAtPosition(position).toString();
 
@@ -1198,6 +1359,9 @@ public class UIMaster {
             }
 
             @Override
+            /**
+             * Placeholder method called when nothing is selected.
+             */
             public void onNothingSelected(AdapterView<?> parent) {
                 // Optional
             }
@@ -1367,9 +1531,15 @@ public class UIMaster {
 
             slideOut.setAnimationListener(new Animation.AnimationListener() {
                 @Override
+                /**
+                 * Called when an animation starts.
+                 */
                 public void onAnimationStart(Animation animation) {}
 
                 @Override
+                /**
+                 * Hides the pop-up and shows the add goal button, then clears input fields.
+                 */
                 public void onAnimationEnd(Animation animation) {
                     popUp.setVisibility(View.GONE);
                     addGoal.setVisibility(View.VISIBLE);
@@ -1381,6 +1551,9 @@ public class UIMaster {
                 }
 
                 @Override
+                /**
+                 * Handles the repeat event of an animation.
+                 */
                 public void onAnimationRepeat(Animation animation) {}
             });
 
@@ -1388,6 +1561,19 @@ public class UIMaster {
         });
     }
 
+    /**
+     * Navigates to the settings screen and sets up the UI elements and their corresponding listeners.
+     *
+     * This method is responsible for:
+     * - Setting the content view to the main settings layout.
+     * - Initializing various UI components such as buttons, text views, switches, and time pickers.
+     * - Configuring listeners for UI events, including button clicks and changes in switch states.
+     * - Handling user interactions for changing passwords, deleting accounts, changing usernames,
+     *   changing emails, and configuring notification settings.
+     *
+     * @throws ExecutionException if an error occurs during asynchronous execution.
+     * @throws InterruptedException if the current thread is interrupted.
+     */
     public void navigateToSettings(){
         mainActivity.setContentView(R.layout.main_setting);
 
@@ -1556,6 +1742,9 @@ public class UIMaster {
                             }
                         })
                         .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            /**
+                             * Dismisses the given dialog when an option is clicked.
+                             */
                             public void onClick(DialogInterface dialog, int which) {
                                 dialog.dismiss();
                             }
@@ -1584,6 +1773,9 @@ public class UIMaster {
 
     }
 
+    /**
+     * Toggles the visibility of a RelativeLayout with an animated scale effect.
+     */
     private void toggleVisibilityAnimated(RelativeLayout layout) {
         layout.setPivotY(0f); // Set animation pivot to top
 
@@ -1608,6 +1800,9 @@ public class UIMaster {
 
     }
 
+    /**
+     * Sets the database connection for this instance.
+     */
     public void setDb(DataBaseConnection db) {
         this.db = db;
     }
