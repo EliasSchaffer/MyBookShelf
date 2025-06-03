@@ -1,0 +1,185 @@
+\doxysection{com.\+example.\+mybookshelf.\+Authenticator Class Reference}
+\hypertarget{classcom_1_1example_1_1mybookshelf_1_1Authenticator}{}\label{classcom_1_1example_1_1mybookshelf_1_1Authenticator}\index{com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}}
+
+
+Collaboration diagram for com.\+example.\+mybookshelf.\+Authenticator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1Authenticator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a94316758fa5f1d24b4b0f37bc47d8941}{Authenticator}} (\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity}{Main\+Activity}} \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a8793f7c7709a82bfe4e9fc01ceffb921}{context}})
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a5b51bf95ee53d9d25544eac679e67f7c}{check\+Login}} (\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User}{User}} attempt, Bi\+Consumer$<$ Boolean, Integer $>$ callback)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a95735d7b36b08b09da3829afe903015c}{register}} (String username, String password, String email)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1Authenticator_adebcfe7ba4f68b9fe56cb7f7bf481cf7}{save\+Token}} (Context \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a8793f7c7709a82bfe4e9fc01ceffb921}{context}}, String token, int uid, String username)  throws Exception 
+\item 
+int \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a9f7d314a9b2b3b6749571c810ba1405d}{get\+Uid}} (Context \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a8793f7c7709a82bfe4e9fc01ceffb921}{context}})
+\item 
+String \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a1f33cf9d687e90c42550e8aacf290a2c}{get\+Token}} (Context \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a8793f7c7709a82bfe4e9fc01ceffb921}{context}})  throws Exception 
+\item 
+String \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a365d4ab016ac0d1c7a59f5fa535ce52c}{get\+Username}} (Context \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a8793f7c7709a82bfe4e9fc01ceffb921}{context}})
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1Authenticator_aed7f6698a11da95d35c1af54e763ee8f}{set\+Db}} (\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection}{Data\+Base\+Connection}} \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1Authenticator_ae81896043bf8a0559df6c16ce4cd656b}{db}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a57eb5913cd07c88e3f0771b4bf88bc0c}{clear\+Stored\+Token}} (Context \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a8793f7c7709a82bfe4e9fc01ceffb921}{context}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1Authenticator_ad35502fa53cac65e3042d5d295db08f3}{post\+To\+Main}} (Runnable task)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection}{Data\+Base\+Connection}} \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1Authenticator_ae81896043bf8a0559df6c16ce4cd656b}{db}}
+\item 
+final \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity}{Main\+Activity}} \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a8793f7c7709a82bfe4e9fc01ceffb921}{context}}
+\item 
+final Executor\+Service \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a4136438e8289b133149974c57612154c}{executor\+Service}} = Executors.\+new\+Single\+Thread\+Executor()
+\item 
+final Handler \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1Authenticator_acf1a0d1b640a234f1391db433eac9501}{main\+Handler}} = new Handler(Looper.\+get\+Main\+Looper())
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1Authenticator_ade7109667fe291a94b3caaa8951f6ef8}{KEY\+\_\+\+ALIAS}} = "{}com.\+example.\+mybookshelf.\+NB1zi\+STb9ek\+Hn\+Fh11\+Oh\+L"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a94316758fa5f1d24b4b0f37bc47d8941}\index{com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}!Authenticator@{Authenticator}}
+\index{Authenticator@{Authenticator}!com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}}
+\doxysubsubsection{\texorpdfstring{Authenticator()}{Authenticator()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a94316758fa5f1d24b4b0f37bc47d8941} 
+com.\+example.\+mybookshelf.\+Authenticator.\+Authenticator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity}{Main\+Activity}}}]{context}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a5b51bf95ee53d9d25544eac679e67f7c}\index{com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}!checkLogin@{checkLogin}}
+\index{checkLogin@{checkLogin}!com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}}
+\doxysubsubsection{\texorpdfstring{checkLogin()}{checkLogin()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a5b51bf95ee53d9d25544eac679e67f7c} 
+void com.\+example.\+mybookshelf.\+Authenticator.\+check\+Login (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User}{User}}}]{attempt}{, }\item[{Bi\+Consumer$<$ Boolean, Integer $>$}]{callback}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a5b51bf95ee53d9d25544eac679e67f7c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a57eb5913cd07c88e3f0771b4bf88bc0c}\index{com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}!clearStoredToken@{clearStoredToken}}
+\index{clearStoredToken@{clearStoredToken}!com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}}
+\doxysubsubsection{\texorpdfstring{clearStoredToken()}{clearStoredToken()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a57eb5913cd07c88e3f0771b4bf88bc0c} 
+static void com.\+example.\+mybookshelf.\+Authenticator.\+clear\+Stored\+Token (\begin{DoxyParamCaption}\item[{Context}]{context}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a57eb5913cd07c88e3f0771b4bf88bc0c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a1f33cf9d687e90c42550e8aacf290a2c}\index{com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}!getToken@{getToken}}
+\index{getToken@{getToken}!com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}}
+\doxysubsubsection{\texorpdfstring{getToken()}{getToken()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a1f33cf9d687e90c42550e8aacf290a2c} 
+String com.\+example.\+mybookshelf.\+Authenticator.\+get\+Token (\begin{DoxyParamCaption}\item[{Context}]{context}{}\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a9f7d314a9b2b3b6749571c810ba1405d}\index{com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}!getUid@{getUid}}
+\index{getUid@{getUid}!com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}}
+\doxysubsubsection{\texorpdfstring{getUid()}{getUid()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a9f7d314a9b2b3b6749571c810ba1405d} 
+int com.\+example.\+mybookshelf.\+Authenticator.\+get\+Uid (\begin{DoxyParamCaption}\item[{Context}]{context}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a365d4ab016ac0d1c7a59f5fa535ce52c}\index{com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}!getUsername@{getUsername}}
+\index{getUsername@{getUsername}!com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}}
+\doxysubsubsection{\texorpdfstring{getUsername()}{getUsername()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a365d4ab016ac0d1c7a59f5fa535ce52c} 
+String com.\+example.\+mybookshelf.\+Authenticator.\+get\+Username (\begin{DoxyParamCaption}\item[{Context}]{context}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1Authenticator_ad35502fa53cac65e3042d5d295db08f3}\index{com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}!postToMain@{postToMain}}
+\index{postToMain@{postToMain}!com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}}
+\doxysubsubsection{\texorpdfstring{postToMain()}{postToMain()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1Authenticator_ad35502fa53cac65e3042d5d295db08f3} 
+void com.\+example.\+mybookshelf.\+Authenticator.\+post\+To\+Main (\begin{DoxyParamCaption}\item[{Runnable}]{task}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1Authenticator_ad35502fa53cac65e3042d5d295db08f3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a95735d7b36b08b09da3829afe903015c}\index{com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}!register@{register}}
+\index{register@{register}!com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}}
+\doxysubsubsection{\texorpdfstring{register()}{register()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a95735d7b36b08b09da3829afe903015c} 
+void com.\+example.\+mybookshelf.\+Authenticator.\+register (\begin{DoxyParamCaption}\item[{String}]{username}{, }\item[{String}]{password}{, }\item[{String}]{email}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1Authenticator_adebcfe7ba4f68b9fe56cb7f7bf481cf7}\index{com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}!saveToken@{saveToken}}
+\index{saveToken@{saveToken}!com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}}
+\doxysubsubsection{\texorpdfstring{saveToken()}{saveToken()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1Authenticator_adebcfe7ba4f68b9fe56cb7f7bf481cf7} 
+void com.\+example.\+mybookshelf.\+Authenticator.\+save\+Token (\begin{DoxyParamCaption}\item[{Context}]{context}{, }\item[{String}]{token}{, }\item[{int}]{uid}{, }\item[{String}]{username}{}\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1Authenticator_aed7f6698a11da95d35c1af54e763ee8f}\index{com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}!setDb@{setDb}}
+\index{setDb@{setDb}!com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}}
+\doxysubsubsection{\texorpdfstring{setDb()}{setDb()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1Authenticator_aed7f6698a11da95d35c1af54e763ee8f} 
+void com.\+example.\+mybookshelf.\+Authenticator.\+set\+Db (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection}{Data\+Base\+Connection}}}]{db}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a8793f7c7709a82bfe4e9fc01ceffb921}\index{com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}!context@{context}}
+\index{context@{context}!com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}}
+\doxysubsubsection{\texorpdfstring{context}{context}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a8793f7c7709a82bfe4e9fc01ceffb921} 
+final \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity}{Main\+Activity}} com.\+example.\+mybookshelf.\+Authenticator.\+context\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1Authenticator_ae81896043bf8a0559df6c16ce4cd656b}\index{com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}!db@{db}}
+\index{db@{db}!com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}}
+\doxysubsubsection{\texorpdfstring{db}{db}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1Authenticator_ae81896043bf8a0559df6c16ce4cd656b} 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection}{Data\+Base\+Connection}} com.\+example.\+mybookshelf.\+Authenticator.\+db\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a4136438e8289b133149974c57612154c}\index{com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}!executorService@{executorService}}
+\index{executorService@{executorService}!com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}}
+\doxysubsubsection{\texorpdfstring{executorService}{executorService}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1Authenticator_a4136438e8289b133149974c57612154c} 
+final Executor\+Service com.\+example.\+mybookshelf.\+Authenticator.\+executor\+Service = Executors.\+new\+Single\+Thread\+Executor()\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1Authenticator_ade7109667fe291a94b3caaa8951f6ef8}\index{com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}!KEY\_ALIAS@{KEY\_ALIAS}}
+\index{KEY\_ALIAS@{KEY\_ALIAS}!com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}}
+\doxysubsubsection{\texorpdfstring{KEY\_ALIAS}{KEY\_ALIAS}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1Authenticator_ade7109667fe291a94b3caaa8951f6ef8} 
+final String com.\+example.\+mybookshelf.\+Authenticator.\+KEY\+\_\+\+ALIAS = "{}com.\+example.\+mybookshelf.\+NB1zi\+STb9ek\+Hn\+Fh11\+Oh\+L"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1Authenticator_acf1a0d1b640a234f1391db433eac9501}\index{com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}!mainHandler@{mainHandler}}
+\index{mainHandler@{mainHandler}!com.example.mybookshelf.Authenticator@{com.example.mybookshelf.Authenticator}}
+\doxysubsubsection{\texorpdfstring{mainHandler}{mainHandler}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1Authenticator_acf1a0d1b640a234f1391db433eac9501} 
+final Handler com.\+example.\+mybookshelf.\+Authenticator.\+main\+Handler = new Handler(Looper.\+get\+Main\+Looper())\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/app/doc\+\_\+state/github\+\_\+repos\+Repo\+Arch\+Doc\+Gen\+Context/\+Elias\+Schaffer/\+My\+Book\+Shelf/src/main/java/com/example/mybookshelf/\mbox{\hyperlink{Authenticator_8java}{Authenticator.\+java}}\end{DoxyCompactItemize}

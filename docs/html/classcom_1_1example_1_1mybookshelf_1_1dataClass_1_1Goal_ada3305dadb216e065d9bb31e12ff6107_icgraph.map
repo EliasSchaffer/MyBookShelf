@@ -1,0 +1,9 @@
+<map id="com.example.mybookshelf.dataClass.Goal.getFrequenzy" name="com.example.mybookshelf.dataClass.Goal.getFrequenzy">
+<area shape="rect" id="Node000001" title=" " alt="" coords="679,41,911,81"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection.html#a3b22d6106c92d008ed8b05c10892f0b7" title=" " alt="" coords="372,5,588,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="665,49,588,40,588,35,666,44"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter.html#af6a51f456a68a61bedc36289b91e0716" title=" " alt="" coords="329,70,631,125"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="665,79,631,83,631,77,665,73"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter.html#ad2264dc4c944b992a8cac174bebb6694" title=" " alt="" coords="5,70,281,125"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="316,100,282,100,282,95,316,95"/>
+</map>

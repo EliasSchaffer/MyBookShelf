@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="dir_3ca9899027aabbe14225419e751ab3c8" kind="dir">
+    <compoundname>/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf</compoundname>
+    <innerdir refid="dir_994aee0e188876e5cfdaf15b555af1c8">/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis</innerdir>
+    <innerdir refid="dir_c6a968f081ce903b6b4b1c544fbdc4be">/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass</innerdir>
+    <innerdir refid="dir_8f00bb01f6e9704ecca083d5ab7792ba">/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/LayoutManager</innerdir>
+    <innerdir refid="dir_46a52ef8c8449aa1b38a4e6a7027c630">/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications</innerdir>
+    <innerfile refid="ApiResponseCallback_8java">ApiResponseCallback.java</innerfile>
+    <innerfile refid="Authenticator_8java">Authenticator.java</innerfile>
+    <innerfile refid="BookRecommendationFlow_8java">BookRecommendationFlow.java</innerfile>
+    <innerfile refid="DataBaseConnection_8java">DataBaseConnection.java</innerfile>
+    <innerfile refid="GoalHandler_8java">GoalHandler.java</innerfile>
+    <innerfile refid="MainActivity_8java">MainActivity.java</innerfile>
+    <innerfile refid="Search_8java">Search.java</innerfile>
+    <innerfile refid="UIMaster_8java">UIMaster.java</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/"/>
+  </compounddef>
+</doxygen>

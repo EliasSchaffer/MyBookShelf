@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="namespacecom_1_1example_1_1mybookshelf_1_1notifications" kind="namespace" language="Java">
+    <compoundname>com::example::mybookshelf::notifications</compoundname>
+    <innerclass refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1BootCompletedReceiver" prot="public">com::example::mybookshelf::notifications::BootCompletedReceiver</innerclass>
+    <innerclass refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationChannelManager" prot="public">com::example::mybookshelf::notifications::NotificationChannelManager</innerclass>
+    <innerclass refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationReceiver" prot="public">com::example::mybookshelf::notifications::NotificationReceiver</innerclass>
+    <innerclass refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler" prot="public">com::example::mybookshelf::notifications::NotificationScheduler</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/BootCompletedReceiver.java" line="2" column="15"/>
+  </compounddef>
+</doxygen>

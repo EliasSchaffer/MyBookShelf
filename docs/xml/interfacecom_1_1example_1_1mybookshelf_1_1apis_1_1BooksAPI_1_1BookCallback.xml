@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1_1BookCallback" kind="interface" language="Java" prot="public">
+    <compoundname>com::example::mybookshelf::apis::BooksAPI::BookCallback</compoundname>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1_1BookCallback_1a3e72ba2e384dd024c32999bda2af65d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.apis.BooksAPI.BookCallback.onBookFetched</definition>
+        <argsstring>(List&lt; Book &gt; book)</argsstring>
+        <name>onBookFetched</name>
+        <qualifiedname>com.example.mybookshelf.apis.BooksAPI.BookCallback.onBookFetched</qualifiedname>
+        <param>
+          <type>List&lt; <ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book" kindref="compound">Book</ref> &gt;</type>
+          <declname>book</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles the event when a list of books is fetched. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/BooksAPI.java" line="31" column="14"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1a8a2a962adad00e7ab410b7b23c13a45e" compoundref="BooksAPI_8java" startline="73" endline="83">com.example.mybookshelf.apis.BooksAPI.getMultipleBooks</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1ac350a4b300b12277d646f8dc3fd57aef" compoundref="BooksAPI_8java" startline="45" endline="66">com.example.mybookshelf.apis.BooksAPI.getOneBook</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>com.example.mybookshelf.apis.BooksAPI.BookCallback</label>
+        <link refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1_1BookCallback"/>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/BooksAPI.java" line="27" column="22" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/BooksAPI.java" bodystart="27" bodyend="32"/>
+    <listofallmembers>
+      <member refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1_1BookCallback_1a3e72ba2e384dd024c32999bda2af65d4" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::apis::BooksAPI::BookCallback</scope><name>onBookFetched</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,841 @@
+\doxysection{com.\+example.\+mybookshelf.\+UIMaster Class Reference}
+\hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster}{}\label{classcom_1_1example_1_1mybookshelf_1_1UIMaster}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+
+
+Collaboration diagram for com.\+example.\+mybookshelf.\+UIMaster\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_1_1ChartData}{Chart\+Data}}
+\item 
+class \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_1_1MonthValueFormatter}{Month\+Value\+Formatter}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_aaf0e05b3454197f2e623075569b118d4}{UIMaster}} (\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity}{Main\+Activity}} main)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ad68836f56831277d04d47f04bcb4e6e4}{set\+USer}} (\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User}{User}} user)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a78605aa6a9565efbae9637ee1c9f9c0c}{reduce\+Time\+Spend\+Reading}} (int time, Text\+View \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a51f677da9e14df925e0078873b518490}{time\+Spent\+Reading\+Text\+View}})
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a1533d0ed2384f2ec729cfcec7bd9a25f}{create\+Book\+Box}} (Linear\+Layout container, \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book}{Book}} book, boolean is\+Search)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_aa1dc0909ddd670cbf7ed2fd6ecb141cf}{clear\+UI}} (Linear\+Layout container)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a0306308fc0728bc63c3dcc670b14a402}{update\+Reading\+Time}} (int pages, Text\+View \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a51f677da9e14df925e0078873b518490}{time\+Spent\+Reading\+Text\+View}})
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a5d06d53d8ef756629247fde0f557a3d1}{show\+Login}} ()  throws Execution\+Exception, Interrupted\+Exception 
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a5f5bae724e7f3d3de15486430b3bc8c1}{show\+Register}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_aa3079f36c20fc1b0ec8c01197f06faa3}{navigate\+To\+Stats}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ad609d5e0b54e87afcb60aed6c66a792e}{navigate\+To\+Starting\+Page}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ac2a608fcf86d3dbe14b4684dbbaf1431}{navigate\+To\+Details}} (\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book}{Book}} book)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a4636b546c38ace5aedccfd989edc0bb1}{handle\+List\+Search}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a3e552449814fd4b18a4070128261c571}{fill\+Spinners}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ad30bff41c8ec833af2293c0b6c8b47b2}{navigate\+To\+Goals}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ac859db60f9068e6a87b633ef697d4d0f}{navigate\+To\+Settings}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a00d8b97e1a726995297f32919c1921ab}{set\+Db}} (\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection}{Data\+Base\+Connection}} \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a4b26ad26de31c25665781530f174561d}{db}})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Image\+Button \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ae7d87877ec33cbf6de7c0cb67ef5eb39}{get\+Btn\+Add}} (\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book}{Book}} book)
+\item 
+Image\+Button \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a066a14333819f9cde27957ef8a02f180}{get\+Btn\+Remove}} (\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book}{Book}} book)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_aeadc13ea946b279afce35c39bb36f3b6}{initialize\+Views}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a3bb75047e98f0333fa2fdfd173bc80b0}{setup\+Navigation\+Listeners}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a5c502183bab9192d9f38b42a28be7164}{load\+Chart\+Data\+Async}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a1d0b44fba73323953ffbbf69f4f3f4cb}{setup\+Chart}} (\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_1_1ChartData}{Chart\+Data}} chart\+Data)
+\item 
+Array\+List$<$ Bar\+Entry $>$ \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a897a27ba41fe604acf9472257ad18685}{filter\+Valid\+Entries}} (Array\+List$<$ Bar\+Entry $>$ entries)
+\item 
+Array\+List$<$ Bar\+Entry $>$ \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a2f446043c1019868262b5e49ddb58609}{convert\+Minutes\+To\+Hours}} (Array\+List$<$ Bar\+Entry $>$ entries)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a66cf6ce29c43e6db34be85ae9990c102}{configure\+Axes}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ae589c66b6b1826db14cd0185e2453c12}{configure\+Chart}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a5368b8b93b9216d91a256a2302ea04c8}{display\+Total\+Reading\+Time}} (Array\+List$<$ Bar\+Entry $>$ entries\+In\+Hours)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a3beb8f5e82c56206227f83e05d2e2dba}{show\+Error\+Message}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_aa6aad8404432bdaf23db9b41e99a6ed5}{setup\+Navigation\+Buttons}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a39a8f40aa163994c415f165d94ee47fd}{filter\+Books}} (String title\+Query, String selected\+Author, String selected\+Genre)
+\item 
+Button \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a4709f542c160eca1392685b8ba9455e5}{create\+Styled\+Grid\+Button}} (String text, View.\+On\+Click\+Listener listener)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a3bfddda8973b9c902065851da2802cd1}{toggle\+Visibility\+Animated}} (Relative\+Layout layout)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Edit\+Text \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a61448faa08032ad7f27f29c4a6d08e75}{username\+Edit\+Text}}
+\item 
+Edit\+Text \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ac38373761aef1dccd30d4418583c194f}{password\+Edit\+Text}}
+\item 
+Edit\+Text \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a03ef58ea33c530aab57a58a298e12c1d}{email\+Edit\+Text}}
+\item 
+Edit\+Text \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a33c96fac4ab139d0ee338ed0cefee6cf}{repeat\+Password}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a1578fb1dc832e74fc94d2c6115e16b6a}{login\+Button}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_acfa71075f7a34512b0d3b97c1ee11af2}{register\+Button}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a8725961b54c4b55c77f54f1686cdcc02}{switch\+To\+Login\+Button}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a92107a45357a577f1600118d4bcd03ab}{switch\+To\+Register\+Button}}
+\item 
+int \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_af7a5045ff2d7c1e6ae4042b87305a3f2}{time\+Spent\+Reading}} = 0
+\item 
+Image\+Button \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_aa656ff54b76d2aad814455a921b23769}{nav\+\_\+search\+Btn}}
+\item 
+Image\+Button \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a2f9dd9d99fba9fbf71600f940fb5eb9e}{nav\+\_\+\+Stats\+Btn}}
+\item 
+Text\+View \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a51f677da9e14df925e0078873b518490}{time\+Spent\+Reading\+Text\+View}}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI}{Books\+API}} \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a3ebd4eaa7d80139bd41dc5e1fa218c4c}{books\+API}}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI}{Ai\+API}} \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a7988f320c66cc06640a7e88dfea44791}{ai}}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection}{Data\+Base\+Connection}} \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a4b26ad26de31c25665781530f174561d}{db}}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User}{User}} \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a725459700c0500c243299fc80cd0ea7a}{logedind\+User}}
+\item 
+Map$<$ View, \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book}{Book}} $>$ \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a673cf5a9e0adbd1e6ecdef9a1afa9818}{book\+View\+Map}}
+\item 
+final Executor\+Service \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_aa3a5fde5cd9073a735c5bbac40a79a98}{executor\+Service}} = Executors.\+new\+Single\+Thread\+Executor()
+\item 
+String \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ae58fc63fffcaeca03afa133ba306d62c}{AIprompt}} = "{}"{}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow}{Book\+Recommendation\+Flow}} \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a498a128e82ebf6851cb77f377169e05e}{brf}}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter}{Costume\+List\+Adapter}} \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a118323285918e37742fb31592587087e}{list\+Adapter}}
+\item 
+Bar\+Chart \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ac22273bb30e9f228991043bcdfbd8af2}{bar\+Chart}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_aaf0e05b3454197f2e623075569b118d4}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!UIMaster@{UIMaster}}
+\index{UIMaster@{UIMaster}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{UIMaster()}{UIMaster()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_aaf0e05b3454197f2e623075569b118d4} 
+com.\+example.\+mybookshelf.\+UIMaster.\+UIMaster (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity}{Main\+Activity}}}]{main}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_aa1dc0909ddd670cbf7ed2fd6ecb141cf}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!clearUI@{clearUI}}
+\index{clearUI@{clearUI}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{clearUI()}{clearUI()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_aa1dc0909ddd670cbf7ed2fd6ecb141cf} 
+void com.\+example.\+mybookshelf.\+UIMaster.\+clear\+UI (\begin{DoxyParamCaption}\item[{Linear\+Layout}]{container}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Clears all views from the given Linear\+Layout container. \Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a66cf6ce29c43e6db34be85ae9990c102}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!configureAxes@{configureAxes}}
+\index{configureAxes@{configureAxes}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{configureAxes()}{configureAxes()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a66cf6ce29c43e6db34be85ae9990c102} 
+void com.\+example.\+mybookshelf.\+UIMaster.\+configure\+Axes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Configures the X and Y axes of a bar chart. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a66cf6ce29c43e6db34be85ae9990c102_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ae589c66b6b1826db14cd0185e2453c12}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!configureChart@{configureChart}}
+\index{configureChart@{configureChart}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{configureChart()}{configureChart()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ae589c66b6b1826db14cd0185e2453c12} 
+void com.\+example.\+mybookshelf.\+UIMaster.\+configure\+Chart (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Configures the chart with default settings and animations. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ae589c66b6b1826db14cd0185e2453c12_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a2f446043c1019868262b5e49ddb58609}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!convertMinutesToHours@{convertMinutesToHours}}
+\index{convertMinutesToHours@{convertMinutesToHours}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{convertMinutesToHours()}{convertMinutesToHours()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a2f446043c1019868262b5e49ddb58609} 
+Array\+List$<$ Bar\+Entry $>$ com.\+example.\+mybookshelf.\+UIMaster.\+convert\+Minutes\+To\+Hours (\begin{DoxyParamCaption}\item[{Array\+List$<$ Bar\+Entry $>$}]{entries}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Converts a list of Bar\+Entries from minutes to hours. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a2f446043c1019868262b5e49ddb58609_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a1533d0ed2384f2ec729cfcec7bd9a25f}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!createBookBox@{createBookBox}}
+\index{createBookBox@{createBookBox}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{createBookBox()}{createBookBox()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a1533d0ed2384f2ec729cfcec7bd9a25f} 
+void com.\+example.\+mybookshelf.\+UIMaster.\+create\+Book\+Box (\begin{DoxyParamCaption}\item[{Linear\+Layout}]{container}{, }\item[{\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book}{Book}}}]{book}{, }\item[{boolean}]{is\+Search}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a visual representation of a book as a box within a given container. Handles text change events before they occur.
+
+Updates notes in the database when text changes.
+
+Handles text changes in an editable field.Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a1533d0ed2384f2ec729cfcec7bd9a25f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a4709f542c160eca1392685b8ba9455e5}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!createStyledGridButton@{createStyledGridButton}}
+\index{createStyledGridButton@{createStyledGridButton}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{createStyledGridButton()}{createStyledGridButton()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a4709f542c160eca1392685b8ba9455e5} 
+Button com.\+example.\+mybookshelf.\+UIMaster.\+create\+Styled\+Grid\+Button (\begin{DoxyParamCaption}\item[{String}]{text}{, }\item[{View.\+On\+Click\+Listener}]{listener}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Creates a styled button with specified text and click listener. \Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a5368b8b93b9216d91a256a2302ea04c8}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!displayTotalReadingTime@{displayTotalReadingTime}}
+\index{displayTotalReadingTime@{displayTotalReadingTime}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{displayTotalReadingTime()}{displayTotalReadingTime()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a5368b8b93b9216d91a256a2302ea04c8} 
+void com.\+example.\+mybookshelf.\+UIMaster.\+display\+Total\+Reading\+Time (\begin{DoxyParamCaption}\item[{Array\+List$<$ Bar\+Entry $>$}]{entries\+In\+Hours}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Displays the total reading time by summing up entries and updating a Text\+View. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a5368b8b93b9216d91a256a2302ea04c8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a3e552449814fd4b18a4070128261c571}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!fillSpinners@{fillSpinners}}
+\index{fillSpinners@{fillSpinners}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{fillSpinners()}{fillSpinners()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a3e552449814fd4b18a4070128261c571} 
+void com.\+example.\+mybookshelf.\+UIMaster.\+fill\+Spinners (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Fills spinners with authors and genres from the logged-\/in user, adding a default "{}\+All"{} option. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a3e552449814fd4b18a4070128261c571_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a39a8f40aa163994c415f165d94ee47fd}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!filterBooks@{filterBooks}}
+\index{filterBooks@{filterBooks}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{filterBooks()}{filterBooks()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a39a8f40aa163994c415f165d94ee47fd} 
+void com.\+example.\+mybookshelf.\+UIMaster.\+filter\+Books (\begin{DoxyParamCaption}\item[{String}]{title\+Query}{, }\item[{String}]{selected\+Author}{, }\item[{String}]{selected\+Genre}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Filters books based on title, author, and genre queries.
+
+This method iterates over a map of book views and their corresponding \doxylink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book}{Book} objects. It checks if each book matches the provided title query, author, and genre filters. If a book meets all criteria, its view is set to visible; otherwise, it is hidden. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a39a8f40aa163994c415f165d94ee47fd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a39a8f40aa163994c415f165d94ee47fd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a897a27ba41fe604acf9472257ad18685}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!filterValidEntries@{filterValidEntries}}
+\index{filterValidEntries@{filterValidEntries}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{filterValidEntries()}{filterValidEntries()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a897a27ba41fe604acf9472257ad18685} 
+Array\+List$<$ Bar\+Entry $>$ com.\+example.\+mybookshelf.\+UIMaster.\+filter\+Valid\+Entries (\begin{DoxyParamCaption}\item[{Array\+List$<$ Bar\+Entry $>$}]{entries}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Filters out invalid Bar\+Entry objects based on specific criteria.
+
+This method iterates through a list of Bar\+Entry objects and checks each entry\textquotesingle{}s year-\/month value. It ensures that the year is between 2000 and 2030 and the month is within the range of 1 to 12. Only entries meeting these conditions are added to the valid\+Entries list, which is then returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em entries} & List of Bar\+Entry objects to be filtered \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a897a27ba41fe604acf9472257ad18685_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ae7d87877ec33cbf6de7c0cb67ef5eb39}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!getBtnAdd@{getBtnAdd}}
+\index{getBtnAdd@{getBtnAdd}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{getBtnAdd()}{getBtnAdd()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ae7d87877ec33cbf6de7c0cb67ef5eb39} 
+Image\+Button com.\+example.\+mybookshelf.\+UIMaster.\+get\+Btn\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book}{Book}}}]{book}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Creates and returns an Image\+Button that, when clicked, calls save\+Book with the given book. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ae7d87877ec33cbf6de7c0cb67ef5eb39_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a066a14333819f9cde27957ef8a02f180}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!getBtnRemove@{getBtnRemove}}
+\index{getBtnRemove@{getBtnRemove}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{getBtnRemove()}{getBtnRemove()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a066a14333819f9cde27957ef8a02f180} 
+Image\+Button com.\+example.\+mybookshelf.\+UIMaster.\+get\+Btn\+Remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book}{Book}}}]{book}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Creates and configures an Image\+Button to remove a specified book. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a066a14333819f9cde27957ef8a02f180_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a4636b546c38ace5aedccfd989edc0bb1}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!handleListSearch@{handleListSearch}}
+\index{handleListSearch@{handleListSearch}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{handleListSearch()}{handleListSearch()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a4636b546c38ace5aedccfd989edc0bb1} 
+void com.\+example.\+mybookshelf.\+UIMaster.\+handle\+List\+Search (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Handles the display and functionality of the list search interface, including animations and filtering books based on user input. Filters books based on the search query and selected author/genre.
+
+Filters books based on the query text, author selection, and genre selection.Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a4636b546c38ace5aedccfd989edc0bb1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a4636b546c38ace5aedccfd989edc0bb1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_aeadc13ea946b279afce35c39bb36f3b6}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!initializeViews@{initializeViews}}
+\index{initializeViews@{initializeViews}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{initializeViews()}{initializeViews()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_aeadc13ea946b279afce35c39bb36f3b6} 
+void com.\+example.\+mybookshelf.\+UIMaster.\+initialize\+Views (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Initializes the bar chart view by finding it in the main activity layout. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_aeadc13ea946b279afce35c39bb36f3b6_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a5c502183bab9192d9f38b42a28be7164}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!loadChartDataAsync@{loadChartDataAsync}}
+\index{loadChartDataAsync@{loadChartDataAsync}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{loadChartDataAsync()}{loadChartDataAsync()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a5c502183bab9192d9f38b42a28be7164} 
+void com.\+example.\+mybookshelf.\+UIMaster.\+load\+Chart\+Data\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Asynchronously loads and displays chart data using Async\+Task. Fetches reading time and completed books data for a user and returns it as \doxylink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_1_1ChartData}{Chart\+Data}.
+
+Handles post-\/execution tasks, either setting up the chart with data or showing an error message.Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a5c502183bab9192d9f38b42a28be7164_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a5c502183bab9192d9f38b42a28be7164_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ac2a608fcf86d3dbe14b4684dbbaf1431}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!navigateToDetails@{navigateToDetails}}
+\index{navigateToDetails@{navigateToDetails}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{navigateToDetails()}{navigateToDetails()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ac2a608fcf86d3dbe14b4684dbbaf1431} 
+void com.\+example.\+mybookshelf.\+UIMaster.\+navigate\+To\+Details (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book}{Book}}}]{book}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Navigates to the details page of a selected book.
+
+This method sets up the UI for displaying detailed information about a book, including its title, author, description, number of pages, genre, and rating. It also handles user interactions such as navigating to other sections of the app, updating the reading status of the book, and initiating AI-\/based recommendations.
+
+
+\begin{DoxyParams}{Parameters}
+{\em book} & The {\ttfamily \doxylink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book}{Book}} object containing details about the book to be displayed. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ac2a608fcf86d3dbe14b4684dbbaf1431_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ac2a608fcf86d3dbe14b4684dbbaf1431_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ad30bff41c8ec833af2293c0b6c8b47b2}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!navigateToGoals@{navigateToGoals}}
+\index{navigateToGoals@{navigateToGoals}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{navigateToGoals()}{navigateToGoals()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ad30bff41c8ec833af2293c0b6c8b47b2} 
+void com.\+example.\+mybookshelf.\+UIMaster.\+navigate\+To\+Goals (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Navigates to and sets up the Goals screen, allowing users to view, add, and manage their reading goals.
+
+This method performs several key tasks\+:
+\begin{DoxyItemize}
+\item Sets the content view to the Goals activity layout.
+\item Initializes and configures a Recycler\+View to display goal items.
+\item Adds click listeners for buttons that switch between displaying current, completed, and failed goals.
+\item Configures an Alert\+Dialog with options to edit or delete selected goals.
+\item Handles adding new goals through user input, including validation of fields and database operations.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em main\+Activity} & The \doxylink{classcom_1_1example_1_1mybookshelf_1_1MainActivity}{Main\+Activity} instance that calls this method, used for accessing resources, context, and user data. \\
+\hline
+\end{DoxyParams}
+Toggles visibility of book and number views based on selected item.
+
+Placeholder method called when nothing is selected.
+
+Called when an animation starts.
+
+Hides the pop-\/up and shows the add goal button, then clears input fields.
+
+Handles the repeat event of an animation.Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ad30bff41c8ec833af2293c0b6c8b47b2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ad30bff41c8ec833af2293c0b6c8b47b2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ac859db60f9068e6a87b633ef697d4d0f}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!navigateToSettings@{navigateToSettings}}
+\index{navigateToSettings@{navigateToSettings}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{navigateToSettings()}{navigateToSettings()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ac859db60f9068e6a87b633ef697d4d0f} 
+void com.\+example.\+mybookshelf.\+UIMaster.\+navigate\+To\+Settings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Navigates to the settings screen and sets up the UI elements and their corresponding listeners.
+
+This method is responsible for\+:
+\begin{DoxyItemize}
+\item Setting the content view to the main settings layout.
+\item Initializing various UI components such as buttons, text views, switches, and time pickers.
+\item Configuring listeners for UI events, including button clicks and changes in switch states.
+\item Handling user interactions for changing passwords, deleting accounts, changing usernames, changing emails, and configuring notification settings.
+\end{DoxyItemize}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em Execution\+Exception} & if an error occurs during asynchronous execution. \\
+\hline
+{\em Interrupted\+Exception} & if the current thread is interrupted. \\
+\hline
+\end{DoxyExceptions}
+Dismisses the given dialog when an option is clicked.Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ac859db60f9068e6a87b633ef697d4d0f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ac859db60f9068e6a87b633ef697d4d0f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ad609d5e0b54e87afcb60aed6c66a792e}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!navigateToStartingPage@{navigateToStartingPage}}
+\index{navigateToStartingPage@{navigateToStartingPage}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{navigateToStartingPage()}{navigateToStartingPage()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ad609d5e0b54e87afcb60aed6c66a792e} 
+void com.\+example.\+mybookshelf.\+UIMaster.\+navigate\+To\+Starting\+Page (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Navigates to the starting page, updating the UI and loading user data in the background. Animates a change in Recycler\+View item position if within a small threshold.
+
+Pauses or resumes image loading based on the scroll state of the Recycler\+View.Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ad609d5e0b54e87afcb60aed6c66a792e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ad609d5e0b54e87afcb60aed6c66a792e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_aa3079f36c20fc1b0ec8c01197f06faa3}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!navigateToStats@{navigateToStats}}
+\index{navigateToStats@{navigateToStats}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{navigateToStats()}{navigateToStats()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_aa3079f36c20fc1b0ec8c01197f06faa3} 
+void com.\+example.\+mybookshelf.\+UIMaster.\+navigate\+To\+Stats (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Navigates to the stats page, initializes views, sets up navigation listeners, and loads chart data asynchronously. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_aa3079f36c20fc1b0ec8c01197f06faa3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_aa3079f36c20fc1b0ec8c01197f06faa3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a78605aa6a9565efbae9637ee1c9f9c0c}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!reduceTimeSpendReading@{reduceTimeSpendReading}}
+\index{reduceTimeSpendReading@{reduceTimeSpendReading}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{reduceTimeSpendReading()}{reduceTimeSpendReading()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a78605aa6a9565efbae9637ee1c9f9c0c} 
+void com.\+example.\+mybookshelf.\+UIMaster.\+reduce\+Time\+Spend\+Reading (\begin{DoxyParamCaption}\item[{int}]{time}{, }\item[{Text\+View}]{time\+Spent\+Reading\+Text\+View}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Reduces the time spent reading by a given duration and updates the UI accordingly. \Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a00d8b97e1a726995297f32919c1921ab}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!setDb@{setDb}}
+\index{setDb@{setDb}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{setDb()}{setDb()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a00d8b97e1a726995297f32919c1921ab} 
+void com.\+example.\+mybookshelf.\+UIMaster.\+set\+Db (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection}{Data\+Base\+Connection}}}]{db}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the database connection for this instance. \Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a1d0b44fba73323953ffbbf69f4f3f4cb}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!setupChart@{setupChart}}
+\index{setupChart@{setupChart}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{setupChart()}{setupChart()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a1d0b44fba73323953ffbbf69f4f3f4cb} 
+void com.\+example.\+mybookshelf.\+UIMaster.\+setup\+Chart (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_1_1ChartData}{Chart\+Data}}}]{chart\+Data}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Sets up the bar chart with reading time data in hours. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a1d0b44fba73323953ffbbf69f4f3f4cb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a1d0b44fba73323953ffbbf69f4f3f4cb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_aa6aad8404432bdaf23db9b41e99a6ed5}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!setupNavigationButtons@{setupNavigationButtons}}
+\index{setupNavigationButtons@{setupNavigationButtons}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{setupNavigationButtons()}{setupNavigationButtons()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_aa6aad8404432bdaf23db9b41e99a6ed5} 
+void com.\+example.\+mybookshelf.\+UIMaster.\+setup\+Navigation\+Buttons (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Sets up the navigation buttons with their respective click listeners. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_aa6aad8404432bdaf23db9b41e99a6ed5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_aa6aad8404432bdaf23db9b41e99a6ed5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a3bb75047e98f0333fa2fdfd173bc80b0}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!setupNavigationListeners@{setupNavigationListeners}}
+\index{setupNavigationListeners@{setupNavigationListeners}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{setupNavigationListeners()}{setupNavigationListeners()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a3bb75047e98f0333fa2fdfd173bc80b0} 
+void com.\+example.\+mybookshelf.\+UIMaster.\+setup\+Navigation\+Listeners (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Sets up click listeners for navigation buttons in the main activity. Each button is associated with a different navigation action\+:
+\begin{DoxyItemize}
+\item Home button navigates to the starting page.
+\item \doxylink{classcom_1_1example_1_1mybookshelf_1_1Search}{Search} button triggers a search operation handled by the main activity.
+\item Goals button navigates to the goals page.
+\item Settings button navigates to the settings page. 
+\end{DoxyItemize}Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a3bb75047e98f0333fa2fdfd173bc80b0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ad68836f56831277d04d47f04bcb4e6e4}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!setUSer@{setUSer}}
+\index{setUSer@{setUSer}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{setUSer()}{setUSer()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ad68836f56831277d04d47f04bcb4e6e4} 
+void com.\+example.\+mybookshelf.\+UIMaster.\+set\+USer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User}{User}}}]{user}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the logged-\/in user. \Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a3beb8f5e82c56206227f83e05d2e2dba}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!showErrorMessage@{showErrorMessage}}
+\index{showErrorMessage@{showErrorMessage}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{showErrorMessage()}{showErrorMessage()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a3beb8f5e82c56206227f83e05d2e2dba} 
+void com.\+example.\+mybookshelf.\+UIMaster.\+show\+Error\+Message (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Displays a short toast message indicating failure to load reading statistics. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a3beb8f5e82c56206227f83e05d2e2dba_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a5d06d53d8ef756629247fde0f557a3d1}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!showLogin@{showLogin}}
+\index{showLogin@{showLogin}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{showLogin()}{showLogin()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a5d06d53d8ef756629247fde0f557a3d1} 
+void com.\+example.\+mybookshelf.\+UIMaster.\+show\+Login (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) throws Execution\+Exception, Interrupted\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+Displays the login screen and handles user login attempts. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a5d06d53d8ef756629247fde0f557a3d1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a5d06d53d8ef756629247fde0f557a3d1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a5f5bae724e7f3d3de15486430b3bc8c1}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!showRegister@{showRegister}}
+\index{showRegister@{showRegister}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{showRegister()}{showRegister()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a5f5bae724e7f3d3de15486430b3bc8c1} 
+void com.\+example.\+mybookshelf.\+UIMaster.\+show\+Register (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Displays the registration screen and sets up event listeners for user interactions. 
+
+This method switches the main activity\textquotesingle{}s content view to the registration layout, initializes UI components, and registers click listeners for the register button and the switch-\/to-\/login button. When the register button is clicked, it calls {\ttfamily \doxylink{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a904eef7a2ffa10b03c833016464e03c7}{Main\+Activity\#handle\+Register(\+Edit\+Text, Edit\+Text, Edit\+Text, Edit\+Text)}} to process user input and register a new account. If an exception occurs during this process, it throws a runtime exception. Similarly, when the switch-\/to-\/login button is clicked, it attempts to show the login screen by calling {\ttfamily \doxylink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a5d06d53d8ef756629247fde0f557a3d1}{show\+Login()}}, handling exceptions in the same manner. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a5f5bae724e7f3d3de15486430b3bc8c1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a5f5bae724e7f3d3de15486430b3bc8c1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a3bfddda8973b9c902065851da2802cd1}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!toggleVisibilityAnimated@{toggleVisibilityAnimated}}
+\index{toggleVisibilityAnimated@{toggleVisibilityAnimated}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{toggleVisibilityAnimated()}{toggleVisibilityAnimated()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a3bfddda8973b9c902065851da2802cd1} 
+void com.\+example.\+mybookshelf.\+UIMaster.\+toggle\+Visibility\+Animated (\begin{DoxyParamCaption}\item[{Relative\+Layout}]{layout}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Toggles the visibility of a Relative\+Layout with an animated scale effect. \Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a0306308fc0728bc63c3dcc670b14a402}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!updateReadingTime@{updateReadingTime}}
+\index{updateReadingTime@{updateReadingTime}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{updateReadingTime()}{updateReadingTime()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a0306308fc0728bc63c3dcc670b14a402} 
+void com.\+example.\+mybookshelf.\+UIMaster.\+update\+Reading\+Time (\begin{DoxyParamCaption}\item[{int}]{pages}{, }\item[{Text\+View}]{time\+Spent\+Reading\+Text\+View}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Updates the reading time based on the number of pages read and displays it in the specified Text\+View. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a7988f320c66cc06640a7e88dfea44791}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!ai@{ai}}
+\index{ai@{ai}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{ai}{ai}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a7988f320c66cc06640a7e88dfea44791} 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI}{Ai\+API}} com.\+example.\+mybookshelf.\+UIMaster.\+ai\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ae58fc63fffcaeca03afa133ba306d62c}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!AIprompt@{AIprompt}}
+\index{AIprompt@{AIprompt}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{AIprompt}{AIprompt}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ae58fc63fffcaeca03afa133ba306d62c} 
+String com.\+example.\+mybookshelf.\+UIMaster.\+AIprompt = "{}"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ac22273bb30e9f228991043bcdfbd8af2}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!barChart@{barChart}}
+\index{barChart@{barChart}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{barChart}{barChart}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ac22273bb30e9f228991043bcdfbd8af2} 
+Bar\+Chart com.\+example.\+mybookshelf.\+UIMaster.\+bar\+Chart\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a3ebd4eaa7d80139bd41dc5e1fa218c4c}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!booksAPI@{booksAPI}}
+\index{booksAPI@{booksAPI}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{booksAPI}{booksAPI}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a3ebd4eaa7d80139bd41dc5e1fa218c4c} 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI}{Books\+API}} com.\+example.\+mybookshelf.\+UIMaster.\+books\+API\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a673cf5a9e0adbd1e6ecdef9a1afa9818}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!bookViewMap@{bookViewMap}}
+\index{bookViewMap@{bookViewMap}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{bookViewMap}{bookViewMap}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a673cf5a9e0adbd1e6ecdef9a1afa9818} 
+Map$<$View, \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book}{Book}}$>$ com.\+example.\+mybookshelf.\+UIMaster.\+book\+View\+Map\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a498a128e82ebf6851cb77f377169e05e}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!brf@{brf}}
+\index{brf@{brf}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{brf}{brf}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a498a128e82ebf6851cb77f377169e05e} 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow}{Book\+Recommendation\+Flow}} com.\+example.\+mybookshelf.\+UIMaster.\+brf\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a4b26ad26de31c25665781530f174561d}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!db@{db}}
+\index{db@{db}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{db}{db}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a4b26ad26de31c25665781530f174561d} 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection}{Data\+Base\+Connection}} com.\+example.\+mybookshelf.\+UIMaster.\+db\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a03ef58ea33c530aab57a58a298e12c1d}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!emailEditText@{emailEditText}}
+\index{emailEditText@{emailEditText}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{emailEditText}{emailEditText}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a03ef58ea33c530aab57a58a298e12c1d} 
+Edit\+Text com.\+example.\+mybookshelf.\+UIMaster.\+email\+Edit\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_aa3a5fde5cd9073a735c5bbac40a79a98}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!executorService@{executorService}}
+\index{executorService@{executorService}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{executorService}{executorService}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_aa3a5fde5cd9073a735c5bbac40a79a98} 
+final Executor\+Service com.\+example.\+mybookshelf.\+UIMaster.\+executor\+Service = Executors.\+new\+Single\+Thread\+Executor()\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a118323285918e37742fb31592587087e}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!listAdapter@{listAdapter}}
+\index{listAdapter@{listAdapter}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{listAdapter}{listAdapter}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a118323285918e37742fb31592587087e} 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter}{Costume\+List\+Adapter}} com.\+example.\+mybookshelf.\+UIMaster.\+list\+Adapter\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a725459700c0500c243299fc80cd0ea7a}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!logedindUser@{logedindUser}}
+\index{logedindUser@{logedindUser}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{logedindUser}{logedindUser}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a725459700c0500c243299fc80cd0ea7a} 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User}{User}} com.\+example.\+mybookshelf.\+UIMaster.\+logedind\+User\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a1578fb1dc832e74fc94d2c6115e16b6a}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!loginButton@{loginButton}}
+\index{loginButton@{loginButton}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{loginButton}{loginButton}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a1578fb1dc832e74fc94d2c6115e16b6a} 
+Button com.\+example.\+mybookshelf.\+UIMaster.\+login\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_aa656ff54b76d2aad814455a921b23769}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!nav\_searchBtn@{nav\_searchBtn}}
+\index{nav\_searchBtn@{nav\_searchBtn}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{nav\_searchBtn}{nav\_searchBtn}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_aa656ff54b76d2aad814455a921b23769} 
+Image\+Button com.\+example.\+mybookshelf.\+UIMaster.\+nav\+\_\+search\+Btn\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a2f9dd9d99fba9fbf71600f940fb5eb9e}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!nav\_StatsBtn@{nav\_StatsBtn}}
+\index{nav\_StatsBtn@{nav\_StatsBtn}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{nav\_StatsBtn}{nav\_StatsBtn}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a2f9dd9d99fba9fbf71600f940fb5eb9e} 
+Image\+Button com.\+example.\+mybookshelf.\+UIMaster.\+nav\+\_\+\+Stats\+Btn\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ac38373761aef1dccd30d4418583c194f}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!passwordEditText@{passwordEditText}}
+\index{passwordEditText@{passwordEditText}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{passwordEditText}{passwordEditText}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_ac38373761aef1dccd30d4418583c194f} 
+Edit\+Text com.\+example.\+mybookshelf.\+UIMaster.\+password\+Edit\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_acfa71075f7a34512b0d3b97c1ee11af2}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!registerButton@{registerButton}}
+\index{registerButton@{registerButton}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{registerButton}{registerButton}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_acfa71075f7a34512b0d3b97c1ee11af2} 
+Button com.\+example.\+mybookshelf.\+UIMaster.\+register\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a33c96fac4ab139d0ee338ed0cefee6cf}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!repeatPassword@{repeatPassword}}
+\index{repeatPassword@{repeatPassword}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{repeatPassword}{repeatPassword}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a33c96fac4ab139d0ee338ed0cefee6cf} 
+Edit\+Text com.\+example.\+mybookshelf.\+UIMaster.\+repeat\+Password\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a8725961b54c4b55c77f54f1686cdcc02}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!switchToLoginButton@{switchToLoginButton}}
+\index{switchToLoginButton@{switchToLoginButton}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{switchToLoginButton}{switchToLoginButton}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a8725961b54c4b55c77f54f1686cdcc02} 
+Button com.\+example.\+mybookshelf.\+UIMaster.\+switch\+To\+Login\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a92107a45357a577f1600118d4bcd03ab}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!switchToRegisterButton@{switchToRegisterButton}}
+\index{switchToRegisterButton@{switchToRegisterButton}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{switchToRegisterButton}{switchToRegisterButton}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a92107a45357a577f1600118d4bcd03ab} 
+Button com.\+example.\+mybookshelf.\+UIMaster.\+switch\+To\+Register\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_af7a5045ff2d7c1e6ae4042b87305a3f2}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!timeSpentReading@{timeSpentReading}}
+\index{timeSpentReading@{timeSpentReading}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{timeSpentReading}{timeSpentReading}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_af7a5045ff2d7c1e6ae4042b87305a3f2} 
+int com.\+example.\+mybookshelf.\+UIMaster.\+time\+Spent\+Reading = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a51f677da9e14df925e0078873b518490}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!timeSpentReadingTextView@{timeSpentReadingTextView}}
+\index{timeSpentReadingTextView@{timeSpentReadingTextView}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{timeSpentReadingTextView}{timeSpentReadingTextView}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a51f677da9e14df925e0078873b518490} 
+Text\+View com.\+example.\+mybookshelf.\+UIMaster.\+time\+Spent\+Reading\+Text\+View\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a61448faa08032ad7f27f29c4a6d08e75}\index{com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}!usernameEditText@{usernameEditText}}
+\index{usernameEditText@{usernameEditText}!com.example.mybookshelf.UIMaster@{com.example.mybookshelf.UIMaster}}
+\doxysubsubsection{\texorpdfstring{usernameEditText}{usernameEditText}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1UIMaster_a61448faa08032ad7f27f29c4a6d08e75} 
+Edit\+Text com.\+example.\+mybookshelf.\+UIMaster.\+username\+Edit\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/app/doc\+\_\+state/github\+\_\+repos\+Repo\+Arch\+Doc\+Gen\+Context/\+Elias\+Schaffer/\+My\+Book\+Shelf/src/main/java/com/example/mybookshelf/\mbox{\hyperlink{UIMaster_8java}{UIMaster.\+java}}\end{DoxyCompactItemize}

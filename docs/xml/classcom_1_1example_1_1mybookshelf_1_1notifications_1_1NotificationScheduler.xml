@@ -1,0 +1,622 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler" kind="class" language="Java" prot="public">
+    <compoundname>com::example::mybookshelf::notifications::NotificationScheduler</compoundname>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a351db1eeb0a6f1c2889b7bc90000e1bc" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String com.example.mybookshelf.notifications.NotificationScheduler.TAG</definition>
+        <argsstring></argsstring>
+        <name>TAG</name>
+        <qualifiedname>com.example.mybookshelf.notifications.NotificationScheduler.TAG</qualifiedname>
+        <initializer>= &quot;NotificationScheduler&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" line="26" column="33" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" bodystart="26" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afc96590cd792b862b32762b84cab085e" compoundref="NotificationScheduler_8java" startline="156" endline="177">com.example.mybookshelf.notifications.NotificationScheduler.cancelDailyNotification</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a10e7adec73e1f0e63d8376cad273e11a" compoundref="NotificationScheduler_8java" startline="317" endline="331">com.example.mybookshelf.notifications.NotificationScheduler.cancelOneTimeNotification</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afeb40a8c5551b18f32abe21dcc0e130a" compoundref="NotificationScheduler_8java" startline="135" endline="151">com.example.mybookshelf.notifications.NotificationScheduler.changeDailyNotificationMessage</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a79dcce93490bc0df80c03c0a410672b2" compoundref="NotificationScheduler_8java" startline="120" endline="130">com.example.mybookshelf.notifications.NotificationScheduler.changeDailyNotificationTime</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a6a67704352785acd6dcd956ec2f8834f" compoundref="NotificationScheduler_8java" startline="193" endline="204">com.example.mybookshelf.notifications.NotificationScheduler.restoreNotifications</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a5833d4c1b987dddea26acdad230c640f" compoundref="NotificationScheduler_8java" startline="42" endline="108">com.example.mybookshelf.notifications.NotificationScheduler.scheduleDailyNotification</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a0a97077bdcc3f2c0fc441d5f3e8e2d62" compoundref="NotificationScheduler_8java" startline="277" endline="309">com.example.mybookshelf.notifications.NotificationScheduler.scheduleOneTimeNotification</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adbfc27021f5087d5f958e70d9a45f58b" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String com.example.mybookshelf.notifications.NotificationScheduler.PREFS_NAME</definition>
+        <argsstring></argsstring>
+        <name>PREFS_NAME</name>
+        <qualifiedname>com.example.mybookshelf.notifications.NotificationScheduler.PREFS_NAME</qualifiedname>
+        <initializer>= &quot;notification_prefs&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" line="32" column="33" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" bodystart="32" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afc96590cd792b862b32762b84cab085e" compoundref="NotificationScheduler_8java" startline="156" endline="177">com.example.mybookshelf.notifications.NotificationScheduler.cancelDailyNotification</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1aaf3ebda4b3bc3da4f2c4e8cabb4a3602" compoundref="NotificationScheduler_8java" startline="219" endline="222">com.example.mybookshelf.notifications.NotificationScheduler.getDailyNotificationHour</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afad2859e0654bc94cdec599cd6ae9949" compoundref="NotificationScheduler_8java" startline="235" endline="238">com.example.mybookshelf.notifications.NotificationScheduler.getDailyNotificationMessage</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ad29a9938277c2a671b0399cdc84c7844" compoundref="NotificationScheduler_8java" startline="227" endline="230">com.example.mybookshelf.notifications.NotificationScheduler.getDailyNotificationMinute</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ac8a096801252bd85cf58f0b4ded28ebe" compoundref="NotificationScheduler_8java" startline="211" endline="214">com.example.mybookshelf.notifications.NotificationScheduler.isDailyNotificationActive</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a6a67704352785acd6dcd956ec2f8834f" compoundref="NotificationScheduler_8java" startline="193" endline="204">com.example.mybookshelf.notifications.NotificationScheduler.restoreNotifications</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a5833d4c1b987dddea26acdad230c640f" compoundref="NotificationScheduler_8java" startline="42" endline="108">com.example.mybookshelf.notifications.NotificationScheduler.scheduleDailyNotification</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a3f4772314ecfd41cd9db5513155c0ede" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String com.example.mybookshelf.notifications.NotificationScheduler.KEY_DAILY_ACTIVE</definition>
+        <argsstring></argsstring>
+        <name>KEY_DAILY_ACTIVE</name>
+        <qualifiedname>com.example.mybookshelf.notifications.NotificationScheduler.KEY_DAILY_ACTIVE</qualifiedname>
+        <initializer>= &quot;daily_active&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" line="33" column="33" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" bodystart="33" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afc96590cd792b862b32762b84cab085e" compoundref="NotificationScheduler_8java" startline="156" endline="177">com.example.mybookshelf.notifications.NotificationScheduler.cancelDailyNotification</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ac8a096801252bd85cf58f0b4ded28ebe" compoundref="NotificationScheduler_8java" startline="211" endline="214">com.example.mybookshelf.notifications.NotificationScheduler.isDailyNotificationActive</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a6a67704352785acd6dcd956ec2f8834f" compoundref="NotificationScheduler_8java" startline="193" endline="204">com.example.mybookshelf.notifications.NotificationScheduler.restoreNotifications</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a5833d4c1b987dddea26acdad230c640f" compoundref="NotificationScheduler_8java" startline="42" endline="108">com.example.mybookshelf.notifications.NotificationScheduler.scheduleDailyNotification</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a0b16799acc5ad3eba1ead62b47ef62ea" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String com.example.mybookshelf.notifications.NotificationScheduler.KEY_DAILY_HOUR</definition>
+        <argsstring></argsstring>
+        <name>KEY_DAILY_HOUR</name>
+        <qualifiedname>com.example.mybookshelf.notifications.NotificationScheduler.KEY_DAILY_HOUR</qualifiedname>
+        <initializer>= &quot;daily_hour&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" line="34" column="33" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" bodystart="34" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1aaf3ebda4b3bc3da4f2c4e8cabb4a3602" compoundref="NotificationScheduler_8java" startline="219" endline="222">com.example.mybookshelf.notifications.NotificationScheduler.getDailyNotificationHour</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a6a67704352785acd6dcd956ec2f8834f" compoundref="NotificationScheduler_8java" startline="193" endline="204">com.example.mybookshelf.notifications.NotificationScheduler.restoreNotifications</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a5833d4c1b987dddea26acdad230c640f" compoundref="NotificationScheduler_8java" startline="42" endline="108">com.example.mybookshelf.notifications.NotificationScheduler.scheduleDailyNotification</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adafbd47943b49f9a6bcff839d60ca078" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String com.example.mybookshelf.notifications.NotificationScheduler.KEY_DAILY_MINUTE</definition>
+        <argsstring></argsstring>
+        <name>KEY_DAILY_MINUTE</name>
+        <qualifiedname>com.example.mybookshelf.notifications.NotificationScheduler.KEY_DAILY_MINUTE</qualifiedname>
+        <initializer>= &quot;daily_minute&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" line="35" column="33" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" bodystart="35" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ad29a9938277c2a671b0399cdc84c7844" compoundref="NotificationScheduler_8java" startline="227" endline="230">com.example.mybookshelf.notifications.NotificationScheduler.getDailyNotificationMinute</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a6a67704352785acd6dcd956ec2f8834f" compoundref="NotificationScheduler_8java" startline="193" endline="204">com.example.mybookshelf.notifications.NotificationScheduler.restoreNotifications</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a5833d4c1b987dddea26acdad230c640f" compoundref="NotificationScheduler_8java" startline="42" endline="108">com.example.mybookshelf.notifications.NotificationScheduler.scheduleDailyNotification</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1af907f287b80d0fa0fb8768f1e71f1549" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String com.example.mybookshelf.notifications.NotificationScheduler.KEY_DAILY_MESSAGE</definition>
+        <argsstring></argsstring>
+        <name>KEY_DAILY_MESSAGE</name>
+        <qualifiedname>com.example.mybookshelf.notifications.NotificationScheduler.KEY_DAILY_MESSAGE</qualifiedname>
+        <initializer>= &quot;daily_message&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" line="36" column="33" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" bodystart="36" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afad2859e0654bc94cdec599cd6ae9949" compoundref="NotificationScheduler_8java" startline="235" endline="238">com.example.mybookshelf.notifications.NotificationScheduler.getDailyNotificationMessage</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a6a67704352785acd6dcd956ec2f8834f" compoundref="NotificationScheduler_8java" startline="193" endline="204">com.example.mybookshelf.notifications.NotificationScheduler.restoreNotifications</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a5833d4c1b987dddea26acdad230c640f" compoundref="NotificationScheduler_8java" startline="42" endline="108">com.example.mybookshelf.notifications.NotificationScheduler.scheduleDailyNotification</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a766a9c3decb9600b1297ed171dfe1b83" prot="public" static="yes" mutable="no">
+        <type>final int</type>
+        <definition>final int com.example.mybookshelf.notifications.NotificationScheduler.REQUEST_CODE_DAILY</definition>
+        <argsstring></argsstring>
+        <name>REQUEST_CODE_DAILY</name>
+        <qualifiedname>com.example.mybookshelf.notifications.NotificationScheduler.REQUEST_CODE_DAILY</qualifiedname>
+        <initializer>= 100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" line="29" column="29" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" bodystart="29" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afc96590cd792b862b32762b84cab085e" compoundref="NotificationScheduler_8java" startline="156" endline="177">com.example.mybookshelf.notifications.NotificationScheduler.cancelDailyNotification</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a5833d4c1b987dddea26acdad230c640f" compoundref="NotificationScheduler_8java" startline="42" endline="108">com.example.mybookshelf.notifications.NotificationScheduler.scheduleDailyNotification</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a5833d4c1b987dddea26acdad230c640f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.example.mybookshelf.notifications.NotificationScheduler.scheduleDailyNotification</definition>
+        <argsstring>(Context context, int hour, int minute, String message)</argsstring>
+        <name>scheduleDailyNotification</name>
+        <qualifiedname>com.example.mybookshelf.notifications.NotificationScheduler.scheduleDailyNotification</qualifiedname>
+        <param>
+          <type>Context</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>hour</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>minute</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Plant eine t√§gliche <ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification" kindref="compound">Notification</ref> zu einer bestimmten Uhrzeit </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" line="42" column="24" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" bodystart="42" bodyend="108"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a3f4772314ecfd41cd9db5513155c0ede" compoundref="NotificationScheduler_8java" startline="33">com.example.mybookshelf.notifications.NotificationScheduler.KEY_DAILY_ACTIVE</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a0b16799acc5ad3eba1ead62b47ef62ea" compoundref="NotificationScheduler_8java" startline="34">com.example.mybookshelf.notifications.NotificationScheduler.KEY_DAILY_HOUR</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1af907f287b80d0fa0fb8768f1e71f1549" compoundref="NotificationScheduler_8java" startline="36">com.example.mybookshelf.notifications.NotificationScheduler.KEY_DAILY_MESSAGE</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adafbd47943b49f9a6bcff839d60ca078" compoundref="NotificationScheduler_8java" startline="35">com.example.mybookshelf.notifications.NotificationScheduler.KEY_DAILY_MINUTE</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adbfc27021f5087d5f958e70d9a45f58b" compoundref="NotificationScheduler_8java" startline="32">com.example.mybookshelf.notifications.NotificationScheduler.PREFS_NAME</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a766a9c3decb9600b1297ed171dfe1b83" compoundref="NotificationScheduler_8java" startline="29">com.example.mybookshelf.notifications.NotificationScheduler.REQUEST_CODE_DAILY</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a351db1eeb0a6f1c2889b7bc90000e1bc" compoundref="NotificationScheduler_8java" startline="26">com.example.mybookshelf.notifications.NotificationScheduler.TAG</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afeb40a8c5551b18f32abe21dcc0e130a" compoundref="NotificationScheduler_8java" startline="135" endline="151">com.example.mybookshelf.notifications.NotificationScheduler.changeDailyNotificationMessage</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a79dcce93490bc0df80c03c0a410672b2" compoundref="NotificationScheduler_8java" startline="120" endline="130">com.example.mybookshelf.notifications.NotificationScheduler.changeDailyNotificationTime</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationReceiver_1a16b9874ec4597faf7be00d3c2f9f4c81" compoundref="NotificationReceiver_8java" startline="23" endline="36">com.example.mybookshelf.notifications.NotificationReceiver.onReceive</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a6a67704352785acd6dcd956ec2f8834f" compoundref="NotificationScheduler_8java" startline="193" endline="204">com.example.mybookshelf.notifications.NotificationScheduler.restoreNotifications</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ae8deb5392302274178dbbd3116654098" compoundref="NotificationScheduler_8java" startline="113" endline="115">com.example.mybookshelf.notifications.NotificationScheduler.scheduleDailyNotification</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ae2ade14f140458ae3bdac1c7e0ac35d8" compoundref="NotificationScheduler_8java" startline="182" endline="188">com.example.mybookshelf.notifications.NotificationScheduler.toggleDailyNotification</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ae8deb5392302274178dbbd3116654098" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.example.mybookshelf.notifications.NotificationScheduler.scheduleDailyNotification</definition>
+        <argsstring>(Context context)</argsstring>
+        <name>scheduleDailyNotification</name>
+        <qualifiedname>com.example.mybookshelf.notifications.NotificationScheduler.scheduleDailyNotification</qualifiedname>
+        <param>
+          <type>Context</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Schedules a daily notification at 8:00 PM with default message &quot;Zeit zum Lesen!&quot;. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" line="113" column="24" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" bodystart="113" bodyend="115"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a5833d4c1b987dddea26acdad230c640f" compoundref="NotificationScheduler_8java" startline="42" endline="108">com.example.mybookshelf.notifications.NotificationScheduler.scheduleDailyNotification</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a79dcce93490bc0df80c03c0a410672b2" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.example.mybookshelf.notifications.NotificationScheduler.changeDailyNotificationTime</definition>
+        <argsstring>(Context context, int hour, int minute)</argsstring>
+        <name>changeDailyNotificationTime</name>
+        <qualifiedname>com.example.mybookshelf.notifications.NotificationScheduler.changeDailyNotificationTime</qualifiedname>
+        <param>
+          <type>Context</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>hour</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>minute</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Changes the time of the daily notification. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" line="120" column="24" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" bodystart="120" bodyend="130"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afc96590cd792b862b32762b84cab085e" compoundref="NotificationScheduler_8java" startline="156" endline="177">com.example.mybookshelf.notifications.NotificationScheduler.cancelDailyNotification</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afad2859e0654bc94cdec599cd6ae9949" compoundref="NotificationScheduler_8java" startline="235" endline="238">com.example.mybookshelf.notifications.NotificationScheduler.getDailyNotificationMessage</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a5833d4c1b987dddea26acdad230c640f" compoundref="NotificationScheduler_8java" startline="42" endline="108">com.example.mybookshelf.notifications.NotificationScheduler.scheduleDailyNotification</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a351db1eeb0a6f1c2889b7bc90000e1bc" compoundref="NotificationScheduler_8java" startline="26">com.example.mybookshelf.notifications.NotificationScheduler.TAG</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afeb40a8c5551b18f32abe21dcc0e130a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.example.mybookshelf.notifications.NotificationScheduler.changeDailyNotificationMessage</definition>
+        <argsstring>(Context context, String message)</argsstring>
+        <name>changeDailyNotificationMessage</name>
+        <qualifiedname>com.example.mybookshelf.notifications.NotificationScheduler.changeDailyNotificationMessage</qualifiedname>
+        <param>
+          <type>Context</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Ändert die Nachricht der täglichen <ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification" kindref="compound">Notification</ref> und aktualisiert den Zeitplan. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" line="135" column="24" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" bodystart="135" bodyend="151"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afc96590cd792b862b32762b84cab085e" compoundref="NotificationScheduler_8java" startline="156" endline="177">com.example.mybookshelf.notifications.NotificationScheduler.cancelDailyNotification</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1aaf3ebda4b3bc3da4f2c4e8cabb4a3602" compoundref="NotificationScheduler_8java" startline="219" endline="222">com.example.mybookshelf.notifications.NotificationScheduler.getDailyNotificationHour</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ad29a9938277c2a671b0399cdc84c7844" compoundref="NotificationScheduler_8java" startline="227" endline="230">com.example.mybookshelf.notifications.NotificationScheduler.getDailyNotificationMinute</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ac8a096801252bd85cf58f0b4ded28ebe" compoundref="NotificationScheduler_8java" startline="211" endline="214">com.example.mybookshelf.notifications.NotificationScheduler.isDailyNotificationActive</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a5833d4c1b987dddea26acdad230c640f" compoundref="NotificationScheduler_8java" startline="42" endline="108">com.example.mybookshelf.notifications.NotificationScheduler.scheduleDailyNotification</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a351db1eeb0a6f1c2889b7bc90000e1bc" compoundref="NotificationScheduler_8java" startline="26">com.example.mybookshelf.notifications.NotificationScheduler.TAG</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afc96590cd792b862b32762b84cab085e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.example.mybookshelf.notifications.NotificationScheduler.cancelDailyNotification</definition>
+        <argsstring>(Context context)</argsstring>
+        <name>cancelDailyNotification</name>
+        <qualifiedname>com.example.mybookshelf.notifications.NotificationScheduler.cancelDailyNotification</qualifiedname>
+        <param>
+          <type>Context</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Cancels the daily notification and updates preferences. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" line="156" column="24" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" bodystart="156" bodyend="177"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a3f4772314ecfd41cd9db5513155c0ede" compoundref="NotificationScheduler_8java" startline="33">com.example.mybookshelf.notifications.NotificationScheduler.KEY_DAILY_ACTIVE</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adbfc27021f5087d5f958e70d9a45f58b" compoundref="NotificationScheduler_8java" startline="32">com.example.mybookshelf.notifications.NotificationScheduler.PREFS_NAME</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a766a9c3decb9600b1297ed171dfe1b83" compoundref="NotificationScheduler_8java" startline="29">com.example.mybookshelf.notifications.NotificationScheduler.REQUEST_CODE_DAILY</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a351db1eeb0a6f1c2889b7bc90000e1bc" compoundref="NotificationScheduler_8java" startline="26">com.example.mybookshelf.notifications.NotificationScheduler.TAG</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afeb40a8c5551b18f32abe21dcc0e130a" compoundref="NotificationScheduler_8java" startline="135" endline="151">com.example.mybookshelf.notifications.NotificationScheduler.changeDailyNotificationMessage</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a79dcce93490bc0df80c03c0a410672b2" compoundref="NotificationScheduler_8java" startline="120" endline="130">com.example.mybookshelf.notifications.NotificationScheduler.changeDailyNotificationTime</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler_1a326d9e94cb83508cae6d760df1bd5718" compoundref="GoalHandler_8java" startline="205" endline="261">com.example.mybookshelf.GoalHandler.handleBookRemoved</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ae2ade14f140458ae3bdac1c7e0ac35d8" compoundref="NotificationScheduler_8java" startline="182" endline="188">com.example.mybookshelf.notifications.NotificationScheduler.toggleDailyNotification</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb85fd04c8149bfb77f1810c9301b0bc" compoundref="User_8java" startline="47" endline="87">com.example.mybookshelf.dataClass.User.User</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ae2ade14f140458ae3bdac1c7e0ac35d8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.example.mybookshelf.notifications.NotificationScheduler.toggleDailyNotification</definition>
+        <argsstring>(Context context)</argsstring>
+        <name>toggleDailyNotification</name>
+        <qualifiedname>com.example.mybookshelf.notifications.NotificationScheduler.toggleDailyNotification</qualifiedname>
+        <param>
+          <type>Context</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Toggles the daily notification on or off. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" line="182" column="24" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" bodystart="182" bodyend="188"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afc96590cd792b862b32762b84cab085e" compoundref="NotificationScheduler_8java" startline="156" endline="177">com.example.mybookshelf.notifications.NotificationScheduler.cancelDailyNotification</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ac8a096801252bd85cf58f0b4ded28ebe" compoundref="NotificationScheduler_8java" startline="211" endline="214">com.example.mybookshelf.notifications.NotificationScheduler.isDailyNotificationActive</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a5833d4c1b987dddea26acdad230c640f" compoundref="NotificationScheduler_8java" startline="42" endline="108">com.example.mybookshelf.notifications.NotificationScheduler.scheduleDailyNotification</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a6a67704352785acd6dcd956ec2f8834f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.example.mybookshelf.notifications.NotificationScheduler.restoreNotifications</definition>
+        <argsstring>(Context context)</argsstring>
+        <name>restoreNotifications</name>
+        <qualifiedname>com.example.mybookshelf.notifications.NotificationScheduler.restoreNotifications</qualifiedname>
+        <param>
+          <type>Context</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Restores daily notifications based on saved preferences. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" line="193" column="24" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" bodystart="193" bodyend="204"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a3f4772314ecfd41cd9db5513155c0ede" compoundref="NotificationScheduler_8java" startline="33">com.example.mybookshelf.notifications.NotificationScheduler.KEY_DAILY_ACTIVE</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a0b16799acc5ad3eba1ead62b47ef62ea" compoundref="NotificationScheduler_8java" startline="34">com.example.mybookshelf.notifications.NotificationScheduler.KEY_DAILY_HOUR</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1af907f287b80d0fa0fb8768f1e71f1549" compoundref="NotificationScheduler_8java" startline="36">com.example.mybookshelf.notifications.NotificationScheduler.KEY_DAILY_MESSAGE</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adafbd47943b49f9a6bcff839d60ca078" compoundref="NotificationScheduler_8java" startline="35">com.example.mybookshelf.notifications.NotificationScheduler.KEY_DAILY_MINUTE</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adbfc27021f5087d5f958e70d9a45f58b" compoundref="NotificationScheduler_8java" startline="32">com.example.mybookshelf.notifications.NotificationScheduler.PREFS_NAME</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a5833d4c1b987dddea26acdad230c640f" compoundref="NotificationScheduler_8java" startline="42" endline="108">com.example.mybookshelf.notifications.NotificationScheduler.scheduleDailyNotification</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a351db1eeb0a6f1c2889b7bc90000e1bc" compoundref="NotificationScheduler_8java" startline="26">com.example.mybookshelf.notifications.NotificationScheduler.TAG</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1BootCompletedReceiver_1a42ee4762f446eaf5c82cf00042f40593" compoundref="BootCompletedReceiver_8java" startline="16" endline="21">com.example.mybookshelf.notifications.BootCompletedReceiver.onReceive</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ac8a096801252bd85cf58f0b4ded28ebe" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>static boolean com.example.mybookshelf.notifications.NotificationScheduler.isDailyNotificationActive</definition>
+        <argsstring>(Context context)</argsstring>
+        <name>isDailyNotificationActive</name>
+        <qualifiedname>com.example.mybookshelf.notifications.NotificationScheduler.isDailyNotificationActive</qualifiedname>
+        <param>
+          <type>Context</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks if daily notifications are active. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" line="211" column="27" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" bodystart="211" bodyend="214"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a3f4772314ecfd41cd9db5513155c0ede" compoundref="NotificationScheduler_8java" startline="33">com.example.mybookshelf.notifications.NotificationScheduler.KEY_DAILY_ACTIVE</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adbfc27021f5087d5f958e70d9a45f58b" compoundref="NotificationScheduler_8java" startline="32">com.example.mybookshelf.notifications.NotificationScheduler.PREFS_NAME</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afeb40a8c5551b18f32abe21dcc0e130a" compoundref="NotificationScheduler_8java" startline="135" endline="151">com.example.mybookshelf.notifications.NotificationScheduler.changeDailyNotificationMessage</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac859db60f9068e6a87b633ef697d4d0f" compoundref="UIMaster_8java" startline="1577" endline="1774">com.example.mybookshelf.UIMaster.navigateToSettings</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ae2ade14f140458ae3bdac1c7e0ac35d8" compoundref="NotificationScheduler_8java" startline="182" endline="188">com.example.mybookshelf.notifications.NotificationScheduler.toggleDailyNotification</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1aaf3ebda4b3bc3da4f2c4e8cabb4a3602" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int com.example.mybookshelf.notifications.NotificationScheduler.getDailyNotificationHour</definition>
+        <argsstring>(Context context)</argsstring>
+        <name>getDailyNotificationHour</name>
+        <qualifiedname>com.example.mybookshelf.notifications.NotificationScheduler.getDailyNotificationHour</qualifiedname>
+        <param>
+          <type>Context</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the hour of the daily notification from SharedPreferences. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" line="219" column="23" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" bodystart="219" bodyend="222"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a0b16799acc5ad3eba1ead62b47ef62ea" compoundref="NotificationScheduler_8java" startline="34">com.example.mybookshelf.notifications.NotificationScheduler.KEY_DAILY_HOUR</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adbfc27021f5087d5f958e70d9a45f58b" compoundref="NotificationScheduler_8java" startline="32">com.example.mybookshelf.notifications.NotificationScheduler.PREFS_NAME</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afeb40a8c5551b18f32abe21dcc0e130a" compoundref="NotificationScheduler_8java" startline="135" endline="151">com.example.mybookshelf.notifications.NotificationScheduler.changeDailyNotificationMessage</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a46f062698cb770f1def693f3e18ce7ba" compoundref="NotificationScheduler_8java" startline="243" endline="247">com.example.mybookshelf.notifications.NotificationScheduler.getDailyNotificationTimeString</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac859db60f9068e6a87b633ef697d4d0f" compoundref="UIMaster_8java" startline="1577" endline="1774">com.example.mybookshelf.UIMaster.navigateToSettings</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ad29a9938277c2a671b0399cdc84c7844" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>static int com.example.mybookshelf.notifications.NotificationScheduler.getDailyNotificationMinute</definition>
+        <argsstring>(Context context)</argsstring>
+        <name>getDailyNotificationMinute</name>
+        <qualifiedname>com.example.mybookshelf.notifications.NotificationScheduler.getDailyNotificationMinute</qualifiedname>
+        <param>
+          <type>Context</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the minute of the daily notification. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" line="227" column="23" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" bodystart="227" bodyend="230"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adafbd47943b49f9a6bcff839d60ca078" compoundref="NotificationScheduler_8java" startline="35">com.example.mybookshelf.notifications.NotificationScheduler.KEY_DAILY_MINUTE</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adbfc27021f5087d5f958e70d9a45f58b" compoundref="NotificationScheduler_8java" startline="32">com.example.mybookshelf.notifications.NotificationScheduler.PREFS_NAME</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afeb40a8c5551b18f32abe21dcc0e130a" compoundref="NotificationScheduler_8java" startline="135" endline="151">com.example.mybookshelf.notifications.NotificationScheduler.changeDailyNotificationMessage</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a46f062698cb770f1def693f3e18ce7ba" compoundref="NotificationScheduler_8java" startline="243" endline="247">com.example.mybookshelf.notifications.NotificationScheduler.getDailyNotificationTimeString</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac859db60f9068e6a87b633ef697d4d0f" compoundref="UIMaster_8java" startline="1577" endline="1774">com.example.mybookshelf.UIMaster.navigateToSettings</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afad2859e0654bc94cdec599cd6ae9949" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String com.example.mybookshelf.notifications.NotificationScheduler.getDailyNotificationMessage</definition>
+        <argsstring>(Context context)</argsstring>
+        <name>getDailyNotificationMessage</name>
+        <qualifiedname>com.example.mybookshelf.notifications.NotificationScheduler.getDailyNotificationMessage</qualifiedname>
+        <param>
+          <type>Context</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves the daily notification message from SharedPreferences. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" line="235" column="26" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" bodystart="235" bodyend="238"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1af907f287b80d0fa0fb8768f1e71f1549" compoundref="NotificationScheduler_8java" startline="36">com.example.mybookshelf.notifications.NotificationScheduler.KEY_DAILY_MESSAGE</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adbfc27021f5087d5f958e70d9a45f58b" compoundref="NotificationScheduler_8java" startline="32">com.example.mybookshelf.notifications.NotificationScheduler.PREFS_NAME</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a79dcce93490bc0df80c03c0a410672b2" compoundref="NotificationScheduler_8java" startline="120" endline="130">com.example.mybookshelf.notifications.NotificationScheduler.changeDailyNotificationTime</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a46f062698cb770f1def693f3e18ce7ba" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>static String com.example.mybookshelf.notifications.NotificationScheduler.getDailyNotificationTimeString</definition>
+        <argsstring>(Context context)</argsstring>
+        <name>getDailyNotificationTimeString</name>
+        <qualifiedname>com.example.mybookshelf.notifications.NotificationScheduler.getDailyNotificationTimeString</qualifiedname>
+        <param>
+          <type>Context</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the formatted daily notification time string. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" line="243" column="26" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" bodystart="243" bodyend="247"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1aaf3ebda4b3bc3da4f2c4e8cabb4a3602" compoundref="NotificationScheduler_8java" startline="219" endline="222">com.example.mybookshelf.notifications.NotificationScheduler.getDailyNotificationHour</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ad29a9938277c2a671b0399cdc84c7844" compoundref="NotificationScheduler_8java" startline="227" endline="230">com.example.mybookshelf.notifications.NotificationScheduler.getDailyNotificationMinute</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ab4c513c92fc23addef85f0992fb6ddaf" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.example.mybookshelf.notifications.NotificationScheduler.sendGoalCompletedNotification</definition>
+        <argsstring>(Context context, Goal goal)</argsstring>
+        <name>sendGoalCompletedNotification</name>
+        <qualifiedname>com.example.mybookshelf.notifications.NotificationScheduler.sendGoalCompletedNotification</qualifiedname>
+        <param>
+          <type>Context</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal" kindref="compound">Goal</ref></type>
+          <declname>goal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>/** Sends a notification when a goal is completed. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" line="253" column="24" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" bodystart="253" bodyend="265"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationChannelManager_1a9d0ba4e30a7959d3ca4d5047054be4e8" compoundref="NotificationChannelManager_8java" startline="9">com.example.mybookshelf.notifications.NotificationChannelManager.DEFAULT_CHANNEL_ID</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a1c80a58d3e1cd2e1ab6ef14c40d3b274" compoundref="Goal_8java" startline="84" endline="86">com.example.mybookshelf.dataClass.Goal.getGoal</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a0a97077bdcc3f2c0fc441d5f3e8e2d62" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.example.mybookshelf.notifications.NotificationScheduler.scheduleOneTimeNotification</definition>
+        <argsstring>(Context context, LocalDateTime dateTime, int requestCode)</argsstring>
+        <name>scheduleOneTimeNotification</name>
+        <qualifiedname>com.example.mybookshelf.notifications.NotificationScheduler.scheduleOneTimeNotification</qualifiedname>
+        <param>
+          <type>Context</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>LocalDateTime</type>
+          <declname>dateTime</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>requestCode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Schedules a one-time notification at a specified date and time.</para>
+<para>This method sets up an alarm to trigger a notification at the given LocalDateTime. It checks if the provided date and time is in the past, logs a warning, and returns early if true. Otherwise, it creates an Intent with necessary extras and uses PendingIntent to schedule the notification using AlarmManager. The method also handles permission checks for scheduling exact alarms on newer Android versions. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" line="277" column="24" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" bodystart="277" bodyend="309"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a351db1eeb0a6f1c2889b7bc90000e1bc" compoundref="NotificationScheduler_8java" startline="26">com.example.mybookshelf.notifications.NotificationScheduler.TAG</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aeccdf2ba94dc9b82428e2339fce94f16" compoundref="User_8java" startline="90" endline="134">com.example.mybookshelf.dataClass.User.User</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb85fd04c8149bfb77f1810c9301b0bc" compoundref="User_8java" startline="47" endline="87">com.example.mybookshelf.dataClass.User.User</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a10e7adec73e1f0e63d8376cad273e11a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.example.mybookshelf.notifications.NotificationScheduler.cancelOneTimeNotification</definition>
+        <argsstring>(Context context, int requestCode)</argsstring>
+        <name>cancelOneTimeNotification</name>
+        <qualifiedname>com.example.mybookshelf.notifications.NotificationScheduler.cancelOneTimeNotification</qualifiedname>
+        <param>
+          <type>Context</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>requestCode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Cancels a one-time scheduled notification using the provided request code. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" line="317" column="24" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" bodystart="317" bodyend="331"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a351db1eeb0a6f1c2889b7bc90000e1bc" compoundref="NotificationScheduler_8java" startline="26">com.example.mybookshelf.notifications.NotificationScheduler.TAG</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aeccdf2ba94dc9b82428e2339fce94f16" compoundref="User_8java" startline="90" endline="134">com.example.mybookshelf.dataClass.User.User</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb85fd04c8149bfb77f1810c9301b0bc" compoundref="User_8java" startline="47" endline="87">com.example.mybookshelf.dataClass.User.User</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adb2c3bbb24876b087277d011a6df1577" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>static boolean com.example.mybookshelf.notifications.NotificationScheduler.isOneTimeNotificationScheduled</definition>
+        <argsstring>(Context context, int requestCode)</argsstring>
+        <name>isOneTimeNotificationScheduled</name>
+        <qualifiedname>com.example.mybookshelf.notifications.NotificationScheduler.isOneTimeNotificationScheduled</qualifiedname>
+        <param>
+          <type>Context</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>requestCode</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks if a one-time notification is scheduled. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" line="336" column="27" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" bodystart="336" bodyend="345"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aeccdf2ba94dc9b82428e2339fce94f16" compoundref="User_8java" startline="90" endline="134">com.example.mybookshelf.dataClass.User.User</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb85fd04c8149bfb77f1810c9301b0bc" compoundref="User_8java" startline="47" endline="87">com.example.mybookshelf.dataClass.User.User</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>String</label>
+      </node>
+      <node id="1">
+        <label>com.example.mybookshelf.notifications.NotificationScheduler</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-KEY_DAILY_ACTIVE</edgelabel>
+          <edgelabel>-KEY_DAILY_HOUR</edgelabel>
+          <edgelabel>-KEY_DAILY_MESSAGE</edgelabel>
+          <edgelabel>-KEY_DAILY_MINUTE</edgelabel>
+          <edgelabel>-PREFS_NAME</edgelabel>
+          <edgelabel>-TAG</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+REQUEST_CODE_DAILY</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>int</label>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" line="25" column="7" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java" bodystart="25" bodyend="347"/>
+    <listofallmembers>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afc96590cd792b862b32762b84cab085e" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::notifications::NotificationScheduler</scope><name>cancelDailyNotification</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a10e7adec73e1f0e63d8376cad273e11a" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::notifications::NotificationScheduler</scope><name>cancelOneTimeNotification</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afeb40a8c5551b18f32abe21dcc0e130a" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::notifications::NotificationScheduler</scope><name>changeDailyNotificationMessage</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a79dcce93490bc0df80c03c0a410672b2" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::notifications::NotificationScheduler</scope><name>changeDailyNotificationTime</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1aaf3ebda4b3bc3da4f2c4e8cabb4a3602" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::notifications::NotificationScheduler</scope><name>getDailyNotificationHour</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afad2859e0654bc94cdec599cd6ae9949" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::notifications::NotificationScheduler</scope><name>getDailyNotificationMessage</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ad29a9938277c2a671b0399cdc84c7844" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::notifications::NotificationScheduler</scope><name>getDailyNotificationMinute</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a46f062698cb770f1def693f3e18ce7ba" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::notifications::NotificationScheduler</scope><name>getDailyNotificationTimeString</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ac8a096801252bd85cf58f0b4ded28ebe" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::notifications::NotificationScheduler</scope><name>isDailyNotificationActive</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adb2c3bbb24876b087277d011a6df1577" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::notifications::NotificationScheduler</scope><name>isOneTimeNotificationScheduled</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a3f4772314ecfd41cd9db5513155c0ede" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::notifications::NotificationScheduler</scope><name>KEY_DAILY_ACTIVE</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a0b16799acc5ad3eba1ead62b47ef62ea" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::notifications::NotificationScheduler</scope><name>KEY_DAILY_HOUR</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1af907f287b80d0fa0fb8768f1e71f1549" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::notifications::NotificationScheduler</scope><name>KEY_DAILY_MESSAGE</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adafbd47943b49f9a6bcff839d60ca078" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::notifications::NotificationScheduler</scope><name>KEY_DAILY_MINUTE</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adbfc27021f5087d5f958e70d9a45f58b" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::notifications::NotificationScheduler</scope><name>PREFS_NAME</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a766a9c3decb9600b1297ed171dfe1b83" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::notifications::NotificationScheduler</scope><name>REQUEST_CODE_DAILY</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a6a67704352785acd6dcd956ec2f8834f" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::notifications::NotificationScheduler</scope><name>restoreNotifications</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a5833d4c1b987dddea26acdad230c640f" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::notifications::NotificationScheduler</scope><name>scheduleDailyNotification</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ae8deb5392302274178dbbd3116654098" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::notifications::NotificationScheduler</scope><name>scheduleDailyNotification</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a0a97077bdcc3f2c0fc441d5f3e8e2d62" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::notifications::NotificationScheduler</scope><name>scheduleOneTimeNotification</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ab4c513c92fc23addef85f0992fb6ddaf" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::notifications::NotificationScheduler</scope><name>sendGoalCompletedNotification</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a351db1eeb0a6f1c2889b7bc90000e1bc" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::notifications::NotificationScheduler</scope><name>TAG</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ae2ade14f140458ae3bdac1c7e0ac35d8" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::notifications::NotificationScheduler</scope><name>toggleDailyNotification</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

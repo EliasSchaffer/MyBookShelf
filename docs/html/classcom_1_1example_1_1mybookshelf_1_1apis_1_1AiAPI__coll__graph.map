@@ -1,0 +1,11 @@
+<map id="com.example.mybookshelf.apis.AiAPI" name="com.example.mybookshelf.apis.AiAPI">
+<area shape="rect" id="Node000001" title=" " alt="" coords="142,163,369,243"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,13,57,78"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="59,72,72,83,104,112,138,136,164,152,161,157,135,141,100,116,68,87,56,76"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="82,13,253,78"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="188,77,228,147,223,150,183,80"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="277,13,412,78"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="329,80,288,150,284,147,324,77"/>
+<area shape="rect" id="Node000005" href="$interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1_1AiService.html" title=" " alt="" coords="437,5,663,85"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="477,88,345,157,343,152,475,83"/>
+</map>

@@ -1,0 +1,1192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow" kind="class" language="Java" prot="public">
+    <compoundname>com::example::mybookshelf::BookRecommendationFlow</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5c4f8d77996615f8ededabfa10258e0c" prot="private" static="no" mutable="no">
+        <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity" kindref="compound">MainActivity</ref></type>
+        <definition>MainActivity com.example.mybookshelf.BookRecommendationFlow.mainActivity</definition>
+        <argsstring></argsstring>
+        <name>mainActivity</name>
+        <qualifiedname>com.example.mybookshelf.BookRecommendationFlow.mainActivity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" line="32" column="26" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" bodystart="32" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a3855117e802e54923c308e0df6280c17" compoundref="BookRecommendationFlow_8java" startline="521" endline="559">com.example.mybookshelf.BookRecommendationFlow.addChatMessage</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5ba48ea80adf0d66e51462b0da680e8e" compoundref="BookRecommendationFlow_8java" startline="43" endline="54">com.example.mybookshelf.BookRecommendationFlow.BookRecommendationFlow</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ae50cf18619872a365eebe91c18d86e8d" compoundref="BookRecommendationFlow_8java" startline="399" endline="458">com.example.mybookshelf.BookRecommendationFlow.callAI</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a02b6d699653b58f244907bd10db53ab5" compoundref="BookRecommendationFlow_8java" startline="464" endline="481">com.example.mybookshelf.BookRecommendationFlow.createStyledGridButton</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a22f0dcaea578fbd7358e6237cd4873d4" compoundref="BookRecommendationFlow_8java" startline="59" endline="77">com.example.mybookshelf.BookRecommendationFlow.handleAI</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a4dceb0fa4d170b8c7e5a7a6718593dfe" compoundref="BookRecommendationFlow_8java" startline="487" endline="509">com.example.mybookshelf.BookRecommendationFlow.handleNo</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ac62af5d6edeffa96b2862a609ebb40df" compoundref="BookRecommendationFlow_8java" startline="598" endline="609">com.example.mybookshelf.BookRecommendationFlow.hideThinkingAnimation</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a276e931dabe3e85af257a9d16ce7cc67" compoundref="BookRecommendationFlow_8java" startline="82" endline="112">com.example.mybookshelf.BookRecommendationFlow.showBookBasedStep1</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5c657be258c13c85848c7b7115f8a0b5" compoundref="BookRecommendationFlow_8java" startline="117" endline="146">com.example.mybookshelf.BookRecommendationFlow.showBookBasedStep2</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1aa95301256c7f5377d1bc432189483b3c" compoundref="BookRecommendationFlow_8java" startline="151" endline="181">com.example.mybookshelf.BookRecommendationFlow.showBookBasedStep3</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a4c7dc337216592f7f214f69ce7009d37" compoundref="BookRecommendationFlow_8java" startline="200" endline="230">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep1</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1aaf567ca97b0d7f0c58ebba4d6f4b18bd" compoundref="BookRecommendationFlow_8java" startline="235" endline="266">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep2</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a2bc1c0125eb3c1fe64ed1ed3ee93d3eb" compoundref="BookRecommendationFlow_8java" startline="271" endline="302">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep3</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ad10515cfcf8650b6830b68f15d393b3b" compoundref="BookRecommendationFlow_8java" startline="307" endline="338">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep4</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a46c6733f27b3527d3934cee02cfcd7ac" compoundref="BookRecommendationFlow_8java" startline="343" endline="374">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep5</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a78597ba37409daeee77dcfa6236b2e6a" compoundref="BookRecommendationFlow_8java" startline="564" endline="593">com.example.mybookshelf.BookRecommendationFlow.showThinkingAnimation</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a3241cec472497dd23e79a34f00b95e73" prot="private" static="no" mutable="no">
+        <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster" kindref="compound">UIMaster</ref></type>
+        <definition>UIMaster com.example.mybookshelf.BookRecommendationFlow.uiMaster</definition>
+        <argsstring></argsstring>
+        <name>uiMaster</name>
+        <qualifiedname>com.example.mybookshelf.BookRecommendationFlow.uiMaster</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" line="33" column="22" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" bodystart="33" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5ba48ea80adf0d66e51462b0da680e8e" compoundref="BookRecommendationFlow_8java" startline="43" endline="54">com.example.mybookshelf.BookRecommendationFlow.BookRecommendationFlow</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a47dec962e67966f1d0839dcc4974a787" prot="private" static="no" mutable="no">
+        <type>RelativeLayout</type>
+        <definition>RelativeLayout com.example.mybookshelf.BookRecommendationFlow.box</definition>
+        <argsstring></argsstring>
+        <name>box</name>
+        <qualifiedname>com.example.mybookshelf.BookRecommendationFlow.box</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" line="34" column="28" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" bodystart="34" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ae50cf18619872a365eebe91c18d86e8d" compoundref="BookRecommendationFlow_8java" startline="399" endline="458">com.example.mybookshelf.BookRecommendationFlow.callAI</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a22f0dcaea578fbd7358e6237cd4873d4" compoundref="BookRecommendationFlow_8java" startline="59" endline="77">com.example.mybookshelf.BookRecommendationFlow.handleAI</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a4dceb0fa4d170b8c7e5a7a6718593dfe" compoundref="BookRecommendationFlow_8java" startline="487" endline="509">com.example.mybookshelf.BookRecommendationFlow.handleNo</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ac62af5d6edeffa96b2862a609ebb40df" compoundref="BookRecommendationFlow_8java" startline="598" endline="609">com.example.mybookshelf.BookRecommendationFlow.hideThinkingAnimation</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a276e931dabe3e85af257a9d16ce7cc67" compoundref="BookRecommendationFlow_8java" startline="82" endline="112">com.example.mybookshelf.BookRecommendationFlow.showBookBasedStep1</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5c657be258c13c85848c7b7115f8a0b5" compoundref="BookRecommendationFlow_8java" startline="117" endline="146">com.example.mybookshelf.BookRecommendationFlow.showBookBasedStep2</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1aa95301256c7f5377d1bc432189483b3c" compoundref="BookRecommendationFlow_8java" startline="151" endline="181">com.example.mybookshelf.BookRecommendationFlow.showBookBasedStep3</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a4c7dc337216592f7f214f69ce7009d37" compoundref="BookRecommendationFlow_8java" startline="200" endline="230">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep1</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1aaf567ca97b0d7f0c58ebba4d6f4b18bd" compoundref="BookRecommendationFlow_8java" startline="235" endline="266">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep2</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a2bc1c0125eb3c1fe64ed1ed3ee93d3eb" compoundref="BookRecommendationFlow_8java" startline="271" endline="302">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep3</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ad10515cfcf8650b6830b68f15d393b3b" compoundref="BookRecommendationFlow_8java" startline="307" endline="338">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep4</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a46c6733f27b3527d3934cee02cfcd7ac" compoundref="BookRecommendationFlow_8java" startline="343" endline="374">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep5</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a78597ba37409daeee77dcfa6236b2e6a" compoundref="BookRecommendationFlow_8java" startline="564" endline="593">com.example.mybookshelf.BookRecommendationFlow.showThinkingAnimation</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a2ee00fe81142dfe81477667b65ee95e1" prot="private" static="no" mutable="no">
+        <type>ArrayList&lt; String &gt;</type>
+        <definition>ArrayList&lt;String&gt; com.example.mybookshelf.BookRecommendationFlow.atributes</definition>
+        <argsstring></argsstring>
+        <name>atributes</name>
+        <qualifiedname>com.example.mybookshelf.BookRecommendationFlow.atributes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" line="35" column="23" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" bodystart="35" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5ba48ea80adf0d66e51462b0da680e8e" compoundref="BookRecommendationFlow_8java" startline="43" endline="54">com.example.mybookshelf.BookRecommendationFlow.BookRecommendationFlow</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a78dda71d2c403a463d824ff61b2ce27f" compoundref="BookRecommendationFlow_8java" startline="186" endline="193">com.example.mybookshelf.BookRecommendationFlow.buildAIStringBased</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1abe4c57ea57ed54c344739295e70066ff" compoundref="BookRecommendationFlow_8java" startline="380" endline="394">com.example.mybookshelf.BookRecommendationFlow.buildAIStringFresh</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a22f0dcaea578fbd7358e6237cd4873d4" compoundref="BookRecommendationFlow_8java" startline="59" endline="77">com.example.mybookshelf.BookRecommendationFlow.handleAI</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5c657be258c13c85848c7b7115f8a0b5" compoundref="BookRecommendationFlow_8java" startline="117" endline="146">com.example.mybookshelf.BookRecommendationFlow.showBookBasedStep2</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1aa95301256c7f5377d1bc432189483b3c" compoundref="BookRecommendationFlow_8java" startline="151" endline="181">com.example.mybookshelf.BookRecommendationFlow.showBookBasedStep3</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1aaf567ca97b0d7f0c58ebba4d6f4b18bd" compoundref="BookRecommendationFlow_8java" startline="235" endline="266">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep2</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a2bc1c0125eb3c1fe64ed1ed3ee93d3eb" compoundref="BookRecommendationFlow_8java" startline="271" endline="302">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep3</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ad10515cfcf8650b6830b68f15d393b3b" compoundref="BookRecommendationFlow_8java" startline="307" endline="338">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep4</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a46c6733f27b3527d3934cee02cfcd7ac" compoundref="BookRecommendationFlow_8java" startline="343" endline="374">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep5</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a6615c82186cfaa4d3ec7793874af3c22" prot="private" static="no" mutable="no">
+        <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI" kindref="compound">AiAPI</ref></type>
+        <definition>AiAPI com.example.mybookshelf.BookRecommendationFlow.ai</definition>
+        <argsstring></argsstring>
+        <name>ai</name>
+        <qualifiedname>com.example.mybookshelf.BookRecommendationFlow.ai</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" line="36" column="19" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" bodystart="36" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5ba48ea80adf0d66e51462b0da680e8e" compoundref="BookRecommendationFlow_8java" startline="43" endline="54">com.example.mybookshelf.BookRecommendationFlow.BookRecommendationFlow</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a9286fe4afcec70b7194e628cb1961b72" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.BookRecommendationFlow.bookName</definition>
+        <argsstring></argsstring>
+        <name>bookName</name>
+        <qualifiedname>com.example.mybookshelf.BookRecommendationFlow.bookName</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" line="37" column="20" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" bodystart="37" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5ba48ea80adf0d66e51462b0da680e8e" compoundref="BookRecommendationFlow_8java" startline="43" endline="54">com.example.mybookshelf.BookRecommendationFlow.BookRecommendationFlow</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a78dda71d2c403a463d824ff61b2ce27f" compoundref="BookRecommendationFlow_8java" startline="186" endline="193">com.example.mybookshelf.BookRecommendationFlow.buildAIStringBased</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a481ff10f4ef7414fd50f71fe6ee1a5b0" prot="private" static="no" mutable="no">
+        <type>HashSet&lt; String &gt;</type>
+        <definition>HashSet&lt;String&gt; com.example.mybookshelf.BookRecommendationFlow.doNotRecommend</definition>
+        <argsstring></argsstring>
+        <name>doNotRecommend</name>
+        <qualifiedname>com.example.mybookshelf.BookRecommendationFlow.doNotRecommend</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" line="38" column="21" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" bodystart="38" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5ba48ea80adf0d66e51462b0da680e8e" compoundref="BookRecommendationFlow_8java" startline="43" endline="54">com.example.mybookshelf.BookRecommendationFlow.BookRecommendationFlow</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1abe4c57ea57ed54c344739295e70066ff" compoundref="BookRecommendationFlow_8java" startline="380" endline="394">com.example.mybookshelf.BookRecommendationFlow.buildAIStringFresh</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ae50cf18619872a365eebe91c18d86e8d" compoundref="BookRecommendationFlow_8java" startline="399" endline="458">com.example.mybookshelf.BookRecommendationFlow.callAI</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a374256be23590ea576a06aeea9dad292" prot="private" static="no" mutable="no">
+        <type>RelativeLayout</type>
+        <definition>RelativeLayout com.example.mybookshelf.BookRecommendationFlow.loadingLayout</definition>
+        <argsstring></argsstring>
+        <name>loadingLayout</name>
+        <qualifiedname>com.example.mybookshelf.BookRecommendationFlow.loadingLayout</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" line="39" column="28" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a78597ba37409daeee77dcfa6236b2e6a" compoundref="BookRecommendationFlow_8java" startline="564" endline="593">com.example.mybookshelf.BookRecommendationFlow.showThinkingAnimation</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a0151ac229657fcb892f88bdac483f91b" prot="private" static="no" mutable="no">
+        <type>List&lt; View &gt;</type>
+        <definition>List&lt;View&gt; com.example.mybookshelf.BookRecommendationFlow.balls</definition>
+        <argsstring></argsstring>
+        <name>balls</name>
+        <qualifiedname>com.example.mybookshelf.BookRecommendationFlow.balls</qualifiedname>
+        <initializer>= new ArrayList&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" line="40" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" bodystart="40" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ac62af5d6edeffa96b2862a609ebb40df" compoundref="BookRecommendationFlow_8java" startline="598" endline="609">com.example.mybookshelf.BookRecommendationFlow.hideThinkingAnimation</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a78597ba37409daeee77dcfa6236b2e6a" compoundref="BookRecommendationFlow_8java" startline="564" endline="593">com.example.mybookshelf.BookRecommendationFlow.showThinkingAnimation</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a29ea78dc5162b295abccceda385d9975" prot="private" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean com.example.mybookshelf.BookRecommendationFlow.isThinking</definition>
+        <argsstring></argsstring>
+        <name>isThinking</name>
+        <qualifiedname>com.example.mybookshelf.BookRecommendationFlow.isThinking</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" line="41" column="21" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" bodystart="41" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ac62af5d6edeffa96b2862a609ebb40df" compoundref="BookRecommendationFlow_8java" startline="598" endline="609">com.example.mybookshelf.BookRecommendationFlow.hideThinkingAnimation</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a78597ba37409daeee77dcfa6236b2e6a" compoundref="BookRecommendationFlow_8java" startline="564" endline="593">com.example.mybookshelf.BookRecommendationFlow.showThinkingAnimation</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5ba48ea80adf0d66e51462b0da680e8e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.example.mybookshelf.BookRecommendationFlow.BookRecommendationFlow</definition>
+        <argsstring>(MainActivity mainActivity, UIMaster uiMaster, String bookName)</argsstring>
+        <name>BookRecommendationFlow</name>
+        <qualifiedname>com.example.mybookshelf.BookRecommendationFlow.BookRecommendationFlow</qualifiedname>
+        <param>
+          <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity" kindref="compound">MainActivity</ref></type>
+          <declname>mainActivity</declname>
+        </param>
+        <param>
+          <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster" kindref="compound">UIMaster</ref></type>
+          <declname>uiMaster</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>bookName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" line="43" column="12" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" bodystart="43" bodyend="54"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a6615c82186cfaa4d3ec7793874af3c22" compoundref="BookRecommendationFlow_8java" startline="36">com.example.mybookshelf.BookRecommendationFlow.ai</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a2ee00fe81142dfe81477667b65ee95e1" compoundref="BookRecommendationFlow_8java" startline="35">com.example.mybookshelf.BookRecommendationFlow.atributes</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a9286fe4afcec70b7194e628cb1961b72" compoundref="BookRecommendationFlow_8java" startline="37">com.example.mybookshelf.BookRecommendationFlow.bookName</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a481ff10f4ef7414fd50f71fe6ee1a5b0" compoundref="BookRecommendationFlow_8java" startline="38">com.example.mybookshelf.BookRecommendationFlow.doNotRecommend</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5c4f8d77996615f8ededabfa10258e0c" compoundref="BookRecommendationFlow_8java" startline="32">com.example.mybookshelf.BookRecommendationFlow.mainActivity</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a3241cec472497dd23e79a34f00b95e73" compoundref="BookRecommendationFlow_8java" startline="33">com.example.mybookshelf.BookRecommendationFlow.uiMaster</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a22f0dcaea578fbd7358e6237cd4873d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.BookRecommendationFlow.handleAI</definition>
+        <argsstring>(String pathType)</argsstring>
+        <name>handleAI</name>
+        <qualifiedname>com.example.mybookshelf.BookRecommendationFlow.handleAI</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>pathType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles AI logic based on the path type and updates the UI accordingly. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" line="59" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" bodystart="59" bodyend="77"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a2ee00fe81142dfe81477667b65ee95e1" compoundref="BookRecommendationFlow_8java" startline="35">com.example.mybookshelf.BookRecommendationFlow.atributes</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a47dec962e67966f1d0839dcc4974a787" compoundref="BookRecommendationFlow_8java" startline="34">com.example.mybookshelf.BookRecommendationFlow.box</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5c4f8d77996615f8ededabfa10258e0c" compoundref="BookRecommendationFlow_8java" startline="32">com.example.mybookshelf.BookRecommendationFlow.mainActivity</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a276e931dabe3e85af257a9d16ce7cc67" compoundref="BookRecommendationFlow_8java" startline="82" endline="112">com.example.mybookshelf.BookRecommendationFlow.showBookBasedStep1</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a4c7dc337216592f7f214f69ce7009d37" compoundref="BookRecommendationFlow_8java" startline="200" endline="230">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep1</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a4dceb0fa4d170b8c7e5a7a6718593dfe" compoundref="BookRecommendationFlow_8java" startline="487" endline="509">com.example.mybookshelf.BookRecommendationFlow.handleNo</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a3855117e802e54923c308e0df6280c17" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.BookRecommendationFlow.addChatMessage</definition>
+        <argsstring>(String text, String senderType)</argsstring>
+        <name>addChatMessage</name>
+        <qualifiedname>com.example.mybookshelf.BookRecommendationFlow.addChatMessage</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>senderType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a chat message to the UI based on the provided text and sender type. The method creates a TextView for the message, sets its properties such as color, background, and layout, and adds it to the GridLayout in the main activity. It also ensures that the ScrollView scrolls to show the latest message.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text content of the chat message. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>senderType</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of the sender, either &quot;user&quot; or another identifier for system messages. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" line="521" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" bodystart="521" bodyend="559"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5c4f8d77996615f8ededabfa10258e0c" compoundref="BookRecommendationFlow_8java" startline="32">com.example.mybookshelf.BookRecommendationFlow.mainActivity</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ae50cf18619872a365eebe91c18d86e8d" compoundref="BookRecommendationFlow_8java" startline="399" endline="458">com.example.mybookshelf.BookRecommendationFlow.callAI</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a4dceb0fa4d170b8c7e5a7a6718593dfe" compoundref="BookRecommendationFlow_8java" startline="487" endline="509">com.example.mybookshelf.BookRecommendationFlow.handleNo</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a276e931dabe3e85af257a9d16ce7cc67" compoundref="BookRecommendationFlow_8java" startline="82" endline="112">com.example.mybookshelf.BookRecommendationFlow.showBookBasedStep1</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5c657be258c13c85848c7b7115f8a0b5" compoundref="BookRecommendationFlow_8java" startline="117" endline="146">com.example.mybookshelf.BookRecommendationFlow.showBookBasedStep2</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1aa95301256c7f5377d1bc432189483b3c" compoundref="BookRecommendationFlow_8java" startline="151" endline="181">com.example.mybookshelf.BookRecommendationFlow.showBookBasedStep3</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a4c7dc337216592f7f214f69ce7009d37" compoundref="BookRecommendationFlow_8java" startline="200" endline="230">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep1</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1aaf567ca97b0d7f0c58ebba4d6f4b18bd" compoundref="BookRecommendationFlow_8java" startline="235" endline="266">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep2</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a2bc1c0125eb3c1fe64ed1ed3ee93d3eb" compoundref="BookRecommendationFlow_8java" startline="271" endline="302">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep3</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ad10515cfcf8650b6830b68f15d393b3b" compoundref="BookRecommendationFlow_8java" startline="307" endline="338">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep4</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a46c6733f27b3527d3934cee02cfcd7ac" compoundref="BookRecommendationFlow_8java" startline="343" endline="374">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep5</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a276e931dabe3e85af257a9d16ce7cc67" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.BookRecommendationFlow.showBookBasedStep1</definition>
+        <argsstring>()</argsstring>
+        <name>showBookBasedStep1</name>
+        <qualifiedname>com.example.mybookshelf.BookRecommendationFlow.showBookBasedStep1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays buttons for user to choose aspects of a book they liked most. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" line="82" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" bodystart="82" bodyend="112"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a3855117e802e54923c308e0df6280c17" compoundref="BookRecommendationFlow_8java" startline="521" endline="559">com.example.mybookshelf.BookRecommendationFlow.addChatMessage</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a47dec962e67966f1d0839dcc4974a787" compoundref="BookRecommendationFlow_8java" startline="34">com.example.mybookshelf.BookRecommendationFlow.box</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a02b6d699653b58f244907bd10db53ab5" compoundref="BookRecommendationFlow_8java" startline="464" endline="481">com.example.mybookshelf.BookRecommendationFlow.createStyledGridButton</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5c4f8d77996615f8ededabfa10258e0c" compoundref="BookRecommendationFlow_8java" startline="32">com.example.mybookshelf.BookRecommendationFlow.mainActivity</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5c657be258c13c85848c7b7115f8a0b5" compoundref="BookRecommendationFlow_8java" startline="117" endline="146">com.example.mybookshelf.BookRecommendationFlow.showBookBasedStep2</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a22f0dcaea578fbd7358e6237cd4873d4" compoundref="BookRecommendationFlow_8java" startline="59" endline="77">com.example.mybookshelf.BookRecommendationFlow.handleAI</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5c657be258c13c85848c7b7115f8a0b5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.BookRecommendationFlow.showBookBasedStep2</definition>
+        <argsstring>(String selectedOption)</argsstring>
+        <name>showBookBasedStep2</name>
+        <qualifiedname>com.example.mybookshelf.BookRecommendationFlow.showBookBasedStep2</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>selectedOption</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays a grid of buttons to choose book genre preferences and navigates to step 3 based on selection. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" line="117" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" bodystart="117" bodyend="146"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a3855117e802e54923c308e0df6280c17" compoundref="BookRecommendationFlow_8java" startline="521" endline="559">com.example.mybookshelf.BookRecommendationFlow.addChatMessage</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a2ee00fe81142dfe81477667b65ee95e1" compoundref="BookRecommendationFlow_8java" startline="35">com.example.mybookshelf.BookRecommendationFlow.atributes</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a47dec962e67966f1d0839dcc4974a787" compoundref="BookRecommendationFlow_8java" startline="34">com.example.mybookshelf.BookRecommendationFlow.box</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a02b6d699653b58f244907bd10db53ab5" compoundref="BookRecommendationFlow_8java" startline="464" endline="481">com.example.mybookshelf.BookRecommendationFlow.createStyledGridButton</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5c4f8d77996615f8ededabfa10258e0c" compoundref="BookRecommendationFlow_8java" startline="32">com.example.mybookshelf.BookRecommendationFlow.mainActivity</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1aa95301256c7f5377d1bc432189483b3c" compoundref="BookRecommendationFlow_8java" startline="151" endline="181">com.example.mybookshelf.BookRecommendationFlow.showBookBasedStep3</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a276e931dabe3e85af257a9d16ce7cc67" compoundref="BookRecommendationFlow_8java" startline="82" endline="112">com.example.mybookshelf.BookRecommendationFlow.showBookBasedStep1</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1aa95301256c7f5377d1bc432189483b3c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.BookRecommendationFlow.showBookBasedStep3</definition>
+        <argsstring>(String selectedOption)</argsstring>
+        <name>showBookBasedStep3</name>
+        <qualifiedname>com.example.mybookshelf.BookRecommendationFlow.showBookBasedStep3</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>selectedOption</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays a grid of buttons to select book attributes based on user input. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" line="151" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" bodystart="151" bodyend="181"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a3855117e802e54923c308e0df6280c17" compoundref="BookRecommendationFlow_8java" startline="521" endline="559">com.example.mybookshelf.BookRecommendationFlow.addChatMessage</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a2ee00fe81142dfe81477667b65ee95e1" compoundref="BookRecommendationFlow_8java" startline="35">com.example.mybookshelf.BookRecommendationFlow.atributes</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a47dec962e67966f1d0839dcc4974a787" compoundref="BookRecommendationFlow_8java" startline="34">com.example.mybookshelf.BookRecommendationFlow.box</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a78dda71d2c403a463d824ff61b2ce27f" compoundref="BookRecommendationFlow_8java" startline="186" endline="193">com.example.mybookshelf.BookRecommendationFlow.buildAIStringBased</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a02b6d699653b58f244907bd10db53ab5" compoundref="BookRecommendationFlow_8java" startline="464" endline="481">com.example.mybookshelf.BookRecommendationFlow.createStyledGridButton</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5c4f8d77996615f8ededabfa10258e0c" compoundref="BookRecommendationFlow_8java" startline="32">com.example.mybookshelf.BookRecommendationFlow.mainActivity</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5c657be258c13c85848c7b7115f8a0b5" compoundref="BookRecommendationFlow_8java" startline="117" endline="146">com.example.mybookshelf.BookRecommendationFlow.showBookBasedStep2</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a78dda71d2c403a463d824ff61b2ce27f" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.BookRecommendationFlow.buildAIStringBased</definition>
+        <argsstring>(String selectedOption)</argsstring>
+        <name>buildAIStringBased</name>
+        <qualifiedname>com.example.mybookshelf.BookRecommendationFlow.buildAIStringBased</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>selectedOption</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Builds a prompt based on selected attributes and calls the AI to generate a recommendation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" line="186" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" bodystart="186" bodyend="193"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a2ee00fe81142dfe81477667b65ee95e1" compoundref="BookRecommendationFlow_8java" startline="35">com.example.mybookshelf.BookRecommendationFlow.atributes</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a9286fe4afcec70b7194e628cb1961b72" compoundref="BookRecommendationFlow_8java" startline="37">com.example.mybookshelf.BookRecommendationFlow.bookName</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ae50cf18619872a365eebe91c18d86e8d" compoundref="BookRecommendationFlow_8java" startline="399" endline="458">com.example.mybookshelf.BookRecommendationFlow.callAI</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1aa95301256c7f5377d1bc432189483b3c" compoundref="BookRecommendationFlow_8java" startline="151" endline="181">com.example.mybookshelf.BookRecommendationFlow.showBookBasedStep3</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a4c7dc337216592f7f214f69ce7009d37" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep1</definition>
+        <argsstring>()</argsstring>
+        <name>showFreshStartStep1</name>
+        <qualifiedname>com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays a grid of buttons with book genres and handles user selection. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" line="200" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" bodystart="200" bodyend="230"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a3855117e802e54923c308e0df6280c17" compoundref="BookRecommendationFlow_8java" startline="521" endline="559">com.example.mybookshelf.BookRecommendationFlow.addChatMessage</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a47dec962e67966f1d0839dcc4974a787" compoundref="BookRecommendationFlow_8java" startline="34">com.example.mybookshelf.BookRecommendationFlow.box</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a02b6d699653b58f244907bd10db53ab5" compoundref="BookRecommendationFlow_8java" startline="464" endline="481">com.example.mybookshelf.BookRecommendationFlow.createStyledGridButton</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5c4f8d77996615f8ededabfa10258e0c" compoundref="BookRecommendationFlow_8java" startline="32">com.example.mybookshelf.BookRecommendationFlow.mainActivity</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1aaf567ca97b0d7f0c58ebba4d6f4b18bd" compoundref="BookRecommendationFlow_8java" startline="235" endline="266">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep2</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a22f0dcaea578fbd7358e6237cd4873d4" compoundref="BookRecommendationFlow_8java" startline="59" endline="77">com.example.mybookshelf.BookRecommendationFlow.handleAI</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1aaf567ca97b0d7f0c58ebba4d6f4b18bd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep2</definition>
+        <argsstring>(String selectedOption)</argsstring>
+        <name>showFreshStartStep2</name>
+        <qualifiedname>com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep2</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>selectedOption</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays a step in the fresh start process with styled buttons. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" line="235" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" bodystart="235" bodyend="266"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a3855117e802e54923c308e0df6280c17" compoundref="BookRecommendationFlow_8java" startline="521" endline="559">com.example.mybookshelf.BookRecommendationFlow.addChatMessage</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a2ee00fe81142dfe81477667b65ee95e1" compoundref="BookRecommendationFlow_8java" startline="35">com.example.mybookshelf.BookRecommendationFlow.atributes</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a47dec962e67966f1d0839dcc4974a787" compoundref="BookRecommendationFlow_8java" startline="34">com.example.mybookshelf.BookRecommendationFlow.box</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a02b6d699653b58f244907bd10db53ab5" compoundref="BookRecommendationFlow_8java" startline="464" endline="481">com.example.mybookshelf.BookRecommendationFlow.createStyledGridButton</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5c4f8d77996615f8ededabfa10258e0c" compoundref="BookRecommendationFlow_8java" startline="32">com.example.mybookshelf.BookRecommendationFlow.mainActivity</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a2bc1c0125eb3c1fe64ed1ed3ee93d3eb" compoundref="BookRecommendationFlow_8java" startline="271" endline="302">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep3</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a4c7dc337216592f7f214f69ce7009d37" compoundref="BookRecommendationFlow_8java" startline="200" endline="230">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep1</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a2bc1c0125eb3c1fe64ed1ed3ee93d3eb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep3</definition>
+        <argsstring>(String selectedOption)</argsstring>
+        <name>showFreshStartStep3</name>
+        <qualifiedname>com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep3</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>selectedOption</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays a grid of buttons to select a setting. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" line="271" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" bodystart="271" bodyend="302"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a3855117e802e54923c308e0df6280c17" compoundref="BookRecommendationFlow_8java" startline="521" endline="559">com.example.mybookshelf.BookRecommendationFlow.addChatMessage</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a2ee00fe81142dfe81477667b65ee95e1" compoundref="BookRecommendationFlow_8java" startline="35">com.example.mybookshelf.BookRecommendationFlow.atributes</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a47dec962e67966f1d0839dcc4974a787" compoundref="BookRecommendationFlow_8java" startline="34">com.example.mybookshelf.BookRecommendationFlow.box</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a02b6d699653b58f244907bd10db53ab5" compoundref="BookRecommendationFlow_8java" startline="464" endline="481">com.example.mybookshelf.BookRecommendationFlow.createStyledGridButton</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5c4f8d77996615f8ededabfa10258e0c" compoundref="BookRecommendationFlow_8java" startline="32">com.example.mybookshelf.BookRecommendationFlow.mainActivity</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ad10515cfcf8650b6830b68f15d393b3b" compoundref="BookRecommendationFlow_8java" startline="307" endline="338">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep4</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1aaf567ca97b0d7f0c58ebba4d6f4b18bd" compoundref="BookRecommendationFlow_8java" startline="235" endline="266">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep2</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ad10515cfcf8650b6830b68f15d393b3b" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep4</definition>
+        <argsstring>(String selectedOption)</argsstring>
+        <name>showFreshStartStep4</name>
+        <qualifiedname>com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep4</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>selectedOption</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays step 4 of the fresh start process with character type selection options. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" line="307" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" bodystart="307" bodyend="338"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a3855117e802e54923c308e0df6280c17" compoundref="BookRecommendationFlow_8java" startline="521" endline="559">com.example.mybookshelf.BookRecommendationFlow.addChatMessage</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a2ee00fe81142dfe81477667b65ee95e1" compoundref="BookRecommendationFlow_8java" startline="35">com.example.mybookshelf.BookRecommendationFlow.atributes</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a47dec962e67966f1d0839dcc4974a787" compoundref="BookRecommendationFlow_8java" startline="34">com.example.mybookshelf.BookRecommendationFlow.box</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a02b6d699653b58f244907bd10db53ab5" compoundref="BookRecommendationFlow_8java" startline="464" endline="481">com.example.mybookshelf.BookRecommendationFlow.createStyledGridButton</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5c4f8d77996615f8ededabfa10258e0c" compoundref="BookRecommendationFlow_8java" startline="32">com.example.mybookshelf.BookRecommendationFlow.mainActivity</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a46c6733f27b3527d3934cee02cfcd7ac" compoundref="BookRecommendationFlow_8java" startline="343" endline="374">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep5</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a2bc1c0125eb3c1fe64ed1ed3ee93d3eb" compoundref="BookRecommendationFlow_8java" startline="271" endline="302">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep3</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a46c6733f27b3527d3934cee02cfcd7ac" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep5</definition>
+        <argsstring>(String selectedOption)</argsstring>
+        <name>showFreshStartStep5</name>
+        <qualifiedname>com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep5</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>selectedOption</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays a grid of buttons for selecting story endings and updates chat messages accordingly. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" line="343" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" bodystart="343" bodyend="374"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a3855117e802e54923c308e0df6280c17" compoundref="BookRecommendationFlow_8java" startline="521" endline="559">com.example.mybookshelf.BookRecommendationFlow.addChatMessage</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a2ee00fe81142dfe81477667b65ee95e1" compoundref="BookRecommendationFlow_8java" startline="35">com.example.mybookshelf.BookRecommendationFlow.atributes</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a47dec962e67966f1d0839dcc4974a787" compoundref="BookRecommendationFlow_8java" startline="34">com.example.mybookshelf.BookRecommendationFlow.box</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1abe4c57ea57ed54c344739295e70066ff" compoundref="BookRecommendationFlow_8java" startline="380" endline="394">com.example.mybookshelf.BookRecommendationFlow.buildAIStringFresh</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a02b6d699653b58f244907bd10db53ab5" compoundref="BookRecommendationFlow_8java" startline="464" endline="481">com.example.mybookshelf.BookRecommendationFlow.createStyledGridButton</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5c4f8d77996615f8ededabfa10258e0c" compoundref="BookRecommendationFlow_8java" startline="32">com.example.mybookshelf.BookRecommendationFlow.mainActivity</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ad10515cfcf8650b6830b68f15d393b3b" compoundref="BookRecommendationFlow_8java" startline="307" endline="338">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep4</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1abe4c57ea57ed54c344739295e70066ff" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.BookRecommendationFlow.buildAIStringFresh</definition>
+        <argsstring>(String selectedOption)</argsstring>
+        <name>buildAIStringFresh</name>
+        <qualifiedname>com.example.mybookshelf.BookRecommendationFlow.buildAIStringFresh</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>selectedOption</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Builds a prompt string based on selected attributes and calls the AI to fetch a book recommendation. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" line="380" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" bodystart="380" bodyend="394"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a2ee00fe81142dfe81477667b65ee95e1" compoundref="BookRecommendationFlow_8java" startline="35">com.example.mybookshelf.BookRecommendationFlow.atributes</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ae50cf18619872a365eebe91c18d86e8d" compoundref="BookRecommendationFlow_8java" startline="399" endline="458">com.example.mybookshelf.BookRecommendationFlow.callAI</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a481ff10f4ef7414fd50f71fe6ee1a5b0" compoundref="BookRecommendationFlow_8java" startline="38">com.example.mybookshelf.BookRecommendationFlow.doNotRecommend</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a46c6733f27b3527d3934cee02cfcd7ac" compoundref="BookRecommendationFlow_8java" startline="343" endline="374">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep5</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ae50cf18619872a365eebe91c18d86e8d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.BookRecommendationFlow.callAI</definition>
+        <argsstring>(String prompt)</argsstring>
+        <name>callAI</name>
+        <qualifiedname>com.example.mybookshelf.BookRecommendationFlow.callAI</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>prompt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initiates an AI request based on the given prompt and processes the response. </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Handles the successful AI response by updating the UI with parsed data and options.</para>
+<para>Handles failure by logging an error, displaying a toast message, and adding a chat message.</para>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" line="399" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" bodystart="399" bodyend="458"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a3855117e802e54923c308e0df6280c17" compoundref="BookRecommendationFlow_8java" startline="521" endline="559">com.example.mybookshelf.BookRecommendationFlow.addChatMessage</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a47dec962e67966f1d0839dcc4974a787" compoundref="BookRecommendationFlow_8java" startline="34">com.example.mybookshelf.BookRecommendationFlow.box</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ae50cf18619872a365eebe91c18d86e8d" compoundref="BookRecommendationFlow_8java" startline="399" endline="458">com.example.mybookshelf.BookRecommendationFlow.callAI</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a02b6d699653b58f244907bd10db53ab5" compoundref="BookRecommendationFlow_8java" startline="464" endline="481">com.example.mybookshelf.BookRecommendationFlow.createStyledGridButton</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a481ff10f4ef7414fd50f71fe6ee1a5b0" compoundref="BookRecommendationFlow_8java" startline="38">com.example.mybookshelf.BookRecommendationFlow.doNotRecommend</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a4a45b91f0717302661d9e35ed956c049" compoundref="AiAPI_8java" startline="59" endline="116">com.example.mybookshelf.apis.AiAPI.fetchResponse</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a4dceb0fa4d170b8c7e5a7a6718593dfe" compoundref="BookRecommendationFlow_8java" startline="487" endline="509">com.example.mybookshelf.BookRecommendationFlow.handleNo</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ac62af5d6edeffa96b2862a609ebb40df" compoundref="BookRecommendationFlow_8java" startline="598" endline="609">com.example.mybookshelf.BookRecommendationFlow.hideThinkingAnimation</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5c4f8d77996615f8ededabfa10258e0c" compoundref="BookRecommendationFlow_8java" startline="32">com.example.mybookshelf.BookRecommendationFlow.mainActivity</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a78597ba37409daeee77dcfa6236b2e6a" compoundref="BookRecommendationFlow_8java" startline="564" endline="593">com.example.mybookshelf.BookRecommendationFlow.showThinkingAnimation</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a78dda71d2c403a463d824ff61b2ce27f" compoundref="BookRecommendationFlow_8java" startline="186" endline="193">com.example.mybookshelf.BookRecommendationFlow.buildAIStringBased</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1abe4c57ea57ed54c344739295e70066ff" compoundref="BookRecommendationFlow_8java" startline="380" endline="394">com.example.mybookshelf.BookRecommendationFlow.buildAIStringFresh</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ae50cf18619872a365eebe91c18d86e8d" compoundref="BookRecommendationFlow_8java" startline="399" endline="458">com.example.mybookshelf.BookRecommendationFlow.callAI</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a02b6d699653b58f244907bd10db53ab5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Button</type>
+        <definition>Button com.example.mybookshelf.BookRecommendationFlow.createStyledGridButton</definition>
+        <argsstring>(String text, View.OnClickListener listener)</argsstring>
+        <name>createStyledGridButton</name>
+        <qualifiedname>com.example.mybookshelf.BookRecommendationFlow.createStyledGridButton</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>View.OnClickListener</type>
+          <declname>listener</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a styled button with specified text and click listener for use in a grid layout. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" line="464" column="20" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" bodystart="464" bodyend="481"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5c4f8d77996615f8ededabfa10258e0c" compoundref="BookRecommendationFlow_8java" startline="32">com.example.mybookshelf.BookRecommendationFlow.mainActivity</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ae50cf18619872a365eebe91c18d86e8d" compoundref="BookRecommendationFlow_8java" startline="399" endline="458">com.example.mybookshelf.BookRecommendationFlow.callAI</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a4dceb0fa4d170b8c7e5a7a6718593dfe" compoundref="BookRecommendationFlow_8java" startline="487" endline="509">com.example.mybookshelf.BookRecommendationFlow.handleNo</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a276e931dabe3e85af257a9d16ce7cc67" compoundref="BookRecommendationFlow_8java" startline="82" endline="112">com.example.mybookshelf.BookRecommendationFlow.showBookBasedStep1</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5c657be258c13c85848c7b7115f8a0b5" compoundref="BookRecommendationFlow_8java" startline="117" endline="146">com.example.mybookshelf.BookRecommendationFlow.showBookBasedStep2</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1aa95301256c7f5377d1bc432189483b3c" compoundref="BookRecommendationFlow_8java" startline="151" endline="181">com.example.mybookshelf.BookRecommendationFlow.showBookBasedStep3</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a4c7dc337216592f7f214f69ce7009d37" compoundref="BookRecommendationFlow_8java" startline="200" endline="230">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep1</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1aaf567ca97b0d7f0c58ebba4d6f4b18bd" compoundref="BookRecommendationFlow_8java" startline="235" endline="266">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep2</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a2bc1c0125eb3c1fe64ed1ed3ee93d3eb" compoundref="BookRecommendationFlow_8java" startline="271" endline="302">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep3</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ad10515cfcf8650b6830b68f15d393b3b" compoundref="BookRecommendationFlow_8java" startline="307" endline="338">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep4</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a46c6733f27b3527d3934cee02cfcd7ac" compoundref="BookRecommendationFlow_8java" startline="343" endline="374">com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep5</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a4dceb0fa4d170b8c7e5a7a6718593dfe" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.BookRecommendationFlow.handleNo</definition>
+        <argsstring>()</argsstring>
+        <name>handleNo</name>
+        <qualifiedname>com.example.mybookshelf.BookRecommendationFlow.handleNo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles user response to a question by removing previous views, adding chat messages, and displaying a grid of options for further interaction. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" line="487" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" bodystart="487" bodyend="509"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a3855117e802e54923c308e0df6280c17" compoundref="BookRecommendationFlow_8java" startline="521" endline="559">com.example.mybookshelf.BookRecommendationFlow.addChatMessage</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a47dec962e67966f1d0839dcc4974a787" compoundref="BookRecommendationFlow_8java" startline="34">com.example.mybookshelf.BookRecommendationFlow.box</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a02b6d699653b58f244907bd10db53ab5" compoundref="BookRecommendationFlow_8java" startline="464" endline="481">com.example.mybookshelf.BookRecommendationFlow.createStyledGridButton</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a22f0dcaea578fbd7358e6237cd4873d4" compoundref="BookRecommendationFlow_8java" startline="59" endline="77">com.example.mybookshelf.BookRecommendationFlow.handleAI</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5c4f8d77996615f8ededabfa10258e0c" compoundref="BookRecommendationFlow_8java" startline="32">com.example.mybookshelf.BookRecommendationFlow.mainActivity</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ae50cf18619872a365eebe91c18d86e8d" compoundref="BookRecommendationFlow_8java" startline="399" endline="458">com.example.mybookshelf.BookRecommendationFlow.callAI</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a78597ba37409daeee77dcfa6236b2e6a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.BookRecommendationFlow.showThinkingAnimation</definition>
+        <argsstring>()</argsstring>
+        <name>showThinkingAnimation</name>
+        <qualifiedname>com.example.mybookshelf.BookRecommendationFlow.showThinkingAnimation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays a thinking animation with three bouncing balls in a RelativeLayout. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" line="564" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" bodystart="564" bodyend="593"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a0151ac229657fcb892f88bdac483f91b" compoundref="BookRecommendationFlow_8java" startline="40">com.example.mybookshelf.BookRecommendationFlow.balls</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a47dec962e67966f1d0839dcc4974a787" compoundref="BookRecommendationFlow_8java" startline="34">com.example.mybookshelf.BookRecommendationFlow.box</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a29ea78dc5162b295abccceda385d9975" compoundref="BookRecommendationFlow_8java" startline="41">com.example.mybookshelf.BookRecommendationFlow.isThinking</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a374256be23590ea576a06aeea9dad292" compoundref="BookRecommendationFlow_8java" startline="39">com.example.mybookshelf.BookRecommendationFlow.loadingLayout</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5c4f8d77996615f8ededabfa10258e0c" compoundref="BookRecommendationFlow_8java" startline="32">com.example.mybookshelf.BookRecommendationFlow.mainActivity</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ae50cf18619872a365eebe91c18d86e8d" compoundref="BookRecommendationFlow_8java" startline="399" endline="458">com.example.mybookshelf.BookRecommendationFlow.callAI</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ac62af5d6edeffa96b2862a609ebb40df" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.BookRecommendationFlow.hideThinkingAnimation</definition>
+        <argsstring>()</argsstring>
+        <name>hideThinkingAnimation</name>
+        <qualifiedname>com.example.mybookshelf.BookRecommendationFlow.hideThinkingAnimation</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Hides the thinking animation by clearing animations and resetting views. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" line="598" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" bodystart="598" bodyend="609"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a0151ac229657fcb892f88bdac483f91b" compoundref="BookRecommendationFlow_8java" startline="40">com.example.mybookshelf.BookRecommendationFlow.balls</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a47dec962e67966f1d0839dcc4974a787" compoundref="BookRecommendationFlow_8java" startline="34">com.example.mybookshelf.BookRecommendationFlow.box</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a29ea78dc5162b295abccceda385d9975" compoundref="BookRecommendationFlow_8java" startline="41">com.example.mybookshelf.BookRecommendationFlow.isThinking</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5c4f8d77996615f8ededabfa10258e0c" compoundref="BookRecommendationFlow_8java" startline="32">com.example.mybookshelf.BookRecommendationFlow.mainActivity</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ae50cf18619872a365eebe91c18d86e8d" compoundref="BookRecommendationFlow_8java" startline="399" endline="458">com.example.mybookshelf.BookRecommendationFlow.callAI</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>AppCompatActivity</label>
+        <link refid="classAppCompatActivity"/>
+      </node>
+      <node id="34">
+        <label>ArrayList&lt; String &gt;</label>
+      </node>
+      <node id="42">
+        <label>BarChart</label>
+      </node>
+      <node id="5">
+        <label>Button</label>
+      </node>
+      <node id="21">
+        <label>EditText</label>
+      </node>
+      <node id="14">
+        <label>ExecutorService</label>
+      </node>
+      <node id="10">
+        <label>File</label>
+      </node>
+      <node id="48">
+        <label>FrameLayout</label>
+      </node>
+      <node id="15">
+        <label>Handler</label>
+      </node>
+      <node id="35">
+        <label>HashSet&lt; String &gt;</label>
+      </node>
+      <node id="23">
+        <label>ImageButton</label>
+      </node>
+      <node id="26">
+        <label>LinkedList&lt; com.example.mybookshelf.dataClass.Book &gt;</label>
+      </node>
+      <node id="28">
+        <label>LinkedList&lt; com.example.mybookshelf.dataClass.Goal &gt;</label>
+      </node>
+      <node id="29">
+        <label>LinkedList&lt; com.example.mybookshelf.dataClass.Notification &gt;</label>
+      </node>
+      <node id="36">
+        <label>List&lt; View &gt;</label>
+      </node>
+      <node id="40">
+        <label>List&lt; com.example.mybookshelf.dataClass.Book &gt;</label>
+      </node>
+      <node id="37">
+        <label>List&lt; com.example.mybookshelf.dataClass.Goal &gt;</label>
+      </node>
+      <node id="31">
+        <label>Map&lt; View, com.example.mybookshelf.dataClass.Book &gt;</label>
+      </node>
+      <node id="39">
+        <label>RecyclerView::Adapter&lt; CostumeListAdapter.BookViewHolder &gt;</label>
+      </node>
+      <node id="47">
+        <label>RecyclerView.Adapter&lt; CustomGoalAdapter.GoalViewHolder &gt;</label>
+      </node>
+      <node id="33">
+        <label>RelativeLayout</label>
+      </node>
+      <node id="41">
+        <label>RequestOptions</label>
+      </node>
+      <node id="44">
+        <label>SearchView</label>
+      </node>
+      <node id="9">
+        <label>String</label>
+      </node>
+      <node id="24">
+        <label>TextView</label>
+      </node>
+      <node id="27">
+        <label>TreeSet&lt; String &gt;</label>
+      </node>
+      <node id="30">
+        <label>boolean</label>
+      </node>
+      <node id="1">
+        <label>com.example.mybookshelf.BookRecommendationFlow</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-mainActivity</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>-uiMaster</edgelabel>
+        </childnode>
+        <childnode refid="33" relation="usage">
+          <edgelabel>-box</edgelabel>
+          <edgelabel>-loadingLayout</edgelabel>
+        </childnode>
+        <childnode refid="34" relation="usage">
+          <edgelabel>-atributes</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>-ai</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-bookName</edgelabel>
+        </childnode>
+        <childnode refid="35" relation="usage">
+          <edgelabel>-doNotRecommend</edgelabel>
+        </childnode>
+        <childnode refid="36" relation="usage">
+          <edgelabel>-balls</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>-isThinking</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>com.example.mybookshelf.ApiResponseCallback</label>
+        <link refid="interfacecom_1_1example_1_1mybookshelf_1_1ApiResponseCallback"/>
+      </node>
+      <node id="6">
+        <label>com.example.mybookshelf.Authenticator</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1Authenticator"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-db</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-context</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-executorService</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-mainHandler</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>-KEY_ALIAS</edgelabel>
+        </childnode>
+      </node>
+      <node id="32">
+        <label>com.example.mybookshelf.BookRecommendationFlow</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-mainActivity</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>-uiMaster</edgelabel>
+        </childnode>
+        <childnode refid="33" relation="usage">
+          <edgelabel>-box</edgelabel>
+          <edgelabel>-loadingLayout</edgelabel>
+        </childnode>
+        <childnode refid="34" relation="usage">
+          <edgelabel>-atributes</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>-ai</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-bookName</edgelabel>
+        </childnode>
+        <childnode refid="35" relation="usage">
+          <edgelabel>-doNotRecommend</edgelabel>
+        </childnode>
+        <childnode refid="36" relation="usage">
+          <edgelabel>-balls</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>-isThinking</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>com.example.mybookshelf.DataBaseConnection</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-executorService</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-PASSWORD</edgelabel>
+          <edgelabel>-URL</edgelabel>
+          <edgelabel>-USER</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-context</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-trustStoreFile</edgelabel>
+        </childnode>
+      </node>
+      <node id="45">
+        <label>com.example.mybookshelf.GoalHandler</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler"/>
+        <childnode refid="25" relation="usage">
+          <edgelabel>-user</edgelabel>
+        </childnode>
+        <childnode refid="46" relation="usage">
+          <edgelabel>-adapter</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>-completedGoalList</edgelabel>
+          <edgelabel>-goalList</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-db</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-mainActivity</edgelabel>
+        </childnode>
+      </node>
+      <node id="38">
+        <label>com.example.mybookshelf.LayoutManager.CostumeListAdapter</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter"/>
+        <childnode refid="39" relation="public-inheritance">
+        </childnode>
+        <childnode refid="40" relation="usage">
+          <edgelabel>-bookList</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-mainActivity</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-db</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>-loggedInUser</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>-uiMaster</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-databaseExecutor</edgelabel>
+        </childnode>
+        <childnode refid="41" relation="usage">
+          <edgelabel>-imageRequestOptions</edgelabel>
+        </childnode>
+      </node>
+      <node id="46">
+        <label>com.example.mybookshelf.LayoutManager.CustomGoalAdapter</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter"/>
+        <childnode refid="47" relation="public-inheritance">
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>-goals</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-context</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-db</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>com.example.mybookshelf.MainActivity</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-addBookButton</edgelabel>
+          <edgelabel>-goToStarting</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-auth</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-booksAPI</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>-ai</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>-uiMaster</edgelabel>
+        </childnode>
+        <childnode refid="43" relation="usage">
+          <edgelabel>-search</edgelabel>
+        </childnode>
+        <childnode refid="44" relation="usage">
+          <edgelabel>-searchView</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>-timeSpentReadingTextView</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>-logedindUser</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>~db</edgelabel>
+        </childnode>
+        <childnode refid="45" relation="usage">
+          <edgelabel>-handler</edgelabel>
+        </childnode>
+        <childnode refid="48" relation="usage">
+          <edgelabel>-loadingOverlay</edgelabel>
+        </childnode>
+        <childnode refid="49" relation="usage">
+          <edgelabel>-REQUEST_CODE_POST_NOTIFICATIONS</edgelabel>
+        </childnode>
+      </node>
+      <node id="43">
+        <label>com.example.mybookshelf.Search</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1Search"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>~api</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>~uiMaster</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>~executorService</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>~mainThreadHandler</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>com.example.mybookshelf.UIMaster</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>~mainActivity</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>-emailEditText</edgelabel>
+          <edgelabel>-passwordEditText</edgelabel>
+          <edgelabel>-repeatPassword</edgelabel>
+          <edgelabel>-usernameEditText</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-loginButton</edgelabel>
+          <edgelabel>-registerButton</edgelabel>
+          <edgelabel>-switchToLoginButton</edgelabel>
+          <edgelabel>-switchToRegisterButton</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>-timeSpentReading</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>-nav_StatsBtn</edgelabel>
+          <edgelabel>-nav_searchBtn</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>-timeSpentReadingTextView</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-booksAPI</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>-ai</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-db</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>-logedindUser</edgelabel>
+        </childnode>
+        <childnode refid="31" relation="usage">
+          <edgelabel>-bookViewMap</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-executorService</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-AIprompt</edgelabel>
+        </childnode>
+        <childnode refid="32" relation="usage">
+          <edgelabel>-brf</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>~goalList</edgelabel>
+        </childnode>
+        <childnode refid="38" relation="usage">
+          <edgelabel>-listAdapter</edgelabel>
+        </childnode>
+        <childnode refid="42" relation="usage">
+          <edgelabel>-barChart</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>com.example.mybookshelf.apis.AiAPI</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-API_KEY</edgelabel>
+          <edgelabel>-API_URL</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>-client</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>-retrofit</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>-aiService</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>com.example.mybookshelf.apis.AiAPI.AiService</label>
+        <link refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1_1AiService"/>
+      </node>
+      <node id="13">
+        <label>com.example.mybookshelf.apis.BooksAPI</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-executorService</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>-mainHandler</edgelabel>
+        </childnode>
+      </node>
+      <node id="25">
+        <label>com.example.mybookshelf.dataClass.User</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-email</edgelabel>
+          <edgelabel>-hash_password</edgelabel>
+          <edgelabel>-user</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>-UID</edgelabel>
+          <edgelabel>-hour</edgelabel>
+          <edgelabel>-minute</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>-bookList</edgelabel>
+        </childnode>
+        <childnode refid="27" relation="usage">
+          <edgelabel>-authorList</edgelabel>
+          <edgelabel>-genreList</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>-completedGoalList</edgelabel>
+          <edgelabel>-failedGoalList</edgelabel>
+          <edgelabel>-goalList</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>-notificationList</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-mainActivity</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-db</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>-reminder</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>final ExecutorService</label>
+      </node>
+      <node id="11">
+        <label>final Handler</label>
+      </node>
+      <node id="22">
+        <label>int</label>
+      </node>
+      <node id="17">
+        <label>static final OkHttpClient</label>
+      </node>
+      <node id="18">
+        <label>static final Retrofit</label>
+      </node>
+      <node id="12">
+        <label>static final String</label>
+      </node>
+      <node id="49">
+        <label>static final int</label>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" line="30" column="7" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/BookRecommendationFlow.java" bodystart="30" bodyend="610"/>
+    <listofallmembers>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a3855117e802e54923c308e0df6280c17" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::BookRecommendationFlow</scope><name>addChatMessage</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a6615c82186cfaa4d3ec7793874af3c22" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::BookRecommendationFlow</scope><name>ai</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a2ee00fe81142dfe81477667b65ee95e1" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::BookRecommendationFlow</scope><name>atributes</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a0151ac229657fcb892f88bdac483f91b" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::BookRecommendationFlow</scope><name>balls</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a9286fe4afcec70b7194e628cb1961b72" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::BookRecommendationFlow</scope><name>bookName</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5ba48ea80adf0d66e51462b0da680e8e" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::BookRecommendationFlow</scope><name>BookRecommendationFlow</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a47dec962e67966f1d0839dcc4974a787" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::BookRecommendationFlow</scope><name>box</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a78dda71d2c403a463d824ff61b2ce27f" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::BookRecommendationFlow</scope><name>buildAIStringBased</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1abe4c57ea57ed54c344739295e70066ff" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::BookRecommendationFlow</scope><name>buildAIStringFresh</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ae50cf18619872a365eebe91c18d86e8d" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::BookRecommendationFlow</scope><name>callAI</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a02b6d699653b58f244907bd10db53ab5" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::BookRecommendationFlow</scope><name>createStyledGridButton</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a481ff10f4ef7414fd50f71fe6ee1a5b0" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::BookRecommendationFlow</scope><name>doNotRecommend</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a22f0dcaea578fbd7358e6237cd4873d4" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::BookRecommendationFlow</scope><name>handleAI</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a4dceb0fa4d170b8c7e5a7a6718593dfe" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::BookRecommendationFlow</scope><name>handleNo</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ac62af5d6edeffa96b2862a609ebb40df" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::BookRecommendationFlow</scope><name>hideThinkingAnimation</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a29ea78dc5162b295abccceda385d9975" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::BookRecommendationFlow</scope><name>isThinking</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a374256be23590ea576a06aeea9dad292" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::BookRecommendationFlow</scope><name>loadingLayout</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5c4f8d77996615f8ededabfa10258e0c" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::BookRecommendationFlow</scope><name>mainActivity</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a276e931dabe3e85af257a9d16ce7cc67" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::BookRecommendationFlow</scope><name>showBookBasedStep1</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a5c657be258c13c85848c7b7115f8a0b5" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::BookRecommendationFlow</scope><name>showBookBasedStep2</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1aa95301256c7f5377d1bc432189483b3c" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::BookRecommendationFlow</scope><name>showBookBasedStep3</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a4c7dc337216592f7f214f69ce7009d37" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::BookRecommendationFlow</scope><name>showFreshStartStep1</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1aaf567ca97b0d7f0c58ebba4d6f4b18bd" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::BookRecommendationFlow</scope><name>showFreshStartStep2</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a2bc1c0125eb3c1fe64ed1ed3ee93d3eb" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::BookRecommendationFlow</scope><name>showFreshStartStep3</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ad10515cfcf8650b6830b68f15d393b3b" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::BookRecommendationFlow</scope><name>showFreshStartStep4</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a46c6733f27b3527d3934cee02cfcd7ac" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::BookRecommendationFlow</scope><name>showFreshStartStep5</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a78597ba37409daeee77dcfa6236b2e6a" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::BookRecommendationFlow</scope><name>showThinkingAnimation</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1a3241cec472497dd23e79a34f00b95e73" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::BookRecommendationFlow</scope><name>uiMaster</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

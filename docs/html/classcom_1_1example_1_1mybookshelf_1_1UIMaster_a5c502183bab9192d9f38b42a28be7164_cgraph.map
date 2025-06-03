@@ -1,0 +1,17 @@
+<map id="com.example.mybookshelf.UIMaster.loadChartDataAsync" name="com.example.mybookshelf.UIMaster.loadChartDataAsync">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,165,223,205"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a1d0b44fba73323953ffbbf69f4f3f4cb" title=" " alt="" coords="273,133,475,173"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="223,169,259,165,259,170,223,175"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a3beb8f5e82c56206227f83e05d2e2dba" title=" " alt="" coords="271,197,477,237"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="223,196,257,200,257,206,223,201"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a66cf6ce29c43e6db34be85ae9990c102" title=" " alt="" coords="548,5,751,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="399,131,455,93,524,55,544,47,546,52,526,60,458,97,403,136"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#ae589c66b6b1826db14cd0185e2453c12" title=" " alt="" coords="548,69,751,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="460,131,549,110,550,115,461,136"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a2f446043c1019868262b5e49ddb58609" title=" " alt="" coords="531,133,768,173"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="476,151,517,151,517,156,476,156"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a5368b8b93b9216d91a256a2302ea04c8" title=" " alt="" coords="525,197,773,237"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="461,171,550,192,549,197,460,176"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a897a27ba41fe604acf9472257ad18685" title=" " alt="" coords="548,261,751,301"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="457,171,479,183,495,200,504,216,512,232,527,247,537,253,534,258,524,251,507,235,499,219,491,203,476,187,455,176"/>
+</map>

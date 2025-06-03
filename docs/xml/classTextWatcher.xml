@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classTextWatcher" kind="class" language="Java" prot="public">
+    <compoundname>TextWatcher</compoundname>
+    <derivedcompoundref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher" prot="public" virt="non-virtual">com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>TextWatcher</label>
+        <link refid="classTextWatcher"/>
+      </node>
+      <node id="2">
+        <label>com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>TextWatcher</label>
+        <link refid="classTextWatcher"/>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/LayoutManager/CostumeListAdapter.java" line="388" column="22"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

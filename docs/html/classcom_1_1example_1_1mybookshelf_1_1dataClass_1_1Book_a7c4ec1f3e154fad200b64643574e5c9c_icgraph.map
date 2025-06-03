@@ -1,0 +1,13 @@
+<map id="com.example.mybookshelf.dataClass.Book.getStatus" name="com.example.mybookshelf.dataClass.Book.getStatus">
+<area shape="rect" id="Node000001" title=" " alt="" coords="536,101,768,141"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1example_1_1mybookshelf_1_1GoalHandler.html#ac10bf110d981c8788e0e4b9b2e25177e" title=" " alt="" coords="260,5,484,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="590,99,487,60,449,48,450,43,489,55,592,94"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1example_1_1mybookshelf_1_1GoalHandler.html#a5ddb8c71cb9828e9525f4bafefaf685f" title=" " alt="" coords="256,69,488,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="522,109,488,105,488,100,523,104"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1example_1_1mybookshelf_1_1MainActivity.html#a50ffabe98d3e06a1168741e025b21b58" title=" " alt="" coords="256,133,488,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="523,139,488,143,488,137,522,133"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#ac2a608fcf86d3dbe14b4684dbbaf1431" title=" " alt="" coords="271,197,473,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="592,149,489,188,450,200,449,195,487,183,590,144"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a1533d0ed2384f2ec729cfcec7bd9a25f" title=" " alt="" coords="5,197,208,237"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="257,220,208,220,208,215,257,215"/>
+</map>

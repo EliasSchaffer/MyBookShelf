@@ -1,0 +1,15 @@
+<map id="com.example.mybookshelf.dataClass.Goal.getTarget" name="com.example.mybookshelf.dataClass.Goal.getTarget">
+<area shape="rect" id="Node000001" title=" " alt="" coords="679,149,911,189"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection.html#a3b22d6106c92d008ed8b05c10892f0b7" title=" " alt="" coords="372,5,588,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="758,143,700,99,666,78,630,60,587,45,589,40,632,55,668,73,703,95,762,138"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter.html#af6a51f456a68a61bedc36289b91e0716" title=" " alt="" coords="329,70,631,125"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="693,149,599,127,600,122,694,144"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1example_1_1mybookshelf_1_1GoalHandler.html#ac10bf110d981c8788e0e4b9b2e25177e" title=" " alt="" coords="368,149,592,189"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="665,172,592,172,592,167,665,167"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1example_1_1mybookshelf_1_1GoalHandler.html#a5ddb8c71cb9828e9525f4bafefaf685f" title=" " alt="" coords="364,213,596,253"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="683,195,579,216,578,211,682,190"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1example_1_1mybookshelf_1_1GoalHandler.html#a326d9e94cb83508cae6d760df1bd5718" title=" " alt="" coords="357,277,603,317"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="756,199,699,235,632,268,595,280,593,275,630,263,696,230,753,195"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter.html#ad2264dc4c944b992a8cac174bebb6694" title=" " alt="" coords="5,70,281,125"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="316,100,282,100,282,95,316,95"/>
+</map>

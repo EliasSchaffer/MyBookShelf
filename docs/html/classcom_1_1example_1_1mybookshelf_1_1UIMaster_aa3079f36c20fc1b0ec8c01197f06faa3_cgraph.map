@@ -1,0 +1,23 @@
+<map id="com.example.mybookshelf.UIMaster.navigateToStats" name="com.example.mybookshelf.UIMaster.navigateToStats">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,165,208,205"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#aeadc13ea946b279afce35c39bb36f3b6" title=" " alt="" coords="280,101,483,141"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,163,281,142,282,147,194,168"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a5c502183bab9192d9f38b42a28be7164" title=" " alt="" coords="273,165,490,205"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="208,183,259,183,259,188,208,188"/>
+<area shape="rect" id="Node000011" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a3bb75047e98f0333fa2fdfd173bc80b0" title=" " alt="" coords="256,229,507,269"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="194,203,282,224,281,229,193,208"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a1d0b44fba73323953ffbbf69f4f3f4cb" title=" " alt="" coords="557,133,759,173"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="490,170,543,164,544,169,490,175"/>
+<area shape="rect" id="Node000010" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a3beb8f5e82c56206227f83e05d2e2dba" title=" " alt="" coords="555,197,761,237"/>
+<area shape="poly" id="edge9_Node000003_Node000010" title=" " alt="" coords="490,195,541,201,541,206,490,201"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a66cf6ce29c43e6db34be85ae9990c102" title=" " alt="" coords="832,5,1035,45"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="683,131,739,93,808,55,828,47,830,52,810,60,742,97,687,136"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#ae589c66b6b1826db14cd0185e2453c12" title=" " alt="" coords="832,69,1035,109"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="744,131,833,110,834,115,745,136"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a2f446043c1019868262b5e49ddb58609" title=" " alt="" coords="815,133,1052,173"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="760,151,801,151,801,156,760,156"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a5368b8b93b9216d91a256a2302ea04c8" title=" " alt="" coords="809,197,1057,237"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="745,171,834,192,833,197,744,176"/>
+<area shape="rect" id="Node000009" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a897a27ba41fe604acf9472257ad18685" title=" " alt="" coords="832,261,1035,301"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="741,171,763,183,779,200,788,216,796,232,811,247,821,253,818,258,808,251,791,235,783,219,775,203,760,187,739,176"/>
+</map>

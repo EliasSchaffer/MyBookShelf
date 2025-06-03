@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationChannelManager" kind="class" language="Java" prot="public">
+    <compoundname>com::example::mybookshelf::notifications::NotificationChannelManager</compoundname>
+    <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationChannelManager_1a9d0ba4e30a7959d3ca4d5047054be4e8" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String com.example.mybookshelf.notifications.NotificationChannelManager.DEFAULT_CHANNEL_ID</definition>
+        <argsstring></argsstring>
+        <name>DEFAULT_CHANNEL_ID</name>
+        <qualifiedname>com.example.mybookshelf.notifications.NotificationChannelManager.DEFAULT_CHANNEL_ID</qualifiedname>
+        <initializer>= &quot;default_channel&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationChannelManager.java" line="9" column="32" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationChannelManager.java" bodystart="9" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationChannelManager_1ab57e2b123ed881523d1e0465605396b3" compoundref="NotificationChannelManager_8java" startline="15" endline="41">com.example.mybookshelf.notifications.NotificationChannelManager.createNotificationChannels</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a20792967e760ef1556080e252584e35f" compoundref="MainActivity_8java" startline="70" endline="155">com.example.mybookshelf.MainActivity.onCreate</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ab4c513c92fc23addef85f0992fb6ddaf" compoundref="NotificationScheduler_8java" startline="253" endline="265">com.example.mybookshelf.notifications.NotificationScheduler.sendGoalCompletedNotification</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationReceiver_1abe5c4b7b501921cbb9ebbf22dcb06be7" compoundref="NotificationReceiver_8java" startline="43" endline="67">com.example.mybookshelf.notifications.NotificationReceiver.showNotification</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationChannelManager_1a48ca3492a09404fe4d838dbcb0607c71" prot="public" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String com.example.mybookshelf.notifications.NotificationChannelManager.SERVER_CHANNEL_ID</definition>
+        <argsstring></argsstring>
+        <name>SERVER_CHANNEL_ID</name>
+        <qualifiedname>com.example.mybookshelf.notifications.NotificationChannelManager.SERVER_CHANNEL_ID</qualifiedname>
+        <initializer>= &quot;server_channel&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationChannelManager.java" line="10" column="32" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationChannelManager.java" bodystart="10" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationChannelManager_1ab57e2b123ed881523d1e0465605396b3" compoundref="NotificationChannelManager_8java" startline="15" endline="41">com.example.mybookshelf.notifications.NotificationChannelManager.createNotificationChannels</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationChannelManager_1ab57e2b123ed881523d1e0465605396b3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.example.mybookshelf.notifications.NotificationChannelManager.createNotificationChannels</definition>
+        <argsstring>(Context context)</argsstring>
+        <name>createNotificationChannels</name>
+        <qualifiedname>com.example.mybookshelf.notifications.NotificationChannelManager.createNotificationChannels</qualifiedname>
+        <param>
+          <type>Context</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates notification channels required for Android Oreo and above. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationChannelManager.java" line="15" column="24" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationChannelManager.java" bodystart="15" bodyend="41"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationChannelManager_1a9d0ba4e30a7959d3ca4d5047054be4e8" compoundref="NotificationChannelManager_8java" startline="9">com.example.mybookshelf.notifications.NotificationChannelManager.DEFAULT_CHANNEL_ID</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationChannelManager_1a48ca3492a09404fe4d838dbcb0607c71" compoundref="NotificationChannelManager_8java" startline="10">com.example.mybookshelf.notifications.NotificationChannelManager.SERVER_CHANNEL_ID</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a20792967e760ef1556080e252584e35f" compoundref="MainActivity_8java" startline="70" endline="155">com.example.mybookshelf.MainActivity.onCreate</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>String</label>
+      </node>
+      <node id="1">
+        <label>com.example.mybookshelf.notifications.NotificationChannelManager</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationChannelManager"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+DEFAULT_CHANNEL_ID</edgelabel>
+          <edgelabel>+SERVER_CHANNEL_ID</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationChannelManager.java" line="8" column="7" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationChannelManager.java" bodystart="8" bodyend="42"/>
+    <listofallmembers>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationChannelManager_1ab57e2b123ed881523d1e0465605396b3" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::notifications::NotificationChannelManager</scope><name>createNotificationChannels</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationChannelManager_1a9d0ba4e30a7959d3ca4d5047054be4e8" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::notifications::NotificationChannelManager</scope><name>DEFAULT_CHANNEL_ID</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationChannelManager_1a48ca3492a09404fe4d838dbcb0607c71" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::notifications::NotificationChannelManager</scope><name>SERVER_CHANNEL_ID</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

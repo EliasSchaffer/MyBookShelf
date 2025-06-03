@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classValueFormatter" kind="class" language="Java" prot="public">
+    <compoundname>ValueFormatter</compoundname>
+    <derivedcompoundref refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1_1MonthValueFormatter" prot="public" virt="non-virtual">com.example.mybookshelf.UIMaster.MonthValueFormatter</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ValueFormatter</label>
+        <link refid="classValueFormatter"/>
+      </node>
+      <node id="2">
+        <label>com.example.mybookshelf.UIMaster.MonthValueFormatter</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1_1MonthValueFormatter"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ValueFormatter</label>
+        <link refid="classValueFormatter"/>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="736" column="20"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

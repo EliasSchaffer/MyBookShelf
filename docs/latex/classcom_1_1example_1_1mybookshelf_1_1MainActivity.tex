@@ -1,0 +1,312 @@
+\doxysection{com.\+example.\+mybookshelf.\+Main\+Activity Class Reference}
+\hypertarget{classcom_1_1example_1_1mybookshelf_1_1MainActivity}{}\label{classcom_1_1example_1_1mybookshelf_1_1MainActivity}\index{com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}}
+
+
+Inheritance diagram for com.\+example.\+mybookshelf.\+Main\+Activity\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classcom_1_1example_1_1mybookshelf_1_1MainActivity__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for com.\+example.\+mybookshelf.\+Main\+Activity\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1MainActivity__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity_ae835969f88426a20de973e577bdf0f8d}{handle\+Search}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a904eef7a2ffa10b03c833016464e03c7}{handle\+Register}} (Edit\+Text username\+Edit\+Text, Edit\+Text password\+Edit\+Text, Edit\+Text reapeat\+Password\+Edit\+Text, Edit\+Text email\+Edit\+Text)  throws Execution\+Exception, Interrupted\+Exception 
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a81b3fef1d3e60bd882a453eb941c4797}{handle\+Login}} (Edit\+Text username\+Edit\+Text, Edit\+Text password\+Edit\+Text, boolean stay\+Logged\+In)  throws Execution\+Exception, Interrupted\+Exception 
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity_ab1625f7432f6fcc4f53a63d3b893065f}{save\+Book}} (\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book}{Book}} book)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a5cd85dfa3b0e1f23e7c51726aa4f3098}{remove\+Book}} (\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book}{Book}} book)  throws SQLException 
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User}{User}} \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a50926ed5b57d759bc1f31b521ee7f104}{get\+User}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity_af611e0f07a0e558281325c1052b52054}{on\+Success}} (String response)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a50ffabe98d3e06a1168741e025b21b58}{handle\+Book\+Change}} (\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book}{Book}} book)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity_abae210c11c5d5105978aaf496adcff4d}{on\+Failure}} (String error)
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection}{Data\+Base\+Connection}} \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a749ccb389a8cff8eaf8ae429e30e3c6b}{get\+Db}} ()
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a5d1ff08cd88a729f9b531d898843a0cf}{set\+Loading\+Visibility}} (int visibility)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a20792967e760ef1556080e252584e35f}{on\+Create}} (Bundle saved\+Instance\+State)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a7dc4981a407c45a60ab3e92c56f73ea7}{show\+Response\+Dialog}} (String message)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Button \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity_adb1d7a8167a1c239fb47005d437e2677}{add\+Book\+Button}}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1Authenticator}{Authenticator}} \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity_abcc4b781cf26507daaa8eda91d03bae9}{auth}}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI}{Books\+API}} \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a02f1318d4e519da726c2004c5207b8ae}{books\+API}}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI}{Ai\+API}} \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity_ad9b9883f3d697a62d4a7ebbbcd172b90}{ai}}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster}{UIMaster}} \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity_ad052780eff7c27821bcac0c3fa479cfc}{ui\+Master}}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1Search}{Search}} \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a0da50a5995889cb8824b41d6e1a47cf4}{search}}
+\item 
+Search\+View \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity_ac3f9490edb7b69f4a82a738418892218}{search\+View}}
+\item 
+Text\+View \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a0f0b0b87d4bcd82b826f6119f8c8f4ed}{time\+Spent\+Reading\+Text\+View}}
+\item 
+Button \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity_aed9597784f32b7165f8ebc7e5771fe2c}{go\+To\+Starting}}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User}{User}} \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a7edb90fcb347a011e2039d71ddf55ccc}{logedind\+User}}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1GoalHandler}{Goal\+Handler}} \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity_ac0bfe95d624fc4c53ee55f2a9d5b6a9c}{handler}}
+\item 
+Frame\+Layout \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a01bfe3e5a914f9b659031549a6a70fc6}{loading\+Overlay}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final int \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity_aa4b49fa3923ae42e6ed60203e5d9baf7}{REQUEST\+\_\+\+CODE\+\_\+\+POST\+\_\+\+NOTIFICATIONS}} = 1001
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a749ccb389a8cff8eaf8ae429e30e3c6b}\index{com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}!getDb@{getDb}}
+\index{getDb@{getDb}!com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}}
+\doxysubsubsection{\texorpdfstring{getDb()}{getDb()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a749ccb389a8cff8eaf8ae429e30e3c6b} 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection}{Data\+Base\+Connection}} com.\+example.\+mybookshelf.\+Main\+Activity.\+get\+Db (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a50926ed5b57d759bc1f31b521ee7f104}\index{com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}!getUser@{getUser}}
+\index{getUser@{getUser}!com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}}
+\doxysubsubsection{\texorpdfstring{getUser()}{getUser()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a50926ed5b57d759bc1f31b521ee7f104} 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User}{User}} com.\+example.\+mybookshelf.\+Main\+Activity.\+get\+User (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a50ffabe98d3e06a1168741e025b21b58}\index{com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}!handleBookChange@{handleBookChange}}
+\index{handleBookChange@{handleBookChange}!com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}}
+\doxysubsubsection{\texorpdfstring{handleBookChange()}{handleBookChange()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a50ffabe98d3e06a1168741e025b21b58} 
+void com.\+example.\+mybookshelf.\+Main\+Activity.\+handle\+Book\+Change (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book}{Book}}}]{book}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a50ffabe98d3e06a1168741e025b21b58_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a81b3fef1d3e60bd882a453eb941c4797}\index{com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}!handleLogin@{handleLogin}}
+\index{handleLogin@{handleLogin}!com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}}
+\doxysubsubsection{\texorpdfstring{handleLogin()}{handleLogin()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a81b3fef1d3e60bd882a453eb941c4797} 
+void com.\+example.\+mybookshelf.\+Main\+Activity.\+handle\+Login (\begin{DoxyParamCaption}\item[{Edit\+Text}]{username\+Edit\+Text}{, }\item[{Edit\+Text}]{password\+Edit\+Text}{, }\item[{boolean}]{stay\+Logged\+In}{}\end{DoxyParamCaption}) throws Execution\+Exception, Interrupted\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a904eef7a2ffa10b03c833016464e03c7}\index{com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}!handleRegister@{handleRegister}}
+\index{handleRegister@{handleRegister}!com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}}
+\doxysubsubsection{\texorpdfstring{handleRegister()}{handleRegister()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a904eef7a2ffa10b03c833016464e03c7} 
+void com.\+example.\+mybookshelf.\+Main\+Activity.\+handle\+Register (\begin{DoxyParamCaption}\item[{Edit\+Text}]{username\+Edit\+Text}{, }\item[{Edit\+Text}]{password\+Edit\+Text}{, }\item[{Edit\+Text}]{reapeat\+Password\+Edit\+Text}{, }\item[{Edit\+Text}]{email\+Edit\+Text}{}\end{DoxyParamCaption}) throws Execution\+Exception, Interrupted\+Exception\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1MainActivity_ae835969f88426a20de973e577bdf0f8d}\index{com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}!handleSearch@{handleSearch}}
+\index{handleSearch@{handleSearch}!com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}}
+\doxysubsubsection{\texorpdfstring{handleSearch()}{handleSearch()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1MainActivity_ae835969f88426a20de973e577bdf0f8d} 
+void com.\+example.\+mybookshelf.\+Main\+Activity.\+handle\+Search (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a20792967e760ef1556080e252584e35f}\index{com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}!onCreate@{onCreate}}
+\index{onCreate@{onCreate}!com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}}
+\doxysubsubsection{\texorpdfstring{onCreate()}{onCreate()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a20792967e760ef1556080e252584e35f} 
+void com.\+example.\+mybookshelf.\+Main\+Activity.\+on\+Create (\begin{DoxyParamCaption}\item[{Bundle}]{saved\+Instance\+State}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a20792967e760ef1556080e252584e35f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1MainActivity_abae210c11c5d5105978aaf496adcff4d}\index{com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}!onFailure@{onFailure}}
+\index{onFailure@{onFailure}!com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}}
+\doxysubsubsection{\texorpdfstring{onFailure()}{onFailure()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1MainActivity_abae210c11c5d5105978aaf496adcff4d} 
+void com.\+example.\+mybookshelf.\+Main\+Activity.\+on\+Failure (\begin{DoxyParamCaption}\item[{String}]{error}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Handles failure with an error message. 
+
+Implements \mbox{\hyperlink{interfacecom_1_1example_1_1mybookshelf_1_1ApiResponseCallback_a8e7bdf5946a617eedd9b807fc7b45b53}{com.\+example.\+mybookshelf.\+Api\+Response\+Callback}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1MainActivity_abae210c11c5d5105978aaf496adcff4d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1MainActivity_af611e0f07a0e558281325c1052b52054}\index{com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}!onSuccess@{onSuccess}}
+\index{onSuccess@{onSuccess}!com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}}
+\doxysubsubsection{\texorpdfstring{onSuccess()}{onSuccess()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1MainActivity_af611e0f07a0e558281325c1052b52054} 
+void com.\+example.\+mybookshelf.\+Main\+Activity.\+on\+Success (\begin{DoxyParamCaption}\item[{String}]{response}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Handles a successful operation with the given response. 
+
+Implements \mbox{\hyperlink{interfacecom_1_1example_1_1mybookshelf_1_1ApiResponseCallback_aa87fb9e3b5f171b2b3f6acc98072657d}{com.\+example.\+mybookshelf.\+Api\+Response\+Callback}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1MainActivity_af611e0f07a0e558281325c1052b52054_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a5cd85dfa3b0e1f23e7c51726aa4f3098}\index{com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}!removeBook@{removeBook}}
+\index{removeBook@{removeBook}!com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}}
+\doxysubsubsection{\texorpdfstring{removeBook()}{removeBook()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a5cd85dfa3b0e1f23e7c51726aa4f3098} 
+void com.\+example.\+mybookshelf.\+Main\+Activity.\+remove\+Book (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book}{Book}}}]{book}{}\end{DoxyParamCaption}) throws SQLException\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1MainActivity_ab1625f7432f6fcc4f53a63d3b893065f}\index{com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}!saveBook@{saveBook}}
+\index{saveBook@{saveBook}!com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}}
+\doxysubsubsection{\texorpdfstring{saveBook()}{saveBook()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1MainActivity_ab1625f7432f6fcc4f53a63d3b893065f} 
+void com.\+example.\+mybookshelf.\+Main\+Activity.\+save\+Book (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book}{Book}}}]{book}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1MainActivity_ab1625f7432f6fcc4f53a63d3b893065f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a5d1ff08cd88a729f9b531d898843a0cf}\index{com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}!setLoadingVisibility@{setLoadingVisibility}}
+\index{setLoadingVisibility@{setLoadingVisibility}!com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}}
+\doxysubsubsection{\texorpdfstring{setLoadingVisibility()}{setLoadingVisibility()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a5d1ff08cd88a729f9b531d898843a0cf} 
+void com.\+example.\+mybookshelf.\+Main\+Activity.\+set\+Loading\+Visibility (\begin{DoxyParamCaption}\item[{int}]{visibility}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a7dc4981a407c45a60ab3e92c56f73ea7}\index{com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}!showResponseDialog@{showResponseDialog}}
+\index{showResponseDialog@{showResponseDialog}!com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}}
+\doxysubsubsection{\texorpdfstring{showResponseDialog()}{showResponseDialog()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a7dc4981a407c45a60ab3e92c56f73ea7} 
+void com.\+example.\+mybookshelf.\+Main\+Activity.\+show\+Response\+Dialog (\begin{DoxyParamCaption}\item[{String}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a7dc4981a407c45a60ab3e92c56f73ea7_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1MainActivity_adb1d7a8167a1c239fb47005d437e2677}\index{com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}!addBookButton@{addBookButton}}
+\index{addBookButton@{addBookButton}!com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}}
+\doxysubsubsection{\texorpdfstring{addBookButton}{addBookButton}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1MainActivity_adb1d7a8167a1c239fb47005d437e2677} 
+Button com.\+example.\+mybookshelf.\+Main\+Activity.\+add\+Book\+Button\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1MainActivity_ad9b9883f3d697a62d4a7ebbbcd172b90}\index{com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}!ai@{ai}}
+\index{ai@{ai}!com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}}
+\doxysubsubsection{\texorpdfstring{ai}{ai}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1MainActivity_ad9b9883f3d697a62d4a7ebbbcd172b90} 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI}{Ai\+API}} com.\+example.\+mybookshelf.\+Main\+Activity.\+ai\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1MainActivity_abcc4b781cf26507daaa8eda91d03bae9}\index{com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}!auth@{auth}}
+\index{auth@{auth}!com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}}
+\doxysubsubsection{\texorpdfstring{auth}{auth}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1MainActivity_abcc4b781cf26507daaa8eda91d03bae9} 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1Authenticator}{Authenticator}} com.\+example.\+mybookshelf.\+Main\+Activity.\+auth\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a02f1318d4e519da726c2004c5207b8ae}\index{com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}!booksAPI@{booksAPI}}
+\index{booksAPI@{booksAPI}!com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}}
+\doxysubsubsection{\texorpdfstring{booksAPI}{booksAPI}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a02f1318d4e519da726c2004c5207b8ae} 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI}{Books\+API}} com.\+example.\+mybookshelf.\+Main\+Activity.\+books\+API\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1MainActivity_aed9597784f32b7165f8ebc7e5771fe2c}\index{com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}!goToStarting@{goToStarting}}
+\index{goToStarting@{goToStarting}!com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}}
+\doxysubsubsection{\texorpdfstring{goToStarting}{goToStarting}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1MainActivity_aed9597784f32b7165f8ebc7e5771fe2c} 
+Button com.\+example.\+mybookshelf.\+Main\+Activity.\+go\+To\+Starting\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1MainActivity_ac0bfe95d624fc4c53ee55f2a9d5b6a9c}\index{com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}!handler@{handler}}
+\index{handler@{handler}!com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}}
+\doxysubsubsection{\texorpdfstring{handler}{handler}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1MainActivity_ac0bfe95d624fc4c53ee55f2a9d5b6a9c} 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1GoalHandler}{Goal\+Handler}} com.\+example.\+mybookshelf.\+Main\+Activity.\+handler\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a01bfe3e5a914f9b659031549a6a70fc6}\index{com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}!loadingOverlay@{loadingOverlay}}
+\index{loadingOverlay@{loadingOverlay}!com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}}
+\doxysubsubsection{\texorpdfstring{loadingOverlay}{loadingOverlay}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a01bfe3e5a914f9b659031549a6a70fc6} 
+Frame\+Layout com.\+example.\+mybookshelf.\+Main\+Activity.\+loading\+Overlay\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a7edb90fcb347a011e2039d71ddf55ccc}\index{com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}!logedindUser@{logedindUser}}
+\index{logedindUser@{logedindUser}!com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}}
+\doxysubsubsection{\texorpdfstring{logedindUser}{logedindUser}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a7edb90fcb347a011e2039d71ddf55ccc} 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User}{User}} com.\+example.\+mybookshelf.\+Main\+Activity.\+logedind\+User\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1MainActivity_aa4b49fa3923ae42e6ed60203e5d9baf7}\index{com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}!REQUEST\_CODE\_POST\_NOTIFICATIONS@{REQUEST\_CODE\_POST\_NOTIFICATIONS}}
+\index{REQUEST\_CODE\_POST\_NOTIFICATIONS@{REQUEST\_CODE\_POST\_NOTIFICATIONS}!com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}}
+\doxysubsubsection{\texorpdfstring{REQUEST\_CODE\_POST\_NOTIFICATIONS}{REQUEST\_CODE\_POST\_NOTIFICATIONS}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1MainActivity_aa4b49fa3923ae42e6ed60203e5d9baf7} 
+final int com.\+example.\+mybookshelf.\+Main\+Activity.\+REQUEST\+\_\+\+CODE\+\_\+\+POST\+\_\+\+NOTIFICATIONS = 1001\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a0da50a5995889cb8824b41d6e1a47cf4}\index{com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}!search@{search}}
+\index{search@{search}!com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}}
+\doxysubsubsection{\texorpdfstring{search}{search}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a0da50a5995889cb8824b41d6e1a47cf4} 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1Search}{Search}} com.\+example.\+mybookshelf.\+Main\+Activity.\+search\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1MainActivity_ac3f9490edb7b69f4a82a738418892218}\index{com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}!searchView@{searchView}}
+\index{searchView@{searchView}!com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}}
+\doxysubsubsection{\texorpdfstring{searchView}{searchView}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1MainActivity_ac3f9490edb7b69f4a82a738418892218} 
+Search\+View com.\+example.\+mybookshelf.\+Main\+Activity.\+search\+View\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a0f0b0b87d4bcd82b826f6119f8c8f4ed}\index{com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}!timeSpentReadingTextView@{timeSpentReadingTextView}}
+\index{timeSpentReadingTextView@{timeSpentReadingTextView}!com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}}
+\doxysubsubsection{\texorpdfstring{timeSpentReadingTextView}{timeSpentReadingTextView}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1MainActivity_a0f0b0b87d4bcd82b826f6119f8c8f4ed} 
+Text\+View com.\+example.\+mybookshelf.\+Main\+Activity.\+time\+Spent\+Reading\+Text\+View\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1MainActivity_ad052780eff7c27821bcac0c3fa479cfc}\index{com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}!uiMaster@{uiMaster}}
+\index{uiMaster@{uiMaster}!com.example.mybookshelf.MainActivity@{com.example.mybookshelf.MainActivity}}
+\doxysubsubsection{\texorpdfstring{uiMaster}{uiMaster}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1MainActivity_ad052780eff7c27821bcac0c3fa479cfc} 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster}{UIMaster}} com.\+example.\+mybookshelf.\+Main\+Activity.\+ui\+Master\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/app/doc\+\_\+state/github\+\_\+repos\+Repo\+Arch\+Doc\+Gen\+Context/\+Elias\+Schaffer/\+My\+Book\+Shelf/src/main/java/com/example/mybookshelf/\mbox{\hyperlink{MainActivity_8java}{Main\+Activity.\+java}}\end{DoxyCompactItemize}

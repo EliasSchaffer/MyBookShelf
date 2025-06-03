@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1BootCompletedReceiver" kind="class" language="Java" prot="public">
+    <compoundname>com::example::mybookshelf::notifications::BootCompletedReceiver</compoundname>
+    <basecompoundref refid="classBroadcastReceiver" prot="public" virt="non-virtual">BroadcastReceiver</basecompoundref>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1BootCompletedReceiver_1a1d13680b27b02a1aeed100e85b8364ba" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String com.example.mybookshelf.notifications.BootCompletedReceiver.TAG</definition>
+        <argsstring></argsstring>
+        <name>TAG</name>
+        <qualifiedname>com.example.mybookshelf.notifications.BootCompletedReceiver.TAG</qualifiedname>
+        <initializer>= &quot;BootCompletedReceiver&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/BootCompletedReceiver.java" line="10" column="33" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/BootCompletedReceiver.java" bodystart="10" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1BootCompletedReceiver_1a42ee4762f446eaf5c82cf00042f40593" compoundref="BootCompletedReceiver_8java" startline="16" endline="21">com.example.mybookshelf.notifications.BootCompletedReceiver.onReceive</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1BootCompletedReceiver_1a42ee4762f446eaf5c82cf00042f40593" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.notifications.BootCompletedReceiver.onReceive</definition>
+        <argsstring>(Context context, Intent intent)</argsstring>
+        <name>onReceive</name>
+        <qualifiedname>com.example.mybookshelf.notifications.BootCompletedReceiver.onReceive</qualifiedname>
+        <param>
+          <type>Context</type>
+          <declname>context</declname>
+        </param>
+        <param>
+          <type>Intent</type>
+          <declname>intent</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles system boot completion by restoring notifications. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/BootCompletedReceiver.java" line="16" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/BootCompletedReceiver.java" bodystart="16" bodyend="21"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a6a67704352785acd6dcd956ec2f8834f" compoundref="NotificationScheduler_8java" startline="193" endline="204">com.example.mybookshelf.notifications.NotificationScheduler.restoreNotifications</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1BootCompletedReceiver_1a1d13680b27b02a1aeed100e85b8364ba" compoundref="BootCompletedReceiver_8java" startline="10">com.example.mybookshelf.notifications.BootCompletedReceiver.TAG</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>BroadcastReceiver</label>
+        <link refid="classBroadcastReceiver"/>
+      </node>
+      <node id="1">
+        <label>com.example.mybookshelf.notifications.BootCompletedReceiver</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1BootCompletedReceiver"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>BroadcastReceiver</label>
+        <link refid="classBroadcastReceiver"/>
+      </node>
+      <node id="3">
+        <label>String</label>
+      </node>
+      <node id="1">
+        <label>com.example.mybookshelf.notifications.BootCompletedReceiver</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1BootCompletedReceiver"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-TAG</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/BootCompletedReceiver.java" line="9" column="7" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/BootCompletedReceiver.java" bodystart="9" bodyend="22"/>
+    <listofallmembers>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1BootCompletedReceiver_1a42ee4762f446eaf5c82cf00042f40593" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::notifications::BootCompletedReceiver</scope><name>onReceive</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1BootCompletedReceiver_1a1d13680b27b02a1aeed100e85b8364ba" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::notifications::BootCompletedReceiver</scope><name>TAG</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

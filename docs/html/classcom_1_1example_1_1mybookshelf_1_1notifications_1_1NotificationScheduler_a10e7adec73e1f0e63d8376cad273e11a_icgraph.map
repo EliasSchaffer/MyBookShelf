@@ -1,0 +1,9 @@
+<map id="com.example.mybookshelf.notifications.NotificationScheduler.cancelOneTimeNotification" name="com.example.mybookshelf.notifications.NotificationScheduler.cancelOneTimeNotification">
+<area shape="rect" id="Node000001" title=" " alt="" coords="565,5,905,45"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User.html#aeccdf2ba94dc9b82428e2339fce94f16" title=" " alt="" coords="5,5,237,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="551,14,517,12,401,9,285,12,238,15,237,10,285,7,401,3,517,7,551,8"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User.html#afb85fd04c8149bfb77f1810c9301b0bc" title=" " alt="" coords="285,45,517,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="555,50,518,54,517,49,555,44"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="271,49,237,45,238,39,272,44"/>
+<area shape="poly" id="edge4_Node000003_Node000003" title=" " alt="" coords="449,34,432,27,401,24,374,26,358,31,352,37,355,44,350,46,346,36,355,26,373,21,401,19,434,21,451,29"/>
+</map>

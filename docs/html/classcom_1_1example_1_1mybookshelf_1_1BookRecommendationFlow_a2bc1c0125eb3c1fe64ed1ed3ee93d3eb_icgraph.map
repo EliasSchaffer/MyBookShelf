@@ -1,0 +1,30 @@
+<map id="com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep3" name="com.example.mybookshelf.BookRecommendationFlow.showFreshStartStep3">
+<area shape="rect" id="Node000001" title=" " alt="" coords="2805,155,3079,210"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#aaf567ca97b0d7f0c58ebba4d6f4b18bd" title=" " alt="" coords="2484,122,2757,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2791,170,2757,166,2758,161,2792,164"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#a4c7dc337216592f7f214f69ce7009d37" title=" " alt="" coords="2163,91,2436,146"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="2470,138,2436,134,2436,129,2471,132"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#a22f0dcaea578fbd7358e6237cd4873d4" title=" " alt="" coords="1853,99,2115,139"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="2149,121,2115,121,2115,116,2149,116"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#a4dceb0fa4d170b8c7e5a7a6718593dfe" title=" " alt="" coords="1539,99,1805,139"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="1840,121,1806,121,1806,116,1840,116"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#ae50cf18619872a365eebe91c18d86e8d" title=" " alt="" coords="1251,99,1491,139"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="1525,121,1491,121,1491,116,1525,116"/>
+<area shape="poly" id="edge15_Node000006_Node000006" title=" " alt="" coords="1420,87,1402,80,1371,77,1343,79,1326,84,1320,90,1323,97,1318,99,1315,89,1323,80,1342,74,1371,72,1404,75,1422,82"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#a78dda71d2c403a463d824ff61b2ce27f" title=" " alt="" coords="967,43,1203,98"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="1238,99,1203,93,1203,88,1239,94"/>
+<area shape="rect" id="Node000011" href="$classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#abe4c57ea57ed54c344739295e70066ff" title=" " alt="" coords="967,122,1203,177"/>
+<area shape="poly" id="edge11_Node000006_Node000011" title=" " alt="" coords="1237,136,1203,139,1203,134,1237,130"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#aa95301256c7f5377d1bc432189483b3c" title=" " alt="" coords="647,43,917,98"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="953,73,918,73,918,68,953,68"/>
+<area shape="rect" id="Node000009" href="$classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#a5c657be258c13c85848c7b7115f8a0b5" title=" " alt="" coords="325,43,596,98"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="633,73,596,73,596,68,633,68"/>
+<area shape="rect" id="Node000010" href="$classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#a276e931dabe3e85af257a9d16ce7cc67" title=" " alt="" coords="5,11,276,66"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="312,58,276,55,276,50,312,53"/>
+<area shape="poly" id="edge10_Node000010_Node000004" title=" " alt="" coords="290,24,521,10,781,3,1372,3,1449,5,1527,13,1680,37,1815,68,1919,96,1918,101,1814,73,1679,42,1527,18,1449,11,1372,8,781,8,521,15,290,29"/>
+<area shape="rect" id="Node000012" href="$classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#a46c6733f27b3527d3934cee02cfcd7ac" title=" " alt="" coords="645,122,919,177"/>
+<area shape="poly" id="edge12_Node000011_Node000012" title=" " alt="" coords="953,152,919,152,919,147,953,147"/>
+<area shape="rect" id="Node000013" href="$classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#ad10515cfcf8650b6830b68f15d393b3b" title=" " alt="" coords="324,154,597,209"/>
+<area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="632,167,598,170,597,165,631,162"/>
+<area shape="poly" id="edge14_Node000013_Node000001" title=" " alt="" coords="611,191,834,205,1083,212,2301,212,2570,205,2805,191,2805,196,2570,210,2301,217,1083,217,834,210,611,196"/>
+</map>

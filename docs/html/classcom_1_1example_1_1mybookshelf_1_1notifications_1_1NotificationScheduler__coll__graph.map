@@ -1,0 +1,7 @@
+<map id="com.example.mybookshelf.notifications.NotificationScheduler" name="com.example.mybookshelf.notifications.NotificationScheduler">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,207,284,487"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="31,5,83,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="55,71,53,124,61,182,63,190,58,192,55,183,48,124,50,71"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="217,5,248,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="230,72,206,183,204,192,198,190,201,182,225,70"/>
+</map>
