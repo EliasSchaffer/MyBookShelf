@@ -9,10 +9,16 @@ public class Notification {
         this.message = message;
     }
 
+    /**
+     * Returns the ID.
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * Returns the stored message.
+     */
     public String getMessage() {
         return message;
     }

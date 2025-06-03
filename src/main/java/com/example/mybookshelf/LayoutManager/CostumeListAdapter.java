@@ -66,6 +66,9 @@ public class CostumeListAdapter extends RecyclerView.Adapter<CostumeListAdapter.
 
     @NonNull
     @Override
+    /**
+     * Creates and configures a ViewHolder for displaying a book item in the RecyclerView.
+     */
     public BookViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // Create a book item layout that matches your design
         FrameLayout frameLayout = new FrameLayout(mainActivity);
@@ -180,6 +183,9 @@ public class CostumeListAdapter extends RecyclerView.Adapter<CostumeListAdapter.
     }
 
     @Override
+    /**
+     * Binds book data from the list to the provided view holder at the specified position.
+     */
     public void onBindViewHolder(@NonNull BookViewHolder holder, int position) {
         Book book = bookList.get(position);
 
@@ -187,6 +193,20 @@ public class CostumeListAdapter extends RecyclerView.Adapter<CostumeListAdapter.
         bindBookData(holder, book, position);
     }
 
+    /**
+     * Binds data from a Book object to a BookViewHolder.
+     *
+     * This method updates the UI components of a book item in the RecyclerView,
+     * including loading the book's image, setting its details, handling notes,
+     * and managing click events for removal and navigation. It also ensures that
+     * any existing text watchers are removed before adding new ones to prevent
+     * duplicate callbacks. Additionally, it manages asynchronous database operations
+     * for retrieving and updating notes.
+     *
+     * @param holder The BookViewHolder instance holding the book's UI components.
+     * @param book   The Book object containing the data to bind.
+     * @param position The position of the book in the RecyclerView.
+     */
     private void bindBookData(BookViewHolder holder, Book book, int position) {
         // Load book image using Glide with pre-configured options
         String imageUrl = book.getImageUrl();
@@ -263,6 +283,9 @@ public class CostumeListAdapter extends RecyclerView.Adapter<CostumeListAdapter.
         });
     }
 
+    /**
+     * Creates a DebouncedTextWatcher that updates notes in the database when text changes.
+     */
     private DebouncedTextWatcher createTextWatcher(Book book) {
         return new DebouncedTextWatcher(500) {
             @Override
@@ -275,11 +298,17 @@ public class CostumeListAdapter extends RecyclerView.Adapter<CostumeListAdapter.
     }
 
     @Override
+    /**
+     * Returns the number of books in the list.
+     */
     public int getItemCount() {
         return bookList.size();
     }
 
     // Method to update data with DiffUtil for efficient updates
+    /**
+     * Updates the book list with new data and notifies the adapter of changes.
+     */
     public void updateData(List<Book> newBooks) {
         if (newBooks == null) {
             return;
@@ -288,21 +317,33 @@ public class CostumeListAdapter extends RecyclerView.Adapter<CostumeListAdapter.
         // Calculate the difference between old and new lists
         DiffUtil.DiffResult diffResult = DiffUtil.calculateDiff(new DiffUtil.Callback() {
             @Override
+            /**
+             * Returns the size of the book list.
+             */
             public int getOldListSize() {
                 return bookList.size();
             }
 
             @Override
+            /**
+             * Returns the size of the newBooks list.
+             */
             public int getNewListSize() {
                 return newBooks.size();
             }
 
             @Override
+            /**
+             * Checks if items at given positions have the same ID.
+             */
             public boolean areItemsTheSame(int oldItemPosition, int newItemPosition) {
                 return bookList.get(oldItemPosition).getId() == newBooks.get(newItemPosition).getId();
             }
 
             @Override
+            /**
+             * Checks if the contents of two books at specified positions are the same.
+             */
             public boolean areContentsTheSame(int oldItemPosition, int newItemPosition) {
                 Book oldBook = bookList.get(oldItemPosition);
                 Book newBook = newBooks.get(newItemPosition);
@@ -315,6 +356,9 @@ public class CostumeListAdapter extends RecyclerView.Adapter<CostumeListAdapter.
         diffResult.dispatchUpdatesTo(this);
     }
 
+    /**
+     * Shuts down the database executor if it is not null.
+     */
     public void cleanup() {
         if (databaseExecutor != null) {
             databaseExecutor.shutdown();
@@ -352,11 +396,17 @@ public class CostumeListAdapter extends RecyclerView.Adapter<CostumeListAdapter.
         }
 
         @Override
+        /**
+         * Placeholder method for text change events.
+         */
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             // Not used
         }
 
         @Override
+        /**
+         * Cancels any pending text change callback when the text changes.
+         */
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             // Remove any pending callbacks
             if (runnable != null) {
@@ -365,11 +415,17 @@ public class CostumeListAdapter extends RecyclerView.Adapter<CostumeListAdapter.
         }
 
         @Override
+        /**
+         * Schedules a delayed call to {@link #onDebouncedTextChanged(String)} with the current text from the Editable object.
+         */
         public void afterTextChanged(final Editable s) {
             runnable = () -> onDebouncedTextChanged(s.toString());
             handler.postDelayed(runnable, delayMillis);
         }
 
+        /**
+         * Handles debounced text change events.
+         */
         public abstract void onDebouncedTextChanged(String text);
     }
 }
