@@ -32,8 +32,9 @@ public class Goal {
         this.progress = progress;
         this.target = target;
         this.goal = goal;
-        this.deadline = deadline;
         this.frequenzy = goalType;
+        calculateDeadline();
+
         if (progress == target) {
             completed = true;
         } else completed = false;
@@ -45,9 +46,31 @@ public class Goal {
         this.frequenzy = goalType;
         this.target = target;
         this.goal = goal;
+        this.deadline = LocalDateTime.now();
+
+        calculateDeadline();
         if (progress == target) {
             completed = true;
         } else completed = false;
+    }
+
+    private void calculateDeadline() {
+        deadline = LocalDateTime.now();
+
+        switch (frequenzy.toLowerCase()) {
+            case "daily":
+                this.deadline = deadline.plusDays(1);
+                break;
+            case "weekly":
+                this.deadline = deadline.plusWeeks(1);
+                break;
+            case "monthly":
+                this.deadline = deadline.plusMonths(1);
+                break;
+            case "yearly":
+                this.deadline = deadline.plusYears(1);
+                break;
+        }
     }
 
     /**
@@ -128,6 +151,22 @@ public class Goal {
      */
     public void setProgress(int progress) {
         this.progress = progress;
+    }
+    public void setDeadline() {
+        switch (frequenzy) {
+            case "daily":
+                deadline.plusDays(1);
+                break;
+            case "weeklky":
+                deadline.plusWeeks(1);
+                break;
+            case "monthly":
+                deadline.plusMonths(1);
+                break;
+            case "yearly":
+                deadline.plusYears(1);
+                break;
+        }
     }
 
     /**

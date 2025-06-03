@@ -1234,8 +1234,6 @@ public class UIMaster {
      * - Handles adding new goals through user input, including validation
      *   of fields and database operations.
      *
-     * @param mainActivity The MainActivity instance that calls this method,
-     *                     used for accessing resources, context, and user data.
      */
     public void navigateToGoals() {
         mainActivity.setContentView(R.layout.main_goal);
@@ -1320,12 +1318,12 @@ public class UIMaster {
 
         // Set click listener for "failed" button
         failed.setOnClickListener(v -> {
-            current.setBackgroundResource(R.drawable.rounded_button_grey);
-            current.setTextColor(mainActivity.getColor(R.color.black));
-            completed.setBackgroundResource(R.drawable.rounded_button_grey);
-            completed.setTextColor(mainActivity.getColor(R.color.black));
+            current.setBackgroundResource(R.drawable.rounded_button_black);
+            current.setTextColor(mainActivity.getColor(R.color.white));
+            completed.setBackgroundResource(R.drawable.rounded_button_black);
+            completed.setTextColor(mainActivity.getColor(R.color.white));
             failed.setBackgroundResource(R.drawable.rounded_button_grey);
-            failed.setTextColor(mainActivity.getColor(R.color.white));
+            failed.setTextColor(mainActivity.getColor(R.color.black));
             goalAdapter.setGoals(logedindUser.getFailedGoalList());
         });
 

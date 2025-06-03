@@ -9,6 +9,7 @@ import android.content.SharedPreferences;
 import android.os.Build;
 import android.util.Log;
 
+import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
@@ -130,7 +131,7 @@ public class NotificationScheduler {
     }
 
     /**
-     * Ändert die Nachricht der täglichen Notification und aktualisiert den Zeitplan.
+     * √§ndert die Nachricht der t√§glichen Notification und aktualisiert den Zeitplan.
      */
     public static void changeDailyNotificationMessage(Context context, String message) {
         if (!isDailyNotificationActive(context)) {
@@ -274,7 +275,7 @@ public class NotificationScheduler {
      * Otherwise, it creates an Intent with necessary extras and uses PendingIntent to schedule the notification
      * using AlarmManager. The method also handles permission checks for scheduling exact alarms on newer Android versions.
      */
-    public static void scheduleOneTimeNotification(Context context, LocalDateTime dateTime, int requestCode) {
+    public static void scheduleOneTimeNotification(Context context, @NonNull LocalDateTime dateTime, int requestCode) {
         ZonedDateTime zdt = dateTime.atZone(ZoneId.systemDefault());
         long triggerAtMillis = zdt.toInstant().toEpochMilli();
 

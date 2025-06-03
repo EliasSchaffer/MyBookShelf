@@ -976,16 +976,16 @@ public class DataBaseConnection {
                         //
                         switch (frequenzy) {
                             case "daily":
-                                deadline.plusDays(1);
+                                deadline = deadline.plusDays(1);
                                 break;
                             case "weeklky":
-                                deadline.plusWeeks(1);
+                                deadline = deadline.plusWeeks(1);
                                 break;
                             case "monthly":
-                                deadline.plusMonths(1);
+                                deadline = deadline.plusMonths(1);
                                 break;
                             case "yearly":
-                                deadline.plusYears(1);
+                                deadline = deadline.plusYears(1);
                                 break;
                         }
 
