@@ -17,6 +17,9 @@ public class NotificationReceiver extends BroadcastReceiver {
     private static final String TAG = "NotificationReceiver";
 
     @Override
+    /**
+     * Receives an intent, shows a notification, and schedules a daily notification for the next day.
+     */
     public void onReceive(Context context, Intent intent) {
         String title = intent.getStringExtra("title");
         String message = intent.getStringExtra("message");
@@ -34,6 +37,9 @@ public class NotificationReceiver extends BroadcastReceiver {
 
 
 
+    /**
+     * Displays a notification with a given title and message.
+     */
     private void showNotification(Context context, String title, String message) {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(
                 context,
