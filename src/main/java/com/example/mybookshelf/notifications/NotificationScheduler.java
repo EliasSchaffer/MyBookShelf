@@ -247,24 +247,6 @@ public class NotificationScheduler {
         return String.format("%02d:%02d", hour, minute);
     }
 
-    /**
-    /**
-     * Sends a notification when a goal is completed.
-     */
-    public static void sendGoalCompletedNotification(Context context, Goal goal) {
-        NotificationCompat.Builder builder = new NotificationCompat.Builder(
-                context,
-                NotificationChannelManager.DEFAULT_CHANNEL_ID)
-                .setSmallIcon(R.drawable.icon)
-                .setContentTitle("Ziel erreicht!")
-                .setContentText("Du hast " + goal.getGoal() + " Seiten gelesen!")
-                .setPriority(NotificationCompat.PRIORITY_HIGH)
-                .setAutoCancel(true);
-
-        NotificationManagerCompat notificationManager = NotificationManagerCompat.from(context);
-        notificationManager.notify(999, builder.build());
-    }
-
 
 
     /**

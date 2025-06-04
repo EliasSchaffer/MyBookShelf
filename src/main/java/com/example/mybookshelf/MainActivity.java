@@ -48,7 +48,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 
-public class MainActivity extends AppCompatActivity implements ApiResponseCallback {
+public class MainActivity extends AppCompatActivity {
 
     private Button addBookButton;
     private Authenticator auth;
@@ -364,47 +364,14 @@ public class MainActivity extends AppCompatActivity implements ApiResponseCallba
         return logedindUser;
     }
 
-
-    //TODO AI Response Handeling !!REMOVE LATER!!
-    @Override
-    public void onSuccess(String response) {
-        // Show the response in a simple dialog when the request succeeds
-        String result = "";
-        // JSON string to parse
-
-        // Define regex to extract the "response" field value (handling newlines)
-        String regex = "\"response\":\"(.*?)\"";
-
-        // Create Pattern object with DOTALL mode to capture newlines
-        Pattern pattern = Pattern.compile(regex, Pattern.DOTALL);
-
-        // Create matcher object
-        Matcher matcher = pattern.matcher(response);
-
-        //TODO: Add parsing the response
-
-        result = response;
-        showResponseDialog(result);
-    }
+    
 
     public void handleBookChange(Book book) {
         db.updateReadingStatus(logedindUser.getUid(), book.getId(), book.getStatus());
         handler.handleBookChange(book);
     }
 
-    @Override
-    public void onFailure(String error) {
-        // Show the error in a dialog when the request fails
-        showResponseDialog(error);
-    }
 
-    private void showResponseDialog(String message) {
-
-        TextView boxReturn = findViewById(R.id.boxReturn);
-        // Simple pop-up without any buttons or extra UI elements
-        boxReturn.setText("");
-        boxReturn.setText(message);
-    }
 
     public DataBaseConnection getDb() {
         return db;
