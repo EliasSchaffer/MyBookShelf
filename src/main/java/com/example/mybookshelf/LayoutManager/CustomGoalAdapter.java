@@ -108,7 +108,7 @@ public class CustomGoalAdapter extends RecyclerView.Adapter<CustomGoalAdapter.Go
     }
 
     /**
-     * Creates a visual representation of a goal as a card view.
+     * Creates a visual representation of a goal as a card view with cancel functionality and countdown timer.
      */
     private View createGoalBox(Goal goal) {
 
@@ -186,6 +186,9 @@ public class CustomGoalAdapter extends RecyclerView.Adapter<CustomGoalAdapter.Go
         long millis = duration.toMillis();
 
         CountDownTimer timer = new CountDownTimer(millis, 1000) {
+            /**
+             * Updates the time left display with days, hours, minutes, and seconds.
+             */
             public void onTick(long millisUntilFinished) {
                 long seconds = millisUntilFinished / 1000;
                 long days = seconds / (24 * 3600);
@@ -196,6 +199,9 @@ public class CustomGoalAdapter extends RecyclerView.Adapter<CustomGoalAdapter.Go
                 timeLeft.setText("Time Left: " + days + "d " + hours + "h " + minutes + "m " + secs + "s");
             }
 
+            /**
+             * Updates the displayed text to indicate no time is left.
+             */
             public void onFinish() {
                 timeLeft.setText("Time Left: 0");
             }
