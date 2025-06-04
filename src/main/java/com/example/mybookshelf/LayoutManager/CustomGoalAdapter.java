@@ -5,6 +5,7 @@ import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Rect;
 import android.graphics.drawable.GradientDrawable;
+import android.os.CountDownTimer;
 import android.util.DisplayMetrics;
 import android.view.Gravity;
 import android.view.View;
@@ -24,6 +25,9 @@ import com.example.mybookshelf.DataBaseConnection;
 import com.example.mybookshelf.MainActivity;
 import com.example.mybookshelf.dataClass.Goal;
 
+import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.List;
 
 public class CustomGoalAdapter extends RecyclerView.Adapter<CustomGoalAdapter.GoalViewHolder> {
@@ -173,10 +177,37 @@ public class CustomGoalAdapter extends RecyclerView.Adapter<CustomGoalAdapter.Go
         progressText.setTextColor(Color.GRAY);
         progressText.setTextSize(14);
 
+        //Countdown
+        TextView timeLeft = new TextView(context);
+        LocalDateTime now = LocalDateTime.now();
+        LocalDateTime deadline = goal.getDeadline();
+        Duration duration = Duration.between(now, deadline);
+
+        long millis = duration.toMillis();
+
+        CountDownTimer timer = new CountDownTimer(millis, 1000) {
+            public void onTick(long millisUntilFinished) {
+                long seconds = millisUntilFinished / 1000;
+                long days = seconds / (24 * 3600);
+                long hours = (seconds % (24 * 3600)) / 3600;
+                long minutes = (seconds % 3600) / 60;
+                long secs = seconds % 60;
+
+                timeLeft.setText("Time Left: " + days + "d " + hours + "h " + minutes + "m " + secs + "s");
+            }
+
+            public void onFinish() {
+                timeLeft.setText("Time Left: 0");
+            }
+        };
+        timer.start();
+
+
         // Add views to card
         cardLayout.addView(textView);
         cardLayout.addView(progressBar);
         cardLayout.addView(progressText);
+        cardLayout.addView(timeLeft);
 
         // Add views to root
         rootLayout.addView(cardLayout);

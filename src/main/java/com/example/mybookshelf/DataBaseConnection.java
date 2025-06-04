@@ -973,6 +973,7 @@ public class DataBaseConnection {
                                 break;
                         }
 
+
                         //
                         switch (frequenzy) {
                             case "daily":
