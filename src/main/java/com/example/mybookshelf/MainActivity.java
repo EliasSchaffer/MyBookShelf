@@ -4,6 +4,7 @@ package com.example.mybookshelf;
 
 import android.Manifest;
 import android.app.AlarmManager;
+import android.app.DatePickerDialog;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
@@ -13,8 +14,10 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -41,11 +44,14 @@ import com.example.mybookshelf.notifications.NotificationChannelManager;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import android.text.Editable;
+
 
 
 public class MainActivity extends AppCompatActivity {
@@ -262,6 +268,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
     public void saveBook(Book book) {
         FrameLayout frame = findViewById(R.id.frame);
         CardView popUp = findViewById(R.id.popupAddBook);
@@ -270,26 +277,63 @@ public class MainActivity extends AppCompatActivity {
         Spinner spinnerScore = findViewById(R.id.scoreSpinner);
         Spinner spinnerStatus = findViewById(R.id.statusSpinner);
         EditText etPagesRead = findViewById(R.id.pagesInput);
-        EditText etFiishedAt = findViewById(R.id.finishedAtInput);
+        EditText etFinishedAt = findViewById(R.id.finishedAtInput);
+        ImageButton datePickerButton = findViewById(R.id.datePickerButton);
+
         frame.setVisibility(View.VISIBLE);
-        // First check if book is null
 
         ArrayList<String> scoreList = new ArrayList<>(List.of("none", "1 Appalling", "2 Horrible", "3 Very Bad", "4 Bad", "5 Average", "6 Fine", "7 Good", "8 Very Good", "9 Great", "10 Masterpiece"));
         ArrayList<String> statusList = new ArrayList<>(List.of("Reading","Completed","On-Hold","Dropped","Planned To Read"));
 
-        // Create ArrayAdapters for the Spinners
         ArrayAdapter<String> scoreAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, scoreList);
         ArrayAdapter<String> statusAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, statusList);
 
-        // Set the layout for the dropdown view (optional, can customize)
         scoreAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         statusAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
 
         spinnerScore.setAdapter(scoreAdapter);
         spinnerStatus.setAdapter(statusAdapter);
 
+        // KORREKTUR: Setup-Methoden VOR der Spinner-Listener Konfiguration aufrufen
+        setupPagesValidation(etPagesRead, book, btnSave);
 
+        // DatePicker Button initial deaktivieren
+        datePickerButton.setEnabled(false);
+        datePickerButton.setAlpha(0.5f);
+        etFinishedAt.setEnabled(false);
+        etFinishedAt.setAlpha(0.5f);
+
+        // Listener für Status Spinner - Button aktivieren/deaktivieren
+        spinnerStatus.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                String selectedStatus = parent.getItemAtPosition(position).toString();
+
+                if (selectedStatus.equals("Completed")) {
+                    datePickerButton.setEnabled(true);
+                    datePickerButton.setAlpha(1.0f);
+                    etFinishedAt.setEnabled(true);
+                    etFinishedAt.setAlpha(1.0f);
+                } else {
+                    datePickerButton.setEnabled(false);
+                    datePickerButton.setAlpha(0.5f);
+                    etFinishedAt.setEnabled(false);
+                    etFinishedAt.setAlpha(0.5f);
+                    etFinishedAt.setText("");
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                datePickerButton.setEnabled(false);
+                datePickerButton.setAlpha(0.5f);
+                etFinishedAt.setEnabled(false);
+                etFinishedAt.setAlpha(0.5f);
+            }
+        });
+
+        // KORREKTUR: DatePicker Setup nach Spinner-Listener
+        setupDatePicker(etFinishedAt, datePickerButton);
 
         btnSave.setOnClickListener(v -> {
             if (book == null) {
@@ -297,60 +341,183 @@ public class MainActivity extends AppCompatActivity {
                 return;
             }
 
-            book.setStatus(spinnerStatus.getSelectedItem().toString());
+            // Validierung für Pages Read
+            String pagesReadText = etPagesRead.getText().toString().trim();
+            if (!pagesReadText.isEmpty()) {
+                try {
+                    int pagesRead = Integer.parseInt(pagesReadText);
+                    int maxPages = book.getPages();
 
-            String score = "";
+                    if (pagesRead < 0) {
+                        etPagesRead.setError("Seitenzahl kann nicht negativ sein");
+                        etPagesRead.requestFocus();
+                        return;
+                    }
 
-            if (! spinnerScore.getSelectedItem().toString().equalsIgnoreCase("none")) {
-                // Split by space and take the first part (e.g., "10" from "10 Masterpiece")
-                score =  spinnerScore.getSelectedItem().toString().split(" ")[0];
+                    if (pagesRead > maxPages) {
+                        etPagesRead.setError("Du kannst nicht mehr als " + maxPages + " Seiten gelesen haben");
+                        etPagesRead.requestFocus();
+                        return;
+                    }
+                } catch (NumberFormatException e) {
+                    etPagesRead.setError("Bitte gib eine gültige Zahl ein");
+                    etPagesRead.requestFocus();
+                    return;
+                }
             }
 
+            // Validierung für Finished At Datum
+            String selectedStatus = spinnerStatus.getSelectedItem().toString();
             LocalDate finished = null;
-            if (etFiishedAt.getText().toString().isEmpty()){
-                finished = LocalDate.now();
+
+            if (selectedStatus.equals("Completed")) {
+                String finishedAtText = etFinishedAt.getText().toString().trim();
+
+                if (!finishedAtText.isEmpty()) {
+                    try {
+                        DateTimeFormatter formatter;
+                        if (finishedAtText.contains(".")) {
+                            formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+                        } else {
+                            formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+                        }
+
+                        finished = LocalDate.parse(finishedAtText, formatter);
+                        LocalDate today = LocalDate.now();
+
+                        if (finished.isAfter(today)) {
+                            etFinishedAt.setError("Das Datum kann nicht in der Zukunft liegen");
+                            etFinishedAt.requestFocus();
+                            return;
+                        }
+                    } catch (DateTimeParseException e) {
+                        etFinishedAt.setError("Bitte gib ein gültiges Datum ein (dd.MM.yyyy)");
+                        etFinishedAt.requestFocus();
+                        return;
+                    }
+                } else {
+                    finished = LocalDate.now();
+                }
+            }
+
+            book.setStatus(selectedStatus);
+
+            String score = "";
+            if (!spinnerScore.getSelectedItem().toString().equalsIgnoreCase("none")) {
+                score = spinnerScore.getSelectedItem().toString().split(" ")[0];
             }
 
             // Add book to database
-            db.addBookToUser(logedindUser.getUid(), spinnerStatus.getSelectedItem().toString() ,score,finished, book.getName(), book.getAuthor(), book.getPages(),
-                    book.getReleaseDate(), book.getImageUrl(), book.getDescription(), book.getPages()*1.5, book.getGenre());
+            db.addBookToUser(logedindUser.getUid(), selectedStatus, score, finished,
+                    book.getName(), book.getAuthor(), book.getPages(), book.getReleaseDate(),
+                    book.getImageUrl(), book.getDescription(), book.getPages() * 1.5, book.getGenre());
 
             try {
-                // Get book from database
                 Book savedBook = db.getBookByName(book.getName()).get();
-
-                // Check if the database returned a valid book
                 if (savedBook != null) {
                     savedBook.setInDatabase(true);
                     logedindUser.addBook(savedBook, this);
                 } else {
-                    // Handle the case where the book wasn't found in the database
-                    // This might happen if there was an issue with the database operation
                     Log.e("MainActivity", "Failed to retrieve book from database: " + book.getName());
-
-                    // Since we couldn't get the book from the database, use the original book object
                     book.setInDatabase(true);
                     logedindUser.addBook(book, this);
                 }
                 handler.handleBookAdded(book);
             } catch (ExecutionException | InterruptedException e) {
                 Log.e("MainActivity", "Error retrieving book from database", e);
-                // Since we couldn't get the book from the database, use the original book object
                 book.setInDatabase(true);
                 logedindUser.addBook(book, this);
             }
+
+            // Clear inputs und Dialog schließen
             etPagesRead.getText().clear();
-            etPagesRead.getText().clear();
+            etFinishedAt.getText().clear();
             frame.setVisibility(View.GONE);
         });
 
-        btnCancel.setOnClickListener(v ->{
+        btnCancel.setOnClickListener(v -> {
             etPagesRead.getText().clear();
-            etPagesRead.getText().clear();
+            etFinishedAt.getText().clear();
             frame.setVisibility(View.GONE);
         });
     }
 
+    // KORREKTUR: Pages Validation überarbeitet
+    private void setupPagesValidation(EditText etPagesRead, Book book, Button btnSave) {
+        etPagesRead.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {}
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                String text = s.toString().trim();
+
+                // KORREKTUR: Leeres Feld sollte erlaubt sein (optional)
+                if (text.isEmpty()) {
+                    etPagesRead.setError(null);
+                    btnSave.setEnabled(true); // Button aktiviert lassen
+                    return;
+                }
+
+                try {
+                    int pages = Integer.parseInt(text);
+                    int maxPages = book.getPages();
+
+                    if (pages < 0) {
+                        etPagesRead.setError("Seitenzahl kann nicht negativ sein");
+                        btnSave.setEnabled(false);
+                    } else if (pages > maxPages) {
+                        etPagesRead.setError("Maximum: " + maxPages + " Seiten");
+                        btnSave.setEnabled(false);
+                    } else {
+                        etPagesRead.setError(null);
+                        btnSave.setEnabled(true);
+                    }
+                } catch (NumberFormatException e) {
+                    etPagesRead.setError("Ungültige Zahl");
+                    btnSave.setEnabled(false);
+                }
+            }
+        });
+    }
+
+    // KORREKTUR: DatePicker Setup bereinigt (keine Duplikation)
+    private void setupDatePicker(EditText etFinishedAt, ImageButton datePickerButton) {
+        datePickerButton.setOnClickListener(v -> {
+            // KORREKTUR: Zusätzliche Sicherheitsprüfung
+            if (!datePickerButton.isEnabled()) {
+                return;
+            }
+
+            Calendar calendar = Calendar.getInstance();
+            int year = calendar.get(Calendar.YEAR);
+            int month = calendar.get(Calendar.MONTH);
+            int day = calendar.get(Calendar.DAY_OF_MONTH);
+
+            DatePickerDialog datePickerDialog = new DatePickerDialog(
+                    this,
+                    (view, selectedYear, selectedMonth, selectedDay) -> {
+                        Calendar selectedDate = Calendar.getInstance();
+                        selectedDate.set(selectedYear, selectedMonth, selectedDay);
+
+                        if (selectedDate.after(Calendar.getInstance())) {
+                            Toast.makeText(this, "Das Datum kann nicht in der Zukunft liegen", Toast.LENGTH_SHORT).show();
+                            return;
+                        }
+
+                        String formattedDate = String.format("%02d.%02d.%d", selectedDay, selectedMonth + 1, selectedYear);
+                        etFinishedAt.setText(formattedDate);
+                    },
+                    year, month, day
+            );
+
+            datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
+            datePickerDialog.show();
+        });
+    }
 
     public void removeBook(Book book) throws SQLException {
         Context context = getBaseContext();

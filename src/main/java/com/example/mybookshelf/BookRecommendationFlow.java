@@ -347,6 +347,7 @@ public class BookRecommendationFlow{
             // Create a GridLayout for buttons
             GridLayout grid = new GridLayout(mainActivity);
             grid.setColumnCount(2);
+
             grid.setLayoutParams(new RelativeLayout.LayoutParams(
                     ViewGroup.LayoutParams.MATCH_PARENT,
                     ViewGroup.LayoutParams.WRAP_CONTENT));

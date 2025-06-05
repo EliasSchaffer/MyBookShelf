@@ -74,11 +74,6 @@ public class Authenticator {
         mainHandler.post(task);
     }
 
-    // Show debug popup (AlertDialog)
-
-
-    // Optional: Toast for fast messages
-
 
     // Simple registration method
     public void register(String username, String password, String email) {

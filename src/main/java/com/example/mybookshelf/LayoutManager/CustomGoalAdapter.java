@@ -157,7 +157,7 @@ public class CustomGoalAdapter extends RecyclerView.Adapter<CustomGoalAdapter.Go
 
         // Goal text
         TextView textView = new TextView(context);
-        textView.setText("📘 Goal: " + goal.getGoal() + " per " + goal.getFrequenzy().substring(0, goal.getFrequenzy().length()-2));
+        textView.setText("📘 Goal: " + goal.getGoal());
         textView.setTextSize(16);
         textView.setTextColor(Color.DKGRAY);
 
@@ -197,7 +197,7 @@ public class CustomGoalAdapter extends RecyclerView.Adapter<CustomGoalAdapter.Go
             }
 
             public void onFinish() {
-                timeLeft.setText("Time Left: 0");
+                timeLeft.setText("Time Left: none");
             }
         };
         timer.start();
@@ -211,7 +211,8 @@ public class CustomGoalAdapter extends RecyclerView.Adapter<CustomGoalAdapter.Go
 
         // Add views to root
         rootLayout.addView(cardLayout);
-        rootLayout.addView(cancelButton);
+        if (!timeLeft.getText().equals("Time Left: none") && goal.getProgress() != goal.getTarget()) rootLayout.addView(cancelButton);
+
 
         // Post-layout adjustment to match widths
         cardLayout.post(() -> {
