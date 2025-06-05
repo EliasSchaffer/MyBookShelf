@@ -197,7 +197,7 @@ public class CustomGoalAdapter extends RecyclerView.Adapter<CustomGoalAdapter.Go
             }
 
             public void onFinish() {
-                timeLeft.setText("Time Left: 0");
+                timeLeft.setText("Time Left: none");
             }
         };
         timer.start();

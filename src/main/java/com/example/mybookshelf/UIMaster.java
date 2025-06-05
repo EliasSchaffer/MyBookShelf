@@ -244,66 +244,15 @@ public class UIMaster {
         verticalContainer.addView(horizontalLayout);
 
         // Add Notes input (Only if NOT in search mode)
-        if (!isSearch) {
-            String note;
 
-            try {
-                note = db.getNotesFromUser(logedindUser.getUid(), book.getId()).get();
-            } catch (NullPointerException e) {
-                // Skip adding the note field if a NullPointerException occurs
-                return;
-            } catch (ExecutionException | InterruptedException e) {
-                // For all other exceptions, set default note text
-                note = "Add notes here...";
-            }
 
-            EditText noteField = new EditText(mainActivity);
-
-            if (note == null || note.isEmpty() || note.equals("Add notes here...")) {
-                noteField.setHint("Add notes here...");
-            } else {
-                noteField.setText(note);
-            }
-
-            noteField.setTextColor(Color.BLACK);
-            noteField.setBackgroundColor(Color.LTGRAY);
-            noteField.setPadding(8, 8, 8, 8);
-            noteField.setTextSize(14);
-            noteField.setId(View.generateViewId());
 
             LinearLayout.LayoutParams noteParams = new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.MATCH_PARENT,
                     LinearLayout.LayoutParams.WRAP_CONTENT
             );
             noteParams.setMargins(12, 12, 12, 12);
-            noteField.setLayoutParams(noteParams);
 
-            noteField.addTextChangedListener(new TextWatcher() {
-                @Override
-                /**
-                 * Handles text change events before they occur.
-                 */
-                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                }
-
-                @Override
-                /**
-                 * Updates notes in the database when text changes.
-                 */
-                public void onTextChanged(CharSequence s, int start, int before, int count) {
-                    db.notesChanged(logedindUser.getUid(), book.getId(), s.toString());
-                }
-
-                @Override
-                /**
-                 * Handles text changes in an editable field.
-                 */
-                public void afterTextChanged(Editable s) {
-                }
-            });
-
-            verticalContainer.addView(noteField);
-        }
 
 
         // Add the vertical container (with all content) inside the book box
