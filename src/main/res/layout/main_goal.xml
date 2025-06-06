@@ -77,9 +77,9 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
         android:layout_marginLeft="22dp"
-        android:text="Current"
+        android:layout_marginTop="22dp"
+        android:text="Goals"
         android:textColor="@color/black"
         android:textSize="38sp"
         android:textStyle="bold" />

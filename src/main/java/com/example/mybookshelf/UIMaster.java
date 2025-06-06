@@ -570,7 +570,12 @@ public class UIMaster {
         configureChart();
 
         // Calculate and display total reading time
-        displayTotalReadingTime(readingTimeInHours);
+        try {
+            displayTotalReadingTime(readingTimeInHours);
+
+        }catch (NullPointerException npe){
+            Log.e("StatsActivity", "NullPointerException while displaying total reading time", npe);
+        }
     }
 
     /**
