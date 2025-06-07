@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/background_image"
     xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Total Reading Time Text -->
@@ -16,7 +15,7 @@
         android:layout_marginTop="25dp"
         android:layout_marginEnd="10dp"
         android:text="Total Reading Time: 0 h"
-        android:textColor="@android:color/white"
+        android:textColor="@android:color/black"
         android:textSize="23sp" />
 
     <!-- Chart for Reading time per Month -->
