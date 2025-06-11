@@ -219,13 +219,6 @@ public class DataBaseConnection {
                     int rowsInserted = insertStmt.executeUpdate();
                     if (rowsInserted > 0) {
                         System.out.println("User added successfully!");
-                        ((Activity) context).runOnUiThread(() -> {
-                            new AlertDialog.Builder(context)
-                                    .setTitle("Debug Info")
-                                    .setMessage("user added to db")
-                                    .setPositiveButton("OK", (dialog, which) -> dialog.dismiss())
-                                    .show();
-                        });
                     }
                 }
 

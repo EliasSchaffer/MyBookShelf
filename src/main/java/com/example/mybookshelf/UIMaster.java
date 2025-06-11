@@ -810,6 +810,10 @@ public class UIMaster {
                         listAdapter = adapter;
                     }
 
+                    if (finalUserBooks.isEmpty()){
+                        mainActivity.findViewById(R.id.emptyPlaceholder).setVisibility(View.VISIBLE);
+                    }
+
 
 
                     // Update reading time if needed
