@@ -62,13 +62,6 @@ public class Authenticator {
         });
     }
 
-
-
-
-
-
-
-
     // Use Handler to post to main thread
     private void postToMain(Runnable task) {
         mainHandler.post(task);
