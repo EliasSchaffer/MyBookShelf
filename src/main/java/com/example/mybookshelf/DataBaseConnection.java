@@ -191,6 +191,15 @@ public class DataBaseConnection {
 
 
 
+    /**
+     * Adds a new user to the database with the specified username, email, and password.
+     *
+     * This method performs the following steps:
+     * 1. Hashes the provided password using BCrypt.
+     * 2. Checks if a user with the same username or email already exists in the database.
+     * 3. If no existing user is found, inserts the new user's details into the database along with a generated session token.
+     * 4. Prints a success message if the user is added successfully, otherwise prints an error message.
+     */
     public void addUser(String username, String email, String password) {
         executorService.execute(() -> {
             String hashedPassword = BCrypt.withDefaults().hashToString(12, password.toCharArray());
