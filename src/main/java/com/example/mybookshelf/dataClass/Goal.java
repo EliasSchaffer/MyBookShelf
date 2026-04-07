@@ -54,6 +54,14 @@ public class Goal {
         } else completed = false;
     }
 
+    /**
+     * Calculates the next deadline based on the given frequency.
+     *
+     * This method sets the initial deadline to the current date and time,
+     * then adjusts it by adding one unit of time (day, week, month, or year)
+     * according to the specified frequency. The supported frequencies are:
+     * daily, weekly, monthly, and yearly.
+     */
     private void calculateDeadline() {
         deadline = LocalDateTime.now();
 
@@ -152,6 +160,16 @@ public class Goal {
     public void setProgress(int progress) {
         this.progress = progress;
     }
+    /**
+     * Sets the new deadline based on the specified frequency.
+     *
+     * This method updates the deadline by adding a time interval corresponding to the given frequency.
+     * The method uses a switch statement to determine the correct interval:
+     * - "daily" adds one day,
+     * - "weeklky" adds one week,
+     * - "monthly" adds one month,
+     * - "yearly" adds one year.
+     */
     public void setDeadline() {
         switch (frequenzy) {
             case "daily":
