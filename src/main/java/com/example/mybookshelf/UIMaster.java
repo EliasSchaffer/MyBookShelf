@@ -546,7 +546,7 @@ public class UIMaster {
     }
 
     /**
-     * Sets up the bar chart with reading time data in hours.
+     * Sets up a bar chart with filtered and converted reading time data in hours.
      */
     private void setupChart(ChartData chartData) {
         // Clean and convert reading time from minutes to hours
