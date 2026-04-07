@@ -540,6 +540,9 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    /**
+     * Returns the database connection instance.
+     */
     public DataBaseConnection getDb() {
         return db;
     }
