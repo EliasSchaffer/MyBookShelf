@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1_1AiService" kind="interface" language="Java" prot="public">
+    <compoundname>com::example::mybookshelf::apis::AiAPI::AiService</compoundname>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1_1AiService_1a3d98325386aa8dea5726317b65fba3a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>Call&lt; ResponseBody &gt;</type>
+        <definition>Call&lt; ResponseBody &gt; com.example.mybookshelf.apis.AiAPI.AiService.fetchBooks</definition>
+        <argsstring>(@Body RequestBody payload, @Header(&quot;Authorization&quot;) String authHeader, @Header(&quot;Content-Type&quot;) String contentType)</argsstring>
+        <name>fetchBooks</name>
+        <qualifiedname>com.example.mybookshelf.apis.AiAPI.AiService.fetchBooks</qualifiedname>
+        <param>
+          <type>@Body RequestBody</type>
+          <declname>payload</declname>
+        </param>
+        <param>
+          <type>@Header(&quot;Authorization&quot;) String</type>
+          <declname>authHeader</declname>
+        </param>
+        <param>
+          <type>@Header(&quot;Content-Type&quot;) String</type>
+          <declname>contentType</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fetches books using a POST request with a JSON payload. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/AiAPI.java" line="37" column="14"/>
+        <references refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1_1AiService_1a3d98325386aa8dea5726317b65fba3a7">com.example.mybookshelf.apis.AiAPI.AiService.fetchBooks</references>
+        <referencedby refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1_1AiService_1a3d98325386aa8dea5726317b65fba3a7">com.example.mybookshelf.apis.AiAPI.AiService.fetchBooks</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>com.example.mybookshelf.apis.AiAPI.AiService</label>
+        <link refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1_1AiService"/>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/AiAPI.java" line="32" column="23" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/AiAPI.java" bodystart="32" bodyend="38"/>
+    <listofallmembers>
+      <member refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1_1AiService_1a3d98325386aa8dea5726317b65fba3a7" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::apis::AiAPI::AiService</scope><name>fetchBooks</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

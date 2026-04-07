@@ -1,0 +1,1372 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User" kind="class" language="Java" prot="public">
+    <compoundname>com::example::mybookshelf::dataClass::User</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a86fba9c7015ae122da29b6899badcd36" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.dataClass.User.user</definition>
+        <argsstring></argsstring>
+        <name>user</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.user</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="27" column="20" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="27" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1af5409209c13843de1262a2b184fffab7" compoundref="User_8java" startline="194" endline="196">com.example.mybookshelf.dataClass.User.getUser</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aeccdf2ba94dc9b82428e2339fce94f16" compoundref="User_8java" startline="90" endline="134">com.example.mybookshelf.dataClass.User.User</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1ac09dcc32668756828345d30aae7a191b" compoundref="User_8java" startline="136" endline="139">com.example.mybookshelf.dataClass.User.User</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb85fd04c8149bfb77f1810c9301b0bc" compoundref="User_8java" startline="47" endline="87">com.example.mybookshelf.dataClass.User.User</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a673d6ff276fa01ab6b6293a341ef2bb5" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.dataClass.User.hash_password</definition>
+        <argsstring></argsstring>
+        <name>hash_password</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.hash_password</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="28" column="20" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="28" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a682645dc02a2e495219e209d2581a07b" compoundref="User_8java" startline="201" endline="203">com.example.mybookshelf.dataClass.User.getPassword</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aeccdf2ba94dc9b82428e2339fce94f16" compoundref="User_8java" startline="90" endline="134">com.example.mybookshelf.dataClass.User.User</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1ac09dcc32668756828345d30aae7a191b" compoundref="User_8java" startline="136" endline="139">com.example.mybookshelf.dataClass.User.User</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb85fd04c8149bfb77f1810c9301b0bc" compoundref="User_8java" startline="47" endline="87">com.example.mybookshelf.dataClass.User.User</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a094ddf13c798dd3492265ebb5b42781b" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.dataClass.User.email</definition>
+        <argsstring></argsstring>
+        <name>email</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.email</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="29" column="20" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a35cd3238251b678c6c395e1c9baf6d5c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int com.example.mybookshelf.dataClass.User.UID</definition>
+        <argsstring></argsstring>
+        <name>UID</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.UID</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="30" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="30" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1af713b8b3cee54ffce03b9beebe4facff" compoundref="User_8java" startline="311" endline="313">com.example.mybookshelf.dataClass.User.getUid</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a67b00d944624281342cd2d39a9ab82e0" compoundref="User_8java" startline="187" endline="189">com.example.mybookshelf.dataClass.User.setUID</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aeccdf2ba94dc9b82428e2339fce94f16" compoundref="User_8java" startline="90" endline="134">com.example.mybookshelf.dataClass.User.User</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb85fd04c8149bfb77f1810c9301b0bc" compoundref="User_8java" startline="47" endline="87">com.example.mybookshelf.dataClass.User.User</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a785ec56f99c56fe99ba9bc3ab666adf3" prot="private" static="no" mutable="no">
+        <type>LinkedList&lt; <ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book" kindref="compound">Book</ref> &gt;</type>
+        <definition>LinkedList&lt;Book&gt; com.example.mybookshelf.dataClass.User.bookList</definition>
+        <argsstring></argsstring>
+        <name>bookList</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.bookList</qualifiedname>
+        <initializer>= new LinkedList&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="31" column="24" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="31" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aade37d8176c8c756543ce0de90e91e80" compoundref="User_8java" startline="215" endline="225">com.example.mybookshelf.dataClass.User.addBook</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a8945dfa4eb3a89d2e5a76c00286fec8f" compoundref="User_8java" startline="287" endline="292">com.example.mybookshelf.dataClass.User.getAuthors</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a81f758175e66306d62b76c819520b794" compoundref="User_8java" startline="208" endline="210">com.example.mybookshelf.dataClass.User.getBookList</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aadab6730552307e5c6b3f9b7f01b92da" compoundref="User_8java" startline="297" endline="305">com.example.mybookshelf.dataClass.User.getGenres</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb442e89bbb66fadad2986d9229014b0" compoundref="User_8java" startline="239" endline="283">com.example.mybookshelf.dataClass.User.removeBook</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aeccdf2ba94dc9b82428e2339fce94f16" compoundref="User_8java" startline="90" endline="134">com.example.mybookshelf.dataClass.User.User</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb85fd04c8149bfb77f1810c9301b0bc" compoundref="User_8java" startline="47" endline="87">com.example.mybookshelf.dataClass.User.User</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1abbbc6820ebedbf54ab9cf36983a20e7c" prot="private" static="no" mutable="no">
+        <type>TreeSet&lt; String &gt;</type>
+        <definition>TreeSet&lt;String&gt; com.example.mybookshelf.dataClass.User.authorList</definition>
+        <argsstring></argsstring>
+        <name>authorList</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.authorList</qualifiedname>
+        <initializer>= new TreeSet&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="32" column="21" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="32" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a8945dfa4eb3a89d2e5a76c00286fec8f" compoundref="User_8java" startline="287" endline="292">com.example.mybookshelf.dataClass.User.getAuthors</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aeccdf2ba94dc9b82428e2339fce94f16" compoundref="User_8java" startline="90" endline="134">com.example.mybookshelf.dataClass.User.User</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb85fd04c8149bfb77f1810c9301b0bc" compoundref="User_8java" startline="47" endline="87">com.example.mybookshelf.dataClass.User.User</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1adf08a44a715034a56cdd99a665a4cb99" prot="private" static="no" mutable="no">
+        <type>LinkedList&lt; <ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal" kindref="compound">Goal</ref> &gt;</type>
+        <definition>LinkedList&lt;Goal&gt; com.example.mybookshelf.dataClass.User.goalList</definition>
+        <argsstring></argsstring>
+        <name>goalList</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.goalList</qualifiedname>
+        <initializer>= new LinkedList&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="33" column="24" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="33" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1acb4d2c7eb719b6b820003c8c22cc052e" compoundref="User_8java" startline="324" endline="327">com.example.mybookshelf.dataClass.User.addGoal</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a69baea7bd18f7364b50bb4c1bd360285" compoundref="User_8java" startline="318" endline="320">com.example.mybookshelf.dataClass.User.getGoalList</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aeccdf2ba94dc9b82428e2339fce94f16" compoundref="User_8java" startline="90" endline="134">com.example.mybookshelf.dataClass.User.User</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb85fd04c8149bfb77f1810c9301b0bc" compoundref="User_8java" startline="47" endline="87">com.example.mybookshelf.dataClass.User.User</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a3505787a0fc187c315bceb705c605631" prot="private" static="no" mutable="no">
+        <type>LinkedList&lt; <ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal" kindref="compound">Goal</ref> &gt;</type>
+        <definition>LinkedList&lt;Goal&gt; com.example.mybookshelf.dataClass.User.completedGoalList</definition>
+        <argsstring></argsstring>
+        <name>completedGoalList</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.completedGoalList</qualifiedname>
+        <initializer>= new LinkedList&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="34" column="24" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="34" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1adc427d68c8c4bcab811c3b9de649ad9c" compoundref="User_8java" startline="332" endline="334">com.example.mybookshelf.dataClass.User.getCompletedGoalList</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aeccdf2ba94dc9b82428e2339fce94f16" compoundref="User_8java" startline="90" endline="134">com.example.mybookshelf.dataClass.User.User</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb85fd04c8149bfb77f1810c9301b0bc" compoundref="User_8java" startline="47" endline="87">com.example.mybookshelf.dataClass.User.User</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a69491968b60bd3c828412878877f8578" prot="private" static="no" mutable="no">
+        <type>LinkedList&lt; <ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal" kindref="compound">Goal</ref> &gt;</type>
+        <definition>LinkedList&lt;Goal&gt; com.example.mybookshelf.dataClass.User.failedGoalList</definition>
+        <argsstring></argsstring>
+        <name>failedGoalList</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.failedGoalList</qualifiedname>
+        <initializer>= new LinkedList&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="35" column="24" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="35" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aec12ec6f78185cd89393de775261d4b8" compoundref="User_8java" startline="346" endline="348">com.example.mybookshelf.dataClass.User.getFailedGoalList</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aeccdf2ba94dc9b82428e2339fce94f16" compoundref="User_8java" startline="90" endline="134">com.example.mybookshelf.dataClass.User.User</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb85fd04c8149bfb77f1810c9301b0bc" compoundref="User_8java" startline="47" endline="87">com.example.mybookshelf.dataClass.User.User</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afeb7f16cf5d4bb293f266e88dd473284" prot="private" static="no" mutable="no">
+        <type>LinkedList&lt; <ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification" kindref="compound">Notification</ref> &gt;</type>
+        <definition>LinkedList&lt;Notification&gt; com.example.mybookshelf.dataClass.User.notificationList</definition>
+        <argsstring></argsstring>
+        <name>notificationList</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.notificationList</qualifiedname>
+        <initializer>= new LinkedList&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="37" column="24" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="37" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aeccdf2ba94dc9b82428e2339fce94f16" compoundref="User_8java" startline="90" endline="134">com.example.mybookshelf.dataClass.User.User</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a06c2114b02402131a1558fc9bfbd6077" prot="private" static="no" mutable="no">
+        <type>TreeSet&lt; String &gt;</type>
+        <definition>TreeSet&lt;String&gt; com.example.mybookshelf.dataClass.User.genreList</definition>
+        <argsstring></argsstring>
+        <name>genreList</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.genreList</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="38" column="21" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="38" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aadab6730552307e5c6b3f9b7f01b92da" compoundref="User_8java" startline="297" endline="305">com.example.mybookshelf.dataClass.User.getGenres</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aeccdf2ba94dc9b82428e2339fce94f16" compoundref="User_8java" startline="90" endline="134">com.example.mybookshelf.dataClass.User.User</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb85fd04c8149bfb77f1810c9301b0bc" compoundref="User_8java" startline="47" endline="87">com.example.mybookshelf.dataClass.User.User</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a325845acb5fa2ac2736baa42dd0ca70f" prot="private" static="no" mutable="no">
+        <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity" kindref="compound">MainActivity</ref></type>
+        <definition>MainActivity com.example.mybookshelf.dataClass.User.mainActivity</definition>
+        <argsstring></argsstring>
+        <name>mainActivity</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.mainActivity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="39" column="26" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aeccdf2ba94dc9b82428e2339fce94f16" compoundref="User_8java" startline="90" endline="134">com.example.mybookshelf.dataClass.User.User</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb85fd04c8149bfb77f1810c9301b0bc" compoundref="User_8java" startline="47" endline="87">com.example.mybookshelf.dataClass.User.User</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a55d9f7b2a47df1b9837fd7d97b5638f4" prot="private" static="no" mutable="no">
+        <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection" kindref="compound">DataBaseConnection</ref></type>
+        <definition>DataBaseConnection com.example.mybookshelf.dataClass.User.db</definition>
+        <argsstring></argsstring>
+        <name>db</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.db</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="40" column="32" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="40" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb442e89bbb66fadad2986d9229014b0" compoundref="User_8java" startline="239" endline="283">com.example.mybookshelf.dataClass.User.removeBook</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aeccdf2ba94dc9b82428e2339fce94f16" compoundref="User_8java" startline="90" endline="134">com.example.mybookshelf.dataClass.User.User</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb85fd04c8149bfb77f1810c9301b0bc" compoundref="User_8java" startline="47" endline="87">com.example.mybookshelf.dataClass.User.User</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aa68383b852810acf9263049aa417394b" prot="private" static="no" mutable="no">
+        <type>boolean</type>
+        <definition>boolean com.example.mybookshelf.dataClass.User.reminder</definition>
+        <argsstring></argsstring>
+        <name>reminder</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.reminder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="41" column="21" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="41" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1ac3688c9dbc4e92f6761f17917ab40c6e" compoundref="User_8java" startline="173" endline="175">com.example.mybookshelf.dataClass.User.isReminder</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a1399483c690be9c2c04f74ddbe0b3a58" compoundref="User_8java" startline="180" endline="182">com.example.mybookshelf.dataClass.User.setReminder</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aeccdf2ba94dc9b82428e2339fce94f16" compoundref="User_8java" startline="90" endline="134">com.example.mybookshelf.dataClass.User.User</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb85fd04c8149bfb77f1810c9301b0bc" compoundref="User_8java" startline="47" endline="87">com.example.mybookshelf.dataClass.User.User</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1ae2578fd7a3eaedf5cec2121de0ef1107" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int com.example.mybookshelf.dataClass.User.hour</definition>
+        <argsstring></argsstring>
+        <name>hour</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.hour</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="42" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="42" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1af08f2807e34258190031d801a5413115" compoundref="User_8java" startline="159" endline="161">com.example.mybookshelf.dataClass.User.getHour</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aa73b4323619977d53f636c8e23a1f797" compoundref="User_8java" startline="166" endline="168">com.example.mybookshelf.dataClass.User.setHour</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aeccdf2ba94dc9b82428e2339fce94f16" compoundref="User_8java" startline="90" endline="134">com.example.mybookshelf.dataClass.User.User</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb85fd04c8149bfb77f1810c9301b0bc" compoundref="User_8java" startline="47" endline="87">com.example.mybookshelf.dataClass.User.User</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a228107724f3c21395a42fb97ca30f778" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int com.example.mybookshelf.dataClass.User.minute</definition>
+        <argsstring></argsstring>
+        <name>minute</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.minute</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="43" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="43" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a622f9d92b708fda1f742cfb1a897d34d" compoundref="User_8java" startline="145" endline="147">com.example.mybookshelf.dataClass.User.getMinute</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a0563e903741fe2efd9dd04c22b0fd346" compoundref="User_8java" startline="152" endline="154">com.example.mybookshelf.dataClass.User.setMinute</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aeccdf2ba94dc9b82428e2339fce94f16" compoundref="User_8java" startline="90" endline="134">com.example.mybookshelf.dataClass.User.User</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb85fd04c8149bfb77f1810c9301b0bc" compoundref="User_8java" startline="47" endline="87">com.example.mybookshelf.dataClass.User.User</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb85fd04c8149bfb77f1810c9301b0bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.example.mybookshelf.dataClass.User.User</definition>
+        <argsstring>(String user, String hash_password, int UID, DataBaseConnection db, boolean reminder, int hour, int minute, MainActivity mainActivity)</argsstring>
+        <name>User</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.User</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>user</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>hash_password</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>UID</declname>
+        </param>
+        <param>
+          <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection" kindref="compound">DataBaseConnection</ref></type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>reminder</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>hour</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>minute</declname>
+        </param>
+        <param>
+          <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity" kindref="compound">MainActivity</ref></type>
+          <declname>mainActivity</declname>
+        </param>
+        <exceptions> throws ExecutionException, InterruptedException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="47" column="12" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="47" bodyend="87"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1abbbc6820ebedbf54ab9cf36983a20e7c" compoundref="User_8java" startline="32">com.example.mybookshelf.dataClass.User.authorList</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a785ec56f99c56fe99ba9bc3ab666adf3" compoundref="User_8java" startline="31">com.example.mybookshelf.dataClass.User.bookList</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afc96590cd792b862b32762b84cab085e" compoundref="NotificationScheduler_8java" startline="156" endline="177">com.example.mybookshelf.notifications.NotificationScheduler.cancelDailyNotification</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a10e7adec73e1f0e63d8376cad273e11a" compoundref="NotificationScheduler_8java" startline="317" endline="331">com.example.mybookshelf.notifications.NotificationScheduler.cancelOneTimeNotification</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a3505787a0fc187c315bceb705c605631" compoundref="User_8java" startline="34">com.example.mybookshelf.dataClass.User.completedGoalList</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a55d9f7b2a47df1b9837fd7d97b5638f4" compoundref="User_8java" startline="40">com.example.mybookshelf.dataClass.User.db</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a69491968b60bd3c828412878877f8578" compoundref="User_8java" startline="35">com.example.mybookshelf.dataClass.User.failedGoalList</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a06c2114b02402131a1558fc9bfbd6077" compoundref="User_8java" startline="38">com.example.mybookshelf.dataClass.User.genreList</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1adf08a44a715034a56cdd99a665a4cb99" compoundref="User_8java" startline="33">com.example.mybookshelf.dataClass.User.goalList</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a673d6ff276fa01ab6b6293a341ef2bb5" compoundref="User_8java" startline="28">com.example.mybookshelf.dataClass.User.hash_password</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1ae2578fd7a3eaedf5cec2121de0ef1107" compoundref="User_8java" startline="42">com.example.mybookshelf.dataClass.User.hour</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adb2c3bbb24876b087277d011a6df1577" compoundref="NotificationScheduler_8java" startline="336" endline="345">com.example.mybookshelf.notifications.NotificationScheduler.isOneTimeNotificationScheduled</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a325845acb5fa2ac2736baa42dd0ca70f" compoundref="User_8java" startline="39">com.example.mybookshelf.dataClass.User.mainActivity</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a228107724f3c21395a42fb97ca30f778" compoundref="User_8java" startline="43">com.example.mybookshelf.dataClass.User.minute</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aa68383b852810acf9263049aa417394b" compoundref="User_8java" startline="41">com.example.mybookshelf.dataClass.User.reminder</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a0a97077bdcc3f2c0fc441d5f3e8e2d62" compoundref="NotificationScheduler_8java" startline="277" endline="309">com.example.mybookshelf.notifications.NotificationScheduler.scheduleOneTimeNotification</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a35cd3238251b678c6c395e1c9baf6d5c" compoundref="User_8java" startline="30">com.example.mybookshelf.dataClass.User.UID</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb85fd04c8149bfb77f1810c9301b0bc" compoundref="User_8java" startline="47" endline="87">com.example.mybookshelf.dataClass.User.User</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a86fba9c7015ae122da29b6899badcd36" compoundref="User_8java" startline="27">com.example.mybookshelf.dataClass.User.user</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aeccdf2ba94dc9b82428e2339fce94f16" compoundref="User_8java" startline="90" endline="134">com.example.mybookshelf.dataClass.User.User</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb85fd04c8149bfb77f1810c9301b0bc" compoundref="User_8java" startline="47" endline="87">com.example.mybookshelf.dataClass.User.User</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aeccdf2ba94dc9b82428e2339fce94f16" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.example.mybookshelf.dataClass.User.User</definition>
+        <argsstring>(String user, int UID, DataBaseConnection db, boolean reminder, int hour, int minute, MainActivity mainActivity)</argsstring>
+        <name>User</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.User</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>user</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>UID</declname>
+        </param>
+        <param>
+          <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection" kindref="compound">DataBaseConnection</ref></type>
+          <declname>db</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>reminder</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>hour</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>minute</declname>
+        </param>
+        <param>
+          <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity" kindref="compound">MainActivity</ref></type>
+          <declname>mainActivity</declname>
+        </param>
+        <exceptions> throws ExecutionException, InterruptedException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="90" column="12" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="90" bodyend="134"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1abbbc6820ebedbf54ab9cf36983a20e7c" compoundref="User_8java" startline="32">com.example.mybookshelf.dataClass.User.authorList</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a785ec56f99c56fe99ba9bc3ab666adf3" compoundref="User_8java" startline="31">com.example.mybookshelf.dataClass.User.bookList</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a10e7adec73e1f0e63d8376cad273e11a" compoundref="NotificationScheduler_8java" startline="317" endline="331">com.example.mybookshelf.notifications.NotificationScheduler.cancelOneTimeNotification</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a3505787a0fc187c315bceb705c605631" compoundref="User_8java" startline="34">com.example.mybookshelf.dataClass.User.completedGoalList</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a55d9f7b2a47df1b9837fd7d97b5638f4" compoundref="User_8java" startline="40">com.example.mybookshelf.dataClass.User.db</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a69491968b60bd3c828412878877f8578" compoundref="User_8java" startline="35">com.example.mybookshelf.dataClass.User.failedGoalList</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a06c2114b02402131a1558fc9bfbd6077" compoundref="User_8java" startline="38">com.example.mybookshelf.dataClass.User.genreList</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1adf08a44a715034a56cdd99a665a4cb99" compoundref="User_8java" startline="33">com.example.mybookshelf.dataClass.User.goalList</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a673d6ff276fa01ab6b6293a341ef2bb5" compoundref="User_8java" startline="28">com.example.mybookshelf.dataClass.User.hash_password</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1ae2578fd7a3eaedf5cec2121de0ef1107" compoundref="User_8java" startline="42">com.example.mybookshelf.dataClass.User.hour</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adb2c3bbb24876b087277d011a6df1577" compoundref="NotificationScheduler_8java" startline="336" endline="345">com.example.mybookshelf.notifications.NotificationScheduler.isOneTimeNotificationScheduled</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a325845acb5fa2ac2736baa42dd0ca70f" compoundref="User_8java" startline="39">com.example.mybookshelf.dataClass.User.mainActivity</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a228107724f3c21395a42fb97ca30f778" compoundref="User_8java" startline="43">com.example.mybookshelf.dataClass.User.minute</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afeb7f16cf5d4bb293f266e88dd473284" compoundref="User_8java" startline="37">com.example.mybookshelf.dataClass.User.notificationList</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aa68383b852810acf9263049aa417394b" compoundref="User_8java" startline="41">com.example.mybookshelf.dataClass.User.reminder</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a0a97077bdcc3f2c0fc441d5f3e8e2d62" compoundref="NotificationScheduler_8java" startline="277" endline="309">com.example.mybookshelf.notifications.NotificationScheduler.scheduleOneTimeNotification</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a35cd3238251b678c6c395e1c9baf6d5c" compoundref="User_8java" startline="30">com.example.mybookshelf.dataClass.User.UID</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb85fd04c8149bfb77f1810c9301b0bc" compoundref="User_8java" startline="47" endline="87">com.example.mybookshelf.dataClass.User.User</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a86fba9c7015ae122da29b6899badcd36" compoundref="User_8java" startline="27">com.example.mybookshelf.dataClass.User.user</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1ac09dcc32668756828345d30aae7a191b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.example.mybookshelf.dataClass.User.User</definition>
+        <argsstring>(String user, String hash_password)</argsstring>
+        <name>User</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.User</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>user</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>hash_password</declname>
+        </param>
+        <exceptions> throws ExecutionException, InterruptedException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="136" column="12" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="136" bodyend="139"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a673d6ff276fa01ab6b6293a341ef2bb5" compoundref="User_8java" startline="28">com.example.mybookshelf.dataClass.User.hash_password</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a86fba9c7015ae122da29b6899badcd36" compoundref="User_8java" startline="27">com.example.mybookshelf.dataClass.User.user</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a622f9d92b708fda1f742cfb1a897d34d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.example.mybookshelf.dataClass.User.getMinute</definition>
+        <argsstring>()</argsstring>
+        <name>getMinute</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.getMinute</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the current minute value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="145" column="16" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="145" bodyend="147"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a228107724f3c21395a42fb97ca30f778" compoundref="User_8java" startline="43">com.example.mybookshelf.dataClass.User.minute</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a0563e903741fe2efd9dd04c22b0fd346" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.dataClass.User.setMinute</definition>
+        <argsstring>(int minute)</argsstring>
+        <name>setMinute</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.setMinute</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>minute</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the minute value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="152" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="152" bodyend="154"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a228107724f3c21395a42fb97ca30f778" compoundref="User_8java" startline="43">com.example.mybookshelf.dataClass.User.minute</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1af08f2807e34258190031d801a5413115" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.example.mybookshelf.dataClass.User.getHour</definition>
+        <argsstring>()</argsstring>
+        <name>getHour</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.getHour</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the current hour. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="159" column="16" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="159" bodyend="161"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1ae2578fd7a3eaedf5cec2121de0ef1107" compoundref="User_8java" startline="42">com.example.mybookshelf.dataClass.User.hour</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aa73b4323619977d53f636c8e23a1f797" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.dataClass.User.setHour</definition>
+        <argsstring>(int hour)</argsstring>
+        <name>setHour</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.setHour</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>hour</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the hour value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="166" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="166" bodyend="168"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1ae2578fd7a3eaedf5cec2121de0ef1107" compoundref="User_8java" startline="42">com.example.mybookshelf.dataClass.User.hour</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1ac3688c9dbc4e92f6761f17917ab40c6e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>boolean</type>
+        <definition>boolean com.example.mybookshelf.dataClass.User.isReminder</definition>
+        <argsstring>()</argsstring>
+        <name>isReminder</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.isReminder</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks if a reminder is set. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="173" column="20" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="173" bodyend="175"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aa68383b852810acf9263049aa417394b" compoundref="User_8java" startline="41">com.example.mybookshelf.dataClass.User.reminder</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a1399483c690be9c2c04f74ddbe0b3a58" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.dataClass.User.setReminder</definition>
+        <argsstring>(boolean reminder)</argsstring>
+        <name>setReminder</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.setReminder</qualifiedname>
+        <param>
+          <type>boolean</type>
+          <declname>reminder</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the reminder flag to the specified value. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="180" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="180" bodyend="182"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aa68383b852810acf9263049aa417394b" compoundref="User_8java" startline="41">com.example.mybookshelf.dataClass.User.reminder</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a67b00d944624281342cd2d39a9ab82e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.dataClass.User.setUID</definition>
+        <argsstring>(int UID)</argsstring>
+        <name>setUID</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.setUID</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>UID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the unique identifier (UID) of the object. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="187" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="187" bodyend="189"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a35cd3238251b678c6c395e1c9baf6d5c" compoundref="User_8java" startline="30">com.example.mybookshelf.dataClass.User.UID</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1af5409209c13843de1262a2b184fffab7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.dataClass.User.getUser</definition>
+        <argsstring>()</argsstring>
+        <name>getUser</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.getUser</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the current user. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="194" column="19" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="194" bodyend="196"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a86fba9c7015ae122da29b6899badcd36" compoundref="User_8java" startline="27">com.example.mybookshelf.dataClass.User.user</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1Authenticator_1a5b51bf95ee53d9d25544eac679e67f7c" compoundref="Authenticator_8java" startline="39" endline="63">com.example.mybookshelf.Authenticator.checkLogin</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a682645dc02a2e495219e209d2581a07b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.dataClass.User.getPassword</definition>
+        <argsstring>()</argsstring>
+        <name>getPassword</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.getPassword</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the hashed password. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="201" column="19" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="201" bodyend="203"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a673d6ff276fa01ab6b6293a341ef2bb5" compoundref="User_8java" startline="28">com.example.mybookshelf.dataClass.User.hash_password</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1Authenticator_1a5b51bf95ee53d9d25544eac679e67f7c" compoundref="Authenticator_8java" startline="39" endline="63">com.example.mybookshelf.Authenticator.checkLogin</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a81f758175e66306d62b76c819520b794" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book" kindref="compound">Book</ref> &gt;</type>
+        <definition>List&lt; Book &gt; com.example.mybookshelf.dataClass.User.getBookList</definition>
+        <argsstring>()</argsstring>
+        <name>getBookList</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.getBookList</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the list of books. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="208" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="208" bodyend="210"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a785ec56f99c56fe99ba9bc3ab666adf3" compoundref="User_8java" startline="31">com.example.mybookshelf.dataClass.User.bookList</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aade37d8176c8c756543ce0de90e91e80" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.dataClass.User.addBook</definition>
+        <argsstring>(Book book, Context main)</argsstring>
+        <name>addBook</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.addBook</qualifiedname>
+        <param>
+          <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book" kindref="compound">Book</ref></type>
+          <declname>book</declname>
+        </param>
+        <param>
+          <type>Context</type>
+          <declname>main</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a book to the list if it is not already present. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="215" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="215" bodyend="225"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a785ec56f99c56fe99ba9bc3ab666adf3" compoundref="User_8java" startline="31">com.example.mybookshelf.dataClass.User.bookList</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a4109da1bdee13601576c6725d6e89e71" compoundref="Book_8java" startline="97" endline="99">com.example.mybookshelf.dataClass.Book.getName</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb442e89bbb66fadad2986d9229014b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.dataClass.User.removeBook</definition>
+        <argsstring>(Book book, Context main, RecyclerView container)</argsstring>
+        <name>removeBook</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.removeBook</qualifiedname>
+        <param>
+          <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book" kindref="compound">Book</ref></type>
+          <declname>book</declname>
+        </param>
+        <param>
+          <type>Context</type>
+          <declname>main</declname>
+        </param>
+        <param>
+          <type>RecyclerView</type>
+          <declname>container</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Removes a book from both the local list and the user interface.</para>
+<para>Iterates through the local book list to find and remove the specified book. Updates the UI by removing the corresponding visual representation of the book. If the book is marked as being in the database, attempts to remove it from there as well. Handles exceptions that may occur during database operations and provides user feedback.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>book</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the <ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book" kindref="compound">Book</ref> object representing the book to be removed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>main</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the Context object for UI operations </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>container</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the RecyclerView container where the book&apos;s visual part is located </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="239" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="239" bodyend="283"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a785ec56f99c56fe99ba9bc3ab666adf3" compoundref="User_8java" startline="31">com.example.mybookshelf.dataClass.User.bookList</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a55d9f7b2a47df1b9837fd7d97b5638f4" compoundref="User_8java" startline="40">com.example.mybookshelf.dataClass.User.db</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a4109da1bdee13601576c6725d6e89e71" compoundref="Book_8java" startline="97" endline="99">com.example.mybookshelf.dataClass.Book.getName</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1af713b8b3cee54ffce03b9beebe4facff" compoundref="User_8java" startline="311" endline="313">com.example.mybookshelf.dataClass.User.getUid</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a71f2e0de123a2cd2f072c4b3426c5d1f" compoundref="Book_8java" startline="40" endline="42">com.example.mybookshelf.dataClass.Book.isInDatabase</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a8945dfa4eb3a89d2e5a76c00286fec8f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>TreeSet&lt; String &gt;</type>
+        <definition>TreeSet&lt; String &gt; com.example.mybookshelf.dataClass.User.getAuthors</definition>
+        <argsstring>()</argsstring>
+        <name>getAuthors</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.getAuthors</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves a set of authors from the list of books. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="287" column="20" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="287" bodyend="292"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1abbbc6820ebedbf54ab9cf36983a20e7c" compoundref="User_8java" startline="32">com.example.mybookshelf.dataClass.User.authorList</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a785ec56f99c56fe99ba9bc3ab666adf3" compoundref="User_8java" startline="31">com.example.mybookshelf.dataClass.User.bookList</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aadab6730552307e5c6b3f9b7f01b92da" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>TreeSet&lt; String &gt;</type>
+        <definition>TreeSet&lt; String &gt; com.example.mybookshelf.dataClass.User.getGenres</definition>
+        <argsstring>()</argsstring>
+        <name>getGenres</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.getGenres</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Retrieves a set of genres from the list of books. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="297" column="20" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="297" bodyend="305"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a785ec56f99c56fe99ba9bc3ab666adf3" compoundref="User_8java" startline="31">com.example.mybookshelf.dataClass.User.bookList</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a06c2114b02402131a1558fc9bfbd6077" compoundref="User_8java" startline="38">com.example.mybookshelf.dataClass.User.genreList</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1af713b8b3cee54ffce03b9beebe4facff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.example.mybookshelf.dataClass.User.getUid</definition>
+        <argsstring>()</argsstring>
+        <name>getUid</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.getUid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the unique identifier (UID). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="311" column="16" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="311" bodyend="313"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a35cd3238251b678c6c395e1c9baf6d5c" compoundref="User_8java" startline="30">com.example.mybookshelf.dataClass.User.UID</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a3b22d6106c92d008ed8b05c10892f0b7" compoundref="DataBaseConnection_8java" startline="812" endline="905">com.example.mybookshelf.DataBaseConnection.addGoal</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ae83460b1effd3376ba0caca7220f7ced" compoundref="DataBaseConnection_8java" startline="734" endline="757">com.example.mybookshelf.DataBaseConnection.addNotification</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb442e89bbb66fadad2986d9229014b0" compoundref="User_8java" startline="239" endline="283">com.example.mybookshelf.dataClass.User.removeBook</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a69baea7bd18f7364b50bb4c1bd360285" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LinkedList&lt; <ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal" kindref="compound">Goal</ref> &gt;</type>
+        <definition>LinkedList&lt; Goal &gt; com.example.mybookshelf.dataClass.User.getGoalList</definition>
+        <argsstring>()</argsstring>
+        <name>getGoalList</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.getGoalList</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the list of goals. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="318" column="23" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="318" bodyend="320"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1adf08a44a715034a56cdd99a665a4cb99" compoundref="User_8java" startline="33">com.example.mybookshelf.dataClass.User.goalList</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1acb4d2c7eb719b6b820003c8c22cc052e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>long com.example.mybookshelf.dataClass.User.addGoal</definition>
+        <argsstring>(Goal goal)</argsstring>
+        <name>addGoal</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.addGoal</qualifiedname>
+        <param>
+          <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal" kindref="compound">Goal</ref></type>
+          <declname>goal</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Adds a goal to the list and returns its ID. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="324" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="324" bodyend="327"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1abcf308a0e49a9b60f6761102438d9d04" compoundref="Goal_8java" startline="56" endline="58">com.example.mybookshelf.dataClass.Goal.getId</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1adf08a44a715034a56cdd99a665a4cb99" compoundref="User_8java" startline="33">com.example.mybookshelf.dataClass.User.goalList</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1adc427d68c8c4bcab811c3b9de649ad9c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>LinkedList&lt; <ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal" kindref="compound">Goal</ref> &gt;</type>
+        <definition>LinkedList&lt; Goal &gt; com.example.mybookshelf.dataClass.User.getCompletedGoalList</definition>
+        <argsstring>()</argsstring>
+        <name>getCompletedGoalList</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.getCompletedGoalList</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the list of completed goals. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="332" column="23" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="332" bodyend="334"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a3505787a0fc187c315bceb705c605631" compoundref="User_8java" startline="34">com.example.mybookshelf.dataClass.User.completedGoalList</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a76ba302b47ed858bff0eeee089485296" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.dataClass.User.setUserName</definition>
+        <argsstring>(String username)</argsstring>
+        <name>setUserName</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.setUserName</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>username</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the user name. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="339" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="339" bodyend="341"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aec12ec6f78185cd89393de775261d4b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal" kindref="compound">Goal</ref> &gt;</type>
+        <definition>List&lt; Goal &gt; com.example.mybookshelf.dataClass.User.getFailedGoalList</definition>
+        <argsstring>()</argsstring>
+        <name>getFailedGoalList</name>
+        <qualifiedname>com.example.mybookshelf.dataClass.User.getFailedGoalList</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the list of failed goals. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="346" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="346" bodyend="348"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a69491968b60bd3c828412878877f8578" compoundref="User_8java" startline="35">com.example.mybookshelf.dataClass.User.failedGoalList</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="9">
+        <label>AppCompatActivity</label>
+        <link refid="classAppCompatActivity"/>
+      </node>
+      <node id="34">
+        <label>ArrayList&lt; String &gt;</label>
+      </node>
+      <node id="42">
+        <label>BarChart</label>
+      </node>
+      <node id="11">
+        <label>Button</label>
+      </node>
+      <node id="26">
+        <label>EditText</label>
+      </node>
+      <node id="19">
+        <label>ExecutorService</label>
+      </node>
+      <node id="15">
+        <label>File</label>
+      </node>
+      <node id="48">
+        <label>FrameLayout</label>
+      </node>
+      <node id="20">
+        <label>Handler</label>
+      </node>
+      <node id="35">
+        <label>HashSet&lt; String &gt;</label>
+      </node>
+      <node id="27">
+        <label>ImageButton</label>
+      </node>
+      <node id="4">
+        <label>LinkedList&lt; com.example.mybookshelf.dataClass.Book &gt;</label>
+      </node>
+      <node id="6">
+        <label>LinkedList&lt; com.example.mybookshelf.dataClass.Goal &gt;</label>
+      </node>
+      <node id="7">
+        <label>LinkedList&lt; com.example.mybookshelf.dataClass.Notification &gt;</label>
+      </node>
+      <node id="36">
+        <label>List&lt; View &gt;</label>
+      </node>
+      <node id="40">
+        <label>List&lt; com.example.mybookshelf.dataClass.Book &gt;</label>
+      </node>
+      <node id="37">
+        <label>List&lt; com.example.mybookshelf.dataClass.Goal &gt;</label>
+      </node>
+      <node id="31">
+        <label>Map&lt; View, com.example.mybookshelf.dataClass.Book &gt;</label>
+      </node>
+      <node id="39">
+        <label>RecyclerView::Adapter&lt; CostumeListAdapter.BookViewHolder &gt;</label>
+      </node>
+      <node id="47">
+        <label>RecyclerView.Adapter&lt; CustomGoalAdapter.GoalViewHolder &gt;</label>
+      </node>
+      <node id="33">
+        <label>RelativeLayout</label>
+      </node>
+      <node id="41">
+        <label>RequestOptions</label>
+      </node>
+      <node id="44">
+        <label>SearchView</label>
+      </node>
+      <node id="2">
+        <label>String</label>
+      </node>
+      <node id="28">
+        <label>TextView</label>
+      </node>
+      <node id="5">
+        <label>TreeSet&lt; String &gt;</label>
+      </node>
+      <node id="30">
+        <label>boolean</label>
+      </node>
+      <node id="1">
+        <label>com.example.mybookshelf.dataClass.User</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-email</edgelabel>
+          <edgelabel>-hash_password</edgelabel>
+          <edgelabel>-user</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-UID</edgelabel>
+          <edgelabel>-hour</edgelabel>
+          <edgelabel>-minute</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-bookList</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-authorList</edgelabel>
+          <edgelabel>-genreList</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-completedGoalList</edgelabel>
+          <edgelabel>-failedGoalList</edgelabel>
+          <edgelabel>-goalList</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-notificationList</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-mainActivity</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-db</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>-reminder</edgelabel>
+        </childnode>
+      </node>
+      <node id="10">
+        <label>com.example.mybookshelf.ApiResponseCallback</label>
+        <link refid="interfacecom_1_1example_1_1mybookshelf_1_1ApiResponseCallback"/>
+      </node>
+      <node id="12">
+        <label>com.example.mybookshelf.Authenticator</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1Authenticator"/>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-db</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-context</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-executorService</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>-mainHandler</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>-KEY_ALIAS</edgelabel>
+        </childnode>
+      </node>
+      <node id="32">
+        <label>com.example.mybookshelf.BookRecommendationFlow</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-mainActivity</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>-uiMaster</edgelabel>
+        </childnode>
+        <childnode refid="33" relation="usage">
+          <edgelabel>-box</edgelabel>
+          <edgelabel>-loadingLayout</edgelabel>
+        </childnode>
+        <childnode refid="34" relation="usage">
+          <edgelabel>-atributes</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>-ai</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-bookName</edgelabel>
+        </childnode>
+        <childnode refid="35" relation="usage">
+          <edgelabel>-doNotRecommend</edgelabel>
+        </childnode>
+        <childnode refid="36" relation="usage">
+          <edgelabel>-balls</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>-isThinking</edgelabel>
+        </childnode>
+      </node>
+      <node id="13">
+        <label>com.example.mybookshelf.DataBaseConnection</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-executorService</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-PASSWORD</edgelabel>
+          <edgelabel>-URL</edgelabel>
+          <edgelabel>-USER</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-context</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>-trustStoreFile</edgelabel>
+        </childnode>
+      </node>
+      <node id="45">
+        <label>com.example.mybookshelf.GoalHandler</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler"/>
+        <childnode refid="29" relation="usage">
+          <edgelabel>-user</edgelabel>
+        </childnode>
+        <childnode refid="46" relation="usage">
+          <edgelabel>-adapter</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>-completedGoalList</edgelabel>
+          <edgelabel>-goalList</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-db</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-mainActivity</edgelabel>
+        </childnode>
+      </node>
+      <node id="38">
+        <label>com.example.mybookshelf.LayoutManager.CostumeListAdapter</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter"/>
+        <childnode refid="39" relation="public-inheritance">
+        </childnode>
+        <childnode refid="40" relation="usage">
+          <edgelabel>-bookList</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-mainActivity</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-db</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>-loggedInUser</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>-uiMaster</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>-databaseExecutor</edgelabel>
+        </childnode>
+        <childnode refid="41" relation="usage">
+          <edgelabel>-imageRequestOptions</edgelabel>
+        </childnode>
+      </node>
+      <node id="46">
+        <label>com.example.mybookshelf.LayoutManager.CustomGoalAdapter</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter"/>
+        <childnode refid="47" relation="public-inheritance">
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>-goals</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-context</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-db</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>com.example.mybookshelf.MainActivity</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-addBookButton</edgelabel>
+          <edgelabel>-goToStarting</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>-auth</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>-booksAPI</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>-ai</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>-uiMaster</edgelabel>
+        </childnode>
+        <childnode refid="43" relation="usage">
+          <edgelabel>-search</edgelabel>
+        </childnode>
+        <childnode refid="44" relation="usage">
+          <edgelabel>-searchView</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>-timeSpentReadingTextView</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>-logedindUser</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>~db</edgelabel>
+        </childnode>
+        <childnode refid="45" relation="usage">
+          <edgelabel>-handler</edgelabel>
+        </childnode>
+        <childnode refid="48" relation="usage">
+          <edgelabel>-loadingOverlay</edgelabel>
+        </childnode>
+        <childnode refid="49" relation="usage">
+          <edgelabel>-REQUEST_CODE_POST_NOTIFICATIONS</edgelabel>
+        </childnode>
+      </node>
+      <node id="43">
+        <label>com.example.mybookshelf.Search</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1Search"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>~api</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>~uiMaster</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>~executorService</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>~mainThreadHandler</edgelabel>
+        </childnode>
+      </node>
+      <node id="25">
+        <label>com.example.mybookshelf.UIMaster</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>~mainActivity</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>-emailEditText</edgelabel>
+          <edgelabel>-passwordEditText</edgelabel>
+          <edgelabel>-repeatPassword</edgelabel>
+          <edgelabel>-usernameEditText</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-loginButton</edgelabel>
+          <edgelabel>-registerButton</edgelabel>
+          <edgelabel>-switchToLoginButton</edgelabel>
+          <edgelabel>-switchToRegisterButton</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-timeSpentReading</edgelabel>
+        </childnode>
+        <childnode refid="27" relation="usage">
+          <edgelabel>-nav_StatsBtn</edgelabel>
+          <edgelabel>-nav_searchBtn</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>-timeSpentReadingTextView</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>-booksAPI</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>-ai</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-db</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>-logedindUser</edgelabel>
+        </childnode>
+        <childnode refid="31" relation="usage">
+          <edgelabel>-bookViewMap</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>-executorService</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-AIprompt</edgelabel>
+        </childnode>
+        <childnode refid="32" relation="usage">
+          <edgelabel>-brf</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>~goalList</edgelabel>
+        </childnode>
+        <childnode refid="38" relation="usage">
+          <edgelabel>-listAdapter</edgelabel>
+        </childnode>
+        <childnode refid="42" relation="usage">
+          <edgelabel>-barChart</edgelabel>
+        </childnode>
+      </node>
+      <node id="21">
+        <label>com.example.mybookshelf.apis.AiAPI</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-API_KEY</edgelabel>
+          <edgelabel>-API_URL</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>-client</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>-retrofit</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>-aiService</edgelabel>
+        </childnode>
+      </node>
+      <node id="24">
+        <label>com.example.mybookshelf.apis.AiAPI.AiService</label>
+        <link refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1_1AiService"/>
+      </node>
+      <node id="18">
+        <label>com.example.mybookshelf.apis.BooksAPI</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI"/>
+        <childnode refid="19" relation="usage">
+          <edgelabel>-executorService</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>-mainHandler</edgelabel>
+        </childnode>
+      </node>
+      <node id="29">
+        <label>com.example.mybookshelf.dataClass.User</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-email</edgelabel>
+          <edgelabel>-hash_password</edgelabel>
+          <edgelabel>-user</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-UID</edgelabel>
+          <edgelabel>-hour</edgelabel>
+          <edgelabel>-minute</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-bookList</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-authorList</edgelabel>
+          <edgelabel>-genreList</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-completedGoalList</edgelabel>
+          <edgelabel>-failedGoalList</edgelabel>
+          <edgelabel>-goalList</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-notificationList</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-mainActivity</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-db</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>-reminder</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>final ExecutorService</label>
+      </node>
+      <node id="16">
+        <label>final Handler</label>
+      </node>
+      <node id="3">
+        <label>int</label>
+      </node>
+      <node id="22">
+        <label>static final OkHttpClient</label>
+      </node>
+      <node id="23">
+        <label>static final Retrofit</label>
+      </node>
+      <node id="17">
+        <label>static final String</label>
+      </node>
+      <node id="49">
+        <label>static final int</label>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" line="26" column="7" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/User.java" bodystart="26" bodyend="349"/>
+    <listofallmembers>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aade37d8176c8c756543ce0de90e91e80" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>addBook</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1acb4d2c7eb719b6b820003c8c22cc052e" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>addGoal</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1abbbc6820ebedbf54ab9cf36983a20e7c" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>authorList</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a785ec56f99c56fe99ba9bc3ab666adf3" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>bookList</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a3505787a0fc187c315bceb705c605631" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>completedGoalList</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a55d9f7b2a47df1b9837fd7d97b5638f4" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>db</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a094ddf13c798dd3492265ebb5b42781b" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>email</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a69491968b60bd3c828412878877f8578" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>failedGoalList</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a06c2114b02402131a1558fc9bfbd6077" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>genreList</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a8945dfa4eb3a89d2e5a76c00286fec8f" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>getAuthors</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a81f758175e66306d62b76c819520b794" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>getBookList</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1adc427d68c8c4bcab811c3b9de649ad9c" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>getCompletedGoalList</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aec12ec6f78185cd89393de775261d4b8" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>getFailedGoalList</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aadab6730552307e5c6b3f9b7f01b92da" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>getGenres</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a69baea7bd18f7364b50bb4c1bd360285" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>getGoalList</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1af08f2807e34258190031d801a5413115" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>getHour</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a622f9d92b708fda1f742cfb1a897d34d" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>getMinute</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a682645dc02a2e495219e209d2581a07b" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>getPassword</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1af713b8b3cee54ffce03b9beebe4facff" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>getUid</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1af5409209c13843de1262a2b184fffab7" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>getUser</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1adf08a44a715034a56cdd99a665a4cb99" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>goalList</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a673d6ff276fa01ab6b6293a341ef2bb5" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>hash_password</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1ae2578fd7a3eaedf5cec2121de0ef1107" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>hour</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1ac3688c9dbc4e92f6761f17917ab40c6e" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>isReminder</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a325845acb5fa2ac2736baa42dd0ca70f" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>mainActivity</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a228107724f3c21395a42fb97ca30f778" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>minute</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afeb7f16cf5d4bb293f266e88dd473284" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>notificationList</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aa68383b852810acf9263049aa417394b" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>reminder</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb442e89bbb66fadad2986d9229014b0" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>removeBook</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aa73b4323619977d53f636c8e23a1f797" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>setHour</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a0563e903741fe2efd9dd04c22b0fd346" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>setMinute</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a1399483c690be9c2c04f74ddbe0b3a58" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>setReminder</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a67b00d944624281342cd2d39a9ab82e0" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>setUID</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a76ba302b47ed858bff0eeee089485296" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>setUserName</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a35cd3238251b678c6c395e1c9baf6d5c" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>UID</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1afb85fd04c8149bfb77f1810c9301b0bc" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>User</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1aeccdf2ba94dc9b82428e2339fce94f16" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>User</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1ac09dcc32668756828345d30aae7a191b" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>User</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1a86fba9c7015ae122da29b6899badcd36" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::dataClass::User</scope><name>user</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

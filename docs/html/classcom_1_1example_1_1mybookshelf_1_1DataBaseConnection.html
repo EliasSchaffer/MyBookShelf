@@ -1,0 +1,1391 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="MyBookShelf " />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="MyBookShelf - Custom CSS theme for html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://github.com/EliasSchaffer/MyBookShelf" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>MyBookShelf: com.example.mybookshelf.DataBaseConnection Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/EliasSchaffer/MyBookShelf" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">MyBookShelf
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
+<a href="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">com.example.mybookshelf.DataBaseConnection Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Collaboration diagram for com.example.mybookshelf.DataBaseConnection:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a3ed5c18c7b9fb86f9fe23c531136dc5a" id="r_a3ed5c18c7b9fb86f9fe23c531136dc5a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3ed5c18c7b9fb86f9fe23c531136dc5a">DataBaseConnection</a> (<a class="el" href="classcom_1_1example_1_1mybookshelf_1_1MainActivity.html">MainActivity</a> <a class="el" href="#adadd13914192fd766da3e78bb288b688">context</a>)</td></tr>
+<tr class="separator:a3ed5c18c7b9fb86f9fe23c531136dc5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee74be9d7674275d682de94e068a3bec" id="r_aee74be9d7674275d682de94e068a3bec"><td class="memItemLeft" align="right" valign="top">Future&lt; Integer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aee74be9d7674275d682de94e068a3bec">checkLogin</a> (String username, char[] password)</td></tr>
+<tr class="separator:aee74be9d7674275d682de94e068a3bec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa495d1fe38fd1c36bc4bd3f4338b426d" id="r_aa495d1fe38fd1c36bc4bd3f4338b426d"><td class="memItemLeft" align="right" valign="top">Future&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa495d1fe38fd1c36bc4bd3f4338b426d">getToken</a> (int uid)</td></tr>
+<tr class="separator:aa495d1fe38fd1c36bc4bd3f4338b426d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab37c8cc6cf8d9437799cf3a3d414bfc9" id="r_ab37c8cc6cf8d9437799cf3a3d414bfc9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab37c8cc6cf8d9437799cf3a3d414bfc9">addUser</a> (String username, String email, String password)</td></tr>
+<tr class="separator:ab37c8cc6cf8d9437799cf3a3d414bfc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf3ef21ff7a224367d185748b6247481" id="r_acf3ef21ff7a224367d185748b6247481"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf3ef21ff7a224367d185748b6247481">generateSessionToken</a> ()</td></tr>
+<tr class="separator:acf3ef21ff7a224367d185748b6247481"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad5aa12951cce78e9438fbc4056f5544" id="r_aad5aa12951cce78e9438fbc4056f5544"><td class="memItemLeft" align="right" valign="top">Future&lt; List&lt; <a class="el" href="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book.html">Book</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aad5aa12951cce78e9438fbc4056f5544">getBooksFromUID</a> (int uid)</td></tr>
+<tr class="separator:aad5aa12951cce78e9438fbc4056f5544"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8ec52be0a15b422e5307257258d2950" id="r_aa8ec52be0a15b422e5307257258d2950"><td class="memItemLeft" align="right" valign="top">Future&lt; <a class="el" href="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book.html">Book</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8ec52be0a15b422e5307257258d2950">getBookByName</a> (String bookName)</td></tr>
+<tr class="separator:aa8ec52be0a15b422e5307257258d2950"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc615b05c31c508894dc2d300292738a" id="r_abc615b05c31c508894dc2d300292738a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc615b05c31c508894dc2d300292738a">addBookToUser</a> (int userId, String status, String score, LocalDate finished, String bookName, String author, int pages, String releaseDate, String imageUrl, String description, double readingTime, String genre)</td></tr>
+<tr class="separator:abc615b05c31c508894dc2d300292738a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bfa78cc6e4957456c3c0a7d6d5281dc" id="r_a6bfa78cc6e4957456c3c0a7d6d5281dc"><td class="memItemLeft" align="right" valign="top">Future&lt; Float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bfa78cc6e4957456c3c0a7d6d5281dc">getRatingFromBook</a> (<a class="el" href="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book.html">Book</a> book)</td></tr>
+<tr class="separator:a6bfa78cc6e4957456c3c0a7d6d5281dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99a86e8b98d2d0ccc944aa93c10c878d" id="r_a99a86e8b98d2d0ccc944aa93c10c878d"><td class="memItemLeft" align="right" valign="top">Future&lt; ArrayList&lt; BarEntry &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99a86e8b98d2d0ccc944aa93c10c878d">getReadingTimeByMonth</a> (int UID)</td></tr>
+<tr class="separator:a99a86e8b98d2d0ccc944aa93c10c878d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab32626fd4493c33e19a7875ff500b2e6" id="r_ab32626fd4493c33e19a7875ff500b2e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab32626fd4493c33e19a7875ff500b2e6">removeBookFromUser</a> (<a class="el" href="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book.html">Book</a> book, int UID)</td></tr>
+<tr class="separator:ab32626fd4493c33e19a7875ff500b2e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af193be7b7a849bfac39f8f45d5e16ee8" id="r_af193be7b7a849bfac39f8f45d5e16ee8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af193be7b7a849bfac39f8f45d5e16ee8">notesChanged</a> (int UID, int bookID, String note)</td></tr>
+<tr class="separator:af193be7b7a849bfac39f8f45d5e16ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac60874dcdc45687598a20a0d61a01d6d" id="r_ac60874dcdc45687598a20a0d61a01d6d"><td class="memItemLeft" align="right" valign="top">Future&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac60874dcdc45687598a20a0d61a01d6d">getNotesFromUser</a> (int UID, int bookID)</td></tr>
+<tr class="separator:ac60874dcdc45687598a20a0d61a01d6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae83460b1effd3376ba0caca7220f7ced" id="r_ae83460b1effd3376ba0caca7220f7ced"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae83460b1effd3376ba0caca7220f7ced">addNotification</a> (<a class="el" href="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User.html">User</a> user, String message)</td></tr>
+<tr class="separator:ae83460b1effd3376ba0caca7220f7ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1aaec1cad853f2dda5dff2c6e07b5cb8" id="r_a1aaec1cad853f2dda5dff2c6e07b5cb8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1aaec1cad853f2dda5dff2c6e07b5cb8">removeNotification</a> (int notificationId, int userId)</td></tr>
+<tr class="separator:a1aaec1cad853f2dda5dff2c6e07b5cb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaefa5b0d10088dc34c39ba72307026eb" id="r_aaefa5b0d10088dc34c39ba72307026eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaefa5b0d10088dc34c39ba72307026eb">getAllNotificationsForUser</a> (int userId, Consumer&lt; List&lt; <a class="el" href="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification.html">Notification</a> &gt; &gt; callback)</td></tr>
+<tr class="separator:aaefa5b0d10088dc34c39ba72307026eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b22d6106c92d008ed8b05c10892f0b7" id="r_a3b22d6106c92d008ed8b05c10892f0b7"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b22d6106c92d008ed8b05c10892f0b7">addGoal</a> (<a class="el" href="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal.html">Goal</a> goal, <a class="el" href="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User.html">User</a> user)</td></tr>
+<tr class="separator:a3b22d6106c92d008ed8b05c10892f0b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8504514977721bef71acfcdb0019b6c" id="r_aa8504514977721bef71acfcdb0019b6c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8504514977721bef71acfcdb0019b6c">removeGoal</a> (int goalId, int userId)</td></tr>
+<tr class="separator:aa8504514977721bef71acfcdb0019b6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7889f4b8cbd0a3c254d6e1b390f22e00" id="r_a7889f4b8cbd0a3c254d6e1b390f22e00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7889f4b8cbd0a3c254d6e1b390f22e00">getAllGoalsForUser</a> (int userId, Consumer&lt; List&lt; <a class="el" href="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal.html">Goal</a> &gt; &gt; callback)</td></tr>
+<tr class="separator:a7889f4b8cbd0a3c254d6e1b390f22e00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0888bddcc69a7e612d2b55269f3ce4a" id="r_aa0888bddcc69a7e612d2b55269f3ce4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0888bddcc69a7e612d2b55269f3ce4a">deleteUser</a> (int userId)</td></tr>
+<tr class="separator:aa0888bddcc69a7e612d2b55269f3ce4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a86b6ffa92fad445bf50ba17e72ed7652" id="r_a86b6ffa92fad445bf50ba17e72ed7652"><td class="memItemLeft" align="right" valign="top">Future&lt; String &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a86b6ffa92fad445bf50ba17e72ed7652">checkPassword</a> (int userId)</td></tr>
+<tr class="separator:a86b6ffa92fad445bf50ba17e72ed7652"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59558eec699341c6309b60e3c90b8093" id="r_a59558eec699341c6309b60e3c90b8093"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59558eec699341c6309b60e3c90b8093">changePassword</a> (int userId, String newPassword)</td></tr>
+<tr class="separator:a59558eec699341c6309b60e3c90b8093"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3938ac17813d30aea19e71d1b149e972" id="r_a3938ac17813d30aea19e71d1b149e972"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3938ac17813d30aea19e71d1b149e972">changeUserName</a> (int userId, String newUser)</td></tr>
+<tr class="separator:a3938ac17813d30aea19e71d1b149e972"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47a8bd471a1f2e4336a9378446c9ed86" id="r_a47a8bd471a1f2e4336a9378446c9ed86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47a8bd471a1f2e4336a9378446c9ed86">changeEmail</a> (int userId, String email)</td></tr>
+<tr class="separator:a47a8bd471a1f2e4336a9378446c9ed86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a219c11f4d9a8683e6f6d963a2e5592fa" id="r_a219c11f4d9a8683e6f6d963a2e5592fa"><td class="memItemLeft" align="right" valign="top">Future&lt; LocalTime &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a219c11f4d9a8683e6f6d963a2e5592fa">getTime</a> (int userId)</td></tr>
+<tr class="separator:a219c11f4d9a8683e6f6d963a2e5592fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb94e7db2769200aba9d3eed97a6174b" id="r_afb94e7db2769200aba9d3eed97a6174b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb94e7db2769200aba9d3eed97a6174b">setTime</a> (int userId, LocalTime time)</td></tr>
+<tr class="separator:afb94e7db2769200aba9d3eed97a6174b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62d192fe1bc6c3cbe531112364da3fa5" id="r_a62d192fe1bc6c3cbe531112364da3fa5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62d192fe1bc6c3cbe531112364da3fa5">updateReadingStatus</a> (int userId, int bookId, String readingStatus)</td></tr>
+<tr class="separator:a62d192fe1bc6c3cbe531112364da3fa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76f8124415bc76fa523847cba23c8146" id="r_a76f8124415bc76fa523847cba23c8146"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76f8124415bc76fa523847cba23c8146">updateGoalProgress</a> (int userId, int goalID, int progress)</td></tr>
+<tr class="separator:a76f8124415bc76fa523847cba23c8146"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a5dad5786ba9d3e263569a9b1838a0092" id="r_a5dad5786ba9d3e263569a9b1838a0092"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5dad5786ba9d3e263569a9b1838a0092">initialize</a> ()</td></tr>
+<tr class="separator:a5dad5786ba9d3e263569a9b1838a0092"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6551f4e8da2da417bc29f8b6af08aa51" id="r_a6551f4e8da2da417bc29f8b6af08aa51"><td class="memItemLeft" align="right" valign="top">KeyStore&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6551f4e8da2da417bc29f8b6af08aa51">loadTrustStore</a> ()  throws Exception </td></tr>
+<tr class="separator:a6551f4e8da2da417bc29f8b6af08aa51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af697f4f75aef2a9a2b45f603452a8c4e" id="r_af697f4f75aef2a9a2b45f603452a8c4e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af697f4f75aef2a9a2b45f603452a8c4e">addNewBook</a> (String bookName, String author, int pages, String releaseDate, String imageUrl, String description, String genre)</td></tr>
+<tr class="separator:af697f4f75aef2a9a2b45f603452a8c4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a19f85f9ddffa0a97088614d80d2c46e9" id="r_a19f85f9ddffa0a97088614d80d2c46e9"><td class="memItemLeft" align="right" valign="top">final ExecutorService&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a19f85f9ddffa0a97088614d80d2c46e9">executorService</a> = Executors.newSingleThreadExecutor()</td></tr>
+<tr class="separator:a19f85f9ddffa0a97088614d80d2c46e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5737bacc185010702d20e4380318959d" id="r_a5737bacc185010702d20e4380318959d"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5737bacc185010702d20e4380318959d">URL</a></td></tr>
+<tr class="separator:a5737bacc185010702d20e4380318959d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adadd13914192fd766da3e78bb288b688" id="r_adadd13914192fd766da3e78bb288b688"><td class="memItemLeft" align="right" valign="top">final <a class="el" href="classcom_1_1example_1_1mybookshelf_1_1MainActivity.html">MainActivity</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adadd13914192fd766da3e78bb288b688">context</a></td></tr>
+<tr class="separator:adadd13914192fd766da3e78bb288b688"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89f590f8fe8376ed0bbfc61f50a3f604" id="r_a89f590f8fe8376ed0bbfc61f50a3f604"><td class="memItemLeft" align="right" valign="top">File&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89f590f8fe8376ed0bbfc61f50a3f604">trustStoreFile</a></td></tr>
+<tr class="separator:a89f590f8fe8376ed0bbfc61f50a3f604"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:aebfa52c8bb7e772ab8713234e3754392" id="r_aebfa52c8bb7e772ab8713234e3754392"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebfa52c8bb7e772ab8713234e3754392">USER</a> = &quot;avnadmin&quot;</td></tr>
+<tr class="separator:aebfa52c8bb7e772ab8713234e3754392"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8ed5b2f35becedacaab42216f921c48" id="r_aa8ed5b2f35becedacaab42216f921c48"><td class="memItemLeft" align="right" valign="top">static final String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8ed5b2f35becedacaab42216f921c48">PASSWORD</a> = &quot;AVNS_g46tQJXWz_2Fh_QBWiM&quot;</td></tr>
+<tr class="separator:aa8ed5b2f35becedacaab42216f921c48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a3ed5c18c7b9fb86f9fe23c531136dc5a" name="a3ed5c18c7b9fb86f9fe23c531136dc5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ed5c18c7b9fb86f9fe23c531136dc5a">&#9670;&#160;</a></span>DataBaseConnection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.example.mybookshelf.DataBaseConnection.DataBaseConnection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1example_1_1mybookshelf_1_1MainActivity.html">MainActivity</a></td>          <td class="paramname"><span class="paramname"><em>context</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a3ed5c18c7b9fb86f9fe23c531136dc5a_cgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="abc615b05c31c508894dc2d300292738a" name="abc615b05c31c508894dc2d300292738a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc615b05c31c508894dc2d300292738a">&#9670;&#160;</a></span>addBookToUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.mybookshelf.DataBaseConnection.addBookToUser </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>userId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>status</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>score</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LocalDate</td>          <td class="paramname"><span class="paramname"><em>finished</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>bookName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>author</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>pages</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>releaseDate</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>imageUrl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>description</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>readingTime</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>genre</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_abc615b05c31c508894dc2d300292738a_cgraph.svg" width="570" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a3b22d6106c92d008ed8b05c10892f0b7" name="a3b22d6106c92d008ed8b05c10892f0b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b22d6106c92d008ed8b05c10892f0b7">&#9670;&#160;</a></span>addGoal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">long com.example.mybookshelf.DataBaseConnection.addGoal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal.html">Goal</a></td>          <td class="paramname"><span class="paramname"><em>goal</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User.html">User</a></td>          <td class="paramname"><span class="paramname"><em>user</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a3b22d6106c92d008ed8b05c10892f0b7_cgraph.svg" width="507" height="371"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="af697f4f75aef2a9a2b45f603452a8c4e" name="af697f4f75aef2a9a2b45f603452a8c4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af697f4f75aef2a9a2b45f603452a8c4e">&#9670;&#160;</a></span>addNewBook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.example.mybookshelf.DataBaseConnection.addNewBook </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>bookName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>author</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>pages</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>releaseDate</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>imageUrl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>description</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>genre</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_af697f4f75aef2a9a2b45f603452a8c4e_icgraph.svg" width="570" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ae83460b1effd3376ba0caca7220f7ced" name="ae83460b1effd3376ba0caca7220f7ced"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae83460b1effd3376ba0caca7220f7ced">&#9670;&#160;</a></span>addNotification()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.mybookshelf.DataBaseConnection.addNotification </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User.html">User</a></td>          <td class="paramname"><span class="paramname"><em>user</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>message</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_ae83460b1effd3376ba0caca7220f7ced_cgraph.svg" width="552" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ab37c8cc6cf8d9437799cf3a3d414bfc9" name="ab37c8cc6cf8d9437799cf3a3d414bfc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab37c8cc6cf8d9437799cf3a3d414bfc9">&#9670;&#160;</a></span>addUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.mybookshelf.DataBaseConnection.addUser </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>username</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>email</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>password</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_ab37c8cc6cf8d9437799cf3a3d414bfc9_cgraph.svg" width="582" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a47a8bd471a1f2e4336a9378446c9ed86" name="a47a8bd471a1f2e4336a9378446c9ed86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47a8bd471a1f2e4336a9378446c9ed86">&#9670;&#160;</a></span>changeEmail()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.mybookshelf.DataBaseConnection.changeEmail </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>userId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>email</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a59558eec699341c6309b60e3c90b8093" name="a59558eec699341c6309b60e3c90b8093"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59558eec699341c6309b60e3c90b8093">&#9670;&#160;</a></span>changePassword()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.mybookshelf.DataBaseConnection.changePassword </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>userId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>newPassword</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3938ac17813d30aea19e71d1b149e972" name="a3938ac17813d30aea19e71d1b149e972"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3938ac17813d30aea19e71d1b149e972">&#9670;&#160;</a></span>changeUserName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.mybookshelf.DataBaseConnection.changeUserName </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>userId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>newUser</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee74be9d7674275d682de94e068a3bec" name="aee74be9d7674275d682de94e068a3bec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee74be9d7674275d682de94e068a3bec">&#9670;&#160;</a></span>checkLogin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Future&lt; Integer &gt; com.example.mybookshelf.DataBaseConnection.checkLogin </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>username</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char[]</td>          <td class="paramname"><span class="paramname"><em>password</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a86b6ffa92fad445bf50ba17e72ed7652" name="a86b6ffa92fad445bf50ba17e72ed7652"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a86b6ffa92fad445bf50ba17e72ed7652">&#9670;&#160;</a></span>checkPassword()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Future&lt; String &gt; com.example.mybookshelf.DataBaseConnection.checkPassword </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>userId</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa0888bddcc69a7e612d2b55269f3ce4a" name="aa0888bddcc69a7e612d2b55269f3ce4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0888bddcc69a7e612d2b55269f3ce4a">&#9670;&#160;</a></span>deleteUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.mybookshelf.DataBaseConnection.deleteUser </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>userId</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acf3ef21ff7a224367d185748b6247481" name="acf3ef21ff7a224367d185748b6247481"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf3ef21ff7a224367d185748b6247481">&#9670;&#160;</a></span>generateSessionToken()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.example.mybookshelf.DataBaseConnection.generateSessionToken </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_acf3ef21ff7a224367d185748b6247481_icgraph.svg" width="582" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a7889f4b8cbd0a3c254d6e1b390f22e00" name="a7889f4b8cbd0a3c254d6e1b390f22e00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7889f4b8cbd0a3c254d6e1b390f22e00">&#9670;&#160;</a></span>getAllGoalsForUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.mybookshelf.DataBaseConnection.getAllGoalsForUser </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>userId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Consumer&lt; List&lt; <a class="el" href="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal.html">Goal</a> &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>callback</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a7889f4b8cbd0a3c254d6e1b390f22e00_cgraph.svg" width="528" height="66"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aaefa5b0d10088dc34c39ba72307026eb" name="aaefa5b0d10088dc34c39ba72307026eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaefa5b0d10088dc34c39ba72307026eb">&#9670;&#160;</a></span>getAllNotificationsForUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.mybookshelf.DataBaseConnection.getAllNotificationsForUser </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>userId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Consumer&lt; List&lt; <a class="el" href="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification.html">Notification</a> &gt; &gt;</td>          <td class="paramname"><span class="paramname"><em>callback</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa8ec52be0a15b422e5307257258d2950" name="aa8ec52be0a15b422e5307257258d2950"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8ec52be0a15b422e5307257258d2950">&#9670;&#160;</a></span>getBookByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Future&lt; <a class="el" href="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book.html">Book</a> &gt; com.example.mybookshelf.DataBaseConnection.getBookByName </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>bookName</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aad5aa12951cce78e9438fbc4056f5544" name="aad5aa12951cce78e9438fbc4056f5544"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad5aa12951cce78e9438fbc4056f5544">&#9670;&#160;</a></span>getBooksFromUID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Future&lt; List&lt; <a class="el" href="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book.html">Book</a> &gt; &gt; com.example.mybookshelf.DataBaseConnection.getBooksFromUID </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>uid</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac60874dcdc45687598a20a0d61a01d6d" name="ac60874dcdc45687598a20a0d61a01d6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac60874dcdc45687598a20a0d61a01d6d">&#9670;&#160;</a></span>getNotesFromUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Future&lt; String &gt; com.example.mybookshelf.DataBaseConnection.getNotesFromUser </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>UID</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>bookID</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6bfa78cc6e4957456c3c0a7d6d5281dc" name="a6bfa78cc6e4957456c3c0a7d6d5281dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bfa78cc6e4957456c3c0a7d6d5281dc">&#9670;&#160;</a></span>getRatingFromBook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Future&lt; Float &gt; com.example.mybookshelf.DataBaseConnection.getRatingFromBook </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book.html">Book</a></td>          <td class="paramname"><span class="paramname"><em>book</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a6bfa78cc6e4957456c3c0a7d6d5281dc_cgraph.svg" width="516" height="66"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a99a86e8b98d2d0ccc944aa93c10c878d" name="a99a86e8b98d2d0ccc944aa93c10c878d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99a86e8b98d2d0ccc944aa93c10c878d">&#9670;&#160;</a></span>getReadingTimeByMonth()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Future&lt; ArrayList&lt; BarEntry &gt; &gt; com.example.mybookshelf.DataBaseConnection.getReadingTimeByMonth </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>UID</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a219c11f4d9a8683e6f6d963a2e5592fa" name="a219c11f4d9a8683e6f6d963a2e5592fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a219c11f4d9a8683e6f6d963a2e5592fa">&#9670;&#160;</a></span>getTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Future&lt; LocalTime &gt; com.example.mybookshelf.DataBaseConnection.getTime </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>userId</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa495d1fe38fd1c36bc4bd3f4338b426d" name="aa495d1fe38fd1c36bc4bd3f4338b426d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa495d1fe38fd1c36bc4bd3f4338b426d">&#9670;&#160;</a></span>getToken()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Future&lt; String &gt; com.example.mybookshelf.DataBaseConnection.getToken </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>uid</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5dad5786ba9d3e263569a9b1838a0092" name="a5dad5786ba9d3e263569a9b1838a0092"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5dad5786ba9d3e263569a9b1838a0092">&#9670;&#160;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.mybookshelf.DataBaseConnection.initialize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a5dad5786ba9d3e263569a9b1838a0092_cgraph.svg" width="532" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a5dad5786ba9d3e263569a9b1838a0092_icgraph.svg" width="576" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a6551f4e8da2da417bc29f8b6af08aa51" name="a6551f4e8da2da417bc29f8b6af08aa51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6551f4e8da2da417bc29f8b6af08aa51">&#9670;&#160;</a></span>loadTrustStore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">KeyStore com.example.mybookshelf.DataBaseConnection.loadTrustStore </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td> throws Exception</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a6551f4e8da2da417bc29f8b6af08aa51_icgraph.svg" width="100%" height="300"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="af193be7b7a849bfac39f8f45d5e16ee8" name="af193be7b7a849bfac39f8f45d5e16ee8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af193be7b7a849bfac39f8f45d5e16ee8">&#9670;&#160;</a></span>notesChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.mybookshelf.DataBaseConnection.notesChanged </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>UID</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>bookID</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>note</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab32626fd4493c33e19a7875ff500b2e6" name="ab32626fd4493c33e19a7875ff500b2e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab32626fd4493c33e19a7875ff500b2e6">&#9670;&#160;</a></span>removeBookFromUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.mybookshelf.DataBaseConnection.removeBookFromUser </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book.html">Book</a></td>          <td class="paramname"><span class="paramname"><em>book</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>UID</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_ab32626fd4493c33e19a7875ff500b2e6_cgraph.svg" width="536" height="66"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aa8504514977721bef71acfcdb0019b6c" name="aa8504514977721bef71acfcdb0019b6c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8504514977721bef71acfcdb0019b6c">&#9670;&#160;</a></span>removeGoal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.mybookshelf.DataBaseConnection.removeGoal </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>goalId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>userId</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1aaec1cad853f2dda5dff2c6e07b5cb8" name="a1aaec1cad853f2dda5dff2c6e07b5cb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1aaec1cad853f2dda5dff2c6e07b5cb8">&#9670;&#160;</a></span>removeNotification()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.mybookshelf.DataBaseConnection.removeNotification </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>notificationId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>userId</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afb94e7db2769200aba9d3eed97a6174b" name="afb94e7db2769200aba9d3eed97a6174b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb94e7db2769200aba9d3eed97a6174b">&#9670;&#160;</a></span>setTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.mybookshelf.DataBaseConnection.setTime </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>userId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LocalTime</td>          <td class="paramname"><span class="paramname"><em>time</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a76f8124415bc76fa523847cba23c8146" name="a76f8124415bc76fa523847cba23c8146"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76f8124415bc76fa523847cba23c8146">&#9670;&#160;</a></span>updateGoalProgress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.mybookshelf.DataBaseConnection.updateGoalProgress </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>userId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>goalID</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>progress</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a62d192fe1bc6c3cbe531112364da3fa5" name="a62d192fe1bc6c3cbe531112364da3fa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62d192fe1bc6c3cbe531112364da3fa5">&#9670;&#160;</a></span>updateReadingStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.mybookshelf.DataBaseConnection.updateReadingStatus </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>userId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>bookId</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>readingStatus</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="adadd13914192fd766da3e78bb288b688" name="adadd13914192fd766da3e78bb288b688"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adadd13914192fd766da3e78bb288b688">&#9670;&#160;</a></span>context</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final <a class="el" href="classcom_1_1example_1_1mybookshelf_1_1MainActivity.html">MainActivity</a> com.example.mybookshelf.DataBaseConnection.context</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a19f85f9ddffa0a97088614d80d2c46e9" name="a19f85f9ddffa0a97088614d80d2c46e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19f85f9ddffa0a97088614d80d2c46e9">&#9670;&#160;</a></span>executorService</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final ExecutorService com.example.mybookshelf.DataBaseConnection.executorService = Executors.newSingleThreadExecutor()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa8ed5b2f35becedacaab42216f921c48" name="aa8ed5b2f35becedacaab42216f921c48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8ed5b2f35becedacaab42216f921c48">&#9670;&#160;</a></span>PASSWORD</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.example.mybookshelf.DataBaseConnection.PASSWORD = &quot;AVNS_g46tQJXWz_2Fh_QBWiM&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a89f590f8fe8376ed0bbfc61f50a3f604" name="a89f590f8fe8376ed0bbfc61f50a3f604"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89f590f8fe8376ed0bbfc61f50a3f604">&#9670;&#160;</a></span>trustStoreFile</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">File com.example.mybookshelf.DataBaseConnection.trustStoreFile</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5737bacc185010702d20e4380318959d" name="a5737bacc185010702d20e4380318959d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5737bacc185010702d20e4380318959d">&#9670;&#160;</a></span>URL</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.example.mybookshelf.DataBaseConnection.URL</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aebfa52c8bb7e772ab8713234e3754392" name="aebfa52c8bb7e772ab8713234e3754392"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebfa52c8bb7e772ab8713234e3754392">&#9670;&#160;</a></span>USER</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">final String com.example.mybookshelf.DataBaseConnection.USER = &quot;avnadmin&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/<a class="el" href="DataBaseConnection_8java.html">DataBaseConnection.java</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.10.0-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>com</b></li><li class="navelem"><b>example</b></li><li class="navelem"><a class="el" href="namespacecom_1_1example_1_1mybookshelf.html">mybookshelf</a></li><li class="navelem"><a class="el" href="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection.html">DataBaseConnection</a></li>
+    <li class="footer">Generated by <a href="https://penify.dev/"><img class="footer" src="https://www.penify.dev/penify-logo.svg" width="104" height="31" alt="doxygen"/></a> </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,1755 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classcom_1_1example_1_1mybookshelf_1_1UIMaster" kind="class" language="Java" prot="public">
+    <compoundname>com::example::mybookshelf::UIMaster</compoundname>
+    <innerclass refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1_1ChartData" prot="private">com::example::mybookshelf::UIMaster::ChartData</innerclass>
+    <innerclass refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1_1MonthValueFormatter" prot="private">com::example::mybookshelf::UIMaster::MonthValueFormatter</innerclass>
+    <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a99664fe186d6cb741c01898ff195937d" prot="package" static="no" mutable="no">
+        <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity" kindref="compound">MainActivity</ref></type>
+        <definition>MainActivity com.example.mybookshelf.UIMaster.mainActivity</definition>
+        <argsstring></argsstring>
+        <name>mainActivity</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.mainActivity</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="86" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aeb718f8b7c1e891bfeb515d302b4fb62" prot="package" static="no" mutable="no">
+        <type>List&lt; <ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal" kindref="compound">Goal</ref> &gt;</type>
+        <definition>List&lt;Goal&gt; com.example.mybookshelf.UIMaster.goalList</definition>
+        <argsstring></argsstring>
+        <name>goalList</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.goalList</qualifiedname>
+        <initializer>= new ArrayList&lt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="108" column="10" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="108" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a61448faa08032ad7f27f29c4a6d08e75" prot="private" static="no" mutable="no">
+        <type>EditText</type>
+        <definition>EditText com.example.mybookshelf.UIMaster.usernameEditText</definition>
+        <argsstring></argsstring>
+        <name>usernameEditText</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.usernameEditText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="87" column="22" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="87" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5d06d53d8ef756629247fde0f557a3d1" compoundref="UIMaster_8java" startline="416" endline="439">com.example.mybookshelf.UIMaster.showLogin</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5f5bae724e7f3d3de15486430b3bc8c1" compoundref="UIMaster_8java" startline="453" endline="482">com.example.mybookshelf.UIMaster.showRegister</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac38373761aef1dccd30d4418583c194f" prot="private" static="no" mutable="no">
+        <type>EditText</type>
+        <definition>EditText com.example.mybookshelf.UIMaster.passwordEditText</definition>
+        <argsstring></argsstring>
+        <name>passwordEditText</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.passwordEditText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="88" column="22" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="88" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5d06d53d8ef756629247fde0f557a3d1" compoundref="UIMaster_8java" startline="416" endline="439">com.example.mybookshelf.UIMaster.showLogin</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5f5bae724e7f3d3de15486430b3bc8c1" compoundref="UIMaster_8java" startline="453" endline="482">com.example.mybookshelf.UIMaster.showRegister</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a03ef58ea33c530aab57a58a298e12c1d" prot="private" static="no" mutable="no">
+        <type>EditText</type>
+        <definition>EditText com.example.mybookshelf.UIMaster.emailEditText</definition>
+        <argsstring></argsstring>
+        <name>emailEditText</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.emailEditText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="89" column="22" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="89" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5f5bae724e7f3d3de15486430b3bc8c1" compoundref="UIMaster_8java" startline="453" endline="482">com.example.mybookshelf.UIMaster.showRegister</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a33c96fac4ab139d0ee338ed0cefee6cf" prot="private" static="no" mutable="no">
+        <type>EditText</type>
+        <definition>EditText com.example.mybookshelf.UIMaster.repeatPassword</definition>
+        <argsstring></argsstring>
+        <name>repeatPassword</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.repeatPassword</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="90" column="22" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="90" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5f5bae724e7f3d3de15486430b3bc8c1" compoundref="UIMaster_8java" startline="453" endline="482">com.example.mybookshelf.UIMaster.showRegister</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a1578fb1dc832e74fc94d2c6115e16b6a" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button com.example.mybookshelf.UIMaster.loginButton</definition>
+        <argsstring></argsstring>
+        <name>loginButton</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.loginButton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="91" column="20" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="91" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5d06d53d8ef756629247fde0f557a3d1" compoundref="UIMaster_8java" startline="416" endline="439">com.example.mybookshelf.UIMaster.showLogin</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1acfa71075f7a34512b0d3b97c1ee11af2" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button com.example.mybookshelf.UIMaster.registerButton</definition>
+        <argsstring></argsstring>
+        <name>registerButton</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.registerButton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="92" column="20" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="92" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5f5bae724e7f3d3de15486430b3bc8c1" compoundref="UIMaster_8java" startline="453" endline="482">com.example.mybookshelf.UIMaster.showRegister</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a8725961b54c4b55c77f54f1686cdcc02" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button com.example.mybookshelf.UIMaster.switchToLoginButton</definition>
+        <argsstring></argsstring>
+        <name>switchToLoginButton</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.switchToLoginButton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="93" column="20" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="93" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5f5bae724e7f3d3de15486430b3bc8c1" compoundref="UIMaster_8java" startline="453" endline="482">com.example.mybookshelf.UIMaster.showRegister</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a92107a45357a577f1600118d4bcd03ab" prot="private" static="no" mutable="no">
+        <type>Button</type>
+        <definition>Button com.example.mybookshelf.UIMaster.switchToRegisterButton</definition>
+        <argsstring></argsstring>
+        <name>switchToRegisterButton</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.switchToRegisterButton</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="94" column="20" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="94" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5d06d53d8ef756629247fde0f557a3d1" compoundref="UIMaster_8java" startline="416" endline="439">com.example.mybookshelf.UIMaster.showLogin</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1af7a5045ff2d7c1e6ae4042b87305a3f2" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int com.example.mybookshelf.UIMaster.timeSpentReading</definition>
+        <argsstring></argsstring>
+        <name>timeSpentReading</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.timeSpentReading</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="96" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="96" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a78605aa6a9565efbae9637ee1c9f9c0c" compoundref="UIMaster_8java" startline="132" endline="140">com.example.mybookshelf.UIMaster.reduceTimeSpendReading</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a0306308fc0728bc63c3dcc670b14a402" compoundref="UIMaster_8java" startline="404" endline="411">com.example.mybookshelf.UIMaster.updateReadingTime</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa656ff54b76d2aad814455a921b23769" prot="private" static="no" mutable="no">
+        <type>ImageButton</type>
+        <definition>ImageButton com.example.mybookshelf.UIMaster.nav_searchBtn</definition>
+        <argsstring></argsstring>
+        <name>nav_searchBtn</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.nav_searchBtn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="97" column="25" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="97" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac2a608fcf86d3dbe14b4684dbbaf1431" compoundref="UIMaster_8java" startline="912" endline="1070">com.example.mybookshelf.UIMaster.navigateToDetails</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ad30bff41c8ec833af2293c0b6c8b47b2" compoundref="UIMaster_8java" startline="1240" endline="1562">com.example.mybookshelf.UIMaster.navigateToGoals</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac859db60f9068e6a87b633ef697d4d0f" compoundref="UIMaster_8java" startline="1577" endline="1774">com.example.mybookshelf.UIMaster.navigateToSettings</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa6aad8404432bdaf23db9b41e99a6ed5" compoundref="UIMaster_8java" startline="885" endline="898">com.example.mybookshelf.UIMaster.setupNavigationButtons</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a3bb75047e98f0333fa2fdfd173bc80b0" compoundref="UIMaster_8java" startline="513" endline="546">com.example.mybookshelf.UIMaster.setupNavigationListeners</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a2f9dd9d99fba9fbf71600f940fb5eb9e" prot="private" static="no" mutable="no">
+        <type>ImageButton</type>
+        <definition>ImageButton com.example.mybookshelf.UIMaster.nav_StatsBtn</definition>
+        <argsstring></argsstring>
+        <name>nav_StatsBtn</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.nav_StatsBtn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="98" column="25" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="98" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac2a608fcf86d3dbe14b4684dbbaf1431" compoundref="UIMaster_8java" startline="912" endline="1070">com.example.mybookshelf.UIMaster.navigateToDetails</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ad30bff41c8ec833af2293c0b6c8b47b2" compoundref="UIMaster_8java" startline="1240" endline="1562">com.example.mybookshelf.UIMaster.navigateToGoals</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac859db60f9068e6a87b633ef697d4d0f" compoundref="UIMaster_8java" startline="1577" endline="1774">com.example.mybookshelf.UIMaster.navigateToSettings</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa6aad8404432bdaf23db9b41e99a6ed5" compoundref="UIMaster_8java" startline="885" endline="898">com.example.mybookshelf.UIMaster.setupNavigationButtons</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a51f677da9e14df925e0078873b518490" prot="private" static="no" mutable="no">
+        <type>TextView</type>
+        <definition>TextView com.example.mybookshelf.UIMaster.timeSpentReadingTextView</definition>
+        <argsstring></argsstring>
+        <name>timeSpentReadingTextView</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.timeSpentReadingTextView</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="99" column="22" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="99" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ad609d5e0b54e87afcb60aed6c66a792e" compoundref="UIMaster_8java" startline="766" endline="879">com.example.mybookshelf.UIMaster.navigateToStartingPage</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a78605aa6a9565efbae9637ee1c9f9c0c" compoundref="UIMaster_8java" startline="132" endline="140">com.example.mybookshelf.UIMaster.reduceTimeSpendReading</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a0306308fc0728bc63c3dcc670b14a402" compoundref="UIMaster_8java" startline="404" endline="411">com.example.mybookshelf.UIMaster.updateReadingTime</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a3ebd4eaa7d80139bd41dc5e1fa218c4c" prot="private" static="no" mutable="no">
+        <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI" kindref="compound">BooksAPI</ref></type>
+        <definition>BooksAPI com.example.mybookshelf.UIMaster.booksAPI</definition>
+        <argsstring></argsstring>
+        <name>booksAPI</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.booksAPI</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="100" column="22" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="100" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aaf0e05b3454197f2e623075569b118d4" compoundref="UIMaster_8java" startline="114" endline="120">com.example.mybookshelf.UIMaster.UIMaster</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a7988f320c66cc06640a7e88dfea44791" prot="private" static="no" mutable="no">
+        <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI" kindref="compound">AiAPI</ref></type>
+        <definition>AiAPI com.example.mybookshelf.UIMaster.ai</definition>
+        <argsstring></argsstring>
+        <name>ai</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.ai</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="101" column="19" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="101" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aaf0e05b3454197f2e623075569b118d4" compoundref="UIMaster_8java" startline="114" endline="120">com.example.mybookshelf.UIMaster.UIMaster</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a4b26ad26de31c25665781530f174561d" prot="private" static="no" mutable="no">
+        <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection" kindref="compound">DataBaseConnection</ref></type>
+        <definition>DataBaseConnection com.example.mybookshelf.UIMaster.db</definition>
+        <argsstring></argsstring>
+        <name>db</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.db</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="102" column="32" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="102" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a1533d0ed2384f2ec729cfcec7bd9a25f" compoundref="UIMaster_8java" startline="147" endline="321">com.example.mybookshelf.UIMaster.createBookBox</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5c502183bab9192d9f38b42a28be7164" compoundref="UIMaster_8java" startline="551" endline="597">com.example.mybookshelf.UIMaster.loadChartDataAsync</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ad30bff41c8ec833af2293c0b6c8b47b2" compoundref="UIMaster_8java" startline="1240" endline="1562">com.example.mybookshelf.UIMaster.navigateToGoals</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ad609d5e0b54e87afcb60aed6c66a792e" compoundref="UIMaster_8java" startline="766" endline="879">com.example.mybookshelf.UIMaster.navigateToStartingPage</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a00d8b97e1a726995297f32919c1921ab" compoundref="UIMaster_8java" startline="1806" endline="1808">com.example.mybookshelf.UIMaster.setDb</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aaf0e05b3454197f2e623075569b118d4" compoundref="UIMaster_8java" startline="114" endline="120">com.example.mybookshelf.UIMaster.UIMaster</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a725459700c0500c243299fc80cd0ea7a" prot="private" static="no" mutable="no">
+        <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User" kindref="compound">User</ref></type>
+        <definition>User com.example.mybookshelf.UIMaster.logedindUser</definition>
+        <argsstring></argsstring>
+        <name>logedindUser</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.logedindUser</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="103" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="103" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a1533d0ed2384f2ec729cfcec7bd9a25f" compoundref="UIMaster_8java" startline="147" endline="321">com.example.mybookshelf.UIMaster.createBookBox</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a3e552449814fd4b18a4070128261c571" compoundref="UIMaster_8java" startline="1173" endline="1200">com.example.mybookshelf.UIMaster.fillSpinners</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ad30bff41c8ec833af2293c0b6c8b47b2" compoundref="UIMaster_8java" startline="1240" endline="1562">com.example.mybookshelf.UIMaster.navigateToGoals</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ad609d5e0b54e87afcb60aed6c66a792e" compoundref="UIMaster_8java" startline="766" endline="879">com.example.mybookshelf.UIMaster.navigateToStartingPage</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a673cf5a9e0adbd1e6ecdef9a1afa9818" prot="private" static="no" mutable="no">
+        <type>Map&lt; View, <ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book" kindref="compound">Book</ref> &gt;</type>
+        <definition>Map&lt;View, Book&gt; com.example.mybookshelf.UIMaster.bookViewMap</definition>
+        <argsstring></argsstring>
+        <name>bookViewMap</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.bookViewMap</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="104" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="104" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a1533d0ed2384f2ec729cfcec7bd9a25f" compoundref="UIMaster_8java" startline="147" endline="321">com.example.mybookshelf.UIMaster.createBookBox</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a39a8f40aa163994c415f165d94ee47fd" compoundref="UIMaster_8java" startline="1153" endline="1168">com.example.mybookshelf.UIMaster.filterBooks</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aaf0e05b3454197f2e623075569b118d4" compoundref="UIMaster_8java" startline="114" endline="120">com.example.mybookshelf.UIMaster.UIMaster</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa3a5fde5cd9073a735c5bbac40a79a98" prot="private" static="no" mutable="no">
+        <type>final ExecutorService</type>
+        <definition>final ExecutorService com.example.mybookshelf.UIMaster.executorService</definition>
+        <argsstring></argsstring>
+        <name>executorService</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.executorService</qualifiedname>
+        <initializer>= Executors.newSingleThreadExecutor()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="105" column="35" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ae58fc63fffcaeca03afa133ba306d62c" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.UIMaster.AIprompt</definition>
+        <argsstring></argsstring>
+        <name>AIprompt</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.AIprompt</qualifiedname>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="106" column="20" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a498a128e82ebf6851cb77f377169e05e" prot="private" static="no" mutable="no">
+        <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow" kindref="compound">BookRecommendationFlow</ref></type>
+        <definition>BookRecommendationFlow com.example.mybookshelf.UIMaster.brf</definition>
+        <argsstring></argsstring>
+        <name>brf</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.brf</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="107" column="36" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="107" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac2a608fcf86d3dbe14b4684dbbaf1431" compoundref="UIMaster_8java" startline="912" endline="1070">com.example.mybookshelf.UIMaster.navigateToDetails</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a118323285918e37742fb31592587087e" prot="private" static="no" mutable="no">
+        <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter" kindref="compound">CostumeListAdapter</ref></type>
+        <definition>CostumeListAdapter com.example.mybookshelf.UIMaster.listAdapter</definition>
+        <argsstring></argsstring>
+        <name>listAdapter</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.listAdapter</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="110" column="32" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="110" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ad609d5e0b54e87afcb60aed6c66a792e" compoundref="UIMaster_8java" startline="766" endline="879">com.example.mybookshelf.UIMaster.navigateToStartingPage</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac22273bb30e9f228991043bcdfbd8af2" prot="private" static="no" mutable="no">
+        <type>BarChart</type>
+        <definition>BarChart com.example.mybookshelf.UIMaster.barChart</definition>
+        <argsstring></argsstring>
+        <name>barChart</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.barChart</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="391" column="22" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="391" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a66cf6ce29c43e6db34be85ae9990c102" compoundref="UIMaster_8java" startline="666" endline="687">com.example.mybookshelf.UIMaster.configureAxes</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ae589c66b6b1826db14cd0185e2453c12" compoundref="UIMaster_8java" startline="692" endline="699">com.example.mybookshelf.UIMaster.configureChart</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aeadc13ea946b279afce35c39bb36f3b6" compoundref="UIMaster_8java" startline="500" endline="503">com.example.mybookshelf.UIMaster.initializeViews</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a1d0b44fba73323953ffbbf69f4f3f4cb" compoundref="UIMaster_8java" startline="602" endline="625">com.example.mybookshelf.UIMaster.setupChart</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aaf0e05b3454197f2e623075569b118d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.example.mybookshelf.UIMaster.UIMaster</definition>
+        <argsstring>(MainActivity main)</argsstring>
+        <name>UIMaster</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.UIMaster</qualifiedname>
+        <param>
+          <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity" kindref="compound">MainActivity</ref></type>
+          <declname>main</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="114" column="12" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="114" bodyend="120"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a7988f320c66cc06640a7e88dfea44791" compoundref="UIMaster_8java" startline="101">com.example.mybookshelf.UIMaster.ai</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a3ebd4eaa7d80139bd41dc5e1fa218c4c" compoundref="UIMaster_8java" startline="100">com.example.mybookshelf.UIMaster.booksAPI</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a673cf5a9e0adbd1e6ecdef9a1afa9818" compoundref="UIMaster_8java" startline="104">com.example.mybookshelf.UIMaster.bookViewMap</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a4b26ad26de31c25665781530f174561d" compoundref="UIMaster_8java" startline="102">com.example.mybookshelf.UIMaster.db</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ad68836f56831277d04d47f04bcb4e6e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.UIMaster.setUSer</definition>
+        <argsstring>(User user)</argsstring>
+        <name>setUSer</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.setUSer</qualifiedname>
+        <param>
+          <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User" kindref="compound">User</ref></type>
+          <declname>user</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the logged-in user. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="125" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="125" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a78605aa6a9565efbae9637ee1c9f9c0c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.UIMaster.reduceTimeSpendReading</definition>
+        <argsstring>(int time, TextView timeSpentReadingTextView)</argsstring>
+        <name>reduceTimeSpendReading</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.reduceTimeSpendReading</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>time</declname>
+        </param>
+        <param>
+          <type>TextView</type>
+          <declname>timeSpentReadingTextView</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reduces the time spent reading by a given duration and updates the UI accordingly. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="132" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="132" bodyend="140"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1af7a5045ff2d7c1e6ae4042b87305a3f2" compoundref="UIMaster_8java" startline="96">com.example.mybookshelf.UIMaster.timeSpentReading</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a51f677da9e14df925e0078873b518490" compoundref="UIMaster_8java" startline="99">com.example.mybookshelf.UIMaster.timeSpentReadingTextView</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a1533d0ed2384f2ec729cfcec7bd9a25f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.UIMaster.createBookBox</definition>
+        <argsstring>(LinearLayout container, Book book, boolean isSearch)</argsstring>
+        <name>createBookBox</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.createBookBox</qualifiedname>
+        <param>
+          <type>LinearLayout</type>
+          <declname>container</declname>
+        </param>
+        <param>
+          <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book" kindref="compound">Book</ref></type>
+          <declname>book</declname>
+        </param>
+        <param>
+          <type>boolean</type>
+          <declname>isSearch</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a visual representation of a book as a box within a given container. </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Handles text change events before they occur.</para>
+<para>Updates notes in the database when text changes.</para>
+<para>Handles text changes in an editable field.</para>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="147" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="147" bodyend="321"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a673cf5a9e0adbd1e6ecdef9a1afa9818" compoundref="UIMaster_8java" startline="104">com.example.mybookshelf.UIMaster.bookViewMap</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a4b26ad26de31c25665781530f174561d" compoundref="UIMaster_8java" startline="102">com.example.mybookshelf.UIMaster.db</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a72061c36f82e9d925effeb02dc0da55d" compoundref="Book_8java" startline="118" endline="120">com.example.mybookshelf.dataClass.Book.getAuthor</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ae7d87877ec33cbf6de7c0cb67ef5eb39" compoundref="UIMaster_8java" startline="327" endline="346">com.example.mybookshelf.UIMaster.getBtnAdd</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a066a14333819f9cde27957ef8a02f180" compoundref="UIMaster_8java" startline="352" endline="386">com.example.mybookshelf.UIMaster.getBtnRemove</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ab76b4ec7891e641d4c1a70a564805ffb" compoundref="Book_8java" startline="33" endline="35">com.example.mybookshelf.dataClass.Book.getId</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a20229b9b1dcc454fc3f09a50e719294c" compoundref="Book_8java" startline="125" endline="127">com.example.mybookshelf.dataClass.Book.getImageUrl</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a4109da1bdee13601576c6725d6e89e71" compoundref="Book_8java" startline="97" endline="99">com.example.mybookshelf.dataClass.Book.getName</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a013544b074d1a225d85d4870e85f2eb6" compoundref="Book_8java" startline="104" endline="106">com.example.mybookshelf.dataClass.Book.getRelease_date</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a725459700c0500c243299fc80cd0ea7a" compoundref="UIMaster_8java" startline="103">com.example.mybookshelf.UIMaster.logedindUser</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac2a608fcf86d3dbe14b4684dbbaf1431" compoundref="UIMaster_8java" startline="912" endline="1070">com.example.mybookshelf.UIMaster.navigateToDetails</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1aac979a1131aa1e38e45ded0e55fcbc05" compoundref="Book_8java" startline="146" endline="148">com.example.mybookshelf.dataClass.Book.setAuthor</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a1059730606a2b2dd0f6e5d1e50f9bd3c" compoundref="Book_8java" startline="153" endline="155">com.example.mybookshelf.dataClass.Book.setRelease_date</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa1dc0909ddd670cbf7ed2fd6ecb141cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.UIMaster.clearUI</definition>
+        <argsstring>(LinearLayout container)</argsstring>
+        <name>clearUI</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.clearUI</qualifiedname>
+        <param>
+          <type>LinearLayout</type>
+          <declname>container</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clears all views from the given LinearLayout container. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="397" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="397" bodyend="399"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a0306308fc0728bc63c3dcc670b14a402" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.UIMaster.updateReadingTime</definition>
+        <argsstring>(int pages, TextView timeSpentReadingTextView)</argsstring>
+        <name>updateReadingTime</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.updateReadingTime</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>pages</declname>
+        </param>
+        <param>
+          <type>TextView</type>
+          <declname>timeSpentReadingTextView</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Updates the reading time based on the number of pages read and displays it in the specified TextView. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="404" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="404" bodyend="411"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1af7a5045ff2d7c1e6ae4042b87305a3f2" compoundref="UIMaster_8java" startline="96">com.example.mybookshelf.UIMaster.timeSpentReading</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a51f677da9e14df925e0078873b518490" compoundref="UIMaster_8java" startline="99">com.example.mybookshelf.UIMaster.timeSpentReadingTextView</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5d06d53d8ef756629247fde0f557a3d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.UIMaster.showLogin</definition>
+        <argsstring>()</argsstring>
+        <name>showLogin</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.showLogin</qualifiedname>
+        <exceptions> throws ExecutionException, InterruptedException </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the login screen and handles user login attempts. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="416" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="416" bodyend="439"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a1578fb1dc832e74fc94d2c6115e16b6a" compoundref="UIMaster_8java" startline="91">com.example.mybookshelf.UIMaster.loginButton</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac38373761aef1dccd30d4418583c194f" compoundref="UIMaster_8java" startline="88">com.example.mybookshelf.UIMaster.passwordEditText</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5f5bae724e7f3d3de15486430b3bc8c1" compoundref="UIMaster_8java" startline="453" endline="482">com.example.mybookshelf.UIMaster.showRegister</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a92107a45357a577f1600118d4bcd03ab" compoundref="UIMaster_8java" startline="94">com.example.mybookshelf.UIMaster.switchToRegisterButton</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a61448faa08032ad7f27f29c4a6d08e75" compoundref="UIMaster_8java" startline="87">com.example.mybookshelf.UIMaster.usernameEditText</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac859db60f9068e6a87b633ef697d4d0f" compoundref="UIMaster_8java" startline="1577" endline="1774">com.example.mybookshelf.UIMaster.navigateToSettings</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5f5bae724e7f3d3de15486430b3bc8c1" compoundref="UIMaster_8java" startline="453" endline="482">com.example.mybookshelf.UIMaster.showRegister</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5f5bae724e7f3d3de15486430b3bc8c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.UIMaster.showRegister</definition>
+        <argsstring>()</argsstring>
+        <name>showRegister</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.showRegister</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the registration screen and sets up event listeners for user interactions. </para>
+<para>This method switches the main activity&apos;s content view to the registration layout, initializes UI components, and registers click listeners for the register button and the switch-to-login button. When the register button is clicked, it calls <computeroutput><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a904eef7a2ffa10b03c833016464e03c7" kindref="member">MainActivity#handleRegister(EditText, EditText, EditText, EditText)</ref></computeroutput> to process user input and register a new account. If an exception occurs during this process, it throws a runtime exception. Similarly, when the switch-to-login button is clicked, it attempts to show the login screen by calling <computeroutput><ref refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5d06d53d8ef756629247fde0f557a3d1" kindref="member">showLogin()</ref></computeroutput>, handling exceptions in the same manner. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="453" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="453" bodyend="482"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a03ef58ea33c530aab57a58a298e12c1d" compoundref="UIMaster_8java" startline="89">com.example.mybookshelf.UIMaster.emailEditText</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac38373761aef1dccd30d4418583c194f" compoundref="UIMaster_8java" startline="88">com.example.mybookshelf.UIMaster.passwordEditText</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1acfa71075f7a34512b0d3b97c1ee11af2" compoundref="UIMaster_8java" startline="92">com.example.mybookshelf.UIMaster.registerButton</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a33c96fac4ab139d0ee338ed0cefee6cf" compoundref="UIMaster_8java" startline="90">com.example.mybookshelf.UIMaster.repeatPassword</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5d06d53d8ef756629247fde0f557a3d1" compoundref="UIMaster_8java" startline="416" endline="439">com.example.mybookshelf.UIMaster.showLogin</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a8725961b54c4b55c77f54f1686cdcc02" compoundref="UIMaster_8java" startline="93">com.example.mybookshelf.UIMaster.switchToLoginButton</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a61448faa08032ad7f27f29c4a6d08e75" compoundref="UIMaster_8java" startline="87">com.example.mybookshelf.UIMaster.usernameEditText</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5d06d53d8ef756629247fde0f557a3d1" compoundref="UIMaster_8java" startline="416" endline="439">com.example.mybookshelf.UIMaster.showLogin</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa3079f36c20fc1b0ec8c01197f06faa3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.UIMaster.navigateToStats</definition>
+        <argsstring>()</argsstring>
+        <name>navigateToStats</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.navigateToStats</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Navigates to the stats page, initializes views, sets up navigation listeners, and loads chart data asynchronously. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="487" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="487" bodyend="495"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aeadc13ea946b279afce35c39bb36f3b6" compoundref="UIMaster_8java" startline="500" endline="503">com.example.mybookshelf.UIMaster.initializeViews</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5c502183bab9192d9f38b42a28be7164" compoundref="UIMaster_8java" startline="551" endline="597">com.example.mybookshelf.UIMaster.loadChartDataAsync</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a3bb75047e98f0333fa2fdfd173bc80b0" compoundref="UIMaster_8java" startline="513" endline="546">com.example.mybookshelf.UIMaster.setupNavigationListeners</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac2a608fcf86d3dbe14b4684dbbaf1431" compoundref="UIMaster_8java" startline="912" endline="1070">com.example.mybookshelf.UIMaster.navigateToDetails</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ad30bff41c8ec833af2293c0b6c8b47b2" compoundref="UIMaster_8java" startline="1240" endline="1562">com.example.mybookshelf.UIMaster.navigateToGoals</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac859db60f9068e6a87b633ef697d4d0f" compoundref="UIMaster_8java" startline="1577" endline="1774">com.example.mybookshelf.UIMaster.navigateToSettings</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa6aad8404432bdaf23db9b41e99a6ed5" compoundref="UIMaster_8java" startline="885" endline="898">com.example.mybookshelf.UIMaster.setupNavigationButtons</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ad609d5e0b54e87afcb60aed6c66a792e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.UIMaster.navigateToStartingPage</definition>
+        <argsstring>()</argsstring>
+        <name>navigateToStartingPage</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.navigateToStartingPage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Navigates to the starting page, updating the UI and loading user data in the background. </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Animates a change in RecyclerView item position if within a small threshold.</para>
+<para>Pauses or resumes image loading based on the scroll state of the RecyclerView.</para>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="766" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="766" bodyend="879"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a4b26ad26de31c25665781530f174561d" compoundref="UIMaster_8java" startline="102">com.example.mybookshelf.UIMaster.db</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a118323285918e37742fb31592587087e" compoundref="UIMaster_8java" startline="110">com.example.mybookshelf.UIMaster.listAdapter</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a725459700c0500c243299fc80cd0ea7a" compoundref="UIMaster_8java" startline="103">com.example.mybookshelf.UIMaster.logedindUser</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa6aad8404432bdaf23db9b41e99a6ed5" compoundref="UIMaster_8java" startline="885" endline="898">com.example.mybookshelf.UIMaster.setupNavigationButtons</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a51f677da9e14df925e0078873b518490" compoundref="UIMaster_8java" startline="99">com.example.mybookshelf.UIMaster.timeSpentReadingTextView</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac2a608fcf86d3dbe14b4684dbbaf1431" compoundref="UIMaster_8java" startline="912" endline="1070">com.example.mybookshelf.UIMaster.navigateToDetails</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ad30bff41c8ec833af2293c0b6c8b47b2" compoundref="UIMaster_8java" startline="1240" endline="1562">com.example.mybookshelf.UIMaster.navigateToGoals</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac859db60f9068e6a87b633ef697d4d0f" compoundref="UIMaster_8java" startline="1577" endline="1774">com.example.mybookshelf.UIMaster.navigateToSettings</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac2a608fcf86d3dbe14b4684dbbaf1431" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.UIMaster.navigateToDetails</definition>
+        <argsstring>(Book book)</argsstring>
+        <name>navigateToDetails</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.navigateToDetails</qualifiedname>
+        <param>
+          <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book" kindref="compound">Book</ref></type>
+          <declname>book</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Navigates to the details page of a selected book.</para>
+<para>This method sets up the UI for displaying detailed information about a book, including its title, author, description, number of pages, genre, and rating. It also handles user interactions such as navigating to other sections of the app, updating the reading status of the book, and initiating AI-based recommendations.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>book</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <computeroutput><ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book" kindref="compound">Book</ref></computeroutput> object containing details about the book to be displayed. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="912" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="912" bodyend="1070"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a498a128e82ebf6851cb77f377169e05e" compoundref="UIMaster_8java" startline="107">com.example.mybookshelf.UIMaster.brf</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a4109da1bdee13601576c6725d6e89e71" compoundref="Book_8java" startline="97" endline="99">com.example.mybookshelf.dataClass.Book.getName</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a7c4ec1f3e154fad200b64643574e5c9c" compoundref="Book_8java" startline="166" endline="169">com.example.mybookshelf.dataClass.Book.getStatus</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa656ff54b76d2aad814455a921b23769" compoundref="UIMaster_8java" startline="97">com.example.mybookshelf.UIMaster.nav_searchBtn</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a2f9dd9d99fba9fbf71600f940fb5eb9e" compoundref="UIMaster_8java" startline="98">com.example.mybookshelf.UIMaster.nav_StatsBtn</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ad30bff41c8ec833af2293c0b6c8b47b2" compoundref="UIMaster_8java" startline="1240" endline="1562">com.example.mybookshelf.UIMaster.navigateToGoals</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac859db60f9068e6a87b633ef697d4d0f" compoundref="UIMaster_8java" startline="1577" endline="1774">com.example.mybookshelf.UIMaster.navigateToSettings</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ad609d5e0b54e87afcb60aed6c66a792e" compoundref="UIMaster_8java" startline="766" endline="879">com.example.mybookshelf.UIMaster.navigateToStartingPage</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa3079f36c20fc1b0ec8c01197f06faa3" compoundref="UIMaster_8java" startline="487" endline="495">com.example.mybookshelf.UIMaster.navigateToStats</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a1533d0ed2384f2ec729cfcec7bd9a25f" compoundref="UIMaster_8java" startline="147" endline="321">com.example.mybookshelf.UIMaster.createBookBox</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a4636b546c38ace5aedccfd989edc0bb1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.UIMaster.handleListSearch</definition>
+        <argsstring>()</argsstring>
+        <name>handleListSearch</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.handleListSearch</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Handles the display and functionality of the list search interface, including animations and filtering books based on user input. </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Filters books based on the search query and selected author/genre.</para>
+<para>Filters books based on the query text, author selection, and genre selection.</para>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="1075" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="1075" bodyend="1144"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a3e552449814fd4b18a4070128261c571" compoundref="UIMaster_8java" startline="1173" endline="1200">com.example.mybookshelf.UIMaster.fillSpinners</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a39a8f40aa163994c415f165d94ee47fd" compoundref="UIMaster_8java" startline="1153" endline="1168">com.example.mybookshelf.UIMaster.filterBooks</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa6aad8404432bdaf23db9b41e99a6ed5" compoundref="UIMaster_8java" startline="885" endline="898">com.example.mybookshelf.UIMaster.setupNavigationButtons</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a3e552449814fd4b18a4070128261c571" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.UIMaster.fillSpinners</definition>
+        <argsstring>()</argsstring>
+        <name>fillSpinners</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.fillSpinners</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fills spinners with authors and genres from the logged-in user, adding a default &quot;All&quot; option. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="1173" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="1173" bodyend="1200"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a725459700c0500c243299fc80cd0ea7a" compoundref="UIMaster_8java" startline="103">com.example.mybookshelf.UIMaster.logedindUser</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a4636b546c38ace5aedccfd989edc0bb1" compoundref="UIMaster_8java" startline="1075" endline="1144">com.example.mybookshelf.UIMaster.handleListSearch</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ad30bff41c8ec833af2293c0b6c8b47b2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.UIMaster.navigateToGoals</definition>
+        <argsstring>()</argsstring>
+        <name>navigateToGoals</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.navigateToGoals</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Navigates to and sets up the Goals screen, allowing users to view, add, and manage their reading goals.</para>
+<para>This method performs several key tasks:<itemizedlist>
+<listitem><para>Sets the content view to the Goals activity layout.</para>
+</listitem><listitem><para>Initializes and configures a RecyclerView to display goal items.</para>
+</listitem><listitem><para>Adds click listeners for buttons that switch between displaying current, completed, and failed goals.</para>
+</listitem><listitem><para>Configures an AlertDialog with options to edit or delete selected goals.</para>
+</listitem><listitem><para>Handles adding new goals through user input, including validation of fields and database operations.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mainActivity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity" kindref="compound">MainActivity</ref> instance that calls this method, used for accessing resources, context, and user data. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Toggles visibility of book and number views based on selected item.</para>
+<para>Placeholder method called when nothing is selected.</para>
+<para>Called when an animation starts.</para>
+<para>Hides the pop-up and shows the add goal button, then clears input fields.</para>
+<para>Handles the repeat event of an animation.</para>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="1240" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="1240" bodyend="1562"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a4b26ad26de31c25665781530f174561d" compoundref="UIMaster_8java" startline="102">com.example.mybookshelf.UIMaster.db</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a725459700c0500c243299fc80cd0ea7a" compoundref="UIMaster_8java" startline="103">com.example.mybookshelf.UIMaster.logedindUser</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa656ff54b76d2aad814455a921b23769" compoundref="UIMaster_8java" startline="97">com.example.mybookshelf.UIMaster.nav_searchBtn</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a2f9dd9d99fba9fbf71600f940fb5eb9e" compoundref="UIMaster_8java" startline="98">com.example.mybookshelf.UIMaster.nav_StatsBtn</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac859db60f9068e6a87b633ef697d4d0f" compoundref="UIMaster_8java" startline="1577" endline="1774">com.example.mybookshelf.UIMaster.navigateToSettings</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ad609d5e0b54e87afcb60aed6c66a792e" compoundref="UIMaster_8java" startline="766" endline="879">com.example.mybookshelf.UIMaster.navigateToStartingPage</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa3079f36c20fc1b0ec8c01197f06faa3" compoundref="UIMaster_8java" startline="487" endline="495">com.example.mybookshelf.UIMaster.navigateToStats</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter_1abad93cc513b4470ac284a0756e1c3f65" compoundref="CustomGoalAdapter_8java" startline="82" endline="88">com.example.mybookshelf.LayoutManager.CustomGoalAdapter.setGoals</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac2a608fcf86d3dbe14b4684dbbaf1431" compoundref="UIMaster_8java" startline="912" endline="1070">com.example.mybookshelf.UIMaster.navigateToDetails</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac859db60f9068e6a87b633ef697d4d0f" compoundref="UIMaster_8java" startline="1577" endline="1774">com.example.mybookshelf.UIMaster.navigateToSettings</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa6aad8404432bdaf23db9b41e99a6ed5" compoundref="UIMaster_8java" startline="885" endline="898">com.example.mybookshelf.UIMaster.setupNavigationButtons</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac859db60f9068e6a87b633ef697d4d0f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.UIMaster.navigateToSettings</definition>
+        <argsstring>()</argsstring>
+        <name>navigateToSettings</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.navigateToSettings</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Navigates to the settings screen and sets up the UI elements and their corresponding listeners.</para>
+<para>This method is responsible for:<itemizedlist>
+<listitem><para>Setting the content view to the main settings layout.</para>
+</listitem><listitem><para>Initializing various UI components such as buttons, text views, switches, and time pickers.</para>
+</listitem><listitem><para>Configuring listeners for UI events, including button clicks and changes in switch states.</para>
+</listitem><listitem><para>Handling user interactions for changing passwords, deleting accounts, changing usernames, changing emails, and configuring notification settings.</para>
+</listitem></itemizedlist>
+</para>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>ExecutionException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if an error occurs during asynchronous execution. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>InterruptedException</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if the current thread is interrupted. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Dismisses the given dialog when an option is clicked.</para>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="1577" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="1577" bodyend="1774"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1Authenticator_1a57eb5913cd07c88e3f0771b4bf88bc0c" compoundref="Authenticator_8java" startline="162" endline="170">com.example.mybookshelf.Authenticator.clearStoredToken</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1aaf3ebda4b3bc3da4f2c4e8cabb4a3602" compoundref="NotificationScheduler_8java" startline="219" endline="222">com.example.mybookshelf.notifications.NotificationScheduler.getDailyNotificationHour</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ad29a9938277c2a671b0399cdc84c7844" compoundref="NotificationScheduler_8java" startline="227" endline="230">com.example.mybookshelf.notifications.NotificationScheduler.getDailyNotificationMinute</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ac8a096801252bd85cf58f0b4ded28ebe" compoundref="NotificationScheduler_8java" startline="211" endline="214">com.example.mybookshelf.notifications.NotificationScheduler.isDailyNotificationActive</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa656ff54b76d2aad814455a921b23769" compoundref="UIMaster_8java" startline="97">com.example.mybookshelf.UIMaster.nav_searchBtn</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a2f9dd9d99fba9fbf71600f940fb5eb9e" compoundref="UIMaster_8java" startline="98">com.example.mybookshelf.UIMaster.nav_StatsBtn</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ad30bff41c8ec833af2293c0b6c8b47b2" compoundref="UIMaster_8java" startline="1240" endline="1562">com.example.mybookshelf.UIMaster.navigateToGoals</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ad609d5e0b54e87afcb60aed6c66a792e" compoundref="UIMaster_8java" startline="766" endline="879">com.example.mybookshelf.UIMaster.navigateToStartingPage</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa3079f36c20fc1b0ec8c01197f06faa3" compoundref="UIMaster_8java" startline="487" endline="495">com.example.mybookshelf.UIMaster.navigateToStats</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5d06d53d8ef756629247fde0f557a3d1" compoundref="UIMaster_8java" startline="416" endline="439">com.example.mybookshelf.UIMaster.showLogin</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac2a608fcf86d3dbe14b4684dbbaf1431" compoundref="UIMaster_8java" startline="912" endline="1070">com.example.mybookshelf.UIMaster.navigateToDetails</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ad30bff41c8ec833af2293c0b6c8b47b2" compoundref="UIMaster_8java" startline="1240" endline="1562">com.example.mybookshelf.UIMaster.navigateToGoals</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa6aad8404432bdaf23db9b41e99a6ed5" compoundref="UIMaster_8java" startline="885" endline="898">com.example.mybookshelf.UIMaster.setupNavigationButtons</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a00d8b97e1a726995297f32919c1921ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.UIMaster.setDb</definition>
+        <argsstring>(DataBaseConnection db)</argsstring>
+        <name>setDb</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.setDb</qualifiedname>
+        <param>
+          <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection" kindref="compound">DataBaseConnection</ref></type>
+          <declname>db</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets the database connection for this instance. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="1806" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="1806" bodyend="1808"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a4b26ad26de31c25665781530f174561d" compoundref="UIMaster_8java" startline="102">com.example.mybookshelf.UIMaster.db</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ae7d87877ec33cbf6de7c0cb67ef5eb39" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ImageButton</type>
+        <definition>ImageButton com.example.mybookshelf.UIMaster.getBtnAdd</definition>
+        <argsstring>(Book book)</argsstring>
+        <name>getBtnAdd</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.getBtnAdd</qualifiedname>
+        <param>
+          <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book" kindref="compound">Book</ref></type>
+          <declname>book</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates and returns an ImageButton that, when clicked, calls saveBook with the given book. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="327" column="25" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="327" bodyend="346"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a1533d0ed2384f2ec729cfcec7bd9a25f" compoundref="UIMaster_8java" startline="147" endline="321">com.example.mybookshelf.UIMaster.createBookBox</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a066a14333819f9cde27957ef8a02f180" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ImageButton</type>
+        <definition>ImageButton com.example.mybookshelf.UIMaster.getBtnRemove</definition>
+        <argsstring>(Book book)</argsstring>
+        <name>getBtnRemove</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.getBtnRemove</qualifiedname>
+        <param>
+          <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book" kindref="compound">Book</ref></type>
+          <declname>book</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates and configures an ImageButton to remove a specified book. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="352" column="25" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="352" bodyend="386"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a1533d0ed2384f2ec729cfcec7bd9a25f" compoundref="UIMaster_8java" startline="147" endline="321">com.example.mybookshelf.UIMaster.createBookBox</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aeadc13ea946b279afce35c39bb36f3b6" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.UIMaster.initializeViews</definition>
+        <argsstring>()</argsstring>
+        <name>initializeViews</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.initializeViews</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes the bar chart view by finding it in the main activity layout. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="500" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="500" bodyend="503"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac22273bb30e9f228991043bcdfbd8af2" compoundref="UIMaster_8java" startline="391">com.example.mybookshelf.UIMaster.barChart</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa3079f36c20fc1b0ec8c01197f06faa3" compoundref="UIMaster_8java" startline="487" endline="495">com.example.mybookshelf.UIMaster.navigateToStats</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a3bb75047e98f0333fa2fdfd173bc80b0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.UIMaster.setupNavigationListeners</definition>
+        <argsstring>()</argsstring>
+        <name>setupNavigationListeners</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.setupNavigationListeners</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets up click listeners for navigation buttons in the main activity. Each button is associated with a different navigation action:<itemizedlist>
+<listitem><para>Home button navigates to the starting page.</para>
+</listitem><listitem><para><ref refid="classcom_1_1example_1_1mybookshelf_1_1Search" kindref="compound">Search</ref> button triggers a search operation handled by the main activity.</para>
+</listitem><listitem><para>Goals button navigates to the goals page.</para>
+</listitem><listitem><para>Settings button navigates to the settings page. </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="513" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="513" bodyend="546"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa656ff54b76d2aad814455a921b23769" compoundref="UIMaster_8java" startline="97">com.example.mybookshelf.UIMaster.nav_searchBtn</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa3079f36c20fc1b0ec8c01197f06faa3" compoundref="UIMaster_8java" startline="487" endline="495">com.example.mybookshelf.UIMaster.navigateToStats</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5c502183bab9192d9f38b42a28be7164" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.UIMaster.loadChartDataAsync</definition>
+        <argsstring>()</argsstring>
+        <name>loadChartDataAsync</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.loadChartDataAsync</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Asynchronously loads and displays chart data using AsyncTask. </para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Fetches reading time and completed books data for a user and returns it as <ref refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1_1ChartData" kindref="compound">ChartData</ref>.</para>
+<para>Handles post-execution tasks, either setting up the chart with data or showing an error message.</para>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="551" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="551" bodyend="597"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a4b26ad26de31c25665781530f174561d" compoundref="UIMaster_8java" startline="102">com.example.mybookshelf.UIMaster.db</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a1d0b44fba73323953ffbbf69f4f3f4cb" compoundref="UIMaster_8java" startline="602" endline="625">com.example.mybookshelf.UIMaster.setupChart</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a3beb8f5e82c56206227f83e05d2e2dba" compoundref="UIMaster_8java" startline="720" endline="722">com.example.mybookshelf.UIMaster.showErrorMessage</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa3079f36c20fc1b0ec8c01197f06faa3" compoundref="UIMaster_8java" startline="487" endline="495">com.example.mybookshelf.UIMaster.navigateToStats</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a1d0b44fba73323953ffbbf69f4f3f4cb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.UIMaster.setupChart</definition>
+        <argsstring>(ChartData chartData)</argsstring>
+        <name>setupChart</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.setupChart</qualifiedname>
+        <param>
+          <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1_1ChartData" kindref="compound">ChartData</ref></type>
+          <declname>chartData</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets up the bar chart with reading time data in hours. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="602" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="602" bodyend="625"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac22273bb30e9f228991043bcdfbd8af2" compoundref="UIMaster_8java" startline="391">com.example.mybookshelf.UIMaster.barChart</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a66cf6ce29c43e6db34be85ae9990c102" compoundref="UIMaster_8java" startline="666" endline="687">com.example.mybookshelf.UIMaster.configureAxes</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ae589c66b6b1826db14cd0185e2453c12" compoundref="UIMaster_8java" startline="692" endline="699">com.example.mybookshelf.UIMaster.configureChart</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a2f446043c1019868262b5e49ddb58609" compoundref="UIMaster_8java" startline="655" endline="661">com.example.mybookshelf.UIMaster.convertMinutesToHours</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5368b8b93b9216d91a256a2302ea04c8" compoundref="UIMaster_8java" startline="704" endline="715">com.example.mybookshelf.UIMaster.displayTotalReadingTime</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a897a27ba41fe604acf9472257ad18685" compoundref="UIMaster_8java" startline="636" endline="650">com.example.mybookshelf.UIMaster.filterValidEntries</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5c502183bab9192d9f38b42a28be7164" compoundref="UIMaster_8java" startline="551" endline="597">com.example.mybookshelf.UIMaster.loadChartDataAsync</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a897a27ba41fe604acf9472257ad18685" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList&lt; BarEntry &gt;</type>
+        <definition>ArrayList&lt; BarEntry &gt; com.example.mybookshelf.UIMaster.filterValidEntries</definition>
+        <argsstring>(ArrayList&lt; BarEntry &gt; entries)</argsstring>
+        <name>filterValidEntries</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.filterValidEntries</qualifiedname>
+        <param>
+          <type>ArrayList&lt; BarEntry &gt;</type>
+          <declname>entries</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Filters out invalid BarEntry objects based on specific criteria.</para>
+<para>This method iterates through a list of BarEntry objects and checks each entry&apos;s year-month value. It ensures that the year is between 2000 and 2030 and the month is within the range of 1 to 12. Only entries meeting these conditions are added to the validEntries list, which is then returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>entries</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of BarEntry objects to be filtered </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="636" column="23" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="636" bodyend="650"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a1d0b44fba73323953ffbbf69f4f3f4cb" compoundref="UIMaster_8java" startline="602" endline="625">com.example.mybookshelf.UIMaster.setupChart</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a2f446043c1019868262b5e49ddb58609" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ArrayList&lt; BarEntry &gt;</type>
+        <definition>ArrayList&lt; BarEntry &gt; com.example.mybookshelf.UIMaster.convertMinutesToHours</definition>
+        <argsstring>(ArrayList&lt; BarEntry &gt; entries)</argsstring>
+        <name>convertMinutesToHours</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.convertMinutesToHours</qualifiedname>
+        <param>
+          <type>ArrayList&lt; BarEntry &gt;</type>
+          <declname>entries</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Converts a list of BarEntries from minutes to hours. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="655" column="23" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="655" bodyend="661"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a1d0b44fba73323953ffbbf69f4f3f4cb" compoundref="UIMaster_8java" startline="602" endline="625">com.example.mybookshelf.UIMaster.setupChart</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a66cf6ce29c43e6db34be85ae9990c102" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.UIMaster.configureAxes</definition>
+        <argsstring>()</argsstring>
+        <name>configureAxes</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.configureAxes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Configures the X and Y axes of a bar chart. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="666" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="666" bodyend="687"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac22273bb30e9f228991043bcdfbd8af2" compoundref="UIMaster_8java" startline="391">com.example.mybookshelf.UIMaster.barChart</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a1d0b44fba73323953ffbbf69f4f3f4cb" compoundref="UIMaster_8java" startline="602" endline="625">com.example.mybookshelf.UIMaster.setupChart</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ae589c66b6b1826db14cd0185e2453c12" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.UIMaster.configureChart</definition>
+        <argsstring>()</argsstring>
+        <name>configureChart</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.configureChart</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Configures the chart with default settings and animations. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="692" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="692" bodyend="699"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac22273bb30e9f228991043bcdfbd8af2" compoundref="UIMaster_8java" startline="391">com.example.mybookshelf.UIMaster.barChart</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a1d0b44fba73323953ffbbf69f4f3f4cb" compoundref="UIMaster_8java" startline="602" endline="625">com.example.mybookshelf.UIMaster.setupChart</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5368b8b93b9216d91a256a2302ea04c8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.UIMaster.displayTotalReadingTime</definition>
+        <argsstring>(ArrayList&lt; BarEntry &gt; entriesInHours)</argsstring>
+        <name>displayTotalReadingTime</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.displayTotalReadingTime</qualifiedname>
+        <param>
+          <type>ArrayList&lt; BarEntry &gt;</type>
+          <declname>entriesInHours</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays the total reading time by summing up entries and updating a TextView. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="704" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="704" bodyend="715"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a1d0b44fba73323953ffbbf69f4f3f4cb" compoundref="UIMaster_8java" startline="602" endline="625">com.example.mybookshelf.UIMaster.setupChart</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a3beb8f5e82c56206227f83e05d2e2dba" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.UIMaster.showErrorMessage</definition>
+        <argsstring>()</argsstring>
+        <name>showErrorMessage</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.showErrorMessage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Displays a short toast message indicating failure to load reading statistics. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="720" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="720" bodyend="722"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5c502183bab9192d9f38b42a28be7164" compoundref="UIMaster_8java" startline="551" endline="597">com.example.mybookshelf.UIMaster.loadChartDataAsync</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa6aad8404432bdaf23db9b41e99a6ed5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.UIMaster.setupNavigationButtons</definition>
+        <argsstring>()</argsstring>
+        <name>setupNavigationButtons</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.setupNavigationButtons</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets up the navigation buttons with their respective click listeners. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="885" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="885" bodyend="898"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a4636b546c38ace5aedccfd989edc0bb1" compoundref="UIMaster_8java" startline="1075" endline="1144">com.example.mybookshelf.UIMaster.handleListSearch</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa656ff54b76d2aad814455a921b23769" compoundref="UIMaster_8java" startline="97">com.example.mybookshelf.UIMaster.nav_searchBtn</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a2f9dd9d99fba9fbf71600f940fb5eb9e" compoundref="UIMaster_8java" startline="98">com.example.mybookshelf.UIMaster.nav_StatsBtn</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ad30bff41c8ec833af2293c0b6c8b47b2" compoundref="UIMaster_8java" startline="1240" endline="1562">com.example.mybookshelf.UIMaster.navigateToGoals</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac859db60f9068e6a87b633ef697d4d0f" compoundref="UIMaster_8java" startline="1577" endline="1774">com.example.mybookshelf.UIMaster.navigateToSettings</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa3079f36c20fc1b0ec8c01197f06faa3" compoundref="UIMaster_8java" startline="487" endline="495">com.example.mybookshelf.UIMaster.navigateToStats</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ad609d5e0b54e87afcb60aed6c66a792e" compoundref="UIMaster_8java" startline="766" endline="879">com.example.mybookshelf.UIMaster.navigateToStartingPage</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a39a8f40aa163994c415f165d94ee47fd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.UIMaster.filterBooks</definition>
+        <argsstring>(String titleQuery, String selectedAuthor, String selectedGenre)</argsstring>
+        <name>filterBooks</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.filterBooks</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>titleQuery</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>selectedAuthor</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>selectedGenre</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Filters books based on title, author, and genre queries.</para>
+<para>This method iterates over a map of book views and their corresponding <ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book" kindref="compound">Book</ref> objects. It checks if each book matches the provided title query, author, and genre filters. If a book meets all criteria, its view is set to visible; otherwise, it is hidden. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="1153" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="1153" bodyend="1168"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a673cf5a9e0adbd1e6ecdef9a1afa9818" compoundref="UIMaster_8java" startline="104">com.example.mybookshelf.UIMaster.bookViewMap</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a72061c36f82e9d925effeb02dc0da55d" compoundref="Book_8java" startline="118" endline="120">com.example.mybookshelf.dataClass.Book.getAuthor</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ab78862de4a0e97e9190086f397a88fd4" compoundref="Book_8java" startline="26" endline="28">com.example.mybookshelf.dataClass.Book.getGenre</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a4109da1bdee13601576c6725d6e89e71" compoundref="Book_8java" startline="97" endline="99">com.example.mybookshelf.dataClass.Book.getName</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a4636b546c38ace5aedccfd989edc0bb1" compoundref="UIMaster_8java" startline="1075" endline="1144">com.example.mybookshelf.UIMaster.handleListSearch</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a4709f542c160eca1392685b8ba9455e5" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Button</type>
+        <definition>Button com.example.mybookshelf.UIMaster.createStyledGridButton</definition>
+        <argsstring>(String text, View.OnClickListener listener)</argsstring>
+        <name>createStyledGridButton</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.createStyledGridButton</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>View.OnClickListener</type>
+          <declname>listener</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a styled button with specified text and click listener. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="1205" column="20" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="1205" bodyend="1222"/>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a3bfddda8973b9c902065851da2802cd1" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.UIMaster.toggleVisibilityAnimated</definition>
+        <argsstring>(RelativeLayout layout)</argsstring>
+        <name>toggleVisibilityAnimated</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.toggleVisibilityAnimated</qualifiedname>
+        <param>
+          <type>RelativeLayout</type>
+          <declname>layout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Toggles the visibility of a RelativeLayout with an animated scale effect. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="1779" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="1779" bodyend="1801"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>AppCompatActivity</label>
+        <link refid="classAppCompatActivity"/>
+      </node>
+      <node id="34">
+        <label>ArrayList&lt; String &gt;</label>
+      </node>
+      <node id="42">
+        <label>BarChart</label>
+      </node>
+      <node id="5">
+        <label>Button</label>
+      </node>
+      <node id="21">
+        <label>EditText</label>
+      </node>
+      <node id="14">
+        <label>ExecutorService</label>
+      </node>
+      <node id="10">
+        <label>File</label>
+      </node>
+      <node id="48">
+        <label>FrameLayout</label>
+      </node>
+      <node id="15">
+        <label>Handler</label>
+      </node>
+      <node id="35">
+        <label>HashSet&lt; String &gt;</label>
+      </node>
+      <node id="23">
+        <label>ImageButton</label>
+      </node>
+      <node id="26">
+        <label>LinkedList&lt; com.example.mybookshelf.dataClass.Book &gt;</label>
+      </node>
+      <node id="28">
+        <label>LinkedList&lt; com.example.mybookshelf.dataClass.Goal &gt;</label>
+      </node>
+      <node id="29">
+        <label>LinkedList&lt; com.example.mybookshelf.dataClass.Notification &gt;</label>
+      </node>
+      <node id="36">
+        <label>List&lt; View &gt;</label>
+      </node>
+      <node id="40">
+        <label>List&lt; com.example.mybookshelf.dataClass.Book &gt;</label>
+      </node>
+      <node id="37">
+        <label>List&lt; com.example.mybookshelf.dataClass.Goal &gt;</label>
+      </node>
+      <node id="31">
+        <label>Map&lt; View, com.example.mybookshelf.dataClass.Book &gt;</label>
+      </node>
+      <node id="39">
+        <label>RecyclerView::Adapter&lt; CostumeListAdapter.BookViewHolder &gt;</label>
+      </node>
+      <node id="47">
+        <label>RecyclerView.Adapter&lt; CustomGoalAdapter.GoalViewHolder &gt;</label>
+      </node>
+      <node id="33">
+        <label>RelativeLayout</label>
+      </node>
+      <node id="41">
+        <label>RequestOptions</label>
+      </node>
+      <node id="44">
+        <label>SearchView</label>
+      </node>
+      <node id="9">
+        <label>String</label>
+      </node>
+      <node id="24">
+        <label>TextView</label>
+      </node>
+      <node id="27">
+        <label>TreeSet&lt; String &gt;</label>
+      </node>
+      <node id="30">
+        <label>boolean</label>
+      </node>
+      <node id="1">
+        <label>com.example.mybookshelf.UIMaster</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>~mainActivity</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>-emailEditText</edgelabel>
+          <edgelabel>-passwordEditText</edgelabel>
+          <edgelabel>-repeatPassword</edgelabel>
+          <edgelabel>-usernameEditText</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-loginButton</edgelabel>
+          <edgelabel>-registerButton</edgelabel>
+          <edgelabel>-switchToLoginButton</edgelabel>
+          <edgelabel>-switchToRegisterButton</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>-timeSpentReading</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>-nav_StatsBtn</edgelabel>
+          <edgelabel>-nav_searchBtn</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>-timeSpentReadingTextView</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-booksAPI</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>-ai</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-db</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>-logedindUser</edgelabel>
+        </childnode>
+        <childnode refid="31" relation="usage">
+          <edgelabel>-bookViewMap</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-executorService</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-AIprompt</edgelabel>
+        </childnode>
+        <childnode refid="32" relation="usage">
+          <edgelabel>-brf</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>~goalList</edgelabel>
+        </childnode>
+        <childnode refid="38" relation="usage">
+          <edgelabel>-listAdapter</edgelabel>
+        </childnode>
+        <childnode refid="42" relation="usage">
+          <edgelabel>-barChart</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>com.example.mybookshelf.ApiResponseCallback</label>
+        <link refid="interfacecom_1_1example_1_1mybookshelf_1_1ApiResponseCallback"/>
+      </node>
+      <node id="6">
+        <label>com.example.mybookshelf.Authenticator</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1Authenticator"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-db</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-context</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-executorService</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-mainHandler</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>-KEY_ALIAS</edgelabel>
+        </childnode>
+      </node>
+      <node id="32">
+        <label>com.example.mybookshelf.BookRecommendationFlow</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-mainActivity</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>-uiMaster</edgelabel>
+        </childnode>
+        <childnode refid="33" relation="usage">
+          <edgelabel>-box</edgelabel>
+          <edgelabel>-loadingLayout</edgelabel>
+        </childnode>
+        <childnode refid="34" relation="usage">
+          <edgelabel>-atributes</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>-ai</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-bookName</edgelabel>
+        </childnode>
+        <childnode refid="35" relation="usage">
+          <edgelabel>-doNotRecommend</edgelabel>
+        </childnode>
+        <childnode refid="36" relation="usage">
+          <edgelabel>-balls</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>-isThinking</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>com.example.mybookshelf.DataBaseConnection</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection"/>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-executorService</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-PASSWORD</edgelabel>
+          <edgelabel>-URL</edgelabel>
+          <edgelabel>-USER</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-context</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-trustStoreFile</edgelabel>
+        </childnode>
+      </node>
+      <node id="45">
+        <label>com.example.mybookshelf.GoalHandler</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler"/>
+        <childnode refid="25" relation="usage">
+          <edgelabel>-user</edgelabel>
+        </childnode>
+        <childnode refid="46" relation="usage">
+          <edgelabel>-adapter</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>-completedGoalList</edgelabel>
+          <edgelabel>-goalList</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-db</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-mainActivity</edgelabel>
+        </childnode>
+      </node>
+      <node id="38">
+        <label>com.example.mybookshelf.LayoutManager.CostumeListAdapter</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter"/>
+        <childnode refid="39" relation="public-inheritance">
+        </childnode>
+        <childnode refid="40" relation="usage">
+          <edgelabel>-bookList</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-mainActivity</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-db</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>-loggedInUser</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>-uiMaster</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-databaseExecutor</edgelabel>
+        </childnode>
+        <childnode refid="41" relation="usage">
+          <edgelabel>-imageRequestOptions</edgelabel>
+        </childnode>
+      </node>
+      <node id="46">
+        <label>com.example.mybookshelf.LayoutManager.CustomGoalAdapter</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter"/>
+        <childnode refid="47" relation="public-inheritance">
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>-goals</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-context</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-db</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>com.example.mybookshelf.MainActivity</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-addBookButton</edgelabel>
+          <edgelabel>-goToStarting</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>-auth</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-booksAPI</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>-ai</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>-uiMaster</edgelabel>
+        </childnode>
+        <childnode refid="43" relation="usage">
+          <edgelabel>-search</edgelabel>
+        </childnode>
+        <childnode refid="44" relation="usage">
+          <edgelabel>-searchView</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>-timeSpentReadingTextView</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>-logedindUser</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>~db</edgelabel>
+        </childnode>
+        <childnode refid="45" relation="usage">
+          <edgelabel>-handler</edgelabel>
+        </childnode>
+        <childnode refid="48" relation="usage">
+          <edgelabel>-loadingOverlay</edgelabel>
+        </childnode>
+        <childnode refid="49" relation="usage">
+          <edgelabel>-REQUEST_CODE_POST_NOTIFICATIONS</edgelabel>
+        </childnode>
+      </node>
+      <node id="43">
+        <label>com.example.mybookshelf.Search</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1Search"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>~api</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>~uiMaster</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>~executorService</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>~mainThreadHandler</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>com.example.mybookshelf.UIMaster</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>~mainActivity</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>-emailEditText</edgelabel>
+          <edgelabel>-passwordEditText</edgelabel>
+          <edgelabel>-repeatPassword</edgelabel>
+          <edgelabel>-usernameEditText</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-loginButton</edgelabel>
+          <edgelabel>-registerButton</edgelabel>
+          <edgelabel>-switchToLoginButton</edgelabel>
+          <edgelabel>-switchToRegisterButton</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>-timeSpentReading</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>-nav_StatsBtn</edgelabel>
+          <edgelabel>-nav_searchBtn</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>-timeSpentReadingTextView</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-booksAPI</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>-ai</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-db</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>-logedindUser</edgelabel>
+        </childnode>
+        <childnode refid="31" relation="usage">
+          <edgelabel>-bookViewMap</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-executorService</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-AIprompt</edgelabel>
+        </childnode>
+        <childnode refid="32" relation="usage">
+          <edgelabel>-brf</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>~goalList</edgelabel>
+        </childnode>
+        <childnode refid="38" relation="usage">
+          <edgelabel>-listAdapter</edgelabel>
+        </childnode>
+        <childnode refid="42" relation="usage">
+          <edgelabel>-barChart</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>com.example.mybookshelf.apis.AiAPI</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-API_KEY</edgelabel>
+          <edgelabel>-API_URL</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>-client</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>-retrofit</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>-aiService</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>com.example.mybookshelf.apis.AiAPI.AiService</label>
+        <link refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1_1AiService"/>
+      </node>
+      <node id="13">
+        <label>com.example.mybookshelf.apis.BooksAPI</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-executorService</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>-mainHandler</edgelabel>
+        </childnode>
+      </node>
+      <node id="25">
+        <label>com.example.mybookshelf.dataClass.User</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-email</edgelabel>
+          <edgelabel>-hash_password</edgelabel>
+          <edgelabel>-user</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>-UID</edgelabel>
+          <edgelabel>-hour</edgelabel>
+          <edgelabel>-minute</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>-bookList</edgelabel>
+        </childnode>
+        <childnode refid="27" relation="usage">
+          <edgelabel>-authorList</edgelabel>
+          <edgelabel>-genreList</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>-completedGoalList</edgelabel>
+          <edgelabel>-failedGoalList</edgelabel>
+          <edgelabel>-goalList</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>-notificationList</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-mainActivity</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-db</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>-reminder</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>final ExecutorService</label>
+      </node>
+      <node id="11">
+        <label>final Handler</label>
+      </node>
+      <node id="22">
+        <label>int</label>
+      </node>
+      <node id="17">
+        <label>static final OkHttpClient</label>
+      </node>
+      <node id="18">
+        <label>static final Retrofit</label>
+      </node>
+      <node id="12">
+        <label>static final String</label>
+      </node>
+      <node id="49">
+        <label>static final int</label>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="84" column="7" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="84" bodyend="1809"/>
+    <listofallmembers>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a7988f320c66cc06640a7e88dfea44791" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>ai</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ae58fc63fffcaeca03afa133ba306d62c" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>AIprompt</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac22273bb30e9f228991043bcdfbd8af2" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>barChart</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a3ebd4eaa7d80139bd41dc5e1fa218c4c" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>booksAPI</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a673cf5a9e0adbd1e6ecdef9a1afa9818" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>bookViewMap</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a498a128e82ebf6851cb77f377169e05e" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>brf</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa1dc0909ddd670cbf7ed2fd6ecb141cf" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>clearUI</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a66cf6ce29c43e6db34be85ae9990c102" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>configureAxes</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ae589c66b6b1826db14cd0185e2453c12" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>configureChart</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a2f446043c1019868262b5e49ddb58609" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>convertMinutesToHours</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a1533d0ed2384f2ec729cfcec7bd9a25f" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>createBookBox</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a4709f542c160eca1392685b8ba9455e5" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>createStyledGridButton</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a4b26ad26de31c25665781530f174561d" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>db</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5368b8b93b9216d91a256a2302ea04c8" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>displayTotalReadingTime</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a03ef58ea33c530aab57a58a298e12c1d" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>emailEditText</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa3a5fde5cd9073a735c5bbac40a79a98" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>executorService</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a3e552449814fd4b18a4070128261c571" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>fillSpinners</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a39a8f40aa163994c415f165d94ee47fd" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>filterBooks</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a897a27ba41fe604acf9472257ad18685" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>filterValidEntries</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ae7d87877ec33cbf6de7c0cb67ef5eb39" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>getBtnAdd</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a066a14333819f9cde27957ef8a02f180" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>getBtnRemove</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aeb718f8b7c1e891bfeb515d302b4fb62" prot="package" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>goalList</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a4636b546c38ace5aedccfd989edc0bb1" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>handleListSearch</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aeadc13ea946b279afce35c39bb36f3b6" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>initializeViews</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a118323285918e37742fb31592587087e" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>listAdapter</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5c502183bab9192d9f38b42a28be7164" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>loadChartDataAsync</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a725459700c0500c243299fc80cd0ea7a" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>logedindUser</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a1578fb1dc832e74fc94d2c6115e16b6a" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>loginButton</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a99664fe186d6cb741c01898ff195937d" prot="package" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>mainActivity</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa656ff54b76d2aad814455a921b23769" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>nav_searchBtn</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a2f9dd9d99fba9fbf71600f940fb5eb9e" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>nav_StatsBtn</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac2a608fcf86d3dbe14b4684dbbaf1431" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>navigateToDetails</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ad30bff41c8ec833af2293c0b6c8b47b2" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>navigateToGoals</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac859db60f9068e6a87b633ef697d4d0f" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>navigateToSettings</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ad609d5e0b54e87afcb60aed6c66a792e" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>navigateToStartingPage</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa3079f36c20fc1b0ec8c01197f06faa3" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>navigateToStats</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ac38373761aef1dccd30d4418583c194f" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>passwordEditText</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a78605aa6a9565efbae9637ee1c9f9c0c" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>reduceTimeSpendReading</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1acfa71075f7a34512b0d3b97c1ee11af2" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>registerButton</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a33c96fac4ab139d0ee338ed0cefee6cf" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>repeatPassword</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a00d8b97e1a726995297f32919c1921ab" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>setDb</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a1d0b44fba73323953ffbbf69f4f3f4cb" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>setupChart</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aa6aad8404432bdaf23db9b41e99a6ed5" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>setupNavigationButtons</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a3bb75047e98f0333fa2fdfd173bc80b0" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>setupNavigationListeners</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1ad68836f56831277d04d47f04bcb4e6e4" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>setUSer</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a3beb8f5e82c56206227f83e05d2e2dba" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>showErrorMessage</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5d06d53d8ef756629247fde0f557a3d1" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>showLogin</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a5f5bae724e7f3d3de15486430b3bc8c1" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>showRegister</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a8725961b54c4b55c77f54f1686cdcc02" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>switchToLoginButton</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a92107a45357a577f1600118d4bcd03ab" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>switchToRegisterButton</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1af7a5045ff2d7c1e6ae4042b87305a3f2" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>timeSpentReading</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a51f677da9e14df925e0078873b518490" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>timeSpentReadingTextView</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a3bfddda8973b9c902065851da2802cd1" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>toggleVisibilityAnimated</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1aaf0e05b3454197f2e623075569b118d4" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>UIMaster</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a0306308fc0728bc63c3dcc670b14a402" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>updateReadingTime</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1a61448faa08032ad7f27f29c4a6d08e75" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster</scope><name>usernameEditText</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

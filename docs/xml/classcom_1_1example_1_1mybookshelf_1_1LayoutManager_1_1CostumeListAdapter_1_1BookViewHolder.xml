@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1BookViewHolder" kind="class" language="Java" prot="package">
+    <compoundname>com::example::mybookshelf::LayoutManager::CostumeListAdapter::BookViewHolder</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">RecyclerView.ViewHolder</basecompoundref>
+    <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1BookViewHolder_1a455f9e17e54007e000e73f4534d1208a" prot="package" static="no" mutable="no">
+        <type>final ImageButton</type>
+        <definition>final ImageButton com.example.mybookshelf.LayoutManager.CostumeListAdapter.BookViewHolder.btnRemove</definition>
+        <argsstring></argsstring>
+        <name>btnRemove</name>
+        <qualifiedname>com.example.mybookshelf.LayoutManager.CostumeListAdapter.BookViewHolder.btnRemove</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/LayoutManager/CostumeListAdapter.java" line="369" column="27" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/LayoutManager/CostumeListAdapter.java" bodystart="369" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1BookViewHolder_1a84fd6983e576eef23842b10e9695d4a2" prot="package" static="no" mutable="no">
+        <type>final ImageView</type>
+        <definition>final ImageView com.example.mybookshelf.LayoutManager.CostumeListAdapter.BookViewHolder.bookImage</definition>
+        <argsstring></argsstring>
+        <name>bookImage</name>
+        <qualifiedname>com.example.mybookshelf.LayoutManager.CostumeListAdapter.BookViewHolder.bookImage</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/LayoutManager/CostumeListAdapter.java" line="370" column="25" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/LayoutManager/CostumeListAdapter.java" bodystart="370" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1BookViewHolder_1a7bf353bb1d32c6a53dadc196bfb5cd6d" prot="package" static="no" mutable="no">
+        <type>final TextView</type>
+        <definition>final TextView com.example.mybookshelf.LayoutManager.CostumeListAdapter.BookViewHolder.bookDetails</definition>
+        <argsstring></argsstring>
+        <name>bookDetails</name>
+        <qualifiedname>com.example.mybookshelf.LayoutManager.CostumeListAdapter.BookViewHolder.bookDetails</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/LayoutManager/CostumeListAdapter.java" line="371" column="24" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/LayoutManager/CostumeListAdapter.java" bodystart="371" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1BookViewHolder_1aae3afb378da228446dad78cadb6d50dd" prot="package" static="no" mutable="no">
+        <type>final EditText</type>
+        <definition>final EditText com.example.mybookshelf.LayoutManager.CostumeListAdapter.BookViewHolder.noteField</definition>
+        <argsstring></argsstring>
+        <name>noteField</name>
+        <qualifiedname>com.example.mybookshelf.LayoutManager.CostumeListAdapter.BookViewHolder.noteField</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/LayoutManager/CostumeListAdapter.java" line="372" column="24" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/LayoutManager/CostumeListAdapter.java" bodystart="372" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1BookViewHolder_1a2a60c2d41b2677351b3256fa9f6566e6" prot="package" static="no" mutable="no">
+        <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher" kindref="compound">DebouncedTextWatcher</ref></type>
+        <definition>DebouncedTextWatcher com.example.mybookshelf.LayoutManager.CostumeListAdapter.BookViewHolder.textWatcher</definition>
+        <argsstring></argsstring>
+        <name>textWatcher</name>
+        <qualifiedname>com.example.mybookshelf.LayoutManager.CostumeListAdapter.BookViewHolder.textWatcher</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/LayoutManager/CostumeListAdapter.java" line="373" column="30" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/LayoutManager/CostumeListAdapter.java" bodystart="373" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1BookViewHolder_1af305ca13e1cb2e7514032edcefddc1e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.example.mybookshelf.LayoutManager.CostumeListAdapter.BookViewHolder.BookViewHolder</definition>
+        <argsstring>(@NonNull View itemView, ImageButton btnRemove, ImageView bookImage, TextView bookDetails, EditText noteField)</argsstring>
+        <name>BookViewHolder</name>
+        <qualifiedname>com.example.mybookshelf.LayoutManager.CostumeListAdapter.BookViewHolder.BookViewHolder</qualifiedname>
+        <param>
+          <type>@NonNull View</type>
+          <declname>itemView</declname>
+        </param>
+        <param>
+          <type>ImageButton</type>
+          <declname>btnRemove</declname>
+        </param>
+        <param>
+          <type>ImageView</type>
+          <declname>bookImage</declname>
+        </param>
+        <param>
+          <type>TextView</type>
+          <declname>bookDetails</declname>
+        </param>
+        <param>
+          <type>EditText</type>
+          <declname>noteField</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/LayoutManager/CostumeListAdapter.java" line="375" column="16" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/LayoutManager/CostumeListAdapter.java" bodystart="375" bodyend="382"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>RecyclerView::ViewHolder</label>
+      </node>
+      <node id="1">
+        <label>com.example.mybookshelf.LayoutManager.CostumeListAdapter.BookViewHolder</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>RecyclerView::ViewHolder</label>
+      </node>
+      <node id="11">
+        <label>Runnable</label>
+      </node>
+      <node id="8">
+        <label>TextWatcher</label>
+        <link refid="classTextWatcher"/>
+      </node>
+      <node id="1">
+        <label>com.example.mybookshelf.LayoutManager.CostumeListAdapter.BookViewHolder</label>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>~btnRemove</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>~bookImage</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>~bookDetails</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>~noteField</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>~textWatcher</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher"/>
+        <childnode refid="8" relation="public-inheritance">
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-delayMillis</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-handler</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-runnable</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>final EditText</label>
+      </node>
+      <node id="10">
+        <label>final Handler</label>
+      </node>
+      <node id="3">
+        <label>final ImageButton</label>
+      </node>
+      <node id="4">
+        <label>final ImageView</label>
+      </node>
+      <node id="5">
+        <label>final TextView</label>
+      </node>
+      <node id="9">
+        <label>final long</label>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/LayoutManager/CostumeListAdapter.java" line="368" column="12" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/LayoutManager/CostumeListAdapter.java" bodystart="368" bodyend="383"/>
+    <listofallmembers>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1BookViewHolder_1a7bf353bb1d32c6a53dadc196bfb5cd6d" prot="package" virt="non-virtual"><scope>com::example::mybookshelf::LayoutManager::CostumeListAdapter::BookViewHolder</scope><name>bookDetails</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1BookViewHolder_1a84fd6983e576eef23842b10e9695d4a2" prot="package" virt="non-virtual"><scope>com::example::mybookshelf::LayoutManager::CostumeListAdapter::BookViewHolder</scope><name>bookImage</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1BookViewHolder_1af305ca13e1cb2e7514032edcefddc1e6" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::LayoutManager::CostumeListAdapter::BookViewHolder</scope><name>BookViewHolder</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1BookViewHolder_1a455f9e17e54007e000e73f4534d1208a" prot="package" virt="non-virtual"><scope>com::example::mybookshelf::LayoutManager::CostumeListAdapter::BookViewHolder</scope><name>btnRemove</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1BookViewHolder_1aae3afb378da228446dad78cadb6d50dd" prot="package" virt="non-virtual"><scope>com::example::mybookshelf::LayoutManager::CostumeListAdapter::BookViewHolder</scope><name>noteField</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1BookViewHolder_1a2a60c2d41b2677351b3256fa9f6566e6" prot="package" virt="non-virtual"><scope>com::example::mybookshelf::LayoutManager::CostumeListAdapter::BookViewHolder</scope><name>textWatcher</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI" kind="class" language="Java" prot="public">
+    <compoundname>com::example::mybookshelf::apis::BooksAPI</compoundname>
+    <innerclass refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1_1BookCallback" prot="public">com::example::mybookshelf::apis::BooksAPI::BookCallback</innerclass>
+    <innerclass refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1_1BooksCallback" prot="public">com::example::mybookshelf::apis::BooksAPI::BooksCallback</innerclass>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1a684022e402edb00f89528d2c14bdf385" prot="private" static="no" mutable="no">
+        <type>final ExecutorService</type>
+        <definition>final ExecutorService com.example.mybookshelf.apis.BooksAPI.executorService</definition>
+        <argsstring></argsstring>
+        <name>executorService</name>
+        <qualifiedname>com.example.mybookshelf.apis.BooksAPI.executorService</qualifiedname>
+        <initializer>= Executors.newSingleThreadExecutor()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/BooksAPI.java" line="23" column="35" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/BooksAPI.java" bodystart="23" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1a8a2a962adad00e7ab410b7b23c13a45e" compoundref="BooksAPI_8java" startline="73" endline="83">com.example.mybookshelf.apis.BooksAPI.getMultipleBooks</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1ac350a4b300b12277d646f8dc3fd57aef" compoundref="BooksAPI_8java" startline="45" endline="66">com.example.mybookshelf.apis.BooksAPI.getOneBook</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1ac7482ff0418a335a176a2515aa86ef3f" prot="private" static="no" mutable="no">
+        <type>final Handler</type>
+        <definition>final Handler com.example.mybookshelf.apis.BooksAPI.mainHandler</definition>
+        <argsstring></argsstring>
+        <name>mainHandler</name>
+        <qualifiedname>com.example.mybookshelf.apis.BooksAPI.mainHandler</qualifiedname>
+        <initializer>= new Handler(Looper.getMainLooper())</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/BooksAPI.java" line="24" column="27" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/BooksAPI.java" bodystart="24" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1a8a2a962adad00e7ab410b7b23c13a45e" compoundref="BooksAPI_8java" startline="73" endline="83">com.example.mybookshelf.apis.BooksAPI.getMultipleBooks</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1ac350a4b300b12277d646f8dc3fd57aef" compoundref="BooksAPI_8java" startline="45" endline="66">com.example.mybookshelf.apis.BooksAPI.getOneBook</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1ac350a4b300b12277d646f8dc3fd57aef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.apis.BooksAPI.getOneBook</definition>
+        <argsstring>(String bookName, final BookCallback callback)</argsstring>
+        <name>getOneBook</name>
+        <qualifiedname>com.example.mybookshelf.apis.BooksAPI.getOneBook</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>bookName</declname>
+        </param>
+        <param>
+          <type>final <ref refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1_1BookCallback" kindref="compound">BookCallback</ref></type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fetches a single book by name and invokes the provided callback with the result. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/BooksAPI.java" line="45" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/BooksAPI.java" bodystart="45" bodyend="66"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1a684022e402edb00f89528d2c14bdf385" compoundref="BooksAPI_8java" startline="23">com.example.mybookshelf.apis.BooksAPI.executorService</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1aa9d3aee665891e612035b5d0ffe1f93e" compoundref="BooksAPI_8java" startline="97" endline="151">com.example.mybookshelf.apis.BooksAPI.fetchBooks</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1ac7482ff0418a335a176a2515aa86ef3f" compoundref="BooksAPI_8java" startline="24">com.example.mybookshelf.apis.BooksAPI.mainHandler</references>
+        <references refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1_1BookCallback_1a3e72ba2e384dd024c32999bda2af65d4">com.example.mybookshelf.apis.BooksAPI.BookCallback.onBookFetched</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1a8a2a962adad00e7ab410b7b23c13a45e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.apis.BooksAPI.getMultipleBooks</definition>
+        <argsstring>(String bookName, final BookCallback callback)</argsstring>
+        <name>getMultipleBooks</name>
+        <qualifiedname>com.example.mybookshelf.apis.BooksAPI.getMultipleBooks</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>bookName</declname>
+        </param>
+        <param>
+          <type>final <ref refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1_1BookCallback" kindref="compound">BookCallback</ref></type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fetches and processes multiple books based on a given book name. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/BooksAPI.java" line="73" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/BooksAPI.java" bodystart="73" bodyend="83"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1a684022e402edb00f89528d2c14bdf385" compoundref="BooksAPI_8java" startline="23">com.example.mybookshelf.apis.BooksAPI.executorService</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1aa9d3aee665891e612035b5d0ffe1f93e" compoundref="BooksAPI_8java" startline="97" endline="151">com.example.mybookshelf.apis.BooksAPI.fetchBooks</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1ac7482ff0418a335a176a2515aa86ef3f" compoundref="BooksAPI_8java" startline="24">com.example.mybookshelf.apis.BooksAPI.mainHandler</references>
+        <references refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1_1BookCallback_1a3e72ba2e384dd024c32999bda2af65d4">com.example.mybookshelf.apis.BooksAPI.BookCallback.onBookFetched</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1aa9d3aee665891e612035b5d0ffe1f93e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>List&lt; <ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book" kindref="compound">Book</ref> &gt;</type>
+        <definition>List&lt; Book &gt; com.example.mybookshelf.apis.BooksAPI.fetchBooks</definition>
+        <argsstring>(String urlString)</argsstring>
+        <name>fetchBooks</name>
+        <qualifiedname>com.example.mybookshelf.apis.BooksAPI.fetchBooks</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>urlString</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fetches a list of books from the specified URL.</para>
+<para>Establishes an HTTP connection to the given URL, retrieves the JSON response, and parses it to extract book information. Each book&apos;s details are then used to create a new <ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book" kindref="compound">Book</ref> object which is added to the list. Handles potential exceptions such as IOException or JSONException during the process.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>urlString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the URL from which to fetch the books </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>a list of <ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book" kindref="compound">Book</ref> objects representing the fetched books </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/BooksAPI.java" line="97" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/BooksAPI.java" bodystart="97" bodyend="151"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1a8a2a962adad00e7ab410b7b23c13a45e" compoundref="BooksAPI_8java" startline="73" endline="83">com.example.mybookshelf.apis.BooksAPI.getMultipleBooks</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1ac350a4b300b12277d646f8dc3fd57aef" compoundref="BooksAPI_8java" startline="45" endline="66">com.example.mybookshelf.apis.BooksAPI.getOneBook</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>ExecutorService</label>
+      </node>
+      <node id="3">
+        <label>Handler</label>
+      </node>
+      <node id="1">
+        <label>com.example.mybookshelf.apis.BooksAPI</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-executorService</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-mainHandler</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/BooksAPI.java" line="22" column="7" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/BooksAPI.java" bodystart="22" bodyend="152"/>
+    <listofallmembers>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1a684022e402edb00f89528d2c14bdf385" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::apis::BooksAPI</scope><name>executorService</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1aa9d3aee665891e612035b5d0ffe1f93e" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::apis::BooksAPI</scope><name>fetchBooks</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1a8a2a962adad00e7ab410b7b23c13a45e" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::apis::BooksAPI</scope><name>getMultipleBooks</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1ac350a4b300b12277d646f8dc3fd57aef" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::apis::BooksAPI</scope><name>getOneBook</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1ac7482ff0418a335a176a2515aa86ef3f" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::apis::BooksAPI</scope><name>mainHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

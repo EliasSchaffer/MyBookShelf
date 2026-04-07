@@ -1,0 +1,680 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="MainActivity_8java" kind="file" language="Java">
+    <compoundname>MainActivity.java</compoundname>
+    <includes local="no">android.Manifest</includes>
+    <includes local="no">android.app.AlarmManager</includes>
+    <includes local="no">android.app.NotificationChannel</includes>
+    <includes local="no">android.app.NotificationManager</includes>
+    <includes local="no">android.content.Context</includes>
+    <includes local="no">android.content.Intent</includes>
+    <includes local="no">android.content.pm.PackageManager</includes>
+    <includes local="no">android.os.Build</includes>
+    <includes local="no">android.os.Bundle</includes>
+    <includes local="no">android.provider.Settings</includes>
+    <includes local="no">android.text.TextUtils</includes>
+    <includes local="no">android.util.Log</includes>
+    <includes local="no">android.view.View</includes>
+    <includes local="no">android.widget.ArrayAdapter</includes>
+    <includes local="no">android.widget.Button</includes>
+    <includes local="no">android.widget.EditText</includes>
+    <includes local="no">android.widget.FrameLayout</includes>
+    <includes local="no">android.widget.ImageButton</includes>
+    <includes local="no">android.widget.LinearLayout</includes>
+    <includes local="no">android.widget.SearchView</includes>
+    <includes local="no">android.widget.Spinner</includes>
+    <includes local="no">android.widget.TextView</includes>
+    <includes local="no">android.widget.Toast</includes>
+    <includes local="no">androidx.appcompat.app.AppCompatActivity</includes>
+    <includes local="no">androidx.cardview.widget.CardView</includes>
+    <includes local="no">androidx.core.app.ActivityCompat</includes>
+    <includes local="no">androidx.core.content.ContextCompat</includes>
+    <includes local="no">com.example.mybookshelf.apis.AiAPI</includes>
+    <includes local="no">com.example.mybookshelf.apis.BooksAPI</includes>
+    <includes local="no">com.example.mybookshelf.dataClass.Book</includes>
+    <includes local="no">com.example.mybookshelf.dataClass.User</includes>
+    <includes local="no">com.example.mybookshelf.notifications.NotificationChannelManager</includes>
+    <includes local="no">java.sql.SQLException</includes>
+    <includes local="no">java.time.LocalDate</includes>
+    <includes local="no">java.time.LocalTime</includes>
+    <includes local="no">java.util.ArrayList</includes>
+    <includes local="no">java.util.List</includes>
+    <includes local="no">java.util.concurrent.ExecutionException</includes>
+    <includes local="no">java.util.regex.Matcher</includes>
+    <includes local="no">java.util.regex.Pattern</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/MainActivity.java</label>
+        <link refid="MainActivity_8java"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>android.Manifest</label>
+      </node>
+      <node id="3">
+        <label>android.app.AlarmManager</label>
+      </node>
+      <node id="4">
+        <label>android.app.NotificationChannel</label>
+      </node>
+      <node id="5">
+        <label>android.app.NotificationManager</label>
+      </node>
+      <node id="6">
+        <label>android.content.Context</label>
+      </node>
+      <node id="7">
+        <label>android.content.Intent</label>
+      </node>
+      <node id="8">
+        <label>android.content.pm.PackageManager</label>
+      </node>
+      <node id="9">
+        <label>android.os.Build</label>
+      </node>
+      <node id="10">
+        <label>android.os.Bundle</label>
+      </node>
+      <node id="11">
+        <label>android.provider.Settings</label>
+      </node>
+      <node id="12">
+        <label>android.text.TextUtils</label>
+      </node>
+      <node id="13">
+        <label>android.util.Log</label>
+      </node>
+      <node id="14">
+        <label>android.view.View</label>
+      </node>
+      <node id="15">
+        <label>android.widget.ArrayAdapter</label>
+      </node>
+      <node id="16">
+        <label>android.widget.Button</label>
+      </node>
+      <node id="17">
+        <label>android.widget.EditText</label>
+      </node>
+      <node id="18">
+        <label>android.widget.FrameLayout</label>
+      </node>
+      <node id="19">
+        <label>android.widget.ImageButton</label>
+      </node>
+      <node id="20">
+        <label>android.widget.LinearLayout</label>
+      </node>
+      <node id="21">
+        <label>android.widget.SearchView</label>
+      </node>
+      <node id="22">
+        <label>android.widget.Spinner</label>
+      </node>
+      <node id="23">
+        <label>android.widget.TextView</label>
+      </node>
+      <node id="24">
+        <label>android.widget.Toast</label>
+      </node>
+      <node id="25">
+        <label>androidx.appcompat.app.AppCompatActivity</label>
+      </node>
+      <node id="26">
+        <label>androidx.cardview.widget.CardView</label>
+      </node>
+      <node id="27">
+        <label>androidx.core.app.ActivityCompat</label>
+      </node>
+      <node id="28">
+        <label>androidx.core.content.ContextCompat</label>
+      </node>
+      <node id="29">
+        <label>com.example.mybookshelf.apis.AiAPI</label>
+      </node>
+      <node id="30">
+        <label>com.example.mybookshelf.apis.BooksAPI</label>
+      </node>
+      <node id="31">
+        <label>com.example.mybookshelf.dataClass.Book</label>
+      </node>
+      <node id="32">
+        <label>com.example.mybookshelf.dataClass.User</label>
+      </node>
+      <node id="33">
+        <label>com.example.mybookshelf.notifications.NotificationChannelManager</label>
+      </node>
+      <node id="34">
+        <label>java.sql.SQLException</label>
+      </node>
+      <node id="35">
+        <label>java.time.LocalDate</label>
+      </node>
+      <node id="36">
+        <label>java.time.LocalTime</label>
+      </node>
+      <node id="37">
+        <label>java.util.ArrayList</label>
+      </node>
+      <node id="38">
+        <label>java.util.List</label>
+      </node>
+      <node id="39">
+        <label>java.util.concurrent.ExecutionException</label>
+      </node>
+      <node id="40">
+        <label>java.util.regex.Matcher</label>
+      </node>
+      <node id="41">
+        <label>java.util.regex.Pattern</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity" prot="public">com::example::mybookshelf::MainActivity</innerclass>
+    <innernamespace refid="namespacecom_1_1example_1_1mybookshelf">com::example::mybookshelf</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">package<sp/></highlight><highlight class="normal">com.example.mybookshelf;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.Manifest;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.app.AlarmManager;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.app.NotificationChannel;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.app.NotificationManager;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.content.Context;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.content.Intent;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.content.pm.PackageManager;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.os.Build;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.os.Bundle;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.provider.Settings;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.text.TextUtils;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.util.Log;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.view.View;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.widget.ArrayAdapter;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.widget.Button;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.widget.EditText;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.widget.FrameLayout;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.widget.ImageButton;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.widget.LinearLayout;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.widget.SearchView;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.widget.Spinner;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.widget.TextView;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.widget.Toast;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>androidx.appcompat.app.AppCompatActivity;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>androidx.cardview.widget.CardView;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>androidx.core.app.ActivityCompat;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>androidx.core.content.ContextCompat;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>com.example.mybookshelf.apis.AiAPI;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>com.example.mybookshelf.apis.BooksAPI;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>com.example.mybookshelf.dataClass.Book;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>com.example.mybookshelf.dataClass.User;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>com.example.mybookshelf.notifications.NotificationChannelManager;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.sql.SQLException;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.time.LocalDate;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.time.LocalTime;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.ArrayList;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.List;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.concurrent.ExecutionException;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.regex.Matcher;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.regex.Pattern;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity" kindref="compound">MainActivity</ref><sp/></highlight><highlight class="keyword">extends</highlight><highlight class="normal"><sp/><ref refid="classAppCompatActivity" kindref="compound">AppCompatActivity</ref><sp/>implements<sp/><ref refid="interfacecom_1_1example_1_1mybookshelf_1_1ApiResponseCallback" kindref="compound">ApiResponseCallback</ref><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1adb1d7a8167a1c239fb47005d437e2677" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>Button<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1adb1d7a8167a1c239fb47005d437e2677" kindref="member">addBookButton</ref>;</highlight></codeline>
+<codeline lineno="54" refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1abcc4b781cf26507daaa8eda91d03bae9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1Authenticator" kindref="compound">Authenticator</ref><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1abcc4b781cf26507daaa8eda91d03bae9" kindref="member">auth</ref>;</highlight></codeline>
+<codeline lineno="55" refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a02f1318d4e519da726c2004c5207b8ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI" kindref="compound">BooksAPI</ref><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a02f1318d4e519da726c2004c5207b8ae" kindref="member">booksAPI</ref>;</highlight></codeline>
+<codeline lineno="56" refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ad9b9883f3d697a62d4a7ebbbcd172b90" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI" kindref="compound">AiAPI</ref><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ad9b9883f3d697a62d4a7ebbbcd172b90" kindref="member">ai</ref>;</highlight></codeline>
+<codeline lineno="57" refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ad052780eff7c27821bcac0c3fa479cfc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster" kindref="compound">UIMaster</ref><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ad052780eff7c27821bcac0c3fa479cfc" kindref="member">uiMaster</ref>;</highlight></codeline>
+<codeline lineno="58" refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a0da50a5995889cb8824b41d6e1a47cf4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1Search" kindref="compound">Search</ref><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a0da50a5995889cb8824b41d6e1a47cf4" kindref="member">search</ref>;</highlight></codeline>
+<codeline lineno="59" refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ac3f9490edb7b69f4a82a738418892218" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>SearchView<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ac3f9490edb7b69f4a82a738418892218" kindref="member">searchView</ref>;</highlight></codeline>
+<codeline lineno="60" refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a0f0b0b87d4bcd82b826f6119f8c8f4ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>TextView<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a0f0b0b87d4bcd82b826f6119f8c8f4ed" kindref="member">timeSpentReadingTextView</ref>;</highlight></codeline>
+<codeline lineno="61" refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1aed9597784f32b7165f8ebc7e5771fe2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>Button<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1aed9597784f32b7165f8ebc7e5771fe2c" kindref="member">goToStarting</ref>;</highlight></codeline>
+<codeline lineno="62" refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a7edb90fcb347a011e2039d71ddf55ccc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User" kindref="compound">User</ref><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a7edb90fcb347a011e2039d71ddf55ccc" kindref="member">logedindUser</ref>;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection" kindref="compound">DataBaseConnection</ref><sp/>db;</highlight></codeline>
+<codeline lineno="64" refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ac0bfe95d624fc4c53ee55f2a9d5b6a9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler" kindref="compound">GoalHandler</ref><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ac0bfe95d624fc4c53ee55f2a9d5b6a9c" kindref="member">handler</ref>;</highlight></codeline>
+<codeline lineno="65" refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a01bfe3e5a914f9b659031549a6a70fc6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>FrameLayout<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a01bfe3e5a914f9b659031549a6a70fc6" kindref="member">loadingOverlay</ref>;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1aa4b49fa3923ae42e6ed60203e5d9baf7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1aa4b49fa3923ae42e6ed60203e5d9baf7" kindref="member">REQUEST_CODE_POST_NOTIFICATIONS</ref><sp/>=<sp/>1001;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="70" refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a20792967e760ef1556080e252584e35f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a20792967e760ef1556080e252584e35f" kindref="member">onCreate</ref>(Bundle<sp/>savedInstanceState)<sp/>{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>super.onCreate(savedInstanceState);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Build.VERSION.SDK_INT<sp/>&gt;=<sp/>Build.VERSION_CODES.TIRAMISU)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ContextCompat.checkSelfPermission(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>Manifest.permission.POST_NOTIFICATIONS)</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>!=<sp/>PackageManager.PERMISSION_GRANTED)<sp/>{</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Request<sp/>the<sp/>permission</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ActivityCompat.requestPermissions(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>String[]{Manifest.permission.POST_NOTIFICATIONS},</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1aa4b49fa3923ae42e6ed60203e5d9baf7" kindref="member">REQUEST_CODE_POST_NOTIFICATIONS</ref>);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationChannelManager" kindref="compound">NotificationChannelManager</ref>.<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationChannelManager_1ab57e2b123ed881523d1e0465605396b3" kindref="member">createNotificationChannels</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Build.VERSION.SDK_INT<sp/>&gt;=<sp/>Build.VERSION_CODES.S)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AlarmManager<sp/>am<sp/>=<sp/>(AlarmManager)<sp/>this.getSystemService(Context.ALARM_SERVICE);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!am.canScheduleExactAlarms())<sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Toast.makeText(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Schedule<sp/>exact<sp/>alarms<sp/>permission<sp/>not<sp/>granted&quot;</highlight><highlight class="normal">,<sp/>Toast.LENGTH_SHORT).show();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Intent<sp/>intent<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Intent(Settings.ACTION_REQUEST_SCHEDULE_EXACT_ALARM);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.startActivity(intent);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Build.VERSION.SDK_INT<sp/>&gt;=<sp/>Build.VERSION_CODES.O)<sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NotificationChannel<sp/>channel<sp/>=</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>NotificationChannel(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationChannelManager" kindref="compound">NotificationChannelManager</ref>.<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationChannelManager_1a9d0ba4e30a7959d3ca4d5047054be4e8" kindref="member">DEFAULT_CHANNEL_ID</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Main&quot;</highlight><highlight class="normal">,<sp/>NotificationManager.IMPORTANCE_HIGH);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NotificationChannel<sp/>serverChannel<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>NotificationChannel(</highlight><highlight class="stringliteral">&quot;server_channel&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Server&quot;</highlight><highlight class="normal">,<sp/>NotificationManager.IMPORTANCE_LOW);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NotificationManager<sp/>manager<sp/>=<sp/>getSystemService(NotificationManager.class);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>manager.createNotificationChannel(channel);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>manager.createNotificationChannel(serverChannel);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a0da50a5995889cb8824b41d6e1a47cf4" kindref="member">search</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1Search" kindref="compound">Search</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ad9b9883f3d697a62d4a7ebbbcd172b90" kindref="member">ai</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI" kindref="compound">AiAPI</ref>();</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1abcc4b781cf26507daaa8eda91d03bae9" kindref="member">auth</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1Authenticator" kindref="compound">Authenticator</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ad052780eff7c27821bcac0c3fa479cfc" kindref="member">uiMaster</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster" kindref="compound">UIMaster</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>uid<sp/>=<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1abcc4b781cf26507daaa8eda91d03bae9" kindref="member">auth</ref>.getUid(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>tempToken<sp/>=<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1abcc4b781cf26507daaa8eda91d03bae9" kindref="member">auth</ref>.getToken(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Log.d(</highlight><highlight class="stringliteral">&quot;MainActivity&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Token:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>tempToken);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Log.d(</highlight><highlight class="stringliteral">&quot;MainActivity&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;UID:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>uid);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(uid<sp/>!=<sp/>-1){</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(tempToken.equals(db.getToken(uid).get())){</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LocalTime<sp/>time<sp/>=<sp/>db.getTime(uid).get();</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(time<sp/>!=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a7edb90fcb347a011e2039d71ddf55ccc" kindref="member">logedindUser</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User" kindref="compound">User</ref>(<ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1abcc4b781cf26507daaa8eda91d03bae9" kindref="member">auth</ref>.getUsername(</highlight><highlight class="keyword">this</highlight><highlight class="normal">),<sp/>uid,<sp/>db,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/>time.getHour(),<sp/>time.getMinute(),<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a7edb90fcb347a011e2039d71ddf55ccc" kindref="member">logedindUser</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User" kindref="compound">User</ref>(<ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1abcc4b781cf26507daaa8eda91d03bae9" kindref="member">auth</ref>.getUsername(</highlight><highlight class="keyword">this</highlight><highlight class="normal">),<sp/>uid,<sp/>db,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/>0,<sp/>0,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ad052780eff7c27821bcac0c3fa479cfc" kindref="member">uiMaster</ref>.setUSer(<ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a7edb90fcb347a011e2039d71ddf55ccc" kindref="member">logedindUser</ref>);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ad052780eff7c27821bcac0c3fa479cfc" kindref="member">uiMaster</ref>.navigateToStartingPage();</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1Authenticator" kindref="compound">Authenticator</ref>.<ref refid="classcom_1_1example_1_1mybookshelf_1_1Authenticator_1a57eb5913cd07c88e3f0771b4bf88bc0c" kindref="member">clearStoredToken</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ad052780eff7c27821bcac0c3fa479cfc" kindref="member">uiMaster</ref>.showLogin();</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>db<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection" kindref="compound">DataBaseConnection</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1abcc4b781cf26507daaa8eda91d03bae9" kindref="member">auth</ref>.setDb(this.db);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ad052780eff7c27821bcac0c3fa479cfc" kindref="member">uiMaster</ref>.setDb(this.db);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(ExecutionException<sp/>e)<sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>RuntimeException(e);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(InterruptedException<sp/>e)<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>RuntimeException(e);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(Exception<sp/>e)<sp/>{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Log.e(</highlight><highlight class="stringliteral">&quot;MainActivity&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Error<sp/>during<sp/>initialization&quot;</highlight><highlight class="normal">,<sp/>e);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Toast.makeText(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;An<sp/>error<sp/>occurred<sp/>during<sp/>initialization&quot;</highlight><highlight class="normal">,<sp/>Toast.LENGTH_SHORT).show();</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158" refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ae835969f88426a20de973e577bdf0f8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ae835969f88426a20de973e577bdf0f8d" kindref="member">handleSearch</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>setContentView(R.layout.main_search);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImageButton<sp/>nav_homeBtn<sp/>=<sp/>findViewById(R.id.nav_home);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImageButton<sp/>nav_StatsBtn<sp/>=<sp/>findViewById(R.id.nav_stats);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImageButton<sp/>nav_GoalBtn<sp/>=<sp/>findViewById(R.id.nav_goals);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ImageButton<sp/>nav_SettingBtn<sp/>=<sp/>findViewById(R.id.nav_settings);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LinearLayout<sp/>bookContainer<sp/>=<sp/>findViewById(R.id.bookContainer);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ac3f9490edb7b69f4a82a738418892218" kindref="member">searchView</ref><sp/>=<sp/>findViewById(R.id.searchView);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nav_GoalBtn.setOnClickListener(v<sp/>-&gt;<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ad052780eff7c27821bcac0c3fa479cfc" kindref="member">uiMaster</ref>.navigateToGoals());</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nav_SettingBtn.setOnClickListener(v<sp/>-&gt;<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ad052780eff7c27821bcac0c3fa479cfc" kindref="member">uiMaster</ref>.navigateToSettings());</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nav_StatsBtn.setOnClickListener(v<sp/>-&gt;<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ad052780eff7c27821bcac0c3fa479cfc" kindref="member">uiMaster</ref>.navigateToStats());</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nav_homeBtn.setOnClickListener(v<sp/>-&gt;<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ad052780eff7c27821bcac0c3fa479cfc" kindref="member">uiMaster</ref>.navigateToStartingPage());</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>up<sp/>SearchView<sp/>listener</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ac3f9490edb7b69f4a82a738418892218" kindref="member">searchView</ref>.setOnQueryTextListener(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>SearchView.OnQueryTextListener()<sp/>{</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>public<sp/>boolean<sp/>onQueryTextSubmit(String<sp/>query)<sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Called<sp/>when<sp/>the<sp/>search<sp/>button<sp/>is<sp/>pressed<sp/>(user<sp/>submits<sp/>the<sp/>search)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(!TextUtils.isEmpty(query))<sp/>{</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>search.searchByName(query,<sp/>bookContainer);</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>true;<sp/></highlight><highlight class="comment">//<sp/>Return<sp/>true<sp/>because<sp/>we&apos;ve<sp/>handled<sp/>the<sp/>query<sp/>submission</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>onQueryTextChange(String<sp/>newText)<sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Called<sp/>when<sp/>the<sp/>text<sp/>in<sp/>the<sp/>search<sp/>bar<sp/>changes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!TextUtils.isEmpty(newText))<sp/>{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ad052780eff7c27821bcac0c3fa479cfc" kindref="member">uiMaster</ref>.clearUI(bookContainer);</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a0da50a5995889cb8824b41d6e1a47cf4" kindref="member">search</ref>.searchByName(newText,<sp/>bookContainer);</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>Return<sp/>true<sp/>because<sp/>we&apos;ve<sp/>handled<sp/>the<sp/>query<sp/>change</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200" refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a904eef7a2ffa10b03c833016464e03c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a904eef7a2ffa10b03c833016464e03c7" kindref="member">handleRegister</ref>(EditText<sp/>usernameEditText,<sp/>EditText<sp/>passwordEditText,EditText<sp/>reapeatPasswordEditText,<sp/>EditText<sp/>emailEditText)<sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/>ExecutionException,<sp/>InterruptedException<sp/>{</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>username<sp/>=<sp/>usernameEditText.getText().toString().trim();</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>password<sp/>=<sp/>passwordEditText.getText().toString().trim();</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>repeatPassword<sp/>=<sp/>reapeatPasswordEditText.getText().toString().trim();</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>email<sp/>=<sp/>emailEditText.getText().toString().trim();</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(TextUtils.isEmpty(username)<sp/>||<sp/>TextUtils.isEmpty(password)<sp/>||<sp/>TextUtils.isEmpty(email))<sp/>{</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Toast.makeText(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Please<sp/>enter<sp/>all<sp/>fields&quot;</highlight><highlight class="normal">,<sp/>Toast.LENGTH_SHORT).show();</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!password.equals(repeatPassword)){</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Toast.makeText(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Passwords<sp/>do<sp/>not<sp/>match&quot;</highlight><highlight class="normal">,<sp/>Toast.LENGTH_SHORT).show();</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1abcc4b781cf26507daaa8eda91d03bae9" kindref="member">auth</ref>.register(username,<sp/>password,<sp/>email);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ad052780eff7c27821bcac0c3fa479cfc" kindref="member">uiMaster</ref>.showLogin();</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219" refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a81b3fef1d3e60bd882a453eb941c4797" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a81b3fef1d3e60bd882a453eb941c4797" kindref="member">handleLogin</ref>(EditText<sp/>usernameEditText,<sp/>EditText<sp/>passwordEditText,<sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/>stayLoggedIn)<sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/>ExecutionException,<sp/>InterruptedException<sp/>{</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a01bfe3e5a914f9b659031549a6a70fc6" kindref="member">loadingOverlay</ref><sp/>=<sp/>findViewById(R.id.loading_overlay);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>username<sp/>=<sp/>usernameEditText.getText().toString().trim();</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>password<sp/>=<sp/>passwordEditText.getText().toString().trim();</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(TextUtils.isEmpty(username)<sp/>||<sp/>TextUtils.isEmpty(password))<sp/>{</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Toast.makeText(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Please<sp/>enter<sp/>both<sp/>username<sp/>and<sp/>password&quot;</highlight><highlight class="normal">,<sp/>Toast.LENGTH_SHORT).show();</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User" kindref="compound">User</ref><sp/>userAttempt<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User" kindref="compound">User</ref>(username,<sp/>password);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a01bfe3e5a914f9b659031549a6a70fc6" kindref="member">loadingOverlay</ref>.setVisibility(View.VISIBLE);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1abcc4b781cf26507daaa8eda91d03bae9" kindref="member">auth</ref>.checkLogin(userAttempt,<sp/>(success,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">)<sp/>-&gt;<sp/>{</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(success)<sp/>{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LocalTime<sp/>time<sp/>=<sp/>db.getTime(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">).get();</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(time<sp/>!=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a7edb90fcb347a011e2039d71ddf55ccc" kindref="member">logedindUser</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User" kindref="compound">User</ref>(username,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>db,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/>time.getHour(),<sp/>time.getMinute(),<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a7edb90fcb347a011e2039d71ddf55ccc" kindref="member">logedindUser</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User" kindref="compound">User</ref>(username,<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>db,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/>0,<sp/>0,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ad052780eff7c27821bcac0c3fa479cfc" kindref="member">uiMaster</ref>.setUSer(<ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a7edb90fcb347a011e2039d71ddf55ccc" kindref="member">logedindUser</ref>);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ac0bfe95d624fc4c53ee55f2a9d5b6a9c" kindref="member">handler</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler" kindref="compound">GoalHandler</ref>(<ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a7edb90fcb347a011e2039d71ddf55ccc" kindref="member">logedindUser</ref>,<sp/>db,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a01bfe3e5a914f9b659031549a6a70fc6" kindref="member">loadingOverlay</ref>.setVisibility(View.GONE);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(stayLoggedIn){</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>token<sp/>=<sp/>db.getToken(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">).get();</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1abcc4b781cf26507daaa8eda91d03bae9" kindref="member">auth</ref>.saveToken(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>token,</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>username);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ad052780eff7c27821bcac0c3fa479cfc" kindref="member">uiMaster</ref>.navigateToStartingPage();<sp/><sp/></highlight><highlight class="comment">//<sp/>Move<sp/>navigation<sp/>here<sp/>after<sp/>user<sp/>is<sp/>set</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(ExecutionException<sp/>|<sp/>InterruptedException<sp/>e)<sp/>{</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a01bfe3e5a914f9b659031549a6a70fc6" kindref="member">loadingOverlay</ref>.setVisibility(View.GONE);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Toast.makeText(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Error<sp/>loading<sp/>user<sp/>data&quot;</highlight><highlight class="normal">,<sp/>Toast.LENGTH_SHORT).show();</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>e.printStackTrace();</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(Exception<sp/>e)<sp/>{</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>RuntimeException(e);</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a01bfe3e5a914f9b659031549a6a70fc6" kindref="member">loadingOverlay</ref>.setVisibility(View.GONE);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Toast.makeText(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;User<sp/>or<sp/>Password<sp/>incorrect&quot;</highlight><highlight class="normal">,<sp/>Toast.LENGTH_SHORT).show();</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265" refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ab1625f7432f6fcc4f53a63d3b893065f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ab1625f7432f6fcc4f53a63d3b893065f" kindref="member">saveBook</ref>(<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book" kindref="compound">Book</ref><sp/>book)<sp/>{</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FrameLayout<sp/>frame<sp/>=<sp/>findViewById(R.id.frame);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CardView<sp/>popUp<sp/>=<sp/>findViewById(R.id.popupAddBook);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Button<sp/>btnSave<sp/>=<sp/>findViewById(R.id.saveButtonSearch);</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Button<sp/>btnCancel<sp/>=<sp/>findViewById(R.id.cancelButtonSearch);</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Spinner<sp/>spinnerScore<sp/>=<sp/>findViewById(R.id.scoreSpinner);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Spinner<sp/>spinnerStatus<sp/>=<sp/>findViewById(R.id.statusSpinner);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EditText<sp/>etPagesRead<sp/>=<sp/>findViewById(R.id.pagesInput);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>EditText<sp/>etFiishedAt<sp/>=<sp/>findViewById(R.id.finishedAtInput);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>frame.setVisibility(View.VISIBLE);</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>First<sp/>check<sp/>if<sp/>book<sp/>is<sp/>null</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ArrayList&lt;String&gt;<sp/>scoreList<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>ArrayList&lt;&gt;(List.of(</highlight><highlight class="stringliteral">&quot;none&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;1<sp/>Appalling&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;2<sp/>Horrible&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;3<sp/>Very<sp/>Bad&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;4<sp/>Bad&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;5<sp/>Average&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;6<sp/>Fine&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;7<sp/>Good&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;8<sp/>Very<sp/>Good&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;9<sp/>Great&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;10<sp/>Masterpiece&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ArrayList&lt;String&gt;<sp/>statusList<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>ArrayList&lt;&gt;(List.of(</highlight><highlight class="stringliteral">&quot;Reading&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Completed&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;On-Hold&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Dropped&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;Planned<sp/>To<sp/>Read&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>ArrayAdapters<sp/>for<sp/>the<sp/>Spinners</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ArrayAdapter&lt;String&gt;<sp/>scoreAdapter<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>ArrayAdapter&lt;&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>android.R.layout.simple_spinner_item,<sp/>scoreList);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ArrayAdapter&lt;String&gt;<sp/>statusAdapter<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>ArrayAdapter&lt;&gt;(</highlight><highlight class="keyword">this</highlight><highlight class="normal">,<sp/>android.R.layout.simple_spinner_item,<sp/>statusList);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>layout<sp/>for<sp/>the<sp/>dropdown<sp/>view<sp/>(optional,<sp/>can<sp/>customize)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scoreAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>statusAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spinnerScore.setAdapter(scoreAdapter);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spinnerStatus.setAdapter(statusAdapter);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>btnSave.setOnClickListener(v<sp/>-&gt;<sp/>{</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(book<sp/>==<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Log.e(</highlight><highlight class="stringliteral">&quot;MainActivity&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Cannot<sp/>save<sp/>null<sp/>book&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>book.<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1afe792f46758c4c095ba85c7e996f678f" kindref="member">setStatus</ref>(spinnerStatus.getSelectedItem().toString());</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>score<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<sp/>spinnerScore.getSelectedItem().toString().equalsIgnoreCase(</highlight><highlight class="stringliteral">&quot;none&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Split<sp/>by<sp/>space<sp/>and<sp/>take<sp/>the<sp/>first<sp/>part<sp/>(e.g.,<sp/>&quot;10&quot;<sp/>from<sp/>&quot;10<sp/>Masterpiece&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>score<sp/>=<sp/><sp/>spinnerScore.getSelectedItem().toString().split(</highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal">)[0];</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LocalDate<sp/>finished<sp/>=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(etFiishedAt.getText().toString().isEmpty()){</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>finished<sp/>=<sp/>LocalDate.now();</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>book<sp/>to<sp/>database</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>db.addBookToUser(<ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a7edb90fcb347a011e2039d71ddf55ccc" kindref="member">logedindUser</ref>.getUid(),<sp/>spinnerStatus.getSelectedItem().toString()<sp/>,score,finished,<sp/>book.<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a4109da1bdee13601576c6725d6e89e71" kindref="member">getName</ref>(),<sp/>book.<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a72061c36f82e9d925effeb02dc0da55d" kindref="member">getAuthor</ref>(),<sp/>book.<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1af362f232851507c1d64779533639edf8" kindref="member">getPages</ref>(),</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>book.<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ac360d6fd5854218af0be0939d5b8a88a" kindref="member">getReleaseDate</ref>(),<sp/>book.<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a20229b9b1dcc454fc3f09a50e719294c" kindref="member">getImageUrl</ref>(),<sp/>book.<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a458c546dddffe750414f225231ac7762" kindref="member">getDescription</ref>(),<sp/>book.<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1af362f232851507c1d64779533639edf8" kindref="member">getPages</ref>()*1.5,<sp/>book.<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ab78862de4a0e97e9190086f397a88fd4" kindref="member">getGenre</ref>());</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>book<sp/>from<sp/>database</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book" kindref="compound">Book</ref><sp/>savedBook<sp/>=<sp/>db.getBookByName(book.<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a4109da1bdee13601576c6725d6e89e71" kindref="member">getName</ref>()).get();</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>if<sp/>the<sp/>database<sp/>returned<sp/>a<sp/>valid<sp/>book</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(savedBook<sp/>!=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>savedBook.<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a44a086ea4c79159d292634cf7c07a3b7" kindref="member">setInDatabase</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a7edb90fcb347a011e2039d71ddf55ccc" kindref="member">logedindUser</ref>.addBook(savedBook,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Handle<sp/>the<sp/>case<sp/>where<sp/>the<sp/>book<sp/>wasn&apos;t<sp/>found<sp/>in<sp/>the<sp/>database</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>This<sp/>might<sp/>happen<sp/>if<sp/>there<sp/>was<sp/>an<sp/>issue<sp/>with<sp/>the<sp/>database<sp/>operation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Log.e(</highlight><highlight class="stringliteral">&quot;MainActivity&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>retrieve<sp/>book<sp/>from<sp/>database:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>book.<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a4109da1bdee13601576c6725d6e89e71" kindref="member">getName</ref>());</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"></highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Since<sp/>we<sp/>couldn&apos;t<sp/>get<sp/>the<sp/>book<sp/>from<sp/>the<sp/>database,<sp/>use<sp/>the<sp/>original<sp/>book<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>book.<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a44a086ea4c79159d292634cf7c07a3b7" kindref="member">setInDatabase</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a7edb90fcb347a011e2039d71ddf55ccc" kindref="member">logedindUser</ref>.addBook(book,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ac0bfe95d624fc4c53ee55f2a9d5b6a9c" kindref="member">handler</ref>.handleBookAdded(book);</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(ExecutionException<sp/>|<sp/>InterruptedException<sp/>e)<sp/>{</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Log.e(</highlight><highlight class="stringliteral">&quot;MainActivity&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Error<sp/>retrieving<sp/>book<sp/>from<sp/>database&quot;</highlight><highlight class="normal">,<sp/>e);</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Since<sp/>we<sp/>couldn&apos;t<sp/>get<sp/>the<sp/>book<sp/>from<sp/>the<sp/>database,<sp/>use<sp/>the<sp/>original<sp/>book<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>book.<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a44a086ea4c79159d292634cf7c07a3b7" kindref="member">setInDatabase</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a7edb90fcb347a011e2039d71ddf55ccc" kindref="member">logedindUser</ref>.addBook(book,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>etPagesRead.getText().clear();</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>etPagesRead.getText().clear();</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>frame.setVisibility(View.GONE);</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>btnCancel.setOnClickListener(v<sp/>-&gt;{</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>etPagesRead.getText().clear();</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>etPagesRead.getText().clear();</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>frame.setVisibility(View.GONE);</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight></codeline>
+<codeline lineno="354"><highlight class="normal"></highlight></codeline>
+<codeline lineno="355" refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a5cd85dfa3b0e1f23e7c51726aa4f3098" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a5cd85dfa3b0e1f23e7c51726aa4f3098" kindref="member">removeBook</ref>(<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book" kindref="compound">Book</ref><sp/>book)<sp/></highlight><highlight class="keywordflow">throws</highlight><highlight class="normal"><sp/>SQLException<sp/>{</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Context<sp/>context<sp/>=<sp/>getBaseContext();</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ac0bfe95d624fc4c53ee55f2a9d5b6a9c" kindref="member">handler</ref>.handleBookRemoved(book);</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>db.removeBookFromUser(book,<ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a7edb90fcb347a011e2039d71ddf55ccc" kindref="member">logedindUser</ref>.getUid());</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ad052780eff7c27821bcac0c3fa479cfc" kindref="member">uiMaster</ref>.reduceTimeSpendReading(book.getPages(),<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a0f0b0b87d4bcd82b826f6119f8c8f4ed" kindref="member">timeSpentReadingTextView</ref>);</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a7edb90fcb347a011e2039d71ddf55ccc" kindref="member">logedindUser</ref>.removeBook(book,<sp/>context,<sp/>findViewById(R.id.rvmyList));</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight></codeline>
+<codeline lineno="363" refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a50926ed5b57d759bc1f31b521ee7f104" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User" kindref="compound">User</ref><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a50926ed5b57d759bc1f31b521ee7f104" kindref="member">getUser</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a7edb90fcb347a011e2039d71ddf55ccc" kindref="member">logedindUser</ref>;</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"></highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO<sp/>AI<sp/>Response<sp/>Handeling<sp/>!!REMOVE<sp/>LATER!!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="370" refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1af611e0f07a0e558281325c1052b52054" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1af611e0f07a0e558281325c1052b52054" kindref="member">onSuccess</ref>(String<sp/>response)<sp/>{</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Show<sp/>the<sp/>response<sp/>in<sp/>a<sp/>simple<sp/>dialog<sp/>when<sp/>the<sp/>request<sp/>succeeds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>result<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>JSON<sp/>string<sp/>to<sp/>parse</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Define<sp/>regex<sp/>to<sp/>extract<sp/>the<sp/>&quot;response&quot;<sp/>field<sp/>value<sp/>(handling<sp/>newlines)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>regex<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;\&quot;response\&quot;:\&quot;(.*?)\&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>Pattern<sp/>object<sp/>with<sp/>DOTALL<sp/>mode<sp/>to<sp/>capture<sp/>newlines</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Pattern<sp/>pattern<sp/>=<sp/>Pattern.compile(regex,<sp/>Pattern.DOTALL);</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"></highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>matcher<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Matcher<sp/>matcher<sp/>=<sp/>pattern.matcher(response);</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"></highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO:<sp/>Add<sp/>parsing<sp/>the<sp/>response</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result<sp/>=<sp/>response;</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a7dc4981a407c45a60ab3e92c56f73ea7" kindref="member">showResponseDialog</ref>(result);</highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"></highlight></codeline>
+<codeline lineno="390" refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a50ffabe98d3e06a1168741e025b21b58" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a50ffabe98d3e06a1168741e025b21b58" kindref="member">handleBookChange</ref>(<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book" kindref="compound">Book</ref><sp/>book)<sp/>{</highlight></codeline>
+<codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>db.updateReadingStatus(<ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a7edb90fcb347a011e2039d71ddf55ccc" kindref="member">logedindUser</ref>.getUid(),<sp/>book.<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ab76b4ec7891e641d4c1a70a564805ffb" kindref="member">getId</ref>(),<sp/>book.<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1a7c4ec1f3e154fad200b64643574e5c9c" kindref="member">getStatus</ref>());</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1ac0bfe95d624fc4c53ee55f2a9d5b6a9c" kindref="member">handler</ref>.handleBookChange(book);</highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"></highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/>@Override</highlight></codeline>
+<codeline lineno="396" refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1abae210c11c5d5105978aaf496adcff4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1abae210c11c5d5105978aaf496adcff4d" kindref="member">onFailure</ref>(String<sp/>error)<sp/>{</highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Show<sp/>the<sp/>error<sp/>in<sp/>a<sp/>dialog<sp/>when<sp/>the<sp/>request<sp/>fails</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a7dc4981a407c45a60ab3e92c56f73ea7" kindref="member">showResponseDialog</ref>(error);</highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="400"><highlight class="normal"></highlight></codeline>
+<codeline lineno="401" refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a7dc4981a407c45a60ab3e92c56f73ea7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a7dc4981a407c45a60ab3e92c56f73ea7" kindref="member">showResponseDialog</ref>(String<sp/>message)<sp/>{</highlight></codeline>
+<codeline lineno="402"><highlight class="normal"></highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TextView<sp/>boxReturn<sp/>=<sp/>findViewById(R.id.boxReturn);</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Simple<sp/>pop-up<sp/>without<sp/>any<sp/>buttons<sp/>or<sp/>extra<sp/>UI<sp/>elements</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boxReturn.setText(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boxReturn.setText(message);</highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"></highlight></codeline>
+<codeline lineno="409" refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a749ccb389a8cff8eaf8ae429e30e3c6b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection" kindref="compound">DataBaseConnection</ref><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a749ccb389a8cff8eaf8ae429e30e3c6b" kindref="member">getDb</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="410"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>db;</highlight></codeline>
+<codeline lineno="411"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="412"><highlight class="normal"></highlight></codeline>
+<codeline lineno="413" refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a5d1ff08cd88a729f9b531d898843a0cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a5d1ff08cd88a729f9b531d898843a0cf" kindref="member">setLoadingVisibility</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>visibility)<sp/>{</highlight></codeline>
+<codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>runOnUiThread(()<sp/>-&gt;<sp/>{</highlight></codeline>
+<codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a01bfe3e5a914f9b659031549a6a70fc6" kindref="member">loadingOverlay</ref><sp/>=<sp/>findViewById(R.id.loading_overlay);</highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity_1a01bfe3e5a914f9b659031549a6a70fc6" kindref="member">loadingOverlay</ref>.setVisibility(visibility);</highlight></codeline>
+<codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>});</highlight></codeline>
+<codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="419"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/MainActivity.java"/>
+  </compounddef>
+</doxygen>

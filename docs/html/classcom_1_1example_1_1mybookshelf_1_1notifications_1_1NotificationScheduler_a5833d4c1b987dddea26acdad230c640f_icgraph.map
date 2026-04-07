@@ -1,0 +1,17 @@
+<map id="com.example.mybookshelf.notifications.NotificationScheduler.scheduleDailyNotification" name="com.example.mybookshelf.notifications.NotificationScheduler.scheduleDailyNotification">
+<area shape="rect" id="Node000001" title=" " alt="" coords="741,181,1072,221"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#afeb40a8c5551b18f32abe21dcc0e130a" title=" " alt="" coords="357,5,677,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="865,174,787,124,741,98,692,75,656,63,658,58,694,70,743,93,790,119,868,170"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#a79dcce93490bc0df80c03c0a410672b2" title=" " alt="" coords="340,85,693,125"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="832,179,693,139,638,127,639,122,694,134,833,174"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationReceiver.html#a16b9874ec4597faf7be00d3c2f9f4c81" title=" " alt="" coords="373,149,660,189"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="727,189,660,183,661,178,727,183"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#a6a67704352785acd6dcd956ec2f8834f" title=" " alt="" coords="371,213,663,253"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="728,218,663,223,663,218,727,213"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#ae8deb5392302274178dbbd3116654098" title=" " alt="" coords="351,277,682,317"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="833,227,694,267,639,279,638,274,693,262,832,222"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#ae2ade14f140458ae3bdac1c7e0ac35d8" title=" " alt="" coords="359,341,674,381"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="869,232,791,283,744,309,694,331,656,343,654,338,692,326,741,304,788,278,866,227"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1example_1_1mybookshelf_1_1notifications_1_1BootCompletedReceiver.html#a42ee4762f446eaf5c82cf00042f40593" title=" " alt="" coords="5,213,292,253"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="356,235,292,235,292,230,356,230"/>
+</map>

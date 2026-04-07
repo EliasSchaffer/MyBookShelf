@@ -1,0 +1,1547 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection" kind="class" language="Java" prot="public">
+    <compoundname>com::example::mybookshelf::DataBaseConnection</compoundname>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a19f85f9ddffa0a97088614d80d2c46e9" prot="private" static="no" mutable="no">
+        <type>final ExecutorService</type>
+        <definition>final ExecutorService com.example.mybookshelf.DataBaseConnection.executorService</definition>
+        <argsstring></argsstring>
+        <name>executorService</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.executorService</qualifiedname>
+        <initializer>= Executors.newSingleThreadExecutor()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="52" column="35" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="52" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1abc615b05c31c508894dc2d300292738a" compoundref="DataBaseConnection_8java" startline="381" endline="444">com.example.mybookshelf.DataBaseConnection.addBookToUser</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a3b22d6106c92d008ed8b05c10892f0b7" compoundref="DataBaseConnection_8java" startline="812" endline="905">com.example.mybookshelf.DataBaseConnection.addGoal</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ae83460b1effd3376ba0caca7220f7ced" compoundref="DataBaseConnection_8java" startline="734" endline="757">com.example.mybookshelf.DataBaseConnection.addNotification</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ab37c8cc6cf8d9437799cf3a3d414bfc9" compoundref="DataBaseConnection_8java" startline="194" endline="236">com.example.mybookshelf.DataBaseConnection.addUser</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a47a8bd471a1f2e4336a9378446c9ed86" compoundref="DataBaseConnection_8java" startline="1118" endline="1141">com.example.mybookshelf.DataBaseConnection.changeEmail</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a59558eec699341c6309b60e3c90b8093" compoundref="DataBaseConnection_8java" startline="1067" endline="1091">com.example.mybookshelf.DataBaseConnection.changePassword</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a3938ac17813d30aea19e71d1b149e972" compoundref="DataBaseConnection_8java" startline="1093" endline="1116">com.example.mybookshelf.DataBaseConnection.changeUserName</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aee74be9d7674275d682de94e068a3bec" compoundref="DataBaseConnection_8java" startline="128" endline="162">com.example.mybookshelf.DataBaseConnection.checkLogin</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a86b6ffa92fad445bf50ba17e72ed7652" compoundref="DataBaseConnection_8java" startline="1038" endline="1064">com.example.mybookshelf.DataBaseConnection.checkPassword</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa0888bddcc69a7e612d2b55269f3ce4a" compoundref="DataBaseConnection_8java" startline="1015" endline="1036">com.example.mybookshelf.DataBaseConnection.deleteUser</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a7889f4b8cbd0a3c254d6e1b390f22e00" compoundref="DataBaseConnection_8java" startline="931" endline="1013">com.example.mybookshelf.DataBaseConnection.getAllGoalsForUser</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aaefa5b0d10088dc34c39ba72307026eb" compoundref="DataBaseConnection_8java" startline="783" endline="810">com.example.mybookshelf.DataBaseConnection.getAllNotificationsForUser</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ec52be0a15b422e5307257258d2950" compoundref="DataBaseConnection_8java" startline="338" endline="379">com.example.mybookshelf.DataBaseConnection.getBookByName</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aad5aa12951cce78e9438fbc4056f5544" compoundref="DataBaseConnection_8java" startline="266" endline="335">com.example.mybookshelf.DataBaseConnection.getBooksFromUID</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ac60874dcdc45687598a20a0d61a01d6d" compoundref="DataBaseConnection_8java" startline="711" endline="732">com.example.mybookshelf.DataBaseConnection.getNotesFromUser</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a6bfa78cc6e4957456c3c0a7d6d5281dc" compoundref="DataBaseConnection_8java" startline="521" endline="542">com.example.mybookshelf.DataBaseConnection.getRatingFromBook</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a99a86e8b98d2d0ccc944aa93c10c878d" compoundref="DataBaseConnection_8java" startline="546" endline="625">com.example.mybookshelf.DataBaseConnection.getReadingTimeByMonth</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a219c11f4d9a8683e6f6d963a2e5592fa" compoundref="DataBaseConnection_8java" startline="1143" endline="1172">com.example.mybookshelf.DataBaseConnection.getTime</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa495d1fe38fd1c36bc4bd3f4338b426d" compoundref="DataBaseConnection_8java" startline="164" endline="190">com.example.mybookshelf.DataBaseConnection.getToken</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5dad5786ba9d3e263569a9b1838a0092" compoundref="DataBaseConnection_8java" startline="66" endline="118">com.example.mybookshelf.DataBaseConnection.initialize</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1af193be7b7a849bfac39f8f45d5e16ee8" compoundref="DataBaseConnection_8java" startline="664" endline="708">com.example.mybookshelf.DataBaseConnection.notesChanged</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ab32626fd4493c33e19a7875ff500b2e6" compoundref="DataBaseConnection_8java" startline="629" endline="662">com.example.mybookshelf.DataBaseConnection.removeBookFromUser</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8504514977721bef71acfcdb0019b6c" compoundref="DataBaseConnection_8java" startline="907" endline="929">com.example.mybookshelf.DataBaseConnection.removeGoal</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a1aaec1cad853f2dda5dff2c6e07b5cb8" compoundref="DataBaseConnection_8java" startline="759" endline="781">com.example.mybookshelf.DataBaseConnection.removeNotification</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a76f8124415bc76fa523847cba23c8146" compoundref="DataBaseConnection_8java" startline="1237" endline="1260">com.example.mybookshelf.DataBaseConnection.updateGoalProgress</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a62d192fe1bc6c3cbe531112364da3fa5" compoundref="DataBaseConnection_8java" startline="1197" endline="1235">com.example.mybookshelf.DataBaseConnection.updateReadingStatus</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.DataBaseConnection.URL</definition>
+        <argsstring></argsstring>
+        <name>URL</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.URL</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="56" column="20" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="56" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1abc615b05c31c508894dc2d300292738a" compoundref="DataBaseConnection_8java" startline="381" endline="444">com.example.mybookshelf.DataBaseConnection.addBookToUser</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a3b22d6106c92d008ed8b05c10892f0b7" compoundref="DataBaseConnection_8java" startline="812" endline="905">com.example.mybookshelf.DataBaseConnection.addGoal</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1af697f4f75aef2a9a2b45f603452a8c4e" compoundref="DataBaseConnection_8java" startline="447" endline="518">com.example.mybookshelf.DataBaseConnection.addNewBook</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ae83460b1effd3376ba0caca7220f7ced" compoundref="DataBaseConnection_8java" startline="734" endline="757">com.example.mybookshelf.DataBaseConnection.addNotification</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ab37c8cc6cf8d9437799cf3a3d414bfc9" compoundref="DataBaseConnection_8java" startline="194" endline="236">com.example.mybookshelf.DataBaseConnection.addUser</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a47a8bd471a1f2e4336a9378446c9ed86" compoundref="DataBaseConnection_8java" startline="1118" endline="1141">com.example.mybookshelf.DataBaseConnection.changeEmail</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a59558eec699341c6309b60e3c90b8093" compoundref="DataBaseConnection_8java" startline="1067" endline="1091">com.example.mybookshelf.DataBaseConnection.changePassword</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a3938ac17813d30aea19e71d1b149e972" compoundref="DataBaseConnection_8java" startline="1093" endline="1116">com.example.mybookshelf.DataBaseConnection.changeUserName</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aee74be9d7674275d682de94e068a3bec" compoundref="DataBaseConnection_8java" startline="128" endline="162">com.example.mybookshelf.DataBaseConnection.checkLogin</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a86b6ffa92fad445bf50ba17e72ed7652" compoundref="DataBaseConnection_8java" startline="1038" endline="1064">com.example.mybookshelf.DataBaseConnection.checkPassword</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa0888bddcc69a7e612d2b55269f3ce4a" compoundref="DataBaseConnection_8java" startline="1015" endline="1036">com.example.mybookshelf.DataBaseConnection.deleteUser</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a7889f4b8cbd0a3c254d6e1b390f22e00" compoundref="DataBaseConnection_8java" startline="931" endline="1013">com.example.mybookshelf.DataBaseConnection.getAllGoalsForUser</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aaefa5b0d10088dc34c39ba72307026eb" compoundref="DataBaseConnection_8java" startline="783" endline="810">com.example.mybookshelf.DataBaseConnection.getAllNotificationsForUser</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ec52be0a15b422e5307257258d2950" compoundref="DataBaseConnection_8java" startline="338" endline="379">com.example.mybookshelf.DataBaseConnection.getBookByName</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aad5aa12951cce78e9438fbc4056f5544" compoundref="DataBaseConnection_8java" startline="266" endline="335">com.example.mybookshelf.DataBaseConnection.getBooksFromUID</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ac60874dcdc45687598a20a0d61a01d6d" compoundref="DataBaseConnection_8java" startline="711" endline="732">com.example.mybookshelf.DataBaseConnection.getNotesFromUser</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a6bfa78cc6e4957456c3c0a7d6d5281dc" compoundref="DataBaseConnection_8java" startline="521" endline="542">com.example.mybookshelf.DataBaseConnection.getRatingFromBook</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a99a86e8b98d2d0ccc944aa93c10c878d" compoundref="DataBaseConnection_8java" startline="546" endline="625">com.example.mybookshelf.DataBaseConnection.getReadingTimeByMonth</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a219c11f4d9a8683e6f6d963a2e5592fa" compoundref="DataBaseConnection_8java" startline="1143" endline="1172">com.example.mybookshelf.DataBaseConnection.getTime</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa495d1fe38fd1c36bc4bd3f4338b426d" compoundref="DataBaseConnection_8java" startline="164" endline="190">com.example.mybookshelf.DataBaseConnection.getToken</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5dad5786ba9d3e263569a9b1838a0092" compoundref="DataBaseConnection_8java" startline="66" endline="118">com.example.mybookshelf.DataBaseConnection.initialize</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1af193be7b7a849bfac39f8f45d5e16ee8" compoundref="DataBaseConnection_8java" startline="664" endline="708">com.example.mybookshelf.DataBaseConnection.notesChanged</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ab32626fd4493c33e19a7875ff500b2e6" compoundref="DataBaseConnection_8java" startline="629" endline="662">com.example.mybookshelf.DataBaseConnection.removeBookFromUser</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8504514977721bef71acfcdb0019b6c" compoundref="DataBaseConnection_8java" startline="907" endline="929">com.example.mybookshelf.DataBaseConnection.removeGoal</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a1aaec1cad853f2dda5dff2c6e07b5cb8" compoundref="DataBaseConnection_8java" startline="759" endline="781">com.example.mybookshelf.DataBaseConnection.removeNotification</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1afb94e7db2769200aba9d3eed97a6174b" compoundref="DataBaseConnection_8java" startline="1174" endline="1194">com.example.mybookshelf.DataBaseConnection.setTime</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a76f8124415bc76fa523847cba23c8146" compoundref="DataBaseConnection_8java" startline="1237" endline="1260">com.example.mybookshelf.DataBaseConnection.updateGoalProgress</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a62d192fe1bc6c3cbe531112364da3fa5" compoundref="DataBaseConnection_8java" startline="1197" endline="1235">com.example.mybookshelf.DataBaseConnection.updateReadingStatus</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1adadd13914192fd766da3e78bb288b688" prot="private" static="no" mutable="no">
+        <type>final <ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity" kindref="compound">MainActivity</ref></type>
+        <definition>final MainActivity com.example.mybookshelf.DataBaseConnection.context</definition>
+        <argsstring></argsstring>
+        <name>context</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.context</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="57" column="32" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="57" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ab37c8cc6cf8d9437799cf3a3d414bfc9" compoundref="DataBaseConnection_8java" startline="194" endline="236">com.example.mybookshelf.DataBaseConnection.addUser</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a3ed5c18c7b9fb86f9fe23c531136dc5a" compoundref="DataBaseConnection_8java" startline="61" endline="64">com.example.mybookshelf.DataBaseConnection.DataBaseConnection</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5dad5786ba9d3e263569a9b1838a0092" compoundref="DataBaseConnection_8java" startline="66" endline="118">com.example.mybookshelf.DataBaseConnection.initialize</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a6551f4e8da2da417bc29f8b6af08aa51" compoundref="DataBaseConnection_8java" startline="120" endline="126">com.example.mybookshelf.DataBaseConnection.loadTrustStore</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a89f590f8fe8376ed0bbfc61f50a3f604" prot="private" static="no" mutable="no">
+        <type>File</type>
+        <definition>File com.example.mybookshelf.DataBaseConnection.trustStoreFile</definition>
+        <argsstring></argsstring>
+        <name>trustStoreFile</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.trustStoreFile</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="59" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="59" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5dad5786ba9d3e263569a9b1838a0092" compoundref="DataBaseConnection_8java" startline="66" endline="118">com.example.mybookshelf.DataBaseConnection.initialize</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String com.example.mybookshelf.DataBaseConnection.USER</definition>
+        <argsstring></argsstring>
+        <name>USER</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.USER</qualifiedname>
+        <initializer>= &quot;avnadmin&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="54" column="33" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="54" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1abc615b05c31c508894dc2d300292738a" compoundref="DataBaseConnection_8java" startline="381" endline="444">com.example.mybookshelf.DataBaseConnection.addBookToUser</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a3b22d6106c92d008ed8b05c10892f0b7" compoundref="DataBaseConnection_8java" startline="812" endline="905">com.example.mybookshelf.DataBaseConnection.addGoal</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1af697f4f75aef2a9a2b45f603452a8c4e" compoundref="DataBaseConnection_8java" startline="447" endline="518">com.example.mybookshelf.DataBaseConnection.addNewBook</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ae83460b1effd3376ba0caca7220f7ced" compoundref="DataBaseConnection_8java" startline="734" endline="757">com.example.mybookshelf.DataBaseConnection.addNotification</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ab37c8cc6cf8d9437799cf3a3d414bfc9" compoundref="DataBaseConnection_8java" startline="194" endline="236">com.example.mybookshelf.DataBaseConnection.addUser</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a47a8bd471a1f2e4336a9378446c9ed86" compoundref="DataBaseConnection_8java" startline="1118" endline="1141">com.example.mybookshelf.DataBaseConnection.changeEmail</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a59558eec699341c6309b60e3c90b8093" compoundref="DataBaseConnection_8java" startline="1067" endline="1091">com.example.mybookshelf.DataBaseConnection.changePassword</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a3938ac17813d30aea19e71d1b149e972" compoundref="DataBaseConnection_8java" startline="1093" endline="1116">com.example.mybookshelf.DataBaseConnection.changeUserName</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aee74be9d7674275d682de94e068a3bec" compoundref="DataBaseConnection_8java" startline="128" endline="162">com.example.mybookshelf.DataBaseConnection.checkLogin</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a86b6ffa92fad445bf50ba17e72ed7652" compoundref="DataBaseConnection_8java" startline="1038" endline="1064">com.example.mybookshelf.DataBaseConnection.checkPassword</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa0888bddcc69a7e612d2b55269f3ce4a" compoundref="DataBaseConnection_8java" startline="1015" endline="1036">com.example.mybookshelf.DataBaseConnection.deleteUser</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a7889f4b8cbd0a3c254d6e1b390f22e00" compoundref="DataBaseConnection_8java" startline="931" endline="1013">com.example.mybookshelf.DataBaseConnection.getAllGoalsForUser</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aaefa5b0d10088dc34c39ba72307026eb" compoundref="DataBaseConnection_8java" startline="783" endline="810">com.example.mybookshelf.DataBaseConnection.getAllNotificationsForUser</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ec52be0a15b422e5307257258d2950" compoundref="DataBaseConnection_8java" startline="338" endline="379">com.example.mybookshelf.DataBaseConnection.getBookByName</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aad5aa12951cce78e9438fbc4056f5544" compoundref="DataBaseConnection_8java" startline="266" endline="335">com.example.mybookshelf.DataBaseConnection.getBooksFromUID</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ac60874dcdc45687598a20a0d61a01d6d" compoundref="DataBaseConnection_8java" startline="711" endline="732">com.example.mybookshelf.DataBaseConnection.getNotesFromUser</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a6bfa78cc6e4957456c3c0a7d6d5281dc" compoundref="DataBaseConnection_8java" startline="521" endline="542">com.example.mybookshelf.DataBaseConnection.getRatingFromBook</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a99a86e8b98d2d0ccc944aa93c10c878d" compoundref="DataBaseConnection_8java" startline="546" endline="625">com.example.mybookshelf.DataBaseConnection.getReadingTimeByMonth</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a219c11f4d9a8683e6f6d963a2e5592fa" compoundref="DataBaseConnection_8java" startline="1143" endline="1172">com.example.mybookshelf.DataBaseConnection.getTime</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa495d1fe38fd1c36bc4bd3f4338b426d" compoundref="DataBaseConnection_8java" startline="164" endline="190">com.example.mybookshelf.DataBaseConnection.getToken</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5dad5786ba9d3e263569a9b1838a0092" compoundref="DataBaseConnection_8java" startline="66" endline="118">com.example.mybookshelf.DataBaseConnection.initialize</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1af193be7b7a849bfac39f8f45d5e16ee8" compoundref="DataBaseConnection_8java" startline="664" endline="708">com.example.mybookshelf.DataBaseConnection.notesChanged</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ab32626fd4493c33e19a7875ff500b2e6" compoundref="DataBaseConnection_8java" startline="629" endline="662">com.example.mybookshelf.DataBaseConnection.removeBookFromUser</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8504514977721bef71acfcdb0019b6c" compoundref="DataBaseConnection_8java" startline="907" endline="929">com.example.mybookshelf.DataBaseConnection.removeGoal</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a1aaec1cad853f2dda5dff2c6e07b5cb8" compoundref="DataBaseConnection_8java" startline="759" endline="781">com.example.mybookshelf.DataBaseConnection.removeNotification</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1afb94e7db2769200aba9d3eed97a6174b" compoundref="DataBaseConnection_8java" startline="1174" endline="1194">com.example.mybookshelf.DataBaseConnection.setTime</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a76f8124415bc76fa523847cba23c8146" compoundref="DataBaseConnection_8java" startline="1237" endline="1260">com.example.mybookshelf.DataBaseConnection.updateGoalProgress</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a62d192fe1bc6c3cbe531112364da3fa5" compoundref="DataBaseConnection_8java" startline="1197" endline="1235">com.example.mybookshelf.DataBaseConnection.updateReadingStatus</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String com.example.mybookshelf.DataBaseConnection.PASSWORD</definition>
+        <argsstring></argsstring>
+        <name>PASSWORD</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.PASSWORD</qualifiedname>
+        <initializer>= &quot;AVNS_g46tQJXWz_2Fh_QBWiM&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="55" column="33" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="55" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1abc615b05c31c508894dc2d300292738a" compoundref="DataBaseConnection_8java" startline="381" endline="444">com.example.mybookshelf.DataBaseConnection.addBookToUser</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a3b22d6106c92d008ed8b05c10892f0b7" compoundref="DataBaseConnection_8java" startline="812" endline="905">com.example.mybookshelf.DataBaseConnection.addGoal</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1af697f4f75aef2a9a2b45f603452a8c4e" compoundref="DataBaseConnection_8java" startline="447" endline="518">com.example.mybookshelf.DataBaseConnection.addNewBook</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ae83460b1effd3376ba0caca7220f7ced" compoundref="DataBaseConnection_8java" startline="734" endline="757">com.example.mybookshelf.DataBaseConnection.addNotification</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ab37c8cc6cf8d9437799cf3a3d414bfc9" compoundref="DataBaseConnection_8java" startline="194" endline="236">com.example.mybookshelf.DataBaseConnection.addUser</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a47a8bd471a1f2e4336a9378446c9ed86" compoundref="DataBaseConnection_8java" startline="1118" endline="1141">com.example.mybookshelf.DataBaseConnection.changeEmail</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a59558eec699341c6309b60e3c90b8093" compoundref="DataBaseConnection_8java" startline="1067" endline="1091">com.example.mybookshelf.DataBaseConnection.changePassword</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a3938ac17813d30aea19e71d1b149e972" compoundref="DataBaseConnection_8java" startline="1093" endline="1116">com.example.mybookshelf.DataBaseConnection.changeUserName</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aee74be9d7674275d682de94e068a3bec" compoundref="DataBaseConnection_8java" startline="128" endline="162">com.example.mybookshelf.DataBaseConnection.checkLogin</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a86b6ffa92fad445bf50ba17e72ed7652" compoundref="DataBaseConnection_8java" startline="1038" endline="1064">com.example.mybookshelf.DataBaseConnection.checkPassword</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa0888bddcc69a7e612d2b55269f3ce4a" compoundref="DataBaseConnection_8java" startline="1015" endline="1036">com.example.mybookshelf.DataBaseConnection.deleteUser</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a7889f4b8cbd0a3c254d6e1b390f22e00" compoundref="DataBaseConnection_8java" startline="931" endline="1013">com.example.mybookshelf.DataBaseConnection.getAllGoalsForUser</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aaefa5b0d10088dc34c39ba72307026eb" compoundref="DataBaseConnection_8java" startline="783" endline="810">com.example.mybookshelf.DataBaseConnection.getAllNotificationsForUser</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ec52be0a15b422e5307257258d2950" compoundref="DataBaseConnection_8java" startline="338" endline="379">com.example.mybookshelf.DataBaseConnection.getBookByName</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aad5aa12951cce78e9438fbc4056f5544" compoundref="DataBaseConnection_8java" startline="266" endline="335">com.example.mybookshelf.DataBaseConnection.getBooksFromUID</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ac60874dcdc45687598a20a0d61a01d6d" compoundref="DataBaseConnection_8java" startline="711" endline="732">com.example.mybookshelf.DataBaseConnection.getNotesFromUser</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a6bfa78cc6e4957456c3c0a7d6d5281dc" compoundref="DataBaseConnection_8java" startline="521" endline="542">com.example.mybookshelf.DataBaseConnection.getRatingFromBook</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a99a86e8b98d2d0ccc944aa93c10c878d" compoundref="DataBaseConnection_8java" startline="546" endline="625">com.example.mybookshelf.DataBaseConnection.getReadingTimeByMonth</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a219c11f4d9a8683e6f6d963a2e5592fa" compoundref="DataBaseConnection_8java" startline="1143" endline="1172">com.example.mybookshelf.DataBaseConnection.getTime</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa495d1fe38fd1c36bc4bd3f4338b426d" compoundref="DataBaseConnection_8java" startline="164" endline="190">com.example.mybookshelf.DataBaseConnection.getToken</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5dad5786ba9d3e263569a9b1838a0092" compoundref="DataBaseConnection_8java" startline="66" endline="118">com.example.mybookshelf.DataBaseConnection.initialize</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1af193be7b7a849bfac39f8f45d5e16ee8" compoundref="DataBaseConnection_8java" startline="664" endline="708">com.example.mybookshelf.DataBaseConnection.notesChanged</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ab32626fd4493c33e19a7875ff500b2e6" compoundref="DataBaseConnection_8java" startline="629" endline="662">com.example.mybookshelf.DataBaseConnection.removeBookFromUser</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8504514977721bef71acfcdb0019b6c" compoundref="DataBaseConnection_8java" startline="907" endline="929">com.example.mybookshelf.DataBaseConnection.removeGoal</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a1aaec1cad853f2dda5dff2c6e07b5cb8" compoundref="DataBaseConnection_8java" startline="759" endline="781">com.example.mybookshelf.DataBaseConnection.removeNotification</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1afb94e7db2769200aba9d3eed97a6174b" compoundref="DataBaseConnection_8java" startline="1174" endline="1194">com.example.mybookshelf.DataBaseConnection.setTime</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a76f8124415bc76fa523847cba23c8146" compoundref="DataBaseConnection_8java" startline="1237" endline="1260">com.example.mybookshelf.DataBaseConnection.updateGoalProgress</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a62d192fe1bc6c3cbe531112364da3fa5" compoundref="DataBaseConnection_8java" startline="1197" endline="1235">com.example.mybookshelf.DataBaseConnection.updateReadingStatus</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a3ed5c18c7b9fb86f9fe23c531136dc5a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.example.mybookshelf.DataBaseConnection.DataBaseConnection</definition>
+        <argsstring>(MainActivity context)</argsstring>
+        <name>DataBaseConnection</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.DataBaseConnection</qualifiedname>
+        <param>
+          <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity" kindref="compound">MainActivity</ref></type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="61" column="12" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="61" bodyend="64"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1adadd13914192fd766da3e78bb288b688" compoundref="DataBaseConnection_8java" startline="57">com.example.mybookshelf.DataBaseConnection.context</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5dad5786ba9d3e263569a9b1838a0092" compoundref="DataBaseConnection_8java" startline="66" endline="118">com.example.mybookshelf.DataBaseConnection.initialize</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aee74be9d7674275d682de94e068a3bec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Future&lt; Integer &gt;</type>
+        <definition>Future&lt; Integer &gt; com.example.mybookshelf.DataBaseConnection.checkLogin</definition>
+        <argsstring>(String username, char[] password)</argsstring>
+        <name>checkLogin</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.checkLogin</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>char[]</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="128" column="19" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="128" bodyend="162"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a19f85f9ddffa0a97088614d80d2c46e9" compoundref="DataBaseConnection_8java" startline="52">com.example.mybookshelf.DataBaseConnection.executorService</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" compoundref="DataBaseConnection_8java" startline="55">com.example.mybookshelf.DataBaseConnection.PASSWORD</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" compoundref="DataBaseConnection_8java" startline="56">com.example.mybookshelf.DataBaseConnection.URL</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" compoundref="DataBaseConnection_8java" startline="54">com.example.mybookshelf.DataBaseConnection.USER</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa495d1fe38fd1c36bc4bd3f4338b426d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Future&lt; String &gt;</type>
+        <definition>Future&lt; String &gt; com.example.mybookshelf.DataBaseConnection.getToken</definition>
+        <argsstring>(int uid)</argsstring>
+        <name>getToken</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.getToken</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>uid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="164" column="19" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="164" bodyend="190"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a19f85f9ddffa0a97088614d80d2c46e9" compoundref="DataBaseConnection_8java" startline="52">com.example.mybookshelf.DataBaseConnection.executorService</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" compoundref="DataBaseConnection_8java" startline="55">com.example.mybookshelf.DataBaseConnection.PASSWORD</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" compoundref="DataBaseConnection_8java" startline="56">com.example.mybookshelf.DataBaseConnection.URL</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" compoundref="DataBaseConnection_8java" startline="54">com.example.mybookshelf.DataBaseConnection.USER</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ab37c8cc6cf8d9437799cf3a3d414bfc9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.DataBaseConnection.addUser</definition>
+        <argsstring>(String username, String email, String password)</argsstring>
+        <name>addUser</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.addUser</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>username</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>email</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="194" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="194" bodyend="236"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1adadd13914192fd766da3e78bb288b688" compoundref="DataBaseConnection_8java" startline="57">com.example.mybookshelf.DataBaseConnection.context</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a19f85f9ddffa0a97088614d80d2c46e9" compoundref="DataBaseConnection_8java" startline="52">com.example.mybookshelf.DataBaseConnection.executorService</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1acf3ef21ff7a224367d185748b6247481" compoundref="DataBaseConnection_8java" startline="239" endline="262">com.example.mybookshelf.DataBaseConnection.generateSessionToken</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" compoundref="DataBaseConnection_8java" startline="55">com.example.mybookshelf.DataBaseConnection.PASSWORD</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" compoundref="DataBaseConnection_8java" startline="56">com.example.mybookshelf.DataBaseConnection.URL</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" compoundref="DataBaseConnection_8java" startline="54">com.example.mybookshelf.DataBaseConnection.USER</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1acf3ef21ff7a224367d185748b6247481" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>String</type>
+        <definition>String com.example.mybookshelf.DataBaseConnection.generateSessionToken</definition>
+        <argsstring>()</argsstring>
+        <name>generateSessionToken</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.generateSessionToken</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="239" column="19" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="239" bodyend="262"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ab37c8cc6cf8d9437799cf3a3d414bfc9" compoundref="DataBaseConnection_8java" startline="194" endline="236">com.example.mybookshelf.DataBaseConnection.addUser</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aad5aa12951cce78e9438fbc4056f5544" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Future&lt; List&lt; <ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book" kindref="compound">Book</ref> &gt; &gt;</type>
+        <definition>Future&lt; List&lt; Book &gt; &gt; com.example.mybookshelf.DataBaseConnection.getBooksFromUID</definition>
+        <argsstring>(int uid)</argsstring>
+        <name>getBooksFromUID</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.getBooksFromUID</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>uid</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="266" column="19" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="266" bodyend="335"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a19f85f9ddffa0a97088614d80d2c46e9" compoundref="DataBaseConnection_8java" startline="52">com.example.mybookshelf.DataBaseConnection.executorService</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" compoundref="DataBaseConnection_8java" startline="55">com.example.mybookshelf.DataBaseConnection.PASSWORD</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" compoundref="DataBaseConnection_8java" startline="56">com.example.mybookshelf.DataBaseConnection.URL</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" compoundref="DataBaseConnection_8java" startline="54">com.example.mybookshelf.DataBaseConnection.USER</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ec52be0a15b422e5307257258d2950" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Future&lt; <ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book" kindref="compound">Book</ref> &gt;</type>
+        <definition>Future&lt; Book &gt; com.example.mybookshelf.DataBaseConnection.getBookByName</definition>
+        <argsstring>(String bookName)</argsstring>
+        <name>getBookByName</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.getBookByName</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>bookName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="338" column="19" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="338" bodyend="379"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a19f85f9ddffa0a97088614d80d2c46e9" compoundref="DataBaseConnection_8java" startline="52">com.example.mybookshelf.DataBaseConnection.executorService</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" compoundref="DataBaseConnection_8java" startline="55">com.example.mybookshelf.DataBaseConnection.PASSWORD</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" compoundref="DataBaseConnection_8java" startline="56">com.example.mybookshelf.DataBaseConnection.URL</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" compoundref="DataBaseConnection_8java" startline="54">com.example.mybookshelf.DataBaseConnection.USER</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1abc615b05c31c508894dc2d300292738a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.DataBaseConnection.addBookToUser</definition>
+        <argsstring>(int userId, String status, String score, LocalDate finished, String bookName, String author, int pages, String releaseDate, String imageUrl, String description, double readingTime, String genre)</argsstring>
+        <name>addBookToUser</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.addBookToUser</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>userId</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>status</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>score</declname>
+        </param>
+        <param>
+          <type>LocalDate</type>
+          <declname>finished</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>bookName</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>author</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pages</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>releaseDate</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>imageUrl</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>description</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>readingTime</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>genre</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="381" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="381" bodyend="444"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1af697f4f75aef2a9a2b45f603452a8c4e" compoundref="DataBaseConnection_8java" startline="447" endline="518">com.example.mybookshelf.DataBaseConnection.addNewBook</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a19f85f9ddffa0a97088614d80d2c46e9" compoundref="DataBaseConnection_8java" startline="52">com.example.mybookshelf.DataBaseConnection.executorService</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" compoundref="DataBaseConnection_8java" startline="55">com.example.mybookshelf.DataBaseConnection.PASSWORD</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" compoundref="DataBaseConnection_8java" startline="56">com.example.mybookshelf.DataBaseConnection.URL</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" compoundref="DataBaseConnection_8java" startline="54">com.example.mybookshelf.DataBaseConnection.USER</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a6bfa78cc6e4957456c3c0a7d6d5281dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Future&lt; Float &gt;</type>
+        <definition>Future&lt; Float &gt; com.example.mybookshelf.DataBaseConnection.getRatingFromBook</definition>
+        <argsstring>(Book book)</argsstring>
+        <name>getRatingFromBook</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.getRatingFromBook</qualifiedname>
+        <param>
+          <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book" kindref="compound">Book</ref></type>
+          <declname>book</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="521" column="19" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="521" bodyend="542"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a19f85f9ddffa0a97088614d80d2c46e9" compoundref="DataBaseConnection_8java" startline="52">com.example.mybookshelf.DataBaseConnection.executorService</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ab76b4ec7891e641d4c1a70a564805ffb" compoundref="Book_8java" startline="33" endline="35">com.example.mybookshelf.dataClass.Book.getId</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" compoundref="DataBaseConnection_8java" startline="55">com.example.mybookshelf.DataBaseConnection.PASSWORD</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" compoundref="DataBaseConnection_8java" startline="56">com.example.mybookshelf.DataBaseConnection.URL</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" compoundref="DataBaseConnection_8java" startline="54">com.example.mybookshelf.DataBaseConnection.USER</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a99a86e8b98d2d0ccc944aa93c10c878d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Future&lt; ArrayList&lt; BarEntry &gt; &gt;</type>
+        <definition>Future&lt; ArrayList&lt; BarEntry &gt; &gt; com.example.mybookshelf.DataBaseConnection.getReadingTimeByMonth</definition>
+        <argsstring>(int UID)</argsstring>
+        <name>getReadingTimeByMonth</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.getReadingTimeByMonth</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>UID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="546" column="19" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="546" bodyend="625"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a19f85f9ddffa0a97088614d80d2c46e9" compoundref="DataBaseConnection_8java" startline="52">com.example.mybookshelf.DataBaseConnection.executorService</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" compoundref="DataBaseConnection_8java" startline="55">com.example.mybookshelf.DataBaseConnection.PASSWORD</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" compoundref="DataBaseConnection_8java" startline="56">com.example.mybookshelf.DataBaseConnection.URL</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" compoundref="DataBaseConnection_8java" startline="54">com.example.mybookshelf.DataBaseConnection.USER</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ab32626fd4493c33e19a7875ff500b2e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.DataBaseConnection.removeBookFromUser</definition>
+        <argsstring>(Book book, int UID)</argsstring>
+        <name>removeBookFromUser</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.removeBookFromUser</qualifiedname>
+        <param>
+          <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book" kindref="compound">Book</ref></type>
+          <declname>book</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>UID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="629" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="629" bodyend="662"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a19f85f9ddffa0a97088614d80d2c46e9" compoundref="DataBaseConnection_8java" startline="52">com.example.mybookshelf.DataBaseConnection.executorService</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_1ab76b4ec7891e641d4c1a70a564805ffb" compoundref="Book_8java" startline="33" endline="35">com.example.mybookshelf.dataClass.Book.getId</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" compoundref="DataBaseConnection_8java" startline="55">com.example.mybookshelf.DataBaseConnection.PASSWORD</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" compoundref="DataBaseConnection_8java" startline="56">com.example.mybookshelf.DataBaseConnection.URL</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" compoundref="DataBaseConnection_8java" startline="54">com.example.mybookshelf.DataBaseConnection.USER</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1af193be7b7a849bfac39f8f45d5e16ee8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.DataBaseConnection.notesChanged</definition>
+        <argsstring>(int UID, int bookID, String note)</argsstring>
+        <name>notesChanged</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.notesChanged</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>UID</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bookID</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>note</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="664" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="664" bodyend="708"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a19f85f9ddffa0a97088614d80d2c46e9" compoundref="DataBaseConnection_8java" startline="52">com.example.mybookshelf.DataBaseConnection.executorService</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" compoundref="DataBaseConnection_8java" startline="55">com.example.mybookshelf.DataBaseConnection.PASSWORD</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" compoundref="DataBaseConnection_8java" startline="56">com.example.mybookshelf.DataBaseConnection.URL</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" compoundref="DataBaseConnection_8java" startline="54">com.example.mybookshelf.DataBaseConnection.USER</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ac60874dcdc45687598a20a0d61a01d6d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Future&lt; String &gt;</type>
+        <definition>Future&lt; String &gt; com.example.mybookshelf.DataBaseConnection.getNotesFromUser</definition>
+        <argsstring>(int UID, int bookID)</argsstring>
+        <name>getNotesFromUser</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.getNotesFromUser</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>UID</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bookID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="711" column="19" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="711" bodyend="732"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a19f85f9ddffa0a97088614d80d2c46e9" compoundref="DataBaseConnection_8java" startline="52">com.example.mybookshelf.DataBaseConnection.executorService</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" compoundref="DataBaseConnection_8java" startline="55">com.example.mybookshelf.DataBaseConnection.PASSWORD</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" compoundref="DataBaseConnection_8java" startline="56">com.example.mybookshelf.DataBaseConnection.URL</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" compoundref="DataBaseConnection_8java" startline="54">com.example.mybookshelf.DataBaseConnection.USER</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ae83460b1effd3376ba0caca7220f7ced" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.DataBaseConnection.addNotification</definition>
+        <argsstring>(User user, String message)</argsstring>
+        <name>addNotification</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.addNotification</qualifiedname>
+        <param>
+          <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User" kindref="compound">User</ref></type>
+          <declname>user</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="734" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="734" bodyend="757"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a19f85f9ddffa0a97088614d80d2c46e9" compoundref="DataBaseConnection_8java" startline="52">com.example.mybookshelf.DataBaseConnection.executorService</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1af713b8b3cee54ffce03b9beebe4facff" compoundref="User_8java" startline="311" endline="313">com.example.mybookshelf.dataClass.User.getUid</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" compoundref="DataBaseConnection_8java" startline="55">com.example.mybookshelf.DataBaseConnection.PASSWORD</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" compoundref="DataBaseConnection_8java" startline="56">com.example.mybookshelf.DataBaseConnection.URL</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" compoundref="DataBaseConnection_8java" startline="54">com.example.mybookshelf.DataBaseConnection.USER</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a1aaec1cad853f2dda5dff2c6e07b5cb8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.DataBaseConnection.removeNotification</definition>
+        <argsstring>(int notificationId, int userId)</argsstring>
+        <name>removeNotification</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.removeNotification</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>notificationId</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>userId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="759" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="759" bodyend="781"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a19f85f9ddffa0a97088614d80d2c46e9" compoundref="DataBaseConnection_8java" startline="52">com.example.mybookshelf.DataBaseConnection.executorService</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" compoundref="DataBaseConnection_8java" startline="55">com.example.mybookshelf.DataBaseConnection.PASSWORD</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" compoundref="DataBaseConnection_8java" startline="56">com.example.mybookshelf.DataBaseConnection.URL</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" compoundref="DataBaseConnection_8java" startline="54">com.example.mybookshelf.DataBaseConnection.USER</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aaefa5b0d10088dc34c39ba72307026eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.DataBaseConnection.getAllNotificationsForUser</definition>
+        <argsstring>(int userId, Consumer&lt; List&lt; Notification &gt; &gt; callback)</argsstring>
+        <name>getAllNotificationsForUser</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.getAllNotificationsForUser</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>userId</declname>
+        </param>
+        <param>
+          <type>Consumer&lt; List&lt; <ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification" kindref="compound">Notification</ref> &gt; &gt;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="783" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="783" bodyend="810"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a19f85f9ddffa0a97088614d80d2c46e9" compoundref="DataBaseConnection_8java" startline="52">com.example.mybookshelf.DataBaseConnection.executorService</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" compoundref="DataBaseConnection_8java" startline="55">com.example.mybookshelf.DataBaseConnection.PASSWORD</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" compoundref="DataBaseConnection_8java" startline="56">com.example.mybookshelf.DataBaseConnection.URL</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" compoundref="DataBaseConnection_8java" startline="54">com.example.mybookshelf.DataBaseConnection.USER</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a3b22d6106c92d008ed8b05c10892f0b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>long</type>
+        <definition>long com.example.mybookshelf.DataBaseConnection.addGoal</definition>
+        <argsstring>(Goal goal, User user)</argsstring>
+        <name>addGoal</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.addGoal</qualifiedname>
+        <param>
+          <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal" kindref="compound">Goal</ref></type>
+          <declname>goal</declname>
+        </param>
+        <param>
+          <type><ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User" kindref="compound">User</ref></type>
+          <declname>user</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="812" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="812" bodyend="905"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a19f85f9ddffa0a97088614d80d2c46e9" compoundref="DataBaseConnection_8java" startline="52">com.example.mybookshelf.DataBaseConnection.executorService</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a3b610e27f691556a8dcf5b8301b9a9d1" compoundref="Goal_8java" startline="91" endline="93">com.example.mybookshelf.dataClass.Goal.getBookName</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1ada3305dadb216e065d9bb31e12ff6107" compoundref="Goal_8java" startline="98" endline="100">com.example.mybookshelf.dataClass.Goal.getFrequenzy</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a1c80a58d3e1cd2e1ab6ef14c40d3b274" compoundref="Goal_8java" startline="84" endline="86">com.example.mybookshelf.dataClass.Goal.getGoal</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a964cb06dadac4c69df6c931402733779" compoundref="Goal_8java" startline="70" endline="72">com.example.mybookshelf.dataClass.Goal.getProgress</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a84c2af13824c14a2b6c3dcf25a493d0f" compoundref="Goal_8java" startline="77" endline="79">com.example.mybookshelf.dataClass.Goal.getTarget</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User_1af713b8b3cee54ffce03b9beebe4facff" compoundref="User_8java" startline="311" endline="313">com.example.mybookshelf.dataClass.User.getUid</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" compoundref="DataBaseConnection_8java" startline="55">com.example.mybookshelf.DataBaseConnection.PASSWORD</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" compoundref="DataBaseConnection_8java" startline="56">com.example.mybookshelf.DataBaseConnection.URL</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" compoundref="DataBaseConnection_8java" startline="54">com.example.mybookshelf.DataBaseConnection.USER</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8504514977721bef71acfcdb0019b6c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.DataBaseConnection.removeGoal</definition>
+        <argsstring>(int goalId, int userId)</argsstring>
+        <name>removeGoal</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.removeGoal</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>goalId</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>userId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="907" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="907" bodyend="929"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a19f85f9ddffa0a97088614d80d2c46e9" compoundref="DataBaseConnection_8java" startline="52">com.example.mybookshelf.DataBaseConnection.executorService</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" compoundref="DataBaseConnection_8java" startline="55">com.example.mybookshelf.DataBaseConnection.PASSWORD</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" compoundref="DataBaseConnection_8java" startline="56">com.example.mybookshelf.DataBaseConnection.URL</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" compoundref="DataBaseConnection_8java" startline="54">com.example.mybookshelf.DataBaseConnection.USER</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a7889f4b8cbd0a3c254d6e1b390f22e00" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.DataBaseConnection.getAllGoalsForUser</definition>
+        <argsstring>(int userId, Consumer&lt; List&lt; Goal &gt; &gt; callback)</argsstring>
+        <name>getAllGoalsForUser</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.getAllGoalsForUser</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>userId</declname>
+        </param>
+        <param>
+          <type>Consumer&lt; List&lt; <ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal" kindref="compound">Goal</ref> &gt; &gt;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="931" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="931" bodyend="1013"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a19f85f9ddffa0a97088614d80d2c46e9" compoundref="DataBaseConnection_8java" startline="52">com.example.mybookshelf.DataBaseConnection.executorService</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" compoundref="DataBaseConnection_8java" startline="55">com.example.mybookshelf.DataBaseConnection.PASSWORD</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a6d63369ad63bbffa2e26cf8466a53e8b" compoundref="Goal_8java" startline="105" endline="107">com.example.mybookshelf.dataClass.Goal.setId</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" compoundref="DataBaseConnection_8java" startline="56">com.example.mybookshelf.DataBaseConnection.URL</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" compoundref="DataBaseConnection_8java" startline="54">com.example.mybookshelf.DataBaseConnection.USER</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa0888bddcc69a7e612d2b55269f3ce4a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.DataBaseConnection.deleteUser</definition>
+        <argsstring>(int userId)</argsstring>
+        <name>deleteUser</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.deleteUser</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>userId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="1015" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="1015" bodyend="1036"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a19f85f9ddffa0a97088614d80d2c46e9" compoundref="DataBaseConnection_8java" startline="52">com.example.mybookshelf.DataBaseConnection.executorService</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" compoundref="DataBaseConnection_8java" startline="55">com.example.mybookshelf.DataBaseConnection.PASSWORD</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" compoundref="DataBaseConnection_8java" startline="56">com.example.mybookshelf.DataBaseConnection.URL</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" compoundref="DataBaseConnection_8java" startline="54">com.example.mybookshelf.DataBaseConnection.USER</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a86b6ffa92fad445bf50ba17e72ed7652" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Future&lt; String &gt;</type>
+        <definition>Future&lt; String &gt; com.example.mybookshelf.DataBaseConnection.checkPassword</definition>
+        <argsstring>(int userId)</argsstring>
+        <name>checkPassword</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.checkPassword</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>userId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="1038" column="19" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="1038" bodyend="1064"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a19f85f9ddffa0a97088614d80d2c46e9" compoundref="DataBaseConnection_8java" startline="52">com.example.mybookshelf.DataBaseConnection.executorService</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" compoundref="DataBaseConnection_8java" startline="55">com.example.mybookshelf.DataBaseConnection.PASSWORD</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" compoundref="DataBaseConnection_8java" startline="56">com.example.mybookshelf.DataBaseConnection.URL</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" compoundref="DataBaseConnection_8java" startline="54">com.example.mybookshelf.DataBaseConnection.USER</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a59558eec699341c6309b60e3c90b8093" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.DataBaseConnection.changePassword</definition>
+        <argsstring>(int userId, String newPassword)</argsstring>
+        <name>changePassword</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.changePassword</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>userId</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>newPassword</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="1067" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="1067" bodyend="1091"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a19f85f9ddffa0a97088614d80d2c46e9" compoundref="DataBaseConnection_8java" startline="52">com.example.mybookshelf.DataBaseConnection.executorService</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" compoundref="DataBaseConnection_8java" startline="55">com.example.mybookshelf.DataBaseConnection.PASSWORD</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" compoundref="DataBaseConnection_8java" startline="56">com.example.mybookshelf.DataBaseConnection.URL</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" compoundref="DataBaseConnection_8java" startline="54">com.example.mybookshelf.DataBaseConnection.USER</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a3938ac17813d30aea19e71d1b149e972" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.DataBaseConnection.changeUserName</definition>
+        <argsstring>(int userId, String newUser)</argsstring>
+        <name>changeUserName</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.changeUserName</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>userId</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>newUser</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="1093" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="1093" bodyend="1116"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a19f85f9ddffa0a97088614d80d2c46e9" compoundref="DataBaseConnection_8java" startline="52">com.example.mybookshelf.DataBaseConnection.executorService</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" compoundref="DataBaseConnection_8java" startline="55">com.example.mybookshelf.DataBaseConnection.PASSWORD</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" compoundref="DataBaseConnection_8java" startline="56">com.example.mybookshelf.DataBaseConnection.URL</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" compoundref="DataBaseConnection_8java" startline="54">com.example.mybookshelf.DataBaseConnection.USER</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a47a8bd471a1f2e4336a9378446c9ed86" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.DataBaseConnection.changeEmail</definition>
+        <argsstring>(int userId, String email)</argsstring>
+        <name>changeEmail</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.changeEmail</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>userId</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>email</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="1118" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="1118" bodyend="1141"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a19f85f9ddffa0a97088614d80d2c46e9" compoundref="DataBaseConnection_8java" startline="52">com.example.mybookshelf.DataBaseConnection.executorService</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" compoundref="DataBaseConnection_8java" startline="55">com.example.mybookshelf.DataBaseConnection.PASSWORD</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" compoundref="DataBaseConnection_8java" startline="56">com.example.mybookshelf.DataBaseConnection.URL</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" compoundref="DataBaseConnection_8java" startline="54">com.example.mybookshelf.DataBaseConnection.USER</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a219c11f4d9a8683e6f6d963a2e5592fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Future&lt; LocalTime &gt;</type>
+        <definition>Future&lt; LocalTime &gt; com.example.mybookshelf.DataBaseConnection.getTime</definition>
+        <argsstring>(int userId)</argsstring>
+        <name>getTime</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.getTime</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>userId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="1143" column="19" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="1143" bodyend="1172"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a19f85f9ddffa0a97088614d80d2c46e9" compoundref="DataBaseConnection_8java" startline="52">com.example.mybookshelf.DataBaseConnection.executorService</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" compoundref="DataBaseConnection_8java" startline="55">com.example.mybookshelf.DataBaseConnection.PASSWORD</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" compoundref="DataBaseConnection_8java" startline="56">com.example.mybookshelf.DataBaseConnection.URL</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" compoundref="DataBaseConnection_8java" startline="54">com.example.mybookshelf.DataBaseConnection.USER</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1afb94e7db2769200aba9d3eed97a6174b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.DataBaseConnection.setTime</definition>
+        <argsstring>(int userId, LocalTime time)</argsstring>
+        <name>setTime</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.setTime</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>userId</declname>
+        </param>
+        <param>
+          <type>LocalTime</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="1174" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="1174" bodyend="1194"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" compoundref="DataBaseConnection_8java" startline="55">com.example.mybookshelf.DataBaseConnection.PASSWORD</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" compoundref="DataBaseConnection_8java" startline="56">com.example.mybookshelf.DataBaseConnection.URL</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" compoundref="DataBaseConnection_8java" startline="54">com.example.mybookshelf.DataBaseConnection.USER</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a62d192fe1bc6c3cbe531112364da3fa5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.DataBaseConnection.updateReadingStatus</definition>
+        <argsstring>(int userId, int bookId, String readingStatus)</argsstring>
+        <name>updateReadingStatus</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.updateReadingStatus</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>userId</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bookId</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>readingStatus</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="1197" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="1197" bodyend="1235"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a19f85f9ddffa0a97088614d80d2c46e9" compoundref="DataBaseConnection_8java" startline="52">com.example.mybookshelf.DataBaseConnection.executorService</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" compoundref="DataBaseConnection_8java" startline="55">com.example.mybookshelf.DataBaseConnection.PASSWORD</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" compoundref="DataBaseConnection_8java" startline="56">com.example.mybookshelf.DataBaseConnection.URL</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" compoundref="DataBaseConnection_8java" startline="54">com.example.mybookshelf.DataBaseConnection.USER</references>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a76f8124415bc76fa523847cba23c8146" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.DataBaseConnection.updateGoalProgress</definition>
+        <argsstring>(int userId, int goalID, int progress)</argsstring>
+        <name>updateGoalProgress</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.updateGoalProgress</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>userId</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>goalID</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>progress</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="1237" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="1237" bodyend="1260"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a19f85f9ddffa0a97088614d80d2c46e9" compoundref="DataBaseConnection_8java" startline="52">com.example.mybookshelf.DataBaseConnection.executorService</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" compoundref="DataBaseConnection_8java" startline="55">com.example.mybookshelf.DataBaseConnection.PASSWORD</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" compoundref="DataBaseConnection_8java" startline="56">com.example.mybookshelf.DataBaseConnection.URL</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" compoundref="DataBaseConnection_8java" startline="54">com.example.mybookshelf.DataBaseConnection.USER</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5dad5786ba9d3e263569a9b1838a0092" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void com.example.mybookshelf.DataBaseConnection.initialize</definition>
+        <argsstring>()</argsstring>
+        <name>initialize</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.initialize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="66" column="18" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="66" bodyend="118"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1adadd13914192fd766da3e78bb288b688" compoundref="DataBaseConnection_8java" startline="57">com.example.mybookshelf.DataBaseConnection.context</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a19f85f9ddffa0a97088614d80d2c46e9" compoundref="DataBaseConnection_8java" startline="52">com.example.mybookshelf.DataBaseConnection.executorService</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a6551f4e8da2da417bc29f8b6af08aa51" compoundref="DataBaseConnection_8java" startline="120" endline="126">com.example.mybookshelf.DataBaseConnection.loadTrustStore</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" compoundref="DataBaseConnection_8java" startline="55">com.example.mybookshelf.DataBaseConnection.PASSWORD</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a89f590f8fe8376ed0bbfc61f50a3f604" compoundref="DataBaseConnection_8java" startline="59">com.example.mybookshelf.DataBaseConnection.trustStoreFile</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" compoundref="DataBaseConnection_8java" startline="56">com.example.mybookshelf.DataBaseConnection.URL</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" compoundref="DataBaseConnection_8java" startline="54">com.example.mybookshelf.DataBaseConnection.USER</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a3ed5c18c7b9fb86f9fe23c531136dc5a" compoundref="DataBaseConnection_8java" startline="61" endline="64">com.example.mybookshelf.DataBaseConnection.DataBaseConnection</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a6551f4e8da2da417bc29f8b6af08aa51" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>KeyStore</type>
+        <definition>KeyStore com.example.mybookshelf.DataBaseConnection.loadTrustStore</definition>
+        <argsstring>()</argsstring>
+        <name>loadTrustStore</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.loadTrustStore</qualifiedname>
+        <exceptions> throws Exception </exceptions>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="120" column="22" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="120" bodyend="126"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1adadd13914192fd766da3e78bb288b688" compoundref="DataBaseConnection_8java" startline="57">com.example.mybookshelf.DataBaseConnection.context</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5dad5786ba9d3e263569a9b1838a0092" compoundref="DataBaseConnection_8java" startline="66" endline="118">com.example.mybookshelf.DataBaseConnection.initialize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1af697f4f75aef2a9a2b45f603452a8c4e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int com.example.mybookshelf.DataBaseConnection.addNewBook</definition>
+        <argsstring>(String bookName, String author, int pages, String releaseDate, String imageUrl, String description, String genre)</argsstring>
+        <name>addNewBook</name>
+        <qualifiedname>com.example.mybookshelf.DataBaseConnection.addNewBook</qualifiedname>
+        <param>
+          <type>String</type>
+          <declname>bookName</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>author</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pages</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>releaseDate</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>imageUrl</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>description</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>genre</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="447" column="17" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="447" bodyend="518"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" compoundref="DataBaseConnection_8java" startline="55">com.example.mybookshelf.DataBaseConnection.PASSWORD</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" compoundref="DataBaseConnection_8java" startline="56">com.example.mybookshelf.DataBaseConnection.URL</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" compoundref="DataBaseConnection_8java" startline="54">com.example.mybookshelf.DataBaseConnection.USER</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1abc615b05c31c508894dc2d300292738a" compoundref="DataBaseConnection_8java" startline="381" endline="444">com.example.mybookshelf.DataBaseConnection.addBookToUser</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="5">
+        <label>AppCompatActivity</label>
+        <link refid="classAppCompatActivity"/>
+      </node>
+      <node id="34">
+        <label>ArrayList&lt; String &gt;</label>
+      </node>
+      <node id="42">
+        <label>BarChart</label>
+      </node>
+      <node id="7">
+        <label>Button</label>
+      </node>
+      <node id="21">
+        <label>EditText</label>
+      </node>
+      <node id="14">
+        <label>ExecutorService</label>
+      </node>
+      <node id="10">
+        <label>File</label>
+      </node>
+      <node id="48">
+        <label>FrameLayout</label>
+      </node>
+      <node id="15">
+        <label>Handler</label>
+      </node>
+      <node id="35">
+        <label>HashSet&lt; String &gt;</label>
+      </node>
+      <node id="23">
+        <label>ImageButton</label>
+      </node>
+      <node id="26">
+        <label>LinkedList&lt; com.example.mybookshelf.dataClass.Book &gt;</label>
+      </node>
+      <node id="28">
+        <label>LinkedList&lt; com.example.mybookshelf.dataClass.Goal &gt;</label>
+      </node>
+      <node id="29">
+        <label>LinkedList&lt; com.example.mybookshelf.dataClass.Notification &gt;</label>
+      </node>
+      <node id="36">
+        <label>List&lt; View &gt;</label>
+      </node>
+      <node id="40">
+        <label>List&lt; com.example.mybookshelf.dataClass.Book &gt;</label>
+      </node>
+      <node id="37">
+        <label>List&lt; com.example.mybookshelf.dataClass.Goal &gt;</label>
+      </node>
+      <node id="31">
+        <label>Map&lt; View, com.example.mybookshelf.dataClass.Book &gt;</label>
+      </node>
+      <node id="39">
+        <label>RecyclerView::Adapter&lt; CostumeListAdapter.BookViewHolder &gt;</label>
+      </node>
+      <node id="47">
+        <label>RecyclerView.Adapter&lt; CustomGoalAdapter.GoalViewHolder &gt;</label>
+      </node>
+      <node id="33">
+        <label>RelativeLayout</label>
+      </node>
+      <node id="41">
+        <label>RequestOptions</label>
+      </node>
+      <node id="44">
+        <label>SearchView</label>
+      </node>
+      <node id="3">
+        <label>String</label>
+      </node>
+      <node id="24">
+        <label>TextView</label>
+      </node>
+      <node id="27">
+        <label>TreeSet&lt; String &gt;</label>
+      </node>
+      <node id="30">
+        <label>boolean</label>
+      </node>
+      <node id="1">
+        <label>com.example.mybookshelf.DataBaseConnection</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-executorService</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-PASSWORD</edgelabel>
+          <edgelabel>-URL</edgelabel>
+          <edgelabel>-USER</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-context</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-trustStoreFile</edgelabel>
+        </childnode>
+      </node>
+      <node id="6">
+        <label>com.example.mybookshelf.ApiResponseCallback</label>
+        <link refid="interfacecom_1_1example_1_1mybookshelf_1_1ApiResponseCallback"/>
+      </node>
+      <node id="8">
+        <label>com.example.mybookshelf.Authenticator</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1Authenticator"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-db</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-context</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-executorService</edgelabel>
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>-mainHandler</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>-KEY_ALIAS</edgelabel>
+        </childnode>
+      </node>
+      <node id="32">
+        <label>com.example.mybookshelf.BookRecommendationFlow</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-mainActivity</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>-uiMaster</edgelabel>
+        </childnode>
+        <childnode refid="33" relation="usage">
+          <edgelabel>-box</edgelabel>
+          <edgelabel>-loadingLayout</edgelabel>
+        </childnode>
+        <childnode refid="34" relation="usage">
+          <edgelabel>-atributes</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>-ai</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-bookName</edgelabel>
+        </childnode>
+        <childnode refid="35" relation="usage">
+          <edgelabel>-doNotRecommend</edgelabel>
+        </childnode>
+        <childnode refid="36" relation="usage">
+          <edgelabel>-balls</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>-isThinking</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>com.example.mybookshelf.DataBaseConnection</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-executorService</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-PASSWORD</edgelabel>
+          <edgelabel>-URL</edgelabel>
+          <edgelabel>-USER</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-context</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>-trustStoreFile</edgelabel>
+        </childnode>
+      </node>
+      <node id="45">
+        <label>com.example.mybookshelf.GoalHandler</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler"/>
+        <childnode refid="25" relation="usage">
+          <edgelabel>-user</edgelabel>
+        </childnode>
+        <childnode refid="46" relation="usage">
+          <edgelabel>-adapter</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>-completedGoalList</edgelabel>
+          <edgelabel>-goalList</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-db</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-mainActivity</edgelabel>
+        </childnode>
+      </node>
+      <node id="38">
+        <label>com.example.mybookshelf.LayoutManager.CostumeListAdapter</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter"/>
+        <childnode refid="39" relation="public-inheritance">
+        </childnode>
+        <childnode refid="40" relation="usage">
+          <edgelabel>-bookList</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-mainActivity</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-db</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>-loggedInUser</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>-uiMaster</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-databaseExecutor</edgelabel>
+        </childnode>
+        <childnode refid="41" relation="usage">
+          <edgelabel>-imageRequestOptions</edgelabel>
+        </childnode>
+      </node>
+      <node id="46">
+        <label>com.example.mybookshelf.LayoutManager.CustomGoalAdapter</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter"/>
+        <childnode refid="47" relation="public-inheritance">
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>-goals</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-context</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-db</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>com.example.mybookshelf.MainActivity</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-addBookButton</edgelabel>
+          <edgelabel>-goToStarting</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>-auth</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-booksAPI</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>-ai</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>-uiMaster</edgelabel>
+        </childnode>
+        <childnode refid="43" relation="usage">
+          <edgelabel>-search</edgelabel>
+        </childnode>
+        <childnode refid="44" relation="usage">
+          <edgelabel>-searchView</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>-timeSpentReadingTextView</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>-logedindUser</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>~db</edgelabel>
+        </childnode>
+        <childnode refid="45" relation="usage">
+          <edgelabel>-handler</edgelabel>
+        </childnode>
+        <childnode refid="48" relation="usage">
+          <edgelabel>-loadingOverlay</edgelabel>
+        </childnode>
+        <childnode refid="49" relation="usage">
+          <edgelabel>-REQUEST_CODE_POST_NOTIFICATIONS</edgelabel>
+        </childnode>
+      </node>
+      <node id="43">
+        <label>com.example.mybookshelf.Search</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1Search"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>~api</edgelabel>
+        </childnode>
+        <childnode refid="20" relation="usage">
+          <edgelabel>~uiMaster</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>~executorService</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>~mainThreadHandler</edgelabel>
+        </childnode>
+      </node>
+      <node id="20">
+        <label>com.example.mybookshelf.UIMaster</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>~mainActivity</edgelabel>
+        </childnode>
+        <childnode refid="21" relation="usage">
+          <edgelabel>-emailEditText</edgelabel>
+          <edgelabel>-passwordEditText</edgelabel>
+          <edgelabel>-repeatPassword</edgelabel>
+          <edgelabel>-usernameEditText</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>-loginButton</edgelabel>
+          <edgelabel>-registerButton</edgelabel>
+          <edgelabel>-switchToLoginButton</edgelabel>
+          <edgelabel>-switchToRegisterButton</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>-timeSpentReading</edgelabel>
+        </childnode>
+        <childnode refid="23" relation="usage">
+          <edgelabel>-nav_StatsBtn</edgelabel>
+          <edgelabel>-nav_searchBtn</edgelabel>
+        </childnode>
+        <childnode refid="24" relation="usage">
+          <edgelabel>-timeSpentReadingTextView</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>-booksAPI</edgelabel>
+        </childnode>
+        <childnode refid="16" relation="usage">
+          <edgelabel>-ai</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-db</edgelabel>
+        </childnode>
+        <childnode refid="25" relation="usage">
+          <edgelabel>-logedindUser</edgelabel>
+        </childnode>
+        <childnode refid="31" relation="usage">
+          <edgelabel>-bookViewMap</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-executorService</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-AIprompt</edgelabel>
+        </childnode>
+        <childnode refid="32" relation="usage">
+          <edgelabel>-brf</edgelabel>
+        </childnode>
+        <childnode refid="37" relation="usage">
+          <edgelabel>~goalList</edgelabel>
+        </childnode>
+        <childnode refid="38" relation="usage">
+          <edgelabel>-listAdapter</edgelabel>
+        </childnode>
+        <childnode refid="42" relation="usage">
+          <edgelabel>-barChart</edgelabel>
+        </childnode>
+      </node>
+      <node id="16">
+        <label>com.example.mybookshelf.apis.AiAPI</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-API_KEY</edgelabel>
+          <edgelabel>-API_URL</edgelabel>
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>-client</edgelabel>
+        </childnode>
+        <childnode refid="18" relation="usage">
+          <edgelabel>-retrofit</edgelabel>
+        </childnode>
+        <childnode refid="19" relation="usage">
+          <edgelabel>-aiService</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>com.example.mybookshelf.apis.AiAPI.AiService</label>
+        <link refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1_1AiService"/>
+      </node>
+      <node id="13">
+        <label>com.example.mybookshelf.apis.BooksAPI</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>-executorService</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>-mainHandler</edgelabel>
+        </childnode>
+      </node>
+      <node id="25">
+        <label>com.example.mybookshelf.dataClass.User</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-email</edgelabel>
+          <edgelabel>-hash_password</edgelabel>
+          <edgelabel>-user</edgelabel>
+        </childnode>
+        <childnode refid="22" relation="usage">
+          <edgelabel>-UID</edgelabel>
+          <edgelabel>-hour</edgelabel>
+          <edgelabel>-minute</edgelabel>
+        </childnode>
+        <childnode refid="26" relation="usage">
+          <edgelabel>-bookList</edgelabel>
+        </childnode>
+        <childnode refid="27" relation="usage">
+          <edgelabel>-authorList</edgelabel>
+          <edgelabel>-genreList</edgelabel>
+        </childnode>
+        <childnode refid="28" relation="usage">
+          <edgelabel>-completedGoalList</edgelabel>
+          <edgelabel>-failedGoalList</edgelabel>
+          <edgelabel>-goalList</edgelabel>
+        </childnode>
+        <childnode refid="29" relation="usage">
+          <edgelabel>-notificationList</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-mainActivity</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>-db</edgelabel>
+        </childnode>
+        <childnode refid="30" relation="usage">
+          <edgelabel>-reminder</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>final ExecutorService</label>
+      </node>
+      <node id="11">
+        <label>final Handler</label>
+      </node>
+      <node id="22">
+        <label>int</label>
+      </node>
+      <node id="17">
+        <label>static final OkHttpClient</label>
+      </node>
+      <node id="18">
+        <label>static final Retrofit</label>
+      </node>
+      <node id="12">
+        <label>static final String</label>
+      </node>
+      <node id="49">
+        <label>static final int</label>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" line="50" column="7" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/DataBaseConnection.java" bodystart="50" bodyend="1261"/>
+    <listofallmembers>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1abc615b05c31c508894dc2d300292738a" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>addBookToUser</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a3b22d6106c92d008ed8b05c10892f0b7" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>addGoal</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1af697f4f75aef2a9a2b45f603452a8c4e" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>addNewBook</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ae83460b1effd3376ba0caca7220f7ced" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>addNotification</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ab37c8cc6cf8d9437799cf3a3d414bfc9" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>addUser</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a47a8bd471a1f2e4336a9378446c9ed86" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>changeEmail</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a59558eec699341c6309b60e3c90b8093" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>changePassword</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a3938ac17813d30aea19e71d1b149e972" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>changeUserName</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aee74be9d7674275d682de94e068a3bec" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>checkLogin</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a86b6ffa92fad445bf50ba17e72ed7652" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>checkPassword</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1adadd13914192fd766da3e78bb288b688" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>context</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a3ed5c18c7b9fb86f9fe23c531136dc5a" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>DataBaseConnection</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa0888bddcc69a7e612d2b55269f3ce4a" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>deleteUser</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a19f85f9ddffa0a97088614d80d2c46e9" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>executorService</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1acf3ef21ff7a224367d185748b6247481" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>generateSessionToken</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a7889f4b8cbd0a3c254d6e1b390f22e00" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>getAllGoalsForUser</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aaefa5b0d10088dc34c39ba72307026eb" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>getAllNotificationsForUser</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ec52be0a15b422e5307257258d2950" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>getBookByName</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aad5aa12951cce78e9438fbc4056f5544" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>getBooksFromUID</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ac60874dcdc45687598a20a0d61a01d6d" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>getNotesFromUser</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a6bfa78cc6e4957456c3c0a7d6d5281dc" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>getRatingFromBook</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a99a86e8b98d2d0ccc944aa93c10c878d" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>getReadingTimeByMonth</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a219c11f4d9a8683e6f6d963a2e5592fa" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>getTime</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa495d1fe38fd1c36bc4bd3f4338b426d" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>getToken</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5dad5786ba9d3e263569a9b1838a0092" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>initialize</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a6551f4e8da2da417bc29f8b6af08aa51" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>loadTrustStore</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1af193be7b7a849bfac39f8f45d5e16ee8" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>notesChanged</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8ed5b2f35becedacaab42216f921c48" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>PASSWORD</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1ab32626fd4493c33e19a7875ff500b2e6" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>removeBookFromUser</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aa8504514977721bef71acfcdb0019b6c" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>removeGoal</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a1aaec1cad853f2dda5dff2c6e07b5cb8" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>removeNotification</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1afb94e7db2769200aba9d3eed97a6174b" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>setTime</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a89f590f8fe8376ed0bbfc61f50a3f604" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>trustStoreFile</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a76f8124415bc76fa523847cba23c8146" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>updateGoalProgress</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a62d192fe1bc6c3cbe531112364da3fa5" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>updateReadingStatus</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1a5737bacc185010702d20e4380318959d" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>URL</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_1aebfa52c8bb7e772ab8713234e3754392" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::DataBaseConnection</scope><name>USER</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

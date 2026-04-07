@@ -1,0 +1,1207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="MyBookShelf " />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="MyBookShelf - Custom CSS theme for html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://github.com/EliasSchaffer/MyBookShelf" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>MyBookShelf: com.example.mybookshelf.dataClass.Book Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/EliasSchaffer/MyBookShelf" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">MyBookShelf
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">com.example.mybookshelf.dataClass.Book Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+Collaboration diagram for com.example.mybookshelf.dataClass.Book:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book__coll__graph.svg" width="358" height="507"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ac921cbeaf1c2ee96086e47d2d7586c6f" id="r_ac921cbeaf1c2ee96086e47d2d7586c6f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac921cbeaf1c2ee96086e47d2d7586c6f">Book</a> (String <a class="el" href="#a628b11acb47a0e2050df73420ed11687">name</a>, String <a class="el" href="#afcedb56c6822b09f8ebd947bcb392095">release_date</a>, int <a class="el" href="#a1a028f264e2ace9e6bc8f0ca95534a95">pages</a>, String <a class="el" href="#a3b6cb312479596b6af26e28f6135e4ff">author</a>)</td></tr>
+<tr class="separator:ac921cbeaf1c2ee96086e47d2d7586c6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab78862de4a0e97e9190086f397a88fd4" id="r_ab78862de4a0e97e9190086f397a88fd4"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab78862de4a0e97e9190086f397a88fd4">getGenre</a> ()</td></tr>
+<tr class="separator:ab78862de4a0e97e9190086f397a88fd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab76b4ec7891e641d4c1a70a564805ffb" id="r_ab76b4ec7891e641d4c1a70a564805ffb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab76b4ec7891e641d4c1a70a564805ffb">getId</a> ()</td></tr>
+<tr class="separator:ab76b4ec7891e641d4c1a70a564805ffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a71f2e0de123a2cd2f072c4b3426c5d1f" id="r_a71f2e0de123a2cd2f072c4b3426c5d1f"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a71f2e0de123a2cd2f072c4b3426c5d1f">isInDatabase</a> ()</td></tr>
+<tr class="separator:a71f2e0de123a2cd2f072c4b3426c5d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44a086ea4c79159d292634cf7c07a3b7" id="r_a44a086ea4c79159d292634cf7c07a3b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a44a086ea4c79159d292634cf7c07a3b7">setInDatabase</a> (boolean <a class="el" href="#aada77ec14a69a92c76d58cdb44be321a">inDatabase</a>)</td></tr>
+<tr class="separator:a44a086ea4c79159d292634cf7c07a3b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd4859f20d99f9f603b40a2f4a06f5bd" id="r_abd4859f20d99f9f603b40a2f4a06f5bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd4859f20d99f9f603b40a2f4a06f5bd">Book</a> (String <a class="el" href="#a628b11acb47a0e2050df73420ed11687">name</a>, String <a class="el" href="#afcedb56c6822b09f8ebd947bcb392095">release_date</a>, int <a class="el" href="#a1a028f264e2ace9e6bc8f0ca95534a95">pages</a>, String <a class="el" href="#a3b6cb312479596b6af26e28f6135e4ff">author</a>, String <a class="el" href="#aa5ab068f4dccbe382b46f81512c81b65">image_url</a>, String <a class="el" href="#a7e155af4225503897eeb756543dc6331">description</a>, int <a class="el" href="#a9014d1ca4a42e83cf1373ddf22a2d2d3">id</a>, String <a class="el" href="#adecdb539a7b96a7ed6738cb61f2a5855">genre</a>, String Status)</td></tr>
+<tr class="separator:abd4859f20d99f9f603b40a2f4a06f5bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0f3ce1105d827eb45236089598f37c8" id="r_ab0f3ce1105d827eb45236089598f37c8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab0f3ce1105d827eb45236089598f37c8">Book</a> (String <a class="el" href="#a628b11acb47a0e2050df73420ed11687">name</a>, String <a class="el" href="#afcedb56c6822b09f8ebd947bcb392095">release_date</a>, int <a class="el" href="#a1a028f264e2ace9e6bc8f0ca95534a95">pages</a>, String <a class="el" href="#a3b6cb312479596b6af26e28f6135e4ff">author</a>, String <a class="el" href="#aa5ab068f4dccbe382b46f81512c81b65">image_url</a>, String <a class="el" href="#a7e155af4225503897eeb756543dc6331">description</a>, int <a class="el" href="#a9014d1ca4a42e83cf1373ddf22a2d2d3">id</a>, String <a class="el" href="#adecdb539a7b96a7ed6738cb61f2a5855">genre</a>)</td></tr>
+<tr class="separator:ab0f3ce1105d827eb45236089598f37c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa54a2193f20e365db53206d4bf9d7688" id="r_aa54a2193f20e365db53206d4bf9d7688"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa54a2193f20e365db53206d4bf9d7688">Book</a> (String <a class="el" href="#a628b11acb47a0e2050df73420ed11687">name</a>, String <a class="el" href="#afcedb56c6822b09f8ebd947bcb392095">release_date</a>, int <a class="el" href="#a1a028f264e2ace9e6bc8f0ca95534a95">pages</a>, String <a class="el" href="#a3b6cb312479596b6af26e28f6135e4ff">author</a>, String <a class="el" href="#aa5ab068f4dccbe382b46f81512c81b65">image_url</a>, String <a class="el" href="#a7e155af4225503897eeb756543dc6331">description</a>, String <a class="el" href="#adecdb539a7b96a7ed6738cb61f2a5855">genre</a>)</td></tr>
+<tr class="separator:aa54a2193f20e365db53206d4bf9d7688"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae12a6b9c36d0c9fc32b18f7903198f6b" id="r_ae12a6b9c36d0c9fc32b18f7903198f6b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae12a6b9c36d0c9fc32b18f7903198f6b">Book</a> (String <a class="el" href="#a628b11acb47a0e2050df73420ed11687">name</a>, int <a class="el" href="#a1a028f264e2ace9e6bc8f0ca95534a95">pages</a>)</td></tr>
+<tr class="separator:ae12a6b9c36d0c9fc32b18f7903198f6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c7d1fed8ed10b566260912ab7e596d1" id="r_a9c7d1fed8ed10b566260912ab7e596d1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c7d1fed8ed10b566260912ab7e596d1">Book</a> (String <a class="el" href="#a628b11acb47a0e2050df73420ed11687">name</a>)</td></tr>
+<tr class="separator:a9c7d1fed8ed10b566260912ab7e596d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4109da1bdee13601576c6725d6e89e71" id="r_a4109da1bdee13601576c6725d6e89e71"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4109da1bdee13601576c6725d6e89e71">getName</a> ()</td></tr>
+<tr class="separator:a4109da1bdee13601576c6725d6e89e71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a013544b074d1a225d85d4870e85f2eb6" id="r_a013544b074d1a225d85d4870e85f2eb6"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a013544b074d1a225d85d4870e85f2eb6">getRelease_date</a> ()</td></tr>
+<tr class="separator:a013544b074d1a225d85d4870e85f2eb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af362f232851507c1d64779533639edf8" id="r_af362f232851507c1d64779533639edf8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af362f232851507c1d64779533639edf8">getPages</a> ()</td></tr>
+<tr class="separator:af362f232851507c1d64779533639edf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72061c36f82e9d925effeb02dc0da55d" id="r_a72061c36f82e9d925effeb02dc0da55d"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a72061c36f82e9d925effeb02dc0da55d">getAuthor</a> ()</td></tr>
+<tr class="separator:a72061c36f82e9d925effeb02dc0da55d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20229b9b1dcc454fc3f09a50e719294c" id="r_a20229b9b1dcc454fc3f09a50e719294c"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20229b9b1dcc454fc3f09a50e719294c">getImageUrl</a> ()</td></tr>
+<tr class="separator:a20229b9b1dcc454fc3f09a50e719294c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a458c546dddffe750414f225231ac7762" id="r_a458c546dddffe750414f225231ac7762"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a458c546dddffe750414f225231ac7762">getDescription</a> ()</td></tr>
+<tr class="separator:a458c546dddffe750414f225231ac7762"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac360d6fd5854218af0be0939d5b8a88a" id="r_ac360d6fd5854218af0be0939d5b8a88a"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac360d6fd5854218af0be0939d5b8a88a">getReleaseDate</a> ()</td></tr>
+<tr class="separator:ac360d6fd5854218af0be0939d5b8a88a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac979a1131aa1e38e45ded0e55fcbc05" id="r_aac979a1131aa1e38e45ded0e55fcbc05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aac979a1131aa1e38e45ded0e55fcbc05">setAuthor</a> (String <a class="el" href="#a3b6cb312479596b6af26e28f6135e4ff">author</a>)</td></tr>
+<tr class="separator:aac979a1131aa1e38e45ded0e55fcbc05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1059730606a2b2dd0f6e5d1e50f9bd3c" id="r_a1059730606a2b2dd0f6e5d1e50f9bd3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1059730606a2b2dd0f6e5d1e50f9bd3c">setRelease_date</a> (String <a class="el" href="#afcedb56c6822b09f8ebd947bcb392095">release_date</a>)</td></tr>
+<tr class="separator:a1059730606a2b2dd0f6e5d1e50f9bd3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe792f46758c4c095ba85c7e996f678f" id="r_afe792f46758c4c095ba85c7e996f678f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe792f46758c4c095ba85c7e996f678f">setStatus</a> (String <a class="el" href="#a35d589bb977d39d87d1391082728ef02">status</a>)</td></tr>
+<tr class="separator:afe792f46758c4c095ba85c7e996f678f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c4ec1f3e154fad200b64643574e5c9c" id="r_a7c4ec1f3e154fad200b64643574e5c9c"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c4ec1f3e154fad200b64643574e5c9c">getStatus</a> ()</td></tr>
+<tr class="separator:a7c4ec1f3e154fad200b64643574e5c9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:adecdb539a7b96a7ed6738cb61f2a5855" id="r_adecdb539a7b96a7ed6738cb61f2a5855"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adecdb539a7b96a7ed6738cb61f2a5855">genre</a></td></tr>
+<tr class="separator:adecdb539a7b96a7ed6738cb61f2a5855"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a628b11acb47a0e2050df73420ed11687" id="r_a628b11acb47a0e2050df73420ed11687"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a628b11acb47a0e2050df73420ed11687">name</a></td></tr>
+<tr class="separator:a628b11acb47a0e2050df73420ed11687"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b6cb312479596b6af26e28f6135e4ff" id="r_a3b6cb312479596b6af26e28f6135e4ff"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3b6cb312479596b6af26e28f6135e4ff">author</a></td></tr>
+<tr class="separator:a3b6cb312479596b6af26e28f6135e4ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a028f264e2ace9e6bc8f0ca95534a95" id="r_a1a028f264e2ace9e6bc8f0ca95534a95"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a028f264e2ace9e6bc8f0ca95534a95">pages</a></td></tr>
+<tr class="separator:a1a028f264e2ace9e6bc8f0ca95534a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcedb56c6822b09f8ebd947bcb392095" id="r_afcedb56c6822b09f8ebd947bcb392095"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afcedb56c6822b09f8ebd947bcb392095">release_date</a></td></tr>
+<tr class="separator:afcedb56c6822b09f8ebd947bcb392095"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5ab068f4dccbe382b46f81512c81b65" id="r_aa5ab068f4dccbe382b46f81512c81b65"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5ab068f4dccbe382b46f81512c81b65">image_url</a></td></tr>
+<tr class="separator:aa5ab068f4dccbe382b46f81512c81b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e155af4225503897eeb756543dc6331" id="r_a7e155af4225503897eeb756543dc6331"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7e155af4225503897eeb756543dc6331">description</a></td></tr>
+<tr class="separator:a7e155af4225503897eeb756543dc6331"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aada77ec14a69a92c76d58cdb44be321a" id="r_aada77ec14a69a92c76d58cdb44be321a"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aada77ec14a69a92c76d58cdb44be321a">inDatabase</a></td></tr>
+<tr class="separator:aada77ec14a69a92c76d58cdb44be321a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9014d1ca4a42e83cf1373ddf22a2d2d3" id="r_a9014d1ca4a42e83cf1373ddf22a2d2d3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9014d1ca4a42e83cf1373ddf22a2d2d3">id</a></td></tr>
+<tr class="separator:a9014d1ca4a42e83cf1373ddf22a2d2d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10387afe95bef1f0f5279139ec1edfee" id="r_a10387afe95bef1f0f5279139ec1edfee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a10387afe95bef1f0f5279139ec1edfee">reading_time</a></td></tr>
+<tr class="separator:a10387afe95bef1f0f5279139ec1edfee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35d589bb977d39d87d1391082728ef02" id="r_a35d589bb977d39d87d1391082728ef02"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35d589bb977d39d87d1391082728ef02">status</a></td></tr>
+<tr class="separator:a35d589bb977d39d87d1391082728ef02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ac921cbeaf1c2ee96086e47d2d7586c6f" name="ac921cbeaf1c2ee96086e47d2d7586c6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac921cbeaf1c2ee96086e47d2d7586c6f">&#9670;&#160;</a></span>Book() <span class="overload">[1/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.example.mybookshelf.dataClass.Book.Book </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>release_date</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>pages</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>author</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abd4859f20d99f9f603b40a2f4a06f5bd" name="abd4859f20d99f9f603b40a2f4a06f5bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd4859f20d99f9f603b40a2f4a06f5bd">&#9670;&#160;</a></span>Book() <span class="overload">[2/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.example.mybookshelf.dataClass.Book.Book </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>release_date</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>pages</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>author</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>image_url</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>description</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>genre</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>Status</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab0f3ce1105d827eb45236089598f37c8" name="ab0f3ce1105d827eb45236089598f37c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0f3ce1105d827eb45236089598f37c8">&#9670;&#160;</a></span>Book() <span class="overload">[3/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.example.mybookshelf.dataClass.Book.Book </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>release_date</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>pages</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>author</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>image_url</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>description</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>genre</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa54a2193f20e365db53206d4bf9d7688" name="aa54a2193f20e365db53206d4bf9d7688"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa54a2193f20e365db53206d4bf9d7688">&#9670;&#160;</a></span>Book() <span class="overload">[4/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.example.mybookshelf.dataClass.Book.Book </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>release_date</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>pages</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>author</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>image_url</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>description</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>genre</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae12a6b9c36d0c9fc32b18f7903198f6b" name="ae12a6b9c36d0c9fc32b18f7903198f6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae12a6b9c36d0c9fc32b18f7903198f6b">&#9670;&#160;</a></span>Book() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.example.mybookshelf.dataClass.Book.Book </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>pages</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9c7d1fed8ed10b566260912ab7e596d1" name="a9c7d1fed8ed10b566260912ab7e596d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c7d1fed8ed10b566260912ab7e596d1">&#9670;&#160;</a></span>Book() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">com.example.mybookshelf.dataClass.Book.Book </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>name</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a72061c36f82e9d925effeb02dc0da55d" name="a72061c36f82e9d925effeb02dc0da55d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72061c36f82e9d925effeb02dc0da55d">&#9670;&#160;</a></span>getAuthor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.example.mybookshelf.dataClass.Book.getAuthor </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the author of the book. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_a72061c36f82e9d925effeb02dc0da55d_icgraph.svg" width="100%" height="550"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a458c546dddffe750414f225231ac7762" name="a458c546dddffe750414f225231ac7762"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a458c546dddffe750414f225231ac7762">&#9670;&#160;</a></span>getDescription()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.example.mybookshelf.dataClass.Book.getDescription </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the description. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_a458c546dddffe750414f225231ac7762_icgraph.svg" width="494" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ab78862de4a0e97e9190086f397a88fd4" name="ab78862de4a0e97e9190086f397a88fd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab78862de4a0e97e9190086f397a88fd4">&#9670;&#160;</a></span>getGenre()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.example.mybookshelf.dataClass.Book.getGenre </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the genre. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_ab78862de4a0e97e9190086f397a88fd4_icgraph.svg" width="100%" height="429"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="ab76b4ec7891e641d4c1a70a564805ffb" name="ab76b4ec7891e641d4c1a70a564805ffb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab76b4ec7891e641d4c1a70a564805ffb">&#9670;&#160;</a></span>getId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.example.mybookshelf.dataClass.Book.getId </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the unique identifier of the object. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_ab76b4ec7891e641d4c1a70a564805ffb_icgraph.svg" width="100%" height="594"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a20229b9b1dcc454fc3f09a50e719294c" name="a20229b9b1dcc454fc3f09a50e719294c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20229b9b1dcc454fc3f09a50e719294c">&#9670;&#160;</a></span>getImageUrl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.example.mybookshelf.dataClass.Book.getImageUrl </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the URL of the image. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_a20229b9b1dcc454fc3f09a50e719294c_icgraph.svg" width="100%" height="446"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a4109da1bdee13601576c6725d6e89e71" name="a4109da1bdee13601576c6725d6e89e71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4109da1bdee13601576c6725d6e89e71">&#9670;&#160;</a></span>getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.example.mybookshelf.dataClass.Book.getName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the name. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_a4109da1bdee13601576c6725d6e89e71_icgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="af362f232851507c1d64779533639edf8" name="af362f232851507c1d64779533639edf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af362f232851507c1d64779533639edf8">&#9670;&#160;</a></span>getPages()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.example.mybookshelf.dataClass.Book.getPages </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the number of pages. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_af362f232851507c1d64779533639edf8_icgraph.svg" width="536" height="243"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a013544b074d1a225d85d4870e85f2eb6" name="a013544b074d1a225d85d4870e85f2eb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a013544b074d1a225d85d4870e85f2eb6">&#9670;&#160;</a></span>getRelease_date()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.example.mybookshelf.dataClass.Book.getRelease_date </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the release date of the item. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_a013544b074d1a225d85d4870e85f2eb6_icgraph.svg" width="494" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="ac360d6fd5854218af0be0939d5b8a88a" name="ac360d6fd5854218af0be0939d5b8a88a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac360d6fd5854218af0be0939d5b8a88a">&#9670;&#160;</a></span>getReleaseDate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.example.mybookshelf.dataClass.Book.getReleaseDate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the release date of the product. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_ac360d6fd5854218af0be0939d5b8a88a_icgraph.svg" width="494" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a7c4ec1f3e154fad200b64643574e5c9c" name="a7c4ec1f3e154fad200b64643574e5c9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c4ec1f3e154fad200b64643574e5c9c">&#9670;&#160;</a></span>getStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.example.mybookshelf.dataClass.Book.getStatus </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns the current status. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_a7c4ec1f3e154fad200b64643574e5c9c_icgraph.svg" width="100%" height="482"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+</div>
+
+</div>
+</div>
+<a id="a71f2e0de123a2cd2f072c4b3426c5d1f" name="a71f2e0de123a2cd2f072c4b3426c5d1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71f2e0de123a2cd2f072c4b3426c5d1f">&#9670;&#160;</a></span>isInDatabase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.example.mybookshelf.dataClass.Book.isInDatabase </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Checks if the object is present in the database. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_a71f2e0de123a2cd2f072c4b3426c5d1f_icgraph.svg" width="523" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="aac979a1131aa1e38e45ded0e55fcbc05" name="aac979a1131aa1e38e45ded0e55fcbc05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac979a1131aa1e38e45ded0e55fcbc05">&#9670;&#160;</a></span>setAuthor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.mybookshelf.dataClass.Book.setAuthor </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>author</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the author of the document. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_aac979a1131aa1e38e45ded0e55fcbc05_icgraph.svg" width="494" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a44a086ea4c79159d292634cf7c07a3b7" name="a44a086ea4c79159d292634cf7c07a3b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44a086ea4c79159d292634cf7c07a3b7">&#9670;&#160;</a></span>setInDatabase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.mybookshelf.dataClass.Book.setInDatabase </td>
+          <td>(</td>
+          <td class="paramtype">boolean</td>          <td class="paramname"><span class="paramname"><em>inDatabase</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets whether the object is stored in the database. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_a44a086ea4c79159d292634cf7c07a3b7_icgraph.svg" width="494" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="a1059730606a2b2dd0f6e5d1e50f9bd3c" name="a1059730606a2b2dd0f6e5d1e50f9bd3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1059730606a2b2dd0f6e5d1e50f9bd3c">&#9670;&#160;</a></span>setRelease_date()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.mybookshelf.dataClass.Book.setRelease_date </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>release_date</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the release date. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_a1059730606a2b2dd0f6e5d1e50f9bd3c_icgraph.svg" width="494" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<a id="afe792f46758c4c095ba85c7e996f678f" name="afe792f46758c4c095ba85c7e996f678f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe792f46758c4c095ba85c7e996f678f">&#9670;&#160;</a></span>setStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.example.mybookshelf.dataClass.Book.setStatus </td>
+          <td>(</td>
+          <td class="paramtype">String</td>          <td class="paramname"><span class="paramname"><em>status</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the status to the specified value. </p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book_afe792f46758c4c095ba85c7e996f678f_icgraph.svg" width="494" height="51"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a3b6cb312479596b6af26e28f6135e4ff" name="a3b6cb312479596b6af26e28f6135e4ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b6cb312479596b6af26e28f6135e4ff">&#9670;&#160;</a></span>author</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.example.mybookshelf.dataClass.Book.author</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e155af4225503897eeb756543dc6331" name="a7e155af4225503897eeb756543dc6331"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e155af4225503897eeb756543dc6331">&#9670;&#160;</a></span>description</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.example.mybookshelf.dataClass.Book.description</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adecdb539a7b96a7ed6738cb61f2a5855" name="adecdb539a7b96a7ed6738cb61f2a5855"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adecdb539a7b96a7ed6738cb61f2a5855">&#9670;&#160;</a></span>genre</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.example.mybookshelf.dataClass.Book.genre</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9014d1ca4a42e83cf1373ddf22a2d2d3" name="a9014d1ca4a42e83cf1373ddf22a2d2d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9014d1ca4a42e83cf1373ddf22a2d2d3">&#9670;&#160;</a></span>id</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.example.mybookshelf.dataClass.Book.id</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa5ab068f4dccbe382b46f81512c81b65" name="aa5ab068f4dccbe382b46f81512c81b65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa5ab068f4dccbe382b46f81512c81b65">&#9670;&#160;</a></span>image_url</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.example.mybookshelf.dataClass.Book.image_url</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aada77ec14a69a92c76d58cdb44be321a" name="aada77ec14a69a92c76d58cdb44be321a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aada77ec14a69a92c76d58cdb44be321a">&#9670;&#160;</a></span>inDatabase</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean com.example.mybookshelf.dataClass.Book.inDatabase</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a628b11acb47a0e2050df73420ed11687" name="a628b11acb47a0e2050df73420ed11687"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a628b11acb47a0e2050df73420ed11687">&#9670;&#160;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.example.mybookshelf.dataClass.Book.name</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1a028f264e2ace9e6bc8f0ca95534a95" name="a1a028f264e2ace9e6bc8f0ca95534a95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a028f264e2ace9e6bc8f0ca95534a95">&#9670;&#160;</a></span>pages</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.example.mybookshelf.dataClass.Book.pages</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a10387afe95bef1f0f5279139ec1edfee" name="a10387afe95bef1f0f5279139ec1edfee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10387afe95bef1f0f5279139ec1edfee">&#9670;&#160;</a></span>reading_time</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int com.example.mybookshelf.dataClass.Book.reading_time</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afcedb56c6822b09f8ebd947bcb392095" name="afcedb56c6822b09f8ebd947bcb392095"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcedb56c6822b09f8ebd947bcb392095">&#9670;&#160;</a></span>release_date</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.example.mybookshelf.dataClass.Book.release_date</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a35d589bb977d39d87d1391082728ef02" name="a35d589bb977d39d87d1391082728ef02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35d589bb977d39d87d1391082728ef02">&#9670;&#160;</a></span>status</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String com.example.mybookshelf.dataClass.Book.status</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
+<li>/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/dataClass/<a class="el" href="Book_8java.html">Book.java</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.10.0-->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>com</b></li><li class="navelem"><b>example</b></li><li class="navelem"><a class="el" href="namespacecom_1_1example_1_1mybookshelf.html">mybookshelf</a></li><li class="navelem"><a class="el" href="namespacecom_1_1example_1_1mybookshelf_1_1dataClass.html">dataClass</a></li><li class="navelem"><a class="el" href="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book.html">Book</a></li>
+    <li class="footer">Generated by <a href="https://penify.dev/"><img class="footer" src="https://www.penify.dev/penify-logo.svg" width="104" height="31" alt="doxygen"/></a> </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+\doxysection{/app/doc\+\_\+state/github\+\_\+repos\+Repo\+Arch\+Doc\+Gen\+Context/\+Elias\+Schaffer/\+My\+Book\+Shelf/src/main/java/com/example/mybookshelf/\+UIMaster.java File Reference}
+\hypertarget{UIMaster_8java}{}\label{UIMaster_8java}\index{/app/doc\_state/github\_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java@{/app/doc\_state/github\_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java}}
+{\ttfamily import android.\+content.\+Dialog\+Interface;}\newline
+{\ttfamily import android.\+graphics.\+Color;}\newline
+{\ttfamily import android.\+graphics.\+drawable.\+Gradient\+Drawable;}\newline
+{\ttfamily import android.\+os.\+Async\+Task;}\newline
+{\ttfamily import android.\+os.\+Build;}\newline
+{\ttfamily import android.\+text.\+Editable;}\newline
+{\ttfamily import android.\+text.\+Text\+Utils;}\newline
+{\ttfamily import android.\+text.\+Text\+Watcher;}\newline
+{\ttfamily import android.\+util.\+Log;}\newline
+{\ttfamily import android.\+view.\+Gravity;}\newline
+{\ttfamily import android.\+view.\+View;}\newline
+{\ttfamily import android.\+view.\+View\+Group;}\newline
+{\ttfamily import android.\+view.\+animation.\+Accelerate\+Interpolator;}\newline
+{\ttfamily import android.\+view.\+animation.\+Animation;}\newline
+{\ttfamily import android.\+view.\+animation.\+Decelerate\+Interpolator;}\newline
+{\ttfamily import android.\+view.\+animation.\+Overshoot\+Interpolator;}\newline
+{\ttfamily import android.\+view.\+animation.\+Translate\+Animation;}\newline
+{\ttfamily import android.\+widget.\+Adapter\+View;}\newline
+{\ttfamily import android.\+widget.\+Array\+Adapter;}\newline
+{\ttfamily import android.\+widget.\+Button;}\newline
+{\ttfamily import android.\+widget.\+Check\+Box;}\newline
+{\ttfamily import android.\+widget.\+Edit\+Text;}\newline
+{\ttfamily import android.\+widget.\+Frame\+Layout;}\newline
+{\ttfamily import android.\+widget.\+Grid\+Layout;}\newline
+{\ttfamily import android.\+widget.\+Image\+Button;}\newline
+{\ttfamily import android.\+widget.\+Image\+View;}\newline
+{\ttfamily import android.\+widget.\+Linear\+Layout;}\newline
+{\ttfamily import android.\+widget.\+Radio\+Button;}\newline
+{\ttfamily import android.\+widget.\+Radio\+Group;}\newline
+{\ttfamily import android.\+widget.\+Rating\+Bar;}\newline
+{\ttfamily import android.\+widget.\+Relative\+Layout;}\newline
+{\ttfamily import android.\+widget.\+Search\+View;}\newline
+{\ttfamily import android.\+widget.\+Spinner;}\newline
+{\ttfamily import android.\+widget.\+Switch;}\newline
+{\ttfamily import android.\+widget.\+Text\+View;}\newline
+{\ttfamily import android.\+widget.\+Time\+Picker;}\newline
+{\ttfamily import android.\+widget.\+Toast;}\newline
+{\ttfamily import androidx.\+annotation.\+Non\+Null;}\newline
+{\ttfamily import androidx.\+appcompat.\+app.\+Alert\+Dialog;}\newline
+{\ttfamily import androidx.\+cardview.\+widget.\+Card\+View;}\newline
+{\ttfamily import androidx.\+recyclerview.\+widget.\+Default\+Item\+Animator;}\newline
+{\ttfamily import androidx.\+recyclerview.\+widget.\+Linear\+Layout\+Manager;}\newline
+{\ttfamily import androidx.\+recyclerview.\+widget.\+Recycler\+View;}\newline
+{\ttfamily import com.\+bumptech.\+glide.\+Glide;}\newline
+{\ttfamily import com.\+example.\+mybookshelf.\+Layout\+Manager.\+Costume\+List\+Adapter;}\newline
+{\ttfamily import com.\+example.\+mybookshelf.\+Layout\+Manager.\+Custom\+Goal\+Adapter;}\newline
+{\ttfamily import com.\+example.\+mybookshelf.\+apis.\+Ai\+API;}\newline
+{\ttfamily import com.\+example.\+mybookshelf.\+apis.\+Books\+API;}\newline
+{\ttfamily import com.\+example.\+mybookshelf.\+data\+Class.\+Book;}\newline
+{\ttfamily import com.\+example.\+mybookshelf.\+data\+Class.\+Goal;}\newline
+{\ttfamily import com.\+example.\+mybookshelf.\+data\+Class.\+User;}\newline
+{\ttfamily import com.\+example.\+mybookshelf.\+notifications.\+Notification\+Scheduler;}\newline
+{\ttfamily import com.\+github.\+mikephil.\+charting.\+charts.\+Bar\+Chart;}\newline
+{\ttfamily import com.\+github.\+mikephil.\+charting.\+components.\+XAxis;}\newline
+{\ttfamily import com.\+github.\+mikephil.\+charting.\+components.\+YAxis;}\newline
+{\ttfamily import com.\+github.\+mikephil.\+charting.\+data.\+Bar\+Data;}\newline
+{\ttfamily import com.\+github.\+mikephil.\+charting.\+data.\+Bar\+Data\+Set;}\newline
+{\ttfamily import com.\+github.\+mikephil.\+charting.\+data.\+Bar\+Entry;}\newline
+{\ttfamily import java.\+sql.\+SQLException;}\newline
+{\ttfamily import java.\+time.\+Local\+Time;}\newline
+{\ttfamily import java.\+util.\+Array\+List;}\newline
+{\ttfamily import java.\+util.\+Arrays;}\newline
+{\ttfamily import java.\+util.\+Collections;}\newline
+{\ttfamily import java.\+util.\+Hash\+Map;}\newline
+{\ttfamily import java.\+util.\+Hash\+Set;}\newline
+{\ttfamily import java.\+util.\+List;}\newline
+{\ttfamily import java.\+util.\+Map;}\newline
+{\ttfamily import java.\+util.\+Set;}\newline
+{\ttfamily import java.\+util.\+concurrent.\+Execution\+Exception;}\newline
+{\ttfamily import java.\+util.\+concurrent.\+Executor\+Service;}\newline
+{\ttfamily import java.\+util.\+concurrent.\+Executors;}\newline
+{\ttfamily import java.\+util.\+concurrent.\+Future;}\newline
+{\ttfamily import com.\+github.\+mikephil.\+charting.\+formatter.\+Value\+Formatter;}\newline
+{\ttfamily import at.\+favre.\+lib.\+crypto.\+bcrypt.\+BCrypt;}\newline
+Include dependency graph for UIMaster.\+java\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{UIMaster_8java__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster}{com.\+example.\+mybookshelf.\+UIMaster}}
+\item 
+class \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_1_1ChartData}{com.\+example.\+mybookshelf.\+UIMaster.\+Chart\+Data}}
+\item 
+class \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1UIMaster_1_1MonthValueFormatter}{com.\+example.\+mybookshelf.\+UIMaster.\+Month\+Value\+Formatter}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Packages}
+\begin{DoxyCompactItemize}
+\item 
+package \mbox{\hyperlink{namespacecom_1_1example_1_1mybookshelf}{com.\+example.\+mybookshelf}}
+\end{DoxyCompactItemize}

@@ -1,0 +1,7 @@
+<map id="com.example.mybookshelf.MainActivity.onCreate" name="com.example.mybookshelf.MainActivity.onCreate">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,41,208,81"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1example_1_1mybookshelf_1_1Authenticator.html#a57eb5913cd07c88e3f0771b4bf88bc0c" title=" " alt="" coords="307,5,531,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="208,47,293,37,294,42,209,52"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationChannelManager.html#ab57e2b123ed881523d1e0465605396b3" title=" " alt="" coords="256,70,583,125"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="209,70,242,74,242,80,208,76"/>
+</map>

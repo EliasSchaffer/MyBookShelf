@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['name_0',['name',['../classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book.html#a628b11acb47a0e2050df73420ed11687',1,'com::example::mybookshelf::dataClass::Book']]],
+  ['nav_5fsearchbtn_1',['nav_searchBtn',['../classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#aa656ff54b76d2aad814455a921b23769',1,'com::example::mybookshelf::UIMaster']]],
+  ['nav_5fstatsbtn_2',['nav_StatsBtn',['../classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a2f9dd9d99fba9fbf71600f940fb5eb9e',1,'com::example::mybookshelf::UIMaster']]],
+  ['navigatetodetails_3',['navigateToDetails',['../classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#ac2a608fcf86d3dbe14b4684dbbaf1431',1,'com::example::mybookshelf::UIMaster']]],
+  ['navigatetogoals_4',['navigateToGoals',['../classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#ad30bff41c8ec833af2293c0b6c8b47b2',1,'com::example::mybookshelf::UIMaster']]],
+  ['navigatetosettings_5',['navigateToSettings',['../classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#ac859db60f9068e6a87b633ef697d4d0f',1,'com::example::mybookshelf::UIMaster']]],
+  ['navigatetostartingpage_6',['navigateToStartingPage',['../classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#ad609d5e0b54e87afcb60aed6c66a792e',1,'com::example::mybookshelf::UIMaster']]],
+  ['navigatetostats_7',['navigateToStats',['../classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#aa3079f36c20fc1b0ec8c01197f06faa3',1,'com::example::mybookshelf::UIMaster']]],
+  ['noteschanged_8',['notesChanged',['../classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection.html#af193be7b7a849bfac39f8f45d5e16ee8',1,'com::example::mybookshelf::DataBaseConnection']]],
+  ['notification_9',['Notification',['../classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification.html',1,'com.example.mybookshelf.dataClass.Notification'],['../classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification.html#a9dc622a763a56b59170634a6f8276893',1,'com.example.mybookshelf.dataClass.Notification.Notification()']]],
+  ['notification_2ejava_10',['Notification.java',['../Notification_8java.html',1,'']]],
+  ['notificationchannelmanager_11',['NotificationChannelManager',['../classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationChannelManager.html',1,'com::example::mybookshelf::notifications']]],
+  ['notificationchannelmanager_2ejava_12',['NotificationChannelManager.java',['../NotificationChannelManager_8java.html',1,'']]],
+  ['notificationlist_13',['notificationList',['../classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User.html#afeb7f16cf5d4bb293f266e88dd473284',1,'com::example::mybookshelf::dataClass::User']]],
+  ['notificationreceiver_14',['NotificationReceiver',['../classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationReceiver.html',1,'com::example::mybookshelf::notifications']]],
+  ['notificationreceiver_2ejava_15',['NotificationReceiver.java',['../NotificationReceiver_8java.html',1,'']]],
+  ['notificationscheduler_16',['NotificationScheduler',['../classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html',1,'com::example::mybookshelf::notifications']]],
+  ['notificationscheduler_2ejava_17',['NotificationScheduler.java',['../NotificationScheduler_8java.html',1,'']]]
+];

@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1_1ChartData" kind="class" language="Java" prot="private">
+    <compoundname>com::example::mybookshelf::UIMaster::ChartData</compoundname>
+    <sectiondef kind="package-attrib">
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1_1ChartData_1aa19d2e88e3dd237997d929932e86b971" prot="package" static="no" mutable="no">
+        <type>final ArrayList&lt; BarEntry &gt;</type>
+        <definition>final ArrayList&lt;BarEntry&gt; com.example.mybookshelf.UIMaster.ChartData.readingTimeEntries</definition>
+        <argsstring></argsstring>
+        <name>readingTimeEntries</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.ChartData.readingTimeEntries</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="726" column="25" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="726" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1_1ChartData_1a99f4a957db65574782639ad62823fd13" prot="package" static="no" mutable="no">
+        <type>final ArrayList&lt; BarEntry &gt;</type>
+        <definition>final ArrayList&lt;BarEntry&gt; com.example.mybookshelf.UIMaster.ChartData.completedBooksEntries</definition>
+        <argsstring></argsstring>
+        <name>completedBooksEntries</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.ChartData.completedBooksEntries</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="727" column="25" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="727" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="package-func">
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1_1ChartData_1a6ae2851d7039e2296ce53ef8c87fa0db" prot="package" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>com.example.mybookshelf.UIMaster.ChartData.ChartData</definition>
+        <argsstring>(ArrayList&lt; BarEntry &gt; readingTimeEntries, ArrayList&lt; BarEntry &gt; completedBooksEntries)</argsstring>
+        <name>ChartData</name>
+        <qualifiedname>com.example.mybookshelf.UIMaster.ChartData.ChartData</qualifiedname>
+        <param>
+          <type>ArrayList&lt; BarEntry &gt;</type>
+          <declname>readingTimeEntries</declname>
+        </param>
+        <param>
+          <type>ArrayList&lt; BarEntry &gt;</type>
+          <declname>completedBooksEntries</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="729" column="9" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="729" bodyend="732"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>com.example.mybookshelf.UIMaster.ChartData</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1_1ChartData"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>~completedBooksEntries</edgelabel>
+          <edgelabel>~readingTimeEntries</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>final ArrayList&lt; BarEntry &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" line="725" column="20" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/UIMaster.java" bodystart="725" bodyend="733"/>
+    <listofallmembers>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1_1ChartData_1a6ae2851d7039e2296ce53ef8c87fa0db" prot="package" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster::ChartData</scope><name>ChartData</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1_1ChartData_1a99f4a957db65574782639ad62823fd13" prot="package" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster::ChartData</scope><name>completedBooksEntries</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster_1_1ChartData_1aa19d2e88e3dd237997d929932e86b971" prot="package" virt="non-virtual"><scope>com::example::mybookshelf::UIMaster::ChartData</scope><name>readingTimeEntries</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

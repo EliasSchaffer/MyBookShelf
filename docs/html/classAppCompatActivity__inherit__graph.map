@@ -1,0 +1,7 @@
+<map id="AppCompatActivity" name="AppCompatActivity">
+<area shape="rect" id="Node000001" title=" " alt="" coords="207,5,347,71"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1example_1_1mybookshelf_1_1MainActivity.html" title=" " alt="" coords="5,119,288,699"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="264,84,252,119,247,117,259,83"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1example_1_1mybookshelf_1_1Search.html" title=" " alt="" coords="312,319,507,499"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="296,82,380,318,375,319,291,84"/>
+</map>

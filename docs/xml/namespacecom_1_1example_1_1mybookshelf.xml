@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="namespacecom_1_1example_1_1mybookshelf" kind="namespace" language="Java">
+    <compoundname>com::example::mybookshelf</compoundname>
+    <innerclass refid="interfacecom_1_1example_1_1mybookshelf_1_1ApiResponseCallback" prot="public">com::example::mybookshelf::ApiResponseCallback</innerclass>
+    <innerclass refid="classcom_1_1example_1_1mybookshelf_1_1Authenticator" prot="public">com::example::mybookshelf::Authenticator</innerclass>
+    <innerclass refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow" prot="public">com::example::mybookshelf::BookRecommendationFlow</innerclass>
+    <innerclass refid="classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection" prot="public">com::example::mybookshelf::DataBaseConnection</innerclass>
+    <innerclass refid="classcom_1_1example_1_1mybookshelf_1_1GoalHandler" prot="public">com::example::mybookshelf::GoalHandler</innerclass>
+    <innerclass refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity" prot="public">com::example::mybookshelf::MainActivity</innerclass>
+    <innerclass refid="classcom_1_1example_1_1mybookshelf_1_1Search" prot="public">com::example::mybookshelf::Search</innerclass>
+    <innerclass refid="classcom_1_1example_1_1mybookshelf_1_1UIMaster" prot="public">com::example::mybookshelf::UIMaster</innerclass>
+    <innernamespace refid="namespacecom_1_1example_1_1mybookshelf_1_1apis">com::example::mybookshelf::apis</innernamespace>
+    <innernamespace refid="namespacecom_1_1example_1_1mybookshelf_1_1dataClass">com::example::mybookshelf::dataClass</innernamespace>
+    <innernamespace refid="namespacecom_1_1example_1_1mybookshelf_1_1LayoutManager">com::example::mybookshelf::LayoutManager</innernamespace>
+    <innernamespace refid="namespacecom_1_1example_1_1mybookshelf_1_1notifications">com::example::mybookshelf::notifications</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/ApiResponseCallback.java" line="1" column="15"/>
+  </compounddef>
+</doxygen>

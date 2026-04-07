@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="dir_cf067b1a391dfd83ba1087c92d552641" kind="dir">
+    <compoundname>/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src</compoundname>
+    <innerdir refid="dir_defcdd8ecd11004ae7e9a5846a970d13">/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/"/>
+  </compounddef>
+</doxygen>

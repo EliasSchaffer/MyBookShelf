@@ -1,0 +1,13 @@
+<map id="com.example.mybookshelf.LayoutManager.CustomGoalAdapter.createGoalBox" name="com.example.mybookshelf.LayoutManager.CustomGoalAdapter.createGoalBox">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,126,307,181"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal.html#ada3305dadb216e065d9bb31e12ff6107" title=" " alt="" coords="355,5,587,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,124,275,89,354,55,376,47,378,52,356,60,277,94,209,128"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal.html#a1c80a58d3e1cd2e1ab6ef14c40d3b274" title=" " alt="" coords="355,69,587,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="290,123,358,109,359,115,292,129"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal.html#abcf308a0e49a9b60f6761102438d9d04" title=" " alt="" coords="355,133,587,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="307,151,341,151,341,156,307,156"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal.html#a964cb06dadac4c69df6c931402733779" title=" " alt="" coords="355,197,587,237"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="292,178,359,192,358,197,290,183"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal.html#a84c2af13824c14a2b6c3dcf25a493d0f" title=" " alt="" coords="355,261,587,301"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="209,178,277,213,356,247,378,255,376,260,354,252,275,218,206,183"/>
+</map>

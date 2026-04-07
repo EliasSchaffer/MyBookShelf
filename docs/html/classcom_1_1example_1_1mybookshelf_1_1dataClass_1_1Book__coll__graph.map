@@ -1,0 +1,9 @@
+<map id="com.example.mybookshelf.dataClass.Book" name="com.example.mybookshelf.dataClass.Book">
+<area shape="rect" id="Node000001" title=" " alt="" coords="39,221,263,501"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,57,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="36,71,43,130,59,197,62,205,57,207,54,198,37,131,30,71"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="136,5,167,71"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="154,71,154,205,149,205,149,71"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="241,5,307,71"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="274,71,265,131,247,198,244,207,239,205,242,197,260,130,269,71"/>
+</map>

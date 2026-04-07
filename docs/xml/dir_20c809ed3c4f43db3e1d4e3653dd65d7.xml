@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="dir_20c809ed3c4f43db3e1d4e3653dd65d7" kind="dir">
+    <compoundname>/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf</compoundname>
+    <innerdir refid="dir_cf067b1a391dfd83ba1087c92d552641">/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>MyBookShelf is an open-source Java application designed to help users organize and track their personal book collection. Whether you&apos;re an avid reader or a casual book lover, MyBookShelf allows you to manage your reading list, track books you&apos;ve read, and plan future reads all in one place.</para>
+<sect1 id="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/README.md_1autotoc_md1">
+<title>Features</title><para><itemizedlist>
+<listitem><para><bold>Book Collection Management</bold>: Add, edit, and remove books from your collection.</para>
+</listitem><listitem><para><bold>Customizable Categories</bold>: Organize your books by genres, authors, or custom tags.</para>
+</listitem><listitem><para><bold>Bookshelf Overview</bold>: View all your books in an organized and easy-to-use interface.</para>
+</listitem><listitem><para><bold>Search Functionality</bold>: Quickly search for books by title, author, or category.</para>
+</listitem><listitem><para><bold>Reading Goals</bold>: Set and track your reading goals throughout the year.</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/README.md_1autotoc_md2">
+<title>Screenshots</title><para><image type="html" name="path_to_screenshot_1.png" alt="MyBookShelf" inline="yes"></image>
+ <linebreak/>
+ Add Scrennshot later </para>
+</sect1>
+<sect1 id="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/README.md_1autotoc_md3">
+<title>Installation</title><sect2 id="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/README.md_1autotoc_md4">
+<title>Prerequisites</title><para>Ensure you have the following installed:</para>
+<para><itemizedlist>
+<listitem><para><bold>Java Development Kit (JDK)</bold> version 8 or higher</para>
+</listitem><listitem><para><bold>Gradle</bold> (for building and managing dependencies)</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/README.md_1autotoc_md5">
+<title>Steps to Install</title><para><orderedlist>
+<listitem><para>Clone this repository to your local machine:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">git<sp/>clone<sp/>https://github.com/yourusername/MyBookShelf.git</highlight></codeline>
+</programlisting></para>
+</listitem><listitem><para>Navigate to the project directory:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">cd<sp/>MyBookShelf</highlight></codeline>
+</programlisting></para>
+</listitem><listitem><para>Build the project with Gradle:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">./gradlew<sp/>build</highlight></codeline>
+</programlisting></para>
+</listitem><listitem><para>Run the Application</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">./gradlew<sp/>run</highlight></codeline>
+</programlisting> </para>
+</listitem></orderedlist>
+</para>
+</sect2>
+</sect1>
+    </detaileddescription>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/"/>
+  </compounddef>
+</doxygen>

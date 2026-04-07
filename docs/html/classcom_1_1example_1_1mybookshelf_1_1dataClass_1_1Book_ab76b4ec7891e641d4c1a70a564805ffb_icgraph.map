@@ -1,0 +1,18 @@
+<map id="com.example.mybookshelf.dataClass.Book.getId" name="com.example.mybookshelf.dataClass.Book.getId">
+<area shape="rect" id="Node000001" title=" " alt="" coords="1019,156,1251,196"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter.html#aecf267c9d5fc023c90187a13bc4ebe2e" title=" " alt="" coords="331,45,620,99"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1108,147,1083,118,1050,86,1012,57,970,35,917,19,862,11,806,8,751,10,646,26,559,47,557,42,645,20,750,5,806,3,862,5,918,14,972,30,1015,52,1054,82,1087,114,1112,143"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a1533d0ed2384f2ec729cfcec7bd9a25f" title=" " alt="" coords="718,44,921,84"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="1086,152,1031,124,970,99,920,84,922,79,972,94,1033,119,1088,147"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter.html#a73afe4df78d60ab38b9b7d8b9e804d05" title=" " alt="" coords="668,109,971,163"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="1004,162,970,158,971,153,1005,157"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection.html#a6bfa78cc6e4957456c3c0a7d6d5281dc" title=" " alt="" coords="707,187,932,242"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="1005,195,933,204,932,198,1005,189"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1example_1_1mybookshelf_1_1MainActivity.html#a50ffabe98d3e06a1168741e025b21b58" title=" " alt="" coords="703,267,935,307"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="1086,205,1032,232,972,256,926,269,924,264,970,251,1030,227,1084,200"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection.html#ab32626fd4493c33e19a7875ff500b2e6" title=" " alt="" coords="697,331,942,386"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="1109,209,1050,266,1012,296,972,321,943,334,941,329,969,316,1009,291,1046,262,1105,205"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter.html#a6195566266811486050ad2962a7a161f" title=" " alt="" coords="5,45,283,99"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="317,75,283,75,283,69,317,69"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="658,109,620,102,621,96,659,104"/>
+</map>

@@ -1,0 +1,438 @@
+\doxysection{com.\+example.\+mybookshelf.\+Data\+Base\+Connection Class Reference}
+\hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection}{}\label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+
+
+Collaboration diagram for com.\+example.\+mybookshelf.\+Data\+Base\+Connection\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a3ed5c18c7b9fb86f9fe23c531136dc5a}{Data\+Base\+Connection}} (\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity}{Main\+Activity}} \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_adadd13914192fd766da3e78bb288b688}{context}})
+\item 
+Future$<$ Integer $>$ \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_aee74be9d7674275d682de94e068a3bec}{check\+Login}} (String username, char\mbox{[}$\,$\mbox{]} password)
+\item 
+Future$<$ String $>$ \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_aa495d1fe38fd1c36bc4bd3f4338b426d}{get\+Token}} (int uid)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_ab37c8cc6cf8d9437799cf3a3d414bfc9}{add\+User}} (String username, String email, String password)
+\item 
+String \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_acf3ef21ff7a224367d185748b6247481}{generate\+Session\+Token}} ()
+\item 
+Future$<$ List$<$ \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book}{Book}} $>$ $>$ \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_aad5aa12951cce78e9438fbc4056f5544}{get\+Books\+From\+UID}} (int uid)
+\item 
+Future$<$ \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book}{Book}} $>$ \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_aa8ec52be0a15b422e5307257258d2950}{get\+Book\+By\+Name}} (String book\+Name)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_abc615b05c31c508894dc2d300292738a}{add\+Book\+To\+User}} (int user\+Id, String status, String score, Local\+Date finished, String book\+Name, String author, int pages, String release\+Date, String image\+Url, String description, double reading\+Time, String genre)
+\item 
+Future$<$ Float $>$ \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a6bfa78cc6e4957456c3c0a7d6d5281dc}{get\+Rating\+From\+Book}} (\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book}{Book}} book)
+\item 
+Future$<$ Array\+List$<$ Bar\+Entry $>$ $>$ \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a99a86e8b98d2d0ccc944aa93c10c878d}{get\+Reading\+Time\+By\+Month}} (int UID)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_ab32626fd4493c33e19a7875ff500b2e6}{remove\+Book\+From\+User}} (\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book}{Book}} book, int UID)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_af193be7b7a849bfac39f8f45d5e16ee8}{notes\+Changed}} (int UID, int book\+ID, String note)
+\item 
+Future$<$ String $>$ \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_ac60874dcdc45687598a20a0d61a01d6d}{get\+Notes\+From\+User}} (int UID, int book\+ID)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_ae83460b1effd3376ba0caca7220f7ced}{add\+Notification}} (\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User}{User}} user, String message)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a1aaec1cad853f2dda5dff2c6e07b5cb8}{remove\+Notification}} (int notification\+Id, int user\+Id)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_aaefa5b0d10088dc34c39ba72307026eb}{get\+All\+Notifications\+For\+User}} (int user\+Id, Consumer$<$ List$<$ \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification}{Notification}} $>$ $>$ callback)
+\item 
+long \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a3b22d6106c92d008ed8b05c10892f0b7}{add\+Goal}} (\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal}{Goal}} goal, \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User}{User}} user)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_aa8504514977721bef71acfcdb0019b6c}{remove\+Goal}} (int goal\+Id, int user\+Id)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a7889f4b8cbd0a3c254d6e1b390f22e00}{get\+All\+Goals\+For\+User}} (int user\+Id, Consumer$<$ List$<$ \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal}{Goal}} $>$ $>$ callback)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_aa0888bddcc69a7e612d2b55269f3ce4a}{delete\+User}} (int user\+Id)
+\item 
+Future$<$ String $>$ \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a86b6ffa92fad445bf50ba17e72ed7652}{check\+Password}} (int user\+Id)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a59558eec699341c6309b60e3c90b8093}{change\+Password}} (int user\+Id, String new\+Password)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a3938ac17813d30aea19e71d1b149e972}{change\+User\+Name}} (int user\+Id, String new\+User)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a47a8bd471a1f2e4336a9378446c9ed86}{change\+Email}} (int user\+Id, String email)
+\item 
+Future$<$ Local\+Time $>$ \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a219c11f4d9a8683e6f6d963a2e5592fa}{get\+Time}} (int user\+Id)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_afb94e7db2769200aba9d3eed97a6174b}{set\+Time}} (int user\+Id, Local\+Time time)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a62d192fe1bc6c3cbe531112364da3fa5}{update\+Reading\+Status}} (int user\+Id, int book\+Id, String reading\+Status)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a76f8124415bc76fa523847cba23c8146}{update\+Goal\+Progress}} (int user\+Id, int goal\+ID, int progress)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a5dad5786ba9d3e263569a9b1838a0092}{initialize}} ()
+\item 
+Key\+Store \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a6551f4e8da2da417bc29f8b6af08aa51}{load\+Trust\+Store}} ()  throws Exception 
+\item 
+int \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_af697f4f75aef2a9a2b45f603452a8c4e}{add\+New\+Book}} (String book\+Name, String author, int pages, String release\+Date, String image\+Url, String description, String genre)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+final Executor\+Service \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a19f85f9ddffa0a97088614d80d2c46e9}{executor\+Service}} = Executors.\+new\+Single\+Thread\+Executor()
+\item 
+String \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a5737bacc185010702d20e4380318959d}{URL}}
+\item 
+final \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity}{Main\+Activity}} \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_adadd13914192fd766da3e78bb288b688}{context}}
+\item 
+File \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a89f590f8fe8376ed0bbfc61f50a3f604}{trust\+Store\+File}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_aebfa52c8bb7e772ab8713234e3754392}{USER}} = "{}avnadmin"{}
+\item 
+static final String \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_aa8ed5b2f35becedacaab42216f921c48}{PASSWORD}} = "{}AVNS\+\_\+g46t\+QJXWz\+\_\+2\+Fh\+\_\+\+QBWi\+M"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a3ed5c18c7b9fb86f9fe23c531136dc5a}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!DataBaseConnection@{DataBaseConnection}}
+\index{DataBaseConnection@{DataBaseConnection}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{DataBaseConnection()}{DataBaseConnection()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a3ed5c18c7b9fb86f9fe23c531136dc5a} 
+com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+Data\+Base\+Connection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity}{Main\+Activity}}}]{context}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a3ed5c18c7b9fb86f9fe23c531136dc5a_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_abc615b05c31c508894dc2d300292738a}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!addBookToUser@{addBookToUser}}
+\index{addBookToUser@{addBookToUser}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{addBookToUser()}{addBookToUser()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_abc615b05c31c508894dc2d300292738a} 
+void com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+add\+Book\+To\+User (\begin{DoxyParamCaption}\item[{int}]{user\+Id}{, }\item[{String}]{status}{, }\item[{String}]{score}{, }\item[{Local\+Date}]{finished}{, }\item[{String}]{book\+Name}{, }\item[{String}]{author}{, }\item[{int}]{pages}{, }\item[{String}]{release\+Date}{, }\item[{String}]{image\+Url}{, }\item[{String}]{description}{, }\item[{double}]{reading\+Time}{, }\item[{String}]{genre}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_abc615b05c31c508894dc2d300292738a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a3b22d6106c92d008ed8b05c10892f0b7}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!addGoal@{addGoal}}
+\index{addGoal@{addGoal}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{addGoal()}{addGoal()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a3b22d6106c92d008ed8b05c10892f0b7} 
+long com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+add\+Goal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal}{Goal}}}]{goal}{, }\item[{\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User}{User}}}]{user}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a3b22d6106c92d008ed8b05c10892f0b7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_af697f4f75aef2a9a2b45f603452a8c4e}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!addNewBook@{addNewBook}}
+\index{addNewBook@{addNewBook}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{addNewBook()}{addNewBook()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_af697f4f75aef2a9a2b45f603452a8c4e} 
+int com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+add\+New\+Book (\begin{DoxyParamCaption}\item[{String}]{book\+Name}{, }\item[{String}]{author}{, }\item[{int}]{pages}{, }\item[{String}]{release\+Date}{, }\item[{String}]{image\+Url}{, }\item[{String}]{description}{, }\item[{String}]{genre}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_af697f4f75aef2a9a2b45f603452a8c4e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_ae83460b1effd3376ba0caca7220f7ced}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!addNotification@{addNotification}}
+\index{addNotification@{addNotification}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{addNotification()}{addNotification()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_ae83460b1effd3376ba0caca7220f7ced} 
+void com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+add\+Notification (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User}{User}}}]{user}{, }\item[{String}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_ae83460b1effd3376ba0caca7220f7ced_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_ab37c8cc6cf8d9437799cf3a3d414bfc9}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!addUser@{addUser}}
+\index{addUser@{addUser}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{addUser()}{addUser()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_ab37c8cc6cf8d9437799cf3a3d414bfc9} 
+void com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+add\+User (\begin{DoxyParamCaption}\item[{String}]{username}{, }\item[{String}]{email}{, }\item[{String}]{password}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_ab37c8cc6cf8d9437799cf3a3d414bfc9_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a47a8bd471a1f2e4336a9378446c9ed86}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!changeEmail@{changeEmail}}
+\index{changeEmail@{changeEmail}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{changeEmail()}{changeEmail()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a47a8bd471a1f2e4336a9378446c9ed86} 
+void com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+change\+Email (\begin{DoxyParamCaption}\item[{int}]{user\+Id}{, }\item[{String}]{email}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a59558eec699341c6309b60e3c90b8093}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!changePassword@{changePassword}}
+\index{changePassword@{changePassword}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{changePassword()}{changePassword()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a59558eec699341c6309b60e3c90b8093} 
+void com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+change\+Password (\begin{DoxyParamCaption}\item[{int}]{user\+Id}{, }\item[{String}]{new\+Password}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a3938ac17813d30aea19e71d1b149e972}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!changeUserName@{changeUserName}}
+\index{changeUserName@{changeUserName}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{changeUserName()}{changeUserName()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a3938ac17813d30aea19e71d1b149e972} 
+void com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+change\+User\+Name (\begin{DoxyParamCaption}\item[{int}]{user\+Id}{, }\item[{String}]{new\+User}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_aee74be9d7674275d682de94e068a3bec}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!checkLogin@{checkLogin}}
+\index{checkLogin@{checkLogin}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{checkLogin()}{checkLogin()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_aee74be9d7674275d682de94e068a3bec} 
+Future$<$ Integer $>$ com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+check\+Login (\begin{DoxyParamCaption}\item[{String}]{username}{, }\item[{char\mbox{[}$\,$\mbox{]}}]{password}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a86b6ffa92fad445bf50ba17e72ed7652}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!checkPassword@{checkPassword}}
+\index{checkPassword@{checkPassword}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{checkPassword()}{checkPassword()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a86b6ffa92fad445bf50ba17e72ed7652} 
+Future$<$ String $>$ com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+check\+Password (\begin{DoxyParamCaption}\item[{int}]{user\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_aa0888bddcc69a7e612d2b55269f3ce4a}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!deleteUser@{deleteUser}}
+\index{deleteUser@{deleteUser}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{deleteUser()}{deleteUser()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_aa0888bddcc69a7e612d2b55269f3ce4a} 
+void com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+delete\+User (\begin{DoxyParamCaption}\item[{int}]{user\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_acf3ef21ff7a224367d185748b6247481}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!generateSessionToken@{generateSessionToken}}
+\index{generateSessionToken@{generateSessionToken}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{generateSessionToken()}{generateSessionToken()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_acf3ef21ff7a224367d185748b6247481} 
+String com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+generate\+Session\+Token (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_acf3ef21ff7a224367d185748b6247481_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a7889f4b8cbd0a3c254d6e1b390f22e00}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!getAllGoalsForUser@{getAllGoalsForUser}}
+\index{getAllGoalsForUser@{getAllGoalsForUser}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{getAllGoalsForUser()}{getAllGoalsForUser()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a7889f4b8cbd0a3c254d6e1b390f22e00} 
+void com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+get\+All\+Goals\+For\+User (\begin{DoxyParamCaption}\item[{int}]{user\+Id}{, }\item[{Consumer$<$ List$<$ \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal}{Goal}} $>$ $>$}]{callback}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a7889f4b8cbd0a3c254d6e1b390f22e00_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_aaefa5b0d10088dc34c39ba72307026eb}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!getAllNotificationsForUser@{getAllNotificationsForUser}}
+\index{getAllNotificationsForUser@{getAllNotificationsForUser}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{getAllNotificationsForUser()}{getAllNotificationsForUser()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_aaefa5b0d10088dc34c39ba72307026eb} 
+void com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+get\+All\+Notifications\+For\+User (\begin{DoxyParamCaption}\item[{int}]{user\+Id}{, }\item[{Consumer$<$ List$<$ \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification}{Notification}} $>$ $>$}]{callback}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_aa8ec52be0a15b422e5307257258d2950}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!getBookByName@{getBookByName}}
+\index{getBookByName@{getBookByName}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{getBookByName()}{getBookByName()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_aa8ec52be0a15b422e5307257258d2950} 
+Future$<$ \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book}{Book}} $>$ com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+get\+Book\+By\+Name (\begin{DoxyParamCaption}\item[{String}]{book\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_aad5aa12951cce78e9438fbc4056f5544}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!getBooksFromUID@{getBooksFromUID}}
+\index{getBooksFromUID@{getBooksFromUID}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{getBooksFromUID()}{getBooksFromUID()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_aad5aa12951cce78e9438fbc4056f5544} 
+Future$<$ List$<$ \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book}{Book}} $>$ $>$ com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+get\+Books\+From\+UID (\begin{DoxyParamCaption}\item[{int}]{uid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_ac60874dcdc45687598a20a0d61a01d6d}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!getNotesFromUser@{getNotesFromUser}}
+\index{getNotesFromUser@{getNotesFromUser}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{getNotesFromUser()}{getNotesFromUser()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_ac60874dcdc45687598a20a0d61a01d6d} 
+Future$<$ String $>$ com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+get\+Notes\+From\+User (\begin{DoxyParamCaption}\item[{int}]{UID}{, }\item[{int}]{book\+ID}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a6bfa78cc6e4957456c3c0a7d6d5281dc}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!getRatingFromBook@{getRatingFromBook}}
+\index{getRatingFromBook@{getRatingFromBook}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{getRatingFromBook()}{getRatingFromBook()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a6bfa78cc6e4957456c3c0a7d6d5281dc} 
+Future$<$ Float $>$ com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+get\+Rating\+From\+Book (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book}{Book}}}]{book}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a6bfa78cc6e4957456c3c0a7d6d5281dc_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a99a86e8b98d2d0ccc944aa93c10c878d}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!getReadingTimeByMonth@{getReadingTimeByMonth}}
+\index{getReadingTimeByMonth@{getReadingTimeByMonth}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{getReadingTimeByMonth()}{getReadingTimeByMonth()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a99a86e8b98d2d0ccc944aa93c10c878d} 
+Future$<$ Array\+List$<$ Bar\+Entry $>$ $>$ com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+get\+Reading\+Time\+By\+Month (\begin{DoxyParamCaption}\item[{int}]{UID}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a219c11f4d9a8683e6f6d963a2e5592fa}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!getTime@{getTime}}
+\index{getTime@{getTime}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{getTime()}{getTime()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a219c11f4d9a8683e6f6d963a2e5592fa} 
+Future$<$ Local\+Time $>$ com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+get\+Time (\begin{DoxyParamCaption}\item[{int}]{user\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_aa495d1fe38fd1c36bc4bd3f4338b426d}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!getToken@{getToken}}
+\index{getToken@{getToken}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{getToken()}{getToken()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_aa495d1fe38fd1c36bc4bd3f4338b426d} 
+Future$<$ String $>$ com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+get\+Token (\begin{DoxyParamCaption}\item[{int}]{uid}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a5dad5786ba9d3e263569a9b1838a0092}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!initialize@{initialize}}
+\index{initialize@{initialize}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a5dad5786ba9d3e263569a9b1838a0092} 
+void com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+initialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a5dad5786ba9d3e263569a9b1838a0092_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a5dad5786ba9d3e263569a9b1838a0092_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a6551f4e8da2da417bc29f8b6af08aa51}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!loadTrustStore@{loadTrustStore}}
+\index{loadTrustStore@{loadTrustStore}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{loadTrustStore()}{loadTrustStore()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a6551f4e8da2da417bc29f8b6af08aa51} 
+Key\+Store com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+load\+Trust\+Store (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) throws Exception\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a6551f4e8da2da417bc29f8b6af08aa51_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_af193be7b7a849bfac39f8f45d5e16ee8}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!notesChanged@{notesChanged}}
+\index{notesChanged@{notesChanged}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{notesChanged()}{notesChanged()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_af193be7b7a849bfac39f8f45d5e16ee8} 
+void com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+notes\+Changed (\begin{DoxyParamCaption}\item[{int}]{UID}{, }\item[{int}]{book\+ID}{, }\item[{String}]{note}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_ab32626fd4493c33e19a7875ff500b2e6}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!removeBookFromUser@{removeBookFromUser}}
+\index{removeBookFromUser@{removeBookFromUser}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{removeBookFromUser()}{removeBookFromUser()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_ab32626fd4493c33e19a7875ff500b2e6} 
+void com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+remove\+Book\+From\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book}{Book}}}]{book}{, }\item[{int}]{UID}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_ab32626fd4493c33e19a7875ff500b2e6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_aa8504514977721bef71acfcdb0019b6c}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!removeGoal@{removeGoal}}
+\index{removeGoal@{removeGoal}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{removeGoal()}{removeGoal()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_aa8504514977721bef71acfcdb0019b6c} 
+void com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+remove\+Goal (\begin{DoxyParamCaption}\item[{int}]{goal\+Id}{, }\item[{int}]{user\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a1aaec1cad853f2dda5dff2c6e07b5cb8}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!removeNotification@{removeNotification}}
+\index{removeNotification@{removeNotification}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{removeNotification()}{removeNotification()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a1aaec1cad853f2dda5dff2c6e07b5cb8} 
+void com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+remove\+Notification (\begin{DoxyParamCaption}\item[{int}]{notification\+Id}{, }\item[{int}]{user\+Id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_afb94e7db2769200aba9d3eed97a6174b}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!setTime@{setTime}}
+\index{setTime@{setTime}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{setTime()}{setTime()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_afb94e7db2769200aba9d3eed97a6174b} 
+void com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+set\+Time (\begin{DoxyParamCaption}\item[{int}]{user\+Id}{, }\item[{Local\+Time}]{time}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a76f8124415bc76fa523847cba23c8146}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!updateGoalProgress@{updateGoalProgress}}
+\index{updateGoalProgress@{updateGoalProgress}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{updateGoalProgress()}{updateGoalProgress()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a76f8124415bc76fa523847cba23c8146} 
+void com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+update\+Goal\+Progress (\begin{DoxyParamCaption}\item[{int}]{user\+Id}{, }\item[{int}]{goal\+ID}{, }\item[{int}]{progress}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a62d192fe1bc6c3cbe531112364da3fa5}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!updateReadingStatus@{updateReadingStatus}}
+\index{updateReadingStatus@{updateReadingStatus}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{updateReadingStatus()}{updateReadingStatus()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a62d192fe1bc6c3cbe531112364da3fa5} 
+void com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+update\+Reading\+Status (\begin{DoxyParamCaption}\item[{int}]{user\+Id}{, }\item[{int}]{book\+Id}{, }\item[{String}]{reading\+Status}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_adadd13914192fd766da3e78bb288b688}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!context@{context}}
+\index{context@{context}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{context}{context}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_adadd13914192fd766da3e78bb288b688} 
+final \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1MainActivity}{Main\+Activity}} com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+context\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a19f85f9ddffa0a97088614d80d2c46e9}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!executorService@{executorService}}
+\index{executorService@{executorService}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{executorService}{executorService}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a19f85f9ddffa0a97088614d80d2c46e9} 
+final Executor\+Service com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+executor\+Service = Executors.\+new\+Single\+Thread\+Executor()\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_aa8ed5b2f35becedacaab42216f921c48}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!PASSWORD@{PASSWORD}}
+\index{PASSWORD@{PASSWORD}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{PASSWORD}{PASSWORD}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_aa8ed5b2f35becedacaab42216f921c48} 
+final String com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+PASSWORD = "{}AVNS\+\_\+g46t\+QJXWz\+\_\+2\+Fh\+\_\+\+QBWi\+M"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a89f590f8fe8376ed0bbfc61f50a3f604}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!trustStoreFile@{trustStoreFile}}
+\index{trustStoreFile@{trustStoreFile}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{trustStoreFile}{trustStoreFile}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a89f590f8fe8376ed0bbfc61f50a3f604} 
+File com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+trust\+Store\+File\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a5737bacc185010702d20e4380318959d}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!URL@{URL}}
+\index{URL@{URL}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{URL}{URL}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_a5737bacc185010702d20e4380318959d} 
+String com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+URL\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_aebfa52c8bb7e772ab8713234e3754392}\index{com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}!USER@{USER}}
+\index{USER@{USER}!com.example.mybookshelf.DataBaseConnection@{com.example.mybookshelf.DataBaseConnection}}
+\doxysubsubsection{\texorpdfstring{USER}{USER}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1DataBaseConnection_aebfa52c8bb7e772ab8713234e3754392} 
+final String com.\+example.\+mybookshelf.\+Data\+Base\+Connection.\+USER = "{}avnadmin"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/app/doc\+\_\+state/github\+\_\+repos\+Repo\+Arch\+Doc\+Gen\+Context/\+Elias\+Schaffer/\+My\+Book\+Shelf/src/main/java/com/example/mybookshelf/\mbox{\hyperlink{DataBaseConnection_8java}{Data\+Base\+Connection.\+java}}\end{DoxyCompactItemize}

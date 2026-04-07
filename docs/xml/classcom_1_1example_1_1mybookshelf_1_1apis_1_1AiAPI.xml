@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI" kind="class" language="Java" prot="public">
+    <compoundname>com::example::mybookshelf::apis::AiAPI</compoundname>
+    <innerclass refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1_1AiService" prot="public">com::example::mybookshelf::apis::AiAPI::AiService</innerclass>
+    <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a62f0ba451acb21dcf4872e3801046446" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String com.example.mybookshelf.apis.AiAPI.API_URL</definition>
+        <argsstring></argsstring>
+        <name>API_URL</name>
+        <qualifiedname>com.example.mybookshelf.apis.AiAPI.API_URL</qualifiedname>
+        <initializer>= &quot;https://api.cloudflare.com/&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/AiAPI.java" line="22" column="33" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/AiAPI.java" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1adbd8f23489c5f42a96d42fcf9b77cb6c" prot="private" static="yes" mutable="no">
+        <type>final String</type>
+        <definition>final String com.example.mybookshelf.apis.AiAPI.API_KEY</definition>
+        <argsstring></argsstring>
+        <name>API_KEY</name>
+        <qualifiedname>com.example.mybookshelf.apis.AiAPI.API_KEY</qualifiedname>
+        <initializer>= &quot;5z2t0nUwiYnyRRf1w_qDB1Eai0K_yuhQg8BAT0nk&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/AiAPI.java" line="23" column="33" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/AiAPI.java" bodystart="23" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a4a45b91f0717302661d9e35ed956c049" compoundref="AiAPI_8java" startline="59" endline="116">com.example.mybookshelf.apis.AiAPI.fetchResponse</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a3f60dedc2406280d2793f726a0460a13" prot="private" static="yes" mutable="no">
+        <type>final OkHttpClient</type>
+        <definition>final OkHttpClient com.example.mybookshelf.apis.AiAPI.client</definition>
+        <argsstring></argsstring>
+        <name>client</name>
+        <qualifiedname>com.example.mybookshelf.apis.AiAPI.client</qualifiedname>
+        <initializer>= new OkHttpClient.Builder()
+            .connectTimeout(30, TimeUnit.SECONDS)
+            .readTimeout(30, TimeUnit.SECONDS)
+            .writeTimeout(30, TimeUnit.SECONDS)
+            .addInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
+            .build()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/AiAPI.java" line="25" column="39" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/AiAPI.java" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a958c698db1d9e49dc07ee10349d0e4c5" prot="private" static="yes" mutable="no">
+        <type>final Retrofit</type>
+        <definition>final Retrofit com.example.mybookshelf.apis.AiAPI.retrofit</definition>
+        <argsstring></argsstring>
+        <name>retrofit</name>
+        <qualifiedname>com.example.mybookshelf.apis.AiAPI.retrofit</qualifiedname>
+        <initializer>= new Retrofit.Builder()
+            .baseUrl(<ref refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a62f0ba451acb21dcf4872e3801046446" kindref="member">API_URL</ref>)
+            .<ref refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a3f60dedc2406280d2793f726a0460a13" kindref="member">client</ref>(<ref refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a3f60dedc2406280d2793f726a0460a13" kindref="member">client</ref>)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/AiAPI.java" line="40" column="35" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/AiAPI.java" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a4a38dcc1f948bc099f5c4e1400e40935" prot="private" static="yes" mutable="no">
+        <type>final <ref refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1_1AiService" kindref="compound">AiService</ref></type>
+        <definition>final AiService com.example.mybookshelf.apis.AiAPI.aiService</definition>
+        <argsstring></argsstring>
+        <name>aiService</name>
+        <qualifiedname>com.example.mybookshelf.apis.AiAPI.aiService</qualifiedname>
+        <initializer>= retrofit.create(AiService.class)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/AiAPI.java" line="46" column="36" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/AiAPI.java" bodystart="46" bodyend="-1"/>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a4a45b91f0717302661d9e35ed956c049" compoundref="AiAPI_8java" startline="59" endline="116">com.example.mybookshelf.apis.AiAPI.fetchResponse</referencedby>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a4a45b91f0717302661d9e35ed956c049" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void com.example.mybookshelf.apis.AiAPI.fetchResponse</definition>
+        <argsstring>(final String question, final ApiResponseCallback callback)</argsstring>
+        <name>fetchResponse</name>
+        <qualifiedname>com.example.mybookshelf.apis.AiAPI.fetchResponse</qualifiedname>
+        <param>
+          <type>final String</type>
+          <declname>question</declname>
+        </param>
+        <param>
+          <type>final <ref refid="interfacecom_1_1example_1_1mybookshelf_1_1ApiResponseCallback" kindref="compound">ApiResponseCallback</ref></type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Fetches a response from an AI service based on a given question.</para>
+<para>This method constructs a JSON payload with system and user messages, sends it to an AI service, and handles the response or failure through callbacks. It logs the request payload and processes the response body if successful, passing it to the success callback. In case of errors, it passes an appropriate error message to the failure callback.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>question</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The user&apos;s question to be sent to the AI service. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The callback interface to handle the AI service response or failure. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>Handles the response from a network call, passing it to the appropriate callback method.</para>
+<para>Handles request failure by notifying the callback and printing the stack trace.</para>
+        </inbodydescription>
+        <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/AiAPI.java" line="59" column="24" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/AiAPI.java" bodystart="59" bodyend="116"/>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a4a38dcc1f948bc099f5c4e1400e40935" compoundref="AiAPI_8java" startline="46">com.example.mybookshelf.apis.AiAPI.aiService</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1adbd8f23489c5f42a96d42fcf9b77cb6c" compoundref="AiAPI_8java" startline="23">com.example.mybookshelf.apis.AiAPI.API_KEY</references>
+        <references refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a4a45b91f0717302661d9e35ed956c049" compoundref="AiAPI_8java" startline="59" endline="116">com.example.mybookshelf.apis.AiAPI.fetchResponse</references>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow_1ae50cf18619872a365eebe91c18d86e8d" compoundref="BookRecommendationFlow_8java" startline="399" endline="458">com.example.mybookshelf.BookRecommendationFlow.callAI</referencedby>
+        <referencedby refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a4a45b91f0717302661d9e35ed956c049" compoundref="AiAPI_8java" startline="59" endline="116">com.example.mybookshelf.apis.AiAPI.fetchResponse</referencedby>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>String</label>
+      </node>
+      <node id="1">
+        <label>com.example.mybookshelf.apis.AiAPI</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-API_KEY</edgelabel>
+          <edgelabel>-API_URL</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-client</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-retrofit</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-aiService</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>com.example.mybookshelf.apis.AiAPI.AiService</label>
+        <link refid="interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1_1AiService"/>
+      </node>
+      <node id="3">
+        <label>static final OkHttpClient</label>
+      </node>
+      <node id="4">
+        <label>static final Retrofit</label>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/AiAPI.java" line="20" column="7" bodyfile="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/apis/AiAPI.java" bodystart="20" bodyend="117"/>
+    <listofallmembers>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a4a38dcc1f948bc099f5c4e1400e40935" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::apis::AiAPI</scope><name>aiService</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1adbd8f23489c5f42a96d42fcf9b77cb6c" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::apis::AiAPI</scope><name>API_KEY</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a62f0ba451acb21dcf4872e3801046446" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::apis::AiAPI</scope><name>API_URL</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a3f60dedc2406280d2793f726a0460a13" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::apis::AiAPI</scope><name>client</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a4a45b91f0717302661d9e35ed956c049" prot="public" virt="non-virtual"><scope>com::example::mybookshelf::apis::AiAPI</scope><name>fetchResponse</name></member>
+      <member refid="classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI_1a958c698db1d9e49dc07ee10349d0e4c5" prot="private" virt="non-virtual"><scope>com::example::mybookshelf::apis::AiAPI</scope><name>retrofit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

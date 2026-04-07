@@ -1,0 +1,59 @@
+<map id="com.example.mybookshelf.BookRecommendationFlow.buildAIStringFresh" name="com.example.mybookshelf.BookRecommendationFlow.buildAIStringFresh">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,718,241,773"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#ae50cf18619872a365eebe91c18d86e8d" title=" " alt="" coords="289,440,529,480"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="150,716,377,488,380,492,154,720"/>
+<area shape="poly" id="edge3_Node000002_Node000002" title=" " alt="" coords="357,441,353,430,362,421,381,415,409,413,442,416,460,423,458,428,441,421,409,419,382,421,365,426,359,431,362,439"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#a3855117e802e54923c308e0df6280c17" title=" " alt="" coords="2836,713,3095,767"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="429,479,491,543,533,580,579,611,868,778,989,841,1106,890,1226,928,1357,954,1508,969,1686,973,2331,973,2463,976,2567,977,2616,971,2667,960,2723,941,2787,912,2832,884,2873,849,2908,811,2935,777,2939,781,2912,815,2877,852,2835,888,2789,917,2725,946,2669,965,2617,976,2568,982,2463,982,2331,979,1686,979,1508,974,1357,959,1225,933,1104,895,987,846,865,783,576,616,530,584,488,547,426,482"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#a02b6d699653b58f244907bd10db53ab5" title=" " alt="" coords="2843,279,3088,334"/>
+<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="425,438,509,344,574,281,652,215,741,154,838,102,889,82,941,67,995,57,1049,53,2331,53,2463,49,2568,46,2618,50,2670,61,2726,80,2789,110,2838,143,2881,184,2916,227,2943,266,2939,269,2912,230,2877,188,2835,147,2787,114,2724,85,2668,66,2617,56,2568,51,2464,54,2331,59,1049,59,996,62,942,72,890,87,840,107,743,158,655,220,578,285,513,347,428,442"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1example_1_1mybookshelf_1_1apis_1_1AiAPI.html#a4a45b91f0717302661d9e35ed956c049" title=" " alt="" coords="607,404,842,444"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="529,444,593,436,594,442,530,449"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#a4dceb0fa4d170b8c7e5a7a6718593dfe" title=" " alt="" coords="591,316,858,356"/>
+<area shape="poly" id="edge7_Node000002_Node000006" title=" " alt="" coords="439,438,501,401,576,366,601,357,603,362,578,370,504,406,442,442"/>
+<area shape="rect" id="Node000017" href="$classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#ac62af5d6edeffa96b2862a609ebb40df" title=" " alt="" coords="581,469,869,523"/>
+<area shape="poly" id="edge38_Node000002_Node000017" title=" " alt="" coords="530,471,567,475,567,481,529,476"/>
+<area shape="rect" id="Node000018" href="$classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#a78597ba37409daeee77dcfa6236b2e6a" title=" " alt="" coords="577,547,872,602"/>
+<area shape="poly" id="edge39_Node000002_Node000018" title=" " alt="" coords="452,478,511,505,578,532,604,541,602,546,576,537,509,510,450,482"/>
+<area shape="poly" id="edge6_Node000005_Node000005" title=" " alt="" coords="667,405,663,394,673,385,693,379,725,377,761,380,781,387,779,392,760,385,725,383,694,385,675,390,668,395,672,403"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="834,354,873,365,967,404,1051,445,1126,489,1195,534,1317,627,1429,717,1484,759,1542,797,1603,832,1668,863,1740,888,1819,907,1908,919,2007,923,2331,923,2402,921,2462,916,2515,908,2563,896,2662,863,2787,819,2845,796,2899,771,2901,776,2847,801,2789,824,2664,868,2565,901,2516,913,2463,921,2403,926,2331,928,2007,928,1908,924,1818,912,1738,893,1666,868,1600,837,1539,802,1481,763,1425,721,1313,631,1192,538,1123,493,1048,450,965,408,871,371,833,359"/>
+<area shape="poly" id="edge9_Node000006_Node000004" title=" " alt="" coords="756,313,855,257,924,222,1002,188,1088,155,1178,129,1271,111,1365,104,2331,104,2462,101,2566,100,2615,104,2667,114,2724,131,2789,156,2832,179,2871,208,2934,267,2930,271,2868,212,2829,184,2787,161,2722,136,2666,119,2615,109,2566,105,2463,106,2331,109,1365,109,1272,116,1179,134,1089,161,1004,193,926,227,858,262,759,318"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#a22f0dcaea578fbd7358e6237cd4873d4" title=" " alt="" coords="920,316,1181,356"/>
+<area shape="poly" id="edge10_Node000006_Node000007" title=" " alt="" coords="858,333,906,333,906,339,858,339"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#a276e931dabe3e85af257a9d16ce7cc67" title=" " alt="" coords="1873,211,2144,266"/>
+<area shape="poly" id="edge11_Node000007_Node000008" title=" " alt="" coords="1181,320,1859,251,1860,256,1182,325"/>
+<area shape="rect" id="Node000012" href="$classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#a4c7dc337216592f7f214f69ce7009d37" title=" " alt="" coords="1229,387,1503,442"/>
+<area shape="poly" id="edge22_Node000007_Node000012" title=" " alt="" coords="1132,353,1243,381,1242,387,1131,359"/>
+<area shape="poly" id="edge12_Node000008_Node000003" title=" " alt="" coords="2070,264,2380,414,2584,518,2789,628,2912,703,2910,708,2787,633,2582,523,2378,419,2068,269"/>
+<area shape="poly" id="edge13_Node000008_Node000004" title=" " alt="" coords="2081,209,2135,192,2193,180,2361,156,2430,149,2494,147,2558,150,2626,160,2701,177,2789,201,2825,215,2859,232,2919,269,2916,274,2857,237,2822,220,2787,207,2700,182,2625,165,2557,156,2494,152,2430,154,2361,161,2194,185,2137,197,2083,214"/>
+<area shape="rect" id="Node000009" href="$classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#a5c657be258c13c85848c7b7115f8a0b5" title=" " alt="" coords="2195,195,2465,250"/>
+<area shape="poly" id="edge14_Node000008_Node000009" title=" " alt="" coords="2144,229,2181,227,2181,233,2144,235"/>
+<area shape="poly" id="edge15_Node000009_Node000003" title=" " alt="" coords="2427,248,2468,267,2493,288,2516,310,2556,336,2592,356,2657,384,2720,415,2753,439,2790,470,2841,527,2885,589,2921,649,2948,699,2943,701,2917,652,2881,592,2837,530,2786,474,2750,443,2717,420,2655,389,2590,361,2554,341,2513,314,2489,292,2465,272,2425,252"/>
+<area shape="poly" id="edge16_Node000009_Node000004" title=" " alt="" coords="2466,210,2621,211,2706,217,2789,231,2847,248,2901,271,2899,276,2846,253,2787,236,2705,223,2621,216,2466,216"/>
+<area shape="rect" id="Node000010" href="$classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#aa95301256c7f5377d1bc432189483b3c" title=" " alt="" coords="2516,246,2787,301"/>
+<area shape="poly" id="edge17_Node000009_Node000010" title=" " alt="" coords="2466,241,2503,247,2502,253,2465,247"/>
+<area shape="poly" id="edge18_Node000010_Node000003" title=" " alt="" coords="2684,299,2736,353,2790,420,2839,494,2883,571,2948,699,2943,701,2879,574,2835,497,2786,423,2732,357,2680,303"/>
+<area shape="poly" id="edge21_Node000010_Node000004" title=" " alt="" coords="2787,285,2829,290,2829,295,2787,290"/>
+<area shape="rect" id="Node000011" href="$classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#a78dda71d2c403a463d824ff61b2ce27f" title=" " alt="" coords="2847,74,3083,129"/>
+<area shape="poly" id="edge19_Node000010_Node000011" title=" " alt="" coords="2701,244,2902,133,2904,137,2704,248"/>
+<area shape="poly" id="edge20_Node000011_Node000002" title=" " alt="" coords="2852,77,2743,54,2613,32,2472,15,2331,8,1049,8,906,13,848,22,795,35,744,56,693,84,639,121,579,169,549,198,522,231,477,302,444,372,423,428,418,426,439,370,472,300,517,228,545,194,576,165,636,117,690,79,742,51,793,30,847,16,906,8,1049,3,2331,3,2473,9,2614,26,2744,49,2853,71"/>
+<area shape="poly" id="edge23_Node000012_Node000003" title=" " alt="" coords="1400,440,1478,504,1590,586,1656,629,1726,670,1799,707,1873,737,2006,781,2121,808,2224,823,2322,827,2421,822,2528,811,2788,779,2852,768,2853,773,2788,784,2528,817,2422,828,2322,832,2223,828,2120,814,2004,786,1871,743,1797,712,1723,675,1653,634,1587,591,1474,508,1397,444"/>
+<area shape="poly" id="edge24_Node000012_Node000004" title=" " alt="" coords="1502,387,1611,369,1738,353,1873,341,2007,336,2331,336,2596,329,2829,315,2829,320,2597,334,2331,341,2007,341,1873,346,1738,358,1612,375,1503,392"/>
+<area shape="rect" id="Node000013" href="$classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#aaf567ca97b0d7f0c58ebba4d6f4b18bd" title=" " alt="" coords="1551,471,1824,526"/>
+<area shape="poly" id="edge25_Node000012_Node000013" title=" " alt="" coords="1472,439,1570,465,1568,470,1471,445"/>
+<area shape="poly" id="edge26_Node000013_Node000003" title=" " alt="" coords="1726,524,1793,571,1873,619,1960,664,2028,696,2100,720,2194,743,2276,757,2361,766,2530,773,2689,767,2822,756,2823,761,2689,773,2530,778,2361,772,2276,762,2193,748,2098,725,2026,700,1957,668,1871,624,1790,575,1723,528"/>
+<area shape="poly" id="edge27_Node000013_Node000004" title=" " alt="" coords="1824,485,2014,467,2255,440,2521,403,2787,355,2865,335,2866,340,2789,360,2522,408,2256,445,2015,473,1825,491"/>
+<area shape="rect" id="Node000014" href="$classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#a2bc1c0125eb3c1fe64ed1ed3ee93d3eb" title=" " alt="" coords="1872,555,2145,610"/>
+<area shape="poly" id="edge28_Node000013_Node000014" title=" " alt="" coords="1793,523,1891,549,1890,554,1792,529"/>
+<area shape="poly" id="edge29_Node000014_Node000003" title=" " alt="" coords="2068,608,2128,634,2194,660,2352,713,2423,730,2515,744,2591,751,2651,751,2788,744,2822,743,2822,749,2788,749,2651,756,2591,756,2514,749,2422,735,2351,718,2192,665,2126,639,2065,612"/>
+<area shape="poly" id="edge30_Node000014_Node000004" title=" " alt="" coords="2145,562,2282,540,2444,507,2618,462,2704,436,2787,406,2853,374,2912,339,2914,344,2856,379,2789,410,2705,441,2619,467,2445,512,2283,545,2146,568"/>
+<area shape="rect" id="Node000015" href="$classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#ad10515cfcf8650b6830b68f15d393b3b" title=" " alt="" coords="2193,597,2467,651"/>
+<area shape="poly" id="edge31_Node000014_Node000015" title=" " alt="" coords="2146,598,2180,602,2179,607,2145,603"/>
+<area shape="poly" id="edge32_Node000015_Node000003" title=" " alt="" coords="2467,624,2622,637,2707,648,2789,665,2845,683,2897,704,2895,709,2843,688,2787,671,2706,654,2622,642,2467,629"/>
+<area shape="poly" id="edge33_Node000015_Node000004" title=" " alt="" coords="2467,614,2558,606,2651,595,2731,579,2763,569,2787,558,2816,537,2842,512,2888,454,2922,396,2946,345,2951,348,2927,398,2892,457,2846,515,2819,541,2789,562,2765,574,2733,584,2651,600,2559,612,2467,620"/>
+<area shape="rect" id="Node000016" href="$classcom_1_1example_1_1mybookshelf_1_1BookRecommendationFlow.html#a46c6733f27b3527d3934cee02cfcd7ac" title=" " alt="" coords="2515,681,2788,735"/>
+<area shape="poly" id="edge34_Node000015_Node000016" title=" " alt="" coords="2436,649,2534,675,2532,680,2435,654"/>
+<area shape="poly" id="edge36_Node000016_Node000001" title=" " alt="" coords="2515,713,255,746,255,741,2515,707"/>
+<area shape="poly" id="edge35_Node000016_Node000003" title=" " alt="" coords="2789,719,2822,723,2822,728,2788,725"/>
+<area shape="poly" id="edge37_Node000016_Node000004" title=" " alt="" coords="2700,678,2744,647,2786,609,2838,542,2883,470,2919,401,2945,346,2950,348,2924,404,2888,472,2843,545,2790,612,2747,651,2703,683"/>
+</map>

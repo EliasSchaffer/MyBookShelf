@@ -1,0 +1,422 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="NotificationScheduler_8java" kind="file" language="Java">
+    <compoundname>NotificationScheduler.java</compoundname>
+    <includes local="no">android.annotation.SuppressLint</includes>
+    <includes local="no">android.app.AlarmManager</includes>
+    <includes local="no">android.app.PendingIntent</includes>
+    <includes local="no">android.content.Context</includes>
+    <includes local="no">android.content.Intent</includes>
+    <includes local="no">android.content.SharedPreferences</includes>
+    <includes local="no">android.os.Build</includes>
+    <includes local="no">android.util.Log</includes>
+    <includes local="no">androidx.core.app.NotificationCompat</includes>
+    <includes local="no">androidx.core.app.NotificationManagerCompat</includes>
+    <includes local="no">com.example.mybookshelf.R</includes>
+    <includes local="no">com.example.mybookshelf.dataClass.Goal</includes>
+    <includes local="no">java.time.LocalDateTime</includes>
+    <includes local="no">java.time.ZoneId</includes>
+    <includes local="no">java.time.ZonedDateTime</includes>
+    <includes local="no">java.util.Calendar</includes>
+    <includes local="no">java.util.Date</includes>
+    <includes local="no">java.util.Random</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java</label>
+        <link refid="NotificationScheduler_8java"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>android.annotation.SuppressLint</label>
+      </node>
+      <node id="3">
+        <label>android.app.AlarmManager</label>
+      </node>
+      <node id="4">
+        <label>android.app.PendingIntent</label>
+      </node>
+      <node id="5">
+        <label>android.content.Context</label>
+      </node>
+      <node id="6">
+        <label>android.content.Intent</label>
+      </node>
+      <node id="7">
+        <label>android.content.SharedPreferences</label>
+      </node>
+      <node id="8">
+        <label>android.os.Build</label>
+      </node>
+      <node id="9">
+        <label>android.util.Log</label>
+      </node>
+      <node id="10">
+        <label>androidx.core.app.NotificationCompat</label>
+      </node>
+      <node id="11">
+        <label>androidx.core.app.NotificationManagerCompat</label>
+      </node>
+      <node id="12">
+        <label>com.example.mybookshelf.R</label>
+      </node>
+      <node id="13">
+        <label>com.example.mybookshelf.dataClass.Goal</label>
+      </node>
+      <node id="14">
+        <label>java.time.LocalDateTime</label>
+      </node>
+      <node id="15">
+        <label>java.time.ZoneId</label>
+      </node>
+      <node id="16">
+        <label>java.time.ZonedDateTime</label>
+      </node>
+      <node id="17">
+        <label>java.util.Calendar</label>
+      </node>
+      <node id="18">
+        <label>java.util.Date</label>
+      </node>
+      <node id="19">
+        <label>java.util.Random</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler" prot="public">com::example::mybookshelf::notifications::NotificationScheduler</innerclass>
+    <innernamespace refid="namespacecom_1_1example_1_1mybookshelf_1_1notifications">com::example::mybookshelf::notifications</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">package<sp/></highlight><highlight class="normal">com.example.mybookshelf.notifications;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.annotation.SuppressLint;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.app.AlarmManager;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.app.PendingIntent;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.content.Context;</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.content.Intent;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.content.SharedPreferences;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.os.Build;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>android.util.Log;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>androidx.core.app.NotificationCompat;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>androidx.core.app.NotificationManagerCompat;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>com.example.mybookshelf.R;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>com.example.mybookshelf.dataClass.Goal;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.time.LocalDateTime;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.time.ZoneId;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.time.ZonedDateTime;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.Calendar;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.Date;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>java.util.Random;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler" kindref="compound">NotificationScheduler</ref><sp/>{</highlight></codeline>
+<codeline lineno="26" refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a351db1eeb0a6f1c2889b7bc90000e1bc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a351db1eeb0a6f1c2889b7bc90000e1bc" kindref="member">TAG</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;NotificationScheduler&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Request<sp/>code<sp/>für<sp/>die<sp/>tägliche<sp/>Notification</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a766a9c3decb9600b1297ed171dfe1b83" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a766a9c3decb9600b1297ed171dfe1b83" kindref="member">REQUEST_CODE_DAILY</ref><sp/>=<sp/>100;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Shared<sp/>Preferences<sp/>keys</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adbfc27021f5087d5f958e70d9a45f58b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adbfc27021f5087d5f958e70d9a45f58b" kindref="member">PREFS_NAME</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;notification_prefs&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33" refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a3f4772314ecfd41cd9db5513155c0ede" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a3f4772314ecfd41cd9db5513155c0ede" kindref="member">KEY_DAILY_ACTIVE</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;daily_active&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34" refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a0b16799acc5ad3eba1ead62b47ef62ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a0b16799acc5ad3eba1ead62b47ef62ea" kindref="member">KEY_DAILY_HOUR</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;daily_hour&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35" refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adafbd47943b49f9a6bcff839d60ca078" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adafbd47943b49f9a6bcff839d60ca078" kindref="member">KEY_DAILY_MINUTE</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;daily_minute&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36" refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1af907f287b80d0fa0fb8768f1e71f1549" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">final</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1af907f287b80d0fa0fb8768f1e71f1549" kindref="member">KEY_DAILY_MESSAGE</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;daily_message&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42" refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a5833d4c1b987dddea26acdad230c640f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a5833d4c1b987dddea26acdad230c640f" kindref="member">scheduleDailyNotification</ref>(Context<sp/>context,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>hour,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>minute,<sp/>String<sp/>message)<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Calendar<sp/>calendar<sp/>=<sp/>Calendar.getInstance();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>calendar.set(Calendar.HOUR_OF_DAY,<sp/>hour);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>calendar.set(Calendar.MINUTE,<sp/>minute);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>calendar.set(Calendar.SECOND,<sp/>0);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>calendar.set(Calendar.MILLISECOND,<sp/>0);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(calendar.getTimeInMillis()<sp/>&lt;=<sp/>System.currentTimeMillis())<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>calendar.add(Calendar.DAY_OF_MONTH,<sp/>1);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Step<sp/>1:<sp/>Define<sp/>your<sp/>titles</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String[]<sp/>titles<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Stay<sp/>on<sp/>Track!&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Your<sp/>Goals<sp/>Are<sp/>Waiting<sp/>🚀&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Time<sp/>to<sp/>Make<sp/>Progress&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Don’t<sp/>Lose<sp/>Sight<sp/>of<sp/>Your<sp/>Goal!&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Let’s<sp/>Crush<sp/>It<sp/>Today<sp/>💪&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Your<sp/>Future<sp/>Self<sp/>Will<sp/>Thank<sp/>You&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Keep<sp/>Going<sp/>–<sp/>You’re<sp/>Doing<sp/>Great!&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Goal<sp/>Check-In<sp/>🔔&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;You’re<sp/>One<sp/>Step<sp/>Closer&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Small<sp/>Steps<sp/>=<sp/>Big<sp/>Wins&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Step<sp/>2:<sp/>Pick<sp/>one<sp/>randomly</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>randomTitle<sp/>=<sp/>titles[</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Random().nextInt(titles.length)];</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Intent<sp/>intent<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Intent(context,<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationReceiver" kindref="compound">NotificationReceiver</ref>.class);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>intent.putExtra(</highlight><highlight class="stringliteral">&quot;title&quot;</highlight><highlight class="normal">,<sp/>randomTitle);<sp/></highlight><highlight class="comment">//<sp/>Step<sp/>3:<sp/>Use<sp/>it<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>intent.putExtra(</highlight><highlight class="stringliteral">&quot;message&quot;</highlight><highlight class="normal">,<sp/>message<sp/>!=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal"><sp/>?<sp/>message<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;Zeit<sp/>zum<sp/>Lesen!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>intent.putExtra(</highlight><highlight class="stringliteral">&quot;notificationType&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;daily&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>intent.putExtra(</highlight><highlight class="stringliteral">&quot;hour&quot;</highlight><highlight class="normal">,<sp/>hour);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>intent.putExtra(</highlight><highlight class="stringliteral">&quot;minute&quot;</highlight><highlight class="normal">,<sp/>minute);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PendingIntent<sp/>pendingIntent<sp/>=<sp/>PendingIntent.getBroadcast(</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>context,</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a766a9c3decb9600b1297ed171dfe1b83" kindref="member">REQUEST_CODE_DAILY</ref>,</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>intent,</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PendingIntent.FLAG_UPDATE_CURRENT<sp/>|<sp/>PendingIntent.FLAG_IMMUTABLE</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AlarmManager<sp/>alarmManager<sp/>=<sp/>(AlarmManager)<sp/>context.getSystemService(Context.ALARM_SERVICE);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(alarmManager<sp/>!=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Build.VERSION.SDK_INT<sp/>&gt;=<sp/>Build.VERSION_CODES.S<sp/>&amp;&amp;<sp/>!alarmManager.canScheduleExactAlarms())<sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Log.w(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a351db1eeb0a6f1c2889b7bc90000e1bc" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;App<sp/>doesn&apos;t<sp/>have<sp/>SCHEDULE_EXACT_ALARM<sp/>permission&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>alarmManager.setExactAndAllowWhileIdle(</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AlarmManager.RTC_WAKEUP,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>calendar.getTimeInMillis(),</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pendingIntent</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SharedPreferences<sp/>prefs<sp/>=<sp/>context.getSharedPreferences(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adbfc27021f5087d5f958e70d9a45f58b" kindref="member">PREFS_NAME</ref>,<sp/>Context.MODE_PRIVATE);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SharedPreferences.Editor<sp/>editor<sp/>=<sp/>prefs.edit();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>editor.putBoolean(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a3f4772314ecfd41cd9db5513155c0ede" kindref="member">KEY_DAILY_ACTIVE</ref>,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>editor.putInt(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a0b16799acc5ad3eba1ead62b47ef62ea" kindref="member">KEY_DAILY_HOUR</ref>,<sp/>hour);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>editor.putInt(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adafbd47943b49f9a6bcff839d60ca078" kindref="member">KEY_DAILY_MINUTE</ref>,<sp/>minute);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>editor.putString(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1af907f287b80d0fa0fb8768f1e71f1549" kindref="member">KEY_DAILY_MESSAGE</ref>,<sp/>message);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>editor.apply();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Log.d(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a351db1eeb0a6f1c2889b7bc90000e1bc" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Scheduled<sp/>exact<sp/>daily<sp/>notification<sp/>at<sp/>&quot;</highlight><highlight class="normal"><sp/>+</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String.format(</highlight><highlight class="stringliteral">&quot;%02d:%02d&quot;</highlight><highlight class="normal">,<sp/>hour,<sp/>minute)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>with<sp/>title<sp/>\&quot;&quot;</highlight><highlight class="normal"><sp/>+<sp/>randomTitle<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;\&quot;<sp/>for<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Date(calendar.getTimeInMillis()));</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113" refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ae8deb5392302274178dbbd3116654098" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ae8deb5392302274178dbbd3116654098" kindref="member">scheduleDailyNotification</ref>(Context<sp/>context)<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a5833d4c1b987dddea26acdad230c640f" kindref="member">scheduleDailyNotification</ref>(context,<sp/>20,<sp/>0,<sp/></highlight><highlight class="stringliteral">&quot;Zeit<sp/>zum<sp/>Lesen!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a79dcce93490bc0df80c03c0a410672b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a79dcce93490bc0df80c03c0a410672b2" kindref="member">changeDailyNotificationTime</ref>(Context<sp/>context,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>hour,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>minute)<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>currentMessage<sp/>=<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afad2859e0654bc94cdec599cd6ae9949" kindref="member">getDailyNotificationMessage</ref>(context);</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Lösche<sp/>die<sp/>alte<sp/>Notification</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afc96590cd792b862b32762b84cab085e" kindref="member">cancelDailyNotification</ref>(context);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Plane<sp/>neue<sp/>Notification<sp/>mit<sp/>neuer<sp/>Zeit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a5833d4c1b987dddea26acdad230c640f" kindref="member">scheduleDailyNotification</ref>(context,<sp/>hour,<sp/>minute,<sp/>currentMessage);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Log.d(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a351db1eeb0a6f1c2889b7bc90000e1bc" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Daily<sp/>notification<sp/>time<sp/>changed<sp/>to<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>String.format(</highlight><highlight class="stringliteral">&quot;%02d:%02d&quot;</highlight><highlight class="normal">,<sp/>hour,<sp/>minute));</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afeb40a8c5551b18f32abe21dcc0e130a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afeb40a8c5551b18f32abe21dcc0e130a" kindref="member">changeDailyNotificationMessage</ref>(Context<sp/>context,<sp/>String<sp/>message)<sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ac8a096801252bd85cf58f0b4ded28ebe" kindref="member">isDailyNotificationActive</ref>(context))<sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Log.w(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a351db1eeb0a6f1c2889b7bc90000e1bc" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;No<sp/>daily<sp/>notification<sp/>active<sp/>to<sp/>change<sp/>message&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>hour<sp/>=<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1aaf3ebda4b3bc3da4f2c4e8cabb4a3602" kindref="member">getDailyNotificationHour</ref>(context);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>minute<sp/>=<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ad29a9938277c2a671b0399cdc84c7844" kindref="member">getDailyNotificationMinute</ref>(context);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Lösche<sp/>die<sp/>alte<sp/>Notification</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afc96590cd792b862b32762b84cab085e" kindref="member">cancelDailyNotification</ref>(context);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Plane<sp/>neue<sp/>Notification<sp/>mit<sp/>neuer<sp/>Nachricht</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a5833d4c1b987dddea26acdad230c640f" kindref="member">scheduleDailyNotification</ref>(context,<sp/>hour,<sp/>minute,<sp/>message);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Log.d(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a351db1eeb0a6f1c2889b7bc90000e1bc" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Daily<sp/>notification<sp/>message<sp/>changed<sp/>to:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>message);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156" refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afc96590cd792b862b32762b84cab085e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afc96590cd792b862b32762b84cab085e" kindref="member">cancelDailyNotification</ref>(Context<sp/>context)<sp/>{</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Intent<sp/>intent<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Intent(context,<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationReceiver" kindref="compound">NotificationReceiver</ref>.class);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PendingIntent<sp/>pendingIntent<sp/>=<sp/>PendingIntent.getBroadcast(</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>context,</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a766a9c3decb9600b1297ed171dfe1b83" kindref="member">REQUEST_CODE_DAILY</ref>,</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>intent,</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PendingIntent.FLAG_IMMUTABLE</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AlarmManager<sp/>alarmManager<sp/>=<sp/>(AlarmManager)<sp/>context.getSystemService(Context.ALARM_SERVICE);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(alarmManager<sp/>!=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>alarmManager.cancel(pendingIntent);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Update<sp/>preferences</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SharedPreferences<sp/>prefs<sp/>=<sp/>context.getSharedPreferences(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adbfc27021f5087d5f958e70d9a45f58b" kindref="member">PREFS_NAME</ref>,<sp/>Context.MODE_PRIVATE);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SharedPreferences.Editor<sp/>editor<sp/>=<sp/>prefs.edit();</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>editor.putBoolean(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a3f4772314ecfd41cd9db5513155c0ede" kindref="member">KEY_DAILY_ACTIVE</ref>,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>editor.apply();</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Log.d(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a351db1eeb0a6f1c2889b7bc90000e1bc" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Daily<sp/>notification<sp/>cancelled&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182" refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ae2ade14f140458ae3bdac1c7e0ac35d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ae2ade14f140458ae3bdac1c7e0ac35d8" kindref="member">toggleDailyNotification</ref>(Context<sp/>context)<sp/>{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ac8a096801252bd85cf58f0b4ded28ebe" kindref="member">isDailyNotificationActive</ref>(context))<sp/>{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afc96590cd792b862b32762b84cab085e" kindref="member">cancelDailyNotification</ref>(context);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a5833d4c1b987dddea26acdad230c640f" kindref="member">scheduleDailyNotification</ref>(context);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193" refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a6a67704352785acd6dcd956ec2f8834f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a6a67704352785acd6dcd956ec2f8834f" kindref="member">restoreNotifications</ref>(Context<sp/>context)<sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SharedPreferences<sp/>prefs<sp/>=<sp/>context.getSharedPreferences(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adbfc27021f5087d5f958e70d9a45f58b" kindref="member">PREFS_NAME</ref>,<sp/>Context.MODE_PRIVATE);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Stelle<sp/>tägliche<sp/>Notification<sp/>wieder<sp/>her,<sp/>falls<sp/>sie<sp/>aktiv<sp/>war</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(prefs.getBoolean(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a3f4772314ecfd41cd9db5513155c0ede" kindref="member">KEY_DAILY_ACTIVE</ref>,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>hour<sp/>=<sp/>prefs.getInt(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a0b16799acc5ad3eba1ead62b47ef62ea" kindref="member">KEY_DAILY_HOUR</ref>,<sp/>20);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>minute<sp/>=<sp/>prefs.getInt(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adafbd47943b49f9a6bcff839d60ca078" kindref="member">KEY_DAILY_MINUTE</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>String<sp/>message<sp/>=<sp/>prefs.getString(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1af907f287b80d0fa0fb8768f1e71f1549" kindref="member">KEY_DAILY_MESSAGE</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Zeit<sp/>zum<sp/>Lesen!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a5833d4c1b987dddea26acdad230c640f" kindref="member">scheduleDailyNotification</ref>(context,<sp/>hour,<sp/>minute,<sp/>message);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Log.d(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a351db1eeb0a6f1c2889b7bc90000e1bc" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Daily<sp/>notification<sp/>restored&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Getter-Methoden<sp/>für<sp/>die<sp/>aktuellen<sp/>Einstellungen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211" refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ac8a096801252bd85cf58f0b4ded28ebe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ac8a096801252bd85cf58f0b4ded28ebe" kindref="member">isDailyNotificationActive</ref>(Context<sp/>context)<sp/>{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SharedPreferences<sp/>prefs<sp/>=<sp/>context.getSharedPreferences(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adbfc27021f5087d5f958e70d9a45f58b" kindref="member">PREFS_NAME</ref>,<sp/>Context.MODE_PRIVATE);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>prefs.getBoolean(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a3f4772314ecfd41cd9db5513155c0ede" kindref="member">KEY_DAILY_ACTIVE</ref>,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219" refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1aaf3ebda4b3bc3da4f2c4e8cabb4a3602" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1aaf3ebda4b3bc3da4f2c4e8cabb4a3602" kindref="member">getDailyNotificationHour</ref>(Context<sp/>context)<sp/>{</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SharedPreferences<sp/>prefs<sp/>=<sp/>context.getSharedPreferences(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adbfc27021f5087d5f958e70d9a45f58b" kindref="member">PREFS_NAME</ref>,<sp/>Context.MODE_PRIVATE);</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>prefs.getInt(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a0b16799acc5ad3eba1ead62b47ef62ea" kindref="member">KEY_DAILY_HOUR</ref>,<sp/>20);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227" refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ad29a9938277c2a671b0399cdc84c7844" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ad29a9938277c2a671b0399cdc84c7844" kindref="member">getDailyNotificationMinute</ref>(Context<sp/>context)<sp/>{</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SharedPreferences<sp/>prefs<sp/>=<sp/>context.getSharedPreferences(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adbfc27021f5087d5f958e70d9a45f58b" kindref="member">PREFS_NAME</ref>,<sp/>Context.MODE_PRIVATE);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>prefs.getInt(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adafbd47943b49f9a6bcff839d60ca078" kindref="member">KEY_DAILY_MINUTE</ref>,<sp/>0);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235" refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afad2859e0654bc94cdec599cd6ae9949" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1afad2859e0654bc94cdec599cd6ae9949" kindref="member">getDailyNotificationMessage</ref>(Context<sp/>context)<sp/>{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SharedPreferences<sp/>prefs<sp/>=<sp/>context.getSharedPreferences(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adbfc27021f5087d5f958e70d9a45f58b" kindref="member">PREFS_NAME</ref>,<sp/>Context.MODE_PRIVATE);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>prefs.getString(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1af907f287b80d0fa0fb8768f1e71f1549" kindref="member">KEY_DAILY_MESSAGE</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Zeit<sp/>zum<sp/>Lesen!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243" refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a46f062698cb770f1def693f3e18ce7ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>String<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a46f062698cb770f1def693f3e18ce7ba" kindref="member">getDailyNotificationTimeString</ref>(Context<sp/>context)<sp/>{</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>hour<sp/>=<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1aaf3ebda4b3bc3da4f2c4e8cabb4a3602" kindref="member">getDailyNotificationHour</ref>(context);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>minute<sp/>=<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ad29a9938277c2a671b0399cdc84c7844" kindref="member">getDailyNotificationMinute</ref>(context);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>String.format(</highlight><highlight class="stringliteral">&quot;%02d:%02d&quot;</highlight><highlight class="normal">,<sp/>hour,<sp/>minute);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253" refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ab4c513c92fc23addef85f0992fb6ddaf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1ab4c513c92fc23addef85f0992fb6ddaf" kindref="member">sendGoalCompletedNotification</ref>(Context<sp/>context,<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal" kindref="compound">Goal</ref><sp/>goal)<sp/>{</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NotificationCompat.Builder<sp/>builder<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>NotificationCompat.Builder(</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>context,</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationChannelManager" kindref="compound">NotificationChannelManager</ref>.<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationChannelManager_1a9d0ba4e30a7959d3ca4d5047054be4e8" kindref="member">DEFAULT_CHANNEL_ID</ref>)</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.setSmallIcon(R.drawable.icon)</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.setContentTitle(</highlight><highlight class="stringliteral">&quot;Ziel<sp/>erreicht!&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.setContentText(</highlight><highlight class="stringliteral">&quot;Du<sp/>hast<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>goal.<ref refid="classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal_1a1c80a58d3e1cd2e1ab6ef14c40d3b274" kindref="member">getGoal</ref>()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>Seiten<sp/>gelesen!&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.setPriority(NotificationCompat.PRIORITY_HIGH)</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.setAutoCancel(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>NotificationManagerCompat<sp/>notificationManager<sp/>=<sp/>NotificationManagerCompat.from(context);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>notificationManager.notify(999,<sp/>builder.build());</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277" refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a0a97077bdcc3f2c0fc441d5f3e8e2d62" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a0a97077bdcc3f2c0fc441d5f3e8e2d62" kindref="member">scheduleOneTimeNotification</ref>(Context<sp/>context,<sp/>LocalDateTime<sp/>dateTime,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>requestCode)<sp/>{</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ZonedDateTime<sp/>zdt<sp/>=<sp/>dateTime.atZone(ZoneId.systemDefault());</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>triggerAtMillis<sp/>=<sp/>zdt.toInstant().toEpochMilli();</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(triggerAtMillis<sp/>&lt;=<sp/>System.currentTimeMillis())<sp/>{</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Log.w(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a351db1eeb0a6f1c2889b7bc90000e1bc" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Cannot<sp/>schedule<sp/>notification<sp/>in<sp/>the<sp/>past.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Intent<sp/>intent<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Intent(context,<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationReceiver" kindref="compound">NotificationReceiver</ref>.class);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>intent.putExtra(</highlight><highlight class="stringliteral">&quot;title&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;You<sp/>are<sp/>a<sp/>failure&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>intent.putExtra(</highlight><highlight class="stringliteral">&quot;message&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Cant<sp/>even<sp/>complete<sp/>your<sp/>own<sp/>goals<sp/>on<sp/>time&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>intent.putExtra(</highlight><highlight class="stringliteral">&quot;notificationType&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;oneTime&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>intent.putExtra(</highlight><highlight class="stringliteral">&quot;requestCode&quot;</highlight><highlight class="normal">,<sp/>requestCode);</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PendingIntent<sp/>pendingIntent<sp/>=<sp/>PendingIntent.getBroadcast(</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>context,</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requestCode,</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>intent,</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PendingIntent.FLAG_UPDATE_CURRENT<sp/>|<sp/>PendingIntent.FLAG_IMMUTABLE</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AlarmManager<sp/>alarmManager<sp/>=<sp/>(AlarmManager)<sp/>context.getSystemService(Context.ALARM_SERVICE);</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(alarmManager<sp/>!=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(Build.VERSION.SDK_INT<sp/>&gt;=<sp/>Build.VERSION_CODES.S<sp/>&amp;&amp;<sp/>!alarmManager.canScheduleExactAlarms())<sp/>{</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Log.w(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a351db1eeb0a6f1c2889b7bc90000e1bc" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Missing<sp/>SCHEDULE_EXACT_ALARM<sp/>permission.&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>alarmManager.setExactAndAllowWhileIdle(AlarmManager.RTC_WAKEUP,<sp/>triggerAtMillis,<sp/>pendingIntent);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Log.d(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a351db1eeb0a6f1c2889b7bc90000e1bc" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;One-time<sp/>notification<sp/>scheduled<sp/>for<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>dateTime.toString());</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"></highlight></codeline>
+<codeline lineno="317" refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a10e7adec73e1f0e63d8376cad273e11a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a10e7adec73e1f0e63d8376cad273e11a" kindref="member">cancelOneTimeNotification</ref>(Context<sp/>context,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>requestCode)<sp/>{</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Intent<sp/>intent<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Intent(context,<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationReceiver" kindref="compound">NotificationReceiver</ref>.class);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PendingIntent<sp/>pendingIntent<sp/>=<sp/>PendingIntent.getBroadcast(</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>context,</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requestCode,</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>intent,</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PendingIntent.FLAG_IMMUTABLE</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>AlarmManager<sp/>alarmManager<sp/>=<sp/>(AlarmManager)<sp/>context.getSystemService(Context.ALARM_SERVICE);</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(alarmManager<sp/>!=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>alarmManager.cancel(pendingIntent);</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Log.d(<ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1a351db1eeb0a6f1c2889b7bc90000e1bc" kindref="member">TAG</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Cancelled<sp/>one-time<sp/>notification<sp/>(ID:<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>requestCode<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight></codeline>
+<codeline lineno="336" refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adb2c3bbb24876b087277d011a6df1577" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">boolean</highlight><highlight class="normal"><sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_1adb2c3bbb24876b087277d011a6df1577" kindref="member">isOneTimeNotificationScheduled</ref>(Context<sp/>context,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>requestCode)<sp/>{</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Intent<sp/>intent<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>Intent(context,<sp/><ref refid="classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationReceiver" kindref="compound">NotificationReceiver</ref>.class);</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PendingIntent<sp/>pendingIntent<sp/>=<sp/>PendingIntent.getBroadcast(</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>context,</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>requestCode,</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>intent,</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PendingIntent.FLAG_NO_CREATE<sp/>|<sp/>PendingIntent.FLAG_IMMUTABLE</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pendingIntent<sp/>!=<sp/></highlight><highlight class="keyword">null</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/notifications/NotificationScheduler.java"/>
+  </compounddef>
+</doxygen>

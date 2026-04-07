@@ -1,0 +1,6 @@
+<map id="com.example.mybookshelf.UIMaster.showLogin" name="com.example.mybookshelf.UIMaster.showLogin">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,208,45"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a5f5bae724e7f3d3de15486430b3bc8c1" title=" " alt="" coords="256,5,459,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="208,32,243,32,242,37,208,37"/>
+<area shape="poly" id="edge2_Node000002_Node000001" title=" " alt="" coords="256,19,222,19,222,14,256,14"/>
+</map>

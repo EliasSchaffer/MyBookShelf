@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="SECURITY_8md" kind="file" language="Markdown">
+    <compoundname>SECURITY.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Security<sp/>Policy</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Supported<sp/>Versions</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Use<sp/>this<sp/>section<sp/>to<sp/>tell<sp/>people<sp/>about<sp/>which<sp/>versions<sp/>of<sp/>your<sp/>project<sp/>are</highlight></codeline>
+<codeline><highlight class="normal">currently<sp/>being<sp/>supported<sp/>with<sp/>security<sp/>updates.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">|<sp/>Version<sp/>|<sp/>Supported<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>-------<sp/>|<sp/>------------------<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">|<sp/>0.1<sp/><sp/><sp/><sp/><sp/>|<sp/>:white_check_mark:<sp/>|</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Reporting<sp/>a<sp/>Vulnerability</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">They<sp/>are<sp/>currently<sp/>no<sp/>known<sp/>vulnerabilities.</highlight></codeline>
+<codeline><highlight class="normal">If<sp/>you<sp/>find<sp/>a<sp/>vulnerabilities<sp/>feel<sp/>free<sp/>to<sp/>contact<sp/>us<sp/>at:<sp/></highlight></codeline>
+<codeline><highlight class="normal">--<sp/>**elias.schaffer@htl-wels.at</highlight></codeline>
+<codeline><highlight class="normal">--<sp/>**christoph.spreitzer@htl-wels.at</highlight></codeline>
+<codeline><highlight class="normal">--<sp/>**paul.staudinger@htl-wels.at</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Known<sp/>Bugs</highlight></codeline>
+<codeline><highlight class="normal">--<sp/>**Books<sp/>beeing<sp/>added<sp/>to<sp/>the<sp/>user<sp/>twice</highlight></codeline>
+<codeline><highlight class="normal">--<sp/>**Its<sp/>impossible<sp/>to<sp/>add<sp/>Notes<sp/>to<sp/>a<sp/>freshly<sp/>added<sp/>Book</highlight></codeline>
+    </programlisting>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/SECURITY.md"/>
+  </compounddef>
+</doxygen>

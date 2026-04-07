@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2EliasSchaffer_2MyBookShelf_2SECURITY" kind="page">
+    <compoundname>md__2app_2doc__state_2github__reposRepoArchDocGenContext_2EliasSchaffer_2MyBookShelf_2SECURITY</compoundname>
+    <title>Security Policy</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><anchor id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2EliasSchaffer_2MyBookShelf_2SECURITY_1autotoc_md6"/></para>
+<sect1 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2EliasSchaffer_2MyBookShelf_2SECURITY_1autotoc_md7">
+<title>Supported Versions</title><para>Use this section to tell people about which versions of your project are currently being supported with security updates.</para>
+<para><table rows="2" cols="2"><row>
+<entry thead="yes"><para>Version   </para>
+</entry><entry thead="yes"><para>Supported    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>0.1   </para>
+</entry><entry thead="no"><para>:white_check_mark:   </para>
+</entry></row>
+</table>
+</para>
+</sect1>
+<sect1 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2EliasSchaffer_2MyBookShelf_2SECURITY_1autotoc_md8">
+<title>Reporting a Vulnerability</title><para>They are currently no known vulnerabilities. If you find a vulnerabilities feel free to contact us at: <ndash/> **elias<ulink url="mailto:.schaffer@htl-wels.at">.schaffer@htl-wels.at</ulink> <ndash/> **christoph<ulink url="mailto:.spreitzer@htl-wels.at">.spreitzer@htl-wels.at</ulink> <ndash/> **paul<ulink url="mailto:.staudinger@htl-wels.at">.staudinger@htl-wels.at</ulink></para>
+</sect1>
+<sect1 id="md__2app_2doc__state_2github__reposRepoArchDocGenContext_2EliasSchaffer_2MyBookShelf_2SECURITY_1autotoc_md9">
+<title>Known Bugs</title><para><ndash/> **Books beeing added to the user twice <ndash/> **Its impossible to add Notes to a freshly added Book </para>
+</sect1>
+    </detaileddescription>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/SECURITY.md"/>
+  </compounddef>
+</doxygen>

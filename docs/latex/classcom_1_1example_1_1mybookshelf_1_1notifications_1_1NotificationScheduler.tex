@@ -1,0 +1,354 @@
+\doxysection{com.\+example.\+mybookshelf.\+notifications.\+Notification\+Scheduler Class Reference}
+\hypertarget{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler}{}\label{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler}\index{com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}}
+
+
+Collaboration diagram for com.\+example.\+mybookshelf.\+notifications.\+Notification\+Scheduler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a5833d4c1b987dddea26acdad230c640f}{schedule\+Daily\+Notification}} (Context context, int hour, int minute, String message)
+\item 
+static void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_ae8deb5392302274178dbbd3116654098}{schedule\+Daily\+Notification}} (Context context)
+\item 
+static void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a79dcce93490bc0df80c03c0a410672b2}{change\+Daily\+Notification\+Time}} (Context context, int hour, int minute)
+\item 
+static void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_afeb40a8c5551b18f32abe21dcc0e130a}{change\+Daily\+Notification\+Message}} (Context context, String message)
+\item 
+static void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_afc96590cd792b862b32762b84cab085e}{cancel\+Daily\+Notification}} (Context context)
+\item 
+static void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_ae2ade14f140458ae3bdac1c7e0ac35d8}{toggle\+Daily\+Notification}} (Context context)
+\item 
+static void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a6a67704352785acd6dcd956ec2f8834f}{restore\+Notifications}} (Context context)
+\item 
+static boolean \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_ac8a096801252bd85cf58f0b4ded28ebe}{is\+Daily\+Notification\+Active}} (Context context)
+\item 
+static int \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_aaf3ebda4b3bc3da4f2c4e8cabb4a3602}{get\+Daily\+Notification\+Hour}} (Context context)
+\item 
+static int \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_ad29a9938277c2a671b0399cdc84c7844}{get\+Daily\+Notification\+Minute}} (Context context)
+\item 
+static String \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_afad2859e0654bc94cdec599cd6ae9949}{get\+Daily\+Notification\+Message}} (Context context)
+\item 
+static String \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a46f062698cb770f1def693f3e18ce7ba}{get\+Daily\+Notification\+Time\+String}} (Context context)
+\item 
+static void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_ab4c513c92fc23addef85f0992fb6ddaf}{send\+Goal\+Completed\+Notification}} (Context context, \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal}{Goal}} goal)
+\item 
+static void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a0a97077bdcc3f2c0fc441d5f3e8e2d62}{schedule\+One\+Time\+Notification}} (Context context, Local\+Date\+Time date\+Time, int request\+Code)
+\item 
+static void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a10e7adec73e1f0e63d8376cad273e11a}{cancel\+One\+Time\+Notification}} (Context context, int request\+Code)
+\item 
+static boolean \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_adb2c3bbb24876b087277d011a6df1577}{is\+One\+Time\+Notification\+Scheduled}} (Context context, int request\+Code)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final int \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a766a9c3decb9600b1297ed171dfe1b83}{REQUEST\+\_\+\+CODE\+\_\+\+DAILY}} = 100
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static final String \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a351db1eeb0a6f1c2889b7bc90000e1bc}{TAG}} = "{}Notification\+Scheduler"{}
+\item 
+static final String \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_adbfc27021f5087d5f958e70d9a45f58b}{PREFS\+\_\+\+NAME}} = "{}notification\+\_\+prefs"{}
+\item 
+static final String \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a3f4772314ecfd41cd9db5513155c0ede}{KEY\+\_\+\+DAILY\+\_\+\+ACTIVE}} = "{}daily\+\_\+active"{}
+\item 
+static final String \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a0b16799acc5ad3eba1ead62b47ef62ea}{KEY\+\_\+\+DAILY\+\_\+\+HOUR}} = "{}daily\+\_\+hour"{}
+\item 
+static final String \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_adafbd47943b49f9a6bcff839d60ca078}{KEY\+\_\+\+DAILY\+\_\+\+MINUTE}} = "{}daily\+\_\+minute"{}
+\item 
+static final String \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_af907f287b80d0fa0fb8768f1e71f1549}{KEY\+\_\+\+DAILY\+\_\+\+MESSAGE}} = "{}daily\+\_\+message"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_afc96590cd792b862b32762b84cab085e}\index{com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}!cancelDailyNotification@{cancelDailyNotification}}
+\index{cancelDailyNotification@{cancelDailyNotification}!com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}}
+\doxysubsubsection{\texorpdfstring{cancelDailyNotification()}{cancelDailyNotification()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_afc96590cd792b862b32762b84cab085e} 
+static void com.\+example.\+mybookshelf.\+notifications.\+Notification\+Scheduler.\+cancel\+Daily\+Notification (\begin{DoxyParamCaption}\item[{Context}]{context}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Cancels the daily notification and updates preferences. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_afc96590cd792b862b32762b84cab085e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a10e7adec73e1f0e63d8376cad273e11a}\index{com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}!cancelOneTimeNotification@{cancelOneTimeNotification}}
+\index{cancelOneTimeNotification@{cancelOneTimeNotification}!com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}}
+\doxysubsubsection{\texorpdfstring{cancelOneTimeNotification()}{cancelOneTimeNotification()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a10e7adec73e1f0e63d8376cad273e11a} 
+static void com.\+example.\+mybookshelf.\+notifications.\+Notification\+Scheduler.\+cancel\+One\+Time\+Notification (\begin{DoxyParamCaption}\item[{Context}]{context}{, }\item[{int}]{request\+Code}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Cancels a one-\/time scheduled notification using the provided request code. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a10e7adec73e1f0e63d8376cad273e11a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_afeb40a8c5551b18f32abe21dcc0e130a}\index{com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}!changeDailyNotificationMessage@{changeDailyNotificationMessage}}
+\index{changeDailyNotificationMessage@{changeDailyNotificationMessage}!com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}}
+\doxysubsubsection{\texorpdfstring{changeDailyNotificationMessage()}{changeDailyNotificationMessage()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_afeb40a8c5551b18f32abe21dcc0e130a} 
+static void com.\+example.\+mybookshelf.\+notifications.\+Notification\+Scheduler.\+change\+Daily\+Notification\+Message (\begin{DoxyParamCaption}\item[{Context}]{context}{, }\item[{String}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Ändert die Nachricht der täglichen \doxylink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification}{Notification} und aktualisiert den Zeitplan. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_afeb40a8c5551b18f32abe21dcc0e130a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a79dcce93490bc0df80c03c0a410672b2}\index{com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}!changeDailyNotificationTime@{changeDailyNotificationTime}}
+\index{changeDailyNotificationTime@{changeDailyNotificationTime}!com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}}
+\doxysubsubsection{\texorpdfstring{changeDailyNotificationTime()}{changeDailyNotificationTime()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a79dcce93490bc0df80c03c0a410672b2} 
+static void com.\+example.\+mybookshelf.\+notifications.\+Notification\+Scheduler.\+change\+Daily\+Notification\+Time (\begin{DoxyParamCaption}\item[{Context}]{context}{, }\item[{int}]{hour}{, }\item[{int}]{minute}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Changes the time of the daily notification. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a79dcce93490bc0df80c03c0a410672b2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_aaf3ebda4b3bc3da4f2c4e8cabb4a3602}\index{com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}!getDailyNotificationHour@{getDailyNotificationHour}}
+\index{getDailyNotificationHour@{getDailyNotificationHour}!com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}}
+\doxysubsubsection{\texorpdfstring{getDailyNotificationHour()}{getDailyNotificationHour()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_aaf3ebda4b3bc3da4f2c4e8cabb4a3602} 
+static int com.\+example.\+mybookshelf.\+notifications.\+Notification\+Scheduler.\+get\+Daily\+Notification\+Hour (\begin{DoxyParamCaption}\item[{Context}]{context}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Returns the hour of the daily notification from Shared\+Preferences. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_aaf3ebda4b3bc3da4f2c4e8cabb4a3602_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_afad2859e0654bc94cdec599cd6ae9949}\index{com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}!getDailyNotificationMessage@{getDailyNotificationMessage}}
+\index{getDailyNotificationMessage@{getDailyNotificationMessage}!com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}}
+\doxysubsubsection{\texorpdfstring{getDailyNotificationMessage()}{getDailyNotificationMessage()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_afad2859e0654bc94cdec599cd6ae9949} 
+static String com.\+example.\+mybookshelf.\+notifications.\+Notification\+Scheduler.\+get\+Daily\+Notification\+Message (\begin{DoxyParamCaption}\item[{Context}]{context}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Retrieves the daily notification message from Shared\+Preferences. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_afad2859e0654bc94cdec599cd6ae9949_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_ad29a9938277c2a671b0399cdc84c7844}\index{com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}!getDailyNotificationMinute@{getDailyNotificationMinute}}
+\index{getDailyNotificationMinute@{getDailyNotificationMinute}!com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}}
+\doxysubsubsection{\texorpdfstring{getDailyNotificationMinute()}{getDailyNotificationMinute()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_ad29a9938277c2a671b0399cdc84c7844} 
+static int com.\+example.\+mybookshelf.\+notifications.\+Notification\+Scheduler.\+get\+Daily\+Notification\+Minute (\begin{DoxyParamCaption}\item[{Context}]{context}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Retrieves the minute of the daily notification. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_ad29a9938277c2a671b0399cdc84c7844_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a46f062698cb770f1def693f3e18ce7ba}\index{com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}!getDailyNotificationTimeString@{getDailyNotificationTimeString}}
+\index{getDailyNotificationTimeString@{getDailyNotificationTimeString}!com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}}
+\doxysubsubsection{\texorpdfstring{getDailyNotificationTimeString()}{getDailyNotificationTimeString()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a46f062698cb770f1def693f3e18ce7ba} 
+static String com.\+example.\+mybookshelf.\+notifications.\+Notification\+Scheduler.\+get\+Daily\+Notification\+Time\+String (\begin{DoxyParamCaption}\item[{Context}]{context}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Returns the formatted daily notification time string. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a46f062698cb770f1def693f3e18ce7ba_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_ac8a096801252bd85cf58f0b4ded28ebe}\index{com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}!isDailyNotificationActive@{isDailyNotificationActive}}
+\index{isDailyNotificationActive@{isDailyNotificationActive}!com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}}
+\doxysubsubsection{\texorpdfstring{isDailyNotificationActive()}{isDailyNotificationActive()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_ac8a096801252bd85cf58f0b4ded28ebe} 
+static boolean com.\+example.\+mybookshelf.\+notifications.\+Notification\+Scheduler.\+is\+Daily\+Notification\+Active (\begin{DoxyParamCaption}\item[{Context}]{context}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Checks if daily notifications are active. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_ac8a096801252bd85cf58f0b4ded28ebe_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_adb2c3bbb24876b087277d011a6df1577}\index{com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}!isOneTimeNotificationScheduled@{isOneTimeNotificationScheduled}}
+\index{isOneTimeNotificationScheduled@{isOneTimeNotificationScheduled}!com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}}
+\doxysubsubsection{\texorpdfstring{isOneTimeNotificationScheduled()}{isOneTimeNotificationScheduled()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_adb2c3bbb24876b087277d011a6df1577} 
+static boolean com.\+example.\+mybookshelf.\+notifications.\+Notification\+Scheduler.\+is\+One\+Time\+Notification\+Scheduled (\begin{DoxyParamCaption}\item[{Context}]{context}{, }\item[{int}]{request\+Code}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Checks if a one-\/time notification is scheduled. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_adb2c3bbb24876b087277d011a6df1577_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a6a67704352785acd6dcd956ec2f8834f}\index{com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}!restoreNotifications@{restoreNotifications}}
+\index{restoreNotifications@{restoreNotifications}!com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}}
+\doxysubsubsection{\texorpdfstring{restoreNotifications()}{restoreNotifications()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a6a67704352785acd6dcd956ec2f8834f} 
+static void com.\+example.\+mybookshelf.\+notifications.\+Notification\+Scheduler.\+restore\+Notifications (\begin{DoxyParamCaption}\item[{Context}]{context}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Restores daily notifications based on saved preferences. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a6a67704352785acd6dcd956ec2f8834f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a6a67704352785acd6dcd956ec2f8834f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_ae8deb5392302274178dbbd3116654098}\index{com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}!scheduleDailyNotification@{scheduleDailyNotification}}
+\index{scheduleDailyNotification@{scheduleDailyNotification}!com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}}
+\doxysubsubsection{\texorpdfstring{scheduleDailyNotification()}{scheduleDailyNotification()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_ae8deb5392302274178dbbd3116654098} 
+static void com.\+example.\+mybookshelf.\+notifications.\+Notification\+Scheduler.\+schedule\+Daily\+Notification (\begin{DoxyParamCaption}\item[{Context}]{context}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Schedules a daily notification at 8\+:00 PM with default message "{}\+Zeit zum Lesen!"{}. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_ae8deb5392302274178dbbd3116654098_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a5833d4c1b987dddea26acdad230c640f}\index{com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}!scheduleDailyNotification@{scheduleDailyNotification}}
+\index{scheduleDailyNotification@{scheduleDailyNotification}!com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}}
+\doxysubsubsection{\texorpdfstring{scheduleDailyNotification()}{scheduleDailyNotification()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a5833d4c1b987dddea26acdad230c640f} 
+static void com.\+example.\+mybookshelf.\+notifications.\+Notification\+Scheduler.\+schedule\+Daily\+Notification (\begin{DoxyParamCaption}\item[{Context}]{context}{, }\item[{int}]{hour}{, }\item[{int}]{minute}{, }\item[{String}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Plant eine t√§gliche \doxylink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Notification}{Notification} zu einer bestimmten Uhrzeit Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a5833d4c1b987dddea26acdad230c640f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a0a97077bdcc3f2c0fc441d5f3e8e2d62}\index{com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}!scheduleOneTimeNotification@{scheduleOneTimeNotification}}
+\index{scheduleOneTimeNotification@{scheduleOneTimeNotification}!com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}}
+\doxysubsubsection{\texorpdfstring{scheduleOneTimeNotification()}{scheduleOneTimeNotification()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a0a97077bdcc3f2c0fc441d5f3e8e2d62} 
+static void com.\+example.\+mybookshelf.\+notifications.\+Notification\+Scheduler.\+schedule\+One\+Time\+Notification (\begin{DoxyParamCaption}\item[{Context}]{context}{, }\item[{Local\+Date\+Time}]{date\+Time}{, }\item[{int}]{request\+Code}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Schedules a one-\/time notification at a specified date and time.
+
+This method sets up an alarm to trigger a notification at the given Local\+Date\+Time. It checks if the provided date and time is in the past, logs a warning, and returns early if true. Otherwise, it creates an Intent with necessary extras and uses Pending\+Intent to schedule the notification using Alarm\+Manager. The method also handles permission checks for scheduling exact alarms on newer Android versions. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a0a97077bdcc3f2c0fc441d5f3e8e2d62_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_ab4c513c92fc23addef85f0992fb6ddaf}\index{com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}!sendGoalCompletedNotification@{sendGoalCompletedNotification}}
+\index{sendGoalCompletedNotification@{sendGoalCompletedNotification}!com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}}
+\doxysubsubsection{\texorpdfstring{sendGoalCompletedNotification()}{sendGoalCompletedNotification()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_ab4c513c92fc23addef85f0992fb6ddaf} 
+static void com.\+example.\+mybookshelf.\+notifications.\+Notification\+Scheduler.\+send\+Goal\+Completed\+Notification (\begin{DoxyParamCaption}\item[{Context}]{context}{, }\item[{\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal}{Goal}}}]{goal}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+/\texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*} Sends a notification when a goal is completed. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_ab4c513c92fc23addef85f0992fb6ddaf_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_ae2ade14f140458ae3bdac1c7e0ac35d8}\index{com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}!toggleDailyNotification@{toggleDailyNotification}}
+\index{toggleDailyNotification@{toggleDailyNotification}!com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}}
+\doxysubsubsection{\texorpdfstring{toggleDailyNotification()}{toggleDailyNotification()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_ae2ade14f140458ae3bdac1c7e0ac35d8} 
+static void com.\+example.\+mybookshelf.\+notifications.\+Notification\+Scheduler.\+toggle\+Daily\+Notification (\begin{DoxyParamCaption}\item[{Context}]{context}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Toggles the daily notification on or off. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_ae2ade14f140458ae3bdac1c7e0ac35d8_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a3f4772314ecfd41cd9db5513155c0ede}\index{com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}!KEY\_DAILY\_ACTIVE@{KEY\_DAILY\_ACTIVE}}
+\index{KEY\_DAILY\_ACTIVE@{KEY\_DAILY\_ACTIVE}!com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}}
+\doxysubsubsection{\texorpdfstring{KEY\_DAILY\_ACTIVE}{KEY\_DAILY\_ACTIVE}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a3f4772314ecfd41cd9db5513155c0ede} 
+final String com.\+example.\+mybookshelf.\+notifications.\+Notification\+Scheduler.\+KEY\+\_\+\+DAILY\+\_\+\+ACTIVE = "{}daily\+\_\+active"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a0b16799acc5ad3eba1ead62b47ef62ea}\index{com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}!KEY\_DAILY\_HOUR@{KEY\_DAILY\_HOUR}}
+\index{KEY\_DAILY\_HOUR@{KEY\_DAILY\_HOUR}!com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}}
+\doxysubsubsection{\texorpdfstring{KEY\_DAILY\_HOUR}{KEY\_DAILY\_HOUR}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a0b16799acc5ad3eba1ead62b47ef62ea} 
+final String com.\+example.\+mybookshelf.\+notifications.\+Notification\+Scheduler.\+KEY\+\_\+\+DAILY\+\_\+\+HOUR = "{}daily\+\_\+hour"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_af907f287b80d0fa0fb8768f1e71f1549}\index{com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}!KEY\_DAILY\_MESSAGE@{KEY\_DAILY\_MESSAGE}}
+\index{KEY\_DAILY\_MESSAGE@{KEY\_DAILY\_MESSAGE}!com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}}
+\doxysubsubsection{\texorpdfstring{KEY\_DAILY\_MESSAGE}{KEY\_DAILY\_MESSAGE}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_af907f287b80d0fa0fb8768f1e71f1549} 
+final String com.\+example.\+mybookshelf.\+notifications.\+Notification\+Scheduler.\+KEY\+\_\+\+DAILY\+\_\+\+MESSAGE = "{}daily\+\_\+message"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_adafbd47943b49f9a6bcff839d60ca078}\index{com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}!KEY\_DAILY\_MINUTE@{KEY\_DAILY\_MINUTE}}
+\index{KEY\_DAILY\_MINUTE@{KEY\_DAILY\_MINUTE}!com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}}
+\doxysubsubsection{\texorpdfstring{KEY\_DAILY\_MINUTE}{KEY\_DAILY\_MINUTE}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_adafbd47943b49f9a6bcff839d60ca078} 
+final String com.\+example.\+mybookshelf.\+notifications.\+Notification\+Scheduler.\+KEY\+\_\+\+DAILY\+\_\+\+MINUTE = "{}daily\+\_\+minute"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_adbfc27021f5087d5f958e70d9a45f58b}\index{com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}!PREFS\_NAME@{PREFS\_NAME}}
+\index{PREFS\_NAME@{PREFS\_NAME}!com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}}
+\doxysubsubsection{\texorpdfstring{PREFS\_NAME}{PREFS\_NAME}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_adbfc27021f5087d5f958e70d9a45f58b} 
+final String com.\+example.\+mybookshelf.\+notifications.\+Notification\+Scheduler.\+PREFS\+\_\+\+NAME = "{}notification\+\_\+prefs"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a766a9c3decb9600b1297ed171dfe1b83}\index{com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}!REQUEST\_CODE\_DAILY@{REQUEST\_CODE\_DAILY}}
+\index{REQUEST\_CODE\_DAILY@{REQUEST\_CODE\_DAILY}!com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}}
+\doxysubsubsection{\texorpdfstring{REQUEST\_CODE\_DAILY}{REQUEST\_CODE\_DAILY}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a766a9c3decb9600b1297ed171dfe1b83} 
+final int com.\+example.\+mybookshelf.\+notifications.\+Notification\+Scheduler.\+REQUEST\+\_\+\+CODE\+\_\+\+DAILY = 100\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a351db1eeb0a6f1c2889b7bc90000e1bc}\index{com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}!TAG@{TAG}}
+\index{TAG@{TAG}!com.example.mybookshelf.notifications.NotificationScheduler@{com.example.mybookshelf.notifications.NotificationScheduler}}
+\doxysubsubsection{\texorpdfstring{TAG}{TAG}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler_a351db1eeb0a6f1c2889b7bc90000e1bc} 
+final String com.\+example.\+mybookshelf.\+notifications.\+Notification\+Scheduler.\+TAG = "{}Notification\+Scheduler"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/app/doc\+\_\+state/github\+\_\+repos\+Repo\+Arch\+Doc\+Gen\+Context/\+Elias\+Schaffer/\+My\+Book\+Shelf/src/main/java/com/example/mybookshelf/notifications/\mbox{\hyperlink{NotificationScheduler_8java}{Notification\+Scheduler.\+java}}\end{DoxyCompactItemize}

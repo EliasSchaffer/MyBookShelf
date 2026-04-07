@@ -1,0 +1,7 @@
+<map id="com.example.mybookshelf.MainActivity" name="com.example.mybookshelf.MainActivity">
+<area shape="rect" id="Node000001" title=" " alt="" coords="30,153,313,733"/>
+<area shape="rect" id="Node000002" href="$classAppCompatActivity.html" title=" " alt="" coords="5,23,145,88"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="89,101,102,152,97,154,84,102"/>
+<area shape="rect" id="Node000003" href="$interfacecom_1_1example_1_1mybookshelf_1_1ApiResponseCallback.html" title=" " alt="" coords="170,5,365,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="255,119,246,154,241,153,249,118"/>
+</map>

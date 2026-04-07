@@ -1,0 +1,115 @@
+\doxysection{com.\+example.\+mybookshelf.\+apis.\+Books\+API Class Reference}
+\hypertarget{classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI}{}\label{classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI}\index{com.example.mybookshelf.apis.BooksAPI@{com.example.mybookshelf.apis.BooksAPI}}
+
+
+Collaboration diagram for com.\+example.\+mybookshelf.\+apis.\+Books\+API\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+interface \mbox{\hyperlink{interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1_1BookCallback}{Book\+Callback}}
+\item 
+interface \mbox{\hyperlink{interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1_1BooksCallback}{Books\+Callback}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_ac350a4b300b12277d646f8dc3fd57aef}{get\+One\+Book}} (String book\+Name, final \mbox{\hyperlink{interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1_1BookCallback}{Book\+Callback}} callback)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_a8a2a962adad00e7ab410b7b23c13a45e}{get\+Multiple\+Books}} (String book\+Name, final \mbox{\hyperlink{interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1_1BookCallback}{Book\+Callback}} callback)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book}{Book}} $>$ \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_aa9d3aee665891e612035b5d0ffe1f93e}{fetch\+Books}} (String url\+String)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+final Executor\+Service \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_a684022e402edb00f89528d2c14bdf385}{executor\+Service}} = Executors.\+new\+Single\+Thread\+Executor()
+\item 
+final Handler \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_ac7482ff0418a335a176a2515aa86ef3f}{main\+Handler}} = new Handler(Looper.\+get\+Main\+Looper())
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_aa9d3aee665891e612035b5d0ffe1f93e}\index{com.example.mybookshelf.apis.BooksAPI@{com.example.mybookshelf.apis.BooksAPI}!fetchBooks@{fetchBooks}}
+\index{fetchBooks@{fetchBooks}!com.example.mybookshelf.apis.BooksAPI@{com.example.mybookshelf.apis.BooksAPI}}
+\doxysubsubsection{\texorpdfstring{fetchBooks()}{fetchBooks()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_aa9d3aee665891e612035b5d0ffe1f93e} 
+List$<$ \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book}{Book}} $>$ com.\+example.\+mybookshelf.\+apis.\+Books\+API.\+fetch\+Books (\begin{DoxyParamCaption}\item[{String}]{url\+String}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Fetches a list of books from the specified URL.
+
+Establishes an HTTP connection to the given URL, retrieves the JSON response, and parses it to extract book information. Each book\textquotesingle{}s details are then used to create a new \doxylink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book}{Book} object which is added to the list. Handles potential exceptions such as IOException or JSONException during the process.
+
+
+\begin{DoxyParams}{Parameters}
+{\em url\+String} & the URL from which to fetch the books \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a list of \doxylink{classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Book}{Book} objects representing the fetched books 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_aa9d3aee665891e612035b5d0ffe1f93e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_a8a2a962adad00e7ab410b7b23c13a45e}\index{com.example.mybookshelf.apis.BooksAPI@{com.example.mybookshelf.apis.BooksAPI}!getMultipleBooks@{getMultipleBooks}}
+\index{getMultipleBooks@{getMultipleBooks}!com.example.mybookshelf.apis.BooksAPI@{com.example.mybookshelf.apis.BooksAPI}}
+\doxysubsubsection{\texorpdfstring{getMultipleBooks()}{getMultipleBooks()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_a8a2a962adad00e7ab410b7b23c13a45e} 
+void com.\+example.\+mybookshelf.\+apis.\+Books\+API.\+get\+Multiple\+Books (\begin{DoxyParamCaption}\item[{String}]{book\+Name}{, }\item[{final \mbox{\hyperlink{interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1_1BookCallback}{Book\+Callback}}}]{callback}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Fetches and processes multiple books based on a given book name. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_a8a2a962adad00e7ab410b7b23c13a45e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_ac350a4b300b12277d646f8dc3fd57aef}\index{com.example.mybookshelf.apis.BooksAPI@{com.example.mybookshelf.apis.BooksAPI}!getOneBook@{getOneBook}}
+\index{getOneBook@{getOneBook}!com.example.mybookshelf.apis.BooksAPI@{com.example.mybookshelf.apis.BooksAPI}}
+\doxysubsubsection{\texorpdfstring{getOneBook()}{getOneBook()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_ac350a4b300b12277d646f8dc3fd57aef} 
+void com.\+example.\+mybookshelf.\+apis.\+Books\+API.\+get\+One\+Book (\begin{DoxyParamCaption}\item[{String}]{book\+Name}{, }\item[{final \mbox{\hyperlink{interfacecom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_1_1BookCallback}{Book\+Callback}}}]{callback}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Fetches a single book by name and invokes the provided callback with the result. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_ac350a4b300b12277d646f8dc3fd57aef_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_a684022e402edb00f89528d2c14bdf385}\index{com.example.mybookshelf.apis.BooksAPI@{com.example.mybookshelf.apis.BooksAPI}!executorService@{executorService}}
+\index{executorService@{executorService}!com.example.mybookshelf.apis.BooksAPI@{com.example.mybookshelf.apis.BooksAPI}}
+\doxysubsubsection{\texorpdfstring{executorService}{executorService}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_a684022e402edb00f89528d2c14bdf385} 
+final Executor\+Service com.\+example.\+mybookshelf.\+apis.\+Books\+API.\+executor\+Service = Executors.\+new\+Single\+Thread\+Executor()\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_ac7482ff0418a335a176a2515aa86ef3f}\index{com.example.mybookshelf.apis.BooksAPI@{com.example.mybookshelf.apis.BooksAPI}!mainHandler@{mainHandler}}
+\index{mainHandler@{mainHandler}!com.example.mybookshelf.apis.BooksAPI@{com.example.mybookshelf.apis.BooksAPI}}
+\doxysubsubsection{\texorpdfstring{mainHandler}{mainHandler}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1apis_1_1BooksAPI_ac7482ff0418a335a176a2515aa86ef3f} 
+final Handler com.\+example.\+mybookshelf.\+apis.\+Books\+API.\+main\+Handler = new Handler(Looper.\+get\+Main\+Looper())\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/app/doc\+\_\+state/github\+\_\+repos\+Repo\+Arch\+Doc\+Gen\+Context/\+Elias\+Schaffer/\+My\+Book\+Shelf/src/main/java/com/example/mybookshelf/apis/\mbox{\hyperlink{BooksAPI_8java}{Books\+API.\+java}}\end{DoxyCompactItemize}

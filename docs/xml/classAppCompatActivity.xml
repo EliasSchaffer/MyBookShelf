@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classAppCompatActivity" kind="class" language="Java" prot="public">
+    <compoundname>AppCompatActivity</compoundname>
+    <derivedcompoundref refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity" prot="public" virt="non-virtual">com.example.mybookshelf.MainActivity</derivedcompoundref>
+    <derivedcompoundref refid="classcom_1_1example_1_1mybookshelf_1_1Search" prot="public" virt="non-virtual">com.example.mybookshelf.Search</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>AppCompatActivity</label>
+        <link refid="classAppCompatActivity"/>
+      </node>
+      <node id="2">
+        <label>com.example.mybookshelf.MainActivity</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1MainActivity"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>com.example.mybookshelf.Search</label>
+        <link refid="classcom_1_1example_1_1mybookshelf_1_1Search"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>AppCompatActivity</label>
+        <link refid="classAppCompatActivity"/>
+      </node>
+    </collaborationgraph>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/src/main/java/com/example/mybookshelf/MainActivity.java" line="51" column="7"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

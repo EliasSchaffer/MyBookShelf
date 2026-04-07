@@ -1,0 +1,125 @@
+\doxysection{com.\+example.\+mybookshelf.\+Layout\+Manager.\+Costume\+List\+Adapter.\+Debounced\+Text\+Watcher Class Reference}
+\hypertarget{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher}{}\label{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher}\index{com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher@{com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher}}
+
+
+Inheritance diagram for com.\+example.\+mybookshelf.\+Layout\+Manager.\+Costume\+List\+Adapter.\+Debounced\+Text\+Watcher\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for com.\+example.\+mybookshelf.\+Layout\+Manager.\+Costume\+List\+Adapter.\+Debounced\+Text\+Watcher\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_a22fb1fa555f166b095d4578ce39d9b32}{Debounced\+Text\+Watcher}} (long \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_afed750fba44ab26627b627007a8bdfd3}{delay\+Millis}})
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_a18f754b1a2dcda772746fbe55b4a2187}{before\+Text\+Changed}} (Char\+Sequence s, int start, int count, int after)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_afda4cbae58f7e60f79c163ab3a7f965f}{on\+Text\+Changed}} (Char\+Sequence s, int start, int before, int count)
+\item 
+void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_a4d39d4fc771e3c4f77c97bb281067b6c}{after\+Text\+Changed}} (final Editable s)
+\item 
+abstract void \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_a9ef3906e8ddd6e46c1400517e9dc9a8b}{on\+Debounced\+Text\+Changed}} (String text)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+final long \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_afed750fba44ab26627b627007a8bdfd3}{delay\+Millis}}
+\item 
+final Handler \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_af89b5d5dbfa6780db5b781cdfc05a7fc}{handler}}
+\item 
+Runnable \mbox{\hyperlink{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_af031464fd93d271bb0434a0a8803d910}{runnable}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Custom \doxylink{classTextWatcher}{Text\+Watcher} that debounces text change events 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_a22fb1fa555f166b095d4578ce39d9b32}\index{com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher@{com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher}!DebouncedTextWatcher@{DebouncedTextWatcher}}
+\index{DebouncedTextWatcher@{DebouncedTextWatcher}!com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher@{com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher}}
+\doxysubsubsection{\texorpdfstring{DebouncedTextWatcher()}{DebouncedTextWatcher()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_a22fb1fa555f166b095d4578ce39d9b32} 
+com.\+example.\+mybookshelf.\+Layout\+Manager.\+Costume\+List\+Adapter.\+Debounced\+Text\+Watcher.\+Debounced\+Text\+Watcher (\begin{DoxyParamCaption}\item[{long}]{delay\+Millis}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_a4d39d4fc771e3c4f77c97bb281067b6c}\index{com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher@{com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher}!afterTextChanged@{afterTextChanged}}
+\index{afterTextChanged@{afterTextChanged}!com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher@{com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher}}
+\doxysubsubsection{\texorpdfstring{afterTextChanged()}{afterTextChanged()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_a4d39d4fc771e3c4f77c97bb281067b6c} 
+void com.\+example.\+mybookshelf.\+Layout\+Manager.\+Costume\+List\+Adapter.\+Debounced\+Text\+Watcher.\+after\+Text\+Changed (\begin{DoxyParamCaption}\item[{final Editable}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Schedules a delayed call to {\ttfamily \doxylink{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_a9ef3906e8ddd6e46c1400517e9dc9a8b}{on\+Debounced\+Text\+Changed(\+String)}} with the current text from the Editable object. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_a4d39d4fc771e3c4f77c97bb281067b6c_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_a18f754b1a2dcda772746fbe55b4a2187}\index{com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher@{com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher}!beforeTextChanged@{beforeTextChanged}}
+\index{beforeTextChanged@{beforeTextChanged}!com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher@{com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher}}
+\doxysubsubsection{\texorpdfstring{beforeTextChanged()}{beforeTextChanged()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_a18f754b1a2dcda772746fbe55b4a2187} 
+void com.\+example.\+mybookshelf.\+Layout\+Manager.\+Costume\+List\+Adapter.\+Debounced\+Text\+Watcher.\+before\+Text\+Changed (\begin{DoxyParamCaption}\item[{Char\+Sequence}]{s}{, }\item[{int}]{start}{, }\item[{int}]{count}{, }\item[{int}]{after}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Placeholder method for text change events. \Hypertarget{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_a9ef3906e8ddd6e46c1400517e9dc9a8b}\index{com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher@{com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher}!onDebouncedTextChanged@{onDebouncedTextChanged}}
+\index{onDebouncedTextChanged@{onDebouncedTextChanged}!com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher@{com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher}}
+\doxysubsubsection{\texorpdfstring{onDebouncedTextChanged()}{onDebouncedTextChanged()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_a9ef3906e8ddd6e46c1400517e9dc9a8b} 
+abstract void com.\+example.\+mybookshelf.\+Layout\+Manager.\+Costume\+List\+Adapter.\+Debounced\+Text\+Watcher.\+on\+Debounced\+Text\+Changed (\begin{DoxyParamCaption}\item[{String}]{text}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+Handles debounced text change events. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_a9ef3906e8ddd6e46c1400517e9dc9a8b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_afda4cbae58f7e60f79c163ab3a7f965f}\index{com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher@{com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher}!onTextChanged@{onTextChanged}}
+\index{onTextChanged@{onTextChanged}!com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher@{com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher}}
+\doxysubsubsection{\texorpdfstring{onTextChanged()}{onTextChanged()}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_afda4cbae58f7e60f79c163ab3a7f965f} 
+void com.\+example.\+mybookshelf.\+Layout\+Manager.\+Costume\+List\+Adapter.\+Debounced\+Text\+Watcher.\+on\+Text\+Changed (\begin{DoxyParamCaption}\item[{Char\+Sequence}]{s}{, }\item[{int}]{start}{, }\item[{int}]{before}{, }\item[{int}]{count}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Cancels any pending text change callback when the text changes. 
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_afed750fba44ab26627b627007a8bdfd3}\index{com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher@{com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher}!delayMillis@{delayMillis}}
+\index{delayMillis@{delayMillis}!com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher@{com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher}}
+\doxysubsubsection{\texorpdfstring{delayMillis}{delayMillis}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_afed750fba44ab26627b627007a8bdfd3} 
+final long com.\+example.\+mybookshelf.\+Layout\+Manager.\+Costume\+List\+Adapter.\+Debounced\+Text\+Watcher.\+delay\+Millis\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_af89b5d5dbfa6780db5b781cdfc05a7fc}\index{com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher@{com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher}!handler@{handler}}
+\index{handler@{handler}!com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher@{com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher}}
+\doxysubsubsection{\texorpdfstring{handler}{handler}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_af89b5d5dbfa6780db5b781cdfc05a7fc} 
+final Handler com.\+example.\+mybookshelf.\+Layout\+Manager.\+Costume\+List\+Adapter.\+Debounced\+Text\+Watcher.\+handler\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_af031464fd93d271bb0434a0a8803d910}\index{com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher@{com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher}!runnable@{runnable}}
+\index{runnable@{runnable}!com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher@{com.example.mybookshelf.LayoutManager.CostumeListAdapter.DebouncedTextWatcher}}
+\doxysubsubsection{\texorpdfstring{runnable}{runnable}}
+{\footnotesize\ttfamily \label{classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter_1_1DebouncedTextWatcher_af031464fd93d271bb0434a0a8803d910} 
+Runnable com.\+example.\+mybookshelf.\+Layout\+Manager.\+Costume\+List\+Adapter.\+Debounced\+Text\+Watcher.\+runnable\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/app/doc\+\_\+state/github\+\_\+repos\+Repo\+Arch\+Doc\+Gen\+Context/\+Elias\+Schaffer/\+My\+Book\+Shelf/src/main/java/com/example/mybookshelf/\+Layout\+Manager/\mbox{\hyperlink{CostumeListAdapter_8java}{Costume\+List\+Adapter.\+java}}\end{DoxyCompactItemize}

@@ -1,0 +1,7 @@
+<map id="com.example.mybookshelf.notifications.BootCompletedReceiver.onReceive" name="com.example.mybookshelf.notifications.BootCompletedReceiver.onReceive">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,292,45"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#a6a67704352785acd6dcd956ec2f8834f" title=" " alt="" coords="340,5,632,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="292,23,326,23,326,28,292,28"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#a5833d4c1b987dddea26acdad230c640f" title=" " alt="" coords="680,5,1011,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="632,23,666,23,666,28,632,28"/>
+</map>

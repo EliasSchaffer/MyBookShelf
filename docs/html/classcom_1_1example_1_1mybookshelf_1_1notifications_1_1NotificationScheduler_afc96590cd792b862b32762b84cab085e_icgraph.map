@@ -1,0 +1,16 @@
+<map id="com.example.mybookshelf.notifications.NotificationScheduler.cancelDailyNotification" name="com.example.mybookshelf.notifications.NotificationScheduler.cancelDailyNotification">
+<area shape="rect" id="Node000001" title=" " alt="" coords="687,149,1001,189"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#afeb40a8c5551b18f32abe21dcc0e130a" title=" " alt="" coords="302,5,622,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="793,145,721,109,638,75,596,63,598,58,640,70,723,104,795,140"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#a79dcce93490bc0df80c03c0a410672b2" title=" " alt="" coords="285,85,639,125"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="710,149,581,127,582,122,711,144"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1example_1_1mybookshelf_1_1GoalHandler.html#a326d9e94cb83508cae6d760df1bd5718" title=" " alt="" coords="339,149,585,189"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="673,171,585,171,585,166,673,166"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1example_1_1mybookshelf_1_1notifications_1_1NotificationScheduler.html#ae2ade14f140458ae3bdac1c7e0ac35d8" title=" " alt="" coords="305,213,619,253"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="711,194,582,215,581,210,710,188"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User.html#afb85fd04c8149bfb77f1810c9301b0bc" title=" " alt="" coords="346,301,578,341"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="793,197,721,232,640,267,534,303,532,298,638,262,719,227,791,192"/>
+<area shape="poly" id="edge7_Node000006_Node000006" title=" " alt="" coords="520,289,500,282,462,279,429,281,409,286,401,292,405,299,400,301,396,291,406,282,428,276,462,274,501,277,522,284"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1User.html#aeccdf2ba94dc9b82428e2339fce94f16" title=" " alt="" coords="5,301,237,341"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="332,323,238,323,238,318,332,318"/>
+</map>

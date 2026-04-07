@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>MyBookShelf</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">MyBookShelf<sp/>is<sp/>an<sp/>open-source<sp/>Java<sp/>application<sp/>designed<sp/>to<sp/>help<sp/>users<sp/>organize<sp/>and<sp/>track<sp/>their<sp/>personal<sp/>book<sp/>collection.<sp/>Whether<sp/>you&apos;re<sp/>an<sp/>avid<sp/>reader<sp/>or<sp/>a<sp/>casual<sp/>book<sp/>lover,<sp/>MyBookShelf<sp/>allows<sp/>you<sp/>to<sp/>manage<sp/>your<sp/>reading<sp/>list,<sp/>track<sp/>books<sp/>you&apos;ve<sp/>read,<sp/>and<sp/>plan<sp/>future<sp/>reads<sp/>all<sp/>in<sp/>one<sp/>place.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Features</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**Book<sp/>Collection<sp/>Management**:<sp/>Add,<sp/>edit,<sp/>and<sp/>remove<sp/>books<sp/>from<sp/>your<sp/>collection.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Customizable<sp/>Categories**:<sp/>Organize<sp/>your<sp/>books<sp/>by<sp/>genres,<sp/>authors,<sp/>or<sp/>custom<sp/>tags.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Bookshelf<sp/>Overview**:<sp/>View<sp/>all<sp/>your<sp/>books<sp/>in<sp/>an<sp/>organized<sp/>and<sp/>easy-to-use<sp/>interface.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Search<sp/>Functionality**:<sp/>Quickly<sp/>search<sp/>for<sp/>books<sp/>by<sp/>title,<sp/>author,<sp/>or<sp/>category.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Reading<sp/>Goals**:<sp/>Set<sp/>and<sp/>track<sp/>your<sp/>reading<sp/>goals<sp/>throughout<sp/>the<sp/>year.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Screenshots</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![MyBookShelf](path_to_screenshot_1.png)<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">Add<sp/>Scrennshot<sp/>later</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Installation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Prerequisites</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Ensure<sp/>you<sp/>have<sp/>the<sp/>following<sp/>installed:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**Java<sp/>Development<sp/>Kit<sp/>(JDK)**<sp/>version<sp/>8<sp/>or<sp/>higher</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Gradle**<sp/>(for<sp/>building<sp/>and<sp/>managing<sp/>dependencies)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Steps<sp/>to<sp/>Install</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1.<sp/>Clone<sp/>this<sp/>repository<sp/>to<sp/>your<sp/>local<sp/>machine:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>```bash</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>git<sp/>clone<sp/>https://github.com/yourusername/MyBookShelf.git</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>Navigate<sp/>to<sp/>the<sp/>project<sp/>directory:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>```bash</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>cd<sp/>MyBookShelf</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">3.<sp/>Build<sp/>the<sp/>project<sp/>with<sp/>Gradle:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>```bash</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>./gradlew<sp/>build</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">4.<sp/>Run<sp/>the<sp/>Application</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>```bash</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>./gradlew<sp/>run</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>```</highlight></codeline>
+<codeline></codeline>
+    </programlisting>
+    <location file="/app/doc_state/github_reposRepoArchDocGenContext/EliasSchaffer/MyBookShelf/README.md"/>
+  </compounddef>
+</doxygen>

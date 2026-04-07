@@ -1,0 +1,15 @@
+<map id="com.example.mybookshelf.LayoutManager.CustomGoalAdapter.onBindViewHolder" name="com.example.mybookshelf.LayoutManager.CustomGoalAdapter.onBindViewHolder">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,126,281,181"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CustomGoalAdapter.html#af6a51f456a68a61bedc36289b91e0716" title=" " alt="" coords="329,126,631,181"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="281,151,316,151,316,156,281,156"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal.html#ada3305dadb216e065d9bb31e12ff6107" title=" " alt="" coords="679,5,911,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="530,124,599,89,678,55,700,47,702,52,680,60,601,94,533,128"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal.html#a1c80a58d3e1cd2e1ab6ef14c40d3b274" title=" " alt="" coords="679,69,911,109"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="614,123,682,109,683,115,616,129"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal.html#abcf308a0e49a9b60f6761102438d9d04" title=" " alt="" coords="679,133,911,173"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="631,151,665,151,665,156,631,156"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal.html#a964cb06dadac4c69df6c931402733779" title=" " alt="" coords="679,197,911,237"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="616,178,683,192,682,197,614,183"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1example_1_1mybookshelf_1_1dataClass_1_1Goal.html#a84c2af13824c14a2b6c3dcf25a493d0f" title=" " alt="" coords="679,261,911,301"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="533,178,601,213,680,247,702,255,700,260,678,252,599,218,530,183"/>
+</map>

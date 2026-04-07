@@ -1,0 +1,32 @@
+<map id="com.example.mybookshelf.dataClass.Book.getAuthor" name="com.example.mybookshelf.dataClass.Book.getAuthor">
+<area shape="rect" id="Node000001" title=" " alt="" coords="2251,107,2483,147"/>
+<area shape="rect" id="Node000002" href="$classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter.html#aecf267c9d5fc023c90187a13bc4ebe2e" title=" " alt="" coords="1913,5,2203,60"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="2287,106,2147,63,2149,58,2288,101"/>
+<area shape="rect" id="Node000004" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a1533d0ed2384f2ec729cfcec7bd9a25f" title=" " alt="" coords="5,154,208,194"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="2237,121,2000,107,1728,101,609,101,495,106,381,120,276,138,190,157,189,151,275,133,380,115,494,101,609,95,1728,95,2001,102,2237,115"/>
+<area shape="rect" id="Node000005" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a39a8f40aa163994c415f165d94ee47fd" title=" " alt="" coords="1957,135,2159,175"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="2237,142,2160,149,2159,143,2237,136"/>
+<area shape="rect" id="Node000012" href="$classcom_1_1example_1_1mybookshelf_1_1MainActivity.html#ab1625f7432f6fcc4f53a63d3b893065f" title=" " alt="" coords="1957,199,2159,239"/>
+<area shape="poly" id="edge18_Node000001_Node000012" title=" " alt="" coords="2304,155,2203,190,2158,202,2157,197,2202,185,2303,150"/>
+<area shape="rect" id="Node000003" href="$classcom_1_1example_1_1mybookshelf_1_1LayoutManager_1_1CostumeListAdapter.html#a6195566266811486050ad2962a7a161f" title=" " alt="" coords="1588,5,1865,60"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1899,35,1866,35,1866,30,1899,30"/>
+<area shape="rect" id="Node000006" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#a4636b546c38ace5aedccfd989edc0bb1" title=" " alt="" coords="1625,167,1828,207"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="1943,169,1829,180,1828,175,1942,164"/>
+<area shape="rect" id="Node000007" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#aa6aad8404432bdaf23db9b41e99a6ed5" title=" " alt="" coords="1299,201,1540,241"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="1612,202,1541,210,1540,205,1611,197"/>
+<area shape="rect" id="Node000008" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#ad609d5e0b54e87afcb60aed6c66a792e" title=" " alt="" coords="1013,173,1251,213"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="1285,210,1250,207,1251,202,1285,205"/>
+<area shape="rect" id="Node000009" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#ac2a608fcf86d3dbe14b4684dbbaf1431" title=" " alt="" coords="256,182,459,222"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="999,197,459,203,459,198,999,192"/>
+<area shape="rect" id="Node000010" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#ad30bff41c8ec833af2293c0b6c8b47b2" title=" " alt="" coords="763,287,965,327"/>
+<area shape="poly" id="edge10_Node000008_Node000010" title=" " alt="" coords="1072,221,913,290,911,285,1070,216"/>
+<area shape="rect" id="Node000011" href="$classcom_1_1example_1_1mybookshelf_1_1UIMaster.html#ac859db60f9068e6a87b633ef697d4d0f" title=" " alt="" coords="507,230,715,270"/>
+<area shape="poly" id="edge17_Node000008_Node000011" title=" " alt="" coords="1000,208,763,234,715,240,715,234,762,229,999,203"/>
+<area shape="poly" id="edge9_Node000009_Node000004" title=" " alt="" coords="242,192,208,188,208,183,243,187"/>
+<area shape="poly" id="edge16_Node000010_Node000007" title=" " alt="" coords="979,299,1110,287,1250,266,1357,238,1359,243,1251,271,1110,292,979,304"/>
+<area shape="poly" id="edge11_Node000010_Node000009" title=" " alt="" coords="749,314,631,308,567,299,506,285,440,257,386,224,388,220,442,252,507,279,568,294,631,302,749,309"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="749,293,666,273,667,267,750,288"/>
+<area shape="poly" id="edge15_Node000011_Node000007" title=" " alt="" coords="729,243,1299,222,1299,228,729,248"/>
+<area shape="poly" id="edge13_Node000011_Node000009" title=" " alt="" coords="493,230,458,224,459,219,494,225"/>
+<area shape="poly" id="edge14_Node000011_Node000010" title=" " alt="" coords="729,265,809,285,808,290,727,270"/>
+</map>
